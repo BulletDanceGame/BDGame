@@ -1,0 +1,2064 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &151812408866530852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 983144618033073396}
+  m_Layer: 0
+  m_Name: DirectionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &983144618033073396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151812408866530852}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 6}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4495799895224451473}
+  - {fileID: 8074669765671284934}
+  - {fileID: 6454921919228161297}
+  m_Father: {fileID: 6492563694285853122}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2830478964286820218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8074669765671284934}
+  m_Layer: 0
+  m_Name: TripleShot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8074669765671284934
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2830478964286820218}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3509593530150066556}
+  - {fileID: 6412451480701853398}
+  - {fileID: 932307480891956451}
+  - {fileID: 6291597776593798465}
+  - {fileID: 5491161077457500058}
+  m_Father: {fileID: 983144618033073396}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2895618921160433132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3509593530150066556}
+  m_Layer: 0
+  m_Name: ShootPoint (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3509593530150066556
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2895618921160433132}
+  m_LocalRotation: {x: 0, y: 0, z: 0.2588191, w: 0.9659258}
+  m_LocalPosition: {x: 0, y: 0.125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8074669765671284934}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30}
+--- !u!1 &3816738460282619325
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1555998180247751154}
+  m_Layer: 0
+  m_Name: ShootPoint (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1555998180247751154
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3816738460282619325}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0.125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6454921919228161297}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5045277569439648964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5491161077457500058}
+  m_Layer: 0
+  m_Name: ShootPoint (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5491161077457500058
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5045277569439648964}
+  m_LocalRotation: {x: 0, y: 0, z: -0.258819, w: 0.9659259}
+  m_LocalPosition: {x: 0, y: 0.125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8074669765671284934}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30}
+--- !u!1 &5573302391302246812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8419872400692205112}
+  - component: {fileID: 6645874037756654792}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &8419872400692205112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5573302391302246812}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6492563694285853122}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &6645874037756654792
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5573302391302246812}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2.5, y: 1.5}
+  m_Direction: 1
+--- !u!1 &5725466416133668657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6291597776593798465}
+  m_Layer: 0
+  m_Name: ShootPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6291597776593798465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5725466416133668657}
+  m_LocalRotation: {x: 0, y: 0, z: -0.13052624, w: 0.9914449}
+  m_LocalPosition: {x: 0, y: 0.125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8074669765671284934}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -15}
+--- !u!1 &6492563694285853124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6492563694285853122}
+  - component: {fileID: 5347509908263639050}
+  - component: {fileID: 1751635176994286561}
+  - component: {fileID: 6852630410289804092}
+  - component: {fileID: 8041849689769012179}
+  - component: {fileID: 5356483035939825022}
+  - component: {fileID: 4038151975833234207}
+  - component: {fileID: 4878397496326701167}
+  m_Layer: 13
+  m_Name: AllRounder
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6492563694285853122
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492563694285853124}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 983144618033073396}
+  - {fileID: 5654697132360652285}
+  - {fileID: 8419872400692205112}
+  - {fileID: 4447548355920183163}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5347509908263639050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492563694285853124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f50e3173b63acea4bb0f5e9e658f21de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isActiveOnStart: 0
+  speed: 3.9
+  range: 10.3
+  maxDistance: 10.5
+  isMoving: 1
+  waitDuration: 0.05
+  minDistance: 4.75
+  CanDash: 1
+  startDashTime: 0.2
+  dashSpeed: 100
+  _distanceFromPlayer: 30
+  direction1: 1
+  direction2: 5
+  normalShot: {fileID: 4495799895224451473}
+  doubleShot: {fileID: 8074669765671284934}
+  thirdShot: {fileID: 6454921919228161297}
+  distanceToWall: 15
+  runAwayRadius: 13
+  runSpeed: 12
+--- !u!114 &1751635176994286561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492563694285853124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9091fa880f4c5544aed24c37ea088b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _follower: 0
+  _movelist: {fileID: 5347509908263639050}
+  _movelists: []
+  _beatActions:
+  - name: NormalShot
+    color: {r: 0, g: 0, b: 0, a: 1}
+    allVariations:
+    - name: Normal
+      alpha: 1
+      bullets: 00000000
+    - name: Unhittable
+      alpha: 0.75
+      bullets: 01000000
+    variation:
+      name: 
+      alpha: 0
+      bullets: 
+  - name: DoubleShot
+    color: {r: 1, g: 1, b: 1, a: 1}
+    allVariations:
+    - name: Normal3
+      alpha: 1
+      bullets: 0a0000000000000000000000000000000a000000
+    - name: Unhittable3
+      alpha: 0.8
+      bullets: 0a0000000100000001000000010000000a000000
+    - name: NormalU3
+      alpha: 0.4
+      bullets: 0a0000000000000001000000000000000a000000
+    - name: Unhittable5
+      alpha: 0.2
+      bullets: 0100000001000000010000000100000001000000
+    - name: Normal5
+      alpha: 0.5
+      bullets: 0000000000000000000000000000000000000000
+    - name: Left Normal
+      alpha: 0.3
+      bullets: 00000000010000000a0000000a0000000a000000
+    - name: Right Normal
+      alpha: 0.6
+      bullets: 0a00000000000000010000000a0000000a000000
+    - name: Left Normal
+      alpha: 0.7
+      bullets: 0a0000000a00000001000000000000000a000000
+    - name: Left Normal
+      alpha: 0.1
+      bullets: 0a0000000a0000000a0000000100000000000000
+    variation:
+      name: 
+      alpha: 0
+      bullets: 
+  - name: ThirdShot
+    color: {r: 1, g: 1, b: 0, a: 1}
+    allVariations:
+    - name: Groovy1
+      alpha: 1
+      bullets: 0300000003000000
+    variation:
+      name: 
+      alpha: 0
+      bullets: 
+  - name: RandomDash
+    color: {r: 1, g: 0, b: 0, a: 1}
+    allVariations:
+    - name: Normal
+      alpha: 1
+      bullets: 0100000001000000
+    variation:
+      name: 
+      alpha: 0
+      bullets: 
+  - name: DashAwayFromThePlayer
+    color: {r: 0, g: 0, b: 1, a: 1}
+    allVariations:
+    - name: Normal
+      alpha: 1
+      bullets: 0100000001000000
+    variation:
+      name: 
+      alpha: 0
+      bullets: 
+  _sequences:
+  - name: WholeNote
+    beatMap: {fileID: 2800000, guid: 584d14910146a96439cf1a18e9113d14, type: 3}
+    followSpecificSong: 1
+    songToFollow:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: da29efe2ca1083f42ba4acccb05da5d5, type: 2}
+    sheet: []
+    infoNote:
+      functionName: 
+      color: {r: 0, g: 0, b: 0, a: 0}
+      bullets: 
+      movelistsToTrigger: 0
+      amountToRandomizeBetween: 0
+      specifiedMovelists: []
+  - name: Triplets
+    beatMap: {fileID: 2800000, guid: 41d81c89fccd99b4097d68c0f7578dfe, type: 3}
+    followSpecificSong: 1
+    songToFollow:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 9af36798310cc964c8feff59080a5bfa, type: 2}
+    sheet: []
+    infoNote:
+      functionName: 
+      color: {r: 0, g: 0, b: 0, a: 0}
+      bullets: 
+      movelistsToTrigger: 0
+      amountToRandomizeBetween: 0
+      specifiedMovelists: []
+  - name: HalfNote
+    beatMap: {fileID: 2800000, guid: d3844126386707e41b9e84329b261648, type: 3}
+    followSpecificSong: 1
+    songToFollow:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: edc7aea478b67ba47962336ad55805a6, type: 2}
+    sheet: []
+    infoNote:
+      functionName: 
+      color: {r: 0, g: 0, b: 0, a: 0}
+      bullets: 
+      movelistsToTrigger: 0
+      amountToRandomizeBetween: 0
+      specifiedMovelists: []
+  - name: RhythmTestBoss1
+    beatMap: {fileID: 2800000, guid: 584d14910146a96439cf1a18e9113d14, type: 3}
+    followSpecificSong: 1
+    songToFollow:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 8227c5a02dc357b4ea9f0564120e30eb, type: 2}
+    sheet: []
+    infoNote:
+      functionName: 
+      color: {r: 0, g: 0, b: 0, a: 0}
+      bullets: 
+      movelistsToTrigger: 0
+      amountToRandomizeBetween: 0
+      specifiedMovelists: []
+  - name: RhythmTestBoss2
+    beatMap: {fileID: 2800000, guid: 4649c00499e26ce4abea6c013c3b3c4d, type: 3}
+    followSpecificSong: 1
+    songToFollow:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 5ad3f1eb7dc845e4fbd96092f50c260c, type: 2}
+    sheet:
+    - barNr: 1
+      notes:
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    infoNote:
+      functionName: 
+      color: {r: 0, g: 0, b: 0, a: 0}
+      bullets: 
+      movelistsToTrigger: 0
+      amountToRandomizeBetween: 0
+      specifiedMovelists: []
+  - name: RhythmTestBoss2
+    beatMap: {fileID: 2800000, guid: db6801550b5777e4caac338db704acff, type: 3}
+    followSpecificSong: 1
+    songToFollow:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 23c18628434d6ef469d11a5582d89eff, type: 2}
+    sheet:
+    - barNr: 1
+      notes:
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 0, g: 0, b: 0, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 2
+      notes:
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 0, g: 1, b: 0, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 3
+      notes:
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 0, g: 0, b: 0, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 4
+      notes:
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 0, g: 1, b: 0, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    infoNote:
+      functionName: 
+      color: {r: 0, g: 0, b: 0, a: 0}
+      bullets: 
+      movelistsToTrigger: 0
+      amountToRandomizeBetween: 0
+      specifiedMovelists: []
+  - name: RhythmTestBoss2
+    beatMap: {fileID: 2800000, guid: db6801550b5777e4caac338db704acff, type: 3}
+    followSpecificSong: 1
+    songToFollow:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: fdbcbb0837f713e4c8e2ca9257520f01, type: 2}
+    sheet:
+    - barNr: 1
+      notes:
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: Tripple
+        color: {r: 0, g: 0, b: 0, a: 1}
+        bullets: 000000000000000000000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 2
+      notes:
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: Groovy
+        color: {r: 0, g: 1, b: 0, a: 1}
+        bullets: 030000000300000003000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 3
+      notes:
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 0, g: 0, b: 0, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 4
+      notes:
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 0, g: 1, b: 0, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    infoNote:
+      functionName: 
+      color: {r: 0, g: 0, b: 0, a: 0}
+      bullets: 
+      movelistsToTrigger: 0
+      amountToRandomizeBetween: 0
+      specifiedMovelists: []
+--- !u!50 &6852630410289804092
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492563694285853124}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0.5
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!114 &8041849689769012179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492563694285853124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8d1bc06cbe22445a117e77bdce16b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthAmount: 30
+  _maxHits: 2
+  _hitParticle: {fileID: 4411486640382942310, guid: 24718a0f5bd9b714f82b2609b5676263, type: 3}
+--- !u!70 &5356483035939825022
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492563694285853124}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 6.5, y: 5.5}
+  m_Direction: 1
+--- !u!114 &4038151975833234207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492563694285853124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31af1982e6a5c894ba58b11be6663f1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _droppedItems:
+  - droppedItemType: {fileID: 5934777975941058473, guid: 9d503fd37e85ff24bad1b515813b417d, type: 3}
+    randomObjectAmountMin: 1
+    randomObjectAmountMax: 2
+  - droppedItemType: {fileID: 0}
+    randomObjectAmountMin: 0
+    randomObjectAmountMax: 0
+  - droppedItemType: {fileID: 0}
+    randomObjectAmountMin: 0
+    randomObjectAmountMax: 0
+  _dropRadius: 3.57
+--- !u!195 &4878397496326701167
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492563694285853124}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 2.61
+  m_Speed: 3.9
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 3.39
+  m_BaseOffset: 1.32
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!1 &6683125673576955210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4537519284365029650}
+  m_Layer: 0
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4537519284365029650
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6683125673576955210}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4495799895224451473}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6716632167781701559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6412451480701853398}
+  m_Layer: 0
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6412451480701853398
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6716632167781701559}
+  m_LocalRotation: {x: 0, y: 0, z: 0.13052616, w: 0.9914449}
+  m_LocalPosition: {x: 0, y: 0.125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8074669765671284934}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15}
+--- !u!1 &7370698227314531713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7985659240950404888}
+  m_Layer: 0
+  m_Name: ShootPoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7985659240950404888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7370698227314531713}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1, y: 0.125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6454921919228161297}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8087498722126361010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4495799895224451473}
+  m_Layer: 0
+  m_Name: NormalShot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4495799895224451473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8087498722126361010}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4537519284365029650}
+  m_Father: {fileID: 983144618033073396}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8145636567957951297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 932307480891956451}
+  m_Layer: 0
+  m_Name: ShootPoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &932307480891956451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8145636567957951297}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8074669765671284934}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8357530892170011327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6454921919228161297}
+  m_Layer: 0
+  m_Name: ThirdShot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6454921919228161297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8357530892170011327}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7985659240950404888}
+  - {fileID: 1555998180247751154}
+  m_Father: {fileID: 983144618033073396}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &427508051868196906
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 6492563694285853122}
+    m_Modifications:
+    - target: {fileID: 131503232424830060, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_SpriteLibraryAsset
+      value: 
+      objectReference: {fileID: 7108339969198208228, guid: 66ac2c0c9f8168e4aafeaaf2bbe11181, type: 3}
+    - target: {fileID: 2248802918773451754, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.47350952
+      objectReference: {fileID: 0}
+    - target: {fileID: 2248802918773451754, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 2248802918773451754, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.43349946
+      objectReference: {fileID: 0}
+    - target: {fileID: 3104687715311003230, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1b8775c1b428db847b53ff637b04dfb0, type: 2}
+    - target: {fileID: 3178858123852018557, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_Name
+      value: Graphics
+      objectReference: {fileID: 0}
+    - target: {fileID: 4491557784778418213, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446916119849858519, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446916119849858519, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446916119849858519, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446916119849858519, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446916119849858519, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446916119849858519, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446916119849858519, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446916119849858519, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446916119849858519, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446916119849858519, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446916119849858519, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5484754386135774787, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: spriteGroupAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b588af09537d23c48871c1fa5747e8a1, type: 2}
+    - target: {fileID: 5484754386135774787, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: _spriteGroupAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b588af09537d23c48871c1fa5747e8a1, type: 2}
+    - target: {fileID: 5505487864769501916, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505487864769501916, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6691988722562012770, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_SpriteHash
+      value: 288431053
+      objectReference: {fileID: 0}
+    - target: {fileID: 7532494589795304867, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1979860794371856689, guid: a19749fb1041f4d40b67f1c664452346, type: 3}
+    - target: {fileID: 7532494589795304867, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7532494589795304867, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -876546973899608171, guid: cb9461941d01ff149b5dd4773a32503d, type: 3}
+    m_RemovedComponents:
+    - {fileID: 6292329685515711649, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+--- !u!1 &3022833244298629975 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3178858123852018557, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+  m_PrefabInstance: {fileID: 427508051868196906}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3184032654124419342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022833244298629975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb19670248f27843b831468533b95a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animType: 1
+  _animator: {fileID: 0}
+  _spriteAnimator: {fileID: 5328623953531000425}
+  _layeredAnimator: {fileID: 0}
+  _animationName: 
+  _animNoteDuration: 1
+  _minAnimDuration: 0.08
+--- !u!114 &5328623953531000425 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5484754386135774787, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+  m_PrefabInstance: {fileID: 427508051868196906}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022833244298629975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 029fe693f326f4a42a4c6d9474cded3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &5654697132360652285 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5446916119849858519, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
+  m_PrefabInstance: {fileID: 427508051868196906}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2294552241613688815
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 6492563694285853122}
+    m_Modifications:
+    - target: {fileID: 531286630379167342, guid: 458001be12bf2ed4f933cb945bf30ff7, type: 3}
+      propertyPath: m_Name
+      value: Detection
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481270850373513364, guid: 458001be12bf2ed4f933cb945bf30ff7, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481270850373513364, guid: 458001be12bf2ed4f933cb945bf30ff7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.9819676
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481270850373513364, guid: 458001be12bf2ed4f933cb945bf30ff7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.9819676
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481270850373513364, guid: 458001be12bf2ed4f933cb945bf30ff7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.9819676
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481270850373513364, guid: 458001be12bf2ed4f933cb945bf30ff7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.10836
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481270850373513364, guid: 458001be12bf2ed4f933cb945bf30ff7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.46204
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481270850373513364, guid: 458001be12bf2ed4f933cb945bf30ff7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481270850373513364, guid: 458001be12bf2ed4f933cb945bf30ff7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481270850373513364, guid: 458001be12bf2ed4f933cb945bf30ff7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481270850373513364, guid: 458001be12bf2ed4f933cb945bf30ff7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481270850373513364, guid: 458001be12bf2ed4f933cb945bf30ff7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481270850373513364, guid: 458001be12bf2ed4f933cb945bf30ff7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481270850373513364, guid: 458001be12bf2ed4f933cb945bf30ff7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481270850373513364, guid: 458001be12bf2ed4f933cb945bf30ff7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5121781524920276856, guid: 458001be12bf2ed4f933cb945bf30ff7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 458001be12bf2ed4f933cb945bf30ff7, type: 3}
+--- !u!4 &4447548355920183163 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2481270850373513364, guid: 458001be12bf2ed4f933cb945bf30ff7, type: 3}
+  m_PrefabInstance: {fileID: 2294552241613688815}
+  m_PrefabAsset: {fileID: 0}

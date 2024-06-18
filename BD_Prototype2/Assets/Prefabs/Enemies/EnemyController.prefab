@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5218074654554690191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5218074654554690188}
+  - component: {fileID: 5218074654554690189}
+  - component: {fileID: 8258686331503058939}
+  m_Layer: 10
+  m_Name: EnemyController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5218074654554690188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5218074654554690191}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5218074654554690189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5218074654554690191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ca9253e8daee264cb6f1cb32706b338, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _roomType: 0
+  _environmentConductors: []
+  _waves: []
+  _durationInBeats: 0
+  _initialEnemies: []
+  _spawnableEnemies: []
+  _randomizeSpawning: 0
+  _enemiesKilledBeforeSpawn: 0
+  _enemiesSpawnedEachTime: 0
+  _timerUIPrefab: {fileID: 0}
+  _gatesToLock: []
+  _spawnMarkerPrefab: {fileID: 755966517394510147, guid: f9a9017d2ff0cf74b9f340ea244da769, type: 3}
+  _enemySpawnSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 34a628a0f4381424aba3d9b632cea901, type: 2}
+  _vfxSmokePrefab: {fileID: 4388896324952581318, guid: 07004ebd458e50449aa438f3ae8fb9c0, type: 3}
+  _enemies: []
+  _startBattleSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 52d2d8f9305afa44da8e32a211c48fde, type: 2}
+  _endBattleSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 52d2d8f9305afa44da8e32a211c48fde, type: 2}
+--- !u!60 &8258686331503058939
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5218074654554690191}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 16.131714, y: 39.04483}
+      - {x: -5.562751, y: 28.016079}
+      - {x: -14.184464, y: 12.787754}
+      - {x: -2.4453125, y: -4.985565}
+      - {x: 2.8344727, y: 15.2117}
+      - {x: 13.492798, y: 17.019653}
+      - {x: 15.532854, y: -1.668514}
+      - {x: 33.137337, y: 18.031124}
+  m_UseDelaunayMesh: 0

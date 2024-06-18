@@ -1,2 +1,3 @@
-# BDGame
-Repo for bulletdance
+# BulletDance
+
+Bullet Dance project

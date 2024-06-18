@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca5e523f403242488b356f7a0fbf7bc, type: 3}
+  m_Name: E1 - turret
+  m_EditorClassIdentifier: 
+  _libraries:
+  - _name: deactive
+    _spriteLibraries:
+    - _name: Front
+      _spriteLibraryAsset: {fileID: 7108339969198208228, guid: 24be759d37764864aa09e7974b5bf3b0, type: 3}
+    - _name: Back
+      _spriteLibraryAsset: {fileID: 7108339969198208228, guid: 83e1ff8b5b948914d9c2b982cc8575fb, type: 3}
+    - _name: Left
+      _spriteLibraryAsset: {fileID: 7108339969198208228, guid: c9b3e3518be2557489d43c22bea98f22, type: 3}
+    - _name: Right
+      _spriteLibraryAsset: {fileID: 7108339969198208228, guid: 462c1e2eafc77664798de01b5eae7769, type: 3}
+  _spritesheetSize: {x: 13, y: 4}
+  _animationInfo:
+  - _name: Idle
+    _animationState: 0
+    _frames: 2
+    _xOffsetInFrames: 0
+  - _name: Walk
+    _animationState: 1
+    _frames: 6
+    _xOffsetInFrames: 1
+  - _name: Dash
+    _animationState: 2
+    _frames: 1
+    _xOffsetInFrames: 7
+  - _name: Attack
+    _animationState: 3
+    _frames: 4
+    _xOffsetInFrames: 8

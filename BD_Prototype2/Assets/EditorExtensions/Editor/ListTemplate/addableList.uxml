@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:GroupBox style="flex-direction: row; min-height: 100%; min-width: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
+        <ui:Foldout text="Foldout" style="flex-direction: column; flex-wrap: wrap; min-width: 70%;">
+            <ui:ListView focusable="true" name="list" />
+        </ui:Foldout>
+        <ui:Button tabindex="-1" text="+" display-tooltip-when-elided="true" name="Add" style="max-height: 20px;" />
+    </ui:GroupBox>
+</ui:UXML>

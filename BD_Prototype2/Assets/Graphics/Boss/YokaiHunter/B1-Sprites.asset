@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca5e523f403242488b356f7a0fbf7bc, type: 3}
+  m_Name: B1-Sprites
+  m_EditorClassIdentifier: 
+  _libraries:
+  - _name: Phase 1
+    _spriteLibraries:
+    - _name: Front
+      _spriteLibraryAsset: {fileID: 7108339969198208228, guid: 9a646bec2f610c74b84c92a746383f01, type: 3}
+    - _name: Back
+      _spriteLibraryAsset: {fileID: 7108339969198208228, guid: 697aa454a907e264ca1e1f96af46912a, type: 3}
+    - _name: Left
+      _spriteLibraryAsset: {fileID: 7108339969198208228, guid: 01a69196ac65d8a44b5314a1e2048063, type: 3}
+    - _name: Right
+      _spriteLibraryAsset: {fileID: 7108339969198208228, guid: b7f12559f799bbe499baa1589fba8bbd, type: 3}
+  - _name: Phase 2
+    _spriteLibraries:
+    - _name: Front
+      _spriteLibraryAsset: {fileID: 7108339969198208228, guid: be5dbdb00610dc7459a9b85dec6a0050, type: 3}
+    - _name: Back
+      _spriteLibraryAsset: {fileID: 7108339969198208228, guid: 0963f61fa01d898498e723282a1e85db, type: 3}
+    - _name: Left
+      _spriteLibraryAsset: {fileID: 7108339969198208228, guid: 7dc5f8905958b3d4195ce720f26aa61c, type: 3}
+    - _name: Right
+      _spriteLibraryAsset: {fileID: 7108339969198208228, guid: da21369b1d6391545a34fe1c4cbc637b, type: 3}
+  - _name: Phase 3
+    _spriteLibraries:
+    - _name: Front
+      _spriteLibraryAsset: {fileID: 7108339969198208228, guid: 0a6a520bc472de948a5e742ccb2c4e5c, type: 3}
+    - _name: Back
+      _spriteLibraryAsset: {fileID: 7108339969198208228, guid: 24a58870590953d4da6cf64722bd7c75, type: 3}
+    - _name: Left
+      _spriteLibraryAsset: {fileID: 7108339969198208228, guid: 48739cf853e5fbb41adde33a0b3948a0, type: 3}
+    - _name: Right
+      _spriteLibraryAsset: {fileID: 7108339969198208228, guid: 1f3a411a7ef805f45bac50a7a311aa4b, type: 3}
+  _spritesheetSize: {x: 13, y: 4}
+  _animationInfo:
+  - _name: Idle
+    _animationState: 0
+    _frames: 2
+    _xOffsetInFrames: 0
+  - _name: Walk
+    _animationState: 1
+    _frames: 6
+    _xOffsetInFrames: 1
+  - _name: Dash
+    _animationState: 2
+    _frames: 1
+    _xOffsetInFrames: 7
+  - _name: Attack
+    _animationState: 3
+    _frames: 4
+    _xOffsetInFrames: 8

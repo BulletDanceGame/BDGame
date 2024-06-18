@@ -1,0 +1,35 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement style="justify-content: space-around; min-height: 100%;">
+        <ui:VisualElement style="flex-direction: row; margin-left: 0; margin-right: 0; margin-top: 5px; margin-bottom: 0; justify-content: space-around; min-height: 60%; max-height: 60%; padding-left: 5px; padding-right: 5px;">
+            <ui:VisualElement style="margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; min-width: 35%; max-width: 35%;">
+                <ui:Label tabindex="-1" text="Zones" display-tooltip-when-elided="true" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-bottom: 5px; -unity-font-style: bold;" />
+                <ui:Button tabindex="-1" text="Retarget all" display-tooltip-when-elided="true" name="RetargetAll" tooltip="Find all enemies inside the zones and retarget them automatically" style="margin-bottom: 5px;" />
+                <ui:ScrollView name="RoomList" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" display-tooltip-when-elided="true" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; max-width: 4px; min-width: 4px; background-image: url(&apos;project://database/Assets/EditorExtensions/Editor/LevelBuilder/Icons/Ico_Stripe.png?fileID=2800000&amp;guid=d1f038cc8e759b8429cdc20df2b2791d&amp;type=3#Ico_Stripe&apos;); min-height: auto; max-height: 100%;" />
+            <ui:VisualElement style="margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; min-width: 55%; max-width: 55%;">
+                <ui:Label tabindex="-1" text="Zone Properties" display-tooltip-when-elided="true" style="-unity-font-style: bold; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-bottom: 5px;" />
+                <ui:Label tabindex="-1" text="Message" display-tooltip-when-elided="true" name="layerMsg" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 7.5px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; max-width: 100%; white-space: normal;" />
+                <ui:ScrollView name="ZoneInfo" style="margin-top: 5px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Label tabindex="-1" display-tooltip-when-elided="true" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; max-width: 100%; min-width: 100%; background-image: url(&apos;project://database/Assets/EditorExtensions/Editor/LevelBuilder/Icons/Ico_StripeX.png?fileID=2800000&amp;guid=9e2973556e77a5e41abdd2ccc8d6ce05&amp;type=3#Ico_StripeX&apos;); min-height: 4px; max-height: 4px; margin-bottom: 5px; margin-top: 5px;" />
+        <ui:VisualElement style="min-height: 35%; max-height: 35%; justify-content: flex-start; padding-left: 5px; padding-right: 5px; margin-top: 5px; min-width: 100%; margin-left: 0; margin-right: 0; margin-bottom: 0; flex-direction: row;">
+            <ui:VisualElement style="min-width: 45%;">
+                <ui:Label tabindex="-1" text="Tools" display-tooltip-when-elided="true" style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; margin-bottom: 0; -unity-font-style: bold; margin-left: 0; margin-right: 0; margin-top: 0;" />
+                <ui:VisualElement name="tools" style="flex-direction: column;">
+                    <ui:Button tabindex="-1" text="Retarget enemy to room" display-tooltip-when-elided="true" name="RetargetCurrent" tooltip="Find enemies inside this zone and retarget this room&apos;s EnemyController" />
+                    <ui:Button tabindex="-1" text="Edit zone bounds" display-tooltip-when-elided="true" name="EditZone" tooltip="Edit the collider of the zone" />
+                    <ui:Button tabindex="-1" text="Delete zone" display-tooltip-when-elided="true" name="DeleteZone" tooltip="Delete zone" style="background-color: rgb(123, 39, 39);" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" display-tooltip-when-elided="true" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; min-width: 4px; background-image: url(&apos;project://database/Assets/EditorExtensions/Editor/LevelBuilder/Icons/Ico_Stripe.png?fileID=2800000&amp;guid=d1f038cc8e759b8429cdc20df2b2791d&amp;type=3#Ico_Stripe&apos;); min-height: 100%; max-width: 4px;" />
+            <ui:VisualElement style="margin-left: 5px; margin-right: 5px; margin-top: 0; margin-bottom: 0;">
+                <ui:Label tabindex="-1" text="Log" display-tooltip-when-elided="true" style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; margin-bottom: 0; -unity-font-style: bold; margin-left: 0; margin-right: 0; margin-top: 0;" />
+                <ui:ScrollView>
+                    <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="toolMsg" text="Log" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; white-space: normal; min-width: 45%;" />
+                </ui:ScrollView>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3950250941173229968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3950250941173229969}
+  - component: {fileID: 3950250941173229970}
+  m_Layer: 0
+  m_Name: BulletBag
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3950250941173229969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3950250941173229968}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3950250941173229970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3950250941173229968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e01d7b27e94c6d4ea52707a03da4bad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalBulletPrefab: {fileID: 3909197374187799380, guid: 89fb72f2f4df88c47996cf3565d8fc99, type: 3}
+  unhittableBulletPrefab: {fileID: 2309695978023655757, guid: b9c0cb11a8af3b244a4371efbc01d374, type: 3}
+  fireBulletPrefab: {fileID: 759116314829245624, guid: 62d3baff4682be34493e753a8646441d, type: 3}
+  groovyBulletPrefab: {fileID: 5945329923275311902, guid: f93fa825a13034146b4ea0caaa1696b8, type: 3}
+  explosiveBulletPrefab: {fileID: 7871794497367275068, guid: 8cfeeeb4708c8e44c95cecdcc40967c0, type: 3}
+  fireGroovyBulletPrefab: {fileID: 7003030381028540534, guid: 25d071082addd4c409f381f1811502b5, type: 3}
+  fireExplodyBulletPrefab: {fileID: 77286007139101897, guid: 4ab18b3e2f99aed45b0a26ad53f8e7d1, type: 3}
+  groovyExplodyBulletPrefab: {fileID: 3698133499674624746, guid: 93a558c313918004cac64e43f1bf664c, type: 3}
+  groovyExplodyFireBulletPrefab: {fileID: 4719965312026608457, guid: d36d48429428fa446a5c093018ce14ae, type: 3}
+  normalBulletList: []
+  unhittableBulletList: []
+  fireBulletList: []
+  fireexplodyBulletList: []
+  groovyBulletList: []
+  groovyexplodyBulletList: []
+  groovyexplodyfireBulletList: []
+  firegroovyBulletList: []
+  explosiveBulletList: []

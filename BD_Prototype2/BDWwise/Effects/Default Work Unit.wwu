@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}" SchemaVersion="110">
+	<Effects>
+		<WorkUnit Name="Default Work Unit" ID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="New_Pitch_Shifter" ID="{B024929A-9C1C-4CB9-8636-6B505521247E}" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3"/>
+				<Effect Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+					<PropertyList>
+						<Property Name="QualityEnable" Type="int16" Value="1"/>
+						<Property Name="TimeStretch" Type="Real32" Value="98"/>
+						<Property Name="WindowSize" Type="int32" Value="8192"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Harmonizer" ID="{4A684F8B-6700-4C65-B9FF-8E89F6534F76}" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
+					<PropertyList>
+						<Property Name="WindowSize" Type="int32" Value="1536"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="reverb" ID="{4D13E82B-26BE-471A-B16E-816D9A5B72A6}" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+					<PropertyList>
+						<Property Name="DryLevel" Type="Real32" Value="-1.3"/>
+						<Property Name="HFRatio" Type="Real32" Value="0.5"/>
+						<Property Name="ProcessLFE" Type="bool" Value="False"/>
+						<Property Name="ReverbTime" Type="Real32" Value="2.2"/>
+						<Property Name="WetLevel" Type="Real32" Value="-20"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_RoomVerb" ID="{05C8775F-D9FB-4C7D-9C1A-62128190B4D0}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+					<PropertyList>
+						<Property Name="DecayTime" Type="Real32" Value="0.8"/>
+						<Property Name="ERPattern" Type="int32" Value="10"/>
+						<Property Name="HFDamping" Type="Real32" Value="0.5"/>
+						<Property Name="PreDelay" Type="Real32" Value="0"/>
+						<Property Name="Quality" Type="int32" Value="16"/>
+						<Property Name="RoomSize" Type="Real32" Value="8"/>
+						<Property Name="StereoWidth" Type="Real32" Value="0"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_iZotope_Hybrid_Reverb" ID="{69C8F31B-C698-4930-BB97-BD63F7A3F465}" PluginName="iZotope Hybrid Reverb" CompanyID="259" PluginID="2" PluginType="3">
+					<PropertyList>
+						<Property Name="DecayLowFrequency" Type="Real32" Value="200"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_iZotope_Hybrid_Reverb_01" ID="{C8B6D7AC-3C8D-4180-88A3-51BE040A17BA}" PluginName="iZotope Hybrid Reverb" CompanyID="259" PluginID="2" PluginType="3">
+					<PropertyList>
+						<Property Name="DecayHighFrequency" Type="Real32" Value="800"/>
+						<Property Name="DecayLowFrequency" Type="Real32" Value="1000"/>
+						<Property Name="DecayLowRatio" Type="Real32" Value="2"/>
+						<Property Name="DecayTime" Type="Real32" Value="3.3"/>
+						<Property Name="EarlyGain" Type="Real32" Value="6.6"/>
+						<Property Name="FrontWet" Type="Real32" Value="7.1"/>
+						<Property Name="RearWet" Type="Real32" Value="11"/>
+						<Property Name="TailGain" Type="Real32" Value="24"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_AK_Convolution_Reverb" ID="{EF5F2A0A-F32C-4CE8-A636-15502BE7D853}" PluginName="Wwise Convolution Reverb" CompanyID="0" PluginID="127" PluginType="3">
+					<PropertyList>
+						<Property Name="DryLevel" Type="Real32" Value="12.5"/>
+						<Property Name="FrontRearDelay" Type="Real32" Value="66"/>
+						<Property Name="HardwareAcceleration" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="IRConvolutionThreshold" Type="Real32">
+							<ValueList>
+								<Value>-30</Value>
+							</ValueList>
+						</Property>
+						<Property Name="IRStretch" Type="Real32" Value="178"/>
+						<Property Name="InputStereoWidth" Type="Real32" Value="104"/>
+						<Property Name="InputThreshold" Type="Real32">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+						<Property Name="LFELevel" Type="Real32" Value="-0.3"/>
+						<Property Name="PreDelay" Type="Real32" Value="81"/>
+						<Property Name="WetLevel" Type="Real32" Value="15.5"/>
+					</PropertyList>
+					<PluginData>
+	<ConvolutionData>
+		<CurveList Version="1">
+			<CurveInfo Name="IRGraphicEQ">
+				<Curve Name="">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="19"/>
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>20</XPos>
+							<YPos>0</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>20000</XPos>
+							<YPos>0</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
+		</CurveList>
+	</ConvolutionData>
+</PluginData>
+				</Effect>
+				<Effect Name="d" ID="{182CD669-85DF-4CA8-8616-65D9BA376151}" PluginName="McDSP FutzBox" CompanyID="256" PluginID="110" PluginType="3">
+					<PropertyList>
+						<Property Name="DistortionAmount" Type="Real32" Value="100"/>
+						<Property Name="DistortionIntensity" Type="Real32" Value="100"/>
+						<Property Name="EQFreq" Type="Real32" Value="12000"/>
+						<Property Name="FiltersHPFFreq" Type="Real32" Value="20"/>
+						<Property Name="FiltersLPFFreq" Type="Real32" Value="20000"/>
+						<Property Name="GateThreshold" Type="Real32" Value="0"/>
+						<Property Name="NoiseLevel" Type="Real32" Value="-56.26504"/>
+						<Property Name="NoiseThresh" Type="Real32" Value="-39.04"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Tencent_GME_Send" ID="{7A50ED51-DDC7-477E-86F4-B80C89FFA84A}" PluginName="Tencent GME Send" CompanyID="289" PluginID="9004" PluginType="3"/>
+				<Effect Name="New_Expander" ID="{C64F11CF-6A62-488A-8357-AA75C3D958EB}" PluginName="Wwise Expander" CompanyID="0" PluginID="109" PluginType="3">
+					<PropertyList>
+						<Property Name="AttackTime" Type="Real32" Value="0"/>
+						<Property Name="OutputGain" Type="Real32" Value="-0.1"/>
+						<Property Name="Ratio" Type="Real32" Value="50"/>
+						<Property Name="ReleaseTime" Type="Real32" Value="0.33"/>
+						<Property Name="Threshold" Type="Real32" Value="-96.3"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="t" ID="{8E1F69AD-8193-4C0C-9C34-E203C11AC17C}" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
+					<PropertyList>
+						<Property Name="DelayTime" Type="Real32" Value="10"/>
+						<Property Name="DryLevel" Type="Real32" Value="-1"/>
+						<Property Name="Input" Type="int32" Value="1"/>
+						<Property Name="Pitch" Type="Real32" Value="-1400"/>
+						<Property Name="ProcessLFE" Type="bool" Value="True"/>
+						<Property Name="SyncDry" Type="bool" Value="True"/>
+					</PropertyList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{E48B34EC-06F8-4CCD-90B4-A6CE8C27BBF3}" ShortID="114535538">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Pitch"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="pitch_only_here_for_reference_of_max_combo_stuff" ID="{5BB9D811-0325-4852-A896-2A7AE4162238}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{9294F52C-B6BF-4350-BCCD-3B3FABF809E5}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>959.99998</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</Effect>
+				<Effect Name="New_Time_Stretch_01" ID="{C96A6F52-8654-4FE4-9773-DC58851C9C05}" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+					<PropertyList>
+						<Property Name="PitchShift" Type="Real32" Value="-100"/>
+						<Property Name="TimeStretch" Type="Real32" Value="97"/>
+						<Property Name="WindowSize" Type="int32" Value="256"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Parametric_EQ" ID="{0DBC4BBF-D823-413B-A7D2-F457DEBC888E}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FrequencyBand2" Type="Real32" Value="189"/>
+						<Property Name="GainBand1" Type="Real32" Value="-24"/>
+						<Property Name="GainBand3" Type="Real32" Value="-24"/>
+						<Property Name="QFactorBand2" Type="Real32" Value="0.5"/>
+					</PropertyList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{5C2BB216-4F14-496F-9944-4DE39A5C7E3E}" ShortID="748218168">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="GainBand1"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="pitch_only_here_for_reference_of_max_combo_stuff" ID="{5BB9D811-0325-4852-A896-2A7AE4162238}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{A79DAE80-20F5-408D-B37E-1D1D81D5A327}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-24</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>-3.02032</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</Effect>
+				<Effect Name="Element1Pitcher" ID="{CB60CFC5-6320-4D11-8C29-463E740CF146}" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
+					<PropertyList>
+						<Property Name="DelayTime" Type="Real32" Value="10"/>
+						<Property Name="Pitch" Type="Real32" Value="-1800"/>
+						<Property Name="SyncDry" Type="bool" Value="True"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Parametric_EQ_01" ID="{EF7DBFF3-1A19-4086-ACC0-5840BC19B4DF}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FrequencyBand2" Type="Real32" Value="20"/>
+					</PropertyList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{44ABA30C-1D9B-4F39-9530-59205F51174F}" ShortID="791050999">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="GainBand1"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="pitch_only_here_for_reference_of_max_combo_stuff" ID="{5BB9D811-0325-4852-A896-2A7AE4162238}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{1561BF70-1843-47BA-8795-ADA87614B19B}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-0.01966</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>6.42538</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</Effect>
+				<Effect Name="New_Time_Stretch_02" ID="{F5872FC2-BD13-4845-B1E3-047108E91EBD}" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+					<PropertyList>
+						<Property Name="TimeStretch" Type="Real32" Value="136"/>
+						<Property Name="WindowSize" Type="int32" Value="256"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Compressor" ID="{6AC32C03-2F49-48C6-AAD4-DFF06D6929F7}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3"/>
+				<Effect Name="e" ID="{81241368-9FA3-4223-BD9F-BA71DD7B56A4}" PluginName="Mastering Suite" CompanyID="0" PluginID="186" PluginType="3">
+					<PropertyList>
+						<Property Name="paramBand2Frequency" Type="Real32" Value="209.2739"/>
+					</PropertyList>
+					<PluginData/>
+				</Effect>
+				<Effect Name="New_Pitch_Shifter_01" ID="{2541813B-959A-464E-8EC8-CC27F6470BA7}" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
+					<PropertyList>
+						<Property Name="DelayTime" Type="Real32" Value="10"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Time_Stretch_03" ID="{0F493F4A-C57B-4AA2-A665-255838666B52}" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+					<PropertyList>
+						<Property Name="TimeStretch" Type="Real32" Value="105"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Tremolo" ID="{20B281C9-890A-4459-B123-4A0EFD5DAFDB}" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
+					<PropertyList>
+						<Property Name="ModFrequency" Type="Real32" Value="753.44"/>
+						<Property Name="ModWaveform" Type="int32" Value="4"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Guitar_Distortion" ID="{B78C129C-6964-46BB-A56D-9D02D2235F16}" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+					<PropertyList>
+						<Property Name="DistortionDrive" Type="Real32" Value="7"/>
+						<Property Name="DistortionTone" Type="Real32" Value="0"/>
+						<Property Name="DistortionType" Type="int32" Value="1"/>
+						<Property Name="PreEQBand1Gain" Type="Real32" Value="-0.5"/>
+						<Property Name="PreEQBand2Gain" Type="Real32" Value="1"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Flanger" ID="{BCE86A5D-DF58-4A75-BA36-7DB82C2F3C8D}" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
+					<PropertyList>
+						<Property Name="DelayTime" Type="Real32" Value="15"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Delay" ID="{29742C48-497E-4D59-981F-A51BD0688DFA}" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+					<PropertyList>
+						<Property Name="DelayTime" Type="Real32" Value="0.001"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_iZotope_Hybrid_Reverb_02" ID="{007C13C5-4C1C-45B6-976F-CE716C2C518A}" PluginName="iZotope Hybrid Reverb" CompanyID="259" PluginID="2" PluginType="3">
+					<PropertyList>
+						<Property Name="DecayTime" Type="Real32" Value="0.8"/>
+						<Property Name="FrontDry" Type="Real32" Value="-0.1"/>
+						<Property Name="FrontWet" Type="Real32" Value="9.3"/>
+						<Property Name="RearDry" Type="Real32" Value="-0.1"/>
+						<Property Name="RearWet" Type="Real32" Value="10.1"/>
+						<Property Name="TailGain" Type="Real32" Value="24"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Matrix_Reverb" ID="{0D789ED4-339F-46AA-BA8D-0A71F011079B}" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+					<PropertyList>
+						<Property Name="DryLevel" Type="Real32" Value="-0.3"/>
+						<Property Name="HFRatio" Type="Real32" Value="1.1"/>
+						<Property Name="ReverbTime" Type="Real32" Value="1.3"/>
+						<Property Name="WetLevel" Type="Real32" Value="-26"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
+	</Effects>
+</WwiseDocument>

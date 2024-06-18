@@ -1,0 +1,29 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:GroupBox name="general">
+        <uie:PropertyField name="environmentConductors" />
+        <uie:PropertyField name="startBattleSFX" />
+        <uie:PropertyField name="endBattleSFX" />
+        <ui:EnumField label="Room Type" type="RoomController+RoomType, Assembly-CSharp" name="roomType" style="margin-top: 20px; margin-bottom: 3px;" />
+    </ui:GroupBox>
+    <ui:GroupBox name="killRoom" style="margin-top: 1px;">
+        <uie:PropertyField name="waves" />
+    </ui:GroupBox>
+    <ui:GroupBox name="survivalRoom">
+        <ui:IntegerField label="Duration In Beats" value="0" name="durationInBeats" />
+        <uie:PropertyField name="initialEnemies" />
+        <uie:PropertyField name="spawnableEnemies" />
+        <ui:Toggle label="Randomize Spawning" name="randomizeSpawning" />
+        <ui:IntegerField label="Enemies Killed Before Spawning" value="0" name="enemiesKilledBeforeSpawning" />
+        <ui:IntegerField label="Enemies Spawned Each Time" value="0" name="enemiesSpawnedEachTime" />
+        <uie:PropertyField name="timerUIPrefab" label="TimerUI Prefab" />
+    </ui:GroupBox>
+    <ui:GroupBox name="killAndSurvivalRoom">
+        <uie:PropertyField name="gatesToLock" />
+        <uie:PropertyField name="spawnMarkerPrefab" label="Spawn Marker Prefab" />
+        <uie:PropertyField name="enemySpawnSFX" />
+        <uie:PropertyField name="vfxSmokePrefab" label="VFX Smoke Prefab" />
+    </ui:GroupBox>
+    <ui:GroupBox name="roamingArea">
+        <uie:PropertyField name="enemies" />
+    </ui:GroupBox>
+</ui:UXML>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8BC927E1-43FC-4743-B63A-39BA9B319245}" SchemaVersion="110">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{8BC927E1-43FC-4743-B63A-39BA9B319245}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="0ld Boys" ID="{6330149B-4E99-4BDB-9771-48095A95BFA8}" ShortID="93202120">
+					<ChildrenList>
+						<GameParameter Name="pitch_only_here_for_reference_of_max_combo_stuff" ID="{5BB9D811-0325-4852-A896-2A7AE4162238}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="hitSloMo_only_here_for_reference_of_max_combo_stuff" ID="{66708914-32C9-4F37-9331-6C437DCE875A}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="PLAYBACK SPEED" ID="{88FE21FF-34CD-4394-B3B5-5D9ABCBF5BC6}" ShortID="662564584">
+					<ChildrenList>
+						<GameParameter Name="PLAYBACK_SPEED____CutsceneMusic" ID="{1089C0B8-F905-42EF-9C59-349ABB22F0A7}"/>
+						<GameParameter Name="PLAYBACK_SPEED____MusicBossBattle" ID="{04AD4BF5-C0D4-44A1-8A9B-B693562B6A51}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="VOLUME" ID="{1B3174F4-ABEB-4C9C-87F9-767782A35503}" ShortID="1040677154">
+					<ChildrenList>
+						<GameParameter Name="VOLUME____PlayerActions__Dynamic" ID="{D944A161-3574-45FC-8EC6-9C0FBD9BC657}"/>
+						<GameParameter Name="VOLUME____CutsceneMusic" ID="{BB60D126-BC7F-4084-B1FA-AFF251471A6D}"/>
+						<GameParameter Name="VOLUME____CutsceneSFX__General__InaudibleOnSpeedUp" ID="{ABC7E187-32A0-4C46-8D13-BED8B2EA4DF0}"/>
+						<GameParameter Name="VOLUME____CutsceneSFX__Voicelines" ID="{17C6360D-E222-401B-8393-CE9D111AB4F8}"/>
+						<GameParameter Name="VOLUME____CutsceneSFX__SpeedUpCutscene" ID="{D5F52B0C-E983-40BF-8050-A9F4C072A1EB}"/>
+						<GameParameter Name="VOLUME____MusicBossBattle" ID="{5A5F59B0-5E1A-4001-9340-D93D786E49CA}"/>
+						<GameParameter Name="VOLUME____MusicEnvBattle" ID="{6752217C-2619-4384-826C-0F2990FF366D}"/>
+						<GameParameter Name="VOLUME____MusicEnvRoaming" ID="{E1371D40-30E8-4E48-8E87-7698049A4E31}"/>
+						<GameParameter Name="VOLUME____Menu" ID="{D500B88B-941B-4E4D-BF25-AD5341693364}"/>
+						<GameParameter Name="VOLUME____PlayerActions__Set" ID="{13A29393-9075-483F-AC96-BC01DE4854FD}"/>
+						<GameParameter Name="VOLUME____PlayerDamage" ID="{3B5B7185-0004-49CB-B09C-6B0C13E0F694}"/>
+						<GameParameter Name="VOLUME____PlayerMovement__Dash" ID="{E03BC02C-D4F4-4A2C-B3A1-A5F111938D3E}"/>
+						<GameParameter Name="VOLUME____BossActions" ID="{8EB41854-D4A4-432C-93C8-E1B30CF83DE6}"/>
+						<GameParameter Name="VOLUME____PlayerMovement__Footsteps" ID="{176D8999-B3EA-4474-BF5E-9527B370AF30}"/>
+						<GameParameter Name="VOLUME____AmbientComponents" ID="{3421054F-591F-4674-977C-D8B0CE8340C0}"/>
+						<GameParameter Name="VOLUME____BossDamage" ID="{3D326B27-49E0-4F72-8BD1-E9FE77F9682C}"/>
+						<GameParameter Name="VOLUME____CutsceneSFX__General__AudibleOnSpeedUp" ID="{EB331517-FD4C-4D6D-B276-6F68F9DC4903}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="HIGH PASS" ID="{846828B7-96F3-4090-9804-1DCD99A61F5A}" ShortID="927823546">
+					<ChildrenList>
+						<GameParameter Name="HIGH_PASS____CutsceneMusic" ID="{586051BF-89E4-4FBD-A32A-0F8FADE964C0}"/>
+						<GameParameter Name="HIGH_PASS____CutsceneSFX__Voicelines" ID="{5342F048-4FC7-47E5-9B4F-D3547397F564}"/>
+						<GameParameter Name="HIGH_PASS____CutsceneSFX__General__AudibleOnSpeedUp" ID="{89ABBBFC-4AAE-4900-8D2F-D6611443A4B6}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="PITCH" ID="{8F47C34B-AA10-4AD2-8C79-B5ECEBF15280}" ShortID="890567242">
+					<ChildrenList>
+						<GameParameter Name="PITCH____CutsceneSFX__Voicelines" ID="{14D86FBA-5DAE-47A4-80AA-B0BAF8DE3231}"/>
+						<GameParameter Name="PITCH____MusicEnvBattle" ID="{220378F1-7B14-4FD9-8247-D0B0295860CF}"/>
+						<GameParameter Name="PITCH____MusicEnvRoaming" ID="{8FD87614-78C8-42BF-9935-6F085AF8B7BE}"/>
+						<GameParameter Name="PITCH____MusicBossBattle" ID="{441F84FB-905E-437E-9C04-15A2D8E7000A}"/>
+						<GameParameter Name="PITCH____PlayerDamage" ID="{5AB9CD57-2B9B-4D2D-AB98-8E8B440F848E}"/>
+						<GameParameter Name="PITCH____CutsceneSFX__General__AudibleOnSpeedUp" ID="{A17F2D71-B627-45C0-94C6-3474F71E6CE6}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="LOW PASS" ID="{EEA0694F-530D-48CE-B5B7-1853BDFE89DC}" ShortID="828798129">
+					<ChildrenList>
+						<GameParameter Name="LOW_PASS____MusicBossBattle" ID="{E0FC1CC1-587C-485E-A0C3-24013CDB1DA8}"/>
+						<GameParameter Name="LOW_PASS____PlayerMovement__Dash" ID="{5177B678-B278-4E7B-9FBC-FE6843B05CD4}"/>
+						<GameParameter Name="LOW_PASS____BossActions" ID="{5A129DF9-AE16-4868-BF9B-883BA7F9A19E}"/>
+						<GameParameter Name="LOW_PASS____PlayerDamage" ID="{6C228460-632E-455F-B47B-03F0BF08B631}"/>
+						<GameParameter Name="LOW_PASS____BossDamage" ID="{03324671-FAAA-442A-BE21-3AAB97F97F45}"/>
+						<GameParameter Name="LOW_PASS____MusicEnvRoaming" ID="{3B5BF7ED-3A5C-499E-A49C-12F6DD3C6103}"/>
+						<GameParameter Name="LOW_PASS____PlayerActions__Set" ID="{4CC692D4-3F0C-4C1F-9F02-9686CD89E3D7}"/>
+						<GameParameter Name="LOW_PASS____PlayerMovement__Footsteps" ID="{E6FB4BA0-8716-4C09-B462-26C66B4D7A80}"/>
+						<GameParameter Name="LOW_PASS____MusicEnvBattle" ID="{8ADB90AA-99F1-43DC-990B-3AFBC78E91C3}"/>
+						<GameParameter Name="LOW_PASS____PlayerActions__Dynamic" ID="{B9A97B03-2F6F-42A1-8023-AC9AA1008F95}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="öSPECIAL RTPCS" ID="{D38E7F69-9F1B-4AE7-8588-88321F483291}" ShortID="913748267">
+					<ChildrenList>
+						<GameParameter Name="VOLUME_SPECIAL____DeflectionElement__PitchElement" ID="{042993B2-C310-4FAD-A070-8958D8CDBC22}"/>
+						<GameParameter Name="PITCH_SPECIAL____DeflectionElement__PitchElement" ID="{F980AFC9-113F-4A2F-8837-AAEADDD0995C}"/>
+						<GameParameter Name="VOLUME_SPECIAL____PlayerActions__Dynamic__Mixing" ID="{416D034F-54BB-4A25-AACB-859457676D22}"/>
+						<GameParameter Name="VOLUME_SPECIAL____Dash__DynamicMixing" ID="{10BD8A21-5286-4B83-B637-AAD69815BB4A}"/>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

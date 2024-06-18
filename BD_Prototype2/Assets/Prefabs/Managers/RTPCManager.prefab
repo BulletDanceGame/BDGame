@@ -1,0 +1,323 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &94197956456730318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 94197956456730312}
+  - component: {fileID: 2478761671367964633}
+  m_Layer: 0
+  m_Name: RTPCManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &94197956456730312
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94197956456730318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2478761671367964633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94197956456730318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8688691d25fa344875f61ac90c07d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attributes:
+  - name: PLAYBACK SPEED
+    _parameters:
+    - name: PLAYBACK_SPEED____CutsceneMusic
+      defaultValue: 20
+      isCoroutineRunning: 0
+    - name: PLAYBACK_SPEED____MusicBossBattle
+      defaultValue: 20
+      isCoroutineRunning: 0
+    - name: PLAYBACK_SPEED____MusicEnvBattle
+      defaultValue: 20
+      isCoroutineRunning: 0
+    - name: PLAYBACK_SPEED____MusicEnvRoaming
+      defaultValue: 20
+      isCoroutineRunning: 0
+  - name: PITCH
+    _parameters:
+    - name: PITCH____CutsceneSFX__Voicelines
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: PITCH____MusicBossBattle
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: PITCH____MusicEnvBattle
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: PITCH____MusicEnvRoaming
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: PITCH____PlayerDamage
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: PITCH____CutsceneSFX__General__AudibleOnSpeedUp
+      defaultValue: 50
+      isCoroutineRunning: 0
+  - name: HIGH PASS
+    _parameters:
+    - name: HIGH_PASS____CutsceneMusic
+      defaultValue: 0
+      isCoroutineRunning: 0
+    - name: HIGH_PASS____CutsceneSFX__Voicelines
+      defaultValue: 0
+      isCoroutineRunning: 0
+    - name: HIGH_PASS____CutsceneSFX__General__AudibleOnSpeedUp
+      defaultValue: 0
+      isCoroutineRunning: 0
+  - name: LOW PASS
+    _parameters:
+    - name: LOW_PASS____MusicBossBattle
+      defaultValue: 0
+      isCoroutineRunning: 0
+    - name: LOW_PASS____MusicEnvBattle
+      defaultValue: 0
+      isCoroutineRunning: 0
+    - name: LOW_PASS____MusicEnvRoaming
+      defaultValue: 0
+      isCoroutineRunning: 0
+    - name: LOW_PASS____PlayerActions__Dynamic
+      defaultValue: 0
+      isCoroutineRunning: 0
+    - name: LOW_PASS____PlayerActions__Set
+      defaultValue: 0
+      isCoroutineRunning: 0
+    - name: LOW_PASS____PlayerDamage
+      defaultValue: 0
+      isCoroutineRunning: 0
+    - name: LOW_PASS____HeartBeat
+      defaultValue: 0
+      isCoroutineRunning: 0
+    - name: LOW_PASS____PlayerMovement__Dash
+      defaultValue: 0
+      isCoroutineRunning: 0
+    - name: LOW_PASS____PlayerMovement__Footsteps
+      defaultValue: 0
+      isCoroutineRunning: 0
+    - name: LOW_PASS____BossActions
+      defaultValue: 0
+      isCoroutineRunning: 0
+    - name: LOW_PASS____BossDamage
+      defaultValue: 0
+      isCoroutineRunning: 0
+  - name: VOLUME
+    _parameters:
+    - name: VOLUME____MusicBossBattle
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: VOLUME____MusicEnvBattle
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: VOLUME____MusicEnvRoaming
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: VOLUME____CutsceneMusic
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: VOLUME____Menu
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: VOLUME____PlayerActions__Dynamic
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: VOLUME____PlayerActions__Set
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: VOLUME____PlayerDamage
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: VOLUME____HeartBeat
+      defaultValue: 0
+      isCoroutineRunning: 0
+    - name: VOLUME____PlayerMovement__Dash
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: VOLUME____PlayerMovement__Footsteps
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: VOLUME____BossActions
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: VOLUME____BossDamage
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: VOLUME____AmbientComponents
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: VOLUME____CutsceneSFX__General__InaudibleOnSpeedUp
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: VOLUME____CutsceneSFX__General__AudibleOnSpeedUp
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: VOLUME____CutsceneSFX__SpeedUpCutscene
+      defaultValue: 50
+      isCoroutineRunning: 0
+    - name: VOLUME____CutsceneSFX__Voicelines
+      defaultValue: 50
+      isCoroutineRunning: 0
+  - name: SPECIAL RTPCS
+    _parameters:
+    - name: PITCH_SPECIAL____DeflectionElement__PitchElement
+      defaultValue: 0
+      isCoroutineRunning: 0
+    - name: VOLUME_SPECIAL____DeflectionElement__PitchElement
+      defaultValue: 0
+      isCoroutineRunning: 0
+    - name: VOLUME_SPECIAL____PlayerActions__Dynamic__Mixing
+      defaultValue: 0
+      isCoroutineRunning: 0
+    - name: VOLUME_SPECIAL____Dash__DynamicMixing
+      defaultValue: 0
+      isCoroutineRunning: 0
+  _states:
+  - Hurt
+  _curves:
+  - serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  - serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 5.7843933
+      outSlope: 5.7843933
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.09276831
+    - serializedVersion: 3
+      time: 0.041247062
+      value: 0.19450706
+      inSlope: 3.774574
+      outSlope: 3.774574
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.11666666
+      value: 0.39919606
+      inSlope: 2.0802114
+      outSlope: 2.0802114
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.5950364
+      outWeight: 0.061320763
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.0048717223
+      outSlope: 0.0048717223
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  - serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.020674495
+      outSlope: 0.020674495
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.51666665
+    - serializedVersion: 3
+      time: 0.82386905
+      value: 0.043389607
+      inSlope: 0.106963985
+      outSlope: 0.106963985
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.25149918
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8797009
+      value: 0.08167717
+      inSlope: 1.3623437
+      outSlope: 1.3623437
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.90274733
+      value: 0.14208227
+      inSlope: 0.46278957
+      outSlope: 0.46278957
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.1876649
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9291646
+      value: 0.35140646
+      inSlope: 1.082788
+      outSlope: 1.082788
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.12637125
+      outWeight: 0.1336718
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 6.3013415
+      outSlope: 6.3013415
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.116666555
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0

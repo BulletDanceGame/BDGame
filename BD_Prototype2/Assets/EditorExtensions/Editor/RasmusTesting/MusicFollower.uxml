@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:EnumField label="Follower Type" type="MusicFollower+Follower, Assembly-CSharp" name="followerType" style="height: 22px; margin-top: 3px; margin-bottom: 3px;" />
+    <ui:GroupBox name="movelistGroup" />
+    <uie:PropertyField name="beatActions" />
+    <ui:Label tabindex="-1" text="Current Sequence: " display-tooltip-when-elided="true" name="currentSequence" style="height: 20px; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px;" />
+    <ui:GroupBox text="Sequences" picking-mode="Ignore" name="sequencesLabel" style="flex-direction: row; justify-content: flex-start; align-items: flex-end; -unity-font-style: normal; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 3px; margin-right: 0; margin-top: 0; margin-bottom: 5px;">
+        <ui:Button tabindex="-1" text="+" display-tooltip-when-elided="true" name="addSequence" style="max-width: 30%; min-width: 20px; width: 50%;" />
+        <ui:Button tabindex="-1" text="-" display-tooltip-when-elided="true" name="removeSequence" tooltip="Delete selected" style="max-width: 30%; min-width: 20px; width: 50%;" />
+    </ui:GroupBox>
+    <ui:GroupBox name="sequences" />
+</ui:UXML>

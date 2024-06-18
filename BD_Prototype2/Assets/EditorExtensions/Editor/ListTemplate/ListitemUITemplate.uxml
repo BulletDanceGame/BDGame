@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Foldout text="Item Name" name="itemTemplate" focusable="true" style="background-color: rgba(0, 0, 0, 0.2); border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; -unity-font-style: normal; padding-left: 10px;">
+        <uie:PropertyField name="itemName" style="margin-left: 0; max-width: 50%;" />
+        <uie:PropertyField name="itemProperty" style="max-width: 80%;" />
+    </ui:Foldout>
+</ui:UXML>

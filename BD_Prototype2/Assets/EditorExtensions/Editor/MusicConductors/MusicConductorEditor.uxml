@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:ScrollView name="musicCondRoot">
+        <ui:VisualElement name="variables" style="margin-bottom: 5px;" />
+        <ui:Label tabindex="-1" text="Sequence Groups" display-tooltip-when-elided="true" style="-unity-font-style: bold; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-bottom: 5px; margin-top: 5px;" />
+        <ui:Label tabindex="-1" text="Current group: None" display-tooltip-when-elided="true" name="groupMsg" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-bottom: 5px;" />
+        <ui:GroupBox text="Add or delete selected Groups" style="flex-direction: row; justify-content: flex-start; align-items: flex-end; -unity-font-style: normal; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 5px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
+            <ui:Button tabindex="-1" text="+" display-tooltip-when-elided="true" name="addGroup" style="max-width: 30%; min-width: 20px; width: 50%;" />
+            <ui:Button tabindex="-1" text="-" display-tooltip-when-elided="true" name="removeGroup" style="max-width: 30%; min-width: 20px; width: 50%;" />
+        </ui:GroupBox>
+        <ui:VisualElement name="groups" />
+    </ui:ScrollView>
+</ui:UXML>

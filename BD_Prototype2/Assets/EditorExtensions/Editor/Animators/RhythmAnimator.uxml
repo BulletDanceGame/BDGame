@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:DropdownField label="Animator type" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="type" style="margin-bottom: 1px; margin-left: 3px; margin-right: 3px; margin-top: 1px;" />
+    <uie:ObjectField label="Animator" type="BulletDance.Animation.LayeredSpriteAnimator, Assembly-CSharp" name="layered" style="display: none;" />
+    <uie:ObjectField label="Animator" name="sprite" type="BulletDance.Animation.SpriteAnimator, Assembly-CSharp" style="display: none;" />
+    <uie:ObjectField label="Animator" type="UnityEngine.Animator, UnityEngine.AnimationModule" name="unity" />
+</ui:UXML>

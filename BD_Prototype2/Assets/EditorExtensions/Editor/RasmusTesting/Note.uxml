@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Label tabindex="-1" text="title" display-tooltip-when-elided="true" name="title" style="position: relative; left: 2px; height: 22px; font-size: 15px; -unity-font-style: bold;" />
+    <ui:TextField picking-mode="Ignore" label="Function Name" name="functionName" />
+    <uie:ColorField label="Color" value="RGBA(0.000, 1.000, 1.000, 1.000)" name="color" />
+    <uie:PropertyField name="bullets" />
+    <ui:EnumField label="Movelists To Trigger" type="UnityEngine.TextAlignment, UnityEngine.TextRenderingModule" value="Center" name="movelistEnum" />
+    <ui:IntegerField label="Amount of Randomized Movelists" value="0" name="movelistsToRandomize" />
+    <uie:PropertyField name="specifiedMovelists" />
+</ui:UXML>

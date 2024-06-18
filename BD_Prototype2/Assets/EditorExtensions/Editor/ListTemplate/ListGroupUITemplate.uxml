@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Foldout text="Group name" name="groupTemplate" style="background-color: rgba(0, 0, 0, 0.15); border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; -unity-font-style: bold; margin-top: 5px;">
+        <ui:GroupBox name="groupItemButtons" text="Add or delete items" style="flex-direction: row; justify-content: flex-start; align-items: flex-end; -unity-font-style: normal;">
+            <ui:Button tabindex="-1" text="+" display-tooltip-when-elided="true" name="addItem" style="max-width: 30%; min-width: 20px; width: 50%;" />
+            <ui:Button tabindex="-1" text="-" display-tooltip-when-elided="true" name="removeItem" style="max-width: 30%; min-width: 20px; width: 50%;" />
+        </ui:GroupBox>
+    </ui:Foldout>
+</ui:UXML>

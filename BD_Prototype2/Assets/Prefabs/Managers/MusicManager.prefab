@@ -1,0 +1,271 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &434107585182809706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 434107585182809708}
+  - component: {fileID: 2327364896427278051}
+  - component: {fileID: 4091262668931117989}
+  - component: {fileID: 5505468170450723979}
+  - component: {fileID: 308352580021181608}
+  - component: {fileID: 6288742186564758769}
+  - component: {fileID: 8534671109272207527}
+  - component: {fileID: 6232736872281133249}
+  m_Layer: 0
+  m_Name: MusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &434107585182809708
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434107585182809706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2327364896427278051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434107585182809706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cc09c23c2e070441a9f53c4112fa1bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bankPrefab: {fileID: 3104029878528795601, guid: f43efdc2d6a75df41a5520d37a14c720, type: 3}
+  maxFPS: 120
+  speedingUpInCutscene: 0
+  startSequence: 0
+--- !u!114 &4091262668931117989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434107585182809706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6af82b269844e26448e2485e1d5190a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _controllersInScene:
+  - {fileID: 0}
+--- !u!114 &5505468170450723979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434107585182809706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 470e1c41abe144f45ae486f40eb2ee95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bossSpecificSounds:
+  - prefab: {fileID: 7432618145986152337, guid: 8f77ada9f38303549a0e8ab563c63b38, type: 3}
+    scene: 2
+  - prefab: {fileID: 7432618145986152337, guid: 8f77ada9f38303549a0e8ab563c63b38, type: 3}
+    scene: 1
+  _levelSpecificSounds:
+  - prefab: {fileID: 7432618145986152337, guid: 96f6dfdc5530c384f985a71814f38da4, type: 3}
+    scene: 2
+  - prefab: {fileID: 7432618145986152337, guid: 96f6dfdc5530c384f985a71814f38da4, type: 3}
+    scene: 1
+--- !u!114 &308352580021181608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434107585182809706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add72fcc51373b943873cd3a58ca8480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sfxGroups: []
+--- !u!114 &6288742186564758769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434107585182809706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 770972251dd1a2644bcef390fcfc1472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sfxGroups:
+  - groupName: Movement
+    sfxList:
+    - sfxName: SlowMo Start
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 68a99785d705bfc40a828218cc7a4c98, type: 2}
+    - sfxName: Dash
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 1dd55c939d6f06247bcea4b1881dbbed, type: 2}
+    - sfxName: Dash Step
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 90b779f86b5fd914eb994cce2640f2d9, type: 2}
+    - sfxName: Footstep
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: aa4f9d485aeda81479ade3c16460d6fd, type: 2}
+    - sfxName: Last Footstep
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: eb661e9539b9c8042bc326370dc0e41c, type: 2}
+  - groupName: Swing
+    sfxList:
+    - sfxName: Swing Perfect
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: b48e2aa5a6858a949ada74269cbe1fa6, type: 2}
+    - sfxName: Swing Good
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: a47ac97e17f06b348b699ea90b1538ac, type: 2}
+    - sfxName: Swing Miss
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 683a4d7f21d21f346aa6f3f96807b91e, type: 2}
+  - groupName: Bullet Hit
+    sfxList:
+    - sfxName: Hit Perfect
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 5dd3adc12a3ab974aa871d6825425249, type: 2}
+    - sfxName: Hit Good
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 5c08676c847f7ce43ac3cd28880a3f37, type: 2}
+    - sfxName: Hit Miss
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: b6d9a84db8ac8ee46b17c149ab186e9b, type: 2}
+    - sfxName: Hit Max Combo
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: ac9bc961957ab0a408e753511960db81, type: 2}
+    - sfxName: Hit End Fight
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 2db9edc580eb61742bfcd8c532d5be22, type: 2}
+  - groupName: Hurt & Death
+    sfxList:
+    - sfxName: Hurt
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: c98c62fe26b32ec4e93fbeba89578619, type: 2}
+    - sfxName: Burn
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 5a79c845a06339d4a80fce6f8132e2f2, type: 2}
+  - groupName: Stamina
+    sfxList:
+    - sfxName: Stamina Depleted
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 9d9f1cd279590c9499b5d2562de837c0, type: 2}
+  - groupName: Pick Up
+    sfxList:
+    - sfxName: Pick Up Currency
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 6ef0d8383a0aedd4f8efcb45663fdd3b, type: 2}
+    - sfxName: Pick Up Health
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: fb8961649466f4f41951f40ad3fd6875, type: 2}
+  _maxComboForPitch: 20
+  _comboDuration: 3
+--- !u!114 &8534671109272207527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434107585182809706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 502d5f3d93eadd440b013c16402ad25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sfxGroups:
+  - groupName: Letter voice
+    sfxList:
+    - sfxName: Player
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 9894d514285c1b54588b9a60296052d2, type: 2}
+    - sfxName: Yokai Hunter
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 8db4a7eff44d1454ba3e51c00c100711, type: 2}
+  - groupName: Other
+    sfxList:
+    - sfxName: Speed Up Cutscene
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 5cab64417e4a97544b18991c4faf63a3, type: 2}
+--- !u!114 &6232736872281133249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434107585182809706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59534e61cb9c2944aee28677e960b08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetAudio: 0
+  offsetSwing: 0
+  offsetDash: 0
+  _perfectHitTime: 0.06
+  _okayHitTime: 0.12

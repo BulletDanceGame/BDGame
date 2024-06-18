@@ -1,0 +1,81 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class UnitManager : MonoBehaviour
+{
+    public static UnitManager Instance;
+
+    private GameObject Player;
+    public GameObject Boss;
+
+    public List<GameObject> Enemies = new List<GameObject>();
+    public List<GameObject> SurvivalRoomEnemies;
+    public List<GameObject> ActiveEnemies;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    private void OnDisable()
+    {
+        CancelInvoke();
+    }
+
+    private void OnEnable()
+    {
+        SetPlayer();
+        InvokeRepeating("updatePlayerStatus", 5, 5f);
+        InvokeRepeating("updateEnemyList", 1, 1f);
+    }
+
+    void updateEnemyList()
+    {
+        for(int i = 0; i < Enemies.Count; i++)
+        {
+            if(Enemies[i] == null)
+                Enemies.RemoveAt(i);
+            
+        }
+    }
+
+    public GameObject GetPlayer()
+    {
+        if (Player == null)
+            return null;
+        else
+            return Player;
+
+    }
+
+    public GameObject GetBoss()
+    {
+        if (Player == null)
+            return null;
+        else
+            return Boss;
+    }
+
+    public void SetPlayer()
+    {
+        InvokeRepeating("findPlayer", 0, 0.5f);
+    }
+
+    void findPlayer()
+    {
+        Player = GameObject.Find("Player");
+
+        if (Player != null)
+            CancelInvoke("findPlayer");
+    }
+
+    void updatePlayerStatus()
+    {
+        if (Player == null)
+            return;
+
+        if (!Player.activeSelf)
+            Player = null;
+    }
+}

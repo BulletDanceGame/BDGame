@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Foldout text="Sequence name" name="seqMain" value="false" style="background-color: rgba(0, 0, 0, 0.15); border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; -unity-font-style: bold; margin-top: 5px;">
+        <ui:TextField picking-mode="Ignore" text="Sequence name" name="name" style="margin-left: 0; margin-right: 0; margin-top: 5px; margin-bottom: 5px;" />
+        <uie:PropertyField name="song" style="margin-bottom: 5px;" />
+        <uie:PropertyField name="beatMapActions" style="margin-top: 5px; margin-bottom: 5px;" />
+        <uie:PropertyField name="beatMapPlayer" style="margin-bottom: 5px;" />
+        <ui:IntegerField label="Duration" value="32" name="duration" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 5px;" />
+        <ui:IntegerField label="BPM" value="0" name="bpm" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 5px;" />
+        <ui:Toggle label="Stop Early" name="stop" style="margin-left: 0; margin-right: 0; margin-top: 5px; margin-bottom: 5px; flex-direction: row-reverse; max-width: 130px; justify-content: flex-end;" />
+        <ui:Toggle label="Keep playing on switch" name="switch" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 5px; flex-direction: row-reverse; max-width: 162px; justify-content: flex-end;" />
+        <ui:Toggle label="Replay in same sequence" name="replay" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 5px; flex-direction: row-reverse; max-width: 175px; justify-content: flex-end;" />
+        <ui:GroupBox name="currentNote">
+            <ui:Label tabindex="-1" text="Current: Bar  - , Note -" display-tooltip-when-elided="true" name="noteName" style="font-size: 16px; -unity-font-style: bold;" />
+            <uie:PropertyField name="infoNote" style="position: relative;" />
+        </ui:GroupBox>
+        <ui:Foldout text="Note Sheet" value="false" name="sheetFoldout" />
+    </ui:Foldout>
+</ui:UXML>

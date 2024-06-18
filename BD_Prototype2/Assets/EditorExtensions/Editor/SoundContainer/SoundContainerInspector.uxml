@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:GroupBox name="Variables" style="margin-top: 0; margin-bottom: 0; padding-bottom: 0; padding-top: 0; padding-left: 0; margin-left: 0; margin-right: 0;" />
+    <ui:GroupBox>
+        <ui:Label tabindex="-1" text="SFX list" display-tooltip-when-elided="true" style="-unity-font-style: bold;" />
+        <ui:GroupBox name="listUI">
+            <ui:GroupBox name="groupButtons" style="flex-direction: row; justify-content: flex-start; align-items: flex-end; margin-top: 0; padding-top: 0;">
+                <ui:TextField picking-mode="Ignore" text="Group name to add/remove" name="groupName" style="min-width: 50px; width: 80%; -unity-font-style: italic; max-width: 75%;" />
+                <ui:Button tabindex="-1" text="+" display-tooltip-when-elided="true" name="addGroup" style="max-width: 40%; min-width: 20px;" />
+                <ui:Button tabindex="-1" text="-" display-tooltip-when-elided="true" name="removeGroup" style="max-width: 40%; min-width: 20px;" />
+            </ui:GroupBox>
+        </ui:GroupBox>
+    </ui:GroupBox>
+</ui:UXML>

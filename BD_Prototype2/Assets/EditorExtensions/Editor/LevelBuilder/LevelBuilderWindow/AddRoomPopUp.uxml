@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement style="padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; width: 100%; height: 100%; justify-content: space-between;">
+        <ui:VisualElement style="flex-direction: row;">
+            <ui:Label tabindex="-1" text="Name" display-tooltip-when-elided="true" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-right: 35px;" />
+            <ui:TextField picking-mode="Ignore" value="New Layer" text="New Layer" name="name" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 3px; width: 70%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-direction: row;">
+            <ui:Label tabindex="-1" text="Type" display-tooltip-when-elided="true" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-right: 40px;" />
+            <ui:DropdownField index="-1" name="type" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 10px; width: 70%;" />
+        </ui:VisualElement>
+        <ui:Label tabindex="-1" text="Grid Settings" display-tooltip-when-elided="true" style="-unity-font-style: bold; margin-bottom: 5px;" />
+        <ui:VisualElement style="flex-direction: row;">
+            <ui:Label tabindex="-1" text="Cell Size" display-tooltip-when-elided="true" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-right: 20px;" />
+            <ui:Vector3Field name="size" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 3px; width: 70%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-direction: row;">
+            <ui:Label tabindex="-1" text="Cell Gap" display-tooltip-when-elided="true" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-right: 20px;" />
+            <ui:Vector3Field name="gap" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 3px; width: 70%;" />
+        </ui:VisualElement>
+        <ui:Button tabindex="-1" text="Create Layer" display-tooltip-when-elided="true" style="margin-top: 10px;" />
+    </ui:VisualElement>
+</ui:UXML>

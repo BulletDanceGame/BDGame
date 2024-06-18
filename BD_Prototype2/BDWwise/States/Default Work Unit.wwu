@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6E0894F2-B69B-4971-834A-F970A9B4994A}" SchemaVersion="110">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{6E0894F2-B69B-4971-834A-F970A9B4994A}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Hurt" ID="{11306BA8-2D74-41A6-BC14-C80932B367C6}">
+					<ChildrenList>
+						<State Name="None" ID="{648C70F7-F9DB-4C1F-AF55-9EE3BF2AACC4}"/>
+						<State Name="low" ID="{75380F0A-AF8C-4575-A532-DF12090C1DE2}"/>
+						<State Name="mid" ID="{F5CEC54E-EAFB-46D4-B678-5E9206427001}"/>
+						<State Name="high" ID="{7B6F9916-27AF-485C-812D-EB0F6FDBF7B5}"/>
+						<State Name="death" ID="{BE5A84D3-CEB1-4C6E-BD45-5CF4F7838B5A}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Ambience" ID="{1B90A031-6B34-42D3-B66E-4AC0352BA08C}">
+					<ChildrenList>
+						<State Name="None" ID="{94E6D3E6-4C19-4E13-8380-C493E4DF8AFB}"/>
+						<State Name="Aftermath" ID="{8DF9F6DC-ED95-4F44-ADCE-D29E87D380CF}"/>
+						<State Name="Before" ID="{A82EFFEA-67B1-4C31-85CA-DF47DDBE3687}"/>
+						<State Name="Fakewin" ID="{46DB4628-F03F-477A-BBBC-317D52E8FD7B}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Level" ID="{27142125-7CED-41AD-AC62-F18C40F61C47}">
+					<ChildrenList>
+						<State Name="None" ID="{D3C43872-09FC-4DAB-9FAD-A1C4C45BADF7}"/>
+						<State Name="Menu" ID="{F3ABAB34-D42E-4DFD-866A-2DC0370D0B1B}"/>
+						<State Name="Tutorial" ID="{4B371ABF-53EF-4BF6-B114-D747A517B697}"/>
+						<State Name="CritterBoss" ID="{A33B981E-859C-46FE-9266-657B08E0AFA5}"/>
+						<State Name="YokaiHunterBoss" ID="{462C21DB-7A88-4AC5-B1F1-9246C26A800B}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>
