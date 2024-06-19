@@ -10,15 +10,18 @@ public class RhythmAnimationManager : MonoBehaviour
     public static RhythmAnimationManager Instance { get; private set; }
     private void Awake() { if(Instance == null) Instance = this; }
 
+    //Need separate lists so update enumarator don't stop from unexpected add/remove
     private List<RhythmAnimator> _animators = new List<RhythmAnimator>();
+    private List<RhythmAnimator> _animatorsAdded   = new List<RhythmAnimator>();
+    private List<RhythmAnimator> _animatorsRemoved = new List<RhythmAnimator>();
     public void AddToController(RhythmAnimator animator)
     {
-        _animators.Add(animator);
+        _animatorsAdded.Add(animator);
     }
 
     public void RemoveFromController(RhythmAnimator animator)
     {
-        _animators.Remove(animator);
+        _animatorsRemoved.Remove(animator);
     }
 
 
@@ -34,9 +37,32 @@ public class RhythmAnimationManager : MonoBehaviour
 
     private void UpdateAnimations(int anticipation, float duration, int beat)
     {
+        //Add to updates & flush queue
+        if(_animatorsAdded.Count > 0)
+        {
+            foreach(var animator in _animatorsAdded)
+            {
+                _animators.Add(animator);
+            }
+            _animatorsAdded.Clear();
+        }
+
+
+        //Update
         foreach(var animator in _animators)
         {
             animator.PlayAnimation(anticipation, duration);
+        }
+
+
+        //Remove from update & flush queue
+        if(_animatorsRemoved.Count > 0)
+        {
+            foreach(var animator in _animatorsRemoved)
+            {
+                _animators.Remove(animator);
+            }
+            _animatorsRemoved.Clear();
         }
     }
     

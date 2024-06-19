@@ -11,6 +11,8 @@ public class VFXManager : MonoBehaviour
 {
     private Dictionary<string, List<GameObject>> _vfxDict = new Dictionary<string, List<GameObject>>();
     private List<VFXObject> _updateList = new List<VFXObject>();
+    private List<VFXObject> _updateListAdd    = new List<VFXObject>();
+    private List<VFXObject> _updateListRemove = new List<VFXObject>();
     private int idCounter = 0;
 
     public static VFXManager Instance { get; private set; }
@@ -56,7 +58,7 @@ public class VFXManager : MonoBehaviour
     {
         if(vfxObject)
         {
-            _updateList.Add(vfxObject);
+            _updateListAdd.Add(vfxObject);
             vfxObject.id = idCounter;
 
             idCounter++;
@@ -67,14 +69,7 @@ public class VFXManager : MonoBehaviour
 
     public void RemoveFromUpdateList(VFXObject vfxObject)
     {
-        for(int i = 0; i < _updateList.Count; i++)
-        {
-            if(_updateList[i].id == vfxObject.id)
-            {
-                _updateList.RemoveAt(i);
-                return;
-            }
-        }
+        _updateListRemove.Add(vfxObject);
     }
 
 
@@ -143,11 +138,41 @@ public class VFXManager : MonoBehaviour
     // -- Update vfx objects -- //
     void Update()
     {
+        //Add to update & flush queue
+        if(_updateListAdd.Count > 0)
+        {
+            foreach(VFXObject vfxObject in _updateListAdd)
+            {
+                _updateList.Add(vfxObject);
+            }
+            _updateListAdd.Clear();
+        }
+
         if(_updateList.Count < 1) return;
 
+
+        //Update
         foreach(VFXObject vfxObject in _updateList)
         {
             vfxObject.UpdateSelf();
+        }
+
+
+        //Remove from update & flush queue
+        if(_updateListRemove.Count > 0)
+        {
+            foreach(VFXObject vfxObject in _updateListAdd)
+            {
+                for(int i = 0; i < _updateList.Count; i++)
+                {
+                    if(_updateList[i].id == vfxObject.id)
+                    {
+                        _updateList.RemoveAt(i);
+                        break;
+                    }
+                }
+            }
+            _updateListRemove.Clear();
         }
     }
 
