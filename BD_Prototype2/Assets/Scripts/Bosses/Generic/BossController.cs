@@ -25,29 +25,29 @@ public class BossController : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            Instance = this;
-        }
-
-
+        //Set instance if null
+        if(Instance == null) Instance = this;
     }
 
     private void Start()
     {
+        //Don't do anything if is not Instance (dupe)
+        if(Instance != null && Instance != this) return;
         EventManager.Instance.OnSetupBossFight += SetCurrentBoss;
         EventManager.Instance.OnBossPhaseChange += OnPhaseChange;
     }
 
     private void OnDestroy()
     {
+        //Don't do anything if is not Instance (dupe)
+        if(Instance != null && Instance != this) return;
+
+        //Set instance null so next scene's boss controller can be Instance
+        Instance = null;
         EventManager.Instance.OnSetupBossFight -= SetCurrentBoss;
         EventManager.Instance.OnBossPhaseChange -= OnPhaseChange;
     }
+
 
     void OnPhaseChange(int phaseNum)
     {
