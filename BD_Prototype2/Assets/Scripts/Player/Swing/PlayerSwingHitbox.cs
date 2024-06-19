@@ -12,6 +12,7 @@ public class PlayerSwingHitbox : MonoBehaviour
     [Header("Last hit slowmo")]
     [SerializeField] private float slowMoDuration = 1f;
     [SerializeField] private float slowMoScale = 0.01f;
+    [SerializeField] private float saigoNoPitchiDuration = 5f;
     bool _isEndHit = false;
 
     PlayerSwing _playerSwing;
@@ -73,11 +74,16 @@ public class PlayerSwingHitbox : MonoBehaviour
             if (hitTiming != BeatTiming.BAD && BossController.Instance.bossHealth.isLastHit)
             {
                 bullet.EndGameHit();
-                TimeManager.Instance.RequestSlowMo(slowMoDuration, slowMoScale);
     
                 if(BossController.Instance.bossHealth.isLastPhase)
+                {
                     VFXManager.Instance?.RequestVFX_SlowMoZoom(UnitManager.Instance?.GetPlayer()?.transform);
-    
+                    TimeManager.Instance.RequestSlowMo(saigoNoPitchiDuration, 0.00001f);
+                }
+
+                else
+                    TimeManager.Instance.RequestSlowMo(slowMoDuration, slowMoScale);
+        
                 EventManager.Instance.PlayerLastHit(hitTiming);
                 _isEndHit = true;
             }
