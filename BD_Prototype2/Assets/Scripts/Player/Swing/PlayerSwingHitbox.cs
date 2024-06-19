@@ -74,7 +74,10 @@ public class PlayerSwingHitbox : MonoBehaviour
             {
                 bullet.EndGameHit();
                 TimeManager.Instance.RequestSlowMo(slowMoDuration, slowMoScale);
-                VFXManager.Instance?.RequestVFX_SlowMoZoom(UnitManager.Instance?.GetPlayer()?.transform);
+    
+                if(BossController.Instance.bossHealth.isLastPhase)
+                    VFXManager.Instance?.RequestVFX_SlowMoZoom(UnitManager.Instance?.GetPlayer()?.transform);
+    
                 EventManager.Instance.PlayerLastHit(hitTiming);
                 _isEndHit = true;
             }
@@ -100,7 +103,7 @@ public class PlayerSwingHitbox : MonoBehaviour
             if (!ScoreManager.Instance.isMaxCombo) return;
 
             TimeManager.Instance.RequestSlowMo(slowMoDuration, slowMoScale);
-            VFXManager.Instance?.RequestVFX_SlowMoZoom(UnitManager.Instance?.GetPlayer()?.transform);
+            //VFXManager.Instance?.RequestVFX_SlowMoZoom(UnitManager.Instance?.GetPlayer()?.transform);
             EventManager.Instance.MaxCombo();
 
             if (_hitCombo >= 4) _hitCombo = 0;        
