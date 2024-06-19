@@ -384,8 +384,7 @@ public class Boss1MoveList : Movelist
             {
                 float _step = reticleFollowSpeed * Time.deltaTime;
                 _attackReticles[i].transform.position = Vector2.MoveTowards(_attackReticles[i].transform.position, UnitManager.Instance.GetPlayer().transform.position, _step);
-                _attackReticles[i].transform.localScale = Vector2.MoveTowards(_attackReticles[i].transform.localScale*_reticleSize.x, 
-                                                                              _attackReticles[i].transform.localScale*_reticleSize.y, _step);
+                _attackReticles[i].transform.localScale = Vector2.Lerp(_attackReticles[i].transform.localScale, _reticleSize, Time.deltaTime);
             }
             else if (_currentContainerBeats[i] >= _beatsCanisterDropQUEUE)
             {
