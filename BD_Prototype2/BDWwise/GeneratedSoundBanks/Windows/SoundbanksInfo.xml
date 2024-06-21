@@ -1,0 +1,2838 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="690988688" Type="User" Language="SFX" Hash="{5B00A1C3-C6A1-FF22-F4FA-D131EC78CD17}">
+			<ShortName>Music_Critter_Phase2</ShortName>
+			<Path>Music_Critter_Phase2.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="690988691" Type="User" Language="SFX" Hash="{F833F6B3-6DC5-B457-BF63-A99BAC3891D6}">
+			<ShortName>Music_Critter_Phase1</ShortName>
+			<Path>Music_Critter_Phase1.bnk</Path>
+			<Media>
+				<File Id="98861210" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Critter Phase 1 Part 1 BPM150.wav</ShortName>
+					<CachePath>SFX/Critter Phase 1 Part 1 BPM150_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="432308025" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Critter Phase 1 Part 5 BPM150.wav</ShortName>
+					<CachePath>SFX/Critter Phase 1 Part 5 BPM150_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="565872709" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Critter Intro BPM165.wav</ShortName>
+					<CachePath>SFX/Critter Intro BPM165_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="624591303" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Critter Phase 1 Part 3 BPM150.wav</ShortName>
+					<CachePath>SFX/Critter Phase 1 Part 3 BPM150_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="645194740" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Critter Phase 1 Part 2 BPM150.wav</ShortName>
+					<CachePath>SFX/Critter Phase 1 Part 2 BPM150_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="887074454" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Critter Battle Intro BPM150.wav</ShortName>
+					<CachePath>SFX/Critter Battle Intro BPM150_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="1063857795" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Critter Phase 1 Part 4 BPM150.wav</ShortName>
+					<CachePath>SFX/Critter Phase 1 Part 4 BPM150_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2814795428" Name="CPhase1__Intro____PLAY" DurationType="OneShot" DurationMin="17.3" DurationMax="17.3">
+					<MediaRefs>
+						<MediaRef Id="887074454"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1733806626" Name="CPhase1__Part1____PLAY" DurationType="OneShot" DurationMin="23.483334" DurationMax="23.483334">
+					<MediaRefs>
+						<MediaRef Id="98861210"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3290652817" Name="CPhase1__Part2____PLAY" DurationType="OneShot" DurationMin="23.204166" DurationMax="23.204166">
+					<MediaRefs>
+						<MediaRef Id="645194740"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="683879428" Name="CPhase1__Part3____PLAY" DurationType="OneShot" DurationMin="23.820833" DurationMax="23.820833">
+					<MediaRefs>
+						<MediaRef Id="624591303"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1964220686" Name="CPhase1__Part5____PLAY" DurationType="OneShot" DurationMin="16.595835" DurationMax="16.595835">
+					<MediaRefs>
+						<MediaRef Id="432308025"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1524639014" Name="Encounter__Critter___PLAY" DurationType="OneShot" DurationMin="32.850845" DurationMax="32.850845">
+					<MediaRefs>
+						<MediaRef Id="565872709"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3176132612" Name="Play_Critter_Phase_1_Part_4_BPM150" DurationType="OneShot" DurationMin="36.61667" DurationMax="36.61667">
+					<MediaRefs>
+						<MediaRef Id="1063857795"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="723507619" Type="User" Language="SFX" Hash="{4ED1DCFE-25EF-1D69-981F-38D84590C981}">
+			<ShortName>Music_YokaiHunter_Phase3AndOutro</ShortName>
+			<Path>Music_YokaiHunter_Phase3AndOutro.bnk</Path>
+			<Media>
+				<File Id="12628175" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Part 1 (with intro) - BIG BULLET.wav</ShortName>
+					<CachePath>SFX/Part 1 (with intro) - BIG BULLET_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="100740018" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Part 3 - Explody+Fire bullet.wav</ShortName>
+					<CachePath>SFX/Part 3 - Explody+Fire bullet_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="160451805" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Part 4 - 2 - Groovy+Explody bullet 2.wav</ShortName>
+					<CachePath>SFX/Part 4 - 2 - Groovy+Explody bullet 2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="171261784" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Intro 4.wav</ShortName>
+					<CachePath>SFX/Intro 4_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="231226394" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Part 4 - 1 - Groovy+Explody bullet.wav</ShortName>
+					<CachePath>SFX/Part 4 - 1 - Groovy+Explody bullet_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="403014659" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Part 2 - Groovy+Fire bullet.wav</ShortName>
+					<CachePath>SFX/Part 2 - Groovy+Fire bullet_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="421832657" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Part 6 - normal bullet 2.wav</ShortName>
+					<CachePath>SFX/Part 6 - normal bullet 2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="552669736" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Part 1 (no intro) - BIG BULLET.wav</ShortName>
+					<CachePath>SFX/Part 1 (no intro) - BIG BULLET_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="685155449" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Part 5 - normal bullet 1.wav</ShortName>
+					<CachePath>SFX/Part 5 - normal bullet 1_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="716031481" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Outro.wav</ShortName>
+					<CachePath>SFX/Outro_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="881199495" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Intro 2.wav</ShortName>
+					<CachePath>SFX/Intro 2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="881575841" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>screamin death.wav</ShortName>
+					<CachePath>SFX/screamin death_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="943945296" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Intro 8.wav</ShortName>
+					<CachePath>SFX/Intro 8_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="204711616" Name="YHPhase3__Intro__TransitionToPhase3____PLAY" DurationType="OneShot" DurationMin="72.041664" DurationMax="72.041664">
+					<MediaRefs>
+						<MediaRef Id="12628175"/>
+						<MediaRef Id="171261784"/>
+						<MediaRef Id="716031481"/>
+						<MediaRef Id="881199495"/>
+						<MediaRef Id="881575841"/>
+						<MediaRef Id="943945296"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1341602893" Name="YHPhase3__Part1__BigBullets____PLAY" DurationType="OneShot" DurationMin="23.794125" DurationMax="23.794125">
+					<MediaRefs>
+						<MediaRef Id="552669736"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4184554825" Name="YHPhase3__Part2__GroovyFireBullet____PLAY" DurationType="OneShot" DurationMin="29.683834" DurationMax="29.683834">
+					<MediaRefs>
+						<MediaRef Id="403014659"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2371690945" Name="YHPhase3__Part3__ExplodyFireBullet____PLAY" DurationType="OneShot" DurationMin="16.694853" DurationMax="16.694853">
+					<MediaRefs>
+						<MediaRef Id="100740018"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="123712195" Name="YHPhase3__Part4_1__GroovyExplodyBullet1____PLAY" DurationType="OneShot" DurationMin="10.566167" DurationMax="10.566167">
+					<MediaRefs>
+						<MediaRef Id="231226394"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3326494175" Name="YHPhase3__Part4_2__GroovyExplodyBullet2____PLAY" DurationType="OneShot" DurationMin="8.3125" DurationMax="8.3125">
+					<MediaRefs>
+						<MediaRef Id="160451805"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3728040562" Name="YHPhase3__Part5__NormalBullet1____PLAY" DurationType="OneShot" DurationMin="19.007353" DurationMax="19.007353">
+					<MediaRefs>
+						<MediaRef Id="685155449"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3222083532" Name="YHPhase3__Part6__NormalBullet2____PLAY" DurationType="OneShot" DurationMin="18.753666" DurationMax="18.753666">
+					<MediaRefs>
+						<MediaRef Id="421832657"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="1103547191" Name="PLAYBACK_SPEED____CutsceneMusic"/>
+				<GameParameter Id="2338745114" Name="PLAYBACK_SPEED____MusicBossBattle"/>
+				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{02CFEC8F-3FAC-1205-4DB9-A9FB90BAA7BD}">
+			<ShortName>Music_TutorialAndLevel1_Part1</ShortName>
+			<Path>Music_TutorialAndLevel1_Part1.bnk</Path>
+			<Media>
+				<File Id="80926456" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone2_Part4.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone2_Part4_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="87331491" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1-Battle_DownTime-Part1.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1-Battle_DownTime-Part1_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="129813583" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1-Battle-Part3.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1-Battle-Part3_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="156212919" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ambience Nature Field Windy 02.wav</ShortName>
+					<CachePath>SFX/Ambience Nature Field Windy 02_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="164116952" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone2_Intro.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone2_Intro_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="292738170" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1-Battle-Part1.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1-Battle-Part1_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="327326669" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone2-Battle-Part2.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone2-Battle-Part2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="394468136" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ambience4.wav</ShortName>
+					<CachePath>SFX/ambience4_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="395092845" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone2-Battle-Intro.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone2-Battle-Intro_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="461100053" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone2_Part1.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone2_Part1_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="506300702" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1_Part2.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1_Part2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="511543187" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ambience5.wav</ShortName>
+					<CachePath>SFX/ambience5_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="635856407" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone2-Battle-Part1.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone2-Battle-Part1_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="669902912" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1_Intro.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1_Intro_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="707841870" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1-Battle-Intro.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1-Battle-Intro_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="737231083" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1_Part3.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1_Part3_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="777755744" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1-Battle_DownTime-Part2.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1-Battle_DownTime-Part2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="881936464" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1-Battle-Part2.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1-Battle-Part2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="939803258" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone2_Part3.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone2_Part3_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="952572008" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1-Battle-Part4.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1-Battle-Part4_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="973935565" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1_Part1.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1_Part1_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="1029375074" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone2_Part5.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone2_Part5_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="1040505693" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone2_Part2.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone2_Part2_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1603197233" Name="Arena__AfterTheFight____PLAY" DurationType="OneShot" DurationMin="10.283333" DurationMax="10.283333">
+					<MediaRefs>
+						<MediaRef Id="511543187"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3704444854" Name="Arena__BeforeTheFight____PLAY" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="85412153" Id="2057547683"/>
+							<MediaRefs>
+								<MediaRef Id="511543187"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="85412153" Id="3289250968"/>
+							<MediaRefs>
+								<MediaRef Id="394468136"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="85412153" Id="911198968"/>
+							<MediaRefs>
+								<MediaRef Id="511543187"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="85412153" Id="748895195"/>
+							<MediaRefs>
+								<MediaRef Id="394468136"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3490217813" Name="BPM140_____Play_Env1_VegZone1_Battle_DownTime_Part1" DurationType="OneShot" DurationMin="8.575895" DurationMax="8.575895">
+					<MediaRefs>
+						<MediaRef Id="87331491"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3490217814" Name="BPM140_____Play_Env1_VegZone1_Battle_DownTime_Part2" DurationType="OneShot" DurationMin="7.1785684" DurationMax="7.1785684">
+					<MediaRefs>
+						<MediaRef Id="327326669"/>
+						<MediaRef Id="777755744"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2245628831" Name="BPM140_____Play_Env1_VegZone1_Battle_Intro" DurationType="OneShot" DurationMin="8.892855" DurationMax="8.892855">
+					<MediaRefs>
+						<MediaRef Id="327326669"/>
+						<MediaRef Id="707841870"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="505608681" Name="BPM140_____Play_Env1_VegZone1_Battle_Part1" DurationType="OneShot" DurationMin="7.1785684" DurationMax="7.1785684">
+					<MediaRefs>
+						<MediaRef Id="292738170"/>
+						<MediaRef Id="327326669"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="505608682" Name="BPM140_____Play_Env1_VegZone1_Battle_Part2" DurationType="OneShot" DurationMin="6.955354" DurationMax="6.955354">
+					<MediaRefs>
+						<MediaRef Id="881936464"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="505608683" Name="BPM140_____Play_Env1_VegZone1_Battle_Part3" DurationType="OneShot" DurationMin="7.075896" DurationMax="7.075896">
+					<MediaRefs>
+						<MediaRef Id="129813583"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="505608684" Name="BPM140_____Play_Env1_VegZone1_Battle_Part4" DurationType="OneShot" DurationMin="13.71875" DurationMax="13.71875">
+					<MediaRefs>
+						<MediaRef Id="952572008"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="292923256" Name="BPM140_____Play_Env1_VegZone1_Intro" DurationType="OneShot" DurationMin="20.68304" DurationMax="20.68304">
+					<MediaRefs>
+						<MediaRef Id="669902912"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1814703350" Name="BPM140_____Play_Env1_VegZone1_Part1" DurationType="OneShot" DurationMin="7.0625" DurationMax="7.0625">
+					<MediaRefs>
+						<MediaRef Id="973935565"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1814703349" Name="BPM140_____Play_Env1_VegZone1_Part2" DurationType="OneShot" DurationMin="9.933042" DurationMax="9.933042">
+					<MediaRefs>
+						<MediaRef Id="506300702"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1814703348" Name="BPM140_____Play_Env1_VegZone1_Part3" DurationType="OneShot" DurationMin="9.959812" DurationMax="9.959812">
+					<MediaRefs>
+						<MediaRef Id="737231083"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2604592794" Name="BPM140_____Play_Env1_VegZone2_Battle_Intro" DurationType="OneShot" DurationMin="5.2276874" DurationMax="5.2276874">
+					<MediaRefs>
+						<MediaRef Id="395092845"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2822002376" Name="BPM140_____Play_Env1_VegZone2_Battle_Part1" DurationType="OneShot" DurationMin="17.147312" DurationMax="17.147312">
+					<MediaRefs>
+						<MediaRef Id="635856407"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2822002379" Name="BPM140_____Play_Env1_VegZone2_Battle_Part2" DurationType="OneShot" DurationMin="14.892855" DurationMax="14.892855">
+					<MediaRefs>
+						<MediaRef Id="327326669"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2685356407" Name="BPM140_____Play_Env1_VegZone2_Intro" DurationType="OneShot" DurationMin="21.861603" DurationMax="21.861603">
+					<MediaRefs>
+						<MediaRef Id="164116952"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3939880753" Name="BPM140_____Play_Env1_VegZone2_Part1" DurationType="OneShot" DurationMin="13.71875" DurationMax="13.71875">
+					<MediaRefs>
+						<MediaRef Id="461100053"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3939880754" Name="BPM140_____Play_Env1_VegZone2_Part2" DurationType="OneShot" DurationMin="9.040188" DurationMax="9.040188">
+					<MediaRefs>
+						<MediaRef Id="1040505693"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3939880755" Name="BPM140_____Play_Env1_VegZone2_Part3" DurationType="OneShot" DurationMin="11.388395" DurationMax="11.388395">
+					<MediaRefs>
+						<MediaRef Id="939803258"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3939880756" Name="BPM140_____Play_Env1_VegZone2_Part4" DurationType="OneShot" DurationMin="9.111605" DurationMax="9.111605">
+					<MediaRefs>
+						<MediaRef Id="80926456"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3939880757" Name="BPM140_____Play_Env1_VegZone2_Part5" DurationType="OneShot" DurationMin="8.915188" DurationMax="8.915188">
+					<MediaRefs>
+						<MediaRef Id="1029375074"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="513231425" Name="Play_AmbienceForest" DurationType="OneShot" DurationMin="89.14286" DurationMax="89.14286">
+					<MediaRefs>
+						<MediaRef Id="156212919"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<StateGroups>
+				<StateGroup Id="85412153" Name="Ambience">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="911198968" Name="Fakewin"/>
+						<State Id="2057547683" Name="Aftermath"/>
+						<State Id="3289250968" Name="Before"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="834008394" Type="User" Language="SFX" Hash="{429C88A4-42BF-10B8-B343-3745EE529989}">
+			<ShortName>Music_TutorialAndLevel1_Part3</ShortName>
+			<Path>Music_TutorialAndLevel1_Part3.bnk</Path>
+			<Media>
+				<File Id="35178366" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Training Grounds - Bat Room - Part 1.wav</ShortName>
+					<CachePath>SFX/Training Grounds - Bat Room - Part 1_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="52696956" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Environment_Part4 [BPM130].wav</ShortName>
+					<CachePath>SFX/Layer1_Environment_Part4 [BPM130]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="56147054" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Environment_Part4 [BPM140].wav</ShortName>
+					<CachePath>SFX/Layer1_Environment_Part4 [BPM140]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="91686272" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Battle-Introwav.wav</ShortName>
+					<CachePath>SFX/Battle-Introwav_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="163242154" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>training - part 2.wav</ShortName>
+					<CachePath>SFX/training - part 2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="168198268" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Training Grounds - Full On Training - Part 2.wav</ShortName>
+					<CachePath>SFX/Training Grounds - Full On Training - Part 2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="198518509" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>training - part 5.wav</ShortName>
+					<CachePath>SFX/training - part 5_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="245008496" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Environment_Part4 [BPM150].wav</ShortName>
+					<CachePath>SFX/Layer1_Environment_Part4 [BPM150]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="289600217" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Tripplets_Part1 [BPM120].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Tripplets_Part1 [BPM120]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="330235861" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Environment_Part2 [BPM140].wav</ShortName>
+					<CachePath>SFX/Layer1_Environment_Part2 [BPM140]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="335842701" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Environment_Part2 [BPM150].wav</ShortName>
+					<CachePath>SFX/Layer1_Environment_Part2 [BPM150]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="340495165" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Environment_Intro [BPM120].wav</ShortName>
+					<CachePath>SFX/Layer1_Environment_Intro [BPM120]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="343735818" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Environment_Part3 [BPM140].wav</ShortName>
+					<CachePath>SFX/Layer1_Environment_Part3 [BPM140]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="400311252" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Environment_Part3 [BPM120].wav</ShortName>
+					<CachePath>SFX/Layer1_Environment_Part3 [BPM120]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="401995139" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Environment_Part3 [BPM130].wav</ShortName>
+					<CachePath>SFX/Layer1_Environment_Part3 [BPM130]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="403442946" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>training - part 3.wav</ShortName>
+					<CachePath>SFX/training - part 3_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="432749148" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>training - part 6.wav</ShortName>
+					<CachePath>SFX/training - part 6_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="449413319" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>training - part 1.wav</ShortName>
+					<CachePath>SFX/training - part 1_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="452723273" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Environment_Intro [BPM140].wav</ShortName>
+					<CachePath>SFX/Layer1_Environment_Intro [BPM140]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="459282904" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Environment_Intro [BPM150].wav</ShortName>
+					<CachePath>SFX/Layer1_Environment_Intro [BPM150]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="548169293" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Environment_Part2 [BPM120].wav</ShortName>
+					<CachePath>SFX/Layer1_Environment_Part2 [BPM120]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="592598698" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Training Grounds - Transition - Bat Room to Full On Training.wav</ShortName>
+					<CachePath>SFX/Training Grounds - Transition - Bat Room to Full On Training_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="631068701" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Environment_Part3 [BPM150].wav</ShortName>
+					<CachePath>SFX/Layer1_Environment_Part3 [BPM150]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="643674436" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>training - transition to part 3.wav</ShortName>
+					<CachePath>SFX/training - transition to part 3_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="657863708" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Battle-Whole.wav</ShortName>
+					<CachePath>SFX/Battle-Whole_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="658185316" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>training - part 7.wav</ShortName>
+					<CachePath>SFX/training - part 7_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="739205363" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Battle-Half.wav</ShortName>
+					<CachePath>SFX/Battle-Half_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="741894549" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Training Grounds - Full On Training - Part 1.wav</ShortName>
+					<CachePath>SFX/Training Grounds - Full On Training - Part 1_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="753194123" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-Test3_Tripplets-Part2.wav</ShortName>
+					<CachePath>SFX/Env1-Test3_Tripplets-Part2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="757346049" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Environment_Part1 [BPM140].wav</ShortName>
+					<CachePath>SFX/Layer1_Environment_Part1 [BPM140]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="785381804" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-Test3_Tripplets-Part1.wav</ShortName>
+					<CachePath>SFX/Env1-Test3_Tripplets-Part1_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="792384864" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BPM120 - Rhythm10010010.wav</ShortName>
+					<CachePath>SFX/BPM120 - Rhythm10010010_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="799222977" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-Test3_Tripplets-Intro.wav</ShortName>
+					<CachePath>SFX/Env1-Test3_Tripplets-Intro_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="802141736" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Environment_Part4 [BPM120].wav</ShortName>
+					<CachePath>SFX/Layer1_Environment_Part4 [BPM120]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="838159697" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Environment_Part1 [BPM130].wav</ShortName>
+					<CachePath>SFX/Layer1_Environment_Part1 [BPM130]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="885899155" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-Test3_Tripplets-Part3.wav</ShortName>
+					<CachePath>SFX/Env1-Test3_Tripplets-Part3_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="892290141" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>training - intro.wav</ShortName>
+					<CachePath>SFX/training - intro_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="976990721" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>training - part 4.wav</ShortName>
+					<CachePath>SFX/training - part 4_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="1019556544" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Environment_Intro [BPM130].wav</ShortName>
+					<CachePath>SFX/Layer1_Environment_Intro [BPM130]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="1025848575" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Environment_Part2 [BPM130].wav</ShortName>
+					<CachePath>SFX/Layer1_Environment_Part2 [BPM130]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="1032983446" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Environment_Part1 [BPM150].wav</ShortName>
+					<CachePath>SFX/Layer1_Environment_Part1 [BPM150]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="1073739659" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Environment_Part1 [BPM120].wav</ShortName>
+					<CachePath>SFX/Layer1_Environment_Part1 [BPM120]_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="4269135864" Name="Play_Battle_Half" DurationType="OneShot" DurationMin="7.071429" DurationMax="7.071429">
+					<MediaRefs>
+						<MediaRef Id="739205363"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="843529347" Name="Play_Battle_Introwav" DurationType="OneShot" DurationMin="7.736604" DurationMax="7.736604">
+					<MediaRefs>
+						<MediaRef Id="91686272"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3431965952" Name="Play_Battle_Whole" DurationType="OneShot" DurationMin="6.9453325" DurationMax="6.9453325">
+					<MediaRefs>
+						<MediaRef Id="657863708"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2403173065" Name="Play_Env1_Test3_Tripplets_Intro" DurationType="OneShot" DurationMin="8.549105" DurationMax="8.549105">
+					<MediaRefs>
+						<MediaRef Id="799222977"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="160122243" Name="Play_Env1_Test3_Tripplets_Part1" DurationType="OneShot" DurationMin="7.714286" DurationMax="7.714286">
+					<MediaRefs>
+						<MediaRef Id="785381804"/>
+						<MediaRef Id="799222977"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="160122240" Name="Play_Env1_Test3_Tripplets_Part2" DurationType="OneShot" DurationMin="7.714286" DurationMax="7.714286">
+					<MediaRefs>
+						<MediaRef Id="753194123"/>
+						<MediaRef Id="799222977"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="160122241" Name="Play_Env1_Test3_Tripplets_Part3" DurationType="OneShot" DurationMin="7.714286" DurationMax="7.714286">
+					<MediaRefs>
+						<MediaRef Id="799222977"/>
+						<MediaRef Id="885899155"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="767074418" Name="Play_Layer1_Environment_Intro__BPM120_" DurationType="OneShot" DurationMin="10.817708" DurationMax="10.817708">
+					<MediaRefs>
+						<MediaRef Id="289600217"/>
+						<MediaRef Id="340495165"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2813693691" Name="Play_Layer1_Environment_Intro__BPM130_" DurationType="OneShot" DurationMin="10.125401" DurationMax="10.125401">
+					<MediaRefs>
+						<MediaRef Id="289600217"/>
+						<MediaRef Id="1019556544"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2712880836" Name="Play_Layer1_Environment_Intro__BPM140_" DurationType="OneShot" DurationMin="9.531994" DurationMax="9.531994">
+					<MediaRefs>
+						<MediaRef Id="289600217"/>
+						<MediaRef Id="452723273"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2612068045" Name="Play_Layer1_Environment_Intro__BPM150_" DurationType="OneShot" DurationMin="9.017708" DurationMax="9.017708">
+					<MediaRefs>
+						<MediaRef Id="289600217"/>
+						<MediaRef Id="459282904"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2060370140" Name="Play_Layer1_Environment_Part1__BPM120_" DurationType="OneShot" DurationMin="8.630208" DurationMax="8.630208">
+					<MediaRefs>
+						<MediaRef Id="1073739659"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2496440965" Name="Play_Layer1_Environment_Part1__BPM130_" DurationType="OneShot" DurationMin="8.009625" DurationMax="8.009625">
+					<MediaRefs>
+						<MediaRef Id="838159697"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="114563658" Name="Play_Layer1_Environment_Part1__BPM140_" DurationType="OneShot" DurationMin="7.5" DurationMax="7.5">
+					<MediaRefs>
+						<MediaRef Id="757346049"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2161182931" Name="Play_Layer1_Environment_Part1__BPM150_" DurationType="OneShot" DurationMin="7.0333333" DurationMax="7.0333333">
+					<MediaRefs>
+						<MediaRef Id="1032983446"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2352118981" Name="Play_Layer1_Environment_Part2__BPM120_" DurationType="OneShot" DurationMin="8.208333" DurationMax="8.208333">
+					<MediaRefs>
+						<MediaRef Id="548169293"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1916047900" Name="Play_Layer1_Environment_Part2__BPM130_" DurationType="OneShot" DurationMin="7.6009583" DurationMax="7.6009583">
+					<MediaRefs>
+						<MediaRef Id="1025848575"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2016860691" Name="Play_Layer1_Environment_Part2__BPM140_" DurationType="OneShot" DurationMin="7.080354" DurationMax="7.080354">
+					<MediaRefs>
+						<MediaRef Id="330235861"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4265208714" Name="Play_Layer1_Environment_Part2__BPM150_" DurationType="OneShot" DurationMin="6.6291666" DurationMax="6.6291666">
+					<MediaRefs>
+						<MediaRef Id="335842701"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1307161798" Name="Play_Layer1_Environment_Part3__BPM120_" DurationType="OneShot" DurationMin="8.229167" DurationMax="8.229167">
+					<MediaRefs>
+						<MediaRef Id="400311252"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1206349007" Name="Play_Layer1_Environment_Part3__BPM130_" DurationType="OneShot" DurationMin="7.528854" DurationMax="7.528854">
+					<MediaRefs>
+						<MediaRef Id="401995139"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1375257904" Name="Play_Layer1_Environment_Part3__BPM140_" DurationType="OneShot" DurationMin="7.03125" DurationMax="7.03125">
+					<MediaRefs>
+						<MediaRef Id="343735818"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3421877177" Name="Play_Layer1_Environment_Part3__BPM150_" DurationType="OneShot" DurationMin="6.5833335" DurationMax="6.5833335">
+					<MediaRefs>
+						<MediaRef Id="631068701"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4292219791" Name="Play_Layer1_Environment_Part4__BPM120_" DurationType="OneShot" DurationMin="8.21875" DurationMax="8.21875">
+					<MediaRefs>
+						<MediaRef Id="802141736"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="98065286" Name="Play_Layer1_Environment_Part4__BPM130_" DurationType="OneShot" DurationMin="7.6201873" DurationMax="7.6201873">
+					<MediaRefs>
+						<MediaRef Id="52696956"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2212780921" Name="Play_Layer1_Environment_Part4__BPM140_" DurationType="OneShot" DurationMin="7.111604" DurationMax="7.111604">
+					<MediaRefs>
+						<MediaRef Id="56147054"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="166161648" Name="Play_Layer1_Environment_Part4__BPM150_" DurationType="OneShot" DurationMin="6.5375" DurationMax="6.5375">
+					<MediaRefs>
+						<MediaRef Id="245008496"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="588830433" Name="Play_training___intro" DurationType="OneShot" DurationMin="15.369259" DurationMax="15.369259">
+					<MediaRefs>
+						<MediaRef Id="892290141"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4026880622" Name="Play_training___part_1" DurationType="OneShot" DurationMin="11.512315" DurationMax="11.512315">
+					<MediaRefs>
+						<MediaRef Id="449413319"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4026880621" Name="Play_training___part_2" DurationType="OneShot" DurationMin="10.29546" DurationMax="10.29546">
+					<MediaRefs>
+						<MediaRef Id="163242154"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4026880620" Name="Play_training___part_3" DurationType="OneShot" DurationMin="10.203736" DurationMax="10.203736">
+					<MediaRefs>
+						<MediaRef Id="403442946"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4026880619" Name="Play_training___part_4" DurationType="OneShot" DurationMin="10.193265" DurationMax="10.193265">
+					<MediaRefs>
+						<MediaRef Id="976990721"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4026880618" Name="Play_training___part_5" DurationType="OneShot" DurationMin="10.03112" DurationMax="10.03112">
+					<MediaRefs>
+						<MediaRef Id="198518509"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4026880617" Name="Play_training___part_6" DurationType="OneShot" DurationMin="14.878362" DurationMax="14.878362">
+					<MediaRefs>
+						<MediaRef Id="432749148"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2181100327" Name="Play_training___part_6_as_intro" DurationType="OneShot" DurationMin="15.92184" DurationMax="15.92184">
+					<MediaRefs>
+						<MediaRef Id="432749148"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4026880616" Name="Play_training___part_7" DurationType="OneShot" DurationMin="10.498614" DurationMax="10.498614">
+					<MediaRefs>
+						<MediaRef Id="658185316"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3001342406" Name="Play_training___transition_to_part_3" DurationType="OneShot" DurationMin="10.7911215" DurationMax="10.7911215">
+					<MediaRefs>
+						<MediaRef Id="403442946"/>
+						<MediaRef Id="643674436"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2693353997" Name="TRAINING_GROUND__BatRoom__Part1____PLAY" DurationType="OneShot" DurationMin="3.8173077" DurationMax="3.8173077">
+					<MediaRefs>
+						<MediaRef Id="35178366"/>
+						<MediaRef Id="792384864"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3019299785" Name="TRAINING_GROUND__FullOnTraining__Part1____PLAY" DurationType="OneShot" DurationMin="10.3125" DurationMax="10.3125">
+					<MediaRefs>
+						<MediaRef Id="741894549"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2890202074" Name="TRAINING_GROUND__FullOnTraining__Part2____PLAY" DurationType="OneShot" DurationMin="10.3125" DurationMax="10.3125">
+					<MediaRefs>
+						<MediaRef Id="168198268"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4217841101" Name="TRAINING_GROUND__Transition__BatRoom__To__FullOnTraining__Part1____PLAY" DurationType="OneShot" DurationMin="7.5096154" DurationMax="7.5096154">
+					<MediaRefs>
+						<MediaRef Id="592598698"/>
+						<MediaRef Id="792384864"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="834008395" Type="User" Language="SFX" Hash="{184F8573-A216-5F18-FABB-AFB52766AC29}">
+			<ShortName>Music_TutorialAndLevel1_Part2</ShortName>
+			<Path>Music_TutorialAndLevel1_Part2.bnk</Path>
+			<Media>
+				<File Id="11054533" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_End [BPM150].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_End [BPM150]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="41886489" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_End [BPM130].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_End [BPM130]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="60451904" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Half_Part1.5 [BPM130].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Half_Part1.5 [BPM130]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="64589685" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Half_Part1 [BPM120].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Half_Part1 [BPM120]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="100173167" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Half_Part1.5 [BPM120].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Half_Part1.5 [BPM120]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="148779224" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Half_Part1 [BPM150].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Half_Part1 [BPM150]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="150597017" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Whole_Part2 [BPM140].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Whole_Part2 [BPM140]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="203022400" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Intro [BPM150].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Intro [BPM150]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="234328875" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Intro [BPM130].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Intro [BPM130]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="236295199" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_End [BPM140].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_End [BPM140]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="243493016" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Whole_Part1 [BPM150].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Whole_Part1 [BPM150]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="254173147" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Intro [BPM120].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Intro [BPM120]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="262417909" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Half_Part2 [BPM130].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Half_Part2 [BPM130]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="289600217" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Tripplets_Part1 [BPM120].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Tripplets_Part1 [BPM120]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="310644316" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Whole_Part1 [BPM140].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Whole_Part1 [BPM140]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="310960794" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Whole_Part2 [BPM150].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Whole_Part2 [BPM150]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="328850081" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Whole_Part2 [BPM120].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Whole_Part2 [BPM120]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="419432065" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Tripplets_Part2 [BPM120].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Tripplets_Part2 [BPM120]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="421352510" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Half_Part1 [BPM140].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Half_Part1 [BPM140]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="462308430" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Whole_Part1 [BPM130].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Whole_Part1 [BPM130]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="498456127" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Tripplets_Part1 [BPM140].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Tripplets_Part1 [BPM140]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="524040114" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Half_Part1.5 [BPM140].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Half_Part1.5 [BPM140]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="536799215" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Tripplets_Part1 [BPM150].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Tripplets_Part1 [BPM150]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="588718802" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Half_Part2 [BPM120].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Half_Part2 [BPM120]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="600752026" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Tripplets_Part2 [BPM140].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Tripplets_Part2 [BPM140]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="665576737" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Intro [BPM140].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Intro [BPM140]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="702780604" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Tripplets_Part2 [BPM150].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Tripplets_Part2 [BPM150]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="729751940" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Half_Part2 [BPM150].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Half_Part2 [BPM150]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="750875404" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Tripplets_Part2 [BPM130].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Tripplets_Part2 [BPM130]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="789720952" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Half_Part1 [BPM130].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Half_Part1 [BPM130]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="865803080" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Half_Part1.5 [BPM150].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Half_Part1.5 [BPM150]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="870814419" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_End [BPM120].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_End [BPM120]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="902538760" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Tripplets_Part1 [BPM130].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Tripplets_Part1 [BPM130]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="929881822" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Whole_Part2 [BPM130].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Whole_Part2 [BPM130]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="938061498" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Whole_Part1 [BPM120].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Whole_Part1 [BPM120]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="1003822619" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Layer1_Battle_Half_Part2 [BPM140].wav</ShortName>
+					<CachePath>SFX/Layer1_Battle_Half_Part2 [BPM140]_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1119035090" Name="BPM120__Layer1_Battle_End____PLAY" DurationType="OneShot" DurationMin="2.015625" DurationMax="2.015625">
+					<MediaRefs>
+						<MediaRef Id="870814419"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2236958361" Name="BPM120__Layer1_Battle_Half_Part1_5____PLAY" DurationType="OneShot" DurationMin="9.854167" DurationMax="9.854167">
+					<MediaRefs>
+						<MediaRef Id="100173167"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="498541835" Name="BPM130__Layer1_Battle_End____PLAY" DurationType="OneShot" DurationMin="1.865375" DurationMax="1.865375">
+					<MediaRefs>
+						<MediaRef Id="41886489"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3743776278" Name="BPM130__Layer1_Battle_Half_Part1_5____PLAY" DurationType="OneShot" DurationMin="9.524042" DurationMax="9.524042">
+					<MediaRefs>
+						<MediaRef Id="60451904"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2234210212" Name="BPM140__Layer1_Battle_End____PLAY" DurationType="OneShot" DurationMin="1.7321459" DurationMax="1.7321459">
+					<MediaRefs>
+						<MediaRef Id="236295199"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2268710781" Name="BPM150__Layer1_Battle_End____PLAY" DurationType="OneShot" DurationMin="1.6166667" DurationMax="1.6166667">
+					<MediaRefs>
+						<MediaRef Id="11054533"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3076762201" Name="Play_Layer1_Battle_Half_Part1_5__BPM140_" DurationType="OneShot" DurationMin="8.986605" DurationMax="8.986605">
+					<MediaRefs>
+						<MediaRef Id="524040114"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3177574992" Name="Play_Layer1_Battle_Half_Part1_5__BPM150_" DurationType="OneShot" DurationMin="8.791667" DurationMax="8.791667">
+					<MediaRefs>
+						<MediaRef Id="865803080"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1451033943" Name="Play_Layer1_Battle_Half_Part1__BPM120_" DurationType="OneShot" DurationMin="9.510417" DurationMax="9.510417">
+					<MediaRefs>
+						<MediaRef Id="64589685"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1551846734" Name="Play_Layer1_Battle_Half_Part1__BPM130_" DurationType="OneShot" DurationMin="8.932688" DurationMax="8.932688">
+					<MediaRefs>
+						<MediaRef Id="789720952"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1519129985" Name="Play_Layer1_Battle_Half_Part1__BPM140_" DurationType="OneShot" DurationMin="8.763395" DurationMax="8.763395">
+					<MediaRefs>
+						<MediaRef Id="421352510"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1619942840" Name="Play_Layer1_Battle_Half_Part1__BPM150_" DurationType="OneShot" DurationMin="7.9166665" DurationMax="7.9166665">
+					<MediaRefs>
+						<MediaRef Id="148779224"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1526491226" Name="Play_Layer1_Battle_Half_Part2__BPM120_" DurationType="OneShot" DurationMin="12.989583" DurationMax="12.989583">
+					<MediaRefs>
+						<MediaRef Id="588718802"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1425678243" Name="Play_Layer1_Battle_Half_Part2__BPM130_" DurationType="OneShot" DurationMin="12.475958" DurationMax="12.475958">
+					<MediaRefs>
+						<MediaRef Id="262417909"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1324865452" Name="Play_Layer1_Battle_Half_Part2__BPM140_" DurationType="OneShot" DurationMin="11.794645" DurationMax="11.794645">
+					<MediaRefs>
+						<MediaRef Id="1003822619"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3908368533" Name="Play_Layer1_Battle_Half_Part2__BPM150_" DurationType="OneShot" DurationMin="11.545833" DurationMax="11.545833">
+					<MediaRefs>
+						<MediaRef Id="729751940"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="461794711" Name="Play_Layer1_Battle_Intro__BPM120_" DurationType="OneShot" DurationMin="4.2708335" DurationMax="4.2708335">
+					<MediaRefs>
+						<MediaRef Id="254173147"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="562607502" Name="Play_Layer1_Battle_Intro__BPM130_" DurationType="OneShot" DurationMin="3.9567292" DurationMax="3.9567292">
+					<MediaRefs>
+						<MediaRef Id="234328875"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="529891009" Name="Play_Layer1_Battle_Intro__BPM140_" DurationType="OneShot" DurationMin="3.6830418" DurationMax="3.6830418">
+					<MediaRefs>
+						<MediaRef Id="665576737"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="630703864" Name="Play_Layer1_Battle_Intro__BPM150_" DurationType="OneShot" DurationMin="3.4041667" DurationMax="3.4041667">
+					<MediaRefs>
+						<MediaRef Id="203022400"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3980195801" Name="Play_Layer1_Battle_Tripplets_Part1__BPM120_" DurationType="OneShot" DurationMin="12.317708" DurationMax="12.317708">
+					<MediaRefs>
+						<MediaRef Id="289600217"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4081008592" Name="Play_Layer1_Battle_Tripplets_Part1__BPM130_" DurationType="OneShot" DurationMin="11.711542" DurationMax="11.711542">
+					<MediaRefs>
+						<MediaRef Id="902538760"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3912099567" Name="Play_Layer1_Battle_Tripplets_Part1__BPM140_" DurationType="OneShot" DurationMin="11.214292" DurationMax="11.214292">
+					<MediaRefs>
+						<MediaRef Id="498456127"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4012912358" Name="Play_Layer1_Battle_Tripplets_Part1__BPM150_" DurationType="OneShot" DurationMin="10.804167" DurationMax="10.804167">
+					<MediaRefs>
+						<MediaRef Id="536799215"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2297315824" Name="Play_Layer1_Battle_Tripplets_Part2__BPM120_" DurationType="OneShot" DurationMin="12.463542" DurationMax="12.463542">
+					<MediaRefs>
+						<MediaRef Id="419432065"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="48967801" Name="Play_Layer1_Battle_Tripplets_Part2__BPM130_" DurationType="OneShot" DurationMin="11.778854" DurationMax="11.778854">
+					<MediaRefs>
+						<MediaRef Id="750875404"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2229219462" Name="Play_Layer1_Battle_Tripplets_Part2__BPM140_" DurationType="OneShot" DurationMin="11.5" DurationMax="11.5">
+					<MediaRefs>
+						<MediaRef Id="600752026"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2128406671" Name="Play_Layer1_Battle_Tripplets_Part2__BPM150_" DurationType="OneShot" DurationMin="11.0625" DurationMax="11.0625">
+					<MediaRefs>
+						<MediaRef Id="702780604"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1416728013" Name="Play_Layer1_Battle_Whole_Part1__BPM120_" DurationType="OneShot" DurationMin="17.817709" DurationMax="17.817709">
+					<MediaRefs>
+						<MediaRef Id="289600217"/>
+						<MediaRef Id="938061498"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1517540804" Name="Play_Layer1_Battle_Whole_Part1__BPM130_" DurationType="OneShot" DurationMin="16.586939" DurationMax="16.586939">
+					<MediaRefs>
+						<MediaRef Id="289600217"/>
+						<MediaRef Id="462308430"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1618353659" Name="Play_Layer1_Battle_Whole_Part1__BPM140_" DurationType="OneShot" DurationMin="15.531994" DurationMax="15.531994">
+					<MediaRefs>
+						<MediaRef Id="289600217"/>
+						<MediaRef Id="310644316"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3866701682" Name="Play_Layer1_Battle_Whole_Part1__BPM150_" DurationType="OneShot" DurationMin="14.617708" DurationMax="14.617708">
+					<MediaRefs>
+						<MediaRef Id="243493016"/>
+						<MediaRef Id="289600217"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1696820132" Name="Play_Layer1_Battle_Whole_Part2__BPM120_" DurationType="OneShot" DurationMin="17.817709" DurationMax="17.817709">
+					<MediaRefs>
+						<MediaRef Id="289600217"/>
+						<MediaRef Id="328850081"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3743439405" Name="Play_Layer1_Battle_Whole_Part2__BPM130_" DurationType="OneShot" DurationMin="16.586939" DurationMax="16.586939">
+					<MediaRefs>
+						<MediaRef Id="289600217"/>
+						<MediaRef Id="929881822"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1898445906" Name="Play_Layer1_Battle_Whole_Part2__BPM140_" DurationType="OneShot" DurationMin="15.531994" DurationMax="15.531994">
+					<MediaRefs>
+						<MediaRef Id="150597017"/>
+						<MediaRef Id="289600217"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1797633115" Name="Play_Layer1_Battle_Whole_Part2__BPM150_" DurationType="OneShot" DurationMin="14.617708" DurationMax="14.617708">
+					<MediaRefs>
+						<MediaRef Id="289600217"/>
+						<MediaRef Id="310960794"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{2636D0B3-F5D7-B818-91E1-B1B00FC98EDD}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="65515336" Name="BossActions 1 - Yokai Hunter"/>
+				<Bus Id="105929186" Name="Boss - Level 1 - Yokai Hunter"/>
+				<Bus Id="112838762" Name="Cutscene 2 - Vs Yokai Hunter (music)"/>
+				<Bus Id="133791841" Name="Cutscene 1 - Vs Yokai Hunter (general sfx)"/>
+				<Bus Id="275270701" Name="Cutscene 1 - Player - Intro (voicelines)"/>
+				<Bus Id="320588660" Name="Level 1 - Critter"/>
+				<Bus Id="340258651" Name="5 Cutscene SFX"/>
+				<Bus Id="371542505" Name="Cutscene 1 - Boss - Intro (voicelines)"/>
+				<Bus Id="376748577" Name="4 Environment Roaming"/>
+				<Bus Id="393239870" Name="SFX"/>
+				<Bus Id="423108842" Name="2 Boss Battle"/>
+				<Bus Id="458562295" Name="3 Environment Battle"/>
+				<Bus Id="487419471" Name="Cutscene 2 - Player (voicelines)"/>
+				<Bus Id="526916458" Name="VHS"/>
+				<Bus Id="652387228" Name="BossActions 2 - dunno"/>
+				<Bus Id="763777545" Name="Env Battle - Level 2"/>
+				<Bus Id="763777546" Name="Env Battle - Level 1"/>
+				<Bus Id="764174633" Name="Level 1 - Tutorial"/>
+				<Bus Id="948999914" Name="Cutscene 1 - Player - Phase 1 to 2 (voicelines)"/>
+				<Bus Id="1082482811" Name="Navigation"/>
+				<Bus Id="1105659027" Name="General - AudibleOnSpeedUp"/>
+				<Bus Id="1137508701" Name="Env Roaming - Level 1"/>
+				<Bus Id="1137508702" Name="Env Roaming - Level 2"/>
+				<Bus Id="1270095322" Name="Cutscene 2 - Panda (voicelines)"/>
+				<Bus Id="1280655526" Name="Damage (player)"/>
+				<Bus Id="1288875315" Name="Cutscene 2 - Panda Meeting (general sfx)"/>
+				<Bus Id="1387464807" Name="Cutscene 1 - Player - Phase 3 to End (voicelines)"/>
+				<Bus Id="1404235302" Name="BossDamage 2 - dunno"/>
+				<Bus Id="1718386686" Name="Title Screen - Main Menu"/>
+				<Bus Id="1720323967" Name="Score Screen"/>
+				<Bus Id="1727977662" Name="Cutscene 1 - Player - Phase 2 to 3 (voicelines)"/>
+				<Bus Id="1728450328" Name="Actions - Dynamic"/>
+				<Bus Id="1751930956" Name="Boss - Level 1 - Critter"/>
+				<Bus Id="1764718042" Name="1 Menu SFX"/>
+				<Bus Id="1794747505" Name="BossDamage"/>
+				<Bus Id="1942692385" Name="Dash"/>
+				<Bus Id="2129636626" Name="Movement"/>
+				<Bus Id="2224127838" Name="4 Ambient SFX Components"/>
+				<Bus Id="2230992643" Name="Calibration"/>
+				<Bus Id="2292057722" Name="Voicelines"/>
+				<Bus Id="2331036614" Name="Facility"/>
+				<Bus Id="2337630999" Name="Boss - Level 2"/>
+				<Bus Id="2384369890" Name="1 Menus"/>
+				<Bus Id="2385628198" Name="Footsteps"/>
+				<Bus Id="2401645778" Name="Cutscene 1 - Boss - Phase 2 to 3 (voicelines)"/>
+				<Bus Id="2516623221" Name="2 Player SFX"/>
+				<Bus Id="2522218687" Name="BossActions"/>
+				<Bus Id="2609687961" Name="Cutscene 1 - Vs Critter (music)"/>
+				<Bus Id="2730119150" Name="Outdoors"/>
+				<Bus Id="2778722962" Name="General - InaudibleOnSpeedUp"/>
+				<Bus Id="2921596526" Name="3 Boss SFX"/>
+				<Bus Id="2964830718" Name="BossDamage 1 - Yokai Hunter"/>
+				<Bus Id="2987232379" Name="Cutscene 2 - Panda Meeting (music)"/>
+				<Bus Id="3092587493" Name="Pause"/>
+				<Bus Id="3151285457" Name="Text Voices"/>
+				<Bus Id="3163449996" Name="Level 1 - Facility"/>
+				<Bus Id="3319806915" Name="Cutscene 1 - Boss - Phase 3 to End (voicelines)"/>
+				<Bus Id="3332220694" Name="Actions"/>
+				<Bus Id="3420765916" Name="Level 1"/>
+				<Bus Id="3420765919" Name="Level 2"/>
+				<Bus Id="3522418091" Name="Moooosic - only here to look at for when implementing max combo"/>
+				<Bus Id="3545305787" Name="Actions - Set"/>
+				<Bus Id="3675259263" Name="6 Misc"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3852475470" Name="Cutscene 1 - Boss - Phase 1 to 2 (voicelines)"/>
+				<Bus Id="3991942870" Name="Music"/>
+				<Bus Id="4213797070" Name="5 Cutscene"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="86843165" Name="HIGH_PASS____CutsceneSFX__Voicelines"/>
+				<GameParameter Id="232152347" Name="PITCH____MusicBossBattle"/>
+				<GameParameter Id="311929018" Name="LOW_PASS____PlayerMovement__Footsteps"/>
+				<GameParameter Id="345772536" Name="VOLUME____CutsceneMusic"/>
+				<GameParameter Id="478062107" Name="VOLUME____MusicEnvBattle"/>
+				<GameParameter Id="671455318" Name="VOLUME_SPECIAL____PlayerActions__Dynamic__Mixing"/>
+				<GameParameter Id="721861396" Name="HIGH_PASS____CutsceneMusic"/>
+				<GameParameter Id="887424188" Name="VOLUME____CutsceneSFX__SpeedUpCutscene"/>
+				<GameParameter Id="895741003" Name="VOLUME____PlayerDamage"/>
+				<GameParameter Id="1024282320" Name="PITCH____MusicEnvRoaming"/>
+				<GameParameter Id="1103547191" Name="PLAYBACK_SPEED____CutsceneMusic"/>
+				<GameParameter Id="1171439349" Name="PITCH____MusicEnvBattle"/>
+				<GameParameter Id="1322911829" Name="LOW_PASS____MusicBossBattle"/>
+				<GameParameter Id="1402179413" Name="LOW_PASS____PlayerMovement__Dash"/>
+				<GameParameter Id="1463622446" Name="LOW_PASS____MusicEnvRoaming"/>
+				<GameParameter Id="1561297350" Name="VOLUME_SPECIAL____Dash__DynamicMixing"/>
+				<GameParameter Id="1736919294" Name="VOLUME____Menu"/>
+				<GameParameter Id="1798584363" Name="LOW_PASS____PlayerDamage"/>
+				<GameParameter Id="1961333805" Name="HIGH_PASS____CutsceneSFX__General__AudibleOnSpeedUp"/>
+				<GameParameter Id="2055487999" Name="LOW_PASS____BossDamage"/>
+				<GameParameter Id="2268627958" Name="VOLUME____PlayerActions__Dynamic"/>
+				<GameParameter Id="2338745114" Name="PLAYBACK_SPEED____MusicBossBattle"/>
+				<GameParameter Id="2354416159" Name="VOLUME____BossDamage"/>
+				<GameParameter Id="2572028521" Name="VOLUME____CutsceneSFX__Voicelines"/>
+				<GameParameter Id="2586495989" Name="VOLUME____MusicBossBattle"/>
+				<GameParameter Id="2589375093" Name="VOLUME____PlayerMovement__Dash"/>
+				<GameParameter Id="2596347407" Name="PITCH____CutsceneSFX__Voicelines"/>
+				<GameParameter Id="2622221165" Name="LOW_PASS____BossActions"/>
+				<GameParameter Id="2626398315" Name="PITCH____CutsceneSFX__General__AudibleOnSpeedUp"/>
+				<GameParameter Id="2645948155" Name="LOW_PASS____MusicEnvBattle"/>
+				<GameParameter Id="2943701773" Name="VOLUME____BossActions"/>
+				<GameParameter Id="3237454005" Name="VOLUME____AmbientComponents"/>
+				<GameParameter Id="3260874934" Name="VOLUME_SPECIAL____DeflectionElement__PitchElement"/>
+				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
+				<GameParameter Id="3416700688" Name="PITCH_SPECIAL____DeflectionElement__PitchElement"/>
+				<GameParameter Id="3603952474" Name="VOLUME____PlayerMovement__Footsteps"/>
+				<GameParameter Id="3620361396" Name="VOLUME____CutsceneSFX__General__InaudibleOnSpeedUp"/>
+				<GameParameter Id="3703849217" Name="PITCH____PlayerDamage"/>
+				<GameParameter Id="3729958265" Name="VOLUME____CutsceneSFX__General__AudibleOnSpeedUp"/>
+				<GameParameter Id="3815680396" Name="pitch_only_here_for_reference_of_max_combo_stuff"/>
+				<GameParameter Id="3837119958" Name="LOW_PASS____PlayerActions__Dynamic"/>
+				<GameParameter Id="4091390158" Name="VOLUME____MusicEnvRoaming"/>
+				<GameParameter Id="4092666037" Name="LOW_PASS____PlayerActions__Set"/>
+				<GameParameter Id="4208198357" Name="VOLUME____PlayerActions__Set"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="85412153" Name="Ambience">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="911198968" Name="Fakewin"/>
+						<State Id="2057547683" Name="Aftermath"/>
+						<State Id="3289250968" Name="Before"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2782712965" Name="Level">
+					<States>
+						<State Id="732432531" Name="YokaiHunterBoss"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="1762552081" Name="CritterBoss"/>
+						<State Id="2607556080" Name="Menu"/>
+						<State Id="3762955427" Name="Tutorial"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3193947170" Name="Hurt">
+					<States>
+						<State Id="545371365" Name="low"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="779278001" Name="death"/>
+						<State Id="1182670505" Name="mid"/>
+						<State Id="3550808449" Name="high"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="1598298728" Type="User" Language="SFX" Hash="{26797F04-9959-B1F1-4110-458B7D89D784}">
+			<ShortName>Music_Menu</ShortName>
+			<Path>Music_Menu.bnk</Path>
+			<Media>
+				<File Id="202290996" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BD_Trailer_Music.wav</ShortName>
+					<CachePath>SFX/BD_Trailer_Music_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="870983996" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss 1 - Phase 1 - Part 2.wav</ShortName>
+					<CachePath>SFX/Boss 1 - Phase 1 - Part 2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="932650277" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Metronome - STYLISH - Bass.wav</ShortName>
+					<CachePath>SFX/Metronome - STYLISH - Bass_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="949009166" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Metronome - STYLISH - electricPiano.wav</ShortName>
+					<CachePath>SFX/Metronome - STYLISH - electricPiano_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="978023960" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Metronome - STYLISH - Drum.wav</ShortName>
+					<CachePath>SFX/Metronome - STYLISH - Drum_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1423041522" Name="CalibrationMusic____PLAY" DurationType="OneShot" DurationMin="8.4375" DurationMax="8.4375">
+					<MediaRefs>
+						<MediaRef Id="932650277"/>
+						<MediaRef Id="949009166"/>
+						<MediaRef Id="978023960"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2002857628" Name="PauseScreenMusic____PLAY" DurationType="OneShot" DurationMin="3.4083333" DurationMax="3.4083333">
+					<MediaRefs>
+						<MediaRef Id="870983996"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1814921978" Name="TrailerAudio____PLAY" DurationType="OneShot" DurationMin="44.01067" DurationMax="44.01067">
+					<MediaRefs>
+						<MediaRef Id="202290996"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1782264177" Type="User" Language="SFX" Hash="{4854F979-4A85-B77E-D80B-35D9C5C2833C}">
+			<ShortName>Music_Misc</ShortName>
+			<Path>Music_Misc.bnk</Path>
+			<Media>
+				<File Id="28120518" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BPM130 - Rhythm10101010.wav</ShortName>
+					<CachePath>SFX/BPM130 - Rhythm10101010_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="123415533" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BPM140 - Rhythm10110110.wav</ShortName>
+					<CachePath>SFX/BPM140 - Rhythm10110110_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="141142963" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rhythm Testing - Part 3.wav</ShortName>
+					<CachePath>SFX/Rhythm Testing - Part 3_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="171766744" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BPM150 - Rhythm10101010.wav</ShortName>
+					<CachePath>SFX/BPM150 - Rhythm10101010_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="369896349" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BPM150 - Rhythm10010010.wav</ShortName>
+					<CachePath>SFX/BPM150 - Rhythm10010010_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="399351508" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>crash.wav</ShortName>
+					<CachePath>SFX/crash_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="473550224" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Testing Hip Hop Whole  - Intro.wav</ShortName>
+					<CachePath>SFX/Testing Hip Hop Whole  - Intro_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="491603233" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BPM130 - Rhythm10010010.wav</ShortName>
+					<CachePath>SFX/BPM130 - Rhythm10010010_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="544342511" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Testing Hip Hop Whole - 2.wav</ShortName>
+					<CachePath>SFX/Testing Hip Hop Whole - 2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="564733826" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BPM120 - Rhythm10110110.wav</ShortName>
+					<CachePath>SFX/BPM120 - Rhythm10110110_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="573981107" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Testing Hip Hop Whole - 3.wav</ShortName>
+					<CachePath>SFX/Testing Hip Hop Whole - 3_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="584052492" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Testing Hip Hop Whole - 1.wav</ShortName>
+					<CachePath>SFX/Testing Hip Hop Whole - 1_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="677949150" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>meh2.wav</ShortName>
+					<CachePath>SFX/meh2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="792384864" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BPM120 - Rhythm10010010.wav</ShortName>
+					<CachePath>SFX/BPM120 - Rhythm10010010_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="794343604" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BPM150 - Rhythm10110110.wav</ShortName>
+					<CachePath>SFX/BPM150 - Rhythm10110110_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="870926432" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Testing Hip Hop Whole  - 4.wav</ShortName>
+					<CachePath>SFX/Testing Hip Hop Whole  - 4_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="880697488" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rhythm Testing - Part 1.wav</ShortName>
+					<CachePath>SFX/Rhythm Testing - Part 1_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="884368468" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rhythm Testing - Part 2.wav</ShortName>
+					<CachePath>SFX/Rhythm Testing - Part 2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="907496373" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BPM140 - Rhythm10010010.wav</ShortName>
+					<CachePath>SFX/BPM140 - Rhythm10010010_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="923091447" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BPM140 - Rhythm10101010.wav</ShortName>
+					<CachePath>SFX/BPM140 - Rhythm10101010_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="1044516909" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BPM120 - Rhythm10101010.wav</ShortName>
+					<CachePath>SFX/BPM120 - Rhythm10101010_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1170321045" Name="BPM120__RhythmHalfNotes_10101010_10101010____PLAY" DurationType="OneShot" DurationMin="8.125" DurationMax="8.125">
+					<MediaRefs>
+						<MediaRef Id="677949150"/>
+						<MediaRef Id="792384864"/>
+						<MediaRef Id="1044516909"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2809597170" Name="BPM120__RhythmHipHop_10001001_00101000____PLAY" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3922136700" Name="BPM120__RhythmTriplets_10010010_10010010____PLAY" DurationType="OneShot" DurationMin="8.125" DurationMax="8.125">
+					<MediaRefs>
+						<MediaRef Id="399351508"/>
+						<MediaRef Id="564733826"/>
+						<MediaRef Id="792384864"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2179830357" Name="BPM120__RhythmWholeNotes_10001000_10001000____PLAY" DurationType="OneShot" DurationMin="8.125" DurationMax="8.125">
+					<MediaRefs>
+						<MediaRef Id="564733826"/>
+						<MediaRef Id="677949150"/>
+						<MediaRef Id="792384864"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2189560544" Name="BPM130__RhythmHalfNotes_10101010_10101010____PLAY" DurationType="OneShot" DurationMin="7.5096154" DurationMax="7.5096154">
+					<MediaRefs>
+						<MediaRef Id="28120518"/>
+						<MediaRef Id="564733826"/>
+						<MediaRef Id="677949150"/>
+						<MediaRef Id="792384864"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2522976977" Name="BPM130__RhythmHipHop_10001001_00101000____PLAY" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1746204227" Name="BPM130__RhythmTriplets_10010010_10010010____PLAY" DurationType="OneShot" DurationMin="7.5096154" DurationMax="7.5096154">
+					<MediaRefs>
+						<MediaRef Id="28120518"/>
+						<MediaRef Id="399351508"/>
+						<MediaRef Id="491603233"/>
+						<MediaRef Id="677949150"/>
+						<MediaRef Id="792384864"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3559964646" Name="BPM130__RhythmWholeNotes_10001000_10001000____PLAY" DurationType="OneShot" DurationMin="7.4877925" DurationMax="7.4877925">
+					<MediaRefs>
+						<MediaRef Id="28120518"/>
+						<MediaRef Id="677949150"/>
+						<MediaRef Id="792384864"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2265831223" Name="BPM140__RhythmHalfNotes_10101010_10101010____PLAY" DurationType="OneShot" DurationMin="6.982143" DurationMax="6.982143">
+					<MediaRefs>
+						<MediaRef Id="123415533"/>
+						<MediaRef Id="677949150"/>
+						<MediaRef Id="792384864"/>
+						<MediaRef Id="923091447"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="833279204" Name="BPM140__RhythmHipHop_10001001_00101000____PLAY" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="813701266" Name="BPM140__RhythmTriplets_10010010_10010010____PLAY" DurationType="OneShot" DurationMin="6.982143" DurationMax="6.982143">
+					<MediaRefs>
+						<MediaRef Id="123415533"/>
+						<MediaRef Id="399351508"/>
+						<MediaRef Id="677949150"/>
+						<MediaRef Id="792384864"/>
+						<MediaRef Id="907496373"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4181681327" Name="BPM140__RhythmWholeNotes_10001000_10001000____PLAY" DurationType="OneShot" DurationMin="7.071429" DurationMax="7.071429">
+					<MediaRefs>
+						<MediaRef Id="28120518"/>
+						<MediaRef Id="123415533"/>
+						<MediaRef Id="677949150"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1647188362" Name="BPM150__RhythmHalfNotes_10101010_10101010____PLAY" DurationType="OneShot" DurationMin="6.525" DurationMax="6.525">
+					<MediaRefs>
+						<MediaRef Id="677949150"/>
+						<MediaRef Id="792384864"/>
+						<MediaRef Id="794343604"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1373742891" Name="BPM150__RhythmHipHop_10001001_00101000____PLAY" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1749380265" Name="BPM150__RhythmTriplets_10010010_10010010____PLAY" DurationType="OneShot" DurationMin="6.525" DurationMax="6.525">
+					<MediaRefs>
+						<MediaRef Id="369896349"/>
+						<MediaRef Id="399351508"/>
+						<MediaRef Id="677949150"/>
+						<MediaRef Id="792384864"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="401310688" Name="BPM150__RhythmWholeNotes_10001000_10001000____PLAY" DurationType="OneShot" DurationMin="6.4254665" DurationMax="6.4254665">
+					<MediaRefs>
+						<MediaRef Id="123415533"/>
+						<MediaRef Id="171766744"/>
+						<MediaRef Id="677949150"/>
+						<MediaRef Id="792384864"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1463297925" Name="RhythmTesting__Part1____PLAY" DurationType="OneShot" DurationMin="9.05" DurationMax="9.05">
+					<MediaRefs>
+						<MediaRef Id="880697488"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1209085622" Name="RhythmTesting__Part2____PLAY" DurationType="OneShot" DurationMin="9.8" DurationMax="9.8">
+					<MediaRefs>
+						<MediaRef Id="884368468"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4185788291" Name="RhythmTesting__Part3____PLAY" DurationType="OneShot" DurationMin="6.4" DurationMax="6.4">
+					<MediaRefs>
+						<MediaRef Id="141142963"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="2856222710" Type="User" Language="SFX" Hash="{132037E4-4625-089D-0F08-B4D9FFD3EBFD}">
+			<ShortName>Music_YokaiHunter_Phase1And2</ShortName>
+			<Path>Music_YokaiHunter_Phase1And2.bnk</Path>
+			<Media>
+				<File Id="10396706" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss 1 - Phase 2 - Part 4 - Lightning Bullets.wav</ShortName>
+					<CachePath>SFX/Boss 1 - Phase 2 - Part 4 - Lightning Bullets_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="34421095" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss 1 - Phase 2.5 - Part 1 - Lightning+Fire.wav</ShortName>
+					<CachePath>SFX/Boss 1 - Phase 2.5 - Part 1 - Lightning+Fire_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="123394616" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Yokai Hunter Shows Himself V8.wav</ShortName>
+					<CachePath>SFX/Yokai Hunter Shows Himself V8_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="155454916" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Phase 1, part 2 (lead).wav</ShortName>
+					<CachePath>SFX/Phase 1, part 2 (lead)_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="208318487" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Phase 1 Part 4 lead.wav</ShortName>
+					<CachePath>SFX/Phase 1 Part 4 lead_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="247896564" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>phase 1 - Part 5 (1) base.wav</ShortName>
+					<CachePath>SFX/phase 1 - Part 5 (1) base_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="254475233" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss 1 - Phase 2 - Part 5 - Wind Bullets.wav</ShortName>
+					<CachePath>SFX/Boss 1 - Phase 2 - Part 5 - Wind Bullets_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="297123699" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Phase 1, part 2 (base).wav</ShortName>
+					<CachePath>SFX/Phase 1, part 2 (base)_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="304348317" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss 1 - Phase 2 - Part 2 - Regular Bullets2.wav</ShortName>
+					<CachePath>SFX/Boss 1 - Phase 2 - Part 2 - Regular Bullets2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="390200683" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>phase 1 - Part 5 (1) lead.wav</ShortName>
+					<CachePath>SFX/phase 1 - Part 5 (1) lead_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="418312006" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Phase 1 part 3 base.wav</ShortName>
+					<CachePath>SFX/Phase 1 part 3 base_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="456370759" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Phase 1 Part 4.wav</ShortName>
+					<CachePath>SFX/Phase 1 Part 4_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="478468214" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Phase 1 - part 1 (base).wav</ShortName>
+					<CachePath>SFX/Phase 1 - part 1 (base)_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="588487919" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>phase1ToPhase2.wav</ShortName>
+					<CachePath>SFX/phase1ToPhase2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="622350088" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Phase 1 part 3 lead.wav</ShortName>
+					<CachePath>SFX/Phase 1 part 3 lead_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="709972905" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Phase 1 - part 5 (2) lead.wav</ShortName>
+					<CachePath>SFX/Phase 1 - part 5 (2) lead_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="760100835" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss - Phase 2 - Start.wav</ShortName>
+					<CachePath>SFX/Boss - Phase 2 - Start_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="771824096" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss 1 - Phase 2 - Part 3 - Fire Bullets.wav</ShortName>
+					<CachePath>SFX/Boss 1 - Phase 2 - Part 3 - Fire Bullets_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="908222607" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Phase 1 - part 5 (2) base.wav</ShortName>
+					<CachePath>SFX/Phase 1 - part 5 (2) base_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="922647665" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss 1 - Phase 2.5 - Part 3 - Wind+Lightning.wav</ShortName>
+					<CachePath>SFX/Boss 1 - Phase 2.5 - Part 3 - Wind+Lightning_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="975588666" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Phase 1 - part 1 (lead).wav</ShortName>
+					<CachePath>SFX/Phase 1 - part 1 (lead)_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="1053805383" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss 1 - Phase 2.5 - Part 2 - Wind+Fire.wav</ShortName>
+					<CachePath>SFX/Boss 1 - Phase 2.5 - Part 2 - Wind+Fire_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="1063177054" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss 1 - Phase 2 - Part 1 - Regular Bullets1.wav</ShortName>
+					<CachePath>SFX/Boss 1 - Phase 2 - Part 1 - Regular Bullets1_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2784513199" Name="Encounter__YokaiHunter____PLAY" DurationType="OneShot" DurationMin="52.9375" DurationMax="52.9375">
+					<MediaRefs>
+						<MediaRef Id="123394616"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="862617690" Name="Play_Boss_1___Phase_2_5___Part_1___Lightning_Fire" DurationType="OneShot" DurationMin="13.094687" DurationMax="13.094687">
+					<MediaRefs>
+						<MediaRef Id="34421095"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2390810227" Name="Play_Boss_1___Phase_2_5___Part_2___Wind_Fire" DurationType="OneShot" DurationMin="22.151522" DurationMax="22.151522">
+					<MediaRefs>
+						<MediaRef Id="1053805383"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4069167034" Name="Play_Boss_1___Phase_2___Part_2___Regular_Bullets2" DurationType="OneShot" DurationMin="18.534084" DurationMax="18.534084">
+					<MediaRefs>
+						<MediaRef Id="304348317"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1835325240" Name="Play_Boss_1___Phase_2___Part_4___Lightning_Bullets" DurationType="OneShot" DurationMin="14.185604" DurationMax="14.185604">
+					<MediaRefs>
+						<MediaRef Id="10396706"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1883187924" Name="YHPhase1__Part1____PLAY" DurationType="OneShot" DurationMin="3.4083333" DurationMax="3.4083333">
+					<MediaRefs>
+						<MediaRef Id="155454916"/>
+						<MediaRef Id="297123699"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2101024655" Name="YHPhase1__Part2____PLAY" DurationType="OneShot" DurationMin="3.8541667" DurationMax="3.8541667">
+					<MediaRefs>
+						<MediaRef Id="478468214"/>
+						<MediaRef Id="975588666"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="449802166" Name="YHPhase1__Part3_1____PLAY" DurationType="OneShot" DurationMin="9.975" DurationMax="9.975">
+					<MediaRefs>
+						<MediaRef Id="247896564"/>
+						<MediaRef Id="390200683"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="704014469" Name="YHPhase1__Part3_2____PLAY" DurationType="OneShot" DurationMin="9.975" DurationMax="9.975">
+					<MediaRefs>
+						<MediaRef Id="709972905"/>
+						<MediaRef Id="908222607"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1887227949" Name="YHPhase1__Part4____PLAY" DurationType="OneShot" DurationMin="6.6083336" DurationMax="6.6083336">
+					<MediaRefs>
+						<MediaRef Id="418312006"/>
+						<MediaRef Id="622350088"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1368276496" Name="YHPhase1__Part5____PLAY" DurationType="OneShot" DurationMin="19.658335" DurationMax="19.658335">
+					<MediaRefs>
+						<MediaRef Id="208318487"/>
+						<MediaRef Id="456370759"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1029682880" Name="YHPhase2_5__Part_3__WindLightning____PLAY" DurationType="OneShot" DurationMin="9.246208" DurationMax="9.246208">
+					<MediaRefs>
+						<MediaRef Id="922647665"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1890959757" Name="YHPhase2__Intro_TransitionToPhase2____PLAY" DurationType="OneShot" DurationMin="12.824831" DurationMax="12.824831">
+					<MediaRefs>
+						<MediaRef Id="588487919"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1954515773" Name="YHPhase2__Part1__RegularBullets1____PLAY" DurationType="OneShot" DurationMin="18.715916" DurationMax="18.715916">
+					<MediaRefs>
+						<MediaRef Id="760100835"/>
+						<MediaRef Id="1063177054"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="441279424" Name="YHPhase2__Part3__FireBullets____PLAY" DurationType="OneShot" DurationMin="18.939396" DurationMax="18.939396">
+					<MediaRefs>
+						<MediaRef Id="771824096"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1617758944" Name="YHPhase2__Part5__WindBullets____PLAY" DurationType="OneShot" DurationMin="8.04925" DurationMax="8.04925">
+					<MediaRefs>
+						<MediaRef Id="254475233"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="1103547191" Name="PLAYBACK_SPEED____CutsceneMusic"/>
+				<GameParameter Id="2338745114" Name="PLAYBACK_SPEED____MusicBossBattle"/>
+				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{68AB0518-1E86-DE31-D9AD-9526DC974840}">
+			<ShortName>SoundEffects_Everything</ShortName>
+			<Path>SoundEffects_Everything.bnk</Path>
+			<Media>
+				<File Id="3246467" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>dashVoiceOver1.wav</ShortName>
+					<CachePath>SFX/dashVoiceOver1_70589EFB.wem</CachePath>
+				</File>
+				<File Id="7718367" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>part 3 - ow 7.wav</ShortName>
+					<CachePath>SFX/part 3 - ow 7_10C4C929.wem</CachePath>
+				</File>
+				<File Id="22397627" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>boss - i will end youFullV4.wav</ShortName>
+					<CachePath>SFX/boss - i will end youFullV4_744CE075.wem</CachePath>
+				</File>
+				<File Id="43124693" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>boss - and is fairly - final2.wav</ShortName>
+					<CachePath>SFX/boss - and is fairly - final2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="74371727" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>doorCloseV4.wav</ShortName>
+					<CachePath>SFX/doorCloseV4_BE2877C7.wem</CachePath>
+				</File>
+				<File Id="77221433" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>gotMyAttention.wav</ShortName>
+					<CachePath>SFX/gotMyAttention_10C4C929.wem</CachePath>
+				</File>
+				<File Id="78191547" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>noStaminaVoica3.wav</ShortName>
+					<CachePath>SFX/noStaminaVoica3_95AF5D51.wem</CachePath>
+				</File>
+				<File Id="85013841" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>part 3 - ow 8.wav</ShortName>
+					<CachePath>SFX/part 3 - ow 8_10C4C929.wem</CachePath>
+				</File>
+				<File Id="91521296" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>hurtMidSFX.wav</ShortName>
+					<CachePath>SFX/hurtMidSFX_10C4C929.wem</CachePath>
+				</File>
+				<File Id="107874474" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>part 3 - ow 10.wav</ShortName>
+					<CachePath>SFX/part 3 - ow 10_10C4C929.wem</CachePath>
+				</File>
+				<File Id="108969347" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>test.wav</ShortName>
+					<CachePath>SFX/test_10C4C929.wem</CachePath>
+				</File>
+				<File Id="113834660" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>rikoshugi V1.4.wav</ShortName>
+					<CachePath>SFX/rikoshugi V1.4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="117137238" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>bang!!!!!!!.wav</ShortName>
+					<CachePath>SFX/bang!!!!!!!_10C4C929.wem</CachePath>
+				</File>
+				<File Id="118736849" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>boss - protocol 66 - final2.wav</ShortName>
+					<CachePath>SFX/boss - protocol 66 - final2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="134445798" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>didn't break a sweat.wav</ShortName>
+					<CachePath>SFX/didn't break a sweat_10C4C929.wem</CachePath>
+				</File>
+				<File Id="144304060" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>bring it.wav</ShortName>
+					<CachePath>SFX/bring it_10C4C929.wem</CachePath>
+				</File>
+				<File Id="155652917" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>hurtMid2.wav</ShortName>
+					<CachePath>SFX/hurtMid2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="155779322" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>saigoNoPitchi3.wav</ShortName>
+					<CachePath>SFX/saigoNoPitchi3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="167565631" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>hurtHIGH1.wav</ShortName>
+					<CachePath>SFX/hurtHIGH1_E61D9D13.wem</CachePath>
+				</File>
+				<File Id="194222179" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>boss - level 3 - final3.wav</ShortName>
+					<CachePath>SFX/boss - level 3 - final3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="195473402" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footstep8.wav</ShortName>
+					<CachePath>SFX/footstep8_10C4C929.wem</CachePath>
+				</File>
+				<File Id="197585165" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>feltThisGood.wav</ShortName>
+					<CachePath>SFX/feltThisGood_10C4C929.wem</CachePath>
+				</File>
+				<File Id="214961977" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>slideStep1.wav</ShortName>
+					<CachePath>SFX/slideStep1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="221904516" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Deflection3-Element2-mono.wav</ShortName>
+					<CachePath>SFX/Deflection3-Element2-mono_10C4C929.wem</CachePath>
+				</File>
+				<File Id="226780634" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>holy shi-.wav</ShortName>
+					<CachePath>SFX/holy shi-_AF98A1DE.wem</CachePath>
+				</File>
+				<File Id="233848723" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>swing.wav</ShortName>
+					<CachePath>SFX/swing_D3A7DAF9.wem</CachePath>
+				</File>
+				<File Id="236617444" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Outro\boss death sound 2.wav</ShortName>
+					<CachePath>SFX/Outro/boss death sound 2_6A73102F.wem</CachePath>
+				</File>
+				<File Id="256605194" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>hurtLow.wav</ShortName>
+					<CachePath>SFX/hurtLow_10C4C929.wem</CachePath>
+				</File>
+				<File Id="290296789" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>slideStep8.wav</ShortName>
+					<CachePath>SFX/slideStep8_10C4C929.wem</CachePath>
+				</File>
+				<File Id="316381491" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>part 3 - ow 12.wav</ShortName>
+					<CachePath>SFX/part 3 - ow 12_10C4C929.wem</CachePath>
+				</File>
+				<File Id="319209927" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Deflection Hit - Transition To Player Theme.wav</ShortName>
+					<CachePath>SFX/Deflection Hit - Transition To Player Theme_10C4C929.wem</CachePath>
+				</File>
+				<File Id="343295060" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Deflection Hit Miss V5.wav</ShortName>
+					<CachePath>SFX/Deflection Hit Miss V5_39631B47.wem</CachePath>
+				</File>
+				<File Id="357346735" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mythical.wav</ShortName>
+					<CachePath>SFX/mythical_10C4C929.wem</CachePath>
+				</File>
+				<File Id="376349708" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>text sfx.wav</ShortName>
+					<CachePath>SFX/text sfx_10C4C929.wem</CachePath>
+				</File>
+				<File Id="382319614" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Deflection2-Element2-mono.wav</ShortName>
+					<CachePath>SFX/Deflection2-Element2-mono_10C4C929.wem</CachePath>
+				</File>
+				<File Id="385225301" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>huh.wav</ShortName>
+					<CachePath>SFX/huh_10C4C929.wem</CachePath>
+				</File>
+				<File Id="388151919" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>swing.wav</ShortName>
+					<CachePath>SFX/swing_FF8327A3.wem</CachePath>
+				</File>
+				<File Id="388566452" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>kiddin me.wav</ShortName>
+					<CachePath>SFX/kiddin me_10C4C929.wem</CachePath>
+				</File>
+				<File Id="395940498" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>part 3 - ow 9.wav</ShortName>
+					<CachePath>SFX/part 3 - ow 9_10C4C929.wem</CachePath>
+				</File>
+				<File Id="414529116" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>DeflectVoiceOver2.wav</ShortName>
+					<CachePath>SFX/DeflectVoiceOver2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="419675251" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>getting serious.wav</ShortName>
+					<CachePath>SFX/getting serious_10C4C929.wem</CachePath>
+				</File>
+				<File Id="441664432" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Deflection Hit - Transition To Player Theme.wav</ShortName>
+					<CachePath>SFX/Deflection Hit - Transition To Player Theme_358CBFF6.wem</CachePath>
+				</File>
+				<File Id="446241439" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>badSwing.wav</ShortName>
+					<CachePath>SFX/badSwing_7761E626.wem</CachePath>
+				</File>
+				<File Id="461074106" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>dashVoiceOver3.wav</ShortName>
+					<CachePath>SFX/dashVoiceOver3_2992BD0C.wem</CachePath>
+				</File>
+				<File Id="469584776" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>talkin to ya.wav</ShortName>
+					<CachePath>SFX/talkin to ya_10C4C929.wem</CachePath>
+				</File>
+				<File Id="476275633" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>-bleep.wav</ShortName>
+					<CachePath>SFX/-bleep_10C4C929.wem</CachePath>
+				</File>
+				<File Id="480901741" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>rikoshugi V1.3.wav</ShortName>
+					<CachePath>SFX/rikoshugi V1.3_E67788D4.wem</CachePath>
+				</File>
+				<File Id="494216630" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Phase 2 to 3\player - ikuze2.wav</ShortName>
+					<CachePath>SFX/Phase 2 to 3/player - ikuze2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="517872094" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Deflection-Element1V1.wav</ShortName>
+					<CachePath>SFX/Deflection-Element1V1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="523274200" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footstep5.wav</ShortName>
+					<CachePath>SFX/footstep5_10C4C929.wem</CachePath>
+				</File>
+				<File Id="531249273" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footstep9.wav</ShortName>
+					<CachePath>SFX/footstep9_10C4C929.wem</CachePath>
+				</File>
+				<File Id="541284767" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footstep11.wav</ShortName>
+					<CachePath>SFX/footstep11_10C4C929.wem</CachePath>
+				</File>
+				<File Id="546612985" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>noStaminaV8.wav</ShortName>
+					<CachePath>SFX/noStaminaV8_10C4C929.wem</CachePath>
+				</File>
+				<File Id="551485198" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>swing.wav</ShortName>
+					<CachePath>SFX/swing_10C4C929.wem</CachePath>
+				</File>
+				<File Id="557266761" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footstep4.wav</ShortName>
+					<CachePath>SFX/footstep4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="562927624" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>dash.wav</ShortName>
+					<CachePath>SFX/dash_764CEB73.wem</CachePath>
+				</File>
+				<File Id="575775278" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>hey.wav</ShortName>
+					<CachePath>SFX/hey_10C4C929.wem</CachePath>
+				</File>
+				<File Id="589303362" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>eh.wav</ShortName>
+					<CachePath>SFX/eh_10C4C929.wem</CachePath>
+				</File>
+				<File Id="606524587" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>part 3 - ow 6.wav</ShortName>
+					<CachePath>SFX/part 3 - ow 6_10C4C929.wem</CachePath>
+				</File>
+				<File Id="607952950" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>slideStep7.wav</ShortName>
+					<CachePath>SFX/slideStep7_10C4C929.wem</CachePath>
+				</File>
+				<File Id="609829521" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>slide.wav</ShortName>
+					<CachePath>SFX/slide_10C4C929.wem</CachePath>
+				</File>
+				<File Id="612923365" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>slideStep3.wav</ShortName>
+					<CachePath>SFX/slideStep3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="615560481" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>doorTestingBass.wav</ShortName>
+					<CachePath>SFX/doorTestingBass_F813D133.wem</CachePath>
+				</File>
+				<File Id="618269774" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>burn v4.wav</ShortName>
+					<CachePath>SFX/burn v4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="621395873" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>heh.wav</ShortName>
+					<CachePath>SFX/heh_10C4C929.wem</CachePath>
+				</File>
+				<File Id="621649171" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footstep7.wav</ShortName>
+					<CachePath>SFX/footstep7_10C4C929.wem</CachePath>
+				</File>
+				<File Id="623377676" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>doorCloseV7.wav</ShortName>
+					<CachePath>SFX/doorCloseV7_10C4C929.wem</CachePath>
+				</File>
+				<File Id="635655355" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>now.wav</ShortName>
+					<CachePath>SFX/now_10C4C929.wem</CachePath>
+				</File>
+				<File Id="644651350" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>hurtLowSFX-v2.wav</ShortName>
+					<CachePath>SFX/hurtLowSFX-v2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="644993846" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Deflection-BaseV2.wav</ShortName>
+					<CachePath>SFX/Deflection-BaseV2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="650602025" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>doorOpenV3.wav</ShortName>
+					<CachePath>SFX/doorOpenV3_50F266B9.wem</CachePath>
+				</File>
+				<File Id="655550890" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>dashVoiceOver2.wav</ShortName>
+					<CachePath>SFX/dashVoiceOver2_6E24056B.wem</CachePath>
+				</File>
+				<File Id="682731598" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>part 3 - ow 5.wav</ShortName>
+					<CachePath>SFX/part 3 - ow 5_10C4C929.wem</CachePath>
+				</File>
+				<File Id="685776673" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>vhsSpeedUpV2.wav</ShortName>
+					<CachePath>SFX/vhsSpeedUpV2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="696201637" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>hurtHIGH1.wav</ShortName>
+					<CachePath>SFX/hurtHIGH1_2580D6D5.wem</CachePath>
+				</File>
+				<File Id="712145440" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>lastHitScream 5.wav</ShortName>
+					<CachePath>SFX/lastHitScream 5_318979BD.wem</CachePath>
+				</File>
+				<File Id="726135690" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>slideStep5.wav</ShortName>
+					<CachePath>SFX/slideStep5_10C4C929.wem</CachePath>
+				</File>
+				<File Id="729477149" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>hurtHighSFX.wav</ShortName>
+					<CachePath>SFX/hurtHighSFX_10C4C929.wem</CachePath>
+				</File>
+				<File Id="736046292" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>well.wav</ShortName>
+					<CachePath>SFX/well_10C4C929.wem</CachePath>
+				</File>
+				<File Id="751518378" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>DeflectVoiceOver4.wav</ShortName>
+					<CachePath>SFX/DeflectVoiceOver4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="753770924" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>doorCloseV4.wav</ShortName>
+					<CachePath>SFX/doorCloseV4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="758446579" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Outro\boss death sound 1.wav</ShortName>
+					<CachePath>SFX/Outro/boss death sound 1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="762404653" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>part 3 - ow 11.wav</ShortName>
+					<CachePath>SFX/part 3 - ow 11_10C4C929.wem</CachePath>
+				</File>
+				<File Id="764326000" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>slideStep6.wav</ShortName>
+					<CachePath>SFX/slideStep6_10C4C929.wem</CachePath>
+				</File>
+				<File Id="765488241" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>slomov1.wav</ShortName>
+					<CachePath>SFX/slomov1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="770489537" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>DeflectVoiceOver1.wav</ShortName>
+					<CachePath>SFX/DeflectVoiceOver1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="774453167" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>boss - you mongrels - final2.wav</ShortName>
+					<CachePath>SFX/boss - you mongrels - final2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="777613493" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>noStaminaVoica1.wav</ShortName>
+					<CachePath>SFX/noStaminaVoica1_F52D722E.wem</CachePath>
+				</File>
+				<File Id="782708288" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>yokai.wav</ShortName>
+					<CachePath>SFX/yokai_10C4C929.wem</CachePath>
+				</File>
+				<File Id="784747536" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footstep6.wav</ShortName>
+					<CachePath>SFX/footstep6_10C4C929.wem</CachePath>
+				</File>
+				<File Id="789538442" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Batana1.wav</ShortName>
+					<CachePath>SFX/Batana1_74D8FAE9.wem</CachePath>
+				</File>
+				<File Id="795149324" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>boss - aggressive - final2.wav</ShortName>
+					<CachePath>SFX/boss - aggressive - final2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="805207553" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>slideStep2.wav</ShortName>
+					<CachePath>SFX/slideStep2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="807832056" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>that all ya got.wav</ShortName>
+					<CachePath>SFX/that all ya got_10C4C929.wem</CachePath>
+				</File>
+				<File Id="812946627" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HealthPickUp.wav</ShortName>
+					<CachePath>SFX/HealthPickUp_10C4C929.wem</CachePath>
+				</File>
+				<File Id="821160123" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>energetic.wav</ShortName>
+					<CachePath>SFX/energetic_10C4C929.wem</CachePath>
+				</File>
+				<File Id="832137029" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>slideStep4.wav</ShortName>
+					<CachePath>SFX/slideStep4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="838756738" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>dare da.wav</ShortName>
+					<CachePath>SFX/dare da_10C4C929.wem</CachePath>
+				</File>
+				<File Id="849087724" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>hurtHIGH1.wav</ShortName>
+					<CachePath>SFX/hurtHIGH1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="850835769" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footstep3.wav</ShortName>
+					<CachePath>SFX/footstep3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="868850914" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footstep2.wav</ShortName>
+					<CachePath>SFX/footstep2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="870027938" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Deflection1-Element2-mono.wav</ShortName>
+					<CachePath>SFX/Deflection1-Element2-mono_10C4C929.wem</CachePath>
+				</File>
+				<File Id="888080497" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>part 3 - ow 2.wav</ShortName>
+					<CachePath>SFX/part 3 - ow 2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="890668158" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>hurtHIGH2.wav</ShortName>
+					<CachePath>SFX/hurtHIGH2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="891012144" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>who's the mongrel.wav</ShortName>
+					<CachePath>SFX/who's the mongrel_10C4C929.wem</CachePath>
+				</File>
+				<File Id="899977456" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>zasshu.wav</ShortName>
+					<CachePath>SFX/zasshu_10C4C929.wem</CachePath>
+				</File>
+				<File Id="904657075" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footstep10.wav</ShortName>
+					<CachePath>SFX/footstep10_10C4C929.wem</CachePath>
+				</File>
+				<File Id="906866579" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>hurtLowSFX.wav</ShortName>
+					<CachePath>SFX/hurtLowSFX_10C4C929.wem</CachePath>
+				</File>
+				<File Id="914588184" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>part 3 - ow 3.wav</ShortName>
+					<CachePath>SFX/part 3 - ow 3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="916980127" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Intro\bossInEnvironment\hold still v4.wav</ShortName>
+					<CachePath>SFX/Intro/bossInEnvironment/hold still v4_1172DE07.wem</CachePath>
+				</File>
+				<File Id="946656098" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footstep12.wav</ShortName>
+					<CachePath>SFX/footstep12_10C4C929.wem</CachePath>
+				</File>
+				<File Id="955862140" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>boss - can speak - final2.wav</ShortName>
+					<CachePath>SFX/boss - can speak - final2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="963053543" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footstep1.wav</ShortName>
+					<CachePath>SFX/footstep1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="966982381" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>impact10.wav</ShortName>
+					<CachePath>SFX/impact10_10C4C929.wem</CachePath>
+				</File>
+				<File Id="970375371" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ching!!Swing.wav</ShortName>
+					<CachePath>SFX/ching!!Swing_D72E602E.wem</CachePath>
+				</File>
+				<File Id="981604077" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>dorodie.wav</ShortName>
+					<CachePath>SFX/dorodie_10C4C929.wem</CachePath>
+				</File>
+				<File Id="983247324" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>hair flair up.wav</ShortName>
+					<CachePath>SFX/hair flair up_10C4C929.wem</CachePath>
+				</File>
+				<File Id="990082149" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>boss - escaped - final2.wav</ShortName>
+					<CachePath>SFX/boss - escaped - final2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="995001135" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>hurtMid1.wav</ShortName>
+					<CachePath>SFX/hurtMid1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="997669886" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>noStaminaVoica2.wav</ShortName>
+					<CachePath>SFX/noStaminaVoica2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1011138357" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>extra shutting.wav</ShortName>
+					<CachePath>SFX/extra shutting_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1019231690" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Phase 2 to 3\boss - ughhhh.wav</ShortName>
+					<CachePath>SFX/Phase 2 to 3/boss - ughhhh_CE4654D8.wem</CachePath>
+				</File>
+				<File Id="1022649744" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>boss - 80th cycle - Final4.wav</ShortName>
+					<CachePath>SFX/boss - 80th cycle - Final4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1026409488" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>boss - rogue yokai spotted - Final4.wav</ShortName>
+					<CachePath>SFX/boss - rogue yokai spotted - Final4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1038857255" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>DeflectVoiceOver5.wav</ShortName>
+					<CachePath>SFX/DeflectVoiceOver5_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1052910591" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>part 3 - ow 1.wav</ShortName>
+					<CachePath>SFX/part 3 - ow 1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1058704278" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>noStaminaVoica4.wav</ShortName>
+					<CachePath>SFX/noStaminaVoica4_4F9DB676.wem</CachePath>
+				</File>
+				<File Id="1062634275" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>part 3 - ow 4.wav</ShortName>
+					<CachePath>SFX/part 3 - ow 4_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="29232603" Name="New_Parametric_EQ_01" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1724990773" Name="New_Time_Stretch" LibName="Wwise Time Stretch" LibId="8519683"/>
+				</ShareSets>
+			</Plugins>
+			<Events>
+				<Event Id="2774017652" Name="Boss__80thCycle____PLAY" DurationType="OneShot" DurationMin="1.2857083" DurationMax="1.2857083">
+					<MediaRefs>
+						<MediaRef Id="1022649744"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1561541174" Name="Boss__Aggressive____PLAY" DurationType="OneShot" DurationMin="0.98660415" DurationMax="0.98660415">
+					<MediaRefs>
+						<MediaRef Id="795149324"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="172077574" Name="Boss__AndIsFairly____PLAY" DurationType="OneShot" DurationMin="1.3035625" DurationMax="1.3035625">
+					<MediaRefs>
+						<MediaRef Id="43124693"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1012062762" Name="Boss__CanSpeak____PLAY" DurationType="OneShot" DurationMin="0.88839585" DurationMax="0.88839585">
+					<MediaRefs>
+						<MediaRef Id="955862140"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2754958973" Name="Boss__DeathSound_1____PLAY" DurationType="OneShot" DurationMin="1.46875" DurationMax="1.46875">
+					<MediaRefs>
+						<MediaRef Id="758446579"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2410285998" Name="Boss__DeathSound_2____PLAY" DurationType="OneShot" DurationMin="1.6491581" DurationMax="1.6491581">
+					<MediaRefs>
+						<MediaRef Id="236617444"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2619328201" Name="Boss__Escaped____PLAY" DurationType="OneShot" DurationMin="1.2857083" DurationMax="1.2857083">
+					<MediaRefs>
+						<MediaRef Id="990082149"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2529448821" Name="Boss__HoldStill____PLAY" DurationType="OneShot" DurationMin="1.2749577" DurationMax="1.2749577">
+					<MediaRefs>
+						<MediaRef Id="916980127"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1750148390" Name="Boss__ImGettingSerious____PLAY" DurationType="OneShot" DurationMin="1.6339375" DurationMax="1.6339375">
+					<MediaRefs>
+						<MediaRef Id="419675251"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1156278335" Name="Boss__Level3____PLAY" DurationType="OneShot" DurationMin="1.0714375" DurationMax="1.0714375">
+					<MediaRefs>
+						<MediaRef Id="194222179"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2904449382" Name="Boss__Protocol66____PLAY" DurationType="OneShot" DurationMin="2.2901876" DurationMax="2.2901876">
+					<MediaRefs>
+						<MediaRef Id="118736849"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1019080070" Name="Boss__Ughhhh____PLAY" DurationType="OneShot" DurationMin="2.2075355" DurationMax="2.2075355">
+					<MediaRefs>
+						<MediaRef Id="1019231690"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1641445919" Name="Boss__WithTheSpirits____PLAY" DurationType="OneShot" DurationMin="8.220962" DurationMax="8.220962">
+					<MediaRefs>
+						<MediaRef Id="22397627"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1807371726" Name="Boss__YokaiSpotted____PLAY" DurationType="OneShot" DurationMin="1.2857083" DurationMax="1.2857083">
+					<MediaRefs>
+						<MediaRef Id="1026409488"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3967082494" Name="Boss__YouMongrels____PLAY" DurationType="OneShot" DurationMin="1.3348125" DurationMax="1.3348125">
+					<MediaRefs>
+						<MediaRef Id="774453167"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="967979622" Name="Bunt____PLAY" DurationType="OneShot" DurationMin="1.2347083" DurationMax="1.2347083">
+					<MediaRefs>
+						<MediaRef Id="729477149"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2953741612" Name="ContainerDrop__InCutscene____PLAY" DurationType="OneShot" DurationMin="4.694752" DurationMax="4.694752">
+					<MediaRefs>
+						<MediaRef Id="74371727"/>
+						<MediaRef Id="117137238"/>
+						<MediaRef Id="729477149"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4245736846" Name="ContainerDrop__InGame____PLAY" DurationType="OneShot" DurationMin="4.7219486" DurationMax="4.7219486">
+					<MediaRefs>
+						<MediaRef Id="117137238"/>
+						<MediaRef Id="729477149"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3724255519" Name="Dash____PLAY" DurationType="OneShot" DurationMin="3.210024" DurationMax="3.210024">
+					<MediaRefs>
+						<MediaRef Id="3246467"/>
+						<MediaRef Id="461074106"/>
+						<MediaRef Id="562927624"/>
+						<MediaRef Id="655550890"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1460378649" Name="DashStep____PLAY" DurationType="OneShot" DurationMin="2.6676648" DurationMax="3.0360372">
+					<MediaRefs>
+						<MediaRef Id="195473402"/>
+						<MediaRef Id="214961977"/>
+						<MediaRef Id="290296789"/>
+						<MediaRef Id="523274200"/>
+						<MediaRef Id="531249273"/>
+						<MediaRef Id="541284767"/>
+						<MediaRef Id="557266761"/>
+						<MediaRef Id="607952950"/>
+						<MediaRef Id="609829521"/>
+						<MediaRef Id="612923365"/>
+						<MediaRef Id="621649171"/>
+						<MediaRef Id="726135690"/>
+						<MediaRef Id="764326000"/>
+						<MediaRef Id="784747536"/>
+						<MediaRef Id="805207553"/>
+						<MediaRef Id="832137029"/>
+						<MediaRef Id="850835769"/>
+						<MediaRef Id="868850914"/>
+						<MediaRef Id="904657075"/>
+						<MediaRef Id="946656098"/>
+						<MediaRef Id="963053543"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3845110252" Name="DeflectionHit__FinalHit____PLAY" DurationType="OneShot" DurationMin="12.861604" DurationMax="12.861604">
+					<MediaRefs>
+						<MediaRef Id="155779322"/>
+						<MediaRef Id="319209927"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1161185488" Name="DeflectionHit__Good____PLAY" DurationType="OneShot" DurationMin="3.2041667" DurationMax="3.2041667">
+					<MediaRefs>
+						<MediaRef Id="414529116"/>
+						<MediaRef Id="517872094"/>
+						<MediaRef Id="644993846"/>
+						<MediaRef Id="729477149"/>
+						<MediaRef Id="751518378"/>
+						<MediaRef Id="770489537"/>
+						<MediaRef Id="1038857255"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="29232603"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="650628319" Name="DeflectionHit__MaxCombo____PLAY" DurationType="OneShot" DurationMin="7.3" DurationMax="7.3">
+					<MediaRefs>
+						<MediaRef Id="319209927"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3115214611" Name="DeflectionHit__Miss____PLAY" DurationType="OneShot" DurationMin="2.7256792" DurationMax="3.3295417">
+					<MediaRefs>
+						<MediaRef Id="7718367"/>
+						<MediaRef Id="85013841"/>
+						<MediaRef Id="107874474"/>
+						<MediaRef Id="108969347"/>
+						<MediaRef Id="316381491"/>
+						<MediaRef Id="343295060"/>
+						<MediaRef Id="395940498"/>
+						<MediaRef Id="606524587"/>
+						<MediaRef Id="644993846"/>
+						<MediaRef Id="682731598"/>
+						<MediaRef Id="762404653"/>
+						<MediaRef Id="789538442"/>
+						<MediaRef Id="888080497"/>
+						<MediaRef Id="914588184"/>
+						<MediaRef Id="1052910591"/>
+						<MediaRef Id="1062634275"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1724990773"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="756550566" Name="DeflectionHit__Perfect____PLAY" DurationType="OneShot" DurationMin="3.2041667" DurationMax="3.2098124">
+					<MediaRefs>
+						<MediaRef Id="221904516"/>
+						<MediaRef Id="382319614"/>
+						<MediaRef Id="414529116"/>
+						<MediaRef Id="517872094"/>
+						<MediaRef Id="644993846"/>
+						<MediaRef Id="729477149"/>
+						<MediaRef Id="751518378"/>
+						<MediaRef Id="770489537"/>
+						<MediaRef Id="870027938"/>
+						<MediaRef Id="1038857255"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="656785945" Name="DeflectionSwing__Good____PLAY" DurationType="OneShot" DurationMin="1.8149805" DurationMax="1.8149805">
+					<MediaRefs>
+						<MediaRef Id="388151919"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3496020798" Name="DeflectionSwing__Miss____PLAY" DurationType="OneShot" DurationMin="2.1304605" DurationMax="2.1304605">
+					<MediaRefs>
+						<MediaRef Id="446241439"/>
+						<MediaRef Id="551485198"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1724990773"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2939368849" Name="DeflectionSwing__Perfect____PLAY" DurationType="OneShot" DurationMin="1.5884904" DurationMax="1.5884904">
+					<MediaRefs>
+						<MediaRef Id="233848723"/>
+						<MediaRef Id="970375371"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1844327691" Name="DoorOpen__General____PLAY" DurationType="OneShot" DurationMin="1.2238171" DurationMax="1.2238171">
+					<MediaRefs>
+						<MediaRef Id="650602025"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4042000294" Name="DoorShut__BossFight____PLAY" DurationType="OneShot" DurationMin="5.482146" DurationMax="5.482146">
+					<MediaRefs>
+						<MediaRef Id="615560481"/>
+						<MediaRef Id="753770924"/>
+						<MediaRef Id="1011138357"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="139608649" Name="DoorShut__General____PLAY" DurationType="OneShot" DurationMin="5.4732084" DurationMax="5.4732084">
+					<MediaRefs>
+						<MediaRef Id="623377676"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="174412296" Name="FireDamage____PLAY" DurationType="OneShot" DurationMin="2.8467798" DurationMax="3.5867176">
+					<MediaRefs>
+						<MediaRef Id="155652917"/>
+						<MediaRef Id="167565631"/>
+						<MediaRef Id="618269774"/>
+						<MediaRef Id="849087724"/>
+						<MediaRef Id="890668158"/>
+						<MediaRef Id="995001135"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4067194311" Name="HairFlairDown____PLAY" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="231322120" Name="HairFlairUp____PLAY" DurationType="OneShot" DurationMin="3.4330416" DurationMax="3.4330416">
+					<MediaRefs>
+						<MediaRef Id="983247324"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3031745690" Name="LastBulletImpact__OfFight____PLAY" DurationType="OneShot" DurationMin="15.017854" DurationMax="15.017854">
+					<MediaRefs>
+						<MediaRef Id="712145440"/>
+						<MediaRef Id="729477149"/>
+						<MediaRef Id="765488241"/>
+						<MediaRef Id="906866579"/>
+						<MediaRef Id="966982381"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2369949805" Name="LastBulletImpact__OfPhase____PLAY" DurationType="OneShot" DurationMin="10.129691" DurationMax="10.129691">
+					<MediaRefs>
+						<MediaRef Id="91521296"/>
+						<MediaRef Id="729477149"/>
+						<MediaRef Id="765488241"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2122273249" Name="NormalDamage____PLAY" DurationType="OneShot" DurationMin="2.2" DurationMax="6.5291667">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3193947170" Id="545371365"/>
+							<MediaRefs>
+								<MediaRef Id="256605194"/>
+								<MediaRef Id="644651350"/>
+								<MediaRef Id="906866579"/>
+							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="1724990773"/>
+								</ShareSets>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3193947170" Id="3550808449" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="729477149"/>
+								<MediaRef Id="849087724"/>
+								<MediaRef Id="890668158"/>
+							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="1724990773"/>
+								</ShareSets>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3193947170" Id="1182670505"/>
+							<MediaRefs>
+								<MediaRef Id="155652917"/>
+								<MediaRef Id="729477149"/>
+								<MediaRef Id="995001135"/>
+							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="1724990773"/>
+								</ShareSets>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3193947170" Id="779278001"/>
+							<MediaRefs>
+								<MediaRef Id="256605194"/>
+								<MediaRef Id="644651350"/>
+								<MediaRef Id="906866579"/>
+							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="1724990773"/>
+								</ShareSets>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3193947170" Id="748895195"/>
+							<MediaRefs>
+								<MediaRef Id="729477149"/>
+								<MediaRef Id="849087724"/>
+								<MediaRef Id="890668158"/>
+							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="1724990773"/>
+								</ShareSets>
+							</PluginRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2278158929" Name="NoStamina____PLAY" DurationType="OneShot" DurationMin="1.1865656" DurationMax="1.3348125">
+					<MediaRefs>
+						<MediaRef Id="78191547"/>
+						<MediaRef Id="546612985"/>
+						<MediaRef Id="777613493"/>
+						<MediaRef Id="997669886"/>
+						<MediaRef Id="1058704278"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2487304348" Name="PickUp__Currency____PLAY" DurationType="OneShot" DurationMin="0.03630199" DurationMax="0.03630199">
+					<MediaRefs>
+						<MediaRef Id="441664432"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="63268803" Name="PickUp__Health____PLAY" DurationType="OneShot" DurationMin="0.07540741" DurationMax="0.089675024">
+					<MediaRefs>
+						<MediaRef Id="812946627"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4096913669" Name="Player__AreYouKiddingMe____PLAY" DurationType="OneShot" DurationMin="1.8258958" DurationMax="1.8258958">
+					<MediaRefs>
+						<MediaRef Id="388566452"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4003539485" Name="Player__BringIt____PLAY" DurationType="OneShot" DurationMin="1.6473125" DurationMax="1.6473125">
+					<MediaRefs>
+						<MediaRef Id="144304060"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3498367617" Name="Player__DareDa____PLAY" DurationType="OneShot" DurationMin="0.9776875" DurationMax="0.9776875">
+					<MediaRefs>
+						<MediaRef Id="838756738"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2075834847" Name="Player__DidntBreakASweatPhew____PLAY" DurationType="OneShot" DurationMin="6.5401874" DurationMax="6.5401874">
+					<MediaRefs>
+						<MediaRef Id="134445798"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2547522752" Name="Player__DoOrDie____PLAY" DurationType="OneShot" DurationMin="1.9732083" DurationMax="1.9732083">
+					<MediaRefs>
+						<MediaRef Id="981604077"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1042518793" Name="Player__Eh____PLAY" DurationType="OneShot" DurationMin="0.7544583" DurationMax="0.7544583">
+					<MediaRefs>
+						<MediaRef Id="589303362"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2991234256" Name="Player__GotMyAttention____PLAY" DurationType="OneShot" DurationMin="1.5089375" DurationMax="1.5089375">
+					<MediaRefs>
+						<MediaRef Id="77221433"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4281063670" Name="Player__HaventFeltThisGood____PLAY" DurationType="OneShot" DurationMin="2.6830416" DurationMax="2.6830416">
+					<MediaRefs>
+						<MediaRef Id="197585165"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3968551305" Name="Player__Heh____PLAY" DurationType="OneShot" DurationMin="1.1473125" DurationMax="1.1473125">
+					<MediaRefs>
+						<MediaRef Id="621395873"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="406271436" Name="Player__Hey____PLAY" DurationType="OneShot" DurationMin="1.1383958" DurationMax="1.1383958">
+					<MediaRefs>
+						<MediaRef Id="575775278"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="26140142" Name="Player__HolyShit____PLAY" DurationType="OneShot" DurationMin="1.8258958" DurationMax="1.8258958">
+					<MediaRefs>
+						<MediaRef Id="226780634"/>
+						<MediaRef Id="476275633"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2898485049" Name="Player__Huh____PLAY" DurationType="OneShot" DurationMin="1.0133958" DurationMax="1.0133958">
+					<MediaRefs>
+						<MediaRef Id="385225301"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2639332328" Name="Player__Ikuze____PLAY" DurationType="OneShot" DurationMin="7.90625" DurationMax="7.90625">
+					<MediaRefs>
+						<MediaRef Id="494216630"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2935817346" Name="Player__ImTalkinToYa____PLAY" DurationType="OneShot" DurationMin="1.1830417" DurationMax="1.1830417">
+					<MediaRefs>
+						<MediaRef Id="469584776"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2968776031" Name="Player__MythicalCreatures____PLAY" DurationType="OneShot" DurationMin="1.03125" DurationMax="1.03125">
+					<MediaRefs>
+						<MediaRef Id="357346735"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2186460094" Name="Player__Now____PLAY" DurationType="OneShot" DurationMin="2.0401876" DurationMax="2.0401876">
+					<MediaRefs>
+						<MediaRef Id="635655355"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2470538215" Name="Player__StillEnergeticEh____PLAY" DurationType="OneShot" DurationMin="1.6919583" DurationMax="1.6919583">
+					<MediaRefs>
+						<MediaRef Id="821160123"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1765981654" Name="Player__ThatAllYaGot____PLAY" DurationType="OneShot" DurationMin="1.5491042" DurationMax="1.5491042">
+					<MediaRefs>
+						<MediaRef Id="807832056"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3176001598" Name="Player__Well____PLAY" DurationType="OneShot" DurationMin="1.3973125" DurationMax="1.3973125">
+					<MediaRefs>
+						<MediaRef Id="736046292"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1127862864" Name="Player__WhosTheMongrelNow____PLAY" DurationType="OneShot" DurationMin="3.3258958" DurationMax="3.3258958">
+					<MediaRefs>
+						<MediaRef Id="891012144"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1055783055" Name="Player__Yokai____PLAY" DurationType="OneShot" DurationMin="1.1205417" DurationMax="1.1205417">
+					<MediaRefs>
+						<MediaRef Id="782708288"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="157855042" Name="Player__Zasshu____PLAY" DurationType="OneShot" DurationMin="1.1651875" DurationMax="1.1651875">
+					<MediaRefs>
+						<MediaRef Id="899977456"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="347579508" Name="Running__LastStep____PLAY" DurationType="OneShot" DurationMin="1.6040568" DurationMax="2.1437678">
+					<MediaRefs>
+						<MediaRef Id="195473402"/>
+						<MediaRef Id="523274200"/>
+						<MediaRef Id="531249273"/>
+						<MediaRef Id="541284767"/>
+						<MediaRef Id="557266761"/>
+						<MediaRef Id="621649171"/>
+						<MediaRef Id="784747536"/>
+						<MediaRef Id="850835769"/>
+						<MediaRef Id="868850914"/>
+						<MediaRef Id="904657075"/>
+						<MediaRef Id="946656098"/>
+						<MediaRef Id="963053543"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3424658843" Name="Running__Steps____PLAY" DurationType="OneShot" DurationMin="1.6040568" DurationMax="2.1437678">
+					<MediaRefs>
+						<MediaRef Id="195473402"/>
+						<MediaRef Id="523274200"/>
+						<MediaRef Id="531249273"/>
+						<MediaRef Id="541284767"/>
+						<MediaRef Id="557266761"/>
+						<MediaRef Id="621649171"/>
+						<MediaRef Id="784747536"/>
+						<MediaRef Id="850835769"/>
+						<MediaRef Id="868850914"/>
+						<MediaRef Id="904657075"/>
+						<MediaRef Id="946656098"/>
+						<MediaRef Id="963053543"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1251528829" Name="Slomo____PLAY" DurationType="OneShot" DurationMin="10.129691" DurationMax="10.129691">
+					<MediaRefs>
+						<MediaRef Id="729477149"/>
+						<MediaRef Id="765488241"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1921985385" Name="SoulFormSplashScreen____PLAY" DurationType="OneShot" DurationMin="7.549104" DurationMax="7.549104">
+					<MediaRefs>
+						<MediaRef Id="113834660"/>
+						<MediaRef Id="480901741"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2251819479" Name="SpeedUpCutscene____PLAY" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="685776673"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="835218174" Name="Voice__Player____PLAY" DurationType="OneShot" DurationMin="0.0410625" DurationMax="0.0410625">
+					<MediaRefs>
+						<MediaRef Id="376349708"/>
+						<MediaRef Id="696201637"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1268042180" Name="Voice__YokaiHunter____PLAY" DurationType="OneShot" DurationMin="0.0410625" DurationMax="0.0410625">
+					<MediaRefs>
+						<MediaRef Id="376349708"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="3260874934" Name="VOLUME_SPECIAL____DeflectionElement__PitchElement"/>
+				<GameParameter Id="3416700688" Name="PITCH_SPECIAL____DeflectionElement__PitchElement"/>
+				<GameParameter Id="3815680396" Name="pitch_only_here_for_reference_of_max_combo_stuff"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="3193947170" Name="Hurt">
+					<States>
+						<State Id="545371365" Name="low"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="779278001" Name="death"/>
+						<State Id="1182670505" Name="mid"/>
+						<State Id="3550808449" Name="high"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{1428C888-55ED-C9EA-A8B4-D9D229883E57}</FileHash>
+</SoundBanksInfo>

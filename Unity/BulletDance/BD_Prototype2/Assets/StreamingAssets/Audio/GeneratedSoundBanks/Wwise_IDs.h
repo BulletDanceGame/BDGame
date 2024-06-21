@@ -103,7 +103,6 @@ namespace AK
         static const AkUniqueID LASTBULLETIMPACT__OFPHASE____PLAY = 2369949805U;
         static const AkUniqueID NORMALDAMAGE____PLAY = 2122273249U;
         static const AkUniqueID NOSTAMINA____PLAY = 2278158929U;
-        static const AkUniqueID OUTRO____PLAY = 594215984U;
         static const AkUniqueID PAUSESCREENMUSIC____PLAY = 2002857628U;
         static const AkUniqueID PICKUP__CURRENCY____PLAY = 2487304348U;
         static const AkUniqueID PICKUP__HEALTH____PLAY = 63268803U;
@@ -334,8 +333,16 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID SOUNDBANK1 = 1647770721U;
-        static const AkUniqueID SOUNDBANKMENU = 36298893U;
+        static const AkUniqueID MUSIC_CRITTER_PHASE1 = 690988691U;
+        static const AkUniqueID MUSIC_CRITTER_PHASE2 = 690988688U;
+        static const AkUniqueID MUSIC_MENU = 1598298728U;
+        static const AkUniqueID MUSIC_MISC = 1782264177U;
+        static const AkUniqueID MUSIC_TUTORIALANDLEVEL1_PART1 = 834008392U;
+        static const AkUniqueID MUSIC_TUTORIALANDLEVEL1_PART2 = 834008395U;
+        static const AkUniqueID MUSIC_TUTORIALANDLEVEL1_PART3 = 834008394U;
+        static const AkUniqueID MUSIC_YOKAIHUNTER_PHASE1AND2 = 2856222710U;
+        static const AkUniqueID MUSIC_YOKAIHUNTER_PHASE3ANDOUTRO = 723507619U;
+        static const AkUniqueID SOUNDEFFECTS_EVERYTHING = 3922271872U;
     } // namespace BANKS
 
     namespace BUSSES
