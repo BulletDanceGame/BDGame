@@ -237,6 +237,14 @@ public class Bullet : MonoBehaviour
         }
     }
 
+    public void LastHit()
+    {
+        _canCollide = false;
+        Invoke("SpeedUp", 1.0f);
+
+        //_fx.LastHitFX();
+    }
+
     public void EndGameHit()
     {
         _canCollide = false;

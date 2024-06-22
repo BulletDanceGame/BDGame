@@ -35,6 +35,8 @@ public class PlayerAnimator : UnitAnimator
 
         EventManager.Instance.OnPlayerDash   += Dash;
         EventManager.Instance.OnPlayerAttack += Attack;
+
+        EventManager.Instance.OnPlayerLastHit += FreezeFrame;
     }
 
     void UnsubscribePlayerEvents()
@@ -46,6 +48,8 @@ public class PlayerAnimator : UnitAnimator
 
         EventManager.Instance.OnPlayerDash   -= Dash;
         EventManager.Instance.OnPlayerAttack -= Attack;
+
+        EventManager.Instance.OnPlayerLastHit -= FreezeFrame;
     }
 
 
@@ -299,6 +303,21 @@ public class PlayerAnimator : UnitAnimator
                             1 : 0;
         _spriteAnimator?.SetLayerWeight("Sprite Act", isActState);
         _spriteAnimator?.SetLayerWeight("Hair Act",   isActState);
+    }
+
+    void FreezeFrame(BeatTiming none)
+    {
+        if (BossController.Instance && BossController.Instance.bossHealth.isLastPhase)
+        {
+            _spriteAnimator?.SetSpeed(0.0000000001f); //Copy paste from Playerswingbox
+            Invoke("UnfreezeFrame", 5f); //Copy paste from Playerswingbox
+        }
+    }
+
+    void UnfreezeFrame()
+    {
+        _duration = GetDuration(_beatDuration, _animNoteDuration);
+        _spriteAnimator?.SetSpeed(1f / _duration);
     }
 
 }

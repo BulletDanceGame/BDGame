@@ -24,6 +24,7 @@ public class PlayerSwing : MonoBehaviour
     public bool SwingActivated = false;
     public enum SwingState { NOTSWINGING, SWINGING, TIRED};
     public SwingState PlayerSwingState;
+    private bool canRotate = true;
 
     Vector2 batDirection;
     public Vector2 bulletAngle { get; private set; }
@@ -68,6 +69,8 @@ public class PlayerSwing : MonoBehaviour
         EventManager.Instance.OnBossDeath -= EnableAimAssist;
         EventManager.Instance.OnBossDeath += DisableAimAssist;
 
+        EventManager.Instance.OnPlayerLastHit += LastHitSwing;
+
         _swingMat = _rend.material;
 
         aimAssistCandidates = new List<AimAssistGameObject>();
@@ -94,6 +97,8 @@ public class PlayerSwing : MonoBehaviour
     {
         if (!SwingActivated)
             return;
+
+        if(!canRotate) return;
 
         //SwingState
         if (PlayerSwingState == SwingState.TIRED) return;
@@ -164,6 +169,8 @@ public class PlayerSwing : MonoBehaviour
 
     void RotateBox()
     {
+        if(!canRotate) return;
+
         if (CurrentController == ControllerType.KEYBOARDANDMOUSE)
         {
             // Get the mouse position in world space
@@ -360,5 +367,17 @@ public class PlayerSwing : MonoBehaviour
     public void EnableSwing()
     {
         SwingActivated = true;
+    }
+
+
+    // -- Last hit shit -- //
+    void LastHitSwing(BeatTiming none)
+    {
+        canRotate = false;
+        Invoke("EnableRotate", 5.5f);
+    }
+    void EnableRotate()
+    {
+        canRotate = true;
     }
 }
