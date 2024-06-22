@@ -142,11 +142,11 @@ public class CameraManager : MonoBehaviour
             cam.Priority = 10;
         }
 
-        foreach(var member in EnemyFightCamera.GetComponentInChildren<CinemachineTargetGroup>().m_Targets)
-            EnemyFightCamera.GetComponentInChildren<CinemachineTargetGroup>().RemoveMember(member.target.transform);
-
         FreeRoamCamera.Priority = 20;
         cameraFollowsPlayer = true;
+
+        foreach(var member in EnemyFightCamera.GetComponentInChildren<CinemachineTargetGroup>().m_Targets)
+            EnemyFightCamera.GetComponentInChildren<CinemachineTargetGroup>().RemoveMember(member.target.transform);
     }
 
     public bool IsCameraFollowingPlayer()
