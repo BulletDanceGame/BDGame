@@ -156,7 +156,6 @@ GameObject:
   - component: {fileID: 4845991046242325899}
   - component: {fileID: 7526362823989575424}
   - component: {fileID: 4023348171292593120}
-  - component: {fileID: 4766665156471485829}
   - component: {fileID: 3190206983986911280}
   - component: {fileID: 1756165215435958905}
   m_Layer: 0
@@ -230,44 +229,6 @@ MonoBehaviour:
   - name: Groovy
     color: {r: 0.2865789, g: 1, b: 0.3872308, a: 1}
   _hurtParticle: {fileID: 5393517843542640369}
-  _phaseParameters:
-  - isEnergyGlow: 1
-    glowStrength: 0.3
-    whiteGlowModifier: 0
-  - isEnergyGlow: 1
-    glowStrength: 0.3
-    whiteGlowModifier: 0
-  - isEnergyGlow: 1
-    glowStrength: 0.7
-    whiteGlowModifier: 0.2
-  _smokeParticle: {fileID: 4147739916344514091}
-  _soulFormVFX1: {fileID: 3066383983680296794}
-  _soulFormVFX2: {fileID: 7680768031581319850}
-  _transformVFX: {fileID: 8882769093138936926}
-  _shadow: {fileID: 8776989176452552345}
---- !u!114 &4766665156471485829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 760310228495901266}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e5fadc8b1a71a74f9e032450cb389ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 3190206983986911280}
-  _torsoRenderer: {fileID: 894897937765673015}
-  _energyColors:
-  - name: Default
-    color: {r: 0.9921569, g: 0.011764707, b: 0.227451, a: 1}
-  - name: Explosion
-    color: {r: 0.6339344, g: 0.28627455, b: 1, a: 1}
-  - name: Firetrail
-    color: {r: 1, g: 0.3775953, b: 0, a: 1}
-  - name: Groovy
-    color: {r: 0.2865789, g: 1, b: 0.3872308, a: 1}
   _phaseParameters:
   - isEnergyGlow: 1
     glowStrength: 0.3
