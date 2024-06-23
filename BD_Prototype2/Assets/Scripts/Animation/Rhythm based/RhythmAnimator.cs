@@ -106,7 +106,8 @@ public class RhythmAnimator : MonoBehaviour
                 if(_animator == null) return;
 
                 _animator.speed = 1f / _duration;
-                _animator.Play(_animationName);
+                if(!System.String.IsNullOrEmpty(_animationName))
+                    _animator.Play(_animationName);
 
                 break;
 
@@ -114,7 +115,8 @@ public class RhythmAnimator : MonoBehaviour
                 if(_spriteAnimator == null) return;
 
                 _spriteAnimator.SetSpeed(1f / _duration);
-                _spriteAnimator.Anim(_animationName);
+                if(!System.String.IsNullOrEmpty(_animationName))
+                    _spriteAnimator.Anim(_animationName);
 
                 break;
 
@@ -122,7 +124,8 @@ public class RhythmAnimator : MonoBehaviour
                 if(_layeredAnimator == null) return;
 
                 _layeredAnimator.SetSpeed(1f / _duration);
-                _layeredAnimator.Anim(_animationName);
+                if(!System.String.IsNullOrEmpty(_animationName))
+                    _layeredAnimator.Anim(_animationName);
 
                 break;
 
