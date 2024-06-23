@@ -8,6 +8,7 @@ namespace BulletDance.Cutscene
 
     public class PlayerBehaviour : CharacterBehaviour
     {
+        public PlayerAnimator.PlayerSpriteSet spriteSet = PlayerAnimator.PlayerSpriteSet.Default;
         public bool faceTowardsBoss;
         public PlayerClip.Animation animState;
     }
@@ -26,6 +27,7 @@ namespace BulletDance.Cutscene
             SetVariables(playableBehaviour as PlayerBehaviour);
         }
 
+        public PlayerAnimator.PlayerSpriteSet spriteSet = PlayerAnimator.PlayerSpriteSet.Default;
 
         public bool faceTowardsBoss;
 
@@ -35,13 +37,14 @@ namespace BulletDance.Cutscene
                 SoulFormTransform = 30, SoulFormDetransform = 31,
                 Defeat = 50 }; //Combining AnimAction and PlayerAnimAction
     
-         public Animation animState;
+        public Animation animState;
 
-            private void SetVariables(PlayerBehaviour playerBehaviour)
-            {
-                playerBehaviour.faceTowardsBoss = faceTowardsBoss;
-                playerBehaviour.animState       = animState;
-            }
+        private void SetVariables(PlayerBehaviour playerBehaviour)
+        {
+            playerBehaviour.spriteSet       = spriteSet;
+            playerBehaviour.animState       = animState;
+            playerBehaviour.faceTowardsBoss = faceTowardsBoss;
+        }
     }
 
 }

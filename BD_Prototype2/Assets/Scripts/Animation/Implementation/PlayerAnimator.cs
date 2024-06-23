@@ -283,6 +283,22 @@ public class PlayerAnimator : UnitAnimator
 
 
     // -- For cutscene -- //
+    public enum PlayerSpriteSet { Default, NoBat, SoulForm }
+    public string _spriteSet = "Default";
+    [ExecuteAlways]
+    public void SetSpriteSet(PlayerSpriteSet spriteSet)
+    {
+        switch(spriteSet)
+        {
+            case PlayerSpriteSet.NoBat:    _spriteSet = "NoBat";            break;
+            case PlayerSpriteSet.SoulForm: _spriteSet = "layer1SoulForm";   break;
+
+            default:   _spriteSet = "Default";   break;
+        }
+
+        _spriteAnimator?.SetLibraryByName(_spriteSet);
+    }
+
     [ExecuteAlways]
     public override void EnableAnimUpdate(bool enable)
     {
