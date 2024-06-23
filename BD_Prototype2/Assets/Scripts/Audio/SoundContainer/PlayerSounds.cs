@@ -207,7 +207,7 @@ public class PlayerSounds : SoundContainer
     {
         if(!BossController.Instance.bossHealth.isLastPhase)
         {
-            PlaySFX("Hit Max Combo");
+            //PlaySFX("Hit Max Combo");
         }
         else
         {
