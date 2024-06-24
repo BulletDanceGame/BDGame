@@ -173,13 +173,13 @@ public class PlayerAnimator : UnitAnimator
     {
         if(_rbd == null)
         {
-            Debug.Log("Player won't play movement animations because rigidbody is not referenced");
+            Debug.LogWarning("Player won't play movement animations because rigidbody is not referenced");
             return;
         }
 
         if(!_continueAnimation)
         {
-            Debug.Log("Unit animator is turned off");
+            Debug.LogWarning("Unit animator is turned off");
             return;
         }
 
@@ -218,7 +218,7 @@ public class PlayerAnimator : UnitAnimator
     {
         if(!_continueAnimation)
         {
-            Debug.Log("Unit animator is turned off");
+            Debug.LogWarning("Unit animator is turned off");
             return;
         }
 
@@ -239,7 +239,7 @@ public class PlayerAnimator : UnitAnimator
     {
         if(!_continueAnimation)
         {
-            Debug.Log("Unit animator is turned off");
+            Debug.LogWarning("Unit animator is turned off");
             return;
         }
 
@@ -258,7 +258,7 @@ public class PlayerAnimator : UnitAnimator
     {
         if(!_continueAnimation)
         {
-            Debug.Log("Unit animator is turned off");
+            Debug.LogWarning("Unit animator is turned off");
             return;
         }
 

@@ -122,7 +122,7 @@ public class PlayerRhythm : MonoBehaviour
 
     public void PrepareBeatMap(MusicSequence nextSequence, double delay, bool cut = false)
     {
-        BeatMapReader.ReadBeatMap(nextSequence.sheet, _playerBeats, MusicManager.Instance.lastBeatOfSequence);
+        BeatMapReader.ReadBeatMapPlayer(nextSequence.sheet, _playerBeats, MusicManager.Instance.lastBeatOfSequence);
 
 
         double spb = 60.0/(nextSequence.bpm*2);

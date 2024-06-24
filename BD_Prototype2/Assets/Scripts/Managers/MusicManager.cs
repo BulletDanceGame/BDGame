@@ -364,7 +364,7 @@ public class MusicManager : MonoBehaviour
                 c = b * i;
                 if (c == (int)c)
                 {
-                    print("aaa c " + c);
+                    //print("aaa c " + c);
                     break;
                 }
             }

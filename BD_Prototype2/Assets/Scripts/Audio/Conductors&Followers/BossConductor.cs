@@ -204,9 +204,9 @@ public class BossConductor : MusicConductor
         //get current beat for this map
         int currentBeat = beat - _beatAtStartOfThisMap;
 
-        print("b 0" + _beatAtStartOfThisMap);
-        print("b " + currentBeat);
-        print("b 2 " + _currentNoteList[_beatIndex].Item1);
+        //print("b 0" + _beatAtStartOfThisMap);
+        //print("b " + currentBeat);
+        //print("b 2 " + _currentNoteList[_beatIndex].Item1);
 
         //check if action should be performed
         Note action = new Note();

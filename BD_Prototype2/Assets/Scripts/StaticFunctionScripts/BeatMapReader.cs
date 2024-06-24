@@ -4,17 +4,22 @@ using UnityEngine;
 public class BeatMapReader : MonoBehaviour
 {
 
-    //Simple
+    //Player
 
-    public static void ReadBeatMap(Row[] sheet, List<int> beatList, int lastBeatOfSequence)
+    public static void ReadBeatMapPlayer(Row[] sheet, List<int> beatList, int lastBeatOfSequence)
     {
         for (int y = 0; y < sheet.Length; y++)
         {
             for (int x = 1; x < 9; x++)
             {
-                Color b = sheet[y].notes[x - 1].color;
+                //Color b = sheet[y].notes[x - 1].color;
 
-                if (b != Color.white)
+                //if (b != Color.white)
+                //{
+                //    beatList.Add((x) + (y * 8) + lastBeatOfSequence);
+                //}
+
+                if (sheet[y].notes[x - 1].forPlayer)
                 {
                     beatList.Add((x) + (y * 8) + lastBeatOfSequence);
                 }

@@ -3,7 +3,6 @@ using UnityEditor.UIElements;
 using UnityEditor;
 using UnityEngine.UIElements;
 using UnityEngine;
-using NUnit.Framework.Internal;
 
 [CustomPropertyDrawer(typeof(Note))]
 public class NoteDrawer : PropertyDrawer
@@ -22,6 +21,9 @@ public class NoteDrawer : PropertyDrawer
 
         Label title = root.Q<Label>("title");
         title.text = property.FindPropertyRelative("functionName").stringValue;
+
+        Toggle forPlayer = root.Q<Toggle>("forPlayer");
+        forPlayer.BindProperty(property.FindPropertyRelative("forPlayer"));
 
         TextField functionName = root.Q<TextField>("functionName");
         functionName.BindProperty(property.FindPropertyRelative("functionName"));
@@ -130,14 +132,18 @@ public class RowDrawer : PropertyDrawer
         for (int i = 0; i < 8; i++)
         {
             SerializedProperty note = notes.GetArrayElementAtIndex(i);
-            VisualElement test = root.Q<VisualElement>("Note" + (i + 1).ToString());
-            test.style.backgroundColor = note.FindPropertyRelative("color").colorValue;
-            test.RegisterCallback<ClickEvent, EventHandler>(ClickOnNote,
-                new EventHandler(note, root, property.FindPropertyRelative("barNr").stringValue, (i+1).ToString(),test));
-            
+
+            VisualElement visualPlayerNote = root.Q<VisualElement>("PlayerNote" + (i + 1).ToString());
+            visualPlayerNote.style.backgroundColor = (note.FindPropertyRelative("forPlayer").boolValue) ? Color.green : Color.red;
+
+            VisualElement visualNote = root.Q<VisualElement>("Note" + (i + 1).ToString());
+            visualNote.style.backgroundColor = note.FindPropertyRelative("color").colorValue;
+            visualNote.RegisterCallback<ClickEvent, EventHandler>(ClickOnNote,
+                new EventHandler(note, root, property.FindPropertyRelative("barNr").stringValue, (i+1).ToString(),visualNote, visualPlayerNote));
 
 
-            test.AddManipulator(new ContextualMenuManipulator((ContextualMenuPopulateEvent evt) =>
+
+            visualNote.AddManipulator(new ContextualMenuManipulator((ContextualMenuPopulateEvent evt) =>
             {
                 evt.menu.AppendAction("Copy", (x) => {
 
@@ -150,12 +156,15 @@ public class RowDrawer : PropertyDrawer
                     s.serializedObject.Update();
 
                     s.boxedValue = copiedNote.boxedValue;
-                    test.style.backgroundColor = copiedNote.FindPropertyRelative("color").colorValue;
+                    visualNote.style.backgroundColor = copiedNote.FindPropertyRelative("color").colorValue;
+                    visualPlayerNote.style.backgroundColor = (note.FindPropertyRelative("forPlayer").boolValue) ? Color.green : Color.red;
 
                     s.serializedObject.ApplyModifiedProperties();
                 });
 
             }));
+
+
         }
 
 
@@ -189,6 +198,9 @@ public class RowDrawer : PropertyDrawer
                     string n = "Note" + i.ToString();
                     VisualElement note = root.Q<VisualElement>(n);
                     note.style.backgroundColor = notes.GetArrayElementAtIndex(i-1).FindPropertyRelative("color").colorValue;
+
+                    VisualElement playerNote = root.Q<VisualElement>("Player" + n);
+                    playerNote.style.backgroundColor = (notes.GetArrayElementAtIndex(i - 1).FindPropertyRelative("forPlayer").boolValue) ? Color.green : Color.red;
                 }
 
                 property.serializedObject.ApplyModifiedProperties();
@@ -211,22 +223,27 @@ public class RowDrawer : PropertyDrawer
         public VisualElement root;
         public string rowNr, noteNr;
 
-        public EventHandler(SerializedProperty _note, VisualElement _root, string _rowNr, string _noteNr, VisualElement _n)
+        public EventHandler(SerializedProperty _note, VisualElement _root, string _rowNr, string _noteNr, VisualElement _visualNote, VisualElement _visualPlayerNote)
         {
             note = _note;
             root = _root;
             rowNr = _rowNr;
             noteNr = _noteNr;
-            n = _n;
+            visualNote = _visualNote;
+            visualPlayerNote = _visualPlayerNote;
         }
 
 
-        public VisualElement n;
+        public VisualElement visualNote;
+        public VisualElement visualPlayerNote;
+        public VisualElement v;
 
         public EventHandler(VisualElement _n)
         {
-            n = _n;
+            v = _n;
         }
+
+
     }
 
 
@@ -247,14 +264,25 @@ public class RowDrawer : PropertyDrawer
         color.BindProperty(eh.note.FindPropertyRelative("color"));
 
         color.RegisterCallback<ChangeEvent<Color>, EventHandler>(ChangedNoteColor,
-            new EventHandler(eh.n));
+            new EventHandler(eh.visualNote));
+
+
+        Toggle forPlayer = noteInfo.Q<Toggle>("forPlayer");
+        forPlayer.BindProperty(eh.note.FindPropertyRelative("forPlayer"));
+        forPlayer.RegisterCallback<ChangeEvent<bool>, EventHandler>(ToggleForPlayer, new EventHandler(eh.visualPlayerNote));
 
     }
 
 
     public void ChangedNoteColor(ChangeEvent<Color> ev, EventHandler eh)
     {
-        eh.n.style.backgroundColor = ev.newValue;
+        eh.v.style.backgroundColor = ev.newValue;
+    }
+
+    public void ToggleForPlayer(ChangeEvent<bool> ev, EventHandler eh)
+    {
+        eh.v.style.backgroundColor = (ev.newValue) ? Color.green : Color.red;
+
     }
 }
 

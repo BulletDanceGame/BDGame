@@ -92,7 +92,7 @@ public class Note
     public string functionName;
     public Color color;
 
-    public bool playerRhythm;
+    public bool forPlayer;
 
     public BulletBag.BulletTypes[] bullets;
 
