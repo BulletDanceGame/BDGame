@@ -41,8 +41,17 @@ public class MusicManager : MonoBehaviour
     public double secondsPerBeat { get; set; }
     public int maxFPS;
     private double framesPerBeat; //this should theoretically be able to be a int, but as its made by 2 doubles its a double for safety
-    private int framerate;
-    private int frameDelay;
+    private int currentFramerate;
+    private double currentFrameDuration = 0;
+    private int currentFrameDelay;
+
+
+    private int nextFramerate;
+    private double nextFrameDuration = 0;
+    private int nextFrameDelay;
+    private double nextAudioDelay = 0;
+
+
 
     [HideInInspector] public bool speedingUpInCutscene;
 
@@ -52,7 +61,6 @@ public class MusicManager : MonoBehaviour
 
 
 
-    double frameDuration = 0;
 
     [HideInInspector] public bool startSequence;
     private bool prepareNextSequence;
@@ -62,7 +70,6 @@ public class MusicManager : MonoBehaviour
 
     private double totalDelay = 0;
     private double lastFrameTime = 0;
-    private double audioDelay = 0;
 
     bool isDestroyed = false;
 
@@ -130,20 +137,20 @@ public class MusicManager : MonoBehaviour
             if (lastFrameTime != 0)
             {
                 double frameTimer = Time.realtimeSinceStartup - lastFrameTime;
-                delay = frameTimer - frameDuration;
+                delay = frameTimer - currentFrameDuration;
             }
             totalDelay += delay;
                 
             lastFrameTime = Time.realtimeSinceStartup;
             //print("skip unitycheck " + totalDelay);
 
-            int f = (int)(totalDelay / frameDuration);
+            int f = (int)(totalDelay / currentFrameDuration);
 
             if (Mathf.Abs(f) >= 1)
             {
                 //print("skip unity " + f + " time " + totalDelay);
                 songTimer += f;
-                totalDelay -= frameDuration * f;
+                totalDelay -= currentFrameDuration * f;
             }
 
 
@@ -159,18 +166,19 @@ public class MusicManager : MonoBehaviour
 
                 if (timedBeats == sequenceDuration+1) //DURATION
                 {
+                    print("start spb " + secondsPerBeat);
                     StartSequence();
 
                     endTime = 0;
                 }
-                else //else if <duration+1
+                else // < sequenceDuration+1
                 {
                     currentBeat++;
                     EventManager.Instance.Beat(currentBeat);
 
                     if (timedBeats == sequenceDuration)
                     {
-                        endTime = frameDelay;
+                        endTime = currentFrameDelay;
 
                     }
                 }
@@ -179,7 +187,7 @@ public class MusicManager : MonoBehaviour
 
         if (prepareNextSequence)
         {
-            PrepareNextSequence(frameDuration*frameDelay);
+            PrepareNextSequence(currentFrameDuration* currentFrameDelay);
             prepareNextSequence = false;
         }
         if (startSequence)
@@ -190,6 +198,8 @@ public class MusicManager : MonoBehaviour
 
         AkSoundEngineController.Instance.LateUpdate();
     }
+
+
 
     private void OnDestroy()
     {
@@ -309,6 +319,10 @@ public class MusicManager : MonoBehaviour
         currentBeat = 0;
         lastBeatOfSequence = 0;
 
+        playing = false;
+        songTimer = 0;
+        timedBeats = 1;
+
         PlayerRhythm.Instance.ClearBeats();
 
         _currentSong.Stop(gameObject);
@@ -325,11 +339,11 @@ public class MusicManager : MonoBehaviour
 
         _nextSequence = controller.GetNextSequence();
 
-        SetFPS();
+        SetNextFPS();
 
         if (PlayerRhythm.Instance)
         {
-            PlayerRhythm.Instance.PrepareBeatMap(_nextSequence, delay + audioDelay, cut);
+            PlayerRhythm.Instance.PrepareBeatMap(_nextSequence, delay + nextAudioDelay, cut);
         }
         
     }
@@ -346,7 +360,7 @@ public class MusicManager : MonoBehaviour
         }
 
 
-        //fps check
+        //FPS CHECK
         int supposedFrames = (int)framesPerBeat * sequenceDuration;
         //print("aaa framecount " + frames + " should have been " + supposedFrames);
         if (frames < supposedFrames *0.9f)
@@ -375,7 +389,6 @@ public class MusicManager : MonoBehaviour
             consider -= m;
             //print("aaa consider " + consider);
 
-
         }
 
 
@@ -390,24 +403,29 @@ public class MusicManager : MonoBehaviour
             _currentSong.Post(gameObject,
                 (uint)AkCallbackType.AK_MusicSyncBeat + (uint)AkCallbackType.AK_MusicSyncExit + (uint)AkCallbackType.AK_MusicSyncEntry,
                 MusicCallbacks);
-            print("start " + Time.timeAsDouble);
-            print("sequence " + _currentSequence.name);
+            print("start " + Time.timeAsDouble + " - sequence " + _currentSequence.name);
+            print("start ending " + (Time.timeAsDouble +0.1+ _currentSequence.duration * (60.0 / (_currentSequence.bpm * 2))));
             startDelay = Time.timeAsDouble;
 
             //secondsPerBeat = 60.0 / (_currentSequence.bpm * 2);
 
+            currentFramerate = nextFramerate;
+            currentFrameDuration = nextFrameDuration;
+            currentFrameDelay = nextFrameDelay;
 
-            Application.targetFrameRate = framerate;
-            framesPerBeat = secondsPerBeat / frameDuration;
+            Application.targetFrameRate = currentFramerate;
+            framesPerBeat = secondsPerBeat / currentFrameDuration;
             //print("fpb " + framesPerBeat);
             sequenceDuration = _currentSequence.duration;
 
             AkSoundEngineController.Instance.starting = true;
-            AkSoundEngineController.Instance.frameDelay = frameDelay;
-            AkSoundEngineController.Instance.frameDuration = frameDuration;
+            AkSoundEngineController.Instance.frameDelay = currentFrameDelay;
+            AkSoundEngineController.Instance.frameDuration = currentFrameDuration;
 
             checkFrames = true;
             frames = 0;
+
+
         }
 
 
@@ -475,7 +493,7 @@ public class MusicManager : MonoBehaviour
     double lastTimer = 0;
     int timedBeats = 1;
 
-    private void SetFPS()
+    private void SetNextFPS()
     {
         secondsPerBeat = 60.0 / (_nextSequence.bpm * 2);
 
@@ -485,22 +503,22 @@ public class MusicManager : MonoBehaviour
         {
             i++;
             lowestFPS = i / secondsPerBeat;
-            if (i == _currentSequence.bpm)
+            if (i == _nextSequence.bpm)
             {
                 print("couldnt find an fps");
                 break;
             }
         }
         //print("lowest " + lowestFPS + "plues " + i);
-        framerate = (int)(maxFPS / lowestFPS) * (int)lowestFPS;
+        nextFramerate = (int)(maxFPS / lowestFPS) * (int)lowestFPS;
         //print("new fps " + framerate);
-        frameDuration = 1.0 / framerate;
+        nextFrameDuration = 1.0 / nextFramerate;
 
 
-        frameDelay = framerate / 10; //so the start is roughly 100ms delayed, might need to be calculated differently
+        nextFrameDelay = nextFramerate / 10; //so the start is roughly 100ms delayed, might need to be calculated differently
         
         
-        audioDelay = frameDuration + (512.0 / 48000.0) * 4.0;
+        nextAudioDelay = nextFrameDuration + (512.0 / 48000.0) * 4.0;
         //print("audio " + audioDelay);
     }
 
