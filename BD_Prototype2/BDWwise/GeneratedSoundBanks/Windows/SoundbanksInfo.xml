@@ -84,7 +84,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="723507619" Type="User" Language="SFX" Hash="{4ED1DCFE-25EF-1D69-981F-38D84590C981}">
+		<SoundBank Id="723507619" Type="User" Language="SFX" Hash="{60E9C56F-5EE8-F8C5-80DD-83620B7379B1}">
 			<ShortName>Music_YokaiHunter_Phase3AndOutro</ShortName>
 			<Path>Music_YokaiHunter_Phase3AndOutro.bnk</Path>
 			<Media>
@@ -120,6 +120,10 @@
 					<ShortName>Part 1 (no intro) - BIG BULLET.wav</ShortName>
 					<CachePath>SFX/Part 1 (no intro) - BIG BULLET_D79FB2B7.wem</CachePath>
 				</File>
+				<File Id="605611314" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boss 1 - Phase 1 - Part 6.wav</ShortName>
+					<CachePath>SFX/Boss 1 - Phase 1 - Part 6_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="685155449" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Part 5 - normal bullet 1.wav</ShortName>
 					<CachePath>SFX/Part 5 - normal bullet 1_D79FB2B7.wem</CachePath>
@@ -142,6 +146,12 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="594215984" Name="Outro____PLAY" DurationType="OneShot" DurationMin="16.268383" DurationMax="16.268383">
+					<MediaRefs>
+						<MediaRef Id="605611314"/>
+						<MediaRef Id="716031481"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="204711616" Name="YHPhase3__Intro__TransitionToPhase3____PLAY" DurationType="OneShot" DurationMin="72.041664" DurationMax="72.041664">
 					<MediaRefs>
 						<MediaRef Id="12628175"/>
@@ -2843,5 +2853,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A5B3C3CE-73F5-DD73-6C2D-47922A88EA7F}</FileHash>
+	<FileHash>{B202461F-D80C-739A-8E7B-8EDB8B378817}</FileHash>
 </SoundBanksInfo>

@@ -173,13 +173,13 @@ public class PlayerAnimator : UnitAnimator
     {
         if(_rbd == null)
         {
-            Debug.Log("Player won't play movement animations because rigidbody is not referenced");
+            Debug.LogWarning("Player won't play movement animations because rigidbody is not referenced");
             return;
         }
 
         if(!_continueAnimation)
         {
-            Debug.Log("Unit animator is turned off");
+            Debug.LogWarning("Unit animator is turned off");
             return;
         }
 
@@ -218,7 +218,7 @@ public class PlayerAnimator : UnitAnimator
     {
         if(!_continueAnimation)
         {
-            Debug.Log("Unit animator is turned off");
+            Debug.LogWarning("Unit animator is turned off");
             return;
         }
 
@@ -239,7 +239,7 @@ public class PlayerAnimator : UnitAnimator
     {
         if(!_continueAnimation)
         {
-            Debug.Log("Unit animator is turned off");
+            Debug.LogWarning("Unit animator is turned off");
             return;
         }
 
@@ -258,7 +258,7 @@ public class PlayerAnimator : UnitAnimator
     {
         if(!_continueAnimation)
         {
-            Debug.Log("Unit animator is turned off");
+            Debug.LogWarning("Unit animator is turned off");
             return;
         }
 
@@ -283,6 +283,22 @@ public class PlayerAnimator : UnitAnimator
 
 
     // -- For cutscene -- //
+    public enum PlayerSpriteSet { Default, NoBat, SoulForm }
+    public string _spriteSet = "Default";
+    [ExecuteAlways]
+    public void SetSpriteSet(PlayerSpriteSet spriteSet)
+    {
+        switch(spriteSet)
+        {
+            case PlayerSpriteSet.NoBat:    _spriteSet = "NoBat";            break;
+            case PlayerSpriteSet.SoulForm: _spriteSet = "layer1SoulForm";   break;
+
+            default:   _spriteSet = "Default";   break;
+        }
+
+        _spriteAnimator?.SetLibraryByName(_spriteSet);
+    }
+
     [ExecuteAlways]
     public override void EnableAnimUpdate(bool enable)
     {

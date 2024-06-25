@@ -234,15 +234,16 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        transform.position = (Vector2)transform.position + direction * dashDistance;
 
-        _dustTrail.Play();
-        _blink.Play();
         Instantiate(_dustTrail, transform.position, Quaternion.identity);
         Instantiate(_dustTrail, transform.position, Quaternion.identity);
 
         Instantiate(_dustTrail, transform.position, Quaternion.identity);
         Instantiate(_blink, transform.position, Quaternion.identity);
+
+
+
+        transform.position = (Vector2)transform.position + direction * dashDistance;
 
         for (int i = 0; i < dashDistance; i+=2)
         {

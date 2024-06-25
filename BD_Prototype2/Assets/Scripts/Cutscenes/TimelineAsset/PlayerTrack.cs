@@ -41,6 +41,8 @@ public class PlayerTrackMixer : CharacterTrackMixer
 
     private void SetVariables(PlayerBehaviour input)
     {
+        spriteSet        = input.spriteSet;
+
         faceTowardsBoss  = input.faceTowardsBoss;
 
         var newAnimState = input.animState;
@@ -62,8 +64,17 @@ public class PlayerTrackMixer : CharacterTrackMixer
             player.EnableAnimUpdate(enableUpdate);
         }
 
+        SetSpriteSet();
+        
         if(!enableUpdate)
             base.SetAndDisplay(playable, frameData);
+    }
+
+
+    PlayerAnimator.PlayerSpriteSet spriteSet = PlayerAnimator.PlayerSpriteSet.Default;
+    protected void SetSpriteSet()
+    {
+        player.SetSpriteSet(spriteSet);
     }
 
     bool faceTowardsBoss = false;

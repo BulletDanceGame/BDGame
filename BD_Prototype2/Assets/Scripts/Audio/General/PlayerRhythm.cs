@@ -122,9 +122,10 @@ public class PlayerRhythm : MonoBehaviour
 
     public void PrepareBeatMap(MusicSequence nextSequence, double delay, bool cut = false)
     {
-        BeatMapReader.ReadBeatMap(nextSequence.sheet, _playerBeats, MusicManager.Instance.lastBeatOfSequence);
+        BeatMapReader.ReadBeatMapPlayer(nextSequence.sheet, _playerBeats, MusicManager.Instance.lastBeatOfSequence);
 
 
+        print("entry bpm " + nextSequence.name + " bpm " + nextSequence.bpm);
         double spb = 60.0/(nextSequence.bpm*2);
 
         //times
@@ -133,6 +134,13 @@ public class PlayerRhythm : MonoBehaviour
         {
             _startTime = Time.timeAsDouble + offsetAudio + _timeOfSequence + delay;
         }
+
+        print("pre sequence " + nextSequence.name);
+        print("pre time " + Time.timeAsDouble);
+        print("pre start " + _startTime );
+        print("pre length " + _timeOfSequence);
+        print("pre delay " + delay);
+
         //print("starttime " + _startTime);
         _timeOfSequence = nextSequence.duration * spb;
 

@@ -6,7 +6,7 @@ public class GameplayButton : MonoBehaviour
     [SerializeField] private bool _triggeredByOtherButton;
     [SerializeField] private bool _startPressable;
     private bool _isPressable;
-    [SerializeField] private SpriteRenderer _buttonRenderer;
+    //[SerializeField] private SpriteRenderer _buttonRenderer;
 
     public enum TriggerType { Walkable, Deflection}
     [SerializeField] private TriggerType type;
@@ -25,7 +25,7 @@ public class GameplayButton : MonoBehaviour
     private void Start()
     {
         _isPressable = _startPressable;
-        _buttonRenderer.color = (_isPressable) ? Color.red : Color.gray;
+        //_buttonRenderer.color = (_isPressable) ? Color.red : Color.gray;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -53,7 +53,7 @@ public class GameplayButton : MonoBehaviour
     {
         if (!_isPressable) return;
 
-        GetComponentInChildren<Animator>().Play("buttonClick");
+        GetComponentInChildren<Animator>().Play("Activate");
         _isPressable = false;
 
         StartCoroutine(ButtonPress());
@@ -84,7 +84,7 @@ public class GameplayButton : MonoBehaviour
         {
             yield return new WaitForSeconds(0.5f);
 
-            GetComponentInChildren<Animator>().Play("buttonBack");
+            GetComponentInChildren<Animator>().Play("Deactivate");
             yield return new WaitForSeconds(0.5f);
             _isPressable = true;
 
@@ -102,7 +102,7 @@ public class GameplayButton : MonoBehaviour
         if (!_triggeredByOtherButton) { return; }
 
         _isPressable = true;
-        _buttonRenderer.color = Color.red;
+        //_buttonRenderer.color = Color.red;
 
     }
 
@@ -111,7 +111,7 @@ public class GameplayButton : MonoBehaviour
         if (!_triggeredByOtherButton) { return; }
 
         _isPressable = false;
-        _buttonRenderer.color = Color.gray;
+        //_buttonRenderer.color = Color.gray;
     }
 
 

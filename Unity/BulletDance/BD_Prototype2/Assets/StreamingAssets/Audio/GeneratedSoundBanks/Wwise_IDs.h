@@ -103,6 +103,7 @@ namespace AK
         static const AkUniqueID LASTBULLETIMPACT__OFPHASE____PLAY = 2369949805U;
         static const AkUniqueID NORMALDAMAGE____PLAY = 2122273249U;
         static const AkUniqueID NOSTAMINA____PLAY = 2278158929U;
+        static const AkUniqueID OUTRO____PLAY = 594215984U;
         static const AkUniqueID PAUSESCREENMUSIC____PLAY = 2002857628U;
         static const AkUniqueID PICKUP__CURRENCY____PLAY = 2487304348U;
         static const AkUniqueID PICKUP__HEALTH____PLAY = 63268803U;
