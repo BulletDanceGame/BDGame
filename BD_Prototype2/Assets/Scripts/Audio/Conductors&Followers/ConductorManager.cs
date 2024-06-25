@@ -46,7 +46,7 @@ public class ConductorManager : MonoBehaviour
             //controllersInScene are prioritized, so find the highest prio of the currently active controllers
             if (_activeControllers.Contains(_controllersInScene[i]))
             {
-                //if highest prio is this newly added one, let it take controll
+                //if highest prio is this newly added one, let it take control
                 if (_controllersInScene[i] == controller)
                 {
                     _currentController = controller;

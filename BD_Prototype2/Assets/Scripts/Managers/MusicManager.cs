@@ -130,7 +130,7 @@ public class MusicManager : MonoBehaviour
 
             songTimer++;
             if (speedingUpInCutscene) { songTimer += 3; }
-            //print("songtimer " + songTimer + " - time " + Time.timeAsDouble);
+            print("songtimer " + songTimer + " - sequence time " + Time.timeAsDouble);
             //print("goal " + (timedBeats * framesPerBeat - endTime) + " off " + (songTimer - (timedBeats * framesPerBeat - endTime)));
 
             double delay = 0;
@@ -162,7 +162,9 @@ public class MusicManager : MonoBehaviour
                 //save from pausing
                 double delayTimer = Time.realtimeSinceStartup - lastTimer;
                 lastTimer = Time.realtimeSinceStartup;
-                //print("beat " + timedBeats + " time " + Time.timeAsDouble + " delay " + delayTimer);
+                print("beat " + timedBeats + " time " + Time.timeAsDouble);// + " delay " + delayTimer);
+                print("beat duration " + sequenceDuration);
+                print("beat fpb " + framesPerBeat);
 
                 if (timedBeats == sequenceDuration+1) //DURATION
                 {
@@ -187,7 +189,7 @@ public class MusicManager : MonoBehaviour
 
         if (prepareNextSequence)
         {
-            PrepareNextSequence(currentFrameDuration* currentFrameDelay);
+            PrepareNextSequence(0); //currentFrameDuration * currentFrameDelay);
             prepareNextSequence = false;
         }
         if (startSequence)
@@ -238,7 +240,6 @@ public class MusicManager : MonoBehaviour
             if (transition == TransitionType.INSTANT_STOP)
             {
                 ResetMusicSystem();
-                //PrepareNextSequence(0); //well this is fucked lol
 
                 //"keep playing on switch"
                 if (_currentSequence.keepPlayingOnSwitch == true)
@@ -321,7 +322,8 @@ public class MusicManager : MonoBehaviour
 
         playing = false;
         songTimer = 0;
-        timedBeats = 1;
+        timedBeats = 0;
+        lastFrameTime = 0;
 
         PlayerRhythm.Instance.ClearBeats();
 
@@ -403,7 +405,7 @@ public class MusicManager : MonoBehaviour
             _currentSong.Post(gameObject,
                 (uint)AkCallbackType.AK_MusicSyncBeat + (uint)AkCallbackType.AK_MusicSyncExit + (uint)AkCallbackType.AK_MusicSyncEntry,
                 MusicCallbacks);
-            print("start " + Time.timeAsDouble + " - sequence " + _currentSequence.name);
+            print("-start " + Time.timeAsDouble + " - sequence " + _currentSequence.name);
             print("start ending " + (Time.timeAsDouble +0.1+ _currentSequence.duration * (60.0 / (_currentSequence.bpm * 2))));
             startDelay = Time.timeAsDouble;
 
@@ -531,9 +533,9 @@ public class MusicManager : MonoBehaviour
         currentBeat++;
         EventManager.Instance.Beat(currentBeat);
 
-        print("start entry " + Time.timeAsDouble);
+        print("-start entry " + Time.timeAsDouble);
         startDelay = Time.timeAsDouble - startDelay;
-        print("startdelay " + startDelay + " fr " + frames);
+        print("-startdelay " + startDelay + " fr " + frames);
         lastSequenceDelay = Time.timeAsDouble - lastSequenceDelay;
         //print("lastdelay " + lastSequenceDelay);
         lastSequenceDelay = Time.timeAsDouble;

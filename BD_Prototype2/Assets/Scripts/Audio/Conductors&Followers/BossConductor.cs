@@ -60,7 +60,7 @@ public class BossConductor : MusicConductor
         _nextSequence = _phases[_currentPhaseIndex].sequences[0];
         EventManager.Instance.StartCutscene(_nextSequence.cutsceneName);
 
-        print("boss setup");
+        print("boss setup - sequence " + Time.timeAsDouble);
     }
 
     private void SplitSequenceWeight()

@@ -135,6 +135,12 @@ public class PlayerRhythm : MonoBehaviour
             _startTime = Time.timeAsDouble + offsetAudio + _timeOfSequence + delay;
         }
 
+        print("pre sequence " + nextSequence.name);
+        print("pre time " + Time.timeAsDouble);
+        print("pre start " + _startTime );
+        print("pre length " + _timeOfSequence);
+        print("pre delay " + delay);
+
         //print("starttime " + _startTime);
         _timeOfSequence = nextSequence.duration * spb;
 
