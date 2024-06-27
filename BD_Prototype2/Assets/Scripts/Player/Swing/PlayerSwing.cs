@@ -138,7 +138,7 @@ public class PlayerSwing : MonoBehaviour
                 bulletAngle = GetRandomAngle(-BadHitAngle, BadHitAngle);
                 _swingMat.SetColor("_SwingColor", new Color(0.3f, 0, 0 , 0.75f));
 
-                //GetComponentInParent<Player>().Fail();
+                GetComponentInParent<Player>().Fail();
 
                 Debug.Log("Missed Beat");
 
