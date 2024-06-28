@@ -139,6 +139,41 @@
 													</RTPC>
 												</Local>
 											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{00A23A40-31DE-4007-8ABA-097F3E3F2090}" ShortID="59818710">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Highpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="HIGH_PASS____MusicBossBattle" ID="{4DAA6165-1FB5-4CF1-A908-D982EAEB1245}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{0934B7A3-9E7B-4A0B-8AD9-118A74A50B5B}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>100</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
 										</ObjectList>
 									</ObjectLists>
 								</Bus>

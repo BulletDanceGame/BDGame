@@ -84,6 +84,12 @@ public class PlayerSounds : SoundContainer
         PlaySFX("Dash Step");
     }
 
+    void PlayerCooldown()
+    {
+        //set cooldown rtpcs
+        PlaySFX("Cooldown Start");
+    }
+        
     void PlayerSlowMo()
     {
         //set slo mo rtpcs
