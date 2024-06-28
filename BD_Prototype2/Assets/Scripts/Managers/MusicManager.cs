@@ -95,6 +95,7 @@ public class MusicManager : MonoBehaviour
     int frames = 0;
 
 
+    double t;
     private void Update()
     {
         if (checkFrames)
@@ -127,10 +128,26 @@ public class MusicManager : MonoBehaviour
 
         if (playing)
         {
-
             songTimer++;
-            if (speedingUpInCutscene) { songTimer += 3; }
-            print("songtimer " + songTimer + " - sequence time " + Time.timeAsDouble);
+            if (speedingUpInCutscene)
+            {
+                songTimer += 3;
+                print("songtimer " + songTimer);
+                if ((songTimer - t) < 4)
+                {
+                    print(" - diff " + (songTimer - t));
+                }
+            }
+            else
+            {
+                print("songtimer " + songTimer);
+                if ((songTimer - t) < 1)
+                {
+                    print(" - diff " + (songTimer - t));
+                }
+            }
+
+            
             //print("goal " + (timedBeats * framesPerBeat - endTime) + " off " + (songTimer - (timedBeats * framesPerBeat - endTime)));
 
             double delay = 0;
@@ -153,6 +170,7 @@ public class MusicManager : MonoBehaviour
                 totalDelay -= currentFrameDuration * f;
             }
 
+            t = songTimer;
 
             //on beat (or endTime-frames before beat on the last one of a song)
             if (songTimer >= timedBeats * framesPerBeat - endTime)
@@ -168,7 +186,7 @@ public class MusicManager : MonoBehaviour
 
                 if (timedBeats == sequenceDuration+1) //DURATION
                 {
-                    print("start spb " + secondsPerBeat);
+
                     StartSequence();
 
                     endTime = 0;
@@ -322,8 +340,9 @@ public class MusicManager : MonoBehaviour
 
         playing = false;
         songTimer = 0;
-        timedBeats = 0;
+        timedBeats = 1;
         lastFrameTime = 0;
+        endTime = 0;
 
         PlayerRhythm.Instance.ClearBeats();
 
@@ -405,8 +424,7 @@ public class MusicManager : MonoBehaviour
             _currentSong.Post(gameObject,
                 (uint)AkCallbackType.AK_MusicSyncBeat + (uint)AkCallbackType.AK_MusicSyncExit + (uint)AkCallbackType.AK_MusicSyncEntry,
                 MusicCallbacks);
-            print("-start " + Time.timeAsDouble + " - sequence " + _currentSequence.name);
-            print("start ending " + (Time.timeAsDouble +0.1+ _currentSequence.duration * (60.0 / (_currentSequence.bpm * 2))));
+            print("_start " + Time.timeAsDouble + " - sequence " + _currentSequence.name);
             startDelay = Time.timeAsDouble;
 
             //secondsPerBeat = 60.0 / (_currentSequence.bpm * 2);
@@ -426,7 +444,6 @@ public class MusicManager : MonoBehaviour
 
             checkFrames = true;
             frames = 0;
-
 
         }
 
@@ -533,9 +550,11 @@ public class MusicManager : MonoBehaviour
         currentBeat++;
         EventManager.Instance.Beat(currentBeat);
 
-        print("-start entry " + Time.timeAsDouble);
+        print("_start entry " + Time.timeAsDouble);
         startDelay = Time.timeAsDouble - startDelay;
-        print("-startdelay " + startDelay + " fr " + frames);
+        print("_startdelay " + startDelay + " fr " + frames);
+        print("_start finish " + (Time.timeAsDouble + secondsPerBeat*_currentSequence.duration));
+
         lastSequenceDelay = Time.timeAsDouble - lastSequenceDelay;
         //print("lastdelay " + lastSequenceDelay);
         lastSequenceDelay = Time.timeAsDouble;
