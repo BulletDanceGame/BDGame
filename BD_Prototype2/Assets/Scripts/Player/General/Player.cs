@@ -130,6 +130,7 @@ public class Player : MonoBehaviour
         {
             playerFailState = PlayerFailState.FAILED;
             EventManager.Instance.PlayerTired();
+            EventManager.Instance.CooldownStart();
         }
     }
 

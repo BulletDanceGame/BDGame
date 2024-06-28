@@ -30,6 +30,7 @@ public class PlayerSounds : SoundContainer
         EventManager.Instance.OnPlayerHitBullet += BulletHit;
         EventManager.Instance.OnMaxCombo        += ResetHitPitch;
         EventManager.Instance.OnPlayerLastHit   += PlayerEndGameHit;
+        EventManager.Instance.OnCooldownStart   += PlayerCooldown;
 
         EventManager.Instance.OnPlayerDamage += PlayerHurt;
         EventManager.Instance.OnPlayerBurn   += PlayerBurn;
@@ -54,6 +55,7 @@ public class PlayerSounds : SoundContainer
         EventManager.Instance.OnPlayerHitBullet -= BulletHit;
         EventManager.Instance.OnMaxCombo        -= ResetHitPitch;
         EventManager.Instance.OnPlayerLastHit   -= PlayerEndGameHit;
+        EventManager.Instance.OnCooldownStart   -= PlayerCooldown;
 
         EventManager.Instance.OnPlayerDamage    -= PlayerHurt;
         EventManager.Instance.OnPlayerBurn      -= PlayerBurn;
