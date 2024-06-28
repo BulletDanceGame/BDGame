@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using BulletDance.Animation;
+using System.Collections;
 
 public class Turret : Movelist
 {
@@ -8,6 +9,12 @@ public class Turret : Movelist
     public Transform normalShot;
     public Transform doubleShot;
     private List<BulletBag.BulletTypes> bulletPrefabs = new List<BulletBag.BulletTypes>();
+
+    [Space]
+    [SerializeField]
+    float turretRespawnTime = 3f;
+    [SerializeField]
+    bool shouldBeRespawnable = true;
 
     [Space]
     [SerializeField] private bool _triggeredByButton;
@@ -200,7 +207,26 @@ public class Turret : Movelist
 
     void OnTriggerEnter2D(Collider2D cld)
     {
-        if(cld.gameObject.tag == "DeflectedBullet" || cld.gameObject.tag == "PlayerSwingBox")
+        if(cld.GetComponent<Bullet>().type == BulletType.PLAYERBULLET || cld.gameObject.tag == "PlayerSwingBox")
+        {
             _animHandler?.Hurt();
+
+            if(_isActive)
+                Deactivate();
+
+            if (shouldBeRespawnable)
+                StartCoroutine(RespawnTurret());
+
+        }
+    }
+
+    IEnumerator RespawnTurret()
+    {
+        Debug.LogError("Respawning");
+
+        yield return new WaitForSeconds(turretRespawnTime);
+        Activate();
+
+        Debug.LogError("Respawned");
     }
 }
