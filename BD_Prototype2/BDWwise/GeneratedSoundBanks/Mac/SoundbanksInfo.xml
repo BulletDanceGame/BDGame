@@ -1587,7 +1587,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2856222710" Type="User" Language="SFX" Hash="{EAFF3062-193E-9E17-9E9B-ED5E7004935A}">
+		<SoundBank Id="2856222710" Type="User" Language="SFX" Hash="{A8845066-7DEF-D20F-E602-EA3C9D9C8E0B}">
 			<ShortName>Music_YokaiHunter_Phase1And2</ShortName>
 			<Path>Music_YokaiHunter_Phase1And2.bnk</Path>
 			<Media>
@@ -1780,7 +1780,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{F997A11F-F8B3-6F74-FE79-6CA3BB85D486}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{738C681D-CD56-2731-5CDE-8382E718D586}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -1984,6 +1984,10 @@
 					<ShortName>Deflection-Element1V1.wav</ShortName>
 					<CachePath>SFX/Deflection-Element1V1_10C4C929.wem</CachePath>
 				</File>
+				<File Id="521086962" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>slomov1.wav</ShortName>
+					<CachePath>SFX/slomov1_3F440460.wem</CachePath>
+				</File>
 				<File Id="523274200" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>footstep5.wav</ShortName>
 					<CachePath>SFX/footstep5_10C4C929.wem</CachePath>
@@ -2055,6 +2059,10 @@
 				<File Id="623377676" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>doorCloseV7.wav</ShortName>
 					<CachePath>SFX/doorCloseV7_10C4C929.wem</CachePath>
+				</File>
+				<File Id="629175185" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>whiteNoise.wav</ShortName>
+					<CachePath>SFX/whiteNoise_7DCAA84D.wem</CachePath>
 				</File>
 				<File Id="635655355" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>now.wav</ShortName>
@@ -2471,6 +2479,7 @@
 						<MediaRef Id="343295060"/>
 						<MediaRef Id="395940498"/>
 						<MediaRef Id="606524587"/>
+						<MediaRef Id="629175185"/>
 						<MediaRef Id="644993846"/>
 						<MediaRef Id="682731598"/>
 						<MediaRef Id="762404653"/>
@@ -2657,6 +2666,12 @@
 				<Event Id="63268803" Name="PickUp__Health____PLAY" DurationType="OneShot" DurationMin="0.07540741" DurationMax="0.089675024">
 					<MediaRefs>
 						<MediaRef Id="812946627"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1837873573" Name="Play_Cooldown" DurationType="OneShot" DurationMin="10.188371" DurationMax="10.188371">
+					<MediaRefs>
+						<MediaRef Id="521086962"/>
+						<MediaRef Id="729477149"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="4112303910" Name="Play_DeflectionSwing___Good___Long" DurationType="OneShot" DurationMin="1.8546736" DurationMax="1.8546736">
@@ -2854,5 +2869,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{92154C56-0469-5BE4-C5A8-63E86FA8D6C4}</FileHash>
+	<FileHash>{464AEE4E-8DEC-39F6-4584-F43E8186DA6B}</FileHash>
 </SoundBanksInfo>
