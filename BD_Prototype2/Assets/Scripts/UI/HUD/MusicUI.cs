@@ -103,7 +103,7 @@ public class MusicUI : MonoBehaviour
             {
                 _rhythmElements[i].GetComponent<Animator>().speed = 1f / ((float)MusicManager.Instance.secondsPerBeat * 8); //remove instance
                 _rhythmElements[i].GetComponent<Animator>().Play(_beatAnimationName);
-                _rhythmElements[i].GetComponentInChildren<SpriteRenderer>().color = (beat % 2 == 1) ? Color.cyan : Color.white;
+                _rhythmElements[i].GetComponentInChildren<SpriteRenderer>().color = (beat % 2 == 1) ? Color.cyan : Color.cyan;
                 break;
             }
         }

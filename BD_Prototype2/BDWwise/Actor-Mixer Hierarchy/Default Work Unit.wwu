@@ -1186,6 +1186,62 @@
 														</RandomSequenceContainer>
 													</ChildrenList>
 												</BlendContainer>
+												<RandomSequenceContainer Name="crack" ID="{EA21ED15-71FC-4258-B19D-A28EA8259560}" ShortID="25138964">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+															<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Actions - Dynamic" ID="{7FE5CDA2-16AE-4E17-A00E-BBABAEFF1BD9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="whiteNoise" ID="{5887885C-3C72-46B5-95E6-2EBBAEADD110}" ShortID="254270904">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>-2400</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="whiteNoise" ID="{1C53852B-C355-4122-A71F-6259E7BF6C78}">
+																	<PropertyList>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.00689684715558602"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.0425805346127484"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>whiteNoise.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="629175185"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="whiteNoise" ID="{1C53852B-C355-4122-A71F-6259E7BF6C78}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
 											</ChildrenList>
 										</BlendContainer>
 									</ChildrenList>
@@ -7888,6 +7944,172 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="Deflection Hit - Transition To Player Theme" ID="{3C4C7D5F-6529-47E2-8A68-233B092AB88D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
+								<BlendContainer Name="Cooldown" ID="{626CDDF0-F8EE-4667-B85C-159276D76956}" ShortID="1004566702">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-900</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="slomov1" ID="{72735568-AEFF-46F8-BE53-F76D07CED0F0}" ShortID="720252184">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>33</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="slomov1" ID="{C0CE5F1E-AC7C-4AE5-A614-BD506AC4EDC8}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.427675319853781"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>slomov1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="521086962"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="slomov1" ID="{C0CE5F1E-AC7C-4AE5-A614-BD506AC4EDC8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<BlendContainer Name="Bunt" ID="{6EEA7F13-17A7-4A9C-BB73-6DDA78D1CC0A}" ShortID="766560684">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>26</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>210</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="hurtHighSFX" ID="{3206E6ED-D4E2-49EA-98F9-EE9F484876E3}" ShortID="314835134">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+															<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="hurtHighSFX" ID="{AE4AB0B9-EA3B-454D-A8D9-A3F032850C39}">
+															<Language>SFX</Language>
+															<AudioFile>hurtHighSFX.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="729477149"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="hurtHighSFX" ID="{AE4AB0B9-EA3B-454D-A8D9-A3F032850C39}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<Sound Name="lastImpact6 - Copy" ID="{79AC6A11-118D-43A0-9593-1BFE8D65162D}" ShortID="934937262">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>75</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-2000</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="lastImpact6 - Copy" ID="{DFEE9FAC-CF36-4701-8313-EAB351FC0F65}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="1.40071788506077"/>
+														<Property Name="FadeInShape" Type="int16" Value="8"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.260133346088536"/>
+														<Property Name="FadeOutShape" Type="int16" Value="1"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.241926704299974"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.97342474638269"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>lastImpact6 - Copy.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="434013492"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="lastImpact6 - Copy" ID="{DFEE9FAC-CF36-4701-8313-EAB351FC0F65}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>

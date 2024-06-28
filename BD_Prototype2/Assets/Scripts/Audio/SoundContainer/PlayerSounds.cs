@@ -84,6 +84,12 @@ public class PlayerSounds : SoundContainer
         PlaySFX("Dash Step");
     }
 
+    void PlayerCooldown()
+    {
+        //set cooldown rtpcs
+        PlaySFX("Cooldown Start");
+    }
+        
     void PlayerSlowMo()
     {
         //set slo mo rtpcs
@@ -117,21 +123,21 @@ public class PlayerSounds : SoundContainer
     //Swing
     void PlayerSwing(BeatTiming hitTiming, Vector2 none)
     {
-            ////on a perfect hit it feels delayed, and when hitting it so it fits you are roughly 50ms early
-            //switch (hitTiming)
-            //{
-            //    case BeatTiming.PERFECT:
-            //        PlaySFX("Swing Perfect"); break;
+            //on a perfect hit it feels delayed, and when hitting it so it fits you are roughly 50ms early
+            switch (hitTiming)
+            {
+                case BeatTiming.PERFECT:
+                    PlaySFX("Swing Perfect"); break;
 
-            //    case BeatTiming.GOOD:
-            //        PlaySFX("Swing Good"); break;
+                case BeatTiming.GOOD:
+                    PlaySFX("Swing Good"); break;
 
-            //    case BeatTiming.BAD:
-            //        PlaySFX("Swing Miss"); break;
+                case BeatTiming.BAD:
+                    PlaySFX("Swing Miss"); break;
 
-            //    default: break;
-            //}
-    }
+                default: break;
+            }
+        }
 
 
     //Bullet hit
@@ -207,7 +213,7 @@ public class PlayerSounds : SoundContainer
     {
         if(!BossController.Instance.bossHealth.isLastPhase)
         {
-            PlaySFX("Hit Max Combo");
+            //PlaySFX("Hit Max Combo");
         }
         else
         {
