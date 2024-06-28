@@ -89,7 +89,7 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="VOLUME____MusicBossBattle" ID="{5A5F59B0-5E1A-4001-9340-D93D786E49CA}"/>
-							<Value>49.9241274658574</Value>
+							<Value>50</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="LOW_PASS____PlayerActions__Dynamic" ID="{B9A97B03-2F6F-42A1-8023-AC9AA1008F95}"/>
@@ -100,12 +100,16 @@
 							<Value>50</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="PLAYBACK_SPEED____CutsceneMusic" ID="{1089C0B8-F905-42EF-9C59-349ABB22F0A7}"/>
+							<Value>20</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="VOLUME____BossActions" ID="{8EB41854-D4A4-432C-93C8-E1B30CF83DE6}"/>
 							<Value>50</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="PITCH____MusicBossBattle" ID="{441F84FB-905E-437E-9C04-15A2D8E7000A}"/>
-							<Value>50</Value>
+							<Value>96</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="VOLUME____MusicEnvBattle" ID="{6752217C-2619-4384-826C-0F2990FF366D}"/>
@@ -125,7 +129,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="PLAYBACK_SPEED____MusicBossBattle" ID="{04AD4BF5-C0D4-44A1-8A9B-B693562B6A51}"/>
-							<Value>20.0222469410456</Value>
+							<Value>20</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="LOW_PASS____PlayerDamage" ID="{6C228460-632E-455F-B47B-03F0BF08B631}"/>
@@ -157,7 +161,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="LOW_PASS____MusicBossBattle" ID="{E0FC1CC1-587C-485E-A0C3-24013CDB1DA8}"/>
-							<Value>0</Value>
+							<Value>49</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="LOW_PASS____BossActions" ID="{5A129DF9-AE16-4868-BF9B-883BA7F9A19E}"/>
@@ -241,7 +245,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="PITCH____MusicEnvBattle" ID="{220378F1-7B14-4FD9-8247-D0B0295860CF}"/>
-							<Value>50</Value>
+							<Value>3</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
