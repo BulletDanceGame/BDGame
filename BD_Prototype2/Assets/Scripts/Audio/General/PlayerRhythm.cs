@@ -14,9 +14,6 @@ public class PlayerRhythm : MonoBehaviour
 {
     public static PlayerRhythm Instance;
 
-    /// <summary> The player beats of the current and next sequence </summary>
-    private List<int> _playerBeats = new List<int>();
-
     public double offsetAudio;
     public double offsetSwing;
     public double offsetDash;
@@ -103,7 +100,6 @@ public class PlayerRhythm : MonoBehaviour
     public void ClearBeats()
     {
         print("clear");
-        _playerBeats.Clear();
         _timesToHit.Clear();
         _times.Clear();
 
@@ -122,6 +118,7 @@ public class PlayerRhythm : MonoBehaviour
 
     public void PrepareBeatMap(MusicSequence nextSequence, double delay, bool cut = false)
     {
+        List<int> _playerBeats = new List<int>();
         BeatMapReader.ReadBeatMapPlayer(nextSequence.sheet, _playerBeats, MusicManager.Instance.lastBeatOfSequence);
 
 
@@ -184,16 +181,62 @@ public class PlayerRhythm : MonoBehaviour
     /// <summary> Removes prepared beats for the past next sequence </summary>
     public void RemoveOldPreparedBeats()
     {
-        if (_playerBeats.Count > 0)
+        //if (_timesToHit.Count > 0)
+        //{
+        //    int lastBeatInPlayerBeats = _playerBeats[^1];
+        //    for (int i = MusicManager.Instance.lastBeatOfSequence + 1; i < lastBeatInPlayerBeats + 1; i++)
+        //    {
+        //        if (_playerBeats.Contains(i))
+        //        {
+        //            _playerBeats.Remove(i);
+        //        }
+        //    }
+        //}
+
+
+
+
+        for (int i = _timesToHit.Count - 1; i > -1; i--)
         {
-            int lastBeatInPlayerBeats = _playerBeats[^1];
-            for (int i = MusicManager.Instance.lastBeatOfSequence + 1; i < lastBeatInPlayerBeats + 1; i++)
+            if (_timesToHit[i] > _startTime)
             {
-                if (_playerBeats.Contains(i))
+                _timesToHit.RemoveAt(i);
+            }
+            else
+            {
+                break;
+            }
+        }
+
+
+        for (int i = _times.Count - 1; i > -1; i--)
+        {
+            if (_times[i].Item2 > MusicManager.Instance.lastBeatOfSequence)
+            {
+                _times.RemoveAt(i);
+            }
+            else
+            {
+                break;
+            }
+        }
+
+
+        foreach (VisualUpdate v in visualUpdates)
+        {
+            for (int i = v.beats.Count-1; i > -1; i--)
+            {
+                if (v.beats[i] > MusicManager.Instance.lastBeatOfSequence)
                 {
-                    _playerBeats.Remove(i);
+                    v.timesToUpdate.RemoveAt(i);
+                    v.beats.RemoveAt(i);
+                }
+                else
+                {
+                    break;
                 }
             }
+
         }
     }
 

@@ -132,19 +132,6 @@ public class MusicManager : MonoBehaviour
             if (speedingUpInCutscene)
             {
                 songTimer += 3;
-                print("songtimer " + songTimer);
-                if ((songTimer - t) < 4)
-                {
-                    print(" - diff " + (songTimer - t));
-                }
-            }
-            else
-            {
-                print("songtimer " + songTimer);
-                if ((songTimer - t) < 1)
-                {
-                    print(" - diff " + (songTimer - t));
-                }
             }
 
             
@@ -167,6 +154,7 @@ public class MusicManager : MonoBehaviour
             {
                 //print("skip unity " + f + " time " + totalDelay);
                 songTimer += f;
+                if(speedingUpInCutscene) { songTimer += f * 3; }
                 totalDelay -= currentFrameDuration * f;
             }
 
@@ -180,9 +168,9 @@ public class MusicManager : MonoBehaviour
                 //save from pausing
                 double delayTimer = Time.realtimeSinceStartup - lastTimer;
                 lastTimer = Time.realtimeSinceStartup;
-                print("beat " + timedBeats + " time " + Time.timeAsDouble);// + " delay " + delayTimer);
-                print("beat duration " + sequenceDuration);
-                print("beat fpb " + framesPerBeat);
+                //print("beat " + timedBeats + " time " + Time.timeAsDouble);// + " delay " + delayTimer);
+                //print("beat duration " + sequenceDuration);
+                //print("beat fpb " + framesPerBeat);
 
                 if (timedBeats == sequenceDuration+1) //DURATION
                 {
@@ -487,7 +475,6 @@ public class MusicManager : MonoBehaviour
         //Entry
         else if (in_type == AkCallbackType.AK_MusicSyncEntry)
         {
-            print("nani te fuck");
             StartCoroutine(OnEntry());
         }
         //EXIT
@@ -524,7 +511,7 @@ public class MusicManager : MonoBehaviour
             lowestFPS = i / secondsPerBeat;
             if (i == _nextSequence.bpm)
             {
-                print("couldnt find an fps");
+                Debug.LogWarning("couldnt find an fps");
                 break;
             }
         }
@@ -550,10 +537,10 @@ public class MusicManager : MonoBehaviour
         currentBeat++;
         EventManager.Instance.Beat(currentBeat);
 
-        print("_start entry " + Time.timeAsDouble);
+        //print("_start entry " + Time.timeAsDouble);
         startDelay = Time.timeAsDouble - startDelay;
-        print("_startdelay " + startDelay + " fr " + frames);
-        print("_start finish " + (Time.timeAsDouble + secondsPerBeat*_currentSequence.duration));
+        //print("_startdelay " + startDelay + " fr " + frames);
+        //print("_start finish " + (Time.timeAsDouble + secondsPerBeat*_currentSequence.duration));
 
         lastSequenceDelay = Time.timeAsDouble - lastSequenceDelay;
         //print("lastdelay " + lastSequenceDelay);
