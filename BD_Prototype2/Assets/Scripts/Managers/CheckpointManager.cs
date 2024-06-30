@@ -27,6 +27,6 @@ public class CheckpointManager : MonoBehaviour
     }
     public void RespawnPlayer()
     {
-        UnitManager.Instance.GetPlayer().transform.position = LastCheckpointPos;
+        //UnitManager.Instance.GetPlayer().transform.position = LastCheckpointPos;
     }
 }

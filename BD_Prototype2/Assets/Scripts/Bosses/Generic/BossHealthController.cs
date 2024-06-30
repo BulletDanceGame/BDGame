@@ -153,8 +153,8 @@ public class BossHealthController : MonoBehaviour
         // -- Phase change -- //
         if(currentPhaseHealth > 0f) return;   //Escape if health > 0
 
-        EventManager.Instance.BossPhaseChange();
         EventManager.Instance.BossEndPhaseHit(isLastPhase);
+        EventManager.Instance.BossPhaseChange();
         if(isDead) 
         {
             EventManager.Instance.BossDeath();

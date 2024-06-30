@@ -51,7 +51,7 @@ public class Bullet : MonoBehaviour
 
     public void FireBullet(Vector3 direction, Vector2 startingPosition)
     {
-        Reset();
+        ResetBullet();
         gameObject.SetActive(true);
 
         transform.position = startingPosition;
@@ -109,7 +109,7 @@ public class Bullet : MonoBehaviour
 
     public void OnDisable()
     {
-        Reset();
+        ResetBullet();
         CancelInvoke();
 
         Damage = 15;
@@ -119,7 +119,7 @@ public class Bullet : MonoBehaviour
 
     public void Deactivate()
     {
-        Reset();
+        ResetBullet();
 
         if (gameObject.activeSelf)
             gameObject.SetActive(false);
@@ -130,7 +130,7 @@ public class Bullet : MonoBehaviour
         _fx.DestroyFX();
     }
 
-    public void Reset()
+    public void ResetBullet()
     {
         type = BulletType.BOSSBULLET;
         bounces = 0;

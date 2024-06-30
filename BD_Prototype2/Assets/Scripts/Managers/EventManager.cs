@@ -1,4 +1,6 @@
 using System;
+using System.Data.Common;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class EventManager : MonoBehaviour
@@ -144,6 +146,13 @@ public class EventManager : MonoBehaviour
 
 
     //Player events ------------------------------------------------------------------------------
+    public event Action OnCooldownStart;
+
+    public void CooldownStart()
+    {
+        OnCooldownStart?.Invoke();
+    }
+
 
     //Spawn and death
     public event Action OnPlayerSpawned; //After  player spawned

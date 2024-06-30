@@ -60,7 +60,7 @@ public class GlitchEffect : MonoBehaviour
 
     IEnumerator OnGlitchDo()
     {
-        Color = Color + 5;
+        Color = Color + 10;
         _material.SetFloat("_ColorStrength", Color);
         GlitchVFX.enabled = true;
         yield return new WaitForSeconds(0.1f);

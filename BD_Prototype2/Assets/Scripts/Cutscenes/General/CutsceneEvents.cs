@@ -61,6 +61,16 @@ public class CutsceneEvents : MonoBehaviour
         }
     }
 
+    public void InFight()
+    {
+         AkSoundEngine.SetState("PlayerStatus", "Fighting");
+    }
+
+    public void OutOfFight()
+    {
+         AkSoundEngine.SetState("PlayerStatus", "Roaming");
+    }
+
 
 
 }

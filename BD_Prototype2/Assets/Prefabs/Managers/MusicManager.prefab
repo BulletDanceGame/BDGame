@@ -36,7 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2327364896427278051
 MonoBehaviour:
@@ -160,6 +160,11 @@ MonoBehaviour:
         idInternal: 0
         valueGuidInternal: 
         WwiseObjectReference: {fileID: 11400000, guid: 683a4d7f21d21f346aa6f3f96807b91e, type: 2}
+    - sfxName: Cooldown Start
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 465dc4648533a2d459d6348679c643c3, type: 2}
   - groupName: Bullet Hit
     sfxList:
     - sfxName: Hit Perfect
