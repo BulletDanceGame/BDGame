@@ -4,13 +4,6 @@
 		<WorkUnit Name="Default Work Unit" ID="{F0507581-BB05-4E05-90A1-76BE406C54E8}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
-					<PropertyList>
-						<Property Name="BusVolume" Type="Real64">
-							<ValueList>
-								<Value>-10</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
 							<ObjectRef Name="System" ID="{D6BCB84F-50D8-4BBD-89EF-B7105451F711}" WorkUnitID="{FC1B2817-BD82-40FD-8C8A-F5C8697E973B}"/>
@@ -825,6 +818,13 @@
 										<Bus Name="Movement" ID="{457C0C97-DAFA-4206-ADBE-64A13B4553B2}">
 											<ChildrenList>
 												<Bus Name="Footsteps" ID="{1DA3C31C-70A5-4FD2-BA8F-CAF7686B3676}">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64">
+															<ValueList>
+																<Value>-9</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<StateInfo>
 														<StateGroupList>
 															<StateGroupInfo>
@@ -1356,7 +1356,7 @@
 														<Panner Name="" ID="{3C7AE56A-FFE2-446B-9EA6-78134E2D1C4D}">
 															<PropertyList>
 																<Property Name="PanX" Type="Real64" Value="-20"/>
-																<Property Name="PanY" Type="Real64" Value="58"/>
+																<Property Name="PanY" Type="Real64" Value="40"/>
 															</PropertyList>
 														</Panner>
 													</PositioningInfo>
@@ -1369,7 +1369,7 @@
 														<Panner Name="" ID="{9C58525E-6CBF-4F3C-AEE1-DCE3F0543F19}">
 															<PropertyList>
 																<Property Name="PanX" Type="Real64" Value="-20"/>
-																<Property Name="PanY" Type="Real64" Value="58"/>
+																<Property Name="PanY" Type="Real64" Value="40"/>
 															</PropertyList>
 														</Panner>
 													</PositioningInfo>
@@ -1387,7 +1387,7 @@
 														<Panner Name="" ID="{6C3269F5-6D4E-4FEB-94E0-6D664974AE24}">
 															<PropertyList>
 																<Property Name="PanX" Type="Real64" Value="20"/>
-																<Property Name="PanY" Type="Real64" Value="58"/>
+																<Property Name="PanY" Type="Real64" Value="60"/>
 															</PropertyList>
 														</Panner>
 													</PositioningInfo>
@@ -1400,7 +1400,7 @@
 														<Panner Name="" ID="{F2376D66-478B-4D8D-A9FB-4DBFAD425B96}">
 															<PropertyList>
 																<Property Name="PanX" Type="Real64" Value="-20"/>
-																<Property Name="PanY" Type="Real64" Value="58"/>
+																<Property Name="PanY" Type="Real64" Value="40"/>
 															</PropertyList>
 														</Panner>
 													</PositioningInfo>
@@ -1418,7 +1418,7 @@
 														<Panner Name="" ID="{26133641-14E7-43D5-AE93-CBAE8F8C5B2D}">
 															<PropertyList>
 																<Property Name="PanX" Type="Real64" Value="20"/>
-																<Property Name="PanY" Type="Real64" Value="58"/>
+																<Property Name="PanY" Type="Real64" Value="60"/>
 															</PropertyList>
 														</Panner>
 													</PositioningInfo>
@@ -1430,8 +1430,7 @@
 													<PositioningInfo>
 														<Panner Name="" ID="{F6CD9AFF-07FC-4AD2-9610-FF603645B0CD}">
 															<PropertyList>
-																<Property Name="PanX" Type="Real64" Value="20"/>
-																<Property Name="PanY" Type="Real64" Value="58"/>
+																<Property Name="PanY" Type="Real64" Value="60"/>
 															</PropertyList>
 														</Panner>
 													</PositioningInfo>
@@ -1445,8 +1444,7 @@
 													<PositioningInfo>
 														<Panner Name="" ID="{70310CBE-200C-4092-86F5-DFE099B6BDDF}">
 															<PropertyList>
-																<Property Name="PanX" Type="Real64" Value="20"/>
-																<Property Name="PanY" Type="Real64" Value="58"/>
+																<Property Name="PanY" Type="Real64" Value="60"/>
 															</PropertyList>
 														</Panner>
 													</PositioningInfo>
@@ -1459,7 +1457,7 @@
 														<Panner Name="" ID="{F511275A-1DF4-4A33-B1D9-4CB267E8BDF9}">
 															<PropertyList>
 																<Property Name="PanX" Type="Real64" Value="-20"/>
-																<Property Name="PanY" Type="Real64" Value="58"/>
+																<Property Name="PanY" Type="Real64" Value="40"/>
 															</PropertyList>
 														</Panner>
 													</PositioningInfo>

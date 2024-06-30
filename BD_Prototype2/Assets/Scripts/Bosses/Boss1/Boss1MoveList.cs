@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Collections;
 
 public class Boss1MoveList : Movelist
 {
@@ -82,6 +82,7 @@ public class Boss1MoveList : Movelist
     [SerializeField] private int _beatsCanisterReticleDuration;
     [SerializeField] private int _beatsCanisterDropQUEUE;
 
+    private bool _wallCheck;
 
     //Animation
     private BulletDance.Animation.UnitAnimationHandler _animHandler;
@@ -325,11 +326,27 @@ public class Boss1MoveList : Movelist
         }
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        // if hitting a wall, find a new destination
+        if (collision.gameObject.tag == "Wall")
+        {
+            _wallCheck = true;
+            ContactPoint2D contact = collision.contacts[0];
+        }
+        else
+        {
+            _wallCheck = false;
+
+        }
+    }
+
     void DashUpdate()
     {
         if (healthController.isDead)
             return;
-
+        if (_wallCheck) return;
+        
         if (healthController.isLastHit == false)
         {
             if (_direction == 0)
@@ -372,7 +389,10 @@ public class Boss1MoveList : Movelist
                 }
 
             }
+            if(_direction!=0)
+            {
 
+            }
         }
 
 

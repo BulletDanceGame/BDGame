@@ -82,7 +82,6 @@ namespace AK
         static const AkUniqueID CPHASE1__PART3____PLAY = 683879428U;
         static const AkUniqueID CPHASE1__PART5____PLAY = 1964220686U;
         static const AkUniqueID DASH____PLAY = 3724255519U;
-        static const AkUniqueID DASHSTEP____PLAY = 1460378649U;
         static const AkUniqueID DEFLECTIONHIT__FINALHIT____PLAY = 3845110252U;
         static const AkUniqueID DEFLECTIONHIT__GOOD____PLAY = 1161185488U;
         static const AkUniqueID DEFLECTIONHIT__MAXCOMBO____PLAY = 650628319U;

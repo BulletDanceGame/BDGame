@@ -265,7 +265,7 @@ MonoBehaviour:
   sound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 1d08d86ad75eef24db0cd5747db161a1, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: a3fd587f2e1b23848b87050cd769e951, type: 2}
 --- !u!114 &-3236000780464483859
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -495,6 +495,22 @@ MonoBehaviour:
   VirtualCamera:
     exposedName: 79cb0b53cb3c15d459c3074294e0a016
     defaultValue: {fileID: 0}
+--- !u!114 &263962315273951424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12b579eec90deeb4ea9b79eee634d7aa, type: 3}
+  m_Name: TLSoundClip(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  sound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 38dd6ab927e839241962dec681a0bbef, type: 2}
 --- !u!114 &1331592637648627348
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -993,7 +1009,25 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -1090,6 +1124,57 @@ MonoBehaviour:
     m_Start: 6.8
     m_ClipIn: 0
     m_Asset: {fileID: -3401009722724601260}
+    m_Duration: 0.20000000000000018
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 4563919213645758539}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: Hair flair down
+  - m_Version: 1
+    m_Start: 7.665788329423716
+    m_ClipIn: 0
+    m_Asset: {fileID: 263962315273951424}
     m_Duration: 0.20000000000000018
     m_TimeScale: 1
     m_ParentTrack: {fileID: 4563919213645758539}
