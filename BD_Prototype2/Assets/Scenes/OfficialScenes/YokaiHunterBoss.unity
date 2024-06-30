@@ -343,6 +343,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5599069750954204372, guid: 3bd67fa9f4a3592408f8d5075f3a2ab9, type: 3}
+      propertyPath: _shrinkSpeed
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 5804210963752369752, guid: 3bd67fa9f4a3592408f8d5075f3a2ab9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -6091,6 +6095,14 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
       value: 58.23352
       objectReference: {fileID: 0}
+    - target: {fileID: 5318438829496491625, guid: dbdaaac47479b494fa3657b5ce11d3e3, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5784870558965066148, guid: dbdaaac47479b494fa3657b5ce11d3e3, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 6663546810362540533, guid: dbdaaac47479b494fa3657b5ce11d3e3, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[26].x
       value: 34.19152
@@ -11379,7 +11391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1386727211854818024, guid: 0293402e347049a4a82e2d81236ee585, type: 3}
       propertyPath: orthographic size
-      value: 20.718567
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1386727211854818024, guid: 0293402e347049a4a82e2d81236ee585, type: 3}
       propertyPath: m_projectionMatrixMode
