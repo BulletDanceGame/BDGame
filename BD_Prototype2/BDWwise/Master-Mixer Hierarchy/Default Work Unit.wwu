@@ -825,13 +825,27 @@
 										<Bus Name="Movement" ID="{457C0C97-DAFA-4206-ADBE-64A13B4553B2}">
 											<ChildrenList>
 												<Bus Name="Footsteps" ID="{1DA3C31C-70A5-4FD2-BA8F-CAF7686B3676}">
-													<PropertyList>
-														<Property Name="BusVolume" Type="Real64">
-															<ValueList>
-																<Value>-15</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
+													<StateInfo>
+														<StateGroupList>
+															<StateGroupInfo>
+																<StateGroupRef Name="PlayerStatus" ID="{AF04C852-8173-4ED2-92A9-830A4BB65C0A}"/>
+															</StateGroupInfo>
+														</StateGroupList>
+														<CustomStateList>
+															<CustomState>
+																<StateRef Name="Roaming" ID="{7CCE60CF-7676-4AA3-9772-E7A35C17A70F}"/>
+																<CustomState Name="" ID="{324F1C40-FB30-43E8-8371-ECA7E954E603}" ShortID="677858939"/>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="Fighting" ID="{DFDF9133-42ED-4C2D-9722-9D1DFE49A103}"/>
+																<CustomState Name="" ID="{87F5A7F2-B66D-4947-9A99-B5BAA2B8782D}" ShortID="421885907">
+																	<PropertyList>
+																		<Property Name="BusVolume" Type="Real64" Value="-108"/>
+																	</PropertyList>
+																</CustomState>
+															</CustomState>
+														</CustomStateList>
+													</StateInfo>
 													<ObjectLists>
 														<ObjectList Name="RTPC">
 															<Reference>

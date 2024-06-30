@@ -29,6 +29,13 @@
 						<State Name="YokaiHunterBoss" ID="{462C21DB-7A88-4AC5-B1F1-9246C26A800B}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="PlayerStatus" ID="{AF04C852-8173-4ED2-92A9-830A4BB65C0A}">
+					<ChildrenList>
+						<State Name="None" ID="{AB3003ED-AC16-494E-802D-F8ADA9F04C92}"/>
+						<State Name="Roaming" ID="{7CCE60CF-7676-4AA3-9772-E7A35C17A70F}"/>
+						<State Name="Fighting" ID="{DFDF9133-42ED-4C2D-9722-9D1DFE49A103}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

@@ -283,6 +283,18 @@ namespace AK
             } // namespace STATE
         } // namespace LEVEL
 
+        namespace PLAYERSTATUS
+        {
+            static const AkUniqueID GROUP = 3800848640U;
+
+            namespace STATE
+            {
+                static const AkUniqueID FIGHTING = 168610243U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID ROAMING = 3557636762U;
+            } // namespace STATE
+        } // namespace PLAYERSTATUS
+
     } // namespace STATES
 
     namespace GAME_PARAMETERS
@@ -290,6 +302,7 @@ namespace AK
         static const AkUniqueID HIGH_PASS____CUTSCENEMUSIC = 721861396U;
         static const AkUniqueID HIGH_PASS____CUTSCENESFX__GENERAL__AUDIBLEONSPEEDUP = 1961333805U;
         static const AkUniqueID HIGH_PASS____CUTSCENESFX__VOICELINES = 86843165U;
+        static const AkUniqueID HIGH_PASS____MUSICBOSSBATTLE = 2655220193U;
         static const AkUniqueID HITSLOMO_ONLY_HERE_FOR_REFERENCE_OF_MAX_COMBO_STUFF = 3366454963U;
         static const AkUniqueID LOW_PASS____BOSSACTIONS = 2622221165U;
         static const AkUniqueID LOW_PASS____BOSSDAMAGE = 2055487999U;

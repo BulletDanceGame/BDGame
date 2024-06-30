@@ -95,6 +95,7 @@ public class MusicManager : MonoBehaviour
     int frames = 0;
 
 
+    double t;
     private void Update()
     {
         if (checkFrames)
@@ -127,10 +128,13 @@ public class MusicManager : MonoBehaviour
 
         if (playing)
         {
-
             songTimer++;
-            if (speedingUpInCutscene) { songTimer += 3; }
-            print("songtimer " + songTimer + " - sequence time " + Time.timeAsDouble);
+            if (speedingUpInCutscene)
+            {
+                songTimer += 3;
+            }
+
+            
             //print("goal " + (timedBeats * framesPerBeat - endTime) + " off " + (songTimer - (timedBeats * framesPerBeat - endTime)));
 
             double delay = 0;
@@ -150,9 +154,11 @@ public class MusicManager : MonoBehaviour
             {
                 //print("skip unity " + f + " time " + totalDelay);
                 songTimer += f;
+                if(speedingUpInCutscene) { songTimer += f * 3; }
                 totalDelay -= currentFrameDuration * f;
             }
 
+            t = songTimer;
 
             //on beat (or endTime-frames before beat on the last one of a song)
             if (songTimer >= timedBeats * framesPerBeat - endTime)
@@ -162,13 +168,13 @@ public class MusicManager : MonoBehaviour
                 //save from pausing
                 double delayTimer = Time.realtimeSinceStartup - lastTimer;
                 lastTimer = Time.realtimeSinceStartup;
-                print("beat " + timedBeats + " time " + Time.timeAsDouble);// + " delay " + delayTimer);
-                print("beat duration " + sequenceDuration);
-                print("beat fpb " + framesPerBeat);
+                //print("beat " + timedBeats + " time " + Time.timeAsDouble);// + " delay " + delayTimer);
+                //print("beat duration " + sequenceDuration);
+                //print("beat fpb " + framesPerBeat);
 
                 if (timedBeats == sequenceDuration+1) //DURATION
                 {
-                    print("start spb " + secondsPerBeat);
+
                     StartSequence();
 
                     endTime = 0;
@@ -322,8 +328,9 @@ public class MusicManager : MonoBehaviour
 
         playing = false;
         songTimer = 0;
-        timedBeats = 0;
+        timedBeats = 1;
         lastFrameTime = 0;
+        endTime = 0;
 
         PlayerRhythm.Instance.ClearBeats();
 
@@ -405,8 +412,7 @@ public class MusicManager : MonoBehaviour
             _currentSong.Post(gameObject,
                 (uint)AkCallbackType.AK_MusicSyncBeat + (uint)AkCallbackType.AK_MusicSyncExit + (uint)AkCallbackType.AK_MusicSyncEntry,
                 MusicCallbacks);
-            print("-start " + Time.timeAsDouble + " - sequence " + _currentSequence.name);
-            print("start ending " + (Time.timeAsDouble +0.1+ _currentSequence.duration * (60.0 / (_currentSequence.bpm * 2))));
+            print("_start " + Time.timeAsDouble + " - sequence " + _currentSequence.name);
             startDelay = Time.timeAsDouble;
 
             //secondsPerBeat = 60.0 / (_currentSequence.bpm * 2);
@@ -426,7 +432,6 @@ public class MusicManager : MonoBehaviour
 
             checkFrames = true;
             frames = 0;
-
 
         }
 
@@ -470,7 +475,6 @@ public class MusicManager : MonoBehaviour
         //Entry
         else if (in_type == AkCallbackType.AK_MusicSyncEntry)
         {
-            print("nani te fuck");
             StartCoroutine(OnEntry());
         }
         //EXIT
@@ -507,7 +511,7 @@ public class MusicManager : MonoBehaviour
             lowestFPS = i / secondsPerBeat;
             if (i == _nextSequence.bpm)
             {
-                print("couldnt find an fps");
+                Debug.LogWarning("couldnt find an fps");
                 break;
             }
         }
@@ -533,9 +537,11 @@ public class MusicManager : MonoBehaviour
         currentBeat++;
         EventManager.Instance.Beat(currentBeat);
 
-        print("-start entry " + Time.timeAsDouble);
+        //print("_start entry " + Time.timeAsDouble);
         startDelay = Time.timeAsDouble - startDelay;
-        print("-startdelay " + startDelay + " fr " + frames);
+        //print("_startdelay " + startDelay + " fr " + frames);
+        //print("_start finish " + (Time.timeAsDouble + secondsPerBeat*_currentSequence.duration));
+
         lastSequenceDelay = Time.timeAsDouble - lastSequenceDelay;
         //print("lastdelay " + lastSequenceDelay);
         lastSequenceDelay = Time.timeAsDouble;

@@ -49,6 +49,11 @@
 						<GameParameter Name="HIGH_PASS____CutsceneMusic" ID="{586051BF-89E4-4FBD-A32A-0F8FADE964C0}"/>
 						<GameParameter Name="HIGH_PASS____CutsceneSFX__Voicelines" ID="{5342F048-4FC7-47E5-9B4F-D3547397F564}"/>
 						<GameParameter Name="HIGH_PASS____CutsceneSFX__General__AudibleOnSpeedUp" ID="{89ABBBFC-4AAE-4900-8D2F-D6611443A4B6}"/>
+						<GameParameter Name="HIGH_PASS____MusicBossBattle" ID="{4DAA6165-1FB5-4CF1-A908-D982EAEB1245}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="PITCH" ID="{8F47C34B-AA10-4AD2-8C79-B5ECEBF15280}" ShortID="890567242">
@@ -83,7 +88,6 @@
 						<GameParameter Name="VOLUME_SPECIAL____Dash__DynamicMixing" ID="{10BD8A21-5286-4B83-B637-AAD69815BB4A}"/>
 					</ChildrenList>
 				</Folder>
-				<GameParameter Name="HIGH_PASS____MusicBossBattle" ID="{4DAA6165-1FB5-4CF1-A908-D982EAEB1245}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
