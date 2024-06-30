@@ -174,7 +174,7 @@ public class MusicManager : MonoBehaviour
 
                 if (timedBeats == sequenceDuration+1) //DURATION
                 {
-
+                    print("_start songtimer " + songTimer);
                     StartSequence();
 
                     endTime = 0;
@@ -207,12 +207,6 @@ public class MusicManager : MonoBehaviour
         AkSoundEngineController.Instance.LateUpdate();
     }
 
-
-
-    private void OnDestroy()
-    {
-        isDestroyed = true;
-    }
 
 
 
@@ -420,6 +414,7 @@ public class MusicManager : MonoBehaviour
             currentFramerate = nextFramerate;
             currentFrameDuration = nextFrameDuration;
             currentFrameDelay = nextFrameDelay;
+            print("framedel " + currentFrameDelay);
 
             Application.targetFrameRate = currentFramerate;
             framesPerBeat = secondsPerBeat / currentFrameDuration;
@@ -515,9 +510,7 @@ public class MusicManager : MonoBehaviour
                 break;
             }
         }
-        //print("lowest " + lowestFPS + "plues " + i);
         nextFramerate = (int)(maxFPS / lowestFPS) * (int)lowestFPS;
-        //print("new fps " + framerate);
         nextFrameDuration = 1.0 / nextFramerate;
 
 
@@ -529,6 +522,8 @@ public class MusicManager : MonoBehaviour
     }
 
 
+    double lastEntry = 0;
+
     IEnumerator OnEntry()
     {
 
@@ -537,9 +532,11 @@ public class MusicManager : MonoBehaviour
         currentBeat++;
         EventManager.Instance.Beat(currentBeat);
 
-        //print("_start entry " + Time.timeAsDouble);
+        print("_start entry " + Time.timeAsDouble);
         startDelay = Time.timeAsDouble - startDelay;
-        //print("_startdelay " + startDelay + " fr " + frames);
+        print("_startdelay " + startDelay + " fr " + frames);
+        print("_s between entries " + (Time.timeAsDouble-lastEntry));
+        lastEntry = Time.timeAsDouble;
         //print("_start finish " + (Time.timeAsDouble + secondsPerBeat*_currentSequence.duration));
 
         lastSequenceDelay = Time.timeAsDouble - lastSequenceDelay;
@@ -565,6 +562,12 @@ public class MusicManager : MonoBehaviour
 
 
 
+
+
+    private void OnDestroy()
+    {
+        isDestroyed = true;
+    }
 
 
 }

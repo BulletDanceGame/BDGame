@@ -78,6 +78,7 @@ public class AkSoundEngineController
     private int frames = 0;
     private double lastFrameTime = 0;
 
+    //originally called in AkInitializer but i took over it in MusicManager :)
     public void LateUpdate()
     {
 #if UNITY_EDITOR
@@ -90,31 +91,31 @@ public class AkSoundEngineController
         {
             frames++;
 
+            UnityEngine.Debug.Log("wwise " + frames +  "   " + Time.realtimeSinceStartupAsDouble);
+
             if (frames == 1)
             {
                 lastFrameTime = Time.timeAsDouble;
-
-                double delay = (Time.timeAsDouble - lastFrameTime) - ((frames - 1) * frameDuration);
-                //UnityEngine.Debug.Log("skip wwisecheck " + frames + " time " + delay);
-
             }
             else if (frames <= frameDelay)
             {
                 //check for readjusting
                 double delay = (Time.timeAsDouble - lastFrameTime) - ((frames - 1) * frameDuration);
-                int f = (int)(delay / frameDuration);
-                //UnityEngine.Debug.Log("skip wwisecheck " + frames + " time " + delay);
+                float f = (float)(delay / frameDuration);
+                UnityEngine.Debug.Log("wwisecheck " + frames + " time " + (Time.timeAsDouble - lastFrameTime) + " f " + f);
 
-                if (Mathf.Abs(f) >= 1)
+                //0.95 to ensure 0.99 isnt counted :))
+                if (Mathf.Abs(f) >= 0.95f)
                 {
-                    //UnityEngine.Debug.Log("skip wwise " + frames + " amount " + f + " tim " + delay);
+                    UnityEngine.Debug.Log("skip wwise " + frames + " amount " + f + " tim " + delay);
 
-                    frames += f;
+                    frames += Mathf.RoundToInt(f);
                 }
 
                 //actually by readjusting its now time to start, so lets not return
-                if (Mathf.Abs(f) >= 1 && frames > frameDelay)
+                if (Mathf.Abs(f) >= 0.95f && frames > frameDelay)
                 {
+                    UnityEngine.Debug.Log("_start wwise " + Time.timeAsDouble);
                     starting = false;
                     frames = 0;
                 }
@@ -129,6 +130,7 @@ public class AkSoundEngineController
                 double delay = (Time.timeAsDouble - lastFrameTime) - ((frames - 1) * frameDuration);
                 //UnityEngine.Debug.Log("skip wwisecheck " + frames + " time " + delay);
 
+                UnityEngine.Debug.Log("_start wwise " + Time.timeAsDouble);
                 starting = false;
                 frames = 0;
             }
