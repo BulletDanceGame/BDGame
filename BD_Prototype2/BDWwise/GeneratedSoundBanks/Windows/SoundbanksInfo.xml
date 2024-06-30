@@ -1186,7 +1186,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{2636D0B3-F5D7-B818-91E1-B1B00FC98EDD}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6D48685D-076C-9AD1-7ECB-F75B136FEB60}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1295,6 +1295,7 @@
 				<GameParameter Id="2622221165" Name="LOW_PASS____BossActions"/>
 				<GameParameter Id="2626398315" Name="PITCH____CutsceneSFX__General__AudibleOnSpeedUp"/>
 				<GameParameter Id="2645948155" Name="LOW_PASS____MusicEnvBattle"/>
+				<GameParameter Id="2655220193" Name="HIGH_PASS____MusicBossBattle"/>
 				<GameParameter Id="2943701773" Name="VOLUME____BossActions"/>
 				<GameParameter Id="3237454005" Name="VOLUME____AmbientComponents"/>
 				<GameParameter Id="3260874934" Name="VOLUME_SPECIAL____DeflectionElement__PitchElement"/>
@@ -1335,6 +1336,13 @@
 						<State Id="779278001" Name="death"/>
 						<State Id="1182670505" Name="mid"/>
 						<State Id="3550808449" Name="high"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3800848640" Name="PlayerStatus">
+					<States>
+						<State Id="168610243" Name="Fighting"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="3557636762" Name="Roaming"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
@@ -1780,7 +1788,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{738C681D-CD56-2731-5CDE-8382E718D586}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{560FD793-4D3C-E3BE-E163-29FC9749958A}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -1986,7 +1994,7 @@
 				</File>
 				<File Id="521086962" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>slomov1.wav</ShortName>
-					<CachePath>SFX/slomov1_3F440460.wem</CachePath>
+					<CachePath>SFX/slomov1_181818BB.wem</CachePath>
 				</File>
 				<File Id="523274200" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>footstep5.wav</ShortName>
@@ -2062,7 +2070,7 @@
 				</File>
 				<File Id="629175185" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>whiteNoise.wav</ShortName>
-					<CachePath>SFX/whiteNoise_7DCAA84D.wem</CachePath>
+					<CachePath>SFX/whiteNoise_783A8FDC.wem</CachePath>
 				</File>
 				<File Id="635655355" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>now.wav</ShortName>
@@ -2869,5 +2877,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D721F6C2-4750-FC3C-4698-93C282A11D29}</FileHash>
+	<FileHash>{6622761F-1580-AA6E-AAB3-FBEE8D0DCE16}</FileHash>
 </SoundBanksInfo>

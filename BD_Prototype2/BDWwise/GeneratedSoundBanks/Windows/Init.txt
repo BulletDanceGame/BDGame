@@ -2,6 +2,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 	85412153	Ambience			\Default Work Unit\Ambience	
 	2782712965	Level			\Default Work Unit\Level	
 	3193947170	Hurt			\Default Work Unit\Hurt	
+	3800848640	PlayerStatus			\Default Work Unit\PlayerStatus	
 
 State	ID	Name	State Group			Notes
 	748895195	None	Ambience			
@@ -18,6 +19,9 @@ State	ID	Name	State Group			Notes
 	779278001	death	Hurt			
 	1182670505	mid	Hurt			
 	3550808449	high	Hurt			
+	168610243	Fighting	PlayerStatus			
+	748895195	None	PlayerStatus			
+	3557636762	Roaming	PlayerStatus			
 
 Custom State	ID	Name	State Group	Owner		Notes
 	78215258	CritterBoss	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Tutorial		
@@ -26,6 +30,7 @@ Custom State	ID	Name	State Group	Owner		Notes
 	217166239	Menu	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Tutorial		
 	262760644	Tutorial	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Facility		
 	347435619	YokaiHunterBoss	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Tutorial		
+	421885907	Fighting	PlayerStatus	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Movement\Footsteps		
 	575649650	YokaiHunterBoss	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Critter		
 	591086268	Menu	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Facility		
 	715347042	CritterBoss	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Facility		
@@ -62,6 +67,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2622221165	LOW_PASS____BossActions			\Default Work Unit\LOW PASS\LOW_PASS____BossActions	
 	2626398315	PITCH____CutsceneSFX__General__AudibleOnSpeedUp			\Default Work Unit\PITCH\PITCH____CutsceneSFX__General__AudibleOnSpeedUp	
 	2645948155	LOW_PASS____MusicEnvBattle			\Default Work Unit\LOW PASS\LOW_PASS____MusicEnvBattle	
+	2655220193	HIGH_PASS____MusicBossBattle			\Default Work Unit\HIGH PASS\HIGH_PASS____MusicBossBattle	
 	2943701773	VOLUME____BossActions			\Default Work Unit\VOLUME\VOLUME____BossActions	
 	3237454005	VOLUME____AmbientComponents			\Default Work Unit\VOLUME\VOLUME____AmbientComponents	
 	3366454963	hitSloMo_only_here_for_reference_of_max_combo_stuff			\Default Work Unit\0ld Boys\hitSloMo_only_here_for_reference_of_max_combo_stuff	
