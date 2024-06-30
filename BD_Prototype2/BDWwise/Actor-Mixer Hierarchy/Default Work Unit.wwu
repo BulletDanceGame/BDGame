@@ -3928,7 +3928,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+											<ObjectRef Name="Footsteps" ID="{1DA3C31C-70A5-4FD2-BA8F-CAF7686B3676}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -4590,7 +4590,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+											<ObjectRef Name="Footsteps" ID="{1DA3C31C-70A5-4FD2-BA8F-CAF7686B3676}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -5255,12 +5255,19 @@
 									</ChildrenList>
 								</BlendContainer>
 								<BlendContainer Name="DashStep" ID="{70ED8371-0151-40A1-81A2-7E27A9BDEF01}" ShortID="866899411">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+											<ObjectRef Name="Dash" ID="{717EE443-2268-401B-AA79-2B3387C11B5B}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
