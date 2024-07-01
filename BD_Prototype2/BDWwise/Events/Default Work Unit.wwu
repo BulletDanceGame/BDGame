@@ -394,7 +394,7 @@
 														<Action Name="" ID="{829A2468-4B42-4486-B486-2409665856D6}" ShortID="128468718">
 															<ReferenceList>
 																<Reference Name="Target">
-																	<ObjectRef Name="Arena - Before the Fight" ID="{7B298D47-2763-42AC-A4BB-884839D3C8F7}" WorkUnitID="{8DC8C28D-1D78-418C-87BD-2BF45D3F8625}"/>
+																	<ObjectRef Name="Arena - Before the Fight - part 1" ID="{7B298D47-2763-42AC-A4BB-884839D3C8F7}" WorkUnitID="{8DC8C28D-1D78-418C-87BD-2BF45D3F8625}"/>
 																</Reference>
 															</ReferenceList>
 														</Action>
@@ -2914,6 +2914,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Cooldown" ID="{626CDDF0-F8EE-4667-B85C-159276D76956}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Arena___Before_the_Fight___intro" ID="{81E11A6D-6DFD-4A26-BF27-C24571F39324}">
+					<ChildrenList>
+						<Action Name="" ID="{C31918D5-33BF-48A3-AE74-49B1316EDF41}" ShortID="665772204">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Arena - Before the Fight - intro" ID="{4A88B24C-F7C5-4B60-87AE-36B3289F6C31}" WorkUnitID="{8DC8C28D-1D78-418C-87BD-2BF45D3F8625}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

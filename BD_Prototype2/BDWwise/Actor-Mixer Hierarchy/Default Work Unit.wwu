@@ -399,7 +399,7 @@
 											<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Actions - Dynamic" ID="{7FE5CDA2-16AE-4E17-A00E-BBABAEFF1BD9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+											<ObjectRef Name="hits" ID="{D7B87C37-E977-45B8-ADB4-04D48D587A9A}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -1264,7 +1264,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Actions - Dynamic" ID="{7FE5CDA2-16AE-4E17-A00E-BBABAEFF1BD9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+											<ObjectRef Name="swings" ID="{C62F61CC-FE4C-4C56-B2F1-3FC7FBB53EE2}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -1336,9 +1336,9 @@
 											<ChildrenList>
 												<AudioFileSource Name="swing" ID="{7AD93F22-7548-4F6D-8122-F2541954BA55}">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.00761201607674373"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0280844275208854"/>
 														<Property Name="FadeInShape" Type="int16" Value="7"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.0535995151709771"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0228908980047646"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>swing.wav</AudioFile>
@@ -1384,7 +1384,7 @@
 											<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Actions - Dynamic" ID="{7FE5CDA2-16AE-4E17-A00E-BBABAEFF1BD9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+											<ObjectRef Name="swings" ID="{C62F61CC-FE4C-4C56-B2F1-3FC7FBB53EE2}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -1581,7 +1581,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Actions - Dynamic" ID="{7FE5CDA2-16AE-4E17-A00E-BBABAEFF1BD9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+											<ObjectRef Name="swings" ID="{C62F61CC-FE4C-4C56-B2F1-3FC7FBB53EE2}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -1609,9 +1609,9 @@
 											<ChildrenList>
 												<AudioFileSource Name="swing" ID="{76FA4E4C-B749-4166-B39E-3E11749CB670}">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.00802550301113115"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0302039487422847"/>
 														<Property Name="FadeInShape" Type="int16" Value="7"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.0546715203240919"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0187663771571299"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>swing.wav</AudioFile>
@@ -1677,7 +1677,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Actions - Dynamic" ID="{7FE5CDA2-16AE-4E17-A00E-BBABAEFF1BD9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+											<ObjectRef Name="hits" ID="{D7B87C37-E977-45B8-ADB4-04D48D587A9A}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2711,7 +2711,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Actions - Dynamic" ID="{7FE5CDA2-16AE-4E17-A00E-BBABAEFF1BD9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+											<ObjectRef Name="hits" ID="{D7B87C37-E977-45B8-ADB4-04D48D587A9A}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -7832,7 +7832,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-10</Value>
+												<Value>-9</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -9112,7 +9112,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-7</Value>
+														<Value>-6</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -9284,7 +9284,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-14</Value>
+														<Value>-13</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -10115,6 +10115,42 @@
 																<ActiveSource Name="hold still v4" ID="{6790F64D-8C49-44AD-8547-BA6C025666A8}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
+														<Sound Name="reverse crash" ID="{A33CF599-41B7-4B4F-81EA-7E789A0C5682}" ShortID="825044305">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-13</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="reverse crash" ID="{3AD9ADF0-B9BE-4D30-8274-8A105AA65FF8}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="1.99378405994551"/>
+																		<Property Name="FadeInShape" Type="int16" Value="9"/>
+																		<Property Name="LoopEnd" Type="Real64" Value="6.06002531789282"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="4.53271807944482"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>reverse crash.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="102226073"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="reverse crash" ID="{3AD9ADF0-B9BE-4D30-8274-8A105AA65FF8}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
 													</ChildrenList>
 												</BlendContainer>
 												<BlendContainer Name="boss - level3" ID="{866EAB92-6BC0-4A5E-A7C8-AC7653AE24B2}" ShortID="879520045">
@@ -10289,6 +10325,18 @@
 													</ChildrenList>
 												</BlendContainer>
 												<BlendContainer Name="player - dare da" ID="{A54EE443-0621-4B32-9CE4-ABB211D5F80E}" ShortID="541438194">
+													<PropertyList>
+														<Property Name="Highpass" Type="int16">
+															<ValueList>
+																<Value>15</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>8</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -10323,6 +10371,18 @@
 													</ChildrenList>
 												</BlendContainer>
 												<BlendContainer Name="player - eh" ID="{819495C6-159F-4D90-8BDB-DD9B10C5DF21}" ShortID="848206681">
+													<PropertyList>
+														<Property Name="Highpass" Type="int16">
+															<ValueList>
+																<Value>19</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>8</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -10391,6 +10451,13 @@
 													</ChildrenList>
 												</BlendContainer>
 												<BlendContainer Name="player - I'm talkin to ya" ID="{5EB71883-6F8D-49E7-8136-43E1283097BD}" ShortID="192134499">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -10425,6 +10492,13 @@
 													</ChildrenList>
 												</BlendContainer>
 												<BlendContainer Name="player - mythical creatures" ID="{2AC86A38-F8BA-4855-A8B4-517042EC6D04}" ShortID="470339126">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>4</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -10459,6 +10533,13 @@
 													</ChildrenList>
 												</BlendContainer>
 												<BlendContainer Name="player - yokai" ID="{0CA67AC9-CD9D-44E6-AF71-F9ABC68A5B8E}" ShortID="328386987">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>4</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -10596,6 +10677,13 @@
 										<Folder Name="Phase 1 to 2" ID="{1822B1B1-5E8A-448C-B20E-F21383674D8A}" ShortID="559583023">
 											<ChildrenList>
 												<BlendContainer Name="boss - im getting serrious" ID="{03788E96-DD3B-48B5-83E7-464453AEF9CF}" ShortID="999097172">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -10678,6 +10766,19 @@
 													</ChildrenList>
 												</BlendContainer>
 												<BlendContainer Name="player - bring it" ID="{69B02B92-2ECC-4862-B6B5-4EF71E8D7789}" ShortID="829744212">
+													<PropertyList>
+														<Property Name="CenterPercentage" Type="int32">
+															<ValueList>
+																<Value>100</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-2</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -10710,8 +10811,23 @@
 															</ActiveSourceList>
 														</Sound>
 													</ChildrenList>
+													<PositioningInfo>
+														<Panner Name="" ID="{5920B415-27B7-4E89-A15B-8387B6739E10}">
+															<PropertyList>
+																<Property Name="PanX" Type="Real64" Value="-38.4039900249377"/>
+																<Property Name="PanY" Type="Real64" Value="1.17302052785924"/>
+															</PropertyList>
+														</Panner>
+													</PositioningInfo>
 												</BlendContainer>
 												<BlendContainer Name="player - heh!" ID="{07B0635F-6362-4F18-B776-89176D26566D}" ShortID="990868403">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>2</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -10780,6 +10896,13 @@
 													</ChildrenList>
 												</BlendContainer>
 												<BlendContainer Name="player - that all ya got" ID="{043AC4AC-0011-4EC3-AED9-BA585B791E65}" ShortID="1040812607">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -11348,7 +11471,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-10</Value>
+												<Value>-8</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
