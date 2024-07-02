@@ -52,14 +52,14 @@ public class InputManager : MonoBehaviour
 
         if (input.currentControlScheme == "KeyBoard" && CurrentController == ControllerType.GAMEPAD)
         {
-            EventManager.Instance.KeyboardAndMouseUsed();
             CurrentController = ControllerType.KEYBOARDANDMOUSE;
+            EventManager.Instance.KeyboardAndMouseUsed();
         }
 
         if(input.currentControlScheme == "GamePad" && CurrentController == ControllerType.KEYBOARDANDMOUSE)
         {
-            EventManager.Instance.GamepadUsed();
             CurrentController = ControllerType.GAMEPAD;
+            EventManager.Instance.GamepadUsed();
         }
     }
 }
