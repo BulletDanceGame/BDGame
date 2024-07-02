@@ -7,7 +7,7 @@
 					<PropertyList>
 						<Property Name="BusVolume" Type="Real64">
 							<ValueList>
-								<Value>-3</Value>
+								<Value>-10</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -835,7 +835,7 @@
 													<PropertyList>
 														<Property Name="BusVolume" Type="Real64">
 															<ValueList>
-																<Value>-10</Value>
+																<Value>-12</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -952,13 +952,17 @@
 														<CustomStateList>
 															<CustomState>
 																<StateRef Name="Low" ID="{B43AB07F-3B1D-4639-8A8F-C659818EF341}"/>
-																<CustomState Name="" ID="{37F51509-8A93-49C7-9F9D-18B79D657CC7}" ShortID="873495801"/>
+																<CustomState Name="" ID="{37F51509-8A93-49C7-9F9D-18B79D657CC7}" ShortID="873495801">
+																	<PropertyList>
+																		<Property Name="BusVolume" Type="Real64" Value="1"/>
+																	</PropertyList>
+																</CustomState>
 															</CustomState>
 															<CustomState>
 																<StateRef Name="High" ID="{9F183746-773F-4929-AD42-8D9FC806F20C}"/>
 																<CustomState Name="" ID="{390DF0C8-2888-4FBC-BCF1-9B48123778BB}" ShortID="525522666">
 																	<PropertyList>
-																		<Property Name="BusVolume" Type="Real64" Value="5"/>
+																		<Property Name="BusVolume" Type="Real64" Value="3"/>
 																	</PropertyList>
 																</CustomState>
 															</CustomState>
@@ -966,7 +970,7 @@
 																<StateRef Name="Mid" ID="{F921FE99-8712-4EB4-B23A-01D478DB3D64}"/>
 																<CustomState Name="" ID="{A2629795-76E3-4450-88CD-8BB06AEA7C32}" ShortID="619297504">
 																	<PropertyList>
-																		<Property Name="BusVolume" Type="Real64" Value="2.1"/>
+																		<Property Name="BusVolume" Type="Real64" Value="3"/>
 																	</PropertyList>
 																</CustomState>
 															</CustomState>
@@ -1150,7 +1154,7 @@
 																<StateRef Name="Low" ID="{B43AB07F-3B1D-4639-8A8F-C659818EF341}"/>
 																<CustomState Name="" ID="{F662C05F-4E1A-4576-AF7C-42A404FFF3E3}" ShortID="912440214">
 																	<PropertyList>
-																		<Property Name="BusVolume" Type="Real64" Value="-2.5"/>
+																		<Property Name="BusVolume" Type="Real64" Value="-2"/>
 																	</PropertyList>
 																</CustomState>
 															</CustomState>
@@ -1158,7 +1162,7 @@
 																<StateRef Name="High" ID="{9F183746-773F-4929-AD42-8D9FC806F20C}"/>
 																<CustomState Name="" ID="{F26F1227-02CC-4C6F-9567-5457C04C2107}" ShortID="255143058">
 																	<PropertyList>
-																		<Property Name="BusVolume" Type="Real64" Value="-0.2"/>
+																		<Property Name="BusVolume" Type="Real64" Value="1"/>
 																	</PropertyList>
 																</CustomState>
 															</CustomState>
@@ -1166,7 +1170,7 @@
 																<StateRef Name="Mid" ID="{F921FE99-8712-4EB4-B23A-01D478DB3D64}"/>
 																<CustomState Name="" ID="{1FECEC40-8A0C-4A14-A72B-B88A754C42F2}" ShortID="564776861">
 																	<PropertyList>
-																		<Property Name="BusVolume" Type="Real64" Value="-0.7"/>
+																		<Property Name="BusVolume" Type="Real64" Value="-0.5"/>
 																	</PropertyList>
 																</CustomState>
 															</CustomState>
@@ -1357,7 +1361,7 @@
 													<PropertyList>
 														<Property Name="BusVolume" Type="Real64">
 															<ValueList>
-																<Value>-1</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="SpeakerPanning" Type="int16" Value="1"/>

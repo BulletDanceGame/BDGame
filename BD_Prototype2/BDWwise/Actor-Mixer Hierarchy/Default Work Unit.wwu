@@ -387,7 +387,7 @@
 										<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>1</Value>
+												<Value>5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1372,7 +1372,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>8</Value>
+												<Value>12</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -9284,7 +9284,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-13</Value>
+														<Value>-11</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -9564,7 +9564,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>8</Value>
+												<Value>9</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -10333,7 +10333,7 @@
 														</Property>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>8</Value>
+																<Value>5</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -10379,7 +10379,7 @@
 														</Property>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>8</Value>
+																<Value>7</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -10417,6 +10417,18 @@
 													</ChildrenList>
 												</BlendContainer>
 												<BlendContainer Name="player - hey!" ID="{4FAB9195-DE03-4489-A9F7-832AC45CA91D}" ShortID="482419265">
+													<PropertyList>
+														<Property Name="Lowpass" Type="int16">
+															<ValueList>
+																<Value>11</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -10452,9 +10464,14 @@
 												</BlendContainer>
 												<BlendContainer Name="player - I'm talkin to ya" ID="{5EB71883-6F8D-49E7-8136-43E1283097BD}" ShortID="192134499">
 													<PropertyList>
+														<Property Name="Lowpass" Type="int16">
+															<ValueList>
+																<Value>11</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>1</Value>
+																<Value>2</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -10493,9 +10510,14 @@
 												</BlendContainer>
 												<BlendContainer Name="player - mythical creatures" ID="{2AC86A38-F8BA-4855-A8B4-517042EC6D04}" ShortID="470339126">
 													<PropertyList>
+														<Property Name="Highpass" Type="int16">
+															<ValueList>
+																<Value>14</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>4</Value>
+																<Value>5</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -10534,9 +10556,14 @@
 												</BlendContainer>
 												<BlendContainer Name="player - yokai" ID="{0CA67AC9-CD9D-44E6-AF71-F9ABC68A5B8E}" ShortID="328386987">
 													<PropertyList>
+														<Property Name="Highpass" Type="int16">
+															<ValueList>
+																<Value>11</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>4</Value>
+																<Value>5</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -10678,9 +10705,14 @@
 											<ChildrenList>
 												<BlendContainer Name="boss - im getting serrious" ID="{03788E96-DD3B-48B5-83E7-464453AEF9CF}" ShortID="999097172">
 													<PropertyList>
+														<Property Name="Highpass" Type="int16">
+															<ValueList>
+																<Value>14</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>3</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -10862,6 +10894,13 @@
 													</ChildrenList>
 												</BlendContainer>
 												<BlendContainer Name="player - huh" ID="{FE1DCECB-7355-4AD4-88B4-3ECA3C2FD090}" ShortID="155979759">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -10937,6 +10976,13 @@
 													</ChildrenList>
 												</BlendContainer>
 												<BlendContainer Name="player - zasshu" ID="{57ACDED2-C15B-4C92-9799-DB397FE470C6}" ShortID="1005109165">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -10975,6 +11021,13 @@
 										<Folder Name="Phase 2 to 3" ID="{4B447CBA-9541-417F-922A-22E716076639}" ShortID="541065583">
 											<ChildrenList>
 												<BlendContainer Name="boss - with the spirits of my ancestors" ID="{A2FECF79-A0E9-41B5-8D61-EA969E76F7D3}" ShortID="108913815">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>2</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -11239,6 +11292,13 @@
 													</ReferenceList>
 													<ChildrenList>
 														<Sound Name="-bleep" ID="{0A8E4787-87A1-4B90-BDF1-23B2F5777121}" ShortID="423126863">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
