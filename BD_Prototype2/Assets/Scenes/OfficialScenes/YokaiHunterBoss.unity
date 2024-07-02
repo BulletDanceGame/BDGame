@@ -6159,6 +6159,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d20c064931db62e4991b2655ea1548ae, type: 3}
+--- !u!95 &1534832467 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1935182345401315152, guid: d20c064931db62e4991b2655ea1548ae, type: 3}
+  m_PrefabInstance: {fileID: 1534832466}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1534832468 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4763291714409717132, guid: d20c064931db62e4991b2655ea1548ae, type: 3}
@@ -6170,6 +6175,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a287032c0d2fcea46a9641239a64b0c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1534832469 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4055825520154920761, guid: d20c064931db62e4991b2655ea1548ae, type: 3}
+  m_PrefabInstance: {fileID: 1534832466}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1543362920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29305,6 +29315,22 @@ PrefabInstance:
       propertyPath: m_Events.m_Events.Array.data[5].m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1835499267}
+    - target: {fileID: 2504108065097077509, guid: 29591d4e7def7e24cbf9fa3298b920ab, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[5].m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1534832469}
+    - target: {fileID: 2504108065097077509, guid: 29591d4e7def7e24cbf9fa3298b920ab, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[5].m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 1534832467}
+    - target: {fileID: 2504108065097077509, guid: 29591d4e7def7e24cbf9fa3298b920ab, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[5].m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: set_speed
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504108065097077509, guid: 29591d4e7def7e24cbf9fa3298b920ab, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[5].m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: set_speed
+      objectReference: {fileID: 0}
     - target: {fileID: 2938365709935667112, guid: 29591d4e7def7e24cbf9fa3298b920ab, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
       value: 
