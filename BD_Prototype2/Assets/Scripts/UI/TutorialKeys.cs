@@ -17,7 +17,7 @@ public class TutorialKeys : RhythmAnimator
         EventManager.Instance.OnGamePadUsed += ChangeTutorialImage;
 
         _animationName = _guide.ToString();
-        _animator.SetFloat("Input", 0f);
+        ChangeTutorialImage();
     }
 
     protected override void OnDisable()
