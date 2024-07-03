@@ -71,6 +71,21 @@ public class CutsceneEvents : MonoBehaviour
          AkSoundEngine.SetState("PlayerStatus", "Roaming");
     }
 
+    public void LowGameplaySFX()
+    {
+        AkSoundEngine.SetState("DynamicGameplaySFX", "Low");
+    }
+
+    public void MidGameplaySFX()
+    {
+        AkSoundEngine.SetState("DynamicGameplaySFX", "Mid");
+    }
+
+    public void HighGameplaySFX()
+    {
+        AkSoundEngine.SetState("DynamicGameplaySFX", "High");
+    }
+
 
 
 }

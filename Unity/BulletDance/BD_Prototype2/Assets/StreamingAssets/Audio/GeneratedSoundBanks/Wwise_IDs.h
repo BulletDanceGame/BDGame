@@ -107,6 +107,7 @@ namespace AK
         static const AkUniqueID PICKUP__CURRENCY____PLAY = 2487304348U;
         static const AkUniqueID PICKUP__HEALTH____PLAY = 63268803U;
         static const AkUniqueID PLAY_AMBIENCEFOREST = 513231425U;
+        static const AkUniqueID PLAY_ARENA___BEFORE_THE_FIGHT___INTRO = 420814559U;
         static const AkUniqueID PLAY_BATTLE_HALF = 4269135864U;
         static const AkUniqueID PLAY_BATTLE_INTROWAV = 843529347U;
         static const AkUniqueID PLAY_BATTLE_WHOLE = 3431965952U;
@@ -254,6 +255,19 @@ namespace AK
             } // namespace STATE
         } // namespace AMBIENCE
 
+        namespace DYNAMICGAMEPLAYSFX
+        {
+            static const AkUniqueID GROUP = 534389781U;
+
+            namespace STATE
+            {
+                static const AkUniqueID HIGH = 3550808449U;
+                static const AkUniqueID LOW = 545371365U;
+                static const AkUniqueID MID = 1182670505U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace DYNAMICGAMEPLAYSFX
+
         namespace HURT
         {
             static const AkUniqueID GROUP = 3193947170U;
@@ -340,9 +354,7 @@ namespace AK
         static const AkUniqueID VOLUME____PLAYERDAMAGE = 895741003U;
         static const AkUniqueID VOLUME____PLAYERMOVEMENT__DASH = 2589375093U;
         static const AkUniqueID VOLUME____PLAYERMOVEMENT__FOOTSTEPS = 3603952474U;
-        static const AkUniqueID VOLUME_SPECIAL____DASH__DYNAMICMIXING = 1561297350U;
         static const AkUniqueID VOLUME_SPECIAL____DEFLECTIONELEMENT__PITCHELEMENT = 3260874934U;
-        static const AkUniqueID VOLUME_SPECIAL____PLAYERACTIONS__DYNAMIC__MIXING = 671455318U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
@@ -411,6 +423,7 @@ namespace AK
         static const AkUniqueID FOOTSTEPS = 2385628198U;
         static const AkUniqueID GENERAL___AUDIBLEONSPEEDUP = 1105659027U;
         static const AkUniqueID GENERAL___INAUDIBLEONSPEEDUP = 2778722962U;
+        static const AkUniqueID HITS = 3232033907U;
         static const AkUniqueID LEVEL_1 = 3420765916U;
         static const AkUniqueID LEVEL_1___CRITTER = 320588660U;
         static const AkUniqueID LEVEL_1___FACILITY = 3163449996U;
@@ -425,6 +438,7 @@ namespace AK
         static const AkUniqueID PAUSE = 3092587493U;
         static const AkUniqueID SCORE_SCREEN = 1720323967U;
         static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID SWINGS = 2597336356U;
         static const AkUniqueID TEXT_VOICES = 3151285457U;
         static const AkUniqueID TITLE_SCREEN___MAIN_MENU = 1718386686U;
         static const AkUniqueID VHS = 526916458U;

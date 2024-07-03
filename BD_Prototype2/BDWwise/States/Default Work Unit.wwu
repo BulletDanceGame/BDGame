@@ -36,6 +36,14 @@
 						<State Name="Fighting" ID="{DFDF9133-42ED-4C2D-9722-9D1DFE49A103}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="DynamicGameplaySFX" ID="{23BD67D6-CC05-4E96-BF91-AAA8A3556B9A}">
+					<ChildrenList>
+						<State Name="None" ID="{656CE04F-23AF-4A07-8074-AF8E06B3A14B}"/>
+						<State Name="Low" ID="{B43AB07F-3B1D-4639-8A8F-C659818EF341}"/>
+						<State Name="Mid" ID="{F921FE99-8712-4EB4-B23A-01D478DB3D64}"/>
+						<State Name="High" ID="{9F183746-773F-4929-AD42-8D9FC806F20C}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

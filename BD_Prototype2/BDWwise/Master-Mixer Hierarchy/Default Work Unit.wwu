@@ -4,6 +4,13 @@
 		<WorkUnit Name="Default Work Unit" ID="{F0507581-BB05-4E05-90A1-76BE406C54E8}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="BusVolume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
 							<ObjectRef Name="System" ID="{D6BCB84F-50D8-4BBD-89EF-B7105451F711}" WorkUnitID="{FC1B2817-BD82-40FD-8C8A-F5C8697E973B}"/>
@@ -290,6 +297,13 @@
 										<Bus Name="Env Roaming - Level 1" ID="{0A1B966B-C1C2-4013-9048-EF288AABF110}">
 											<ChildrenList>
 												<Bus Name="Level 1 - Facility" ID="{7E897CB2-A2ED-45F0-9860-0CEAABAD56FC}">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<StateInfo>
 														<StateGroupList>
 															<StateGroupInfo>
@@ -821,7 +835,7 @@
 													<PropertyList>
 														<Property Name="BusVolume" Type="Real64">
 															<ValueList>
-																<Value>-9</Value>
+																<Value>-12</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -925,10 +939,43 @@
 													<PropertyList>
 														<Property Name="BusVolume" Type="Real64">
 															<ValueList>
-																<Value>-10</Value>
+																<Value>-7</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
+													<StateInfo>
+														<StateGroupList>
+															<StateGroupInfo>
+																<StateGroupRef Name="DynamicGameplaySFX" ID="{23BD67D6-CC05-4E96-BF91-AAA8A3556B9A}"/>
+															</StateGroupInfo>
+														</StateGroupList>
+														<CustomStateList>
+															<CustomState>
+																<StateRef Name="Low" ID="{B43AB07F-3B1D-4639-8A8F-C659818EF341}"/>
+																<CustomState Name="" ID="{37F51509-8A93-49C7-9F9D-18B79D657CC7}" ShortID="873495801">
+																	<PropertyList>
+																		<Property Name="BusVolume" Type="Real64" Value="1"/>
+																	</PropertyList>
+																</CustomState>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="High" ID="{9F183746-773F-4929-AD42-8D9FC806F20C}"/>
+																<CustomState Name="" ID="{390DF0C8-2888-4FBC-BCF1-9B48123778BB}" ShortID="525522666">
+																	<PropertyList>
+																		<Property Name="BusVolume" Type="Real64" Value="3"/>
+																	</PropertyList>
+																</CustomState>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="Mid" ID="{F921FE99-8712-4EB4-B23A-01D478DB3D64}"/>
+																<CustomState Name="" ID="{A2629795-76E3-4450-88CD-8BB06AEA7C32}" ShortID="619297504">
+																	<PropertyList>
+																		<Property Name="BusVolume" Type="Real64" Value="3"/>
+																	</PropertyList>
+																</CustomState>
+															</CustomState>
+														</CustomStateList>
+													</StateInfo>
 													<ObjectLists>
 														<ObjectList Name="RTPC">
 															<Reference>
@@ -991,41 +1038,6 @@
 																							<Point>
 																								<XPos>100</XPos>
 																								<YPos>200</YPos>
-																								<Flags>37</Flags>
-																							</Point>
-																						</PointList>
-																					</Curve>
-																				</Custom>
-																			</Reference>
-																		</ReferenceList>
-																	</RTPC>
-																</Local>
-															</Reference>
-															<Reference>
-																<Local>
-																	<RTPC Name="" ID="{107D5E9F-A458-4F54-B32E-B9E4D326741A}" ShortID="925357191">
-																		<PropertyList>
-																			<Property Name="PropertyName" Type="string" Value="BusVolume"/>
-																		</PropertyList>
-																		<ReferenceList>
-																			<Reference Name="ControlInput">
-																				<ObjectRef Name="VOLUME_SPECIAL____Dash__DynamicMixing" ID="{10BD8A21-5286-4B83-B637-AAD69815BB4A}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
-																			</Reference>
-																			<Reference Name="Curve">
-																				<Custom>
-																					<Curve Name="" ID="{CB54AADC-08F3-4801-B622-27DA474CF0FA}">
-																						<PropertyList>
-																							<Property Name="Flags" Type="int32" Value="3"/>
-																						</PropertyList>
-																						<PointList>
-																							<Point>
-																								<XPos>0</XPos>
-																								<YPos>0</YPos>
-																								<Flags>5</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>100</XPos>
-																								<YPos>5</YPos>
 																								<Flags>37</Flags>
 																							</Point>
 																						</PointList>
@@ -1127,6 +1139,43 @@
 															</ValueList>
 														</Property>
 													</PropertyList>
+													<ChildrenList>
+														<Bus Name="swings" ID="{C62F61CC-FE4C-4C56-B2F1-3FC7FBB53EE2}"/>
+														<Bus Name="hits" ID="{D7B87C37-E977-45B8-ADB4-04D48D587A9A}"/>
+													</ChildrenList>
+													<StateInfo>
+														<StateGroupList>
+															<StateGroupInfo>
+																<StateGroupRef Name="DynamicGameplaySFX" ID="{23BD67D6-CC05-4E96-BF91-AAA8A3556B9A}"/>
+															</StateGroupInfo>
+														</StateGroupList>
+														<CustomStateList>
+															<CustomState>
+																<StateRef Name="Low" ID="{B43AB07F-3B1D-4639-8A8F-C659818EF341}"/>
+																<CustomState Name="" ID="{F662C05F-4E1A-4576-AF7C-42A404FFF3E3}" ShortID="912440214">
+																	<PropertyList>
+																		<Property Name="BusVolume" Type="Real64" Value="-2"/>
+																	</PropertyList>
+																</CustomState>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="High" ID="{9F183746-773F-4929-AD42-8D9FC806F20C}"/>
+																<CustomState Name="" ID="{F26F1227-02CC-4C6F-9567-5457C04C2107}" ShortID="255143058">
+																	<PropertyList>
+																		<Property Name="BusVolume" Type="Real64" Value="1"/>
+																	</PropertyList>
+																</CustomState>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="Mid" ID="{F921FE99-8712-4EB4-B23A-01D478DB3D64}"/>
+																<CustomState Name="" ID="{1FECEC40-8A0C-4A14-A72B-B88A754C42F2}" ShortID="564776861">
+																	<PropertyList>
+																		<Property Name="BusVolume" Type="Real64" Value="-0.5"/>
+																	</PropertyList>
+																</CustomState>
+															</CustomState>
+														</CustomStateList>
+													</StateInfo>
 													<ObjectLists>
 														<ObjectList Name="RTPC">
 															<Reference>
@@ -1189,41 +1238,6 @@
 																							<Point>
 																								<XPos>100</XPos>
 																								<YPos>200</YPos>
-																								<Flags>37</Flags>
-																							</Point>
-																						</PointList>
-																					</Curve>
-																				</Custom>
-																			</Reference>
-																		</ReferenceList>
-																	</RTPC>
-																</Local>
-															</Reference>
-															<Reference>
-																<Local>
-																	<RTPC Name="" ID="{3A3D8962-65B4-4668-8A14-257BA9BBA1A4}" ShortID="769445190">
-																		<PropertyList>
-																			<Property Name="PropertyName" Type="string" Value="BusVolume"/>
-																		</PropertyList>
-																		<ReferenceList>
-																			<Reference Name="ControlInput">
-																				<ObjectRef Name="VOLUME_SPECIAL____PlayerActions__Dynamic__Mixing" ID="{416D034F-54BB-4A25-AACB-859457676D22}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
-																			</Reference>
-																			<Reference Name="Curve">
-																				<Custom>
-																					<Curve Name="" ID="{91AE48EA-15E8-42E5-9B6E-89C90C35422C}">
-																						<PropertyList>
-																							<Property Name="Flags" Type="int32" Value="3"/>
-																						</PropertyList>
-																						<PointList>
-																							<Point>
-																								<XPos>0</XPos>
-																								<YPos>-2.4</YPos>
-																								<Flags>5</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>100</XPos>
-																								<YPos>0</YPos>
 																								<Flags>37</Flags>
 																							</Point>
 																						</PointList>
@@ -1347,7 +1361,7 @@
 													<PropertyList>
 														<Property Name="BusVolume" Type="Real64">
 															<ValueList>
-																<Value>-1</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
@@ -1430,7 +1444,8 @@
 													<PositioningInfo>
 														<Panner Name="" ID="{F6CD9AFF-07FC-4AD2-9610-FF603645B0CD}">
 															<PropertyList>
-																<Property Name="PanY" Type="Real64" Value="60"/>
+																<Property Name="PanX" Type="Real64" Value="-17.7057356608479"/>
+																<Property Name="PanY" Type="Real64" Value="56.4809384164223"/>
 															</PropertyList>
 														</Panner>
 													</PositioningInfo>
