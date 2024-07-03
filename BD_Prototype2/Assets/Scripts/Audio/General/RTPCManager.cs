@@ -89,6 +89,7 @@ public class RTPCManager : MonoBehaviour
         //Reset States
         //AkSoundEngine.SetState("Hurt", "high");
         //AkSoundEngine.SetState("DumbNotes", "P2P3");
+        AkSoundEngine.SetState("DynamicGameplaySFX", "Low");
 
         //Reset Parameters
         for (int a = 0; a < _attributes.Length; a++)
