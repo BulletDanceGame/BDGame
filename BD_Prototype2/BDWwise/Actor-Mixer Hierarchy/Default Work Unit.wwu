@@ -7962,11 +7962,6 @@
 								</BlendContainer>
 								<BlendContainer Name="Cooldown" ID="{626CDDF0-F8EE-4667-B85C-159276D76956}" ShortID="1004566702">
 									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>-900</Value>
-											</ValueList>
-										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>4</Value>
@@ -7984,9 +7979,19 @@
 									<ChildrenList>
 										<Sound Name="slomov1" ID="{72735568-AEFF-46F8-BE53-F76D07CED0F0}" ShortID="720252184">
 											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
-														<Value>33</Value>
+														<Value>24</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>250</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -8001,8 +8006,10 @@
 											<ChildrenList>
 												<AudioFileSource Name="slomov1" ID="{C0CE5F1E-AC7C-4AE5-A614-BD506AC4EDC8}">
 													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.427675319853781"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.755191842643055"/>
+														<Property Name="FadeOutShape" Type="int16" Value="1"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.77316348773842"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>slomov1.wav</AudioFile>
@@ -8017,14 +8024,9 @@
 										</Sound>
 										<BlendContainer Name="Bunt" ID="{6EEA7F13-17A7-4A9C-BB73-6DDA78D1CC0A}" ShortID="766560684">
 											<PropertyList>
-												<Property Name="Lowpass" Type="int16">
+												<Property Name="Inclusion" Type="bool">
 													<ValueList>
-														<Value>26</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Pitch" Type="int32">
-													<ValueList>
-														<Value>210</Value>
+														<Value>False</Value>
 													</ValueList>
 												</Property>
 												<Property Name="Volume" Type="Real64">
@@ -8085,12 +8087,12 @@
 												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
-														<Value>75</Value>
+														<Value>38</Value>
 													</ValueList>
 												</Property>
-												<Property Name="Pitch" Type="int32">
+												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-2000</Value>
+														<Value>-9</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -8105,13 +8107,13 @@
 											<ChildrenList>
 												<AudioFileSource Name="lastImpact6 - Copy" ID="{DFEE9FAC-CF36-4701-8313-EAB351FC0F65}">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="1.40071788506077"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.118911784741144"/>
 														<Property Name="FadeInShape" Type="int16" Value="8"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.260133346088536"/>
 														<Property Name="FadeOutShape" Type="int16" Value="1"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.241926704299974"/>
-														<Property Name="TrimEnd" Type="Real64" Value="1.97342474638269"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.89143392370572"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.55819143575599"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>lastImpact6 - Copy.wav</AudioFile>
@@ -8122,6 +8124,78 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="lastImpact6 - Copy" ID="{DFEE9FAC-CF36-4701-8313-EAB351FC0F65}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cooldown V1" ID="{B83EDABB-9051-46F4-986B-31AF755B15FC}" ShortID="576011154">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>37</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-2400</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cooldown V1" ID="{D38D9145-ED36-4155-A1AF-F16CB15ACFFE}">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.128052963215259"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Cooldown V1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="971138743"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cooldown V1" ID="{D38D9145-ED36-4155-A1AF-F16CB15ACFFE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cooldown V1_01" ID="{C4DB67B0-DB53-427A-AFC0-7EE291CB2B44}" ShortID="755553300">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cooldown V1" ID="{5856A6C5-BFE4-405D-AAA0-FD9E2429883E}">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.110591195504087"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Cooldown V1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="565569530"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cooldown V1" ID="{5856A6C5-BFE4-405D-AAA0-FD9E2429883E}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
