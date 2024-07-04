@@ -195,7 +195,8 @@ public class MusicManager : MonoBehaviour
 
         if (prepareNextSequence)
         {
-            PrepareNextSequence(0); //currentFrameDuration * currentFrameDelay);
+            print("startime aa " + currentFrameDuration + " - "+  currentFrameDelay);
+            PrepareNextSequence(true);
             prepareNextSequence = false;
         }
         if (startSequence)
@@ -263,7 +264,7 @@ public class MusicManager : MonoBehaviour
             else if (transition == TransitionType.QUEUE_SWITCH)
             {
                 PlayerRhythm.Instance.RemoveOldPreparedBeats();
-                PrepareNextSequence(0, true);
+                PrepareNextSequence(false, true);
             }
             else if (transition == TransitionType.QUEUE_STOP)
             {
@@ -332,7 +333,7 @@ public class MusicManager : MonoBehaviour
     }
 
     /// <summary> Prepares the next sequence and song by taking it from the current Controller </summary>
-    private void PrepareNextSequence(double delay, bool cut = false)
+    private void PrepareNextSequence(bool frameDelay = false, bool cut = false)
     {
         MusicConductor controller = ConductorManager.Instance.GetCurrentController();
         if (controller == null)
@@ -343,6 +344,9 @@ public class MusicManager : MonoBehaviour
         _nextSequence = controller.GetNextSequence();
 
         SetNextFPS();
+
+        double delay = 0;
+        if (frameDelay) delay = nextFrameDuration * nextFrameDelay;
 
         if (PlayerRhythm.Instance)
         {
@@ -545,7 +549,7 @@ public class MusicManager : MonoBehaviour
 
         //checkFrames = false;
 
-        PrepareNextSequence(0);//move to after offset
+        PrepareNextSequence();//move to after offset
 
         playing = true;
         songTimer = 0;

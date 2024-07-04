@@ -1314,6 +1314,16 @@
 										</Sound>
 										<Sound Name="swing_01" ID="{C584D26E-7D09-45C6-B428-0BAACE01ABC0}" ShortID="1013743486">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLatency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>520</Value>
@@ -1390,6 +1400,16 @@
 									<ChildrenList>
 										<Sound Name="badSwing" ID="{5DF31AE0-18B5-4505-B31E-FD00DBF5CF4A}" ShortID="608357314">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLatency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>-90</Value>
@@ -1431,6 +1451,16 @@
 												<Property Name="Highpass" Type="int16">
 													<ValueList>
 														<Value>20</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLatency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
 													</ValueList>
 												</Property>
 												<Property Name="MakeUpGain" Type="Real64">
@@ -1587,6 +1617,16 @@
 									<ChildrenList>
 										<Sound Name="swing" ID="{76D55CAB-851B-4FF6-9AF3-405D65EB5479}" ShortID="584490469">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLatency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>750</Value>
@@ -1626,6 +1666,16 @@
 										</Sound>
 										<Sound Name="ching!!Swing" ID="{4ADF501D-3440-44C6-962A-2012E59FA031}" ShortID="778203864">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLatency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>1580</Value>

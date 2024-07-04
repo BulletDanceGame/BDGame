@@ -1,3 +1,4 @@
+using BulletDance.Audio;
 using System;
 using System.Collections.Generic;
 using TMPro;
@@ -27,7 +28,16 @@ public class CalibrateInput : MonoBehaviour
     private bool canHit = true;
 
     public GameObject ballPrefab;
-    private List<Transform> balls = new List<Transform>(); //testing
+
+    public ParticleSystem particles;
+
+
+    GameObject currentBall = null;
+    GameObject nextBall = null;
+
+    public GameObject title1;
+    public GameObject title2;
+
 
     private void OnEnable()
     {
@@ -36,36 +46,39 @@ public class CalibrateInput : MonoBehaviour
 
     private void OnDisable()
     {
+
         EventManager.Instance.OnBeatForVisuals -= PlayAnimations;
+
+        Destroy(currentBall);
+        Destroy(nextBall);
     }
 
 
     //Called through PlayerInput
     void OnSwing()
     {
-        if (canHit)
+        if (canHit)// && currentBall != null)
         {
+
             double delay = PlayerRhythm.Instance.GetHitDelaySwing();
+            PlayerRhythm.Instance.GetComponent<PlayerSounds>().PlayerSwing(PlayerRhythm.Instance.GetBeatTimingSwing(), Vector2.zero); //ugh
 
             //do this once somewhere instead, have it as an event when switching songs?, just keep it a constant fit for the menu music?
             //*2 cause this DOESNT check for the 8th notes
             secondsPerBeat = MusicManager.Instance.secondsPerBeat * 2;
 
+            //ball
+            //particles.transform.position = currentBall.transform.position;
+            //particles.Play();
+            //Destroy(currentBall);
+
             //marker
             double relativePos = delay / secondsPerBeat;
-            GameObject d = Instantiate(delayMarkerPrefab, delayMarkerPrefab.transform.parent);
+            GameObject d = Instantiate(delayMarkerPrefab, delayMarkerPrefab.transform.parent.Find("DelayMarkerParent")) ;
             d.transform.localPosition = new Vector3(112.5f + 75f * (float)relativePos, 0, 0);
             d.SetActive(true);
             delayMarkers.Add(d);
 
-            //testvisualmarker
-            //foreach (Transform ball in balls)
-            //{
-            //    if (!ball) continue;
-            //    GameObject baX = Instantiate(delayMarkerPrefab, delayMarkerPrefab.transform.parent);
-            //    baX.transform.position = ball.transform.position;
-            //    baX.SetActive(true);
-            //}
 
             //count
             delayHitCounter++;
@@ -94,10 +107,11 @@ public class CalibrateInput : MonoBehaviour
                 offsetText.text = "Offset: " + Math.Round(PlayerRhythm.Instance.offsetSwing * 1000) + "ms";
 
                 canHit = false;
+
+                title1.SetActive(false);
+                title2.SetActive(true);
             }
 
-            //if (delayHitCounter > 1)
-            //    Debug.Break();
         }
     }
 
@@ -114,24 +128,41 @@ public class CalibrateInput : MonoBehaviour
     }
 
 
+
+
     public void PlayAnimations(int anticipation, float duration, int beat)
     {
+        return;
         if (!gameObject.activeSelf) return;
 
         if (anticipation == 6)
         {
-            anim.speed = 1 / (duration * 8);
-            anim.Play("CalibrationNew");
+            if (currentBall)
+            {
+                particles.transform.position = currentBall.transform.position;
+                particles.Play();
+                Destroy(currentBall);
+            }
+            if (nextBall)
+            {
+                anim.speed = 1 / (duration * 8);
+                anim.Play("CalibrationNew");
+            }
+
         }
         else if (anticipation == 12)
         {
+
+            if (nextBall) currentBall = nextBall;
+
             GameObject b = Instantiate(ballPrefab, ballPrefab.transform.parent);
             b.GetComponent<Animator>().enabled = true;
             b.GetComponent<Animator>().speed = 1 / (duration * 8);
-            Destroy(b, 7);
+            nextBall = b;
         }
 
     }
+
 
     //Called through Button Press
     public void Restart()
@@ -157,6 +188,9 @@ public class CalibrateInput : MonoBehaviour
         canHit = true;
 
         PlayerRhythm.Instance.offsetSwing = 0;
+
+        title1.SetActive(true);
+        title2.SetActive(false);
     }
 
 }

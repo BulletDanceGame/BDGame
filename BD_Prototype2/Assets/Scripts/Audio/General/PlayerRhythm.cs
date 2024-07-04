@@ -14,7 +14,7 @@ public class PlayerRhythm : MonoBehaviour
 {
     public static PlayerRhythm Instance;
 
-    public double offsetAudio;
+    public double offsetVisuals;
     public double offsetSwing;
     public double offsetDash;
 
@@ -126,13 +126,16 @@ public class PlayerRhythm : MonoBehaviour
 
         //times
         //starttime changes because of possible different bpm
-        if (!cut)
+        if (cut == false)
         {
-            _startTime = Time.timeAsDouble + offsetAudio + _timeOfSequence + delay;
+            _startTime = Time.timeAsDouble + _timeOfSequence + delay;
         }
 
 
-        //print("starttime " + _startTime);
+        print("starttime " + _startTime);
+        print("starttime t " + Time.timeAsDouble);
+        print("starttime s " + _timeOfSequence);
+        print("starttime d " + delay);
         _timeOfSequence = nextSequence.duration * spb;
 
         int startBeat = MusicManager.Instance.lastBeatOfSequence + 1;
@@ -149,16 +152,16 @@ public class PlayerRhythm : MonoBehaviour
             int index = _playerBeats.IndexOf(beat) + 1;
             if (index != _playerBeats.Count)
             {
-                (double, int) a = (_startTime + (spb * (beat - startBeat)), _playerBeats[index] - beat);
+                (double, int) a = (_startTime + (spb * (beat - startBeat) + offsetVisuals), _playerBeats[index] - beat);
                 _times.Add(a);
             }
 
             foreach (VisualUpdate v in visualUpdates)
             {
                 int a = beat - v.anticipation;
-                double b = _startTime + (spb * (a - startBeat));// + 0.1f;
                 if (a >= 0)
                 {
+                    double b = _startTime + (spb * (a - startBeat)) + offsetVisuals;// + 0.1f;
                     v.timesToUpdate.Add(b);
                     v.beats.Add(beat);
 
@@ -263,6 +266,31 @@ public class PlayerRhythm : MonoBehaviour
                 
 
     }
+
+    public void UpdateOffsetVisuals(double newOffset)
+    {
+
+        double change = newOffset - offsetVisuals;
+
+        foreach (VisualUpdate v in visualUpdates)
+        {
+            for( int t = 0; t < v.timesToUpdate.Count; t++)
+            {
+                v.timesToUpdate[t] += change;
+            }
+
+        }
+
+        for (int t = 0; t < _times.Count; t++)
+        {
+            (double, int) time = _times[t];
+            time.Item1 += change;
+            _times[t] = time;
+        }
+
+        offsetVisuals = newOffset;
+    } 
+
 
     public BeatTiming GetBeatTimingSwing()
     {

@@ -2446,6 +2446,10 @@ PrefabInstance:
       propertyPath: offsetAudio
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6232736872281133249, guid: e25b22e31e409514dba1dac6e3d1031f, type: 3}
+      propertyPath: offsetVisuals
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: e25b22e31e409514dba1dac6e3d1031f, type: 3}
@@ -2637,7 +2641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59534e61cb9c2944aee28677e960b08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetAudio: 0
+  offsetVisuals: 0
   offsetSwing: 0
   offsetDash: 0
   _perfectHitTime: 0.12

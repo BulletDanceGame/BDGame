@@ -11,7 +11,10 @@ public class CalibrateAudio : MonoBehaviour
     public Animator anim;
 
     public GameObject ballPrefab;
-    private List<GameObject> animationBalls = new List<GameObject>();
+    private GameObject currentBall;
+    private GameObject nextBall;
+    public ParticleSystem particles;
+
 
     private bool ballsActive;
 
@@ -19,7 +22,7 @@ public class CalibrateAudio : MonoBehaviour
     {
         EventManager.Instance.OnBeatForVisuals += PlayAnimations;
 
-        audioOffset = PlayerRhythm.Instance.offsetAudio;
+        audioOffset = PlayerRhythm.Instance.offsetVisuals;
         offsetText.text = "Offset: " + audioOffset * 1000 + "ms";
     }
 
@@ -27,6 +30,8 @@ public class CalibrateAudio : MonoBehaviour
     {
         EventManager.Instance.OnBeatForVisuals -= PlayAnimations;
         ballsActive = false;
+        Destroy(currentBall);
+        Destroy(nextBall);
     }
 
 
@@ -34,31 +39,39 @@ public class CalibrateAudio : MonoBehaviour
     {
         audioOffset += 0.010 * dir;
         audioOffset = Math.Round(Math.Max(-0.30, Math.Min(0.30, audioOffset)), 3);
-        PlayerRhythm.Instance.offsetAudio = audioOffset;
+        PlayerRhythm.Instance.UpdateOffsetVisuals(audioOffset);
         offsetText.text = "Offset: " + audioOffset * 1000 + "ms";
 
+
         anim.enabled = false;
-        foreach(GameObject ball in animationBalls)
-        {
-            Destroy(ball);
-        }
-        animationBalls.Clear();
+
+        Destroy(currentBall);
+        Destroy(nextBall);
     }
+
+
 
     public void PlayAnimations(int anticipation, float duration, int beat)
     {
         if (!gameObject.activeSelf) return;
 
-        if (anticipation == 6)
+        if (anticipation == 0)
         {
-            if (!ballsActive)
-            {
-                return;
-            }
+            if (!currentBall) return;
+
+            particles.transform.position = currentBall.transform.position;
+            particles.Play();
+            Destroy(currentBall);
+        }
+        else if (anticipation == 6)
+        {
+            if (!nextBall) return;
+
             print("check bar" + beat + " "  + Time.realtimeSinceStartupAsDouble);
             anim.enabled = true;
             anim.speed = 1 / (duration * 8);
             anim.Play("CalibrationNew");
+            currentBall = nextBall;
         }
         else if (anticipation == 12)
         {
@@ -66,8 +79,7 @@ public class CalibrateAudio : MonoBehaviour
             GameObject b = Instantiate(ballPrefab, ballPrefab.transform.parent);
             b.GetComponent<Animator>().enabled = true;
             b.GetComponent<Animator>().speed = 1 / (duration * 8);
-            Destroy(b, 7);
-            animationBalls.Add(b);
+            nextBall = b;
             ballsActive = true;
         }
     }
