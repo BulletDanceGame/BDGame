@@ -2788,7 +2788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5802902011490867910, guid: d30375cc5ba503845bcef449cba9ff2f, type: 3}
       propertyPath: ResetTimeSeconds
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6269340286751065898, guid: d30375cc5ba503845bcef449cba9ff2f, type: 3}
       propertyPath: GoodHitAngle
@@ -28759,8 +28759,28 @@ PrefabInstance:
       value: DynamicGameplaySFX
       objectReference: {fileID: 0}
     - target: {fileID: 2478761671367964633, guid: 964010520b09ee34ab91bd4880d64eeb, type: 3}
+      propertyPath: _attributes.Array.data[2]._parameters.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478761671367964633, guid: 964010520b09ee34ab91bd4880d64eeb, type: 3}
       propertyPath: _attributes.Array.data[5]._parameters.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478761671367964633, guid: 964010520b09ee34ab91bd4880d64eeb, type: 3}
+      propertyPath: _attributes.Array.data[2]._parameters.Array.data[3].name
+      value: HIGH_PASS____MusicBossBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478761671367964633, guid: 964010520b09ee34ab91bd4880d64eeb, type: 3}
+      propertyPath: _attributes.Array.data[2]._parameters.Array.data[4].name
+      value: HIGH_PASS____MusicEnvBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478761671367964633, guid: 964010520b09ee34ab91bd4880d64eeb, type: 3}
+      propertyPath: _attributes.Array.data[2]._parameters.Array.data[5].name
+      value: HIGH_PASS____MusicEnvRoaming
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478761671367964633, guid: 964010520b09ee34ab91bd4880d64eeb, type: 3}
+      propertyPath: _attributes.Array.data[2]._parameters.Array.data[6].name
+      value: HIGH_PASS____PlayerDamage
       objectReference: {fileID: 0}
     - target: {fileID: 2478761671367964633, guid: 964010520b09ee34ab91bd4880d64eeb, type: 3}
       propertyPath: _attributes.Array.data[5]._parameters.Array.data[2].name

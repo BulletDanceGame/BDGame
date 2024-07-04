@@ -1170,7 +1170,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{0F364BA6-D866-2CE5-2EFF-34D51EEBCE98}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{18673DF6-DAA4-E2B6-3277-1B2F7B13520F}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1265,8 +1265,11 @@
 				<GameParameter Id="1322911829" Name="LOW_PASS____MusicBossBattle"/>
 				<GameParameter Id="1402179413" Name="LOW_PASS____PlayerMovement__Dash"/>
 				<GameParameter Id="1463622446" Name="LOW_PASS____MusicEnvRoaming"/>
+				<GameParameter Id="1489920679" Name="HIGH_PASS____PlayerDamage"/>
+				<GameParameter Id="1651932202" Name="HIGH_PASS____MusicEnvRoaming"/>
 				<GameParameter Id="1736919294" Name="VOLUME____Menu"/>
 				<GameParameter Id="1798584363" Name="LOW_PASS____PlayerDamage"/>
+				<GameParameter Id="1900464655" Name="HIGH_PASS____MusicEnvBattle"/>
 				<GameParameter Id="1961333805" Name="HIGH_PASS____CutsceneSFX__General__AudibleOnSpeedUp"/>
 				<GameParameter Id="2055487999" Name="LOW_PASS____BossDamage"/>
 				<GameParameter Id="2268627958" Name="VOLUME____PlayerActions__Dynamic"/>
@@ -1789,7 +1792,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{231EBB6E-0023-D660-4243-FC483C0BE94A}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{17B73722-1E00-41F8-E2C9-D47245D99C5E}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -1957,6 +1960,10 @@
 					<ShortName>getting serious.wav</ShortName>
 					<CachePath>SFX/getting serious_10C4C929.wem</CachePath>
 				</File>
+				<File Id="428953850" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>cooldown v5.wav</ShortName>
+					<CachePath>SFX/cooldown v5_10C4C929.wem</CachePath>
+				</File>
 				<File Id="441664432" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Deflection Hit - Transition To Player Theme.wav</ShortName>
 					<CachePath>SFX/Deflection Hit - Transition To Player Theme_358CBFF6.wem</CachePath>
@@ -2016,10 +2023,6 @@
 				<File Id="562927624" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>dash.wav</ShortName>
 					<CachePath>SFX/dash_764CEB73.wem</CachePath>
-				</File>
-				<File Id="565569530" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Cooldown V1.wav</ShortName>
-					<CachePath>SFX/Cooldown V1_97D2792E.wem</CachePath>
 				</File>
 				<File Id="575775278" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hey.wav</ShortName>
@@ -2621,9 +2624,9 @@
 						<MediaRef Id="812946627"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1837873573" Name="Play_Cooldown" DurationType="OneShot" DurationMin="2.7376173" DurationMax="2.7376173">
+				<Event Id="1837873573" Name="Play_Cooldown" DurationType="OneShot" DurationMin="7.5535626" DurationMax="7.5535626">
 					<MediaRefs>
-						<MediaRef Id="565569530"/>
+						<MediaRef Id="428953850"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="4112303910" Name="Play_DeflectionSwing___Good___Long" DurationType="OneShot" DurationMin="1.8546736" DurationMax="1.8546736">
@@ -2821,5 +2824,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4A2B5C03-5973-7BAB-6D61-0408E0600ECE}</FileHash>
+	<FileHash>{99B24FBD-7A3B-A738-7938-D4246F30511B}</FileHash>
 </SoundBanksInfo>

@@ -88,9 +88,17 @@ public class PlayerSounds : SoundContainer
 
     void PlayerCooldown()
     {
-        //set cooldown rtpcs
-        PlaySFX("Cooldown Start");
-    }
+            //set cooldown rtpcs
+            PlaySFX("Cooldown Start");
+        RTPCManager.Instance.SetValue("LOW_PASS____MusicBossBattle", 80, 0.00000000001f, RTPCManager.CurveTypes.high_curve,
+                                                                         5f, RTPCManager.CurveTypes.high_curve, 0);
+        RTPCManager.Instance.SetValue("LOW_PASS____MusicEnvBattle", 80, 0.00000000001f, RTPCManager.CurveTypes.high_curve,
+                                                                        5f, RTPCManager.CurveTypes.high_curve, 0);
+        RTPCManager.Instance.SetValue("LOW_PASS____MusicEnvRoaming", 80, 0.00000000001f, RTPCManager.CurveTypes.high_curve,
+                                                                        5f, RTPCManager.CurveTypes.high_curve, 0);
+        RTPCManager.Instance.SetValue("LOW_PASS____PlayerDamage", 80, 0.00000000001f, RTPCManager.CurveTypes.high_curve,
+                                                                      5f, RTPCManager.CurveTypes.high_curve, 0);
+        }
         
     void PlayerSlowMo()
     {

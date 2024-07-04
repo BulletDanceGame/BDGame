@@ -316,6 +316,9 @@ namespace AK
         static const AkUniqueID HIGH_PASS____CUTSCENESFX__GENERAL__AUDIBLEONSPEEDUP = 1961333805U;
         static const AkUniqueID HIGH_PASS____CUTSCENESFX__VOICELINES = 86843165U;
         static const AkUniqueID HIGH_PASS____MUSICBOSSBATTLE = 2655220193U;
+        static const AkUniqueID HIGH_PASS____MUSICENVBATTLE = 1900464655U;
+        static const AkUniqueID HIGH_PASS____MUSICENVROAMING = 1651932202U;
+        static const AkUniqueID HIGH_PASS____PLAYERDAMAGE = 1489920679U;
         static const AkUniqueID HITSLOMO_ONLY_HERE_FOR_REFERENCE_OF_MAX_COMBO_STUFF = 3366454963U;
         static const AkUniqueID LOW_PASS____BOSSACTIONS = 2622221165U;
         static const AkUniqueID LOW_PASS____BOSSDAMAGE = 2055487999U;
