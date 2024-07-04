@@ -80,6 +80,8 @@ public class Player : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.P))
             EventManager.Instance.PlayerDamage(currentHealth);
+        if (Input.GetKeyDown(KeyCode.O))
+            EventManager.Instance.PlayerHeal(startingHealth);
     }
     #endif
 
