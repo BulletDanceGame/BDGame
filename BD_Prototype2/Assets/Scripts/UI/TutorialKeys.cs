@@ -4,7 +4,7 @@ using BulletDance.Animation;
 
 public class TutorialKeys : RhythmAnimator
 {
-    private enum TutorialGuide { Move, Attack, Dash };
+    private enum TutorialGuide { Move, Attack, Dash, Aim };
 
     [SerializeField]
     private TutorialGuide _guide;
