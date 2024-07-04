@@ -1789,7 +1789,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{0E92C707-AC25-B88A-EBE0-07AC5ED976A3}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{231EBB6E-0023-D660-4243-FC483C0BE94A}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -1989,10 +1989,6 @@
 					<ShortName>Deflection-Element1V1.wav</ShortName>
 					<CachePath>SFX/Deflection-Element1V1_10C4C929.wem</CachePath>
 				</File>
-				<File Id="521086962" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>slomov1.wav</ShortName>
-					<CachePath>SFX/slomov1_181818BB.wem</CachePath>
-				</File>
 				<File Id="523274200" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>footstep5.wav</ShortName>
 					<CachePath>SFX/footstep5_10C4C929.wem</CachePath>
@@ -2020,6 +2016,10 @@
 				<File Id="562927624" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>dash.wav</ShortName>
 					<CachePath>SFX/dash_764CEB73.wem</CachePath>
+				</File>
+				<File Id="565569530" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Cooldown V1.wav</ShortName>
+					<CachePath>SFX/Cooldown V1_97D2792E.wem</CachePath>
 				</File>
 				<File Id="575775278" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hey.wav</ShortName>
@@ -2621,10 +2621,9 @@
 						<MediaRef Id="812946627"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1837873573" Name="Play_Cooldown" DurationType="OneShot" DurationMin="10.188371" DurationMax="10.188371">
+				<Event Id="1837873573" Name="Play_Cooldown" DurationType="OneShot" DurationMin="2.7376173" DurationMax="2.7376173">
 					<MediaRefs>
-						<MediaRef Id="521086962"/>
-						<MediaRef Id="729477149"/>
+						<MediaRef Id="565569530"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="4112303910" Name="Play_DeflectionSwing___Good___Long" DurationType="OneShot" DurationMin="1.8546736" DurationMax="1.8546736">
@@ -2822,5 +2821,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3F5299AF-8748-D002-E0D4-3084E36574C7}</FileHash>
+	<FileHash>{4A2B5C03-5973-7BAB-6D61-0408E0600ECE}</FileHash>
 </SoundBanksInfo>
