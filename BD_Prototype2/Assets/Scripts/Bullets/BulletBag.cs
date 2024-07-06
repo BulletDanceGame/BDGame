@@ -7,14 +7,15 @@ public class BulletBag : MonoBehaviour
     public static BulletBag instance;
 
 
-    public GameObject normalBulletPrefab, unhittableBulletPrefab, fireBulletPrefab, groovyBulletPrefab, explosiveBulletPrefab, fireGroovyBulletPrefab, fireExplodyBulletPrefab, groovyExplodyBulletPrefab, groovyExplodyFireBulletPrefab;
+    public GameObject normalBulletPrefab, unhittableBulletPrefab, fireBulletPrefab, groovyBulletPrefab, explosiveBulletPrefab, unhittableExplosiveBulletPrefab, fireGroovyBulletPrefab, fireExplodyBulletPrefab, groovyExplodyBulletPrefab, groovyExplodyFireBulletPrefab;
 
-    public enum BulletTypes {normal, unhittable, fire, groovy, explosive, firegroovy, fireexplody, groovyexplody, groovyexplodyfire, random, none}
+    public enum BulletTypes {normal, unhittable, fire, groovy, explosive, unhittableexplody, firegroovy, fireexplody, groovyexplody, groovyexplodyfire, random, none}
 
     [Header("Bullet Lists")]
     public List<GameObject> allBullets;
     public List<GameObject> normalBulletList;
     public List<GameObject> unhittableBulletList;
+    public List<GameObject> unhittableExplodyList;
     public List<GameObject> fireBulletList;
     public List<GameObject> fireexplodyBulletList;
     public List<GameObject> groovyBulletList;
@@ -37,6 +38,7 @@ public class BulletBag : MonoBehaviour
         SpawnBullets(BulletTypes.groovyexplodyfire, 10);
         SpawnBullets(BulletTypes.firegroovy, 10);
         SpawnBullets(BulletTypes.explosive, 10);
+        SpawnBullets(BulletTypes.unhittableexplody, 10);
 
 
         EventManager.Instance.OnDeactivateBoss += DeactivateAllBullets;
@@ -125,6 +127,10 @@ public class BulletBag : MonoBehaviour
         {
             return fireGroovyBulletPrefab;
         }
+        else if (type == BulletTypes.unhittableexplody)
+        {
+            return unhittableExplosiveBulletPrefab;
+        }
         else //if (type == BulletTypes.explosive)
         {
             return explosiveBulletPrefab;
@@ -164,6 +170,10 @@ public class BulletBag : MonoBehaviour
         else if (type == BulletTypes.firegroovy)
         {
             return firegroovyBulletList;
+        }
+        else if (type == BulletTypes.unhittableexplody)
+        {
+            return unhittableExplodyList;
         }
         else //if (type == BulletTypes.explosive)
         {
