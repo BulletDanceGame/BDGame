@@ -16,15 +16,16 @@ public class Shooting : MonoBehaviour
 
             bullet.GetComponent<Bullet>().FireBullet(shootingPattern.GetChild(i).up, shootingPattern.GetChild(i).position);
 
+            //indicator!
             //outside camera
-            Vector3 camPos = Camera.main.transform.position;
-            if (bullet.transform.position.x > camPos.x + Camera.main.orthographicSize ||
-                bullet.transform.position.x < camPos.x - Camera.main.orthographicSize ||
-                bullet.transform.position.y > camPos.y + Camera.main.orthographicSize * (16f / 9f) ||
-                bullet.transform.position.y < camPos.y - Camera.main.orthographicSize * (16f / 9f))
-            {
-                bullet.GetComponent<Bullet>().SpawnedOutsideCamera();
-            }
+            //Vector3 camPos = Camera.main.transform.position;
+            //if (bullet.transform.position.x > camPos.x + Camera.main.orthographicSize ||
+            //    bullet.transform.position.x < camPos.x - Camera.main.orthographicSize ||
+            //    bullet.transform.position.y > camPos.y + Camera.main.orthographicSize * (16f / 9f) ||
+            //    bullet.transform.position.y < camPos.y - Camera.main.orthographicSize * (16f / 9f))
+            //{
+            //    bullet.GetComponent<Bullet>().SpawnedOutsideCamera();
+            //}
         }
     }
 

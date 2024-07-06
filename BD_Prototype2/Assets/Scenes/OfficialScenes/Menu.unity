@@ -425,6 +425,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3133572014729660017, guid: 2a711a114b2d93d4583bb2324a7f3633, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 393419070}
+    - target: {fileID: 4965368517934765368, guid: 2a711a114b2d93d4583bb2324a7f3633, type: 3}
+      propertyPath: selectedCalibrationButton
+      value: 
+      objectReference: {fileID: 1071352562}
     - target: {fileID: 4965368517934765369, guid: 2a711a114b2d93d4583bb2324a7f3633, type: 3}
       propertyPath: _trailerScript
       value: 
@@ -2343,10 +2351,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2327364896427278051, guid: e25b22e31e409514dba1dac6e3d1031f, type: 3}
-      propertyPath: maxFPS
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2327364896427278051, guid: e25b22e31e409514dba1dac6e3d1031f, type: 3}
       propertyPath: offsetVisuals
       value: 0
       objectReference: {fileID: 0}
@@ -2463,6 +2467,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5604751350166443104, guid: af703b0c755146043ac4a170eecfb491, type: 3}
   m_PrefabInstance: {fileID: 386452586}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1071352562 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4965368518446688478, guid: 2a711a114b2d93d4583bb2324a7f3633, type: 3}
+  m_PrefabInstance: {fileID: 456404235}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1276369366
 PrefabInstance:
   m_ObjectHideFlags: 0

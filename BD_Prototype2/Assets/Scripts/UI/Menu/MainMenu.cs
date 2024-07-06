@@ -6,16 +6,19 @@ using UnityEngine.EventSystems;
 public class MainMenu : MonoBehaviour
 {
     //Input
-    private ControllerType _currentController;
+    public static ControllerType currentController;
+   
+
     private PointerEventData _eventDataCurrentPosition;
     private Vector2 _mousePosition;
     private bool _noRaycast = true;
     private List<RaycastResult> _raycastResults = new List<RaycastResult>();
     private GameObject _currentSelection;
 
-    private Button _currentButton;
+    public static Button currentButton;
     public Button selectedMainButton;
     public Button selectedCalibrationButton;
+    public Button selectedOptionsButton;
     public Button selectedScoreButton;
 
     private bool _updateInput = true;
@@ -23,6 +26,7 @@ public class MainMenu : MonoBehaviour
     //Screens
     public GameObject mainScreen;
     public GameObject calibrationScreen;
+    public GameObject optionsScreen;
     public GameObject scoreScreen;
 
 
@@ -33,13 +37,13 @@ public class MainMenu : MonoBehaviour
         _updateInput = true;
 
         _eventDataCurrentPosition = new PointerEventData(EventSystem.current);
-        _currentButton = selectedMainButton;
+        currentButton = selectedMainButton;
 
-        _currentController = ControllerType.KEYBOARDANDMOUSE;
-        _currentController = InputManager.Instance.CurrentController;
+        currentController = ControllerType.KEYBOARDANDMOUSE;
+        currentController = InputManager.Instance.CurrentController;
 
-        if(_currentController == ControllerType.GAMEPAD)
-            _currentButton.Select();
+        if(currentController == ControllerType.GAMEPAD)
+            currentButton.Select();
 
         //To switch controller-specific code
         if(EventManager.Instance == null) return;
@@ -58,7 +62,7 @@ public class MainMenu : MonoBehaviour
     {
         if(!_updateInput) return;
 
-        switch(_currentController)
+        switch(currentController)
         {
             case ControllerType.KEYBOARDANDMOUSE:
                 _mousePosition = Input.mousePosition;
@@ -79,30 +83,30 @@ public class MainMenu : MonoBehaviour
     // -- Input -- //
     void ChangeToGAMEPAD()
     {
-        _currentController = ControllerType.GAMEPAD;
+        currentController = ControllerType.GAMEPAD;
 
         //if(!_noRaycast)
         //    _currentButton = _currentSelection.transform.parent.GetComponent<Button>();
         //else
         //{
             if(mainScreen.activeSelf)
-                _currentButton = selectedMainButton;
+                currentButton = selectedMainButton;
             else if(calibrationScreen.activeSelf)
-                _currentButton = selectedCalibrationButton;
+                currentButton = selectedCalibrationButton;
             else if(scoreScreen.activeSelf)
-                _currentButton = selectedScoreButton;
+                currentButton = selectedScoreButton;
         //}
 
-        _currentButton.Select();
+        currentButton.Select();
 
         Debug.Log("Switch to gamepad");
     }
 
     void ChangeToKBM()
     {
-        _currentController = ControllerType.KEYBOARDANDMOUSE;
+        currentController = ControllerType.KEYBOARDANDMOUSE;
 
-        _currentButton = _currentSelection.transform.parent.GetComponent<Button>();
+        currentButton = _currentSelection.transform.parent.GetComponent<Button>();
         EventSystem.current.SetSelectedGameObject(null);
     }
 
@@ -143,10 +147,10 @@ public class MainMenu : MonoBehaviour
         mainScreen.SetActive(false);
         calibrationScreen.SetActive(true);
 
-        if(_currentController == ControllerType.GAMEPAD)
+        if(currentController == ControllerType.GAMEPAD)
         {
-            _currentButton = selectedCalibrationButton;
-            _currentButton.Select();
+            currentButton = selectedCalibrationButton;
+            currentButton.Select();
         }
     }
 
@@ -155,10 +159,35 @@ public class MainMenu : MonoBehaviour
         mainScreen.SetActive(true);
         calibrationScreen.SetActive(false);
 
-        if(_currentController == ControllerType.GAMEPAD)
+        if (currentController == ControllerType.GAMEPAD)
         {
-            _currentButton = selectedMainButton;
-            _currentButton.Select();
+            currentButton = selectedMainButton;
+            currentButton.Select();
+        }
+    }
+
+
+    //Options
+    public void StartOptions()
+    {
+        mainScreen.SetActive(false);
+        optionsScreen.SetActive(true);
+
+        if (currentController == ControllerType.GAMEPAD)
+        {
+            currentButton = selectedOptionsButton;
+            currentButton.Select();
+        }
+    }
+    public void BackFromOptions()
+    {
+        mainScreen.SetActive(true);
+        optionsScreen.SetActive(false);
+
+        if (currentController == ControllerType.GAMEPAD)
+        {
+            currentButton = selectedMainButton;
+            currentButton.Select();
         }
     }
 
@@ -168,10 +197,10 @@ public class MainMenu : MonoBehaviour
         mainScreen.SetActive(false);
         scoreScreen.SetActive(true);
 
-        if(_currentController == ControllerType.GAMEPAD)
+        if(currentController == ControllerType.GAMEPAD)
         {
-            _currentButton = selectedScoreButton;
-            _currentButton.Select();
+            currentButton = selectedScoreButton;
+            currentButton.Select();
         }
     }
 
@@ -180,12 +209,16 @@ public class MainMenu : MonoBehaviour
         mainScreen.SetActive(true);
         scoreScreen.SetActive(false);
 
-        if(_currentController == ControllerType.GAMEPAD)
+        if(currentController == ControllerType.GAMEPAD)
         {
-            _currentButton = selectedMainButton;
-            _currentButton.Select();
+            currentButton = selectedMainButton;
+            currentButton.Select();
         }
     }
+
+
+
+    //Deselect Buttons
 
     public void DisableButtons(Button[] buttons)
     {
@@ -194,6 +227,14 @@ public class MainMenu : MonoBehaviour
         foreach(var button in buttons)
         {
             button.enabled = false;
+        }
+    }
+
+    public void DeselectButton()
+    {
+        if (currentController == ControllerType.KEYBOARDANDMOUSE)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
         }
     }
 }

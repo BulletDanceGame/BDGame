@@ -517,6 +517,7 @@ public class MusicManager : MonoBehaviour
         nextFramerate = (int)(maxFPS / lowestFPS) * (int)lowestFPS;
         nextFrameDuration = 1.0 / nextFramerate;
 
+        print("fps " + nextFramerate);
 
         nextFrameDelay = nextFramerate / 10; //so the start is roughly 100ms delayed, might need to be calculated differently
         

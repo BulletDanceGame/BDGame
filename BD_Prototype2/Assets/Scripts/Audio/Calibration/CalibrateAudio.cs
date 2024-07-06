@@ -8,6 +8,7 @@ public class CalibrateAudio : MonoBehaviour
     private double audioOffset;
     public TextMeshProUGUI offsetText;
 
+    public RectTransform visuals;
     public Animator anim;
 
     public GameObject ballPrefab;
@@ -16,7 +17,6 @@ public class CalibrateAudio : MonoBehaviour
     public ParticleSystem particles;
 
 
-    private bool ballsActive;
 
     private void OnEnable()
     {
@@ -29,7 +29,6 @@ public class CalibrateAudio : MonoBehaviour
     private void OnDisable()
     {
         EventManager.Instance.OnBeatForVisuals -= PlayAnimations;
-        ballsActive = false;
         Destroy(currentBall);
         Destroy(nextBall);
     }
@@ -42,6 +41,10 @@ public class CalibrateAudio : MonoBehaviour
         PlayerRhythm.Instance.UpdateOffsetVisuals(audioOffset);
         offsetText.text = "Offset: " + audioOffset * 1000 + "ms";
 
+        Vector2 pos = visuals.anchoredPosition;
+        pos.x += dir*(50f / 30f);
+        pos.x = Mathf.Clamp(pos.x, -50f, 50f);
+        visuals.anchoredPosition = pos;
 
         anim.enabled = false;
 
@@ -57,11 +60,11 @@ public class CalibrateAudio : MonoBehaviour
 
         if (anticipation == 0)
         {
-            if (!currentBall) return;
+            //if (!currentBall) return;
 
-            particles.transform.position = currentBall.transform.position;
-            particles.Play();
-            Destroy(currentBall);
+            //particles.transform.position = currentBall.transform.position;
+            //particles.Play();
+            //Destroy(currentBall);
         }
         else if (anticipation == 6)
         {
@@ -80,7 +83,7 @@ public class CalibrateAudio : MonoBehaviour
             b.GetComponent<Animator>().enabled = true;
             b.GetComponent<Animator>().speed = 1 / (duration * 8);
             nextBall = b;
-            ballsActive = true;
+            Destroy(b, 4);
         }
     }
 

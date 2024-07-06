@@ -144,7 +144,7 @@ public class PlayerRhythm : MonoBehaviour
         {
             //for checking swings and dashes
             _timesToHit.Add(_startTime + (spb * (beat - startBeat)));
-            //print("hit " + (beat - startBeat) + " " + _timesToHit[^1]);
+            print("hit " + (beat - startBeat) + " " + (Time.realtimeSinceStartupAsDouble + (spb * (beat - startBeat))));//_timesToHit[^1]);
 
             //for times
             //needs to check for the last one better
@@ -292,9 +292,9 @@ public class PlayerRhythm : MonoBehaviour
     } 
 
 
-    public BeatTiming GetBeatTimingSwing()
+    public BeatTiming GetBeatTiming(ButtonInput input)
     {
-        double timeDiff = GetHitDelaySwing();
+        double timeDiff = GetHitDelay(input);
 
         BeatTiming timing;
 
@@ -321,7 +321,7 @@ public class PlayerRhythm : MonoBehaviour
     double max = -999;
     double min = 999;
 
-    public double GetHitDelaySwing()
+    public double GetHitDelay(ButtonInput input)
     {
         if (_timesToHit.Count == 0)
         {
@@ -329,12 +329,13 @@ public class PlayerRhythm : MonoBehaviour
         }
 
         double time = Time.timeAsDouble;
+        double offset = (input == ButtonInput.swing) ? offsetSwing : offsetDash;
 
         double a = double.MaxValue;
         int index = 0;
         for (int i = _timesToHit.Count - 1; i >= 0; i--)
         {
-            double b = Math.Abs(time - (_timesToHit[i] + offsetSwing));
+            double b = Math.Abs(time - (_timesToHit[i] + offset));
 
             if (b < a)
             {
@@ -344,7 +345,7 @@ public class PlayerRhythm : MonoBehaviour
         }
 
 
-        double timeDiff = time - (_timesToHit[index] + offsetSwing);
+        double timeDiff = time - (_timesToHit[index] + offset);
         print("delay: " + timeDiff + " time " + Time.timeAsDouble);
 
         diff += timeDiff;
@@ -361,51 +362,6 @@ public class PlayerRhythm : MonoBehaviour
         return timeDiff;
     }
 
-
-
-
-    public BeatTiming GetHitStateDash()
-    {
-        if (_timesToHit.Count == 0)
-        {
-            return BeatTiming.BAD;
-        }
-
-        double time = Time.timeAsDouble;
-
-        double a = double.MaxValue;
-        int index = 0;
-        for (int i = _timesToHit.Count - 1; i >= 0; i--)
-        {
-            double b = Math.Abs(time - (_timesToHit[i] + offsetDash));
-
-            if (b < a)
-            {
-                index = i;
-                a = b;
-            }
-        }
-        double timeDiff = time - (_timesToHit[index] + offsetDash);
-
-
-
-        BeatTiming timing;
-
-        if (Math.Abs(timeDiff) <= _perfectHitTime)
-        {
-            timing = BeatTiming.PERFECT;
-        }
-        else if (Math.Abs(timeDiff) <= _okayHitTime)
-        {
-            timing = BeatTiming.GOOD;
-        }
-        else
-        {
-            timing = BeatTiming.BAD;
-        }
-
-        return timing;
-    }
 
 
     private void RemoveOldBeats()
