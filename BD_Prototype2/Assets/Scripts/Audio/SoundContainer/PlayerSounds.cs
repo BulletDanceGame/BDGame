@@ -131,7 +131,7 @@ public class PlayerSounds : SoundContainer
 
 
     //Swing
-    void PlayerSwing(BeatTiming hitTiming, Vector2 none)
+    public void PlayerSwing(BeatTiming hitTiming, Vector2 none)
     {
             //on a perfect hit it feels delayed, and when hitting it so it fits you are roughly 50ms early
             switch (hitTiming)

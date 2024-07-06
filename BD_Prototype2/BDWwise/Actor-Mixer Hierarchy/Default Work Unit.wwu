@@ -1314,6 +1314,16 @@
 										</Sound>
 										<Sound Name="swing_01" ID="{C584D26E-7D09-45C6-B428-0BAACE01ABC0}" ShortID="1013743486">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLatency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>520</Value>
@@ -1390,6 +1400,16 @@
 									<ChildrenList>
 										<Sound Name="badSwing" ID="{5DF31AE0-18B5-4505-B31E-FD00DBF5CF4A}" ShortID="608357314">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLatency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>-90</Value>
@@ -1431,6 +1451,16 @@
 												<Property Name="Highpass" Type="int16">
 													<ValueList>
 														<Value>20</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLatency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
 													</ValueList>
 												</Property>
 												<Property Name="MakeUpGain" Type="Real64">
@@ -1587,6 +1617,16 @@
 									<ChildrenList>
 										<Sound Name="swing" ID="{76D55CAB-851B-4FF6-9AF3-405D65EB5479}" ShortID="584490469">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLatency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>750</Value>
@@ -1626,6 +1666,16 @@
 										</Sound>
 										<Sound Name="ching!!Swing" ID="{4ADF501D-3440-44C6-962A-2012E59FA031}" ShortID="778203864">
 											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLatency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>1580</Value>
@@ -6851,11 +6901,6 @@
 										</BlendContainer>
 										<BlendContainer Name="Death" ID="{74FECC10-BEB4-407D-B6C3-9A74E9A3DB02}" ShortID="166785187">
 											<PropertyList>
-												<Property Name="MakeUpGain" Type="Real64">
-													<ValueList>
-														<Value>-96</Value>
-													</ValueList>
-												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-0.4</Value>
@@ -8319,15 +8364,10 @@
 														<Value>32</Value>
 													</ValueList>
 												</Property>
-												<Property Name="Pitch" Type="int32">
-													<ValueList>
-														<Value>-1200</Value>
-													</ValueList>
-												</Property>
 												<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-8</Value>
+														<Value>-6</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -9128,6 +9168,11 @@
 														</BlendContainer>
 														<RandomSequenceContainer Name="crack" ID="{A872376A-FCF4-48F4-8864-B4103F057340}" ShortID="1044423665">
 															<PropertyList>
+																<Property Name="Inclusion" Type="bool">
+																	<ValueList>
+																		<Value>False</Value>
+																	</ValueList>
+																</Property>
 																<Property Name="Volume" Type="Real64">
 																	<ValueList>
 																		<Value>3</Value>
@@ -9186,6 +9231,40 @@
 												</BlendContainer>
 											</ChildrenList>
 										</RandomSequenceContainer>
+										<Sound Name="cooldown v6" ID="{45AFD93F-D4D7-4FE5-9D5B-401B0F21876E}" ShortID="872604881">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="cooldown v6" ID="{FF87B653-40C1-446B-B656-A4A6EA393F1C}">
+													<Language>SFX</Language>
+													<AudioFile>cooldown v6.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="33479659"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="cooldown v6" ID="{FF87B653-40C1-446B-B656-A4A6EA393F1C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 								</BlendContainer>
 							</ChildrenList>
@@ -12721,6 +12800,117 @@
 										<ActiveSource Name="vhsSpeedUpV2" ID="{69646E4C-7013-4FCA-BF60-6EFCA714DB39}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<BlendContainer Name="Moving to the side" ID="{7DFECC4A-D0B2-493D-9912-D1D21524E500}" ShortID="837456934">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>39</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="swings" ID="{C62F61CC-FE4C-4C56-B2F1-3FC7FBB53EE2}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="swing" ID="{B059AD61-88B0-449A-8152-A2E7A86E39C1}" ShortID="971086280">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>520</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="swing" ID="{0219F69B-C8BC-4203-B560-859AF6F98078}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0205123748330128"/>
+														<Property Name="FadeInShape" Type="int16" Value="8"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.040699156414708"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>swing.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="53975821"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="swing" ID="{0219F69B-C8BC-4203-B560-859AF6F98078}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="swing_01" ID="{6BEA6249-84E9-4AEC-A791-841570E602DD}" ShortID="534824781">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>520</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="swing" ID="{151D39DF-E37E-4569-BC75-DCBA42D13239}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00490093253114179"/>
+														<Property Name="FadeInShape" Type="int16" Value="7"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.276309470781457"/>
+														<Property Name="FadeOutShape" Type="int16" Value="1"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0431333830025573"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.336718714978883"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>swing.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="974159532"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="swing" ID="{151D39DF-E37E-4569-BC75-DCBA42D13239}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>

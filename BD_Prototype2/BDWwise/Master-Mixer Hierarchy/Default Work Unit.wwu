@@ -789,6 +789,13 @@
 								<Bus Name="2 Player SFX" ID="{96F31753-CA7C-4AA9-A325-2331B29748D3}">
 									<ChildrenList>
 										<Bus Name="Damage (player)" ID="{774A0714-72B7-416E-8149-1F77ED8D4365}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ObjectLists>
 												<ObjectList Name="RTPC">
 													<Reference>

@@ -60,6 +60,9 @@ public class MangaEffect : MonoBehaviour
             _isExpand = false;
         if (clampSize <=0)
             _isSkrink = false;
+
+        transform.position = UnitManager.Instance.GetPlayer().transform.position;
+
     }
 
     void TriggerManga()
