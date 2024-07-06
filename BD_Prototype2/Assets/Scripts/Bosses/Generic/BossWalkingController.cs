@@ -42,6 +42,12 @@ public class BossWalkingController : MonoBehaviour
 
         EventManager.Instance.OnDeactivateBoss += PauseWalking;
         EventManager.Instance.OnActivateBoss += ResumeWalking;
+
+        if(_animHandler != null)
+        {
+            _animHandler.OnDashStart += StopWalking;
+            _animHandler.OnDashStop += ResumeWalking;
+        }
     }
 
 
@@ -72,10 +78,10 @@ public class BossWalkingController : MonoBehaviour
             }
 
             // moving to the ramdomly picked destination
-            transform.localPosition = Vector2.MoveTowards(transform.localPosition, wayPoint, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, wayPoint, speed * Time.deltaTime);
 
             // upon reaching the destination, find a destination to go to
-            if (Vector2.Distance(transform.localPosition, wayPoint) < range)
+            if (Vector2.Distance(transform.position, wayPoint) < range)
             {
                 //Stop walking animation
                 _animHandler?.WalkStop();
@@ -102,7 +108,7 @@ public class BossWalkingController : MonoBehaviour
 
         //For Animation Testing, sometimes walking distance is too short to see any changes
         //So keep randomizing until the dist is bigger than minDist
-        while(Vector2.Distance(transform.localPosition, wayPoint) < minDistance)
+        while(Vector2.Distance(transform.position, wayPoint) < minDistance)
         {
             x = Random.Range(minPosition.x, maxPosition.x);
             y = Random.Range(minPosition.y, maxPosition.y);
@@ -113,6 +119,10 @@ public class BossWalkingController : MonoBehaviour
 
 
     public void PauseWalking()
+    {
+        _pauseWalking = true;
+    }
+    public void StopWalking(Vector2 heh)
     {
         _pauseWalking = true;
     }
