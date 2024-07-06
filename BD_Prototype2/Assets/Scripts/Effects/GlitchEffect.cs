@@ -48,7 +48,7 @@ public class GlitchEffect : MonoBehaviour
                 break;
 
             case BeatTiming.BAD:
-                StartCoroutine(OnGlitchDo());
+                OnGlitchDo();
                 
                 break;
             case BeatTiming.NONE:
@@ -58,13 +58,12 @@ public class GlitchEffect : MonoBehaviour
         }
     }
 
-    IEnumerator OnGlitchDo()
+    void OnGlitchDo()
     {
         Color = Color + 10;
         _material.SetFloat("_ColorStrength", Color);
         GlitchVFX.enabled = true;
-        yield return new WaitForSeconds(0.1f);
-        GlitchVFX.enabled = false;
+        //GlitchVFX.enabled = false;
     }
 
 }
