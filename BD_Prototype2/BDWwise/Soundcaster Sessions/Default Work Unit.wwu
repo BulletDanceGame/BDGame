@@ -152,6 +152,10 @@
 							<Value>2</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="HIGH_PASS____MusicEnvBattle" ID="{4B24861D-1C18-4833-A655-7B5BB1DD8C2F}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="VOLUME____PlayerActions__Set" ID="{13A29393-9075-483F-AC96-BC01DE4854FD}"/>
 							<Value>50.0515373825284</Value>
 						</RTPCValue>
@@ -161,7 +165,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="LOW_PASS____MusicBossBattle" ID="{E0FC1CC1-587C-485E-A0C3-24013CDB1DA8}"/>
-							<Value>49</Value>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="LOW_PASS____BossActions" ID="{5A129DF9-AE16-4868-BF9B-883BA7F9A19E}"/>
@@ -169,6 +173,10 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="HIGH_PASS____CutsceneSFX__General__AudibleOnSpeedUp" ID="{89ABBBFC-4AAE-4900-8D2F-D6611443A4B6}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="HIGH_PASS____MusicEnvRoaming" ID="{3309B160-C813-4993-B42E-959F1427B4FB}"/>
 							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
@@ -202,6 +210,10 @@
 						<RTPCValue>
 							<GameParameterRef Name="PITCH____PlayerDamage" ID="{5AB9CD57-2B9B-4D2D-AB98-8E8B440F848E}"/>
 							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="HIGH_PASS____PlayerDamage" ID="{966AB997-40DB-4D67-AC98-95493BF889C8}"/>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="VOLUME____CutsceneSFX__General__AudibleOnSpeedUp" ID="{EB331517-FD4C-4D6D-B276-6F68F9DC4903}"/>

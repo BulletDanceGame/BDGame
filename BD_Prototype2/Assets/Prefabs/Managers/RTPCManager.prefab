@@ -90,6 +90,18 @@ MonoBehaviour:
     - name: HIGH_PASS____CutsceneSFX__General__AudibleOnSpeedUp
       defaultValue: 0
       isCoroutineRunning: 0
+    - name: HIGH_PASS____MusicBossBattle
+      defaultValue: 0
+      isCoroutineRunning: 0
+    - name: HIGH_PASS____MusicEnvBattle
+      defaultValue: 0
+      isCoroutineRunning: 0
+    - name: HIGH_PASS____MusicEnvRoaming
+      defaultValue: 0
+      isCoroutineRunning: 0
+    - name: HIGH_PASS____PlayerDamage
+      defaultValue: 0
+      isCoroutineRunning: 0
   - name: LOW PASS
     _parameters:
     - name: LOW_PASS____MusicBossBattle
@@ -189,14 +201,9 @@ MonoBehaviour:
     - name: VOLUME_SPECIAL____DeflectionElement__PitchElement
       defaultValue: 0
       isCoroutineRunning: 0
-    - name: VOLUME_SPECIAL____PlayerActions__Dynamic__Mixing
-      defaultValue: 0
-      isCoroutineRunning: 0
-    - name: VOLUME_SPECIAL____Dash__DynamicMixing
-      defaultValue: 0
-      isCoroutineRunning: 0
   _states:
   - Hurt
+  - DynamicGameplaySFX
   _curves:
   - serializedVersion: 2
     m_Curve:
