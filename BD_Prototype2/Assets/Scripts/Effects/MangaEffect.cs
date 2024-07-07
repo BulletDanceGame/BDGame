@@ -23,7 +23,7 @@ public class MangaEffect : MonoBehaviour
     private bool isFlicker = false;
     private float timeDelay;
 
-
+    public GameObject LineGlitch;
     private void Start()
     {
         EventManager.Instance.OnPlayerTired += TriggerManga;
@@ -77,11 +77,13 @@ public class MangaEffect : MonoBehaviour
 
     IEnumerator Flashing()
     {
-        
+        LineGlitch.SetActive(true);
         transform.localScale = new Vector3(8000, 8000, 8000);
         timeDelay = Random.Range(0.1f, 0.3f);
         yield return new WaitForSeconds(timeDelay);
         transform.localScale = new Vector3(0, 0, 0);
+        LineGlitch.SetActive(false);
+
         //timeDelay = Random.Range(0.1f, 0.3f);
         //yield return new WaitForSeconds(timeDelay);
         //transform.localScale = new Vector3(8000, 8000, 8000);

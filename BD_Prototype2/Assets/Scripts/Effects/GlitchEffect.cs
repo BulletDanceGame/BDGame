@@ -10,6 +10,7 @@ public class GlitchEffect : MonoBehaviour
     private float Color;
     private float CircleSize;
 
+
     public BeatTiming hitTiming { get; private set; }
 
     private void Start()
@@ -25,7 +26,6 @@ public class GlitchEffect : MonoBehaviour
         Color = _material.GetFloat("_ColorStrength");
         CircleSize = 1.4f;
         _material.SetFloat("_CircleSize", CircleSize);
-
     }
 
     void ResetColorStrength()
@@ -79,6 +79,7 @@ public class GlitchEffect : MonoBehaviour
         CircleSize = CircleSize-0.25f;
         MangaEffect.Instance.TriggerFlicker();
         _material.SetFloat("_CircleSize", CircleSize);
+
         GlitchVFX.enabled = true;
         //GlitchVFX.enabled = false;
     }
