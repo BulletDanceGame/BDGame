@@ -1258,11 +1258,7 @@
 															</CustomState>
 															<CustomState>
 																<StateRef Name="Second" ID="{AD4E999A-60A0-4DB2-97B5-A620A6A812BC}"/>
-																<CustomState Name="" ID="{AC63B18F-8BF2-49D1-B563-B8F895F5C98F}" ShortID="448843257">
-																	<PropertyList>
-																		<Property Name="Volume" Type="Real64" Value="5"/>
-																	</PropertyList>
-																</CustomState>
+																<CustomState Name="" ID="{AC63B18F-8BF2-49D1-B563-B8F895F5C98F}" ShortID="448843257"/>
 															</CustomState>
 														</CustomStateList>
 													</StateInfo>
@@ -1623,6 +1619,11 @@
 										</Sound>
 										<RandomSequenceContainer Name="crack" ID="{BCBAD1A0-FF64-45A7-A79D-D1048392B4B4}" ShortID="568853451">
 											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-8</Value>
@@ -1693,11 +1694,7 @@
 													</CustomState>
 													<CustomState>
 														<StateRef Name="Second" ID="{AD4E999A-60A0-4DB2-97B5-A620A6A812BC}"/>
-														<CustomState Name="" ID="{AF45CB19-41EB-4DE6-A22C-351134A6F0CB}" ShortID="66032144">
-															<PropertyList>
-																<Property Name="Volume" Type="Real64" Value="5"/>
-															</PropertyList>
-														</CustomState>
+														<CustomState Name="" ID="{AF45CB19-41EB-4DE6-A22C-351134A6F0CB}" ShortID="66032144"/>
 													</CustomState>
 												</CustomStateList>
 											</StateInfo>
