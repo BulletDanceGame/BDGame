@@ -49,27 +49,6 @@ MonoBehaviour:
   m_Markers:
     m_Objects: []
   m_PostPlaybackState: 3
---- !u!114 &-8917306768944908177
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9c9a981a8a37fb4ba1a33d742e9e380, type: 3}
-  m_Name: DialogueClip
-  m_EditorClassIdentifier: 
-  speaker: 0
-  speakerPosition: 0
-  characterArt: {fileID: 0}
-  dialogueText: Where am I even? This sure ain't baseball practice.
-  speedOfLetters: 0.03
-  voiceline:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
 --- !u!114 &-8758528214132273795
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,7 +74,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -3529208643303145736}
-    m_Duration: 1
+    m_Duration: 8.500000000000004
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8758528214132273795}
     m_EaseInDuration: 0
@@ -143,247 +122,16 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: DialogueClip
   - m_Version: 1
-    m_Start: 3.75
-    m_ClipIn: 0
-    m_Asset: {fileID: -8917306768944908177}
-    m_Duration: 1.25
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: -8758528214132273795}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: DialogueClip
-  - m_Version: 1
-    m_Start: 1
-    m_ClipIn: 0
-    m_Asset: {fileID: 8321329919126592911}
-    m_Duration: 2.75
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: -8758528214132273795}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: DialogueClip
-  - m_Version: 1
-    m_Start: 5
-    m_ClipIn: 0
-    m_Asset: {fileID: -1582568380206384503}
-    m_Duration: 1.166666666666667
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: -8758528214132273795}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: DialogueClip
-  - m_Version: 1
-    m_Start: 6.166666666666667
-    m_ClipIn: 0
-    m_Asset: {fileID: -466325560516687198}
-    m_Duration: 1
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: -8758528214132273795}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: DialogueClip
-  - m_Version: 1
-    m_Start: 7.2
-    m_ClipIn: 0
-    m_Asset: {fileID: 5020398626069643383}
-    m_Duration: 0.2999999999999998
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: -8758528214132273795}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: DialogueClip
-  - m_Version: 1
-    m_Start: 7.533333333333333
-    m_ClipIn: 0
-    m_Asset: {fileID: 6022472256608872561}
-    m_Duration: 0.2999999999999998
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: -8758528214132273795}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: DialogueClip
-  - m_Version: 1
-    m_Start: 7.866666666666671
-    m_ClipIn: 0
-    m_Asset: {fileID: 4386794086407116194}
-    m_Duration: 0.2999999999999998
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: -8758528214132273795}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: DialogueClip
-  - m_Version: 1
-    m_Start: 9.750000000000004
+    m_Start: 10.000000000000004
     m_ClipIn: 0
     m_Asset: {fileID: 6846892262956416056}
-    m_Duration: 0.9166666666666661
+    m_Duration: 1.6666666666666625
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8758528214132273795}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: 0
+    m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
       m_Curve: []
@@ -407,15 +155,15 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: DialogueClip
   - m_Version: 1
-    m_Start: 10.666666666666668
+    m_Start: 15.000000000000007
     m_ClipIn: 0
     m_Asset: {fileID: 5373781656350371261}
-    m_Duration: 1.5
+    m_Duration: 1.11666666666666
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8758528214132273795}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 0
+    m_BlendInDuration: -1
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
@@ -440,61 +188,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: DialogueClip
   - m_Version: 1
-    m_Start: 13.083333333333336
+    m_Start: 24.762114389706376
     m_ClipIn: 0
     m_Asset: {fileID: 2604977061273840601}
-    m_Duration: 1.916666666666666
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: -8758528214132273795}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: DialogueClip
-  - m_Version: 1
-    m_Start: 16.66666666666667
-    m_ClipIn: 0
-    m_Asset: {fileID: -3875969772108451374}
-    m_Duration: 1.4166666666666643
+    m_Duration: 1.3833333333333329
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8758528214132273795}
     m_EaseInDuration: 0
@@ -524,10 +221,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: DialogueClip
   - m_Version: 1
-    m_Start: 15.000000000000004
+    m_Start: 27.412114389706375
     m_ClipIn: 0
     m_Asset: {fileID: -7528718810329001240}
-    m_Duration: 1.6666666666666679
+    m_Duration: 2.088728872422749
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8758528214132273795}
     m_EaseInDuration: 0
@@ -536,25 +233,106 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: DialogueClip
+  - m_Version: 1
+    m_Start: 11.666666666666666
+    m_ClipIn: 0
+    m_Asset: {fileID: 7592644947681746834}
+    m_Duration: 1.4666666666666668
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -8758528214132273795}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: DialogueClip
+  - m_Version: 1
+    m_Start: 16.116666666666667
+    m_ClipIn: 0
+    m_Asset: {fileID: 8370122893475934527}
+    m_Duration: 2.770475664470947
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -8758528214132273795}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: DialogueClip
+  - m_Version: 1
+    m_Start: 21.062114389706377
+    m_ClipIn: 0
+    m_Asset: {fileID: -5726513498407210823}
+    m_Duration: 2.321378099732101
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -8758528214132273795}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -632,8 +410,8 @@ MonoBehaviour:
   speaker: 0
   speakerPosition: 0
   characterArt: {fileID: 21300000, guid: 00dc44adda91410479f9bbb78e1082a5, type: 3}
-  dialogueText: Where's my bat?
-  speedOfLetters: 0.01
+  dialogueText: I gotta get back home.
+  speedOfLetters: 0.04
   voiceline:
     idInternal: 0
     valueGuidInternal: 
@@ -798,26 +576,7 @@ MonoBehaviour:
   m_Markers:
     m_Objects:
     - {fileID: -3185339190143282311}
---- !u!114 &-4337710289944513272
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5c0846bd771eef4aac01df0bb827068, type: 3}
-  m_Name: PlayerClip(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  enableUpdate: 0
-  direction: 1
-  faceTowardsTarget: {fileID: 0}
-  moveVelocity: {x: 0, y: 0}
-  spriteSet: 1
-  faceTowardsBoss: 0
-  animState: 0
---- !u!114 &-3875969772108451374
+--- !u!114 &-5726513498407210823
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -827,13 +586,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9c9a981a8a37fb4ba1a33d742e9e380, type: 3}
-  m_Name: DialogueClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_Name: DialogueClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   speaker: 0
   speakerPosition: 0
   characterArt: {fileID: 21300000, guid: 00dc44adda91410479f9bbb78e1082a5, type: 3}
-  dialogueText: I can defend myself with that.
-  speedOfLetters: 0.01
+  dialogueText: An animal...?
+  speedOfLetters: 0.06
   voiceline:
     idInternal: 0
     valueGuidInternal: 
@@ -853,7 +612,7 @@ MonoBehaviour:
   speaker: 0
   speakerPosition: 0
   characterArt: {fileID: 0}
-  dialogueText: Ugh...
+  dialogueText: '[audio: slow build up of heavy breathing and running footsteps]'
   speedOfLetters: 0.1
   voiceline:
     idInternal: 0
@@ -931,7 +690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 18.1
+  m_Time: 29.500843262129123
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: ec1a6f45da483714497b1457e6915cca, type: 2}
@@ -947,7 +706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 18.1
+  m_Time: 29.753808997804278
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: ec1a6f45da483714497b1457e6915cca, type: 2}
@@ -980,27 +739,6 @@ MonoBehaviour:
   m_Clips: []
   m_Markers:
     m_Objects: []
---- !u!114 &-1582568380206384503
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9c9a981a8a37fb4ba1a33d742e9e380, type: 3}
-  m_Name: DialogueClip(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  speaker: 0
-  speakerPosition: 0
-  characterArt: {fileID: 0}
-  dialogueText: ARWARWRAWRARARAWRAAA
-  speedOfLetters: 0
-  voiceline:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
 --- !u!114 &-1011957900458288055
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1048,27 +786,6 @@ MonoBehaviour:
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 5b1df3724496d9741b2fe6fdbf3d30df, type: 2}
---- !u!114 &-466325560516687198
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9c9a981a8a37fb4ba1a33d742e9e380, type: 3}
-  m_Name: DialogueClip(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  speaker: 0
-  speakerPosition: 0
-  characterArt: {fileID: 0}
-  dialogueText: YO WHAT THE FUCK
-  speedOfLetters: 0.0001
-  voiceline:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
 --- !u!114 &-61490907059461794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1268,7 +985,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: PlayerClip
   - m_Version: 1
-    m_Start: 10.66666666666667
+    m_Start: 13.85
     m_ClipIn: 0
     m_Asset: {fileID: -7259672688918060983}
     m_Duration: 0.25
@@ -1337,7 +1054,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: PlayerClip
   - m_Version: 1
-    m_Start: 12.333333333333337
+    m_Start: 19.253808997804278
     m_ClipIn: 0
     m_Asset: {fileID: -7837549884445412033}
     m_Duration: 0.16666666666666607
@@ -1406,10 +1123,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: PlayerClip
   - m_Version: 1
-    m_Start: 13.000000000000004
+    m_Start: 23.928781056373044
     m_ClipIn: 0
     m_Asset: {fileID: -3302055786561492702}
-    m_Duration: 0.16666666666666785
+    m_Duration: 0.4499999999999993
     m_TimeScale: 1
     m_ParentTrack: {fileID: 474041757561316945}
     m_EaseInDuration: 0
@@ -1475,7 +1192,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: PlayerClip
   - m_Version: 1
-    m_Start: 13.66666666666667
+    m_Start: 26.74544772303971
     m_ClipIn: 0
     m_Asset: {fileID: -533369688949509847}
     m_Duration: 0.16666666666666785
@@ -1544,217 +1261,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: PlayerClip
   - m_Version: 1
-    m_Start: 14.333333333333337
+    m_Start: 20.312114389706377
     m_ClipIn: 0
-    m_Asset: {fileID: -4337710289944513272}
-    m_Duration: 0.16666666666666607
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: 474041757561316945}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: PlayerClip
-  - m_Version: 1
-    m_Start: 15.000000000000004
-    m_ClipIn: 0
-    m_Asset: {fileID: 8359074650589309546}
-    m_Duration: 0.16666666666666785
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: 474041757561316945}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: PlayerClip
-  - m_Version: 1
-    m_Start: 15.666666666666675
-    m_ClipIn: 0
-    m_Asset: {fileID: 2018757182809822962}
-    m_Duration: 0.1666666666666643
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: 474041757561316945}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: PlayerClip
-  - m_Version: 1
-    m_Start: 18.083333333333336
-    m_ClipIn: 0
-    m_Asset: {fileID: 2943104785518175469}
-    m_Duration: 0.01666666666666572
+    m_Asset: {fileID: 8828339433238743894}
+    m_Duration: 0.25
     m_TimeScale: 1
     m_ParentTrack: {fileID: 474041757561316945}
     m_EaseInDuration: 0
@@ -2024,25 +1534,6 @@ MonoBehaviour:
   m_OpenClipOffsetRotation: {x: 0, y: 0, z: 0, w: 1}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_ApplyOffsets: 0
---- !u!114 &2018757182809822962
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5c0846bd771eef4aac01df0bb827068, type: 3}
-  m_Name: PlayerClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  enableUpdate: 0
-  direction: 3
-  faceTowardsTarget: {fileID: 0}
-  moveVelocity: {x: 0, y: 0}
-  spriteSet: 1
-  faceTowardsBoss: 0
-  animState: 0
 --- !u!114 &2371218096836491451
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2082,31 +1573,12 @@ MonoBehaviour:
   speaker: 0
   speakerPosition: 0
   characterArt: {fileID: 21300000, guid: 00dc44adda91410479f9bbb78e1082a5, type: 3}
-  dialogueText: ... now that I think about it...
-  speedOfLetters: 0.01
+  dialogueText: Whatever...
+  speedOfLetters: 0.04
   voiceline:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
---- !u!114 &2943104785518175469
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5c0846bd771eef4aac01df0bb827068, type: 3}
-  m_Name: PlayerClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  enableUpdate: 1
-  direction: 3
-  faceTowardsTarget: {fileID: 0}
-  moveVelocity: {x: 0, y: 0}
-  spriteSet: 1
-  faceTowardsBoss: 0
-  animState: 0
 --- !u!114 &3909906484045958278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2219,48 +1691,6 @@ MonoBehaviour:
   spriteSet: 1
   faceTowardsBoss: 0
   animState: 1
---- !u!114 &4386794086407116194
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9c9a981a8a37fb4ba1a33d742e9e380, type: 3}
-  m_Name: DialogueClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  speaker: 0
-  speakerPosition: 0
-  characterArt: {fileID: 0}
-  dialogueText: FUCK
-  speedOfLetters: 0.0001
-  voiceline:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
---- !u!114 &5020398626069643383
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9c9a981a8a37fb4ba1a33d742e9e380, type: 3}
-  m_Name: DialogueClip(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  speaker: 0
-  speakerPosition: 0
-  characterArt: {fileID: 0}
-  dialogueText: FUCK
-  speedOfLetters: 0.0001
-  voiceline:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
 --- !u!114 &5183969056485638737
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2299,29 +1729,8 @@ MonoBehaviour:
   speaker: 0
   speakerPosition: 0
   characterArt: {fileID: 21300000, guid: 00dc44adda91410479f9bbb78e1082a5, type: 3}
-  dialogueText: ...Did I cut it off?
-  speedOfLetters: 0.0001
-  voiceline:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
---- !u!114 &6022472256608872561
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9c9a981a8a37fb4ba1a33d742e9e380, type: 3}
-  m_Name: DialogueClip(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  speaker: 0
-  speakerPosition: 0
-  characterArt: {fileID: 0}
-  dialogueText: FUCK
-  speedOfLetters: 0.0001
+  dialogueText: Wha-
+  speedOfLetters: 0.05
   voiceline:
     idInternal: 0
     valueGuidInternal: 
@@ -2341,13 +1750,13 @@ MonoBehaviour:
   speaker: 0
   speakerPosition: 0
   characterArt: {fileID: 21300000, guid: 00dc44adda91410479f9bbb78e1082a5, type: 3}
-  dialogueText: huff huff
-  speedOfLetters: 0.01
+  dialogueText: Huff puff...
+  speedOfLetters: 0.05
   voiceline:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
---- !u!114 &8321329919126592911
+--- !u!114 &7592644947681746834
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2357,18 +1766,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9c9a981a8a37fb4ba1a33d742e9e380, type: 3}
-  m_Name: DialogueClip(Clone)(Clone)
+  m_Name: DialogueClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   speaker: 0
   speakerPosition: 0
-  characterArt: {fileID: 0}
-  dialogueText: My head feels like it's on fire...
+  characterArt: {fileID: 21300000, guid: 00dc44adda91410479f9bbb78e1082a5, type: 3}
+  dialogueText: Huff...
   speedOfLetters: 0.05
   voiceline:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
---- !u!114 &8359074650589309546
+--- !u!114 &8370122893475934527
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c9a981a8a37fb4ba1a33d742e9e380, type: 3}
+  m_Name: DialogueClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  speaker: 0
+  speakerPosition: 0
+  characterArt: {fileID: 21300000, guid: 00dc44adda91410479f9bbb78e1082a5, type: 3}
+  dialogueText: What the hell was that!?
+  speedOfLetters: 0.04
+  voiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+--- !u!114 &8828339433238743894
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2378,10 +1808,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5c0846bd771eef4aac01df0bb827068, type: 3}
-  m_Name: PlayerClip(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_Name: PlayerClip(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   enableUpdate: 0
-  direction: 0
+  direction: 2
   faceTowardsTarget: {fileID: 0}
   moveVelocity: {x: 0, y: 0}
   spriteSet: 1

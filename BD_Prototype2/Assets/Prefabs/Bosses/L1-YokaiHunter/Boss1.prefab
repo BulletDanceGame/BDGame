@@ -394,6 +394,7 @@ GameObject:
   - component: {fileID: 8119982807536686211}
   - component: {fileID: 8162457424876732638}
   - component: {fileID: -927472824617862759}
+  - component: {fileID: 2987511843469146053}
   m_Layer: 13
   m_Name: Boss1
   m_TagString: Enemy
@@ -417,7 +418,7 @@ Transform:
   - {fileID: 120863019531566298}
   - {fileID: 4296680942292413460}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3393630424969624371
 MonoBehaviour:
@@ -14441,6 +14442,22 @@ CapsuleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.0028584402, y: -0.005716781}
   m_Size: {x: 2.64, y: 4.68}
+  m_Direction: 0
+--- !u!70 &2987511843469146053
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4829612781070897424}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.97, y: 2.89}
   m_Direction: 0
 --- !u!1 &5246271764225620269
 GameObject:

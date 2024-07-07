@@ -1,6 +1,7 @@
 State Group	ID	Name			Wwise Object Path	Notes
 	85412153	Ambience			\Default Work Unit\Ambience	
 	534389781	DynamicGameplaySFX			\Default Work Unit\DynamicGameplaySFX	
+	779133449	FailLevel			\Default Work Unit\FailLevel	
 	2782712965	Level			\Default Work Unit\Level	
 	3193947170	Hurt			\Default Work Unit\Hurt	
 	3800848640	PlayerStatus			\Default Work Unit\PlayerStatus	
@@ -14,6 +15,10 @@ State	ID	Name	State Group			Notes
 	748895195	None	DynamicGameplaySFX			
 	1182670505	Mid	DynamicGameplaySFX			
 	3550808449	High	DynamicGameplaySFX			
+	748895195	None	FailLevel			
+	931160808	Third	FailLevel			
+	998496889	First	FailLevel			
+	3476314365	Second	FailLevel			
 	732432531	YokaiHunterBoss	Level			
 	748895195	None	Level			
 	1762552081	CritterBoss	Level			
@@ -63,8 +68,11 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	1322911829	LOW_PASS____MusicBossBattle			\Default Work Unit\LOW PASS\LOW_PASS____MusicBossBattle	
 	1402179413	LOW_PASS____PlayerMovement__Dash			\Default Work Unit\LOW PASS\LOW_PASS____PlayerMovement__Dash	
 	1463622446	LOW_PASS____MusicEnvRoaming			\Default Work Unit\LOW PASS\LOW_PASS____MusicEnvRoaming	
+	1489920679	HIGH_PASS____PlayerDamage			\Default Work Unit\HIGH_PASS____PlayerDamage	
+	1651932202	HIGH_PASS____MusicEnvRoaming			\Default Work Unit\HIGH_PASS____MusicEnvRoaming	
 	1736919294	VOLUME____Menu			\Default Work Unit\VOLUME\VOLUME____Menu	
 	1798584363	LOW_PASS____PlayerDamage			\Default Work Unit\LOW PASS\LOW_PASS____PlayerDamage	
+	1900464655	HIGH_PASS____MusicEnvBattle			\Default Work Unit\HIGH_PASS____MusicEnvBattle	
 	1961333805	HIGH_PASS____CutsceneSFX__General__AudibleOnSpeedUp			\Default Work Unit\HIGH PASS\HIGH_PASS____CutsceneSFX__General__AudibleOnSpeedUp	
 	2055487999	LOW_PASS____BossDamage			\Default Work Unit\LOW PASS\LOW_PASS____BossDamage	
 	2268627958	VOLUME____PlayerActions__Dynamic			\Default Work Unit\VOLUME\VOLUME____PlayerActions__Dynamic	

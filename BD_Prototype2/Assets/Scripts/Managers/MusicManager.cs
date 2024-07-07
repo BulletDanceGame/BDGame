@@ -80,6 +80,7 @@ public class MusicManager : MonoBehaviour
         {
             Instance = this;
             Instantiate(bankPrefab, transform);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -174,7 +175,7 @@ public class MusicManager : MonoBehaviour
 
                 if (timedBeats == sequenceDuration+1) //DURATION
                 {
-
+                    print("_start songtimer " + songTimer);
                     StartSequence();
 
                     endTime = 0;
@@ -195,7 +196,8 @@ public class MusicManager : MonoBehaviour
 
         if (prepareNextSequence)
         {
-            PrepareNextSequence(0); //currentFrameDuration * currentFrameDelay);
+            print("startime aa " + currentFrameDuration + " - "+  currentFrameDelay);
+            PrepareNextSequence(true);
             prepareNextSequence = false;
         }
         if (startSequence)
@@ -207,12 +209,6 @@ public class MusicManager : MonoBehaviour
         AkSoundEngineController.Instance.LateUpdate();
     }
 
-
-
-    private void OnDestroy()
-    {
-        isDestroyed = true;
-    }
 
 
 
@@ -269,7 +265,7 @@ public class MusicManager : MonoBehaviour
             else if (transition == TransitionType.QUEUE_SWITCH)
             {
                 PlayerRhythm.Instance.RemoveOldPreparedBeats();
-                PrepareNextSequence(0, true);
+                PrepareNextSequence(false, true);
             }
             else if (transition == TransitionType.QUEUE_STOP)
             {
@@ -338,7 +334,7 @@ public class MusicManager : MonoBehaviour
     }
 
     /// <summary> Prepares the next sequence and song by taking it from the current Controller </summary>
-    private void PrepareNextSequence(double delay, bool cut = false)
+    private void PrepareNextSequence(bool frameDelay = false, bool cut = false)
     {
         MusicConductor controller = ConductorManager.Instance.GetCurrentController();
         if (controller == null)
@@ -349,6 +345,9 @@ public class MusicManager : MonoBehaviour
         _nextSequence = controller.GetNextSequence();
 
         SetNextFPS();
+
+        double delay = 0;
+        if (frameDelay) delay = nextFrameDuration * nextFrameDelay;
 
         if (PlayerRhythm.Instance)
         {
@@ -420,6 +419,7 @@ public class MusicManager : MonoBehaviour
             currentFramerate = nextFramerate;
             currentFrameDuration = nextFrameDuration;
             currentFrameDelay = nextFrameDelay;
+            print("framedel " + currentFrameDelay);
 
             Application.targetFrameRate = currentFramerate;
             framesPerBeat = secondsPerBeat / currentFrameDuration;
@@ -515,11 +515,10 @@ public class MusicManager : MonoBehaviour
                 break;
             }
         }
-        //print("lowest " + lowestFPS + "plues " + i);
         nextFramerate = (int)(maxFPS / lowestFPS) * (int)lowestFPS;
-        //print("new fps " + framerate);
         nextFrameDuration = 1.0 / nextFramerate;
 
+        print("fps " + nextFramerate);
 
         nextFrameDelay = nextFramerate / 10; //so the start is roughly 100ms delayed, might need to be calculated differently
         
@@ -529,6 +528,8 @@ public class MusicManager : MonoBehaviour
     }
 
 
+    double lastEntry = 0;
+
     IEnumerator OnEntry()
     {
 
@@ -537,9 +538,11 @@ public class MusicManager : MonoBehaviour
         currentBeat++;
         EventManager.Instance.Beat(currentBeat);
 
-        //print("_start entry " + Time.timeAsDouble);
+        print("_start entry " + Time.timeAsDouble);
         startDelay = Time.timeAsDouble - startDelay;
-        //print("_startdelay " + startDelay + " fr " + frames);
+        print("_startdelay " + startDelay + " fr " + frames);
+        print("_s between entries " + (Time.timeAsDouble-lastEntry));
+        lastEntry = Time.timeAsDouble;
         //print("_start finish " + (Time.timeAsDouble + secondsPerBeat*_currentSequence.duration));
 
         lastSequenceDelay = Time.timeAsDouble - lastSequenceDelay;
@@ -548,7 +551,7 @@ public class MusicManager : MonoBehaviour
 
         //checkFrames = false;
 
-        PrepareNextSequence(0);//move to after offset
+        PrepareNextSequence();//move to after offset
 
         playing = true;
         songTimer = 0;
@@ -565,6 +568,12 @@ public class MusicManager : MonoBehaviour
 
 
 
+
+
+    private void OnDestroy()
+    {
+        isDestroyed = true;
+    }
 
 
 }

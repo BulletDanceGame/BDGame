@@ -118,7 +118,7 @@ public class PlayerSwing : MonoBehaviour
 
 
         //Timing
-        hitTiming = PlayerRhythm.Instance.GetBeatTimingSwing();
+        hitTiming = PlayerRhythm.Instance.GetBeatTiming(ButtonInput.swing);
 
         switch (hitTiming)
         {

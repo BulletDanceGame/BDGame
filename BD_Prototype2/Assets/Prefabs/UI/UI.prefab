@@ -17762,8 +17762,124 @@ PrefabInstance:
       value: MangaVFX
       objectReference: {fileID: 0}
     - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _fxScale
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _expandSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _shrinkSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
       propertyPath: _animationDuration
-      value: 9.69
+      value: 4.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _contrastOverTime.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _brightnessOverTime.m_Curve.Array.data[1].time
+      value: 1.0012207
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _brightnessOverTime.m_Curve.Array.data[1].value
+      value: 1.8755188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _contrastOverTime.m_Curve.Array.data[0].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _contrastOverTime.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _saturationOverTime.m_Curve.Array.data[1].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _contrastOverTime.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _contrastOverTime.m_Curve.Array.data[1].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _contrastOverTime.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _brightnessOverTime.m_Curve.Array.data[0].inSlope
+      value: -0.12432943
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _brightnessOverTime.m_Curve.Array.data[1].inSlope
+      value: -0.12432943
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _contrastOverTime.m_Curve.Array.data[0].outWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _saturationOverTime.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _brightnessOverTime.m_Curve.Array.data[0].outSlope
+      value: -0.12432943
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _brightnessOverTime.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _brightnessOverTime.m_Curve.Array.data[1].outSlope
+      value: -0.12432943
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _saturationOverTime.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _saturationOverTime.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _brightnessOverTime.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _contrastOverTime.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _contrastOverTime.m_Curve.Array.data[1].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _saturationOverTime.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _brightnessOverTime.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _brightnessOverTime.m_Curve.Array.data[1].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _saturationOverTime.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921355587183098480, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
+      propertyPath: _saturationOverTime.m_Curve.Array.data[1].tangentMode
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 3711983908653721356, guid: b8510bb2236ece24a9dad0b5bcb58692, type: 3}
       propertyPath: m_RootOrder

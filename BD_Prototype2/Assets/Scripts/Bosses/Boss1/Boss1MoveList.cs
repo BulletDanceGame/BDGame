@@ -44,7 +44,6 @@ public class Boss1MoveList : Movelist
     public float dashSpeed;
     private bool _isDasing;
     private float _dashTime;
-    private float _dashTimeLeft;
     public GameObject dashEffect;
     [SerializeField] Vector3 _afterImageOffset;
     public SpriteRenderer Torso;
@@ -82,7 +81,7 @@ public class Boss1MoveList : Movelist
     [SerializeField] private int _beatsCanisterReticleDuration;
     [SerializeField] private int _beatsCanisterDropQUEUE;
 
-    private bool _wallCheck;
+    private bool _wallCheck=false;
 
     //Animation
     private BulletDance.Animation.UnitAnimationHandler _animHandler;
@@ -334,10 +333,13 @@ public class Boss1MoveList : Movelist
             _wallCheck = true;
             ContactPoint2D contact = collision.contacts[0];
         }
-        else
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
         {
             _wallCheck = false;
-
         }
     }
 
@@ -345,7 +347,15 @@ public class Boss1MoveList : Movelist
     {
         if (healthController.isDead)
             return;
-        if (_wallCheck) return;
+        if (_wallCheck)
+        {
+            _direction = 0;
+            _rb.velocity = Vector2.zero;
+            afterimagetimer = 0;
+            _animHandler?.DashStop();
+            _dashTime = 0;
+            return;
+        }
         
         if (healthController.isLastHit == false)
         {

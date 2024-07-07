@@ -172,6 +172,7 @@ namespace AK
         static const AkUniqueID PLAY_LAYER1_ENVIRONMENT_PART4__BPM130_ = 98065286U;
         static const AkUniqueID PLAY_LAYER1_ENVIRONMENT_PART4__BPM140_ = 2212780921U;
         static const AkUniqueID PLAY_LAYER1_ENVIRONMENT_PART4__BPM150_ = 166161648U;
+        static const AkUniqueID PLAY_MOVING_TO_THE_SIDE = 2755497806U;
         static const AkUniqueID PLAY_TRAINING___INTRO = 588830433U;
         static const AkUniqueID PLAY_TRAINING___PART_1 = 4026880622U;
         static const AkUniqueID PLAY_TRAINING___PART_2 = 4026880621U;
@@ -268,6 +269,19 @@ namespace AK
             } // namespace STATE
         } // namespace DYNAMICGAMEPLAYSFX
 
+        namespace FAILLEVEL
+        {
+            static const AkUniqueID GROUP = 779133449U;
+
+            namespace STATE
+            {
+                static const AkUniqueID FIRST = 998496889U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID SECOND = 3476314365U;
+                static const AkUniqueID THIRD = 931160808U;
+            } // namespace STATE
+        } // namespace FAILLEVEL
+
         namespace HURT
         {
             static const AkUniqueID GROUP = 3193947170U;
@@ -316,6 +330,9 @@ namespace AK
         static const AkUniqueID HIGH_PASS____CUTSCENESFX__GENERAL__AUDIBLEONSPEEDUP = 1961333805U;
         static const AkUniqueID HIGH_PASS____CUTSCENESFX__VOICELINES = 86843165U;
         static const AkUniqueID HIGH_PASS____MUSICBOSSBATTLE = 2655220193U;
+        static const AkUniqueID HIGH_PASS____MUSICENVBATTLE = 1900464655U;
+        static const AkUniqueID HIGH_PASS____MUSICENVROAMING = 1651932202U;
+        static const AkUniqueID HIGH_PASS____PLAYERDAMAGE = 1489920679U;
         static const AkUniqueID HITSLOMO_ONLY_HERE_FOR_REFERENCE_OF_MAX_COMBO_STUFF = 3366454963U;
         static const AkUniqueID LOW_PASS____BOSSACTIONS = 2622221165U;
         static const AkUniqueID LOW_PASS____BOSSDAMAGE = 2055487999U;
