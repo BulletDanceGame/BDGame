@@ -14,7 +14,7 @@ public class PlayerRhythm : MonoBehaviour
 {
     public static PlayerRhythm Instance;
 
-    public double offsetAudio;
+    public double offsetVisuals;
     public double offsetSwing;
     public double offsetDash;
 
@@ -39,8 +39,6 @@ public class PlayerRhythm : MonoBehaviour
     }
     private VisualUpdate[] visualUpdates = new VisualUpdate[5];
     
-    private VisualUpdate everyUpdate;
-
 
     //for hitting 
     [SerializeField] private double _perfectHitTime;
@@ -63,7 +61,6 @@ public class PlayerRhythm : MonoBehaviour
         visualUpdates[3] = new VisualUpdate(); visualUpdates[3].anticipation = 8;
         visualUpdates[4] = new VisualUpdate(); visualUpdates[4].anticipation = 12;
 
-        everyUpdate = new VisualUpdate(); everyUpdate.anticipation = 0;
     }
 
 
@@ -126,13 +123,16 @@ public class PlayerRhythm : MonoBehaviour
 
         //times
         //starttime changes because of possible different bpm
-        if (!cut)
+        if (cut == false)
         {
-            _startTime = Time.timeAsDouble + offsetAudio + _timeOfSequence + delay;
+            _startTime = Time.timeAsDouble + _timeOfSequence + delay;
         }
 
 
-        //print("starttime " + _startTime);
+        print("starttime " + _startTime);
+        print("starttime t " + Time.timeAsDouble);
+        print("starttime s " + _timeOfSequence);
+        print("starttime d " + delay);
         _timeOfSequence = nextSequence.duration * spb;
 
         int startBeat = MusicManager.Instance.lastBeatOfSequence + 1;
@@ -141,7 +141,7 @@ public class PlayerRhythm : MonoBehaviour
         {
             //for checking swings and dashes
             _timesToHit.Add(_startTime + (spb * (beat - startBeat)));
-            //print("hit " + (beat - startBeat) + " " + _timesToHit[^1]);
+            print("hit " + (beat - startBeat) + " " + _timesToHit[^1]);
 
             //for times
             //needs to check for the last one better
@@ -149,16 +149,16 @@ public class PlayerRhythm : MonoBehaviour
             int index = _playerBeats.IndexOf(beat) + 1;
             if (index != _playerBeats.Count)
             {
-                (double, int) a = (_startTime + (spb * (beat - startBeat)), _playerBeats[index] - beat);
+                (double, int) a = (_startTime + (spb * (beat - startBeat) + offsetVisuals), _playerBeats[index] - beat);
                 _times.Add(a);
             }
 
             foreach (VisualUpdate v in visualUpdates)
             {
                 int a = beat - v.anticipation;
-                double b = _startTime + (spb * (a - startBeat));// + 0.1f;
                 if (a >= 0)
                 {
+                    double b = _startTime + (spb * (a - startBeat)) + offsetVisuals;// + 0.1f;
                     v.timesToUpdate.Add(b);
                     v.beats.Add(beat);
 
@@ -168,12 +168,6 @@ public class PlayerRhythm : MonoBehaviour
         }
 
         _playerBeats.Clear();
-
-        //for each beat in sequence
-        for (int i = 0; i < nextSequence.duration; i++)
-        {
-            everyUpdate.timesToUpdate.Add(_startTime + (spb * i)); //-antitipcation
-        }
 
     }
 
@@ -264,9 +258,34 @@ public class PlayerRhythm : MonoBehaviour
 
     }
 
-    public BeatTiming GetBeatTimingSwing()
+    public void UpdateOffsetVisuals(double newOffset)
     {
-        double timeDiff = GetHitDelaySwing();
+
+        double change = newOffset - offsetVisuals;
+
+        foreach (VisualUpdate v in visualUpdates)
+        {
+            for( int t = 0; t < v.timesToUpdate.Count; t++)
+            {
+                v.timesToUpdate[t] += change;
+            }
+
+        }
+
+        for (int t = 0; t < _times.Count; t++)
+        {
+            (double, int) time = _times[t];
+            time.Item1 += change;
+            _times[t] = time;
+        }
+
+        offsetVisuals = newOffset;
+    } 
+
+
+    public BeatTiming GetBeatTiming(ButtonInput input)
+    {
+        double timeDiff = GetHitDelay(input);
 
         BeatTiming timing;
 
@@ -293,7 +312,7 @@ public class PlayerRhythm : MonoBehaviour
     double max = -999;
     double min = 999;
 
-    public double GetHitDelaySwing()
+    public double GetHitDelay(ButtonInput input)
     {
         if (_timesToHit.Count == 0)
         {
@@ -301,12 +320,13 @@ public class PlayerRhythm : MonoBehaviour
         }
 
         double time = Time.timeAsDouble;
+        double offset = (input == ButtonInput.swing) ? offsetSwing : offsetDash;
 
         double a = double.MaxValue;
         int index = 0;
         for (int i = _timesToHit.Count - 1; i >= 0; i--)
         {
-            double b = Math.Abs(time - (_timesToHit[i] + offsetSwing));
+            double b = Math.Abs(time - (_timesToHit[i] + offset));
 
             if (b < a)
             {
@@ -316,7 +336,7 @@ public class PlayerRhythm : MonoBehaviour
         }
 
 
-        double timeDiff = time - (_timesToHit[index] + offsetSwing);
+        double timeDiff = time - (_timesToHit[index] + offset);
         print("delay: " + timeDiff + " time " + Time.timeAsDouble);
 
         diff += timeDiff;
@@ -333,51 +353,6 @@ public class PlayerRhythm : MonoBehaviour
         return timeDiff;
     }
 
-
-
-
-    public BeatTiming GetHitStateDash()
-    {
-        if (_timesToHit.Count == 0)
-        {
-            return BeatTiming.BAD;
-        }
-
-        double time = Time.timeAsDouble;
-
-        double a = double.MaxValue;
-        int index = 0;
-        for (int i = _timesToHit.Count - 1; i >= 0; i--)
-        {
-            double b = Math.Abs(time - (_timesToHit[i] + offsetDash));
-
-            if (b < a)
-            {
-                index = i;
-                a = b;
-            }
-        }
-        double timeDiff = time - (_timesToHit[index] + offsetDash);
-
-
-
-        BeatTiming timing;
-
-        if (Math.Abs(timeDiff) <= _perfectHitTime)
-        {
-            timing = BeatTiming.PERFECT;
-        }
-        else if (Math.Abs(timeDiff) <= _okayHitTime)
-        {
-            timing = BeatTiming.GOOD;
-        }
-        else
-        {
-            timing = BeatTiming.BAD;
-        }
-
-        return timing;
-    }
 
 
     private void RemoveOldBeats()

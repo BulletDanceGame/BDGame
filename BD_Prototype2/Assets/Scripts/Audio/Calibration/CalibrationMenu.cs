@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CalibrationMenu : MonoBehaviour
 {
@@ -25,6 +26,12 @@ public class CalibrationMenu : MonoBehaviour
             _screens[_currentScreen].SetActive(false);
             _currentScreen += i;
             _screens[_currentScreen].SetActive(true);
+            
+            if (MainMenu.currentController == ControllerType.GAMEPAD)
+            {
+                MainMenu.currentButton = _screens[_currentScreen].GetComponentInChildren<Button>();
+                MainMenu.currentButton.Select();
+            }
         }
     }
 }

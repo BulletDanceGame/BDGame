@@ -184,7 +184,7 @@ public class PlayerMovement : MonoBehaviour
 
         StartDashPosition = transform.position;
 
-        BeatTiming hitTiming = PlayerRhythm.Instance.GetHitStateDash();
+        BeatTiming hitTiming = PlayerRhythm.Instance.GetBeatTiming(ButtonInput.dash);
 
         if (dashOnBeat) { 
             switch (hitTiming)

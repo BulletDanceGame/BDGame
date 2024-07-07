@@ -163,7 +163,8 @@ public class BulletFX : MonoBehaviour
 
     void Update()
     {
-        ManageIndicator();
+        //indicator!
+        //ManageIndicator();
     }
 
     void ManageIndicator()

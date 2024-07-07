@@ -107,6 +107,7 @@ public class SoundManager : MonoBehaviour
         sfxPlayer.SetSound(sound);
 
         sound.Post(sfxPlayer.player);
+
     }
 
 
