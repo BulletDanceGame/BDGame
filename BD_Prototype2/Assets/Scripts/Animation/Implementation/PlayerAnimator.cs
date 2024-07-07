@@ -72,12 +72,12 @@ public class PlayerAnimator : UnitAnimator
         if(playbackPoint < 0.9) return;
 
         _spriteAnimator.SetLayerWeight("Sprite Act", 0);
-        _spriteAnimator.SetLayerWeight("Hair Act", 0);
+        //_spriteAnimator.SetLayerWeight("Hair Act", 0);
 
         int isWalkState = _isWalk ? 1 : 0;
         _spriteAnimator.SetState(isWalkState);
         _spriteAnimator.SetLayerWeight("Sprite Walk", isWalkState);
-        _spriteAnimator.SetLayerWeight("Hair Walk", isWalkState);
+        //_spriteAnimator.SetLayerWeight("Hair Walk", isWalkState);
     }
 
     protected override void Update() 
@@ -93,7 +93,7 @@ public class PlayerAnimator : UnitAnimator
 
         float _walkLayerVisibility = _isWalk ? 1f : 0f;
         _spriteAnimator.SetLayerWeight("Sprite Walk", _walkLayerVisibility);
-        _spriteAnimator.SetLayerWeight("Hair Walk",   _walkLayerVisibility);
+        //_spriteAnimator.SetLayerWeight("Hair Walk",   _walkLayerVisibility);
 
         if(_isWalk)
             _spriteAnimator.Anim((int)AnimAction.Walk);
@@ -231,7 +231,7 @@ public class PlayerAnimator : UnitAnimator
         _spriteAnimator.Anim("Walk", playAtPoint, "Hair Walk");
         _spriteAnimator.SetSpeed(1f / GetDuration(_beatDuration, NoteDuration.Half));
         _spriteAnimator.SetLayerWeight("Sprite Walk", 1);
-        _spriteAnimator.SetLayerWeight("Hair Walk",   1);
+        //_spriteAnimator.SetLayerWeight("Hair Walk",   1);
     }
 
 
@@ -249,10 +249,9 @@ public class PlayerAnimator : UnitAnimator
 
         _spriteAnimator.Anim(AnimAction.Dash);
         _spriteAnimator.SetLayerWeight("Sprite Act", 1);
-        _spriteAnimator.SetLayerWeight("Hair Act",   1);
+        //_spriteAnimator.SetLayerWeight("Hair Act",   1);
         //_spriteAnimator.SetSpeed(1f / GetDuration(_beatDuration, NoteDuration.Sixteenth));
     }
-
 
     void Attack(BeatTiming hitTiming, Vector2 direction)
     {
@@ -266,9 +265,22 @@ public class PlayerAnimator : UnitAnimator
 
         _spriteAnimator.Anim(AnimAction.Attack);
         _spriteAnimator.SetLayerWeight("Sprite Act", 1);
-        _spriteAnimator.SetLayerWeight("Hair Act",   1);
+        //_spriteAnimator.SetLayerWeight("Hair Act",   1);
         //_spriteAnimator.SetSpeed(1f / GetDuration(_beatDuration, NoteDuration.Sixteenth));
+
+        if(hitTiming == BeatTiming.PERFECT)
+            AttackAfterImage();
     }
+
+    [SerializeField]
+    private SpriteRenderer _atkAfterImgRdr, _spRdr;
+
+    void AttackAfterImage()
+    {
+        _atkAfterImgRdr.sprite = _spRdr.sprite;
+        //_spriteAnimator.SetLayerWeight("Hair Act",   1);
+    }
+
 
 
     void Damage(float none)
