@@ -1814,7 +1814,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{7E68290B-4919-60A1-F4AC-D5B4F55AF4BC}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{7820638D-177A-FFD2-AA31-6D44DB9724A0}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -1918,9 +1918,11 @@
 					<ShortName>holy shi-.wav</ShortName>
 					<CachePath>SFX/holy shi-_AF98A1DE.wem</CachePath>
 				</File>
-				<File Id="233848723" Language="SFX" Streaming="false" Location="Memory">
+				<File Id="233848723" Language="SFX" Streaming="true" Location="Memory">
 					<ShortName>swing.wav</ShortName>
+					<Path>Media/233848723.wem</Path>
 					<CachePath>SFX/swing_DFFA82B5.wem</CachePath>
+					<PrefetchSize>19344</PrefetchSize>
 				</File>
 				<File Id="236322927" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>swing.wav</ShortName>
@@ -1962,9 +1964,11 @@
 					<ShortName>huh.wav</ShortName>
 					<CachePath>SFX/huh_10C4C929.wem</CachePath>
 				</File>
-				<File Id="388151919" Language="SFX" Streaming="false" Location="Memory">
+				<File Id="388151919" Language="SFX" Streaming="true" Location="Memory">
 					<ShortName>swing.wav</ShortName>
+					<Path>Media/388151919.wem</Path>
 					<CachePath>SFX/swing_C1563976.wem</CachePath>
+					<PrefetchSize>19344</PrefetchSize>
 				</File>
 				<File Id="388566452" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>kiddin me.wav</ShortName>
@@ -1990,9 +1994,11 @@
 					<ShortName>Deflection Hit - Transition To Player Theme.wav</ShortName>
 					<CachePath>SFX/Deflection Hit - Transition To Player Theme_358CBFF6.wem</CachePath>
 				</File>
-				<File Id="446241439" Language="SFX" Streaming="false" Location="Memory">
+				<File Id="446241439" Language="SFX" Streaming="true" Location="Memory">
 					<ShortName>badSwing.wav</ShortName>
+					<Path>Media/446241439.wem</Path>
 					<CachePath>SFX/badSwing_7761E626.wem</CachePath>
+					<PrefetchSize>19344</PrefetchSize>
 				</File>
 				<File Id="461074106" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>dashVoiceOver3.wav</ShortName>
@@ -2034,9 +2040,11 @@
 					<ShortName>noStaminaV8.wav</ShortName>
 					<CachePath>SFX/noStaminaV8_10C4C929.wem</CachePath>
 				</File>
-				<File Id="551485198" Language="SFX" Streaming="false" Location="Memory">
+				<File Id="551485198" Language="SFX" Streaming="true" Location="Memory">
 					<ShortName>swing.wav</ShortName>
+					<Path>Media/551485198.wem</Path>
 					<CachePath>SFX/swing_10C4C929.wem</CachePath>
+					<PrefetchSize>19344</PrefetchSize>
 				</File>
 				<File Id="557266761" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>footstep4.wav</ShortName>
@@ -2254,9 +2262,11 @@
 					<ShortName>impact10.wav</ShortName>
 					<CachePath>SFX/impact10_10C4C929.wem</CachePath>
 				</File>
-				<File Id="970375371" Language="SFX" Streaming="false" Location="Memory">
+				<File Id="970375371" Language="SFX" Streaming="true" Location="Memory">
 					<ShortName>ching!!Swing.wav</ShortName>
+					<Path>Media/970375371.wem</Path>
 					<CachePath>SFX/ching!!Swing_D72E602E.wem</CachePath>
+					<PrefetchSize>19344</PrefetchSize>
 				</File>
 				<File Id="974159532" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>swing.wav</ShortName>
@@ -2500,7 +2510,6 @@
 					<MediaRefs>
 						<MediaRef Id="446241439"/>
 						<MediaRef Id="551485198"/>
-						<MediaRef Id="629175185"/>
 					</MediaRefs>
 					<PluginRefs>
 						<ShareSets>
@@ -2856,5 +2865,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{37FFCF8A-9DA7-A151-28F8-7CF43E187999}</FileHash>
+	<FileHash>{F72E67F4-048F-7D07-9EF0-427E4B241987}</FileHash>
 </SoundBanksInfo>

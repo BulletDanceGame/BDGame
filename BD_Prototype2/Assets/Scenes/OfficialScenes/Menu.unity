@@ -2395,9 +2395,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f1fff0ab4caec934bb3c4dda37b8d5bb, type: 2}
     - target: {fileID: 5505468170450723979, guid: e25b22e31e409514dba1dac6e3d1031f, type: 3}
+      propertyPath: _bossSpecificSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505468170450723979, guid: e25b22e31e409514dba1dac6e3d1031f, type: 3}
       propertyPath: _dashStep.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: e6b193cee15a11f4894b510c2dac1888, type: 2}
+    - target: {fileID: 5505468170450723979, guid: e25b22e31e409514dba1dac6e3d1031f, type: 3}
+      propertyPath: _levelSpecificSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5505468170450723979, guid: e25b22e31e409514dba1dac6e3d1031f, type: 3}
       propertyPath: _swingGood.WwiseObjectReference
       value: 
@@ -2446,6 +2454,22 @@ PrefabInstance:
       propertyPath: _yokaiHunterVoice.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: e77397bc2e4c44e4ea356376b58f0f8e, type: 2}
+    - target: {fileID: 5505468170450723979, guid: e25b22e31e409514dba1dac6e3d1031f, type: 3}
+      propertyPath: _bossSpecificSounds.Array.data[2].scene
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505468170450723979, guid: e25b22e31e409514dba1dac6e3d1031f, type: 3}
+      propertyPath: _bossSpecificSounds.Array.data[2].prefab
+      value: 
+      objectReference: {fileID: 7432618145986152337, guid: 8f77ada9f38303549a0e8ab563c63b38, type: 3}
+    - target: {fileID: 5505468170450723979, guid: e25b22e31e409514dba1dac6e3d1031f, type: 3}
+      propertyPath: _levelSpecificSounds.Array.data[2].scene
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505468170450723979, guid: e25b22e31e409514dba1dac6e3d1031f, type: 3}
+      propertyPath: _levelSpecificSounds.Array.data[2].prefab
+      value: 
+      objectReference: {fileID: 7432618145986152337, guid: 96f6dfdc5530c384f985a71814f38da4, type: 3}
     - target: {fileID: 6232736872281133249, guid: e25b22e31e409514dba1dac6e3d1031f, type: 3}
       propertyPath: offsetAudio
       value: 0
