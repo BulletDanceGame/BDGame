@@ -371,8 +371,9 @@ public class PlayerSwing : MonoBehaviour
 
 
     // -- Last hit shit -- //
-    void LastHitSwing(BeatTiming none)
+    void LastHitSwing(BeatTiming beatTiming)
     {
+        if(beatTiming == BeatTiming.BAD) return;
         canRotate = false;
         Invoke("EnableRotate", 5.5f);
     }
