@@ -157,6 +157,7 @@ public class EventManager : MonoBehaviour
     //Spawn and death
     public event Action OnPlayerSpawned; //After  player spawned
     public event Action OnPlayerDeath;   //Death
+    public event Action OnWin;
 
     public event Action OnPlayerTired;
     public event Action OnPlayerNormal;
