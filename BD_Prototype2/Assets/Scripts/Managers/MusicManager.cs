@@ -80,6 +80,7 @@ public class MusicManager : MonoBehaviour
         {
             Instance = this;
             Instantiate(bankPrefab, transform);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
