@@ -8,12 +8,13 @@ public class GlitchEffect : MonoBehaviour
     private Image GlitchVFX;
     private Material _material;
     private float Color;
+    private float CircleSize;
 
     public BeatTiming hitTiming { get; private set; }
 
     private void Start()
     {
-        EventManager.Instance.OnPlayerTired += ResetColorStrength;
+        EventManager.Instance.OnPlayerNormal += ResetColorStrength;
 
         EventManager.Instance.OnPlayerAttack += OnGlicthVFX;
         EventManager.Instance.OnPlayerDash   += OnGlicthVFX;
@@ -22,15 +23,19 @@ public class GlitchEffect : MonoBehaviour
         GlitchVFX.enabled = false;
         if (_material == null) return;
         Color = _material.GetFloat("_ColorStrength");
-
-        _material.SetFloat("_ColorStrength", Color);
+        CircleSize = 1.4f;
+        _material.SetFloat("_CircleSize", CircleSize);
 
     }
 
     void ResetColorStrength()
     {
         Color = 0;
+        CircleSize = 1.4f;
         _material.SetFloat("_ColorStrength", Color);
+        _material.SetFloat("_CircleSize", CircleSize);
+        GlitchVFX.enabled = false;
+
     }
 
     void OnGlicthVFX(BeatTiming hitTiming, Vector2 none)
@@ -39,12 +44,15 @@ public class GlitchEffect : MonoBehaviour
         {
             case BeatTiming.PERFECT:
                 GlitchVFX.enabled = false;
-                Color = 0;
+                CircleSize = 1.4f;
+                MangaEffect.Instance.TurnOffFlicker();
                 break;
 
             case BeatTiming.GOOD:
                 GlitchVFX.enabled = false;
-                Color = 0;
+                CircleSize = 1.4f;
+                MangaEffect.Instance.TurnOffFlicker();
+
                 break;
 
             case BeatTiming.BAD:
@@ -53,17 +61,34 @@ public class GlitchEffect : MonoBehaviour
                 break;
             case BeatTiming.NONE:
                 GlitchVFX.enabled = false;
-                Color = 0;
+                CircleSize = 1.4f;
+                MangaEffect.Instance.TurnOffFlicker();
+
                 break;
         }
     }
 
     void OnGlitchDo()
     {
-        Color = Color + 10;
-        _material.SetFloat("_ColorStrength", Color);
+        //1st = 1
+        if (UnitManager.Instance.GetPlayer().GetComponentInChildren<Player>().playerFailState == Player.PlayerFailState.FAILED)
+        {
+            ResetColorStrength();
+            return;
+        }
+        CircleSize = CircleSize-0.25f;
+        MangaEffect.Instance.TriggerFlicker();
+        _material.SetFloat("_CircleSize", CircleSize);
         GlitchVFX.enabled = true;
         //GlitchVFX.enabled = false;
+    }
+
+    private void Update()
+    {
+        if(GlitchVFX.enabled)
+        {
+            //MangaEffect.Instance.TriggerFlicker();
+        }
     }
 
 }

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MangaEffect : MonoBehaviour
 {
+    public static MangaEffect Instance { get; private set; }
+
+
     [SerializeField]
     private float _fxScale = 2000;
     [SerializeField]
@@ -17,6 +20,8 @@ public class MangaEffect : MonoBehaviour
     [SerializeField] 
     private AnimationCurve _saturationOverTime, _contrastOverTime, _brightnessOverTime;
 
+    private bool isFlicker = false;
+    private float timeDelay;
 
 
     private void Start()
@@ -34,6 +39,11 @@ public class MangaEffect : MonoBehaviour
         //Set the beginning key values to initial fx values
         SetInitKeyValue(_contrastOverTime, _initContrast);
         SetInitKeyValue(_brightnessOverTime, _initBrightness);
+
+        if(Instance==null)
+        {
+            Instance = this;
+        }
     }
 
     private void SetInitKeyValue(AnimationCurve curve, float value)
@@ -65,11 +75,42 @@ public class MangaEffect : MonoBehaviour
 
     }
 
+    IEnumerator Flashing()
+    {
+        
+        transform.localScale = new Vector3(8000, 8000, 8000);
+        timeDelay = Random.Range(0.1f, 0.3f);
+        yield return new WaitForSeconds(timeDelay);
+        transform.localScale = new Vector3(0, 0, 0);
+        //timeDelay = Random.Range(0.1f, 0.3f);
+        //yield return new WaitForSeconds(timeDelay);
+        //transform.localScale = new Vector3(8000, 8000, 8000);
+        //timeDelay = Random.Range(0.1f, 0.3f);
+        //yield return new WaitForSeconds(timeDelay);
+        //transform.localScale = new Vector3(0, 0, 0);       
+        //timeDelay = Random.Range(0.1f, 0.3f);
+        //yield return new WaitForSeconds(timeDelay);
+        //transform.localScale = new Vector3(8000, 8000, 8000);
+        //timeDelay = Random.Range(0.1f, 0.3f);
+        //yield return new WaitForSeconds(timeDelay);
+        //transform.localScale = new Vector3(0, 0, 0);
+    }
+
+    public void TriggerFlicker()
+    {
+        StartCoroutine(Flashing());
+    }
+
+    public void TurnOffFlicker()
+    {
+        isFlicker = false;
+    }
+
     void TriggerManga()
     {
         transform.position = UnitManager.Instance.GetPlayer().transform.position;
         _isExpand = true;
-
+        StopCoroutine("Flashing");
         if(routine != null) StopCoroutine(routine);
         routine = StartCoroutine(FadeOut());
     }
