@@ -72,10 +72,15 @@ Event	ID	Name			Wwise Object Path	Notes
 	4281063670	Player__HaventFeltThisGood____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\5 Cutscene SFX\Vs Yokai Huner\Voicelines\Phase 2 to 3\Player__HaventFeltThisGood____PLAY	
 
 State Group	ID	Name			Wwise Object Path	Notes
+	779133449	FailLevel			\Default Work Unit\FailLevel	
 	2782712965	Level			\Default Work Unit\Level	
 	3193947170	Hurt			\Default Work Unit\Hurt	
 
 State	ID	Name	State Group			Notes
+	748895195	None	FailLevel			
+	931160808	Third	FailLevel			
+	998496889	First	FailLevel			
+	3476314365	Second	FailLevel			
 	732432531	YokaiHunterBoss	Level			
 	748895195	None	Level			
 	1762552081	CritterBoss	Level			
@@ -89,8 +94,10 @@ State	ID	Name	State Group			Notes
 
 Custom State	ID	Name	State Group	Owner		Notes
 	54800246	Menu	Level	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\RunningSteps\RunningSteps-Facility		
+	66032144	Second	FailLevel	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Actions - Dynamic\DeflectionSwing - Miss\crack		
 	72233035	CritterBoss	Level	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\RunningSteps\RunningSteps-Facility		
 	325401801	Menu	Level	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\RunningLastStep\RunningLastStep-Facility		
+	448843257	Second	FailLevel	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Actions - Dynamic\DeflectionHit - Miss\d\crack		
 	469410553	Tutorial	Level	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\RunningLastStep\RunningLastStep-Facility		
 	1011375796	Tutorial	Level	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\RunningSteps\RunningSteps-Facility		
 	1067401290	CritterBoss	Level	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\RunningLastStep\RunningLastStep-Facility		
@@ -170,7 +177,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	621395873	heh	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\heh_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\5 Cutscene SFX\Vs Yokai Hunter\Voicelines\Phase 1 to 2\player - heh!\heh		220428
 	621649171	footstep7	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\footstep7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\RunningLastStep\RunningLastStep-Facility\footstep7		540144
 	623377676	doorCloseV7	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\doorCloseV7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\4 Ambient SFX Components\Level 1\Facility\doorShut - General\doorCloseV7		1051000
-	629175185	whiteNoise	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\whiteNoise_783A8FDC.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Actions - Dynamic\DeflectionHit - Miss\d\crack\whiteNoise		8320
+	629175185	whiteNoise	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\whiteNoise_783A8FDC.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Actions - Dynamic\DeflectionSwing - Miss\crack\whiteNoise		8320
 	635655355	now	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\now_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\5 Cutscene SFX\Vs Yokai Hunter\Voicelines\Phase 2 to 3\player - now\now		391860
 	644651350	hurtLowSFX-v2	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\hurtLowSFX-v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Damage\NormalDamage\HurtLow\hurtLowSFX-v2		1253744
 	644993846	Deflection-BaseV2	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\Deflection-BaseV2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Actions - Dynamic\DeflectionHit - Perfect\Bass\Deflection-BaseV2		615344
@@ -215,7 +222,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	963053543	footstep1	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\footstep1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\RunningLastStep\RunningLastStep-Facility\footstep1		550544
 	966982381	impact	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\impact10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\3 Boss SFX\Boss 1 - Yokai Hunter\Damage\LastBulletImpact - ofFight\impact		2883572
 	970375371	ching!!Swing	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\ching!!Swing_D72E602E.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Actions - Dynamic\DeflectionSwing - Perfect\ching!!Swing		688420
-	974159532	swing_01	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\swing_809AC260.wem		\Actor-Mixer Hierarchy\Default Work Unit\5 Cutscene SFX\General SFX\Moving to the side\swing_01		56512
+	974159532	swing_01	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\swing_7B2F148B.wem		\Actor-Mixer Hierarchy\Default Work Unit\5 Cutscene SFX\General SFX\Moving to the side\swing_01		56512
 	981604077	dorodie	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\dorodie_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\5 Cutscene SFX\Vs Yokai Hunter\Voicelines\Phase 2 to 3\player - do or die\dorodie		379000
 	983247324	hair flair up	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\hair flair up_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\5 Cutscene SFX\Vs Yokai Hunter\HairFlairUp\hair flair up		659288
 	990082149	boss - escaped - final2	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\boss - escaped - final2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\5 Cutscene SFX\Vs Yokai Hunter\Voicelines\Intro\boss - escaped\boss - escaped - final2		247000

@@ -204,7 +204,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{E3C8ED54-F29A-128D-B956-F5CF3795A372}">
+		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{B442C29E-AFD9-119D-2E38-594E12D387CB}">
 			<ShortName>Music_TutorialAndLevel1_Part1</ShortName>
 			<Path>Music_TutorialAndLevel1_Part1.bnk</Path>
 			<Media>
@@ -1184,7 +1184,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{9281F5BF-DB6F-4EBC-7B77-E1AFDC1D909B}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{21D54C6C-617F-2868-8BAA-D85611C00791}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1327,6 +1327,14 @@
 						<State Id="748895195" Name="None"/>
 						<State Id="1182670505" Name="Mid"/>
 						<State Id="3550808449" Name="High"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="779133449" Name="FailLevel">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="931160808" Name="Third"/>
+						<State Id="998496889" Name="First"/>
+						<State Id="3476314365" Name="Second"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="2782712965" Name="Level">
@@ -1806,7 +1814,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{CF239A3F-F75C-7E9C-3BB1-CFB4FB4270A5}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{7E68290B-4919-60A1-F4AC-D5B4F55AF4BC}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -2252,7 +2260,7 @@
 				</File>
 				<File Id="974159532" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>swing.wav</ShortName>
-					<CachePath>SFX/swing_809AC260.wem</CachePath>
+					<CachePath>SFX/swing_7B2F148B.wem</CachePath>
 				</File>
 				<File Id="981604077" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>dorodie.wav</ShortName>
@@ -2492,6 +2500,7 @@
 					<MediaRefs>
 						<MediaRef Id="446241439"/>
 						<MediaRef Id="551485198"/>
+						<MediaRef Id="629175185"/>
 					</MediaRefs>
 					<PluginRefs>
 						<ShareSets>
@@ -2847,5 +2856,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{709A33C0-D492-96C5-D51B-877471236695}</FileHash>
+	<FileHash>{37FFCF8A-9DA7-A151-28F8-7CF43E187999}</FileHash>
 </SoundBanksInfo>

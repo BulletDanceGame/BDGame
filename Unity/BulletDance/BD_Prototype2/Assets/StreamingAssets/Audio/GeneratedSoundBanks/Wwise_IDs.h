@@ -269,6 +269,19 @@ namespace AK
             } // namespace STATE
         } // namespace DYNAMICGAMEPLAYSFX
 
+        namespace FAILLEVEL
+        {
+            static const AkUniqueID GROUP = 779133449U;
+
+            namespace STATE
+            {
+                static const AkUniqueID FIRST = 998496889U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID SECOND = 3476314365U;
+                static const AkUniqueID THIRD = 931160808U;
+            } // namespace STATE
+        } // namespace FAILLEVEL
+
         namespace HURT
         {
             static const AkUniqueID GROUP = 3193947170U;

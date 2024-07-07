@@ -1241,6 +1241,31 @@
 															</ActiveSourceList>
 														</Sound>
 													</ChildrenList>
+													<StateInfo>
+														<StateGroupList>
+															<StateGroupInfo>
+																<StateGroupRef Name="FailLevel" ID="{9C48E57F-60D5-4657-A950-966EC2AC4B67}"/>
+															</StateGroupInfo>
+														</StateGroupList>
+														<CustomStateList>
+															<CustomState>
+																<StateRef Name="First" ID="{77E65DC6-FBF8-4335-B858-D009AFF398E0}"/>
+																<CustomState Name="" ID="{988B7B6F-61FA-4B39-AE52-047E810CC90B}" ShortID="1063561702"/>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="Third" ID="{682DCBA2-FF66-4788-81DB-A484C262F077}"/>
+																<CustomState Name="" ID="{FFB81A59-6CBC-434E-AA99-56AD98BE2696}" ShortID="128243076"/>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="Second" ID="{AD4E999A-60A0-4DB2-97B5-A620A6A812BC}"/>
+																<CustomState Name="" ID="{AC63B18F-8BF2-49D1-B563-B8F895F5C98F}" ShortID="448843257">
+																	<PropertyList>
+																		<Property Name="Volume" Type="Real64" Value="5"/>
+																	</PropertyList>
+																</CustomState>
+															</CustomState>
+														</CustomStateList>
+													</StateInfo>
 												</RandomSequenceContainer>
 											</ChildrenList>
 										</BlendContainer>
@@ -1566,6 +1591,87 @@
 												<ActiveSource Name="badSwing" ID="{CE09FE95-294E-429A-8731-19D184F3325E}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<RandomSequenceContainer Name="crack" ID="{BCBAD1A0-FF64-45A7-A79D-D1048392B4B4}" ShortID="568853451">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+													<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Actions - Dynamic" ID="{7FE5CDA2-16AE-4E17-A00E-BBABAEFF1BD9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="whiteNoise" ID="{E8AA15FB-8AC7-4073-8C52-16FCEBFC5A29}" ShortID="494548077">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>-2400</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="whiteNoise" ID="{A892708B-9570-4234-9086-F290E244870C}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.00689684715558602"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.0425805346127484"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>whiteNoise.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="629175185"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="whiteNoise" ID="{A892708B-9570-4234-9086-F290E244870C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo>
+														<StateGroupRef Name="FailLevel" ID="{9C48E57F-60D5-4657-A950-966EC2AC4B67}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="First" ID="{77E65DC6-FBF8-4335-B858-D009AFF398E0}"/>
+														<CustomState Name="" ID="{43F8396E-708D-4D85-AD44-0FA3B9BE5EC2}" ShortID="130716638"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Third" ID="{682DCBA2-FF66-4788-81DB-A484C262F077}"/>
+														<CustomState Name="" ID="{5214D8F1-EE60-40CF-A33A-463547CE2CFE}" ShortID="850057926"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Second" ID="{AD4E999A-60A0-4DB2-97B5-A620A6A812BC}"/>
+														<CustomState Name="" ID="{AF45CB19-41EB-4DE6-A22C-351134A6F0CB}" ShortID="66032144">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64" Value="5"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
+										</RandomSequenceContainer>
 									</ChildrenList>
 								</BlendContainer>
 								<BlendContainer Name="DeflectionSwing - Perfect" ID="{194585E4-ADB1-49AA-9247-9E0840E06B13}" ShortID="88038648">
