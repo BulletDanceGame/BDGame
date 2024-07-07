@@ -23629,7 +23629,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4965368519079282173
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30211,7 +30211,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 56.8}
+  m_AnchoredPosition: {x: 0, y: 71}
   m_SizeDelta: {x: 558.514, y: 56.8153}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &777393783833160757
@@ -30242,7 +30242,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Test out your results!
+  m_text: 'Test out your results!
+
+    If your hits are still late or early, go back
+    and try to recalibrate!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1b10cfeb4f01fbe4fa0aa7db152041bb, type: 2}
   m_sharedMaterial: {fileID: 8190758650217385867, guid: 1b10cfeb4f01fbe4fa0aa7db152041bb, type: 2}
@@ -37600,7 +37603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1582180603347747459
 RectTransform:
   m_ObjectHideFlags: 0

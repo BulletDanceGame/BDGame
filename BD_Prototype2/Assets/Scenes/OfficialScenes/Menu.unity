@@ -415,7 +415,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &456404235
 PrefabInstance:
@@ -2223,7 +2223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6710018584511685657, guid: 2a711a114b2d93d4583bb2324a7f3633, type: 3}
       propertyPath: _sceneToLoadOnPlay
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7743887161534964032, guid: 2a711a114b2d93d4583bb2324a7f3633, type: 3}
       propertyPath: ball
@@ -2627,55 +2627,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4965368518681059131, guid: 2a711a114b2d93d4583bb2324a7f3633, type: 3}
   m_PrefabInstance: {fileID: 456404235}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1424950112
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1424950114}
-  - component: {fileID: 1424950113}
-  m_Layer: 0
-  m_Name: PlayerRhythm
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1424950113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424950112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a59534e61cb9c2944aee28677e960b08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offsetVisuals: 0
-  offsetSwing: 0
-  offsetDash: 0
-  _perfectHitTime: 0.12
-  _okayHitTime: 0.06
---- !u!4 &1424950114
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424950112}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1509762071 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3443132139122970972, guid: af703b0c755146043ac4a170eecfb491, type: 3}

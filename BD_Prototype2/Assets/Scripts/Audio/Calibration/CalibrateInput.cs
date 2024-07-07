@@ -151,12 +151,25 @@ public class CalibrateInput : MonoBehaviour
     //Called through Button Press
     public void ChangeOffset(int i)
     {
-        PlayerRhythm.Instance.offsetSwing += i * 0.010;
+        if (input == ButtonInput.swing)
+        {
+            PlayerRhythm.Instance.offsetSwing += i * 0.010;
 
-        double offset = PlayerRhythm.Instance.offsetSwing / secondsPerBeat;
-        offsetMarker.transform.localPosition = new Vector3(112.5f + 75f * (float)offset, 0, 0);
+            double offset = PlayerRhythm.Instance.offsetSwing / secondsPerBeat;
+            offsetMarker.transform.localPosition = new Vector3(112.5f + 75f * (float)offset, 0, 0);
 
-        offsetText.text = "Offset: " + PlayerRhythm.Instance.offsetSwing * 1000 + "ms";
+            offsetText.text = "Offset: " + PlayerRhythm.Instance.offsetSwing * 1000 + "ms";
+        }
+        else //dash
+        {
+            PlayerRhythm.Instance.offsetDash += i * 0.010;
+
+            double offset = PlayerRhythm.Instance.offsetDash / secondsPerBeat;
+            offsetMarker.transform.localPosition = new Vector3(112.5f + 75f * (float)offset, 0, 0);
+
+            offsetText.text = "Offset: " + PlayerRhythm.Instance.offsetDash * 1000 + "ms";
+        }
+        
     }
 
 

@@ -39,8 +39,6 @@ public class PlayerRhythm : MonoBehaviour
     }
     private VisualUpdate[] visualUpdates = new VisualUpdate[5];
     
-    private VisualUpdate everyUpdate;
-
 
     //for hitting 
     [SerializeField] private double _perfectHitTime;
@@ -63,7 +61,6 @@ public class PlayerRhythm : MonoBehaviour
         visualUpdates[3] = new VisualUpdate(); visualUpdates[3].anticipation = 8;
         visualUpdates[4] = new VisualUpdate(); visualUpdates[4].anticipation = 12;
 
-        everyUpdate = new VisualUpdate(); everyUpdate.anticipation = 0;
     }
 
 
@@ -144,7 +141,7 @@ public class PlayerRhythm : MonoBehaviour
         {
             //for checking swings and dashes
             _timesToHit.Add(_startTime + (spb * (beat - startBeat)));
-            print("hit " + (beat - startBeat) + " " + (Time.realtimeSinceStartupAsDouble + (spb * (beat - startBeat))));//_timesToHit[^1]);
+            print("hit " + (beat - startBeat) + " " + _timesToHit[^1]);
 
             //for times
             //needs to check for the last one better
@@ -171,12 +168,6 @@ public class PlayerRhythm : MonoBehaviour
         }
 
         _playerBeats.Clear();
-
-        //for each beat in sequence
-        for (int i = 0; i < nextSequence.duration; i++)
-        {
-            everyUpdate.timesToUpdate.Add(_startTime + (spb * i)); //-antitipcation
-        }
 
     }
 
