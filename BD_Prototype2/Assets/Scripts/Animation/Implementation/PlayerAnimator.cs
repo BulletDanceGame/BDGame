@@ -144,22 +144,22 @@ public class PlayerAnimator : UnitAnimator
         {( 1,  1), Direction.Right}//Up}
     };
 
-    private static readonly Dictionary<Direction, float> HairDirectionLookup = new Dictionary<Direction, float>
+    private static readonly Dictionary<(int x, int y), Vector3> DirectionAngleLookup = new Dictionary<(int x, int y), Vector3>
     {
-        {Direction.Front, 0f},
-        {Direction.Back,  1f},
-        {Direction.Left,  2f},
-        {Direction.Right, 3f}
-        //{Direction.LeftDown, 2f},
-        //{Direction.LeftUp, 2f},
-        //{Direction.RightDown, 3f},
-        //{Direction.RightUp, 3f}
+        {( 0, -1), Vector3.zero},
+        {( 0,  1), new Vector3(0, 0, 180f) },
+        {(-1,  0), new Vector3(0, 0, 180f) },
+        {( 1,  0), new Vector3(0, 0, -90f) },
+        {(-1, -1), new Vector3(0, 0, 90f) },//Down},
+        {(-1,  1), new Vector3(0, 0, -90f) },//Up},
+        {( 1, -1), new Vector3(0, 0, -90f) },//Down},
+        {( 1,  1), new Vector3(0, 0, 90f) }//Up}
     };
 
     protected override void SetAnimationDirection(Direction direction)
     {
         base.SetAnimationDirection(direction);
-        _spriteAnimator.SetFloat("HairDirection", HairDirectionLookup[direction]);
+        //_spriteAnimator.SetFloat("HairDirection", HairDirectionLookup[direction]);
     }
 
 
@@ -269,16 +269,22 @@ public class PlayerAnimator : UnitAnimator
         //_spriteAnimator.SetSpeed(1f / GetDuration(_beatDuration, NoteDuration.Sixteenth));
 
         if(hitTiming == BeatTiming.PERFECT)
-            AttackAfterImage();
+            AttackAfterImage(direction);
     }
 
     [SerializeField]
     private SpriteRenderer _atkAfterImgRdr, _spRdr;
+    [SerializeField]
+    private Transform _splatterDir;
 
-    void AttackAfterImage()
+    void AttackAfterImage(Vector2 direction)
     {
-        _atkAfterImgRdr.sprite = _spRdr.sprite;
-        //_spriteAnimator.SetLayerWeight("Hair Act",   1);
+        _spriteAnimator.SetTrigger("Perfect");
+        if(_atkAfterImgRdr == null) return;
+        transform.position = _spRdr.transform.parent.position;
+        _atkAfterImgRdr.sprite     = _spRdr.sprite;
+        _splatterDir.eulerAngles   = DirectionAngleLookup[((int)direction.x, (int)direction.y)];
+        _splatterDir.localPosition = Vector3.zero;
     }
 
 
