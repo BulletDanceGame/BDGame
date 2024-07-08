@@ -144,16 +144,12 @@ public class PlayerAnimator : UnitAnimator
         {( 1,  1), Direction.Right}//Up}
     };
 
-    private static readonly Dictionary<(int x, int y), Vector3> DirectionAngleLookup = new Dictionary<(int x, int y), Vector3>
+    private static readonly Dictionary<Direction, Vector3> DirectionAngleLookup = new Dictionary<Direction, Vector3>
     {
-        {( 0, -1), Vector3.zero},
-        {( 0,  1), new Vector3(0, 0, 180f) },
-        {(-1,  0), new Vector3(0, 0, 180f) },
-        {( 1,  0), new Vector3(0, 0, -90f) },
-        {(-1, -1), new Vector3(0, 0, 90f) },//Down},
-        {(-1,  1), new Vector3(0, 0, -90f) },//Up},
-        {( 1, -1), new Vector3(0, 0, -90f) },//Down},
-        {( 1,  1), new Vector3(0, 0, 90f) }//Up}
+        {Direction.Front, Vector3.zero},
+        {Direction.Back, new Vector3(0, 0, 180f) },
+        {Direction.Left, new Vector3(0, 0, -90f) },
+        {Direction.Right, new Vector3(0, 0, 90f) }
     };
 
     protected override void SetAnimationDirection(Direction direction)
@@ -283,7 +279,7 @@ public class PlayerAnimator : UnitAnimator
         if(_atkAfterImgRdr == null) return;
         transform.position = _spRdr.transform.parent.position;
         _atkAfterImgRdr.sprite     = _spRdr.sprite;
-        _splatterDir.eulerAngles   = DirectionAngleLookup[((int)direction.x, (int)direction.y)];
+        _splatterDir.eulerAngles   = DirectionAngleLookup[GetAnimationDirectionTowards(direction)];
         _splatterDir.localPosition = Vector3.zero;
     }
 
