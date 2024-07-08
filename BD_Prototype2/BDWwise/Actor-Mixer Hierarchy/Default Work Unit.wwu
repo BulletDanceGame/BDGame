@@ -599,6 +599,11 @@
 												</Sound>
 												<BlendContainer Name="Missed Notes" ID="{58B6416D-769C-47E8-BA66-BCE2FE9ED404}" ShortID="579776845">
 													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
 																<Value>3</Value>
@@ -1273,6 +1278,155 @@
 														</CustomStateList>
 													</StateInfo>
 												</RandomSequenceContainer>
+												<Sound Name="testing failed hit" ID="{9E387065-6F94-43D4-B5DD-9578D072C5FA}" ShortID="922439344">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>-280</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="testing failed hit" ID="{A43A8B2D-1268-4ED9-A80E-030AB740B3F5}">
+															<Language>SFX</Language>
+															<AudioFile>testing failed hit.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="773572504"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="testing failed hit" ID="{A43A8B2D-1268-4ED9-A80E-030AB740B3F5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<BlendContainer Name="bruh" ID="{14DA0786-56FE-41A8-811A-D6ACB88B8B6A}" ShortID="1056758186">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>-280</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+															<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="hits" ID="{D7B87C37-E977-45B8-ADB4-04D48D587A9A}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="bad noise glitc" ID="{4C32EDE2-8170-4778-978C-5B9A479577B2}" ShortID="611202115">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="bad noise glitc" ID="{62C56224-419E-4482-8E7E-18ACE4B9E2D0}">
+																	<Language>SFX</Language>
+																	<AudioFile>bad noise glitc.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="307742708"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="bad noise glitc" ID="{62C56224-419E-4482-8E7E-18ACE4B9E2D0}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="white noise glitch" ID="{1E01885F-F207-488F-B7B3-A5CC075CA7C4}" ShortID="841120373">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="white noise glitch" ID="{50247CB6-9B03-484B-89CC-6ECB1422A86B}">
+																	<Language>SFX</Language>
+																	<AudioFile>white noise glitch.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1019591417"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="white noise glitch" ID="{50247CB6-9B03-484B-89CC-6ECB1422A86B}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</BlendContainer>
+												<Sound Name="second test" ID="{5C45ECC4-8BD9-4F4E-BA95-C92D2ECD624B}" ShortID="265543526">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>-280</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>2</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+															<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="hits" ID="{D7B87C37-E977-45B8-ADB4-04D48D587A9A}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="second test" ID="{1A47AF09-F950-487F-BE3D-1D0ED2F81060}">
+															<Language>SFX</Language>
+															<AudioFile>second test.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="352026798"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="second test" ID="{1A47AF09-F950-487F-BE3D-1D0ED2F81060}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
 										</BlendContainer>
 									</ChildrenList>
@@ -1396,11 +1550,6 @@
 								</BlendContainer>
 								<BlendContainer Name="DeflectionSwing - Miss" ID="{627FF7ED-9E9B-4A2A-814C-A74CBB681B6C}" ShortID="675501166">
 									<PropertyList>
-										<Property Name="Highpass" Type="int16">
-											<ValueList>
-												<Value>34</Value>
-											</ValueList>
-										</Property>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
 												<Value>3</Value>
@@ -1431,6 +1580,11 @@
 									<ChildrenList>
 										<Sound Name="badSwing" ID="{5DF31AE0-18B5-4505-B31E-FD00DBF5CF4A}" ShortID="608357314">
 											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>34</Value>
+													</ValueList>
+												</Property>
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
@@ -1481,7 +1635,7 @@
 											<PropertyList>
 												<Property Name="Highpass" Type="int16">
 													<ValueList>
-														<Value>20</Value>
+														<Value>54</Value>
 													</ValueList>
 												</Property>
 												<Property Name="IsStreamingEnabled" Type="bool">
@@ -1711,6 +1865,16 @@
 										</RandomSequenceContainer>
 										<BlendContainer Name="Missed Notes" ID="{28F463DF-DEE8-4884-BE26-8E87C029FE49}" ShortID="789361849">
 											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>-370</Value>
@@ -2294,6 +2458,43 @@
 												</RandomSequenceContainer>
 											</ChildrenList>
 										</BlendContainer>
+										<Sound Name="second test" ID="{2D139367-E52E-471F-BA73-D5F3390E3E85}" ShortID="1060635945">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-370</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+													<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="hits" ID="{D7B87C37-E977-45B8-ADB4-04D48D587A9A}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="second test" ID="{E6AF3B09-3DCE-4A1F-841C-48CF73D1FDB6}">
+													<Language>SFX</Language>
+													<AudioFile>second test.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="352026798"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="second test" ID="{E6AF3B09-3DCE-4A1F-841C-48CF73D1FDB6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 								</BlendContainer>
 								<BlendContainer Name="DeflectionSwing - Perfect" ID="{194585E4-ADB1-49AA-9247-9E0840E06B13}" ShortID="88038648">
@@ -8707,7 +8908,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>4</Value>
+												<Value>-1</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -8984,6 +9185,11 @@
 										</Sound>
 										<Sound Name="cooldown v5" ID="{72179F52-F843-402E-9CD0-36CDE2E91FCB}" ShortID="1021161398">
 											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>5</Value>
@@ -9961,6 +10167,69 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="cooldown v6" ID="{FF87B653-40C1-446B-B656-A4A6EA393F1C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="cooldown v8" ID="{0C3E32F6-9FA6-4238-BF28-9F2B8D6EE841}" ShortID="525717818">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="cooldown v8" ID="{4ED362FA-3289-47CD-B7B5-D7902AC64E87}">
+													<Language>SFX</Language>
+													<AudioFile>cooldown v8.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="278663510"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="cooldown v8" ID="{4ED362FA-3289-47CD-B7B5-D7902AC64E87}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="cooldown v9" ID="{6771AEFB-C4D9-4424-A398-6359C4BB6901}" ShortID="689878870">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="cooldown v9" ID="{BE4FE057-48A9-49B7-958B-5B757E6A9969}">
+													<Language>SFX</Language>
+													<AudioFile>cooldown v9.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="245562533"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="cooldown v9" ID="{BE4FE057-48A9-49B7-958B-5B757E6A9969}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
