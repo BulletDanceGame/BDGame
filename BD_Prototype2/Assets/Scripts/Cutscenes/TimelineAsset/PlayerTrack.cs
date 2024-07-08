@@ -93,7 +93,6 @@ public class PlayerTrackMixer : CharacterTrackMixer
     PlayerClip.Animation animState = PlayerClip.Animation.Idle;
     protected override void Animate()
     {
-        Debug.Log(animState);
         if(!requestAnimState || enableUpdate) return;
         player.AnimState((int)animState);
         requestAnimState = false;
