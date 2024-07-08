@@ -275,8 +275,8 @@ public class PlayerAnimator : UnitAnimator
 
     void AttackAfterImage(Vector2 direction)
     {
-        _spriteAnimator.SetTrigger("Perfect");
         if(_atkAfterImgRdr == null) return;
+        _spriteAnimator.SetTrigger("Perfect");
         transform.position = _spRdr.transform.parent.position;
         _atkAfterImgRdr.sprite     = _spRdr.sprite;
         _splatterDir.eulerAngles   = DirectionAngleLookup[GetAnimationDirectionTowards(direction)];
@@ -332,7 +332,7 @@ public class PlayerAnimator : UnitAnimator
         float isActState  = actionState == (int)AnimAction.Dash || actionState == (int)AnimAction.Attack ?
                             1 : 0;
         _spriteAnimator?.SetLayerWeight("Sprite Act", isActState);
-        _spriteAnimator?.SetLayerWeight("Hair Act",   isActState);
+        //_spriteAnimator?.SetLayerWeight("Hair Act",   isActState);
     }
 
     void FreezeFrame(BeatTiming none)
