@@ -36,7 +36,8 @@ public class PlayerAnimator : UnitAnimator
         EventManager.Instance.OnPlayerDash   += Dash;
         EventManager.Instance.OnPlayerAttack += Attack;
 
-        EventManager.Instance.OnPlayerLastHit += FreezeFrame;
+        EventManager.Instance.OnPlayerHitBullet += AttackAfterImage;
+        EventManager.Instance.OnPlayerLastHit   += FreezeFrame;
     }
 
     void UnsubscribePlayerEvents()
@@ -49,7 +50,8 @@ public class PlayerAnimator : UnitAnimator
         EventManager.Instance.OnPlayerDash   -= Dash;
         EventManager.Instance.OnPlayerAttack -= Attack;
 
-        EventManager.Instance.OnPlayerLastHit -= FreezeFrame;
+        EventManager.Instance.OnPlayerHitBullet -= AttackAfterImage;
+        EventManager.Instance.OnPlayerLastHit   -= FreezeFrame;
     }
 
 
@@ -264,22 +266,24 @@ public class PlayerAnimator : UnitAnimator
         //_spriteAnimator.SetLayerWeight("Hair Act",   1);
         //_spriteAnimator.SetSpeed(1f / GetDuration(_beatDuration, NoteDuration.Sixteenth));
 
-        if(hitTiming == BeatTiming.PERFECT)
-            AttackAfterImage(direction);
+        _attackDir = direction;
     }
 
     [SerializeField]
     private SpriteRenderer _atkAfterImgRdr, _spRdr;
     [SerializeField]
     private Transform _splatterDir;
+    private Vector2 _attackDir;
 
-    void AttackAfterImage(Vector2 direction)
+    void AttackAfterImage(BeatTiming hitTiming)
     {
         if(_atkAfterImgRdr == null) return;
+        if(hitTiming != BeatTiming.PERFECT) return;
+
         _spriteAnimator.SetTrigger("Perfect");
         transform.position = _spRdr.transform.parent.position;
         _atkAfterImgRdr.sprite     = _spRdr.sprite;
-        _splatterDir.eulerAngles   = DirectionAngleLookup[GetAnimationDirectionTowards(direction)];
+        _splatterDir.eulerAngles   = DirectionAngleLookup[GetAnimationDirectionTowards(_attackDir)];
         _splatterDir.localPosition = Vector3.zero;
     }
 
