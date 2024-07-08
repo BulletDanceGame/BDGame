@@ -146,13 +146,6 @@ public class PlayerAnimator : UnitAnimator
         {( 1,  1), Direction.Right}//Up}
     };
 
-    private static readonly Dictionary<Direction, Vector3> DirectionAngleLookup = new Dictionary<Direction, Vector3>
-    {
-        {Direction.Front, Vector3.zero},
-        {Direction.Back, new Vector3(0, 0, 180f) },
-        {Direction.Left, new Vector3(0, 0, -90f) },
-        {Direction.Right, new Vector3(0, 0, 90f) }
-    };
 
     protected override void SetAnimationDirection(Direction direction)
     {
@@ -270,21 +263,17 @@ public class PlayerAnimator : UnitAnimator
     }
 
     [SerializeField]
-    private SpriteRenderer _atkAfterImgRdr, _spRdr;
+    private GameObject _perfectVFXPrefab;
     [SerializeField]
-    private Transform _splatterDir;
+    private SpriteRenderer _spRdr;
     private Vector2 _attackDir;
 
     void AttackAfterImage(BeatTiming hitTiming)
     {
-        if(_atkAfterImgRdr == null) return;
         if(hitTiming != BeatTiming.PERFECT) return;
 
-        _spriteAnimator.SetTrigger("Perfect");
-        transform.position = _spRdr.transform.parent.position;
-        _atkAfterImgRdr.sprite     = _spRdr.sprite;
-        _splatterDir.eulerAngles   = DirectionAngleLookup[GetAnimationDirectionTowards(_attackDir)];
-        _splatterDir.localPosition = Vector3.zero;
+        var vfx = Instantiate(_perfectVFXPrefab, transform.position, Quaternion.identity).GetComponent<BulletDance.VFX.PlayerPerfectVFX>();
+        vfx.AttackAfterImage(_spRdr, GetAnimationDirectionTowards(_attackDir));
     }
 
 
@@ -331,7 +320,7 @@ public class PlayerAnimator : UnitAnimator
         
         float isWalkState = actionState == (int)AnimAction.Walk ? 1 : 0;
         _spriteAnimator?.SetLayerWeight("Sprite Walk", isWalkState);
-        _spriteAnimator?.SetLayerWeight("Hair Walk",   isWalkState);
+        //_spriteAnimator?.SetLayerWeight("Hair Walk",   isWalkState);
         
         float isActState  = actionState == (int)AnimAction.Dash || actionState == (int)AnimAction.Attack ?
                             1 : 0;
