@@ -36,7 +36,8 @@ public class PlayerAnimator : UnitAnimator
         EventManager.Instance.OnPlayerDash   += Dash;
         EventManager.Instance.OnPlayerAttack += Attack;
 
-        EventManager.Instance.OnPlayerLastHit += FreezeFrame;
+        EventManager.Instance.OnPlayerHitBullet += AttackAfterImage;
+        EventManager.Instance.OnPlayerLastHit   += FreezeFrame;
     }
 
     void UnsubscribePlayerEvents()
@@ -49,7 +50,8 @@ public class PlayerAnimator : UnitAnimator
         EventManager.Instance.OnPlayerDash   -= Dash;
         EventManager.Instance.OnPlayerAttack -= Attack;
 
-        EventManager.Instance.OnPlayerLastHit -= FreezeFrame;
+        EventManager.Instance.OnPlayerHitBullet -= AttackAfterImage;
+        EventManager.Instance.OnPlayerLastHit   -= FreezeFrame;
     }
 
 
@@ -72,12 +74,12 @@ public class PlayerAnimator : UnitAnimator
         if(playbackPoint < 0.9) return;
 
         _spriteAnimator.SetLayerWeight("Sprite Act", 0);
-        _spriteAnimator.SetLayerWeight("Hair Act", 0);
+        //_spriteAnimator.SetLayerWeight("Hair Act", 0);
 
         int isWalkState = _isWalk ? 1 : 0;
         _spriteAnimator.SetState(isWalkState);
         _spriteAnimator.SetLayerWeight("Sprite Walk", isWalkState);
-        _spriteAnimator.SetLayerWeight("Hair Walk", isWalkState);
+        //_spriteAnimator.SetLayerWeight("Hair Walk", isWalkState);
     }
 
     protected override void Update() 
@@ -93,7 +95,7 @@ public class PlayerAnimator : UnitAnimator
 
         float _walkLayerVisibility = _isWalk ? 1f : 0f;
         _spriteAnimator.SetLayerWeight("Sprite Walk", _walkLayerVisibility);
-        _spriteAnimator.SetLayerWeight("Hair Walk",   _walkLayerVisibility);
+        //_spriteAnimator.SetLayerWeight("Hair Walk",   _walkLayerVisibility);
 
         if(_isWalk)
             _spriteAnimator.Anim((int)AnimAction.Walk);
@@ -144,22 +146,11 @@ public class PlayerAnimator : UnitAnimator
         {( 1,  1), Direction.Right}//Up}
     };
 
-    private static readonly Dictionary<Direction, float> HairDirectionLookup = new Dictionary<Direction, float>
-    {
-        {Direction.Front, 0f},
-        {Direction.Back,  1f},
-        {Direction.Left,  2f},
-        {Direction.Right, 3f}
-        //{Direction.LeftDown, 2f},
-        //{Direction.LeftUp, 2f},
-        //{Direction.RightDown, 3f},
-        //{Direction.RightUp, 3f}
-    };
 
     protected override void SetAnimationDirection(Direction direction)
     {
         base.SetAnimationDirection(direction);
-        _spriteAnimator.SetFloat("HairDirection", HairDirectionLookup[direction]);
+        //_spriteAnimator.SetFloat("HairDirection", HairDirectionLookup[direction]);
     }
 
 
@@ -231,7 +222,7 @@ public class PlayerAnimator : UnitAnimator
         _spriteAnimator.Anim("Walk", playAtPoint, "Hair Walk");
         _spriteAnimator.SetSpeed(1f / GetDuration(_beatDuration, NoteDuration.Half));
         _spriteAnimator.SetLayerWeight("Sprite Walk", 1);
-        _spriteAnimator.SetLayerWeight("Hair Walk",   1);
+        //_spriteAnimator.SetLayerWeight("Hair Walk",   1);
     }
 
 
@@ -249,10 +240,9 @@ public class PlayerAnimator : UnitAnimator
 
         _spriteAnimator.Anim(AnimAction.Dash);
         _spriteAnimator.SetLayerWeight("Sprite Act", 1);
-        _spriteAnimator.SetLayerWeight("Hair Act",   1);
+        //_spriteAnimator.SetLayerWeight("Hair Act",   1);
         //_spriteAnimator.SetSpeed(1f / GetDuration(_beatDuration, NoteDuration.Sixteenth));
     }
-
 
     void Attack(BeatTiming hitTiming, Vector2 direction)
     {
@@ -266,9 +256,26 @@ public class PlayerAnimator : UnitAnimator
 
         _spriteAnimator.Anim(AnimAction.Attack);
         _spriteAnimator.SetLayerWeight("Sprite Act", 1);
-        _spriteAnimator.SetLayerWeight("Hair Act",   1);
+        //_spriteAnimator.SetLayerWeight("Hair Act",   1);
         //_spriteAnimator.SetSpeed(1f / GetDuration(_beatDuration, NoteDuration.Sixteenth));
+
+        _attackDir = direction;
     }
+
+    [SerializeField]
+    private GameObject _perfectVFXPrefab;
+    [SerializeField]
+    private SpriteRenderer _spRdr;
+    private Vector2 _attackDir;
+
+    void AttackAfterImage(BeatTiming hitTiming)
+    {
+        if(hitTiming != BeatTiming.PERFECT) return;
+
+        var vfx = Instantiate(_perfectVFXPrefab, transform.position, Quaternion.identity).GetComponent<BulletDance.VFX.PlayerPerfectVFX>();
+        vfx.AttackAfterImage(_spRdr, GetAnimationDirectionTowards(_attackDir));
+    }
+
 
 
     void Damage(float none)
@@ -313,12 +320,12 @@ public class PlayerAnimator : UnitAnimator
         
         float isWalkState = actionState == (int)AnimAction.Walk ? 1 : 0;
         _spriteAnimator?.SetLayerWeight("Sprite Walk", isWalkState);
-        _spriteAnimator?.SetLayerWeight("Hair Walk",   isWalkState);
+        //_spriteAnimator?.SetLayerWeight("Hair Walk",   isWalkState);
         
         float isActState  = actionState == (int)AnimAction.Dash || actionState == (int)AnimAction.Attack ?
                             1 : 0;
         _spriteAnimator?.SetLayerWeight("Sprite Act", isActState);
-        _spriteAnimator?.SetLayerWeight("Hair Act",   isActState);
+        //_spriteAnimator?.SetLayerWeight("Hair Act",   isActState);
     }
 
     void FreezeFrame(BeatTiming none)
