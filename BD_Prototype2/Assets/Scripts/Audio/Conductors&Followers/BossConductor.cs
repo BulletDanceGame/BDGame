@@ -180,7 +180,6 @@ public class BossConductor : MusicConductor
     /// <summary> Starts a new sequence </summary> 
     public override void SequenceHasStarted()
     {
-
         //Ambience State Set
 
         if (_phases[_currentPhaseIndex].transition == false)
@@ -214,7 +213,10 @@ public class BossConductor : MusicConductor
         {
             action = _currentNoteList[_beatIndex].Item2;
             _beatIndex++;
+
+            print("action " + action.functionName + " at " + currentBeat + " - " + Time.timeAsDouble);
         }
+
 
         _movelist.Action(action);
     }

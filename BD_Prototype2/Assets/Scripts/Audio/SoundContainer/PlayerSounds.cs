@@ -158,7 +158,7 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
         private bool  _inCombo = false;
         private float _timeSinceCombo = 0;
 
-        void BulletHit(BeatTiming hitTiming)
+        private void BulletHit(BeatTiming hitTiming)
         {
             switch(hitTiming)
             {
@@ -184,13 +184,14 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
 
 
             //Adjust the pitch for combos
-            _inCombo  = hitTiming != BeatTiming.BAD;
-            _hitPitch = _inCombo ? (_hitPitch + 100/_maxComboForPitch) : 0; //If combo-d, raise pitch, else reset
+            _inCombo  = (hitTiming != BeatTiming.BAD);
+            _hitPitch = (_inCombo) ? (_hitPitch + 100/_maxComboForPitch) : 0; //If combo-d, raise pitch, else reset
             _hitPitch = Mathf.Clamp(_hitPitch, 0, 100);
 
             RTPCManager.Instance.SetValue("PITCH_SPECIAL____DeflectionElement__PitchElement", _hitPitch, 0.0000000001f, RTPCManager.CurveTypes.linear);
             RTPCManager.Instance.SetValue("VOLUME_SPECIAL____DeflectionElement__PitchElement", _hitPitch, 0.0000000001f, RTPCManager.CurveTypes.linear);
         }
+
 
         void ResetHitPitch()
         {
@@ -245,7 +246,7 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
         {
             if (damage <= 1) return; //Don't play if burn
 
-            var player = UnitManager.Instance.GetPlayer().GetComponent<Player>();
+            Player player = UnitManager.Instance.GetPlayer().GetComponent<Player>();
             if (player.isDead) return;
 
             //LowPass on low health
@@ -253,16 +254,17 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
                 RTPCManager.Instance.SetAttributeValue("LOW PASS", (30 - (player.healthRatio * 30f)), 0.0000000001f, RTPCManager.CurveTypes.linear);
 
             //Fading mute when hit
-            if (!player.isHealthLower(0.30f))
-                RTPCManager.Instance.AddAttributeValue("LOW PASS", 70, 0.00000000001f, RTPCManager.CurveTypes.linear, 0.7f, RTPCManager.CurveTypes.high_curve, 0.2f, "LOW_PASS____PlayerDamage");
-            else
-                RTPCManager.Instance.AddAttributeValue("LOW PASS", 30, 0.00000000001f, RTPCManager.CurveTypes.linear, 0.7f, RTPCManager.CurveTypes.high_curve, 0.2f, "LOW_PASS____PlayerDamage");
+            float value = !player.isHealthLower(0.30f) ? 70 : 30;
+            RTPCManager.Instance.AddAttributeValue("LOW PASS", value, 0.00000000001f, RTPCManager.CurveTypes.linear, 0.7f, RTPCManager.CurveTypes.high_curve, 0.2f, "LOW_PASS____PlayerDamage");
+
 
             //Adjust hurt sound
             string soundState = player.isHealthLower(0.20f) ? "low" :
                                 player.isHealthLower(0.45f) ? "mid" :
                                                               "high";
             RTPCManager.Instance.SetState("Hurt", soundState);
+
+
             PlaySFX("Hurt");
         }
 

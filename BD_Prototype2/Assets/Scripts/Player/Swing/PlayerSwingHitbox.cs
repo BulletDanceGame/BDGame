@@ -41,9 +41,14 @@ public class PlayerSwingHitbox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.tag != "Bullet" && collision.tag != "Enemy")
+            return;
+
+
         BeatTiming hitTiming = _playerSwing.hitTiming;
 
-        //Hit the boss, putting this before the != Bullet escape check
+
+        //BOSS
         if (collision.GetComponent<BossHealthController>())
         {
             if (collision.GetComponent<BossHealthController>().isDead)
@@ -55,8 +60,16 @@ public class PlayerSwingHitbox : MonoBehaviour
             }
         }
 
-        if (collision.tag != "Bullet")
+
+
+        //BULLET
+        if (!collision.GetComponent<Bullet>())
+        {
             return;
+        }
+
+
+        _hasHitBullet = true;
 
         //GetComponent() slows things down, replaced with Bullet variable.
         Bullet bullet = collision.GetComponent<Bullet>();
@@ -94,12 +107,15 @@ public class PlayerSwingHitbox : MonoBehaviour
 
         bullet.BulletHit(hitTiming);
 
-        _hasHitBullet = true;
-        if (_hasHitBullet && !_hasSoundPlayed)
-            EventManager.Instance.PlayerHit(hitTiming);
-        _hasSoundPlayed = true;
 
-        if(_isEndHit)
+        if (!_hasSoundPlayed)
+        {
+            EventManager.Instance.PlayerHit(hitTiming);
+            _hasSoundPlayed = true;
+        }
+
+
+        if (_isEndHit)
         {
             _isEndHit = false;
             transform.gameObject.SetActive(false);

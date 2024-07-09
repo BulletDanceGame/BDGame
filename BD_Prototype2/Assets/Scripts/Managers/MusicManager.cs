@@ -175,12 +175,11 @@ public class MusicManager : MonoBehaviour
 
                 if (timedBeats == sequenceDuration+1) //DURATION
                 {
-                    print("_start songtimer " + songTimer);
                     StartSequence();
 
                     endTime = 0;
                 }
-                else // < sequenceDuration+1
+                else // timedBeats < sequenceDuration+1
                 {
                     currentBeat++;
                     EventManager.Instance.Beat(currentBeat);
@@ -188,7 +187,6 @@ public class MusicManager : MonoBehaviour
                     if (timedBeats == sequenceDuration)
                     {
                         endTime = currentFrameDelay;
-
                     }
                 }
             }
@@ -196,7 +194,6 @@ public class MusicManager : MonoBehaviour
 
         if (prepareNextSequence)
         {
-            print("startime aa " + currentFrameDuration + " - "+  currentFrameDelay);
             PrepareNextSequence(true);
             prepareNextSequence = false;
         }
@@ -422,8 +419,6 @@ public class MusicManager : MonoBehaviour
             print("framedel " + currentFrameDelay);
 
             Application.targetFrameRate = currentFramerate;
-            framesPerBeat = secondsPerBeat / currentFrameDuration;
-            //print("fpb " + framesPerBeat);
             sequenceDuration = _currentSequence.duration;
 
             AkSoundEngineController.Instance.starting = true;
@@ -538,7 +533,11 @@ public class MusicManager : MonoBehaviour
         currentBeat++;
         EventManager.Instance.Beat(currentBeat);
 
-        print("_start entry " + Time.timeAsDouble);
+        framesPerBeat = secondsPerBeat / currentFrameDuration;
+        //print("fpb " + framesPerBeat);
+
+
+        print("_start entry yo " + Time.timeAsDouble);
         startDelay = Time.timeAsDouble - startDelay;
         print("_startdelay " + startDelay + " fr " + frames);
         print("_s between entries " + (Time.timeAsDouble-lastEntry));
@@ -551,8 +550,6 @@ public class MusicManager : MonoBehaviour
 
         //checkFrames = false;
 
-        PrepareNextSequence();//move to after offset
-
         playing = true;
         songTimer = 0;
         timedBeats = 1;
@@ -560,7 +557,9 @@ public class MusicManager : MonoBehaviour
         lastTimer = Time.realtimeSinceStartup;
         //print("fixed, beat " + timedBeats + " time " + Time.timeAsDouble + " delay " + delayTimer);
 
-        
+
+
+        PrepareNextSequence();//move to after offset
 
 
         yield return null;

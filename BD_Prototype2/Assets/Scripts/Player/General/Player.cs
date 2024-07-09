@@ -128,6 +128,7 @@ public class Player : MonoBehaviour
 
         routine = StartCoroutine(ResetFails());
 
+
         if (Fails >= MaxFails && playerFailState == PlayerFailState.NORMAL)
         {
             playerFailState = PlayerFailState.FAILED;
