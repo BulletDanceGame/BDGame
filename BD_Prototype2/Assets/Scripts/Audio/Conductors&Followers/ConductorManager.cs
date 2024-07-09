@@ -93,4 +93,15 @@ public class ConductorManager : MonoBehaviour
 
 
     }
+
+
+    public void RemoveCurrentController(MusicManager.TransitionType leaveTranstition)
+    {
+        if (_currentController != null)
+        {
+            RemoveController(_currentController, leaveTranstition);
+        }
+    }
+
+
 }

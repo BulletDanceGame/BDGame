@@ -78,7 +78,14 @@ public class SceneManager : MonoBehaviour
     {
         EventManager.Instance?.SceneLoad();
 
+        if (ConductorManager.Instance) { 
+            ConductorManager.Instance.RemoveCurrentController(MusicManager.TransitionType.QUEUE_STOP);
+        }
+
         _sceneToLoad = scene;
+
+        SetAudioState(_sceneToLoad);
+
         StartCoroutine(AsyncSceneLoad(_sceneToLoad, delay));
     }
 
@@ -88,8 +95,6 @@ public class SceneManager : MonoBehaviour
 
         _currentScene++;
 
-        SetAudioState();
-
         LoadScene(_currentScene, delay);
     }
 
@@ -97,6 +102,8 @@ public class SceneManager : MonoBehaviour
     {
         LoadScene(_currentScene, delay);
     }
+
+
 
     bool DoesSceneExist(string sceneName)
     {
@@ -115,6 +122,8 @@ public class SceneManager : MonoBehaviour
         return exists;
     }
 
+
+
     IEnumerator AsyncSceneLoad(Scenes scene, float delay = 0f)
     {
         yield return new WaitForSeconds(delay);
@@ -126,6 +135,7 @@ public class SceneManager : MonoBehaviour
         }
         _currentScene = scene;
 
+        //This doesnt happen, prolly cause this script isnt DontDestroyOnLoad :)
         Debug.Log("Loading Completed");
     }
 
@@ -134,16 +144,18 @@ public class SceneManager : MonoBehaviour
     //states for sound
     public void SetTutorialScene() //i know this is a bit cluttery, buuuuut - dont worry about it :D
     {
-        _currentScene = Scenes.Tutorial;
 
-        SetAudioState();
+        //Yeah it should work just using the SceneLoad now?
+
+        //_currentScene = Scenes.Tutorial;
+        //SetAudioState();
     }
 
 
-    public void SetAudioState()
+    public void SetAudioState(Scenes scene)
     {
-        print("SCENE TO LOAD: " + _currentScene);
-        switch (_currentScene) //Set "Level State" so sound fades smoothly between scenes
+        print("SCENE TO LOAD: " + scene);
+        switch (scene) //Set "Level State" so sound fades smoothly between scenes
         {
             case Scenes.Menu:
                 AkSoundEngine.SetState("Level", "Menu");
