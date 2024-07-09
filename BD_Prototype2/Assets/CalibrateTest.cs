@@ -28,6 +28,8 @@ public class CalibrateTest : MonoBehaviour
     GameObject currentBall = null;
     GameObject nextBall = null;
 
+    public GameObject resetButton;
+    public GameObject redoText;
 
     private void OnEnable()
     {
@@ -95,7 +97,8 @@ public class CalibrateTest : MonoBehaviour
             averageDelayMarker.SetActive(true);
 
 
-
+            resetButton.SetActive(true);
+            redoText.SetActive(true);
         }
     }
 
@@ -150,6 +153,10 @@ public class CalibrateTest : MonoBehaviour
         delayMarkers.Clear();
 
         averageDelayMarker.SetActive(false);
+
+
+        resetButton.SetActive(false);
+        redoText.SetActive(false);
     }
 
 }

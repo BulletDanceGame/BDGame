@@ -2,6 +2,7 @@ using BulletDance.Graphics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class Cannister : MonoBehaviour
 {
@@ -20,25 +21,22 @@ public class Cannister : MonoBehaviour
     {
         SetUp();
 
-        if(EventManager.Instance == null) return;
-        //Cannister Landed SFX
-        EventManager.Instance.PlaySFX("Cannister Land", 10f);
-        EventManager.Instance.OnDeactivateBoss += Deactivate;
     }
 
-    private void Update()
-    {
-        if (QUEUEToActivate)
-        {
-            hitTimer -= Time.deltaTime;
-            if (hitTimer <= 0)
-            {
-                ApplyCollision();
-            }
-            QUEUEToActivate = false;
-        }
 
-    }
+    //private void Update()
+    //{
+    //    if (QueueToActivate)
+    //    {
+    //        hitTimer -= Time.deltaTime;
+    //        if (hitTimer <= 0)
+    //        {
+    //            ApplyCollision();
+    //        }
+    //        QueueToActivate = false;
+    //    }
+
+    //}
     //bool once = true;
 
     private void SetUp()
@@ -47,8 +45,15 @@ public class Cannister : MonoBehaviour
         ugh = true;
 
         _beatsUntilDestroyed = MusicManager.Instance._currentSequence.duration;
-        if(EventManager.Instance != null)
-            EventManager.Instance.OnBeat += OnBeat;
+        
+
+        if (EventManager.Instance)
+        {
+            EventManager.Instance.PlaySFX("Cannister Land", 10f);
+            EventManager.Instance.OnDeactivateBoss += Deactivate;
+                EventManager.Instance.OnBeat += OnBeat;
+            }
+
     }
 
     private void OnBeat(int b)
@@ -76,26 +81,28 @@ public class Cannister : MonoBehaviour
     }
 
 
-    float hitTimer;
-    bool QUEUEToActivate;
+    //float hitTimer;
+    //bool QueueToActivate;
+
     public void Landed()
     {
-        if (Mathf.Abs((UnitManager.Instance.GetPlayer().transform.position - transform.position).magnitude) < GetComponentInChildren<CircleCollider2D>().radius)
-        {
-            ////WHY WTF
-            UnitManager.Instance.GetPlayer().GetComponentInChildren<PlayerTriggerBox>().HitByContainer(transform.position);
+        //if (Mathf.Abs((UnitManager.Instance.GetPlayer().transform.position - transform.position).magnitude) < GetComponentInChildren<CircleCollider2D>().radius)
+        //{
+        //    EventManager.Instance.PlayerDamage(10);
+        //    EventManager.Instance.PlayerPushBack(transform.position);
+        //    ScoreManager.Instance.GotHit++;
 
-            QUEUEToActivate = true;
-            hitTimer = 1;
-        }
-        else
-            ApplyCollision();
+
+        //    //QueueToActivate = true;
+        //    //hitTimer = 1;
+        //    collisionBox.SetActive(true);
+        //}
+        //else
+        //{
+        //    collisionBox.SetActive(true);
+        //}
     }
 
-    public void ApplyCollision()
-    {
-        collisionBox.SetActive(true);
-    }
 
 
     public void StartSmokeVFX()
