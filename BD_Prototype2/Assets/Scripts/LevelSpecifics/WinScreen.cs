@@ -104,6 +104,15 @@ public class WinScreen : MonoBehaviour
 
     }
 
+    void OnEnable()
+    {
+        Debug.Log("DISABLING STUFF");
+
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canDash = false;
+        GameObject.Find("DirectionController").GetComponent<PlayerSwing>().SwingActivated = false;
+    }
+
     void OnDestroy()
     {
         //_playerInput.Player.Move.performed   -= OnHold;

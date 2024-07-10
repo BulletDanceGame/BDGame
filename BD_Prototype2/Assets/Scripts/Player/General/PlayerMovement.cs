@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     float _playerSpeed, _slideSpeed, _slideCooldown, _slideTime, _pushBackSpeed, _pushBackTime;
     bool canDash = true, slideCooldown = false;
     public bool DashActivated = false;
+    public bool canMove = true;
 
     [SerializeField]
     Vector2 _lastGroundPosition;
@@ -159,6 +160,9 @@ public class PlayerMovement : MonoBehaviour
 
     void OnMove(InputValue value)
     {
+        if (!canMove)
+            return;
+
         inputVector = value.Get<Vector2>();
         EventManager.Instance?.PlayerMove(inputVector);
     }
