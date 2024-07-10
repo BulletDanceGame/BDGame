@@ -275,6 +275,8 @@ public class PlayerAnimator : UnitAnimator
     {
         if(hitTiming != BeatTiming.PERFECT) return;
 
+        //_spriteAnimator?.SetTrigger("Perfect");
+
         var vfx = Instantiate(_perfectVFXPrefab, transform.position, Quaternion.identity).GetComponent<BulletDance.VFX.PlayerPerfectVFX>();
         vfx.AttackAfterImage(_spRdr.sprite, _attackDir);
     }

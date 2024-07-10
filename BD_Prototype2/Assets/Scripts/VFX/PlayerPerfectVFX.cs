@@ -16,7 +16,6 @@ public class PlayerPerfectVFX : MonoBehaviour
 
     public void AttackAfterImage(Sprite sprite, Vector2 position)
     {
-        _animator.SetTrigger("Perfect");
         _atkAfterImgRdr.sprite     = sprite;
         _splatterDir.eulerAngles   = new Vector3(0f, 0f, Vector2.SignedAngle(position, Vector2.up));
         _splatterDir.localPosition = Vector3.zero;
@@ -27,9 +26,9 @@ public class PlayerPerfectVFX : MonoBehaviour
 
         Color color = _baseColor[Random.Range(0, _baseColor.Count)];
         SetSplashColor(_atkAfterImgRdr, color, 0f);
-        SetSplashColor(_hitSplashRdr, color, 0.9f);
-        SetSplashColor(_smallSplashRdr, color, 0.9f);
-        SetSplashColor(_bgSplashRdr, color, 0.5f);
+        SetSplashColor(_hitSplashRdr, color, -0.165f);
+        SetSplashColor(_smallSplashRdr, color, -0.165f);
+        SetSplashColor(_bgSplashRdr, color, -0.33f);
     }
 
     [SerializeField]
@@ -49,12 +48,9 @@ public class PlayerPerfectVFX : MonoBehaviour
         spRdr.material.SetFloat("_Hue", hue);
     }
 
-    float _timer = 0f;
-    void Update()
+    void DeleteSelf()
     {
-        _timer += Time.deltaTime;
-        if(_timer > 5f)
-            Destroy(gameObject);
+        Destroy(gameObject);
     }
 }
 
