@@ -70,10 +70,4 @@ public class PlayerTriggerBox : MonoBehaviour
         _hurtEffect.HurtForPLayer();
     }
 
-    public void HitByContainer(Vector3 pos)
-    {
-        EventManager.Instance.PlayerDamage(10);
-        EventManager.Instance.PlayerPushBack(pos);
-        ScoreManager.Instance.GotHit++;
-    }
 }

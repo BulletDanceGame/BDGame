@@ -160,18 +160,19 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
 
         private void BulletHit(BeatTiming hitTiming)
         {
+
             switch(hitTiming)
             {
                 case BeatTiming.PERFECT:
-                    PlaySFX("Hit Perfect", 1f, null, true);
+                    PlaySFX("Hit Perfect", 1f, null);
                     break;
 
                 case BeatTiming.GOOD:
-                    PlaySFX("Hit Good", 1f, null, true);
+                    PlaySFX("Hit Good", 1f, null);
                     break;
 
                 case BeatTiming.BAD:
-                    PlaySFX("Hit Miss", 1f, null, true);
+                    PlaySFX("Hit Miss", 1f, null);
                     ResetHitPitch();
                     break;
 

@@ -207,17 +207,32 @@ public class Turret : Movelist
 
     void OnTriggerEnter2D(Collider2D cld)
     {
-        if(cld.GetComponent<Bullet>().type == BulletType.PLAYERBULLET || cld.gameObject.tag == "PlayerSwingBox")
+
+        if (cld.GetComponent<Bullet>())
         {
-            _animHandler?.Hurt();
-
-            if(_isActive)
-                Deactivate();
-
-            if (shouldBeRespawnable)
-                StartCoroutine(RespawnTurret());
-
+            if (cld.GetComponent<Bullet>().type == BulletType.PLAYERBULLET)
+            {
+                Hit();
+            }
         }
+        else if (cld.gameObject.tag == "PlayerSwingBox")
+        {
+            Hit();
+        }
+        
+    }
+
+    private void Hit()
+    {
+
+        _animHandler?.Hurt();
+
+        if (_isActive)
+            Deactivate();
+
+        if (shouldBeRespawnable)
+            StartCoroutine(RespawnTurret());
+
     }
 
     IEnumerator RespawnTurret()
