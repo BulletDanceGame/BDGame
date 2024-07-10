@@ -18,7 +18,7 @@ public class CannisterGraphicsTest : MonoBehaviour
     {
         yield return null;
         yield return null;
-        _animator.SetColor(_cannisterType);
+        _animator.SetUp(_cannisterType);
     }
 
 }

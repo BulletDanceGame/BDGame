@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -149,14 +150,12 @@ public class Bullet : MonoBehaviour
     {
         if(!_canCollide) return;
 
-        foreach(string tag in _collideBGObjectTag)
+        if (_collideBGObjectTag.Contains(collision.transform.tag))
         {
-            if (collision.transform.tag == tag)
-            {
-                Deactivate();
-                break;
-            }
+            Deactivate();
+
         }
+
 
         if (type == BulletType.BOSSBULLET)
             return;

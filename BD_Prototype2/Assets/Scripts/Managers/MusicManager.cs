@@ -29,7 +29,7 @@ public class MusicManager : MonoBehaviour
 
     //current songs and sequences
     private AK.Wwise.Event _currentSong;
-    private MusicSequence _nextSequence;
+    public MusicSequence _nextSequence { get; private set; }
     public MusicSequence _currentSequence { get; private set; }
 
 
