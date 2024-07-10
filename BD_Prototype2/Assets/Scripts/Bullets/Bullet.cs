@@ -158,9 +158,12 @@ public class Bullet : MonoBehaviour
 
 
         if (type == BulletType.BOSSBULLET)
+        {
+            Deactivate();
             return;
+        }
 
-        if(collision.tag == "Turret" || collision.tag == "BouncedSurface")
+        if (collision.tag == "Turret" || collision.tag == "BouncedSurface")
         {
             if(bounces > 5)
             {

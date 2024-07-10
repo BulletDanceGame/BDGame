@@ -70,6 +70,8 @@ public class BossHealthController : MonoBehaviour
         //testing
         if (Input.GetKeyDown(KeyCode.U))
             EventManager.Instance.BossDamage(debugDamage);
+        if (Input.GetKeyDown(KeyCode.I))
+            currentPhaseHealth += 20;
     }
 
 
