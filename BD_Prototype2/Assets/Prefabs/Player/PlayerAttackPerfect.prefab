@@ -69,7 +69,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 8859955007188702737}
   _atkAfterImgRdr: {fileID: 46350186346345124}
+  _hitSplashRdr: {fileID: 7428106452792804609}
+  _smallSplashRdr: {fileID: 660529436036088975}
+  _bgSplashRdr: {fileID: 6558475134680835801}
   _splatterDir: {fileID: 1019115560258093608}
+  _positionRandomRange: {x: -0.25, y: 0.25}
+  _baseColor:
+  - {r: 1, g: 0, b: 0.6784314, a: 1}
+  - {r: 1, g: 0.256795, b: 0, a: 1}
+  - {r: 1, g: 0.9917774, b: 0, a: 1}
+  - {r: 0.116028905, g: 1, b: 0, a: 1}
+  - {r: 0, g: 1, b: 0.7487786, a: 1}
+  - {r: 0, g: 0.60658455, b: 1, a: 1}
+  - {r: 0.2584905, g: 0.31059006, b: 1, a: 1}
+  - {r: 0.7206195, g: 0.3433962, b: 1, a: 1}
 --- !u!1 &3184067337476681633
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,7 +157,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.213, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -312,7 +325,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.213, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -396,7 +409,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

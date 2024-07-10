@@ -84,6 +84,8 @@ public class PlayerAnimator : UnitAnimator
 
     protected override void Update() 
     {
+        _spRdr?.material.SetFloat("_OutlineThickness", outlineThickness);
+
         if(!_continueAnimation)
         {
             //Debug.Log("Unit animator is turned off");
@@ -267,13 +269,14 @@ public class PlayerAnimator : UnitAnimator
     [SerializeField]
     private SpriteRenderer _spRdr;
     private Vector2 _attackDir;
+    public float outlineThickness;
 
     void AttackAfterImage(BeatTiming hitTiming)
     {
         if(hitTiming != BeatTiming.PERFECT) return;
 
         var vfx = Instantiate(_perfectVFXPrefab, transform.position, Quaternion.identity).GetComponent<BulletDance.VFX.PlayerPerfectVFX>();
-        vfx.AttackAfterImage(_spRdr, GetAnimationDirectionTowards(_attackDir));
+        vfx.AttackAfterImage(_spRdr.sprite, _attackDir);
     }
 
 
