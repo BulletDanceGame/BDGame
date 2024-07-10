@@ -112,6 +112,11 @@ public class Player : MonoBehaviour
             
     }
 
+    void OnPause()
+    {
+        EventManager.Instance.PausePressed();
+    }
+
     void SuccessBeatCheck()
     {
         Fails = 0;

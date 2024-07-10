@@ -477,4 +477,24 @@ public class EventManager : MonoBehaviour
     {
         OnAddCurrency?.Invoke(value);
     }
+
+
+
+
+
+    public event Action OnPausePressed;
+    public event Action<bool> OnPause;
+
+    //PAUSE----------------------------------------------------------------------------------------
+    public void PausePressed()
+    {
+        OnPausePressed?.Invoke();
+    }
+
+    public void Pause(bool pause)
+    {
+        OnPause?.Invoke(pause);
+
+    }
+
 }

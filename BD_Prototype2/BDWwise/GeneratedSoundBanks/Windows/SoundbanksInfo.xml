@@ -1364,7 +1364,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1598298728" Type="User" Language="SFX" Hash="{26797F04-9959-B1F1-4110-458B7D89D784}">
+		<SoundBank Id="1598298728" Type="User" Language="SFX" Hash="{70EADE1F-04ED-16EB-E633-CCD050CC4B46}">
 			<ShortName>Music_Menu</ShortName>
 			<Path>Music_Menu.bnk</Path>
 			<Media>
@@ -1372,9 +1372,9 @@
 					<ShortName>BD_Trailer_Music.wav</ShortName>
 					<CachePath>SFX/BD_Trailer_Music_D79FB2B7.wem</CachePath>
 				</File>
-				<File Id="870983996" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Boss 1 - Phase 1 - Part 2.wav</ShortName>
-					<CachePath>SFX/Boss 1 - Phase 1 - Part 2_D79FB2B7.wem</CachePath>
+				<File Id="506300702" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1_Part2.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1_Part2_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="932650277" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Metronome - STYLISH - Bass.wav</ShortName>
@@ -1397,9 +1397,9 @@
 						<MediaRef Id="978023960"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2002857628" Name="PauseScreenMusic____PLAY" DurationType="OneShot" DurationMin="3.4083333" DurationMax="3.4083333">
+				<Event Id="2002857628" Name="PauseScreenMusic____PLAY" DurationType="OneShot" DurationMin="9.933042" DurationMax="9.933042">
 					<MediaRefs>
-						<MediaRef Id="870983996"/>
+						<MediaRef Id="506300702"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1814921978" Name="TrailerAudio____PLAY" DurationType="OneShot" DurationMin="44.01067" DurationMax="44.01067">
@@ -1813,6 +1813,25 @@
 				<GameParameter Id="2338745114" Name="PLAYBACK_SPEED____MusicBossBattle"/>
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="3419004417" Type="User" Language="SFX" Hash="{1F183819-9C82-5D6C-008E-06AAA5BC139F}">
+			<ShortName>Pause_Resume</ShortName>
+			<Path>Pause_Resume.bnk</Path>
+			<Media>
+				<File Id="506300702" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1_Part2.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1_Part2_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="4091047182" Name="PauseAll" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2134433603" Name="PauseMenuSong" DurationType="OneShot" DurationMin="9.933042" DurationMax="9.933042">
+					<MediaRefs>
+						<MediaRef Id="506300702"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3240900869" Name="ResumeAll" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
 		</SoundBank>
 		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{5DA46A73-2DBA-BFD4-A0A6-35D101B82135}">
 			<ShortName>SoundEffects_Everything</ShortName>
@@ -2963,5 +2982,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C852B6E4-5F05-56AB-3A87-266BEC7FA614}</FileHash>
+	<FileHash>{67783C0F-5D6C-F5DC-B1F7-7B8D6906F374}</FileHash>
 </SoundBanksInfo>

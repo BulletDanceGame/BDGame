@@ -8,6 +8,8 @@ public class Options : MonoBehaviour
 {
 
     [SerializeField] private MainMenu menu;
+    [SerializeField] private PauseScreen pause;
+
 
     [Header("FPS")]
     [SerializeField] private TextMeshProUGUI _fpsText;
@@ -25,6 +27,11 @@ public class Options : MonoBehaviour
     {
 
         menu.BackFromOptions();
+    }
+
+    public void BackToPauseMenu()
+    {
+        pause.BackFromOptions();
     }
 
     public void ChangeFPS(int dir)

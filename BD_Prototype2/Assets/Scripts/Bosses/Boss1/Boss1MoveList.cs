@@ -437,6 +437,7 @@ public class Boss1MoveList : Movelist
 
 
     }
+
     void UpdateContainers()
     {
 
@@ -447,7 +448,7 @@ public class Boss1MoveList : Movelist
                 //Reticle Update
                 float _step = reticleFollowSpeed * Time.deltaTime;
                 Transform reticle = _attackReticles[i].Item1.transform;
-                reticle.position = Vector2.MoveTowards(reticle.position, UnitManager.Instance.GetPlayer().transform.position, _step);
+                reticle.position = Vector2.MoveTowards(reticle.position, UnitManager.Instance.GetPlayer().transform.position, _step * (1f-i*0.1f));
                 reticle.localScale = Vector2.Lerp(reticle.localScale, _reticleSize, Time.deltaTime);
             }
             else

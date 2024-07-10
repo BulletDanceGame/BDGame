@@ -366,6 +366,15 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="Pause_Resume" ID="{7C81CBAB-8A76-4239-8515-135395990E93}">
+					<ObjectInclusionList>
+						<ObjectRef Name="PauseMenuSong" ID="{BD9C8571-74E9-4355-9571-68634B44947B}" WorkUnitID="{A0C8A417-45A5-458F-9F86-17ABD63D9B45}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="PauseAll" ID="{10A88466-9FF9-43A0-8ED9-A5344800253B}" WorkUnitID="{A0C8A417-45A5-458F-9F86-17ABD63D9B45}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ResumeAll" ID="{AEE16521-2087-4FD4-9B97-950A61A32CA2}" WorkUnitID="{A0C8A417-45A5-458F-9F86-17ABD63D9B45}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

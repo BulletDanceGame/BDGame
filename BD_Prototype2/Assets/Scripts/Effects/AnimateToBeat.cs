@@ -23,6 +23,7 @@ public class AnimateToBeat : MonoBehaviour
 
     private void OnDisable()
     {
+        _animator.StopPlayback();
         EventManager.Instance.OnBeatForVisuals -= VisualsOnBeat;
     }
 

@@ -145,7 +145,7 @@ public class PlayerRhythm : MonoBehaviour
             //for times
             //needs to check for the last one better
             //unnesecary for now
-            int index = _playerBeats.IndexOf(beat) + 1;
+            int index = _playerBeats.IndexOf(beat);
             if (index != _playerBeats.Count)
             {
                 (double, int) a = (_startTime + (spb * (beat - startBeat) + offsetVisuals), _playerBeats[index] - beat);

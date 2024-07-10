@@ -70,7 +70,7 @@ public class CalibrateAudio : MonoBehaviour
         {
             if (!nextBall) return;
 
-            print("check bar" + beat + " "  + Time.realtimeSinceStartupAsDouble);
+            print("check bar" + beat + " "  + Time.timeAsDouble);
             anim.enabled = true;
             anim.speed = 1 / (duration * 8);
             anim.Play("CalibrationNew");
@@ -78,7 +78,7 @@ public class CalibrateAudio : MonoBehaviour
         }
         else if (anticipation == 12)
         {
-            print("check ball" + beat + " " + Time.realtimeSinceStartupAsDouble);
+            print("check ball" + beat + " " + Time.timeAsDouble);
             GameObject b = Instantiate(ballPrefab, ballPrefab.transform.parent);
             b.GetComponent<Animator>().enabled = true;
             b.GetComponent<Animator>().speed = 1 / (duration * 8);

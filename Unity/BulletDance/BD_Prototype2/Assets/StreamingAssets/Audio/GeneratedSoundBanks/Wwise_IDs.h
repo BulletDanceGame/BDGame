@@ -103,6 +103,8 @@ namespace AK
         static const AkUniqueID NORMALDAMAGE____PLAY = 2122273249U;
         static const AkUniqueID NOSTAMINA____PLAY = 2278158929U;
         static const AkUniqueID OUTRO____PLAY = 594215984U;
+        static const AkUniqueID PAUSEALL = 4091047182U;
+        static const AkUniqueID PAUSEMENUSONG = 2134433603U;
         static const AkUniqueID PAUSESCREENMUSIC____PLAY = 2002857628U;
         static const AkUniqueID PICKUP__CURRENCY____PLAY = 2487304348U;
         static const AkUniqueID PICKUP__HEALTH____PLAY = 63268803U;
@@ -205,6 +207,7 @@ namespace AK
         static const AkUniqueID PLAYER__WHOSTHEMONGRELNOW____PLAY = 1127862864U;
         static const AkUniqueID PLAYER__YOKAI____PLAY = 1055783055U;
         static const AkUniqueID PLAYER__ZASSHU____PLAY = 157855042U;
+        static const AkUniqueID RESUMEALL = 3240900869U;
         static const AkUniqueID RHYTHMTESTING__PART1____PLAY = 1463297925U;
         static const AkUniqueID RHYTHMTESTING__PART2____PLAY = 1209085622U;
         static const AkUniqueID RHYTHMTESTING__PART3____PLAY = 4185788291U;
@@ -386,6 +389,7 @@ namespace AK
         static const AkUniqueID MUSIC_TUTORIALANDLEVEL1_PART3 = 834008394U;
         static const AkUniqueID MUSIC_YOKAIHUNTER_PHASE1AND2 = 2856222710U;
         static const AkUniqueID MUSIC_YOKAIHUNTER_PHASE3ANDOUTRO = 723507619U;
+        static const AkUniqueID PAUSE_RESUME = 3419004417U;
         static const AkUniqueID SOUNDEFFECTS_EVERYTHING = 3922271872U;
     } // namespace BANKS
 

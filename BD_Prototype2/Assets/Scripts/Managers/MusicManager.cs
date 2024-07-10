@@ -130,33 +130,37 @@ public class MusicManager : MonoBehaviour
         if (playing)
         {
             songTimer++;
+            double frameDuration = currentFrameDuration;
+
             if (speedingUpInCutscene)
             {
                 songTimer += 3;
+                frameDuration *= 4;
             }
 
-            
+
             //print("goal " + (timedBeats * framesPerBeat - endTime) + " off " + (songTimer - (timedBeats * framesPerBeat - endTime)));
 
             double delay = 0;
+
             if (lastFrameTime != 0)
             {
-                double frameTimer = Time.realtimeSinceStartup - lastFrameTime;
-                delay = frameTimer - currentFrameDuration;
+                double frameTimer = Time.timeAsDouble - lastFrameTime;
+                delay = frameTimer - frameDuration;
             }
             totalDelay += delay;
                 
-            lastFrameTime = Time.realtimeSinceStartup;
+            lastFrameTime = Time.timeAsDouble;
             //print("skip unitycheck " + totalDelay);
 
-            int f = (int)(totalDelay / currentFrameDuration);
+            int f = (int)(totalDelay / frameDuration);
 
             if (Mathf.Abs(f) >= 1)
             {
                 //print("skip unity " + f + " time " + totalDelay);
                 songTimer += f;
                 if(speedingUpInCutscene) { songTimer += f * 3; }
-                totalDelay -= currentFrameDuration * f;
+                totalDelay -= frameDuration * f;
             }
 
             t = songTimer;
@@ -167,8 +171,8 @@ public class MusicManager : MonoBehaviour
                 timedBeats++;
 
                 //save from pausing
-                double delayTimer = Time.realtimeSinceStartup - lastTimer;
-                lastTimer = Time.realtimeSinceStartup;
+                double delayTimer = Time.timeAsDouble - lastTimer;
+                lastTimer = Time.timeAsDouble;
                 //print("beat " + timedBeats + " time " + Time.timeAsDouble);// + " delay " + delayTimer);
                 //print("beat duration " + sequenceDuration);
                 //print("beat fpb " + framesPerBeat);
@@ -397,6 +401,9 @@ public class MusicManager : MonoBehaviour
         }
 
 
+        
+
+
         if (_currentSequence.replayInSameSequence == false)
         {
             if (_currentSong != null && _currentSequence.keepPlayingOnSwitch == false)
@@ -553,8 +560,8 @@ public class MusicManager : MonoBehaviour
         playing = true;
         songTimer = 0;
         timedBeats = 1;
-        double delayTimer = Time.realtimeSinceStartup - lastTimer;
-        lastTimer = Time.realtimeSinceStartup;
+        double delayTimer = Time.timeAsDouble - lastTimer;
+        lastTimer = Time.timeAsDouble;
         //print("fixed, beat " + timedBeats + " time " + Time.timeAsDouble + " delay " + delayTimer);
 
 

@@ -2941,6 +2941,52 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="4   PAUSING" ID="{753259DB-F3EB-455F-90C8-C59D68277788}" ShortID="501770797">
+					<ChildrenList>
+						<Event Name="PauseAll" ID="{10A88466-9FF9-43A0-8ED9-A5344800253B}">
+							<ChildrenList>
+								<Action Name="" ID="{B12A2B37-E03E-49F8-B7AC-E1D0824E6798}" ShortID="173027683">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="8"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList/>
+									<ChildrenList>
+										<EventActionException Name="" ID="{24595E48-5EB7-47B5-A3C8-D3D457E99CF8}">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="PauseScreenMusic" ID="{FF4BAB53-7E56-4A05-8A18-7B490E173F35}" WorkUnitID="{8DC8C28D-1D78-418C-87BD-2BF45D3F8625}"/>
+												</Reference>
+											</ReferenceList>
+										</EventActionException>
+									</ChildrenList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ResumeAll" ID="{AEE16521-2087-4FD4-9B97-950A61A32CA2}">
+							<ChildrenList>
+								<Action Name="" ID="{00FF841E-50FF-4237-907A-A05FA9A6A058}" ShortID="505701898">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="10"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="PauseMenuSong" ID="{BD9C8571-74E9-4355-9571-68634B44947B}">
+							<ChildrenList>
+								<Action Name="" ID="{79678EE0-93FA-46F5-9FDD-0766E46DE837}" ShortID="5098089">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PauseScreenMusic" ID="{FF4BAB53-7E56-4A05-8A18-7B490E173F35}" WorkUnitID="{8DC8C28D-1D78-418C-87BD-2BF45D3F8625}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
