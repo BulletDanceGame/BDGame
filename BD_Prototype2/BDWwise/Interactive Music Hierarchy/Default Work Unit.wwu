@@ -12981,7 +12981,13 @@
 						</Folder>
 						<MusicSegment Name="PauseScreenMusic" ID="{FF4BAB53-7E56-4A05-8A18-7B490E173F35}" ShortID="149993340">
 							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="9933.04166666667"/>
 								<Property Name="Tempo" Type="Real64" Value="300"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -12992,23 +12998,23 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="Boss 1 - Phase 1 - Part 2" ID="{7A3C6281-2B29-4CFA-A326-994A6404260A}" ShortID="604110182">
+								<MusicTrack Name="Env1-VegZone1_Part2" ID="{540D931F-5BED-44EF-8974-B003EA901611}" ShortID="313791097">
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Boss 1 - Phase 1 - Part 2" ID="{D9113B8F-53BA-44F3-A5D1-DB4ED20F41C0}">
+										<AudioFileSource Name="Env1-VegZone1_Part2" ID="{50C5E998-7E47-47E4-BE1C-BF3558F8F88A}">
 											<Language>SFX</Language>
-											<AudioFile>Boss 1 - Phase 1 - Part 2.wav</AudioFile>
+											<AudioFile>Env1-VegZone1_Part2.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="870983996"/>
+												<MediaID ID="506300702"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
-										<MusicTransition Name="Root" ID="{E7887A70-3131-478C-8A67-FF3A1A8787FB}">
+										<MusicTransition Name="Root" ID="{C5875594-DD1D-4663-972E-925F240FC947}">
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
@@ -13019,18 +13025,18 @@
 										<ObjectList Name="Sequences">
 											<Reference>
 												<Local>
-													<MusicTrackSequence Name="" ID="{800D17AF-B032-4316-873B-C5A6327A716D}">
+													<MusicTrackSequence Name="" ID="{020131F7-2A9C-4A4B-85F3-27C391D3B5AD}">
 														<ObjectLists>
 															<ObjectList Name="Clips">
 																<Reference>
 																	<Local>
-																		<MusicClip Name="Boss 1 - Phase 1 - Part 2" ID="{FE74A9C6-3E82-4305-8541-3F199758323A}">
+																		<MusicClip Name="Env1-VegZone1_Part2" ID="{194CD194-90B3-44ED-982C-1D1EF80B3FE9}">
 																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="3408.33333333333"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="9933.04166666667"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="Boss 1 - Phase 1 - Part 2" ID="{D9113B8F-53BA-44F3-A5D1-DB4ED20F41C0}"/>
+																			<AudioSourceRef Name="Env1-VegZone1_Part2" ID="{50C5E998-7E47-47E4-BE1C-BF3558F8F88A}"/>
 																		</MusicClip>
 																	</Local>
 																</Reference>
@@ -13055,7 +13061,7 @@
 											<MusicCue Name="Exit Cue" ID="{872C916B-95A3-4CEE-B3D0-5B9DB9A1DF28}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="3200"/>
+													<Property Name="TimeMs" Type="Real64" Value="6400"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>

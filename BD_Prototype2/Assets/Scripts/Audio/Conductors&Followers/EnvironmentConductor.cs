@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnvironmentConductor : MusicConductor
 {
-    public enum SequenceType { Roaming, Battle, BattleOutro }
+    public enum SequenceType { Roaming_InstantSwitch, Roaming_QueuedSwitch, Battle, BattleOutro }
 
     [Serializable]
     public struct SequenceGroup
@@ -177,8 +177,15 @@ public class EnvironmentConductor : MusicConductor
                     transition = MusicManager.TransitionType.INSTANT_SWITCH; 
                 }
                 else 
-                { 
-                    transition = MusicManager.TransitionType.QUEUE_SWITCH; 
+                {
+                    if (_startingSequenceType == SequenceType.Roaming_InstantSwitch)
+                    {
+                        transition = MusicManager.TransitionType.INSTANT_SWITCH;
+                    }
+                    else
+                    {
+                        transition = MusicManager.TransitionType.QUEUE_SWITCH;
+                    }
                 }
 
                 ConductorManager.Instance.AddController(this, transition);
@@ -203,22 +210,29 @@ public class EnvironmentConductor : MusicConductor
 
     public void StartForCutscene()
     {
-            if (_active == false)
+        if (_active == false)
+        {
+            _active = true;
+
+            MusicManager.TransitionType transition;
+            if (ConductorManager.Instance.GetCurrentController() == null)
             {
-                _active = true;
-
-                MusicManager.TransitionType transition;
-                if (ConductorManager.Instance.GetCurrentController() == null) 
-                { 
-                    transition = MusicManager.TransitionType.INSTANT_SWITCH; 
+                transition = MusicManager.TransitionType.INSTANT_SWITCH;
+            }
+            else
+            {
+                if (_startingSequenceType == SequenceType.Roaming_InstantSwitch)
+                {
+                    transition = MusicManager.TransitionType.INSTANT_SWITCH;
                 }
-                else 
-                { 
-                    transition = MusicManager.TransitionType.QUEUE_SWITCH; 
+                else
+                {
+                    transition = MusicManager.TransitionType.QUEUE_SWITCH;
                 }
+            }
 
-                ConductorManager.Instance.AddController(this, transition);
-            }        
+            ConductorManager.Instance.AddController(this, transition);
+        }
     }
 
 }

@@ -112,6 +112,11 @@ public class Player : MonoBehaviour
             
     }
 
+    void OnPause()
+    {
+        EventManager.Instance.PausePressed();
+    }
+
     void SuccessBeatCheck()
     {
         Fails = 0;
@@ -127,6 +132,7 @@ public class Player : MonoBehaviour
         StopCoroutine(routine);
 
         routine = StartCoroutine(ResetFails());
+
 
         if (Fails >= MaxFails && playerFailState == PlayerFailState.NORMAL)
         {

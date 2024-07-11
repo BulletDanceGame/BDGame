@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -104,7 +105,7 @@ public class Bullet : MonoBehaviour
         Invoke("Deactivate", lifeTime);
         _fx.SetUp(this);
 
-        EventManager.Instance.OnPlayerRhythmBeat += SpawnRhythmMarker;
+        EventManager.Instance.OnPlayerRhythmBeat += OnBeat;
     }
 
     public void OnDisable()
@@ -114,7 +115,7 @@ public class Bullet : MonoBehaviour
 
         Damage = 15;
 
-        EventManager.Instance.OnPlayerRhythmBeat -= SpawnRhythmMarker;
+        EventManager.Instance.OnPlayerRhythmBeat -= OnBeat;
     }
 
     public void Deactivate()
@@ -149,19 +150,20 @@ public class Bullet : MonoBehaviour
     {
         if(!_canCollide) return;
 
-        foreach(string tag in _collideBGObjectTag)
+        if (_collideBGObjectTag.Contains(collision.transform.tag))
         {
-            if (collision.transform.tag == tag)
-            {
-                Deactivate();
-                break;
-            }
+            Deactivate();
+
         }
 
-        if (type == BulletType.BOSSBULLET)
-            return;
 
-        if(collision.tag == "Turret" || collision.tag == "BouncedSurface")
+        if (type == BulletType.BOSSBULLET)
+        {
+            Deactivate();
+            return;
+        }
+
+        if (collision.tag == "Turret" || collision.tag == "BouncedSurface")
         {
             if(bounces > 5)
             {
@@ -198,7 +200,7 @@ public class Bullet : MonoBehaviour
         }  
     }
 
-    private void SpawnRhythmMarker(int anticipation)
+    private void OnBeat(int anticipation)
     {
         SetSpeed(onBeatSpeed);
         _onBeatSpeedTimer = onBeatSpeedDuration;
@@ -253,11 +255,6 @@ public class Bullet : MonoBehaviour
         _fx.LastHitFX();
     }
 
-    private void SpeedUp()
-    {
-        SetSpeed(perfectSpeed * 7);
-        _fx.SpeedUpFX();
-    }
 
     // --- Out-of-camera Indicator --- //
     public void SpawnedOutsideCamera()

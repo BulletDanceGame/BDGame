@@ -140,8 +140,6 @@ public class PlayerSwing : MonoBehaviour
 
                 GetComponentInParent<Player>().Fail();
 
-                Debug.Log("Missed Beat");
-
                 break;
 
         }

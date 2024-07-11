@@ -300,7 +300,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""76924fe4-82cb-4fc5-953e-05cea221f197"",
-                    ""path"": ""<Keyboard>/p"",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -458,6 +458,15 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""950c71fb-d29d-44d0-a4a1-030920d23478"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -480,6 +489,28 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""GamePad"",
                     ""action"": ""SpeedUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""496e339b-c474-44d4-aa9a-7c502e805c25"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e0734bff-4a8f-4faa-baea-e568838e8ef7"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -534,6 +565,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         // Cutscene
         m_Cutscene = asset.FindActionMap("Cutscene", throwIfNotFound: true);
         m_Cutscene_SpeedUp = m_Cutscene.FindAction("SpeedUp", throwIfNotFound: true);
+        m_Cutscene_Pause = m_Cutscene.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -732,11 +764,13 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Cutscene;
     private ICutsceneActions m_CutsceneActionsCallbackInterface;
     private readonly InputAction m_Cutscene_SpeedUp;
+    private readonly InputAction m_Cutscene_Pause;
     public struct CutsceneActions
     {
         private @PlayerInputActions m_Wrapper;
         public CutsceneActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @SpeedUp => m_Wrapper.m_Cutscene_SpeedUp;
+        public InputAction @Pause => m_Wrapper.m_Cutscene_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Cutscene; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -749,6 +783,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @SpeedUp.started -= m_Wrapper.m_CutsceneActionsCallbackInterface.OnSpeedUp;
                 @SpeedUp.performed -= m_Wrapper.m_CutsceneActionsCallbackInterface.OnSpeedUp;
                 @SpeedUp.canceled -= m_Wrapper.m_CutsceneActionsCallbackInterface.OnSpeedUp;
+                @Pause.started -= m_Wrapper.m_CutsceneActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_CutsceneActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_CutsceneActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_CutsceneActionsCallbackInterface = instance;
             if (instance != null)
@@ -756,6 +793,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @SpeedUp.started += instance.OnSpeedUp;
                 @SpeedUp.performed += instance.OnSpeedUp;
                 @SpeedUp.canceled += instance.OnSpeedUp;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -798,5 +838,6 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     public interface ICutsceneActions
     {
         void OnSpeedUp(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }

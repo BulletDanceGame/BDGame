@@ -29,7 +29,7 @@ public class MusicManager : MonoBehaviour
 
     //current songs and sequences
     private AK.Wwise.Event _currentSong;
-    private MusicSequence _nextSequence;
+    public MusicSequence _nextSequence { get; private set; }
     public MusicSequence _currentSequence { get; private set; }
 
 
@@ -130,33 +130,37 @@ public class MusicManager : MonoBehaviour
         if (playing)
         {
             songTimer++;
+            double frameDuration = currentFrameDuration;
+
             if (speedingUpInCutscene)
             {
                 songTimer += 3;
+                frameDuration *= 4;
             }
 
-            
+
             //print("goal " + (timedBeats * framesPerBeat - endTime) + " off " + (songTimer - (timedBeats * framesPerBeat - endTime)));
 
             double delay = 0;
+
             if (lastFrameTime != 0)
             {
-                double frameTimer = Time.realtimeSinceStartup - lastFrameTime;
-                delay = frameTimer - currentFrameDuration;
+                double frameTimer = Time.timeAsDouble - lastFrameTime;
+                delay = frameTimer - frameDuration;
             }
             totalDelay += delay;
                 
-            lastFrameTime = Time.realtimeSinceStartup;
+            lastFrameTime = Time.timeAsDouble;
             //print("skip unitycheck " + totalDelay);
 
-            int f = (int)(totalDelay / currentFrameDuration);
+            int f = (int)(totalDelay / frameDuration);
 
             if (Mathf.Abs(f) >= 1)
             {
                 //print("skip unity " + f + " time " + totalDelay);
                 songTimer += f;
                 if(speedingUpInCutscene) { songTimer += f * 3; }
-                totalDelay -= currentFrameDuration * f;
+                totalDelay -= frameDuration * f;
             }
 
             t = songTimer;
@@ -167,20 +171,19 @@ public class MusicManager : MonoBehaviour
                 timedBeats++;
 
                 //save from pausing
-                double delayTimer = Time.realtimeSinceStartup - lastTimer;
-                lastTimer = Time.realtimeSinceStartup;
+                double delayTimer = Time.timeAsDouble - lastTimer;
+                lastTimer = Time.timeAsDouble;
                 //print("beat " + timedBeats + " time " + Time.timeAsDouble);// + " delay " + delayTimer);
                 //print("beat duration " + sequenceDuration);
                 //print("beat fpb " + framesPerBeat);
 
                 if (timedBeats == sequenceDuration+1) //DURATION
                 {
-                    print("_start songtimer " + songTimer);
                     StartSequence();
 
                     endTime = 0;
                 }
-                else // < sequenceDuration+1
+                else // timedBeats < sequenceDuration+1
                 {
                     currentBeat++;
                     EventManager.Instance.Beat(currentBeat);
@@ -188,7 +191,6 @@ public class MusicManager : MonoBehaviour
                     if (timedBeats == sequenceDuration)
                     {
                         endTime = currentFrameDelay;
-
                     }
                 }
             }
@@ -196,7 +198,6 @@ public class MusicManager : MonoBehaviour
 
         if (prepareNextSequence)
         {
-            print("startime aa " + currentFrameDuration + " - "+  currentFrameDelay);
             PrepareNextSequence(true);
             prepareNextSequence = false;
         }
@@ -400,6 +401,9 @@ public class MusicManager : MonoBehaviour
         }
 
 
+        
+
+
         if (_currentSequence.replayInSameSequence == false)
         {
             if (_currentSong != null && _currentSequence.keepPlayingOnSwitch == false)
@@ -422,8 +426,6 @@ public class MusicManager : MonoBehaviour
             print("framedel " + currentFrameDelay);
 
             Application.targetFrameRate = currentFramerate;
-            framesPerBeat = secondsPerBeat / currentFrameDuration;
-            //print("fpb " + framesPerBeat);
             sequenceDuration = _currentSequence.duration;
 
             AkSoundEngineController.Instance.starting = true;
@@ -538,7 +540,11 @@ public class MusicManager : MonoBehaviour
         currentBeat++;
         EventManager.Instance.Beat(currentBeat);
 
-        print("_start entry " + Time.timeAsDouble);
+        framesPerBeat = secondsPerBeat / currentFrameDuration;
+        //print("fpb " + framesPerBeat);
+
+
+        print("_start entry yo " + Time.timeAsDouble);
         startDelay = Time.timeAsDouble - startDelay;
         print("_startdelay " + startDelay + " fr " + frames);
         print("_s between entries " + (Time.timeAsDouble-lastEntry));
@@ -551,16 +557,16 @@ public class MusicManager : MonoBehaviour
 
         //checkFrames = false;
 
-        PrepareNextSequence();//move to after offset
-
         playing = true;
         songTimer = 0;
         timedBeats = 1;
-        double delayTimer = Time.realtimeSinceStartup - lastTimer;
-        lastTimer = Time.realtimeSinceStartup;
+        double delayTimer = Time.timeAsDouble - lastTimer;
+        lastTimer = Time.timeAsDouble;
         //print("fixed, beat " + timedBeats + " time " + Time.timeAsDouble + " delay " + delayTimer);
 
-        
+
+
+        PrepareNextSequence();//move to after offset
 
 
         yield return null;

@@ -86,7 +86,7 @@ public class SoundContainer : MonoBehaviour
     protected void PlaySFX(string sfxName, float duration = 1f, GameObject source = null, bool playOnce = false)
     {
         AK.Wwise.Event sound = GetSFX(sfxName);
-        if(sound != null)
+        if (sound != null)
             manager.PlaySFX(sound, duration, source, playOnce);
     }
 

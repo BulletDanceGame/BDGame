@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 
 public enum ButtonInput { swing, dash };
@@ -18,6 +19,7 @@ public class CalibrateInput : MonoBehaviour
     [SerializeField] private GameObject offsetMarker;
     [SerializeField] private TextMeshProUGUI offsetText;
     [SerializeField] private TextMeshProUGUI countText;
+    [SerializeField] private GameObject resetButton;
 
     private double secondsPerBeat = .0;
 
@@ -25,8 +27,6 @@ public class CalibrateInput : MonoBehaviour
     private double combinedDelay = .0;
     private int delayHitCounter = 0;
 
-    private double max = 0;
-    private double min = 0;
 
     [SerializeField] private Animator anim;
 
@@ -104,9 +104,12 @@ public class CalibrateInput : MonoBehaviour
             delayMarkers.Add(d);
 
 
+            resetButton.SetActive(true);
+
             //count
             delayHitCounter++;
-            countText.text = "Count: " + delayHitCounter + "/10";
+            countText.gameObject.SetActive(true);
+            countText.text = "Count: " + delayHitCounter + "/5";
 
             //average
             combinedDelay += delay;
@@ -120,7 +123,7 @@ public class CalibrateInput : MonoBehaviour
 
 
             //offset n marker
-            if (delayHitCounter == 10)
+            if (delayHitCounter == 5)
             {
                 double offset = Math.Round(averageDelay, 3);
 
@@ -215,8 +218,6 @@ public class CalibrateInput : MonoBehaviour
         delayHitCounter = 0;
         averageDelay = 0;
         combinedDelay = 0;
-        max = 0;
-        min = 0;
 
         //markers
         for (int i = 0; i < delayMarkers.Count; i++)
@@ -228,7 +229,10 @@ public class CalibrateInput : MonoBehaviour
         averageDelayMarker.SetActive(false);
         offsetMarker.SetActive(false);
 
-        countText.text = "Count: 0/10";
+        countText.gameObject.SetActive(false);
+        countText.text = "Count: 0/5";
+
+        resetButton.SetActive(false);
 
         canHit = true;
 

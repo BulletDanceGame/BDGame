@@ -96,7 +96,6 @@ public class PlayerRhythm : MonoBehaviour
 
     public void ClearBeats()
     {
-        print("clear");
         _timesToHit.Clear();
         _times.Clear();
 
@@ -146,7 +145,7 @@ public class PlayerRhythm : MonoBehaviour
             //for times
             //needs to check for the last one better
             //unnesecary for now
-            int index = _playerBeats.IndexOf(beat) + 1;
+            int index = _playerBeats.IndexOf(beat);
             if (index != _playerBeats.Count)
             {
                 (double, int) a = (_startTime + (spb * (beat - startBeat) + offsetVisuals), _playerBeats[index] - beat);
@@ -175,21 +174,7 @@ public class PlayerRhythm : MonoBehaviour
     /// <summary> Removes prepared beats for the past next sequence </summary>
     public void RemoveOldPreparedBeats()
     {
-        //if (_timesToHit.Count > 0)
-        //{
-        //    int lastBeatInPlayerBeats = _playerBeats[^1];
-        //    for (int i = MusicManager.Instance.lastBeatOfSequence + 1; i < lastBeatInPlayerBeats + 1; i++)
-        //    {
-        //        if (_playerBeats.Contains(i))
-        //        {
-        //            _playerBeats.Remove(i);
-        //        }
-        //    }
-        //}
-
-
-
-
+        
         for (int i = _timesToHit.Count - 1; i > -1; i--)
         {
             if (_timesToHit[i] > _startTime)

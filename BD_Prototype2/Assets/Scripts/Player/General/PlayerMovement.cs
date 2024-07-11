@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     float _playerSpeed, _slideSpeed, _slideCooldown, _slideTime, _pushBackSpeed, _pushBackTime;
     bool canDash = true, slideCooldown = false;
     public bool DashActivated = false;
+    public bool canMove = true;
 
     [SerializeField]
     Vector2 _lastGroundPosition;
@@ -54,11 +55,13 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         EventManager.Instance.OnPlayerPushBack += StartPushBack;
+        EventManager.Instance.OnPlayerDeath += ResetMovement;
     }
 
     private void OnDisable()
     {
         EventManager.Instance.OnPlayerPushBack -= StartPushBack;
+        EventManager.Instance.OnPlayerDeath -= ResetMovement;
     }
 
     // Start is called before the first frame update
@@ -150,11 +153,20 @@ public class PlayerMovement : MonoBehaviour
         return inputVector;
     }
 
+    void ResetMovement()
+    {
+        inputVector = Vector2.zero;
+    }
+
     void OnMove(InputValue value)
     {
+        if (!canMove)
+            return;
+
         inputVector = value.Get<Vector2>();
         EventManager.Instance?.PlayerMove(inputVector);
     }
+
 
     void OnSloMo(InputValue value)
     {

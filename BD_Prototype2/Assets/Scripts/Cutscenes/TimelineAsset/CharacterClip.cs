@@ -169,7 +169,7 @@ public class CharacterTrackMixer : PlayableBehaviour
     private void SetCommonVariables(CharacterBehaviour input)
     {
         bool canUpdate = input.enableUpdate;
-        requestUpdate = canUpdate != enableUpdate;
+        requestUpdate = (canUpdate != enableUpdate);
         if(requestUpdate) enableUpdate = canUpdate;
 
         direction = input.direction;

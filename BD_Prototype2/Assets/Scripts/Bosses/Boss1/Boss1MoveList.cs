@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
+using BulletDance.Animation;
+using BulletDance.Graphics;
+using static BulletDance.Animation.CannisterAnimator;
 
 public class Boss1MoveList : Movelist
 {
@@ -66,7 +69,7 @@ public class Boss1MoveList : Movelist
     [Header("Reticle")]
     [SerializeField]
     private GameObject _attackReticlePrefab;
-    private List<GameObject> _attackReticles = new List<GameObject>();
+    private List<(GameObject, CanType)> _attackReticles = new List<(GameObject, CanType)>();
     [SerializeField]
     private Vector2 _reticleSize;
 
@@ -75,11 +78,10 @@ public class Boss1MoveList : Movelist
 
     [Header("Container")]
     [SerializeField]
-    GameObject _canister;
+    GameObject _container;
 
     private List<int> _currentContainerBeats = new List<int>();
     [SerializeField] private int _beatsCanisterReticleDuration;
-    [SerializeField] private int _beatsCanisterDropQUEUE;
 
     private bool _wallCheck=false;
 
@@ -249,14 +251,42 @@ public class Boss1MoveList : Movelist
     //CONTAINER
     void ContainerDrop()
     {
-        _currentContainerBeats.Add(0);
 
-        _attackReticles.Add(Instantiate(_attackReticlePrefab, UnitManager.Instance.GetPlayer().transform.position, Quaternion.identity));
 
-        _attackReticles[^1].transform.parent = null;
+        string sequenceName = MusicManager.Instance._nextSequence.name;
+        int multiple = 0;
+
+        if (sequenceName.Contains("Fire"))
+        {
+            _currentContainerBeats.Add(multiple);
+            _attackReticles.Add((Instantiate(_attackReticlePrefab, UnitManager.Instance.GetPlayer().transform.position, Quaternion.identity), CanType.FIRE));
+            _attackReticles[^1].Item1.transform.parent = null;
+            multiple -= 4;
+        }
+        if (sequenceName.Contains("Explosion"))
+        {
+            _currentContainerBeats.Add(multiple);
+            _attackReticles.Add((Instantiate(_attackReticlePrefab, UnitManager.Instance.GetPlayer().transform.position, Quaternion.identity), CanType.EXPLOSION));
+            _attackReticles[^1].Item1.transform.parent = null;
+            multiple -= 4;
+        }
+        if (sequenceName.Contains("Groovy"))
+        {
+            _currentContainerBeats.Add(multiple);
+            _attackReticles.Add((Instantiate(_attackReticlePrefab, UnitManager.Instance.GetPlayer().transform.position, Quaternion.identity), CanType.GROOVY));
+            _attackReticles[^1].Item1.transform.parent = null;
+            multiple -= 4;
+        }
+        if (sequenceName.Contains("Normal"))
+        {
+            _currentContainerBeats.Add(multiple);
+            _attackReticles.Add((Instantiate(_attackReticlePrefab, UnitManager.Instance.GetPlayer().transform.position, Quaternion.identity), CanType.DEFAULT));
+            _attackReticles[^1].Item1.transform.parent = null;
+            multiple -= 4;
+        }
+        
+        
     }
-
-
 
 
 
@@ -285,7 +315,7 @@ public class Boss1MoveList : Movelist
         {
             _isBooping = true;
             _currentBoopBeat = 0;
-            Animator anim = _boopObject.GetComponent<Animator>();
+            UnityEngine.Animator anim = _boopObject.GetComponent<UnityEngine.Animator>();
             anim.speed = (1f / (float)0.2) / _beatsForBoop;
             anim.Play("BoopFeedback");
         }
@@ -407,6 +437,7 @@ public class Boss1MoveList : Movelist
 
 
     }
+
     void UpdateContainers()
     {
 
@@ -414,19 +445,22 @@ public class Boss1MoveList : Movelist
         {
             if (_currentContainerBeats[i] < _beatsCanisterReticleDuration)
             {
+                //Reticle Update
                 float _step = reticleFollowSpeed * Time.deltaTime;
-                _attackReticles[i].transform.position = Vector2.MoveTowards(_attackReticles[i].transform.position, UnitManager.Instance.GetPlayer().transform.position, _step);
-                _attackReticles[i].transform.localScale = Vector2.Lerp(_attackReticles[i].transform.localScale, _reticleSize, Time.deltaTime);
+                Transform reticle = _attackReticles[i].Item1.transform;
+                reticle.position = Vector2.MoveTowards(reticle.position, UnitManager.Instance.GetPlayer().transform.position, _step * (1f-i*0.1f));
+                reticle.localScale = Vector2.Lerp(reticle.localScale, _reticleSize, Time.deltaTime);
             }
-            else if (_currentContainerBeats[i] >= _beatsCanisterDropQUEUE)
+            else
             {
-                Instantiate(_canister, _attackReticles[i].transform.position, Quaternion.identity);
+                GameObject container = Instantiate(_container, _attackReticles[i].Item1.transform.position, Quaternion.identity);
+                container.GetComponentInChildren<CannisterAnimator>().SetUp(_attackReticles[i].Item2);
 
-                Destroy(_attackReticles[i]);
+                Destroy(_attackReticles[i].Item1);
                 _attackReticles.RemoveAt(i);
-
                 _currentContainerBeats.RemoveAt(i);
                 i--;
+
             }
         }
     }
@@ -449,7 +483,7 @@ public class Boss1MoveList : Movelist
 
     //CUTSCENE SPAWNING BULLETS
     int nr = 0;
-    private List<GameObject> bulletsQUEUEing = new List<GameObject>();
+    private List<GameObject> bulletsQueueing = new List<GameObject>();
 
     public void SpawnBulletsForCutscene()
     {
@@ -493,17 +527,17 @@ public class Boss1MoveList : Movelist
             bullet.transform.position += bullet.transform.up * 2 * nr;
             bullet.GetComponent<Bullet>().SetMoveDir(bullet.transform.up);
             bullet.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-            bulletsQUEUEing.Add(bullet);
+            bulletsQueueing.Add(bullet);
         }
     }
 
     public void ShootStillBullets()
     {
-        for (int i = 0; i < bulletsQUEUEing.Count; i++)
+        for (int i = 0; i < bulletsQueueing.Count; i++)
         {
-            bulletsQUEUEing[i].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            bulletsQueueing[i].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
         }
-        bulletsQUEUEing.Clear();
+        bulletsQueueing.Clear();
     }
 
 
@@ -516,7 +550,7 @@ public class Boss1MoveList : Movelist
         //containers
         for (int i = 0; i < _currentContainerBeats.Count; i++)
         {
-            Destroy(_attackReticles[0]);
+            Destroy(_attackReticles[0].Item1);
             _attackReticles.RemoveAt(0);
             _currentContainerBeats.RemoveAt(0);
         }

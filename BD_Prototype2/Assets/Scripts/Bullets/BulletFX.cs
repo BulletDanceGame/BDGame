@@ -114,11 +114,6 @@ public class BulletFX : MonoBehaviour
         Instantiate(_lineExplosion,transform.position,Quaternion.identity);
     }
 
-    public void SpeedUpFX()
-    {
-        transform.localScale += new Vector3(0, _hitSize * 1.5f, 0);
-    }
-
 
     public void MissFX()
     {
