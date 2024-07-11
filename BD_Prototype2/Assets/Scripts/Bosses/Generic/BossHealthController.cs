@@ -110,7 +110,7 @@ public class BossHealthController : MonoBehaviour
 
         Bullet bullet = collision.GetComponent<Bullet>(); //Replacing GetComponent() with Bullet var
 
-        if (bullet.type == BulletType.BOSSBULLET)
+        if (bullet.type == BulletOwner.BOSSBULLET)
             return;
 
         //Prevent boss from getting over-hit

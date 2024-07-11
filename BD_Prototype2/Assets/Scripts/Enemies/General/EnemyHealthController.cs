@@ -89,7 +89,7 @@ public class EnemyHealthController : MonoBehaviour
 
         Bullet bullet = collision.GetComponent<Bullet>();
 
-        if (bullet.type == BulletType.BOSSBULLET)
+        if (bullet.type == BulletOwner.BOSSBULLET)
             return;
 
 
