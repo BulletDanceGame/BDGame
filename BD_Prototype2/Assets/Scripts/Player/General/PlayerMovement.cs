@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     //REMINDER: for slide time do bpm/60 and then we get the cooldown 
     [SerializeField]
     float _playerSpeed, _slideSpeed, _slideCooldown, _slideTime, _pushBackSpeed, _pushBackTime;
-    bool canDash = true, slideCooldown = false;
+    public bool canDash = true, slideCooldown = false;
     public bool DashActivated = false;
     public bool canMove = true;
 
