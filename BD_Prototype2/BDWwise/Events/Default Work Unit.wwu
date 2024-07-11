@@ -2941,6 +2941,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Missed_Dash" ID="{3E653AB1-7AB7-4403-9FB7-CAF14CA30B8E}">
+					<ChildrenList>
+						<Action Name="" ID="{D5B9A5F4-0FBB-4D5B-865A-C3646C9983F3}" ShortID="223619804">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Missed Dash" ID="{681C13B5-D41E-4E2B-A6A9-91AC3358972F}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -130,6 +130,7 @@ public class Player : MonoBehaviour
 
         if (Fails >= MaxFails && playerFailState == PlayerFailState.NORMAL)
         {
+            AkSoundEngine.SetState("FailLevel", "Third");
             playerFailState = PlayerFailState.FAILED;
             EventManager.Instance.PlayerTired();
             EventManager.Instance.CooldownStart();
@@ -142,6 +143,7 @@ public class Player : MonoBehaviour
         playerFailState = PlayerFailState.NORMAL;
         Fails = 0;
         EventManager.Instance.PlayerNormal();
+        AkSoundEngine.SetState("FailLevel", "First");
     }
 
     // -- Player health -- //

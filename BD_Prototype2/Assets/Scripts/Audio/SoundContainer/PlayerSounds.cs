@@ -15,6 +15,9 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
 */
     public class PlayerSounds : SoundContainer
     {
+        int fails = 0;
+
+
         // -- Event Hooks & sound initialization -- //
         void Start()
         {
@@ -81,23 +84,27 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
         //Movement
         void PlayerDash(BeatTiming hitTiming, Vector2 none)
         {
-            if(hitTiming == BeatTiming.BAD) return;
+            if (hitTiming == BeatTiming.BAD)
+            {
+                PlaySFX("Dash Miss");
+                return;
+            }
             PlaySFX("Dash");
             PlaySFX("Dash Step");
         }
 
         void PlayerCooldown()
         {
-                //set cooldown rtpcs
-                PlaySFX("Cooldown Start");
+            //set cooldown rtpcs
+            PlaySFX("Cooldown Start");
             RTPCManager.Instance.SetValue("LOW_PASS____MusicBossBattle", 80, 0.00000000001f, RTPCManager.CurveTypes.high_curve,
-                                                                             5f, RTPCManager.CurveTypes.high_curve, 0);
+                                                                             6f, RTPCManager.CurveTypes.high_curve, 0);
             RTPCManager.Instance.SetValue("LOW_PASS____MusicEnvBattle", 80, 0.00000000001f, RTPCManager.CurveTypes.high_curve,
-                                                                            5f, RTPCManager.CurveTypes.high_curve, 0);
+                                                                            6f, RTPCManager.CurveTypes.high_curve, 0);
             RTPCManager.Instance.SetValue("LOW_PASS____MusicEnvRoaming", 80, 0.00000000001f, RTPCManager.CurveTypes.high_curve,
-                                                                            5f, RTPCManager.CurveTypes.high_curve, 0);
+                                                                            6f, RTPCManager.CurveTypes.high_curve, 0);
             RTPCManager.Instance.SetValue("LOW_PASS____PlayerDamage", 80, 0.00000000001f, RTPCManager.CurveTypes.high_curve,
-                                                                          5f, RTPCManager.CurveTypes.high_curve, 0);
+                                                                          6f, RTPCManager.CurveTypes.high_curve, 0);
             }
         
         void PlayerSlowMo()

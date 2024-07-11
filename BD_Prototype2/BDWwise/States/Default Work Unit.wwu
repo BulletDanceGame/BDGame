@@ -45,6 +45,9 @@
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="FailLevel" ID="{9C48E57F-60D5-4657-A950-966EC2AC4B67}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{9AAAA452-8BE9-46FA-913F-4D96A4612A21}"/>
 						<State Name="First" ID="{77E65DC6-FBF8-4335-B858-D009AFF398E0}"/>

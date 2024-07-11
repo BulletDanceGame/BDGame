@@ -172,6 +172,7 @@ namespace AK
         static const AkUniqueID PLAY_LAYER1_ENVIRONMENT_PART4__BPM130_ = 98065286U;
         static const AkUniqueID PLAY_LAYER1_ENVIRONMENT_PART4__BPM140_ = 2212780921U;
         static const AkUniqueID PLAY_LAYER1_ENVIRONMENT_PART4__BPM150_ = 166161648U;
+        static const AkUniqueID PLAY_MISSED_DASH = 2503464396U;
         static const AkUniqueID PLAY_MOVING_TO_THE_SIDE = 2755497806U;
         static const AkUniqueID PLAY_TRAINING___INTRO = 588830433U;
         static const AkUniqueID PLAY_TRAINING___PART_1 = 4026880622U;
