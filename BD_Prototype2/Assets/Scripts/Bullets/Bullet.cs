@@ -2,12 +2,12 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-public enum BulletType { BOSSBULLET, PLAYERBULLET}
+public enum BulletOwner { BOSSBULLET, PLAYERBULLET}
 
 public class Bullet : MonoBehaviour
 {
     [Header("Base bullet properties")]
-    public BulletType type = BulletType.BOSSBULLET;
+    public BulletOwner type = BulletOwner.BOSSBULLET;
 
     private float _currentSpeed;
     public float offBeatSpeed;
@@ -50,7 +50,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float _lightIntensity;
     [SerializeField] private ParticleSystem _beatParticles;
 
-    public void FireBullet(Vector3 direction, Vector2 startingPosition)
+    public void ShootBullet(Vector3 direction, Vector2 startingPosition)
     {
         ResetBullet();
         gameObject.SetActive(true);
@@ -69,7 +69,7 @@ public class Bullet : MonoBehaviour
     {
         SetMoveDir(direction);
         SetSpeed(speed);
-        type = BulletType.PLAYERBULLET;
+        type = BulletOwner.PLAYERBULLET;
 
         CancelInvoke();
         Invoke("Deactivate", lifeTime);
@@ -133,7 +133,7 @@ public class Bullet : MonoBehaviour
 
     public void ResetBullet()
     {
-        type = BulletType.BOSSBULLET;
+        type = BulletOwner.BOSSBULLET;
         bounces = 0;
         SetSpeed(offBeatSpeed);
         _fx.Reset();
@@ -159,7 +159,7 @@ public class Bullet : MonoBehaviour
 
         
 
-        if (collision.tag == "Turret" || collision.tag == "BouncedSurface")
+        if ((collision.tag == "Turret" && type == BulletOwner.PLAYERBULLET) || collision.tag == "BouncedSurface")
         {
             //if (type == BulletType.BOSSBULLET)
             //{
@@ -190,7 +190,7 @@ public class Bullet : MonoBehaviour
     {
         GetComponent<Rigidbody2D>().velocity = dir.normalized * _currentSpeed;
 
-        if (type == BulletType.PLAYERBULLET)
+        if (type == BulletOwner.PLAYERBULLET)
             return;
 
         _onBeatSpeedTimer -= Time.deltaTime;
@@ -271,6 +271,6 @@ public class Bullet : MonoBehaviour
     public void TutorialCutsceneShot()
     {
         lifeTime = 1f;
-        FireBullet(Vector2.right, transform.position);
+        ShootBullet(Vector2.right, transform.position);
     }
 }
