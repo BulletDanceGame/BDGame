@@ -13,7 +13,7 @@
 			<ShortName>Music_Critter_Phase2</ShortName>
 			<Path>Music_Critter_Phase2.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="690988691" Type="User" Language="SFX" Hash="{F833F6B3-6DC5-B457-BF63-A99BAC3891D6}">
+		<SoundBank Id="690988691" Type="User" Language="SFX" Hash="{455112E9-588C-B176-5A8A-18F81AD40887}">
 			<ShortName>Music_Critter_Phase1</ShortName>
 			<Path>Music_Critter_Phase1.bnk</Path>
 			<Media>
@@ -83,6 +83,9 @@
 					</MediaRefs>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="1103547191" Name="PLAYBACK_SPEED____CutsceneMusic"/>
+			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="723507619" Type="User" Language="SFX" Hash="{203FCE82-09E4-9AD7-0202-13A08A527031}">
 			<ShortName>Music_YokaiHunter_Phase3AndOutro</ShortName>
@@ -453,7 +456,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="834008394" Type="User" Language="SFX" Hash="{429C88A4-42BF-10B8-B343-3745EE529989}">
+		<SoundBank Id="834008394" Type="User" Language="SFX" Hash="{A470A5A4-BC29-CD07-A128-B7AC307522B9}">
 			<ShortName>Music_TutorialAndLevel1_Part3</ShortName>
 			<Path>Music_TutorialAndLevel1_Part3.bnk</Path>
 			<Media>
@@ -843,6 +846,9 @@
 					</MediaRefs>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="1103547191" Name="PLAYBACK_SPEED____CutsceneMusic"/>
+			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="834008395" Type="User" Language="SFX" Hash="{184F8573-A216-5F18-FABB-AFB52766AC29}">
 			<ShortName>Music_TutorialAndLevel1_Part2</ShortName>
@@ -1364,7 +1370,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1598298728" Type="User" Language="SFX" Hash="{26797F04-9959-B1F1-4110-458B7D89D784}">
+		<SoundBank Id="1598298728" Type="User" Language="SFX" Hash="{70EADE1F-04ED-16EB-E633-CCD050CC4B46}">
 			<ShortName>Music_Menu</ShortName>
 			<Path>Music_Menu.bnk</Path>
 			<Media>
@@ -1372,9 +1378,9 @@
 					<ShortName>BD_Trailer_Music.wav</ShortName>
 					<CachePath>SFX/BD_Trailer_Music_D79FB2B7.wem</CachePath>
 				</File>
-				<File Id="870983996" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Boss 1 - Phase 1 - Part 2.wav</ShortName>
-					<CachePath>SFX/Boss 1 - Phase 1 - Part 2_D79FB2B7.wem</CachePath>
+				<File Id="506300702" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1_Part2.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1_Part2_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="932650277" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Metronome - STYLISH - Bass.wav</ShortName>
@@ -1397,9 +1403,9 @@
 						<MediaRef Id="978023960"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2002857628" Name="PauseScreenMusic____PLAY" DurationType="OneShot" DurationMin="3.4083333" DurationMax="3.4083333">
+				<Event Id="2002857628" Name="PauseScreenMusic____PLAY" DurationType="OneShot" DurationMin="9.933042" DurationMax="9.933042">
 					<MediaRefs>
-						<MediaRef Id="870983996"/>
+						<MediaRef Id="506300702"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1814921978" Name="TrailerAudio____PLAY" DurationType="OneShot" DurationMin="44.01067" DurationMax="44.01067">
@@ -1813,6 +1819,25 @@
 				<GameParameter Id="2338745114" Name="PLAYBACK_SPEED____MusicBossBattle"/>
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="3419004417" Type="User" Language="SFX" Hash="{001561EB-AD02-1560-7E8B-125C27528FAD}">
+			<ShortName>Pause_Resume</ShortName>
+			<Path>Pause_Resume.bnk</Path>
+			<Media>
+				<File Id="506300702" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1_Part2.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1_Part2_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3092587493" Name="Pause" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1496939652" Name="Play_Pause_Music" DurationType="OneShot" DurationMin="9.933042" DurationMax="9.933042">
+					<MediaRefs>
+						<MediaRef Id="506300702"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
 		</SoundBank>
 		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{C374421E-AD3E-BE54-8103-0D8A75DCB8E1}">
 			<ShortName>SoundEffects_Everything</ShortName>
@@ -2955,5 +2980,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EF815C30-CA51-EE34-0CAA-7E54DF41B4FD}</FileHash>
+	<FileHash>{EF66B070-F107-BA1B-30AA-C32103D468B7}</FileHash>
 </SoundBanksInfo>

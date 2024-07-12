@@ -96,7 +96,7 @@ public class Note
 
     public BulletBag.BulletTypes[] bullets;
 
-    public enum MovelistsToTrigger { RandomizeBetweenAll, RandomizeBetweenSpecified, AllSpecified}
+    public enum MovelistsToTrigger { AllSpecified, RandomizeBetweenAll, RandomizeBetweenSpecified, All }
     public MovelistsToTrigger movelistsToTrigger;
     public int amountToRandomizeBetween;
     public Movelist[] specifiedMovelists;
