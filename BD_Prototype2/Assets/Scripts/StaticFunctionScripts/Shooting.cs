@@ -14,7 +14,7 @@ public class Shooting : MonoBehaviour
                 continue;
             }
 
-            bullet.GetComponent<Bullet>().FireBullet(shootingPattern.GetChild(i).up, shootingPattern.GetChild(i).position);
+            bullet.GetComponent<Bullet>().ShootBullet(shootingPattern.GetChild(i).up, shootingPattern.GetChild(i).position);
 
             //indicator!
             //outside camera
