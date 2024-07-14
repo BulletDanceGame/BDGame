@@ -276,12 +276,14 @@ public class PlayerMovement : MonoBehaviour
         currentState = PlayerState.PUSHED_BACK;
 
         if (!GetComponent<Player>().isDead && gameObject.activeSelf == true)
-            StartCoroutine(PushBack(dir));
-    }
-    IEnumerator PushBack(Vector2 dir)
-    {
-        _playerRigidBody.AddForce(dir * _pushBackSpeed);
+        {
+            StartCoroutine(PushBack());
 
+            _playerRigidBody.velocity = dir * _pushBackSpeed;
+        }
+    }
+    IEnumerator PushBack()
+    {
         yield return new WaitForSeconds(_pushBackTime);
 
         currentState = PlayerState.MOVING;

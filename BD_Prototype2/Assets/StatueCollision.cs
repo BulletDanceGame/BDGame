@@ -24,6 +24,15 @@ public class StatueCollision : MonoBehaviour
         //   //collision.gameObject.tag != "PerfectBullet")
         //    return;
 
+
+        if (collision.CompareTag("Player"))
+        {
+            EventManager.Instance.PlayerDamage(10);
+            EventManager.Instance.PlayerPushBack(transform.position);
+            ScoreManager.Instance.GotHit++;
+        }
+
+
         if (collision.GetComponent<Bullet>() == null) { return; }
 
         Bullet bullet = collision.GetComponent<Bullet>(); //Replacing GetComponent() with Bullet var

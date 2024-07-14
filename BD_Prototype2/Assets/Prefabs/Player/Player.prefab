@@ -9818,9 +9818,12 @@ MonoBehaviour:
   _slideSpeed: 350
   _slideCooldown: 0.2
   _slideTime: 0.8
-  _pushBackSpeed: 300
-  _pushBackTime: 1
+  _pushBackSpeed: 75
+  _pushBackTime: 0.15
+  canDash: 1
+  slideCooldown: 0
   DashActivated: 1
+  canMove: 1
   _lastGroundPosition: {x: 0, y: 0}
   _feet: {fileID: 5020882122363620922}
   dashOnBeat: 1

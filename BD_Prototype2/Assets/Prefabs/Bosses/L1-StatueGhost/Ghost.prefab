@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1853433170608999226}
   - component: {fileID: 1853433170608999227}
+  - component: {fileID: 5233645736476295718}
+  - component: {fileID: 8281148175766051034}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -29,10 +31,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6545551909073027020}
   - {fileID: 4438375498973599835}
   - {fileID: 2998958400608957658}
   - {fileID: 3998729090462898015}
+  - {fileID: 6545551909073027020}
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51,6 +53,298 @@ MonoBehaviour:
   _movelist: {fileID: 0}
   _beatActions: []
   _phases: []
+--- !u!114 &5233645736476295718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853433170608999225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7dbe457d97037418244bd0ea78ae90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bossName: GhostStatue
+  phaseInfo:
+  - phaseHealth: 150
+    hideUI: 0
+    UIColor: {r: 0.7176471, g: 0, b: 0, a: 1}
+  - phaseHealth: 150
+    hideUI: 0
+    UIColor: {r: 1, g: 0.40311366, b: 0.2865789, a: 1}
+  _maxHits: 2
+  debugDamage: 20
+--- !u!114 &8281148175766051034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853433170608999225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9091fa880f4c5544aed24c37ea088b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _follower: 1
+  _movelist: {fileID: 0}
+  _movelists:
+  - {fileID: 904779366404320010}
+  - {fileID: 7764297850369002653}
+  - {fileID: 9207156458795622428}
+  - {fileID: 7000355418405028761}
+  _beatActions: []
+  _sequences:
+  - name: P1_S1
+    beatMap: {fileID: 0}
+    followSpecificSong: 1
+    songToFollow:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: b923a96ac85bc9b4b84715a19f977fa2, type: 2}
+    duration: 32
+    sheet:
+    - barNr: 1
+      notes:
+      - functionName: ShootRight
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 00000000000000000000000000000000
+        movelistsToTrigger: 3
+        amountToRandomizeBetween: 4
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ShootLeft
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 00000000000000000000000000000000
+        movelistsToTrigger: 3
+        amountToRandomizeBetween: 4
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 2
+      notes:
+      - functionName: ShootRight
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 00000000000000000000000000000000
+        movelistsToTrigger: 3
+        amountToRandomizeBetween: 4
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ShootLeft
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 00000000000000000000000000000000
+        movelistsToTrigger: 3
+        amountToRandomizeBetween: 4
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 3
+      notes:
+      - functionName: ShootRight
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 00000000000000000000000000000000
+        movelistsToTrigger: 3
+        amountToRandomizeBetween: 4
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ShootLeft
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 00000000000000000000000000000000
+        movelistsToTrigger: 3
+        amountToRandomizeBetween: 4
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 4
+      notes:
+      - functionName: ShootRight
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 00000000000000000000000000000000
+        movelistsToTrigger: 3
+        amountToRandomizeBetween: 4
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ShootLeft
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 00000000000000000000000000000000
+        movelistsToTrigger: 3
+        amountToRandomizeBetween: 4
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    infoNote:
+      functionName: 
+      color: {r: 0, g: 0, b: 0, a: 0}
+      forPlayer: 0
+      bullets: 
+      movelistsToTrigger: 0
+      amountToRandomizeBetween: 0
+      specifiedMovelists: []
 --- !u!1001 &3449290536599117088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -115,6 +409,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 450403606003395066, guid: 899a094441144bf42834a68d9a938991, type: 3}
   m_PrefabInstance: {fileID: 3449290536599117088}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9207156458795622428 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5771419492780326204, guid: 899a094441144bf42834a68d9a938991, type: 3}
+  m_PrefabInstance: {fileID: 3449290536599117088}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c5b5404d3b3f046a79759f6300ff2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3548398190248918693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -179,6 +484,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 450403606003395066, guid: 899a094441144bf42834a68d9a938991, type: 3}
   m_PrefabInstance: {fileID: 3548398190248918693}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7000355418405028761 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5771419492780326204, guid: 899a094441144bf42834a68d9a938991, type: 3}
+  m_PrefabInstance: {fileID: 3548398190248918693}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c5b5404d3b3f046a79759f6300ff2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4312302957765685665
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -243,6 +559,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 450403606003395066, guid: 899a094441144bf42834a68d9a938991, type: 3}
   m_PrefabInstance: {fileID: 4312302957765685665}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7764297850369002653 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5771419492780326204, guid: 899a094441144bf42834a68d9a938991, type: 3}
+  m_PrefabInstance: {fileID: 4312302957765685665}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c5b5404d3b3f046a79759f6300ff2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6671624873209386550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -302,6 +629,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 899a094441144bf42834a68d9a938991, type: 3}
+--- !u!114 &904779366404320010 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5771419492780326204, guid: 899a094441144bf42834a68d9a938991, type: 3}
+  m_PrefabInstance: {fileID: 6671624873209386550}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c5b5404d3b3f046a79759f6300ff2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6545551909073027020 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 450403606003395066, guid: 899a094441144bf42834a68d9a938991, type: 3}
