@@ -64,7 +64,7 @@ public class BossHealthController : MonoBehaviour
         EventManager.Instance.OnBossPhaseChange -= PhaseChange;
     }
 
-
+#if UNITY_EDITOR
     void Update()
     {
         //testing
@@ -73,7 +73,7 @@ public class BossHealthController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
             HealDamage(150f);
     }
-
+#endif
 
     // -- Boss over-hit prevention -- //
     private void Deactivate()
