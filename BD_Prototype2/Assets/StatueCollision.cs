@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StatueCollision : MonoBehaviour
 {
+    private float personalHP;
 
     [Header("Adjust this to limit how many times the boss can be hit at once")]
     [SerializeField]
@@ -16,6 +17,14 @@ public class StatueCollision : MonoBehaviour
 
     //Last hit tracking
     private float _bulletDamage;
+
+
+
+    private void Start()
+    {
+        personalHP = GetComponentInParent<BossHealthController>().phaseInfo[1].phaseHealth / 4f;
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -41,7 +50,7 @@ public class StatueCollision : MonoBehaviour
             return;
 
         //Prevent boss from getting over-hit
-        if (_bulletsHit > _maxHits)
+        if (_bulletsHit >= _maxHits)
         {
             bullet.Deactivate();
             gameObject.GetComponent<Collider2D>().enabled = false;
@@ -69,6 +78,24 @@ public class StatueCollision : MonoBehaviour
         //Take damage && do phase change (see TakeDamage method)
         EventManager.Instance.BossDamage(_bulletDamage);
         bullet.Deactivate();
+
+
+
+        //statues hp
+        if (GetComponentInParent<BossHealthController>().currentPhase > 0)
+        {
+            personalHP -= _bulletDamage;
+            if (personalHP <= 0)
+            {
+                GetComponent<GhostMovelist>().Deactivate();
+                GetComponent<Collider2D>().enabled = false;
+                transform.Find("EnemiesGraphics").gameObject.SetActive(false);
+                transform.Find("Shadow").gameObject.SetActive(false);
+
+            }
+        }
+
+
     }
 
 
