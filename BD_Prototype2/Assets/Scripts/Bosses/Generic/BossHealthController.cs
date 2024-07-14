@@ -71,7 +71,7 @@ public class BossHealthController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U))
             EventManager.Instance.BossDamage(debugDamage);
         if (Input.GetKeyDown(KeyCode.I))
-            currentPhaseHealth += 20;
+            HealDamage(150f);
     }
 
 
@@ -143,6 +143,12 @@ public class BossHealthController : MonoBehaviour
         //Take damage && do phase change (see TakeDamage method)
         EventManager.Instance.BossDamage(_bulletDamage);
         bullet.Deactivate();
+    }
+
+    public void HealDamage(float damage)
+    {
+        currentPhaseHealth += damage;
+        EventManager.Instance.BossHeal(damage);
     }
 
 

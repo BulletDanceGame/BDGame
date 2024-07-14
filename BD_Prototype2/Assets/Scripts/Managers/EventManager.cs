@@ -351,7 +351,7 @@ public class EventManager : MonoBehaviour
 
 
     //Health
-    public Action<float> OnBossDamage;
+    public Action<float> OnBossDamage, OnBossHeal;
     public event Action OnBossPhaseChange;
 
     /// <summary>
@@ -361,6 +361,11 @@ public class EventManager : MonoBehaviour
     public void BossDamage(float damage)
     {
         OnBossDamage?.Invoke(damage);
+    }
+
+    public void BossHeal(float damage)
+    {
+        OnBossHeal?.Invoke(damage);
     }
 
     /// <summary>
