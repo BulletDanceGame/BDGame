@@ -16,6 +16,7 @@ public class BossUI : MonoBehaviour
     {
         if(EventManager.Instance == null) return;
         EventManager.Instance.OnBossDamage -= TakeDamage;
+        EventManager.Instance.OnBossHeal -= HealDamage;
     }
 
 
@@ -49,12 +50,18 @@ public class BossUI : MonoBehaviour
 
         SetBossName(_bossHealth.BossName);
         EventManager.Instance.OnBossDamage += TakeDamage;
+        EventManager.Instance.OnBossHeal += HealDamage;
     }
 
 
     public void TakeDamage(float damage)
     {
         _healthBar[_bossHealth.currentPhase].DecreaseValue(damage);
+    }
+
+    public void HealDamage(float damageToBeaHealed)
+    {
+        _healthBar[_bossHealth.currentPhase].DecreaseValue(-damageToBeaHealed);
     }
 
     public void ShowBarByPhase(int phase)

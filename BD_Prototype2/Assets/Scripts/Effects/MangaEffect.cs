@@ -71,6 +71,7 @@ public class MangaEffect : MonoBehaviour
         if (clampSize <=0)
             _isSkrink = false;
 
+        if(UnitManager.Instance.GetPlayer() != null)
         transform.position = UnitManager.Instance.GetPlayer().transform.position;
 
     }
