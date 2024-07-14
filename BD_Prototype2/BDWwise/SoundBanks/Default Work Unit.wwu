@@ -363,11 +363,25 @@
 							</ValueList>
 						</Property>
 					</PropertyList>
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Critter_Phase_2___Part_3" ID="{63BF7FF2-89BB-4553-AF0A-5CF49375BC21}" WorkUnitID="{A0C8A417-45A5-458F-9F86-17ABD63D9B45}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Critter_Phase_2___Intro" ID="{11B0B36F-1D03-45A7-B6E0-524BC0236E9D}" WorkUnitID="{A0C8A417-45A5-458F-9F86-17ABD63D9B45}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Critter_Phase_2___Part_2" ID="{E202ACBE-92B4-478A-B998-F350B79E2BC0}" WorkUnitID="{A0C8A417-45A5-458F-9F86-17ABD63D9B45}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Critter_Phase_2___Part_1__intro_ver_" ID="{F3E1D7DC-6543-497E-83CE-9885188455DB}" WorkUnitID="{A0C8A417-45A5-458F-9F86-17ABD63D9B45}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Critter_Phase_2___Part_1" ID="{7CC9718C-AF25-4A26-9DAF-9B05B7F47043}" WorkUnitID="{A0C8A417-45A5-458F-9F86-17ABD63D9B45}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Critter_Phase_2___Part_4" ID="{962C24AA-000A-4FDA-9724-283E9FCB5646}" WorkUnitID="{A0C8A417-45A5-458F-9F86-17ABD63D9B45}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="Pause_Resume" ID="{7C81CBAB-8A76-4239-8515-135395990E93}">
+					<PropertyList>
+						<Property Name="Maximum" Type="int32">
+							<ValueList>
+								<Value>99000000</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_Pause_Music" ID="{656CF11D-0D3F-41B9-A04B-673AC7F446C9}" WorkUnitID="{A0C8A417-45A5-458F-9F86-17ABD63D9B45}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Resume" ID="{E07B0E04-60B1-4C45-9C22-122F7A5B0540}" WorkUnitID="{A0C8A417-45A5-458F-9F86-17ABD63D9B45}" Origin="Manual" Filter="7"/>

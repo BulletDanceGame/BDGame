@@ -118,6 +118,12 @@ namespace AK
         static const AkUniqueID PLAY_BOSS_1___PHASE_2___PART_4___LIGHTNING_BULLETS = 1835325240U;
         static const AkUniqueID PLAY_COOLDOWN = 1837873573U;
         static const AkUniqueID PLAY_CRITTER_PHASE_1_PART_4_BPM150 = 3176132612U;
+        static const AkUniqueID PLAY_CRITTER_PHASE_2___INTRO = 3076083233U;
+        static const AkUniqueID PLAY_CRITTER_PHASE_2___PART_1 = 2016799278U;
+        static const AkUniqueID PLAY_CRITTER_PHASE_2___PART_1__INTRO_VER_ = 1625859311U;
+        static const AkUniqueID PLAY_CRITTER_PHASE_2___PART_2 = 2016799277U;
+        static const AkUniqueID PLAY_CRITTER_PHASE_2___PART_3 = 2016799276U;
+        static const AkUniqueID PLAY_CRITTER_PHASE_2___PART_4 = 2016799275U;
         static const AkUniqueID PLAY_DEFLECTIONSWING___GOOD___LONG = 4112303910U;
         static const AkUniqueID PLAY_ENV1_TEST3_TRIPPLETS_INTRO = 2403173065U;
         static const AkUniqueID PLAY_ENV1_TEST3_TRIPPLETS_PART1 = 160122243U;
