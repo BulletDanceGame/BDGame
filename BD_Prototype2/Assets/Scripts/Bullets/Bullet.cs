@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
@@ -62,7 +63,16 @@ public class Bullet : MonoBehaviour
 
         GetComponent<Rigidbody2D>().AddForce(dir * _currentSpeed);
 
+        StartCoroutine(BufferCollision());
+
         Invoke("Deactivate", lifeTime);
+    }
+
+    IEnumerator BufferCollision()
+    {
+        _canCollide = false;
+        yield return new WaitForSeconds(0.5f);
+        _canCollide = true;
     }
 
     public void DeflectBullet(Vector3 direction, float speed)
@@ -148,7 +158,11 @@ public class Bullet : MonoBehaviour
     // Boss and Player collisions are handled in their respective scripts //
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!_canCollide) return;
+        if (!_canCollide)
+        {
+            Debug.Log("CANT HIT");
+            return;
+        }
 
         if (_collideBGObjectTag.Contains(collision.transform.tag))
         {
@@ -156,18 +170,20 @@ public class Bullet : MonoBehaviour
 
         }
 
+        if (collision.tag == "Turret" && type == BulletOwner.BOSSBULLET)
+        {
+            Debug.Log("BOSS BULLET HIT A TURRET");
+            Deactivate();
+            return;
 
-        
+
+        }
+
+
 
         if ((collision.tag == "Turret" && type == BulletOwner.PLAYERBULLET) || collision.tag == "BouncedSurface")
         {
-            //if (type == BulletType.BOSSBULLET)
-            //{
-            //    Deactivate();
-            //    return;
-
-                
-            //}
+            
 
             if (bounces > 5)
             {
