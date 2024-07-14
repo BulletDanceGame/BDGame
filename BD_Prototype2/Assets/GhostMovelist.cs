@@ -53,7 +53,6 @@ public class GhostMovelist : Movelist
         }
 
 
-
         if (action.functionName != null)
         {
             bulletPrefabs.Clear();
@@ -273,11 +272,6 @@ public class GhostMovelist : Movelist
 
 
     //DEACTIVATION
-    public override void Deactivate()
-    {
-        _isActive = false;
-
-    }
 
     private void OnDisable()
     {

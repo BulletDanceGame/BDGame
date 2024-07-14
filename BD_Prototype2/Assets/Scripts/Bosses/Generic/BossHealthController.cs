@@ -115,7 +115,7 @@ public class BossHealthController : MonoBehaviour
 
         //Prevent boss from getting over-hit
         if (!_isActive) return;
-        if (_bulletsHit > _maxHits)
+        if (_bulletsHit >= _maxHits)
         {
             bullet.Deactivate();
             gameObject.GetComponent<Collider2D>().enabled = false;
