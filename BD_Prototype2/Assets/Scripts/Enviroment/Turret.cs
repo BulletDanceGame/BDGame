@@ -238,11 +238,9 @@ public class Turret : Movelist
 
     IEnumerator RespawnTurret()
     {
-        Debug.LogError("Respawning");
 
         yield return new WaitForSeconds(turretRespawnTime);
         Activate();
 
-        Debug.LogError("Respawned");
     }
 }
