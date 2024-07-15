@@ -4,68 +4,74 @@ using UnityEngine;
 namespace BulletDance.Animation
 {
 
-//This handles the animators
-public class RhythmAnimationManager : MonoBehaviour
-{
-    public static RhythmAnimationManager Instance { get; private set; }
-    private void Awake() { if(Instance == null) Instance = this; }
-
-    //Need separate lists so update enumarator don't stop from unexpected add/remove
-    private List<RhythmAnimator> _animators = new List<RhythmAnimator>();
-    private List<RhythmAnimator> _animatorsAdded   = new List<RhythmAnimator>();
-    private List<RhythmAnimator> _animatorsRemoved = new List<RhythmAnimator>();
-    public void AddToController(RhythmAnimator animator)
+    //This handles the animators
+    public class RhythmAnimationManager : MonoBehaviour
     {
-        _animatorsAdded.Add(animator);
-    }
+        public static RhythmAnimationManager Instance { get; private set; }
+        private void Awake() { if(Instance == null) Instance = this; }
 
-    public void RemoveFromController(RhythmAnimator animator)
-    {
-        _animatorsRemoved.Remove(animator);
-    }
-
-
-    private void Start()
-    {
-        EventManager.Instance.OnBeatForVisuals += UpdateAnimations;
-    }
-
-    private void OnDestroy()
-    {
-        EventManager.Instance.OnBeatForVisuals -= UpdateAnimations;
-    }
-
-    private void UpdateAnimations(int anticipation, float duration, int beat)
-    {
-        //Add to updates & flush queue
-        if(_animatorsAdded.Count > 0)
+        //Need separate lists so update enumarator don't stop from unexpected add/remove
+        private List<RhythmAnimator> _animators = new List<RhythmAnimator>();
+        private List<RhythmAnimator> _animatorsAdded   = new List<RhythmAnimator>();
+        private List<RhythmAnimator> _animatorsRemoved = new List<RhythmAnimator>();
+        public void AddToController(RhythmAnimator animator)
         {
-            foreach(var animator in _animatorsAdded)
+            _animatorsAdded.Add(animator);
+        }
+
+        public void RemoveFromController(RhythmAnimator animator)
+        {
+            _animatorsRemoved.Remove(animator);
+        }
+
+
+        private void Start()
+        {
+            EventManager.Instance.OnBeatForVisuals += UpdateAnimations;
+        }
+
+        private void OnDestroy()
+        {
+            EventManager.Instance.OnBeatForVisuals -= UpdateAnimations;
+        }
+
+        private void UpdateAnimations(int anticipation, float duration, int beat)
+        {
+            //Add to updates & flush queue
+            if(_animatorsAdded.Count > 0)
             {
-                _animators.Add(animator);
+                foreach(var animator in _animatorsAdded)
+                {
+                    _animators.Add(animator);
+                }
+                _animatorsAdded.Clear();
             }
-            _animatorsAdded.Clear();
-        }
 
 
-        //Update
-        foreach(var animator in _animators)
-        {
-            animator.PlayAnimation(anticipation, duration);
-        }
-
-
-        //Remove from update & flush queue
-        if(_animatorsRemoved.Count > 0)
-        {
-            foreach(var animator in _animatorsRemoved)
+            //Update
+            foreach(var animator in _animators)
             {
-                _animators.Remove(animator);
+                if (!animator) //animators that had been deleted was still called and caused errors
+                {
+                    _animatorsRemoved.Add(animator);
+                    continue;
+                }
+
+                animator.PlayAnimation(anticipation, duration);
             }
-            _animatorsRemoved.Clear();
+
+
+            //Remove from update & flush queue
+            if(_animatorsRemoved.Count > 0)
+            {
+                foreach(var animator in _animatorsRemoved)
+                {
+                    _animators.Remove(animator);
+                }
+                _animatorsRemoved.Clear();
+            }
         }
-    }
     
-}
+    }
 
 }
