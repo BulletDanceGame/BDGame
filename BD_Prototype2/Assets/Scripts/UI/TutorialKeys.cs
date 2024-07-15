@@ -37,8 +37,9 @@ public class TutorialKeys : RhythmAnimator
 
     private void ChangeTutorialImage()
     {
-        _animator.SetFloat("Input", 
-            InputManager.Instance.CurrentController == ControllerType.KEYBOARDANDMOUSE ?
-                0f : 1f );
+        if(InputManager.Instance != null)
+            _animator.SetFloat("Input", 
+                InputManager.Instance.CurrentController == ControllerType.KEYBOARDANDMOUSE ?
+                    0f : 1f );
     }
 }
