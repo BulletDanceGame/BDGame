@@ -50,8 +50,8 @@ public class ExplosiveBarrel : MonoBehaviour
                     //sometime it get the detection collider instead
                     //dunno how to fiz
                     GO.GetComponent<EnemyHealthController>()?.MinionTakeDamage(Damage);
-                GO.GetComponent<ExplosiveBarrel>()?.SetExplode();
-                GO.GetComponent<Barrel>()?.GetExploded();
+                    GO.GetComponent<ExplosiveBarrel>()?.SetExplode();
+                    GO.GetComponent<Barrel>()?.GetExploded();
 
                     if (GO.gameObject.tag == "Player")
                     {

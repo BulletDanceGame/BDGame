@@ -57,10 +57,12 @@ public class CritterMovelist : Movelist
     public float JumpSpeed;
     private bool _jumpUp;
     private bool JumpDown;
-    public GameObject Shadow;
     private float _JumppositionY;
     private float _currentjumpposition;
 
+    private bool _isPushedback;
+    [SerializeField] private float _pushbackDuration;
+    [SerializeField] private float _pushbackSpeed;
 
 
     private void OnEnable()
@@ -91,8 +93,6 @@ public class CritterMovelist : Movelist
 
     public override void Activate()
     {
-
-        print("act");
 
         _isActive = true;
         _activate = true;
@@ -170,8 +170,12 @@ public class CritterMovelist : Movelist
         if (!UnitManager.Instance.GetPlayer())
             return;
 
-        _distanceFromPlayer = Vector2.Distance(UnitManager.Instance.GetPlayer().transform.position, transform.position);
-        ChasePlayer();
+        if (!_isPushedback)
+        {
+            _distanceFromPlayer = Vector2.Distance(UnitManager.Instance.GetPlayer().transform.position, transform.position);
+            ChasePlayer();
+        }
+        
 
         //Animation
         if(_animHandler != null) Animate();
@@ -251,6 +255,17 @@ public class CritterMovelist : Movelist
         _isCritterRunning = false;
         yield return new WaitForSeconds(stopAndShootDuration);
         _isCritterRunning = true;
+    }
+
+    public IEnumerator Pushback(Vector2 dir)
+    {
+        _isPushedback = true;
+        _rb.velocity = dir * _pushbackSpeed;
+
+        yield return new WaitForSeconds(_pushbackDuration);
+
+        _isPushedback = false;
+        _rb.velocity = Vector2.zero;
     }
 
     private void OnDrawGizmosSelected()
