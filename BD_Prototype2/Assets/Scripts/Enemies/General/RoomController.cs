@@ -292,6 +292,7 @@ public class RoomController : MonoBehaviour
                 }
                 else
                 {
+                    print("kill spawn more " + _waves[_currentWave]._enemies.Count);
                     _enemiesToSpawn = _waves[_currentWave]._enemies;
                 }                
             }
