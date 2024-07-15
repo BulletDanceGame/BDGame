@@ -9,21 +9,75 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="690988688" Type="User" Language="SFX" Hash="{5B00A1C3-C6A1-FF22-F4FA-D131EC78CD17}">
+		<SoundBank Id="690988688" Type="User" Language="SFX" Hash="{6748B21B-8A43-B381-3B92-C61833AE8607}">
 			<ShortName>Music_Critter_Phase2</ShortName>
 			<Path>Music_Critter_Phase2.bnk</Path>
+			<Media>
+				<File Id="8312812" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Critter Phase 2 - Part 1.wav</ShortName>
+					<CachePath>SFX/Critter Phase 2 - Part 1_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="47423206" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Critter Phase 2 - Part 1 [intro].wav</ShortName>
+					<CachePath>SFX/Critter Phase 2 - Part 1 [intro]_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="173272374" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Critter Phase 2 - Part 3.wav</ShortName>
+					<CachePath>SFX/Critter Phase 2 - Part 3_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="726920089" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Critter Phase 2 - Part 4.wav</ShortName>
+					<CachePath>SFX/Critter Phase 2 - Part 4_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="747776501" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Critter Phase 2 - Part 2.wav</ShortName>
+					<CachePath>SFX/Critter Phase 2 - Part 2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="810047481" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Critter Phase 2 - Intro.wav</ShortName>
+					<CachePath>SFX/Critter Phase 2 - Intro_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3076083233" Name="Play_Critter_Phase_2___Intro" DurationType="OneShot" DurationMin="20.412874" DurationMax="20.412874">
+					<MediaRefs>
+						<MediaRef Id="810047481"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2016799278" Name="Play_Critter_Phase_2___Part_1" DurationType="OneShot" DurationMin="36.00379" DurationMax="36.00379">
+					<MediaRefs>
+						<MediaRef Id="8312812"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1625859311" Name="Play_Critter_Phase_2___Part_1__intro_ver_" DurationType="OneShot" DurationMin="36.00379" DurationMax="36.00379">
+					<MediaRefs>
+						<MediaRef Id="47423206"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2016799277" Name="Play_Critter_Phase_2___Part_2" DurationType="OneShot" DurationMin="15.537875" DurationMax="15.537875">
+					<MediaRefs>
+						<MediaRef Id="747776501"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2016799276" Name="Play_Critter_Phase_2___Part_3" DurationType="OneShot" DurationMin="16.07575" DurationMax="16.07575">
+					<MediaRefs>
+						<MediaRef Id="173272374"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2016799275" Name="Play_Critter_Phase_2___Part_4" DurationType="OneShot" DurationMin="33.27652" DurationMax="33.27652">
+					<MediaRefs>
+						<MediaRef Id="726920089"/>
+					</MediaRefs>
+				</Event>
+			</Events>
 		</SoundBank>
-		<SoundBank Id="690988691" Type="User" Language="SFX" Hash="{F833F6B3-6DC5-B457-BF63-A99BAC3891D6}">
+		<SoundBank Id="690988691" Type="User" Language="SFX" Hash="{1E9FA884-FC68-FC80-848D-19A618EE8046}">
 			<ShortName>Music_Critter_Phase1</ShortName>
 			<Path>Music_Critter_Phase1.bnk</Path>
 			<Media>
 				<File Id="98861210" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Critter Phase 1 Part 1 BPM150.wav</ShortName>
 					<CachePath>SFX/Critter Phase 1 Part 1 BPM150_D79FB2B7.wem</CachePath>
-				</File>
-				<File Id="432308025" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Critter Phase 1 Part 5 BPM150.wav</ShortName>
-					<CachePath>SFX/Critter Phase 1 Part 5 BPM150_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="565872709" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Critter Intro BPM165.wav</ShortName>
@@ -47,42 +101,41 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="2814795428" Name="CPhase1__Intro____PLAY" DurationType="OneShot" DurationMin="17.3" DurationMax="17.3">
+				<Event Id="2814795428" Name="CPhase1__Intro____PLAY" DurationType="OneShot" DurationMin="8.666667" DurationMax="8.666667">
 					<MediaRefs>
 						<MediaRef Id="887074454"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1733806626" Name="CPhase1__Part1____PLAY" DurationType="OneShot" DurationMin="23.483334" DurationMax="23.483334">
+				<Event Id="1733806626" Name="CPhase1__Part1____PLAY" DurationType="OneShot" DurationMin="14.9125" DurationMax="14.9125">
 					<MediaRefs>
 						<MediaRef Id="98861210"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3290652817" Name="CPhase1__Part2____PLAY" DurationType="OneShot" DurationMin="23.204166" DurationMax="23.204166">
+				<Event Id="3290652817" Name="CPhase1__Part2____PLAY" DurationType="OneShot" DurationMin="23.604166" DurationMax="23.604166">
 					<MediaRefs>
 						<MediaRef Id="645194740"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="683879428" Name="CPhase1__Part3____PLAY" DurationType="OneShot" DurationMin="23.820833" DurationMax="23.820833">
+				<Event Id="683879428" Name="CPhase1__Part3____PLAY" DurationType="OneShot" DurationMin="24.404165" DurationMax="24.404165">
 					<MediaRefs>
 						<MediaRef Id="624591303"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1964220686" Name="CPhase1__Part5____PLAY" DurationType="OneShot" DurationMin="16.595835" DurationMax="16.595835">
-					<MediaRefs>
-						<MediaRef Id="432308025"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="1524639014" Name="Encounter__Critter___PLAY" DurationType="OneShot" DurationMin="32.850845" DurationMax="32.850845">
+				<Event Id="1964220686" Name="CPhase1__Part5____PLAY" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1524639014" Name="Encounter__Critter___PLAY" DurationType="OneShot" DurationMin="30.024622" DurationMax="30.024622">
 					<MediaRefs>
 						<MediaRef Id="565872709"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3176132612" Name="Play_Critter_Phase_1_Part_4_BPM150" DurationType="OneShot" DurationMin="36.61667" DurationMax="36.61667">
+				<Event Id="3176132612" Name="Play_Critter_Phase_1_Part_4_BPM150" DurationType="OneShot" DurationMin="36.80417" DurationMax="36.80417">
 					<MediaRefs>
 						<MediaRef Id="1063857795"/>
 					</MediaRefs>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="1103547191" Name="PLAYBACK_SPEED____CutsceneMusic"/>
+			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="723507619" Type="User" Language="SFX" Hash="{203FCE82-09E4-9AD7-0202-13A08A527031}">
 			<ShortName>Music_YokaiHunter_Phase3AndOutro</ShortName>
@@ -453,7 +506,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="834008394" Type="User" Language="SFX" Hash="{429C88A4-42BF-10B8-B343-3745EE529989}">
+		<SoundBank Id="834008394" Type="User" Language="SFX" Hash="{A470A5A4-BC29-CD07-A128-B7AC307522B9}">
 			<ShortName>Music_TutorialAndLevel1_Part3</ShortName>
 			<Path>Music_TutorialAndLevel1_Part3.bnk</Path>
 			<Media>
@@ -843,6 +896,9 @@
 					</MediaRefs>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="1103547191" Name="PLAYBACK_SPEED____CutsceneMusic"/>
+			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="834008395" Type="User" Language="SFX" Hash="{184F8573-A216-5F18-FABB-AFB52766AC29}">
 			<ShortName>Music_TutorialAndLevel1_Part2</ShortName>
@@ -1364,7 +1420,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1598298728" Type="User" Language="SFX" Hash="{26797F04-9959-B1F1-4110-458B7D89D784}">
+		<SoundBank Id="1598298728" Type="User" Language="SFX" Hash="{70EADE1F-04ED-16EB-E633-CCD050CC4B46}">
 			<ShortName>Music_Menu</ShortName>
 			<Path>Music_Menu.bnk</Path>
 			<Media>
@@ -1372,9 +1428,9 @@
 					<ShortName>BD_Trailer_Music.wav</ShortName>
 					<CachePath>SFX/BD_Trailer_Music_D79FB2B7.wem</CachePath>
 				</File>
-				<File Id="870983996" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Boss 1 - Phase 1 - Part 2.wav</ShortName>
-					<CachePath>SFX/Boss 1 - Phase 1 - Part 2_D79FB2B7.wem</CachePath>
+				<File Id="506300702" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1_Part2.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1_Part2_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="932650277" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Metronome - STYLISH - Bass.wav</ShortName>
@@ -1397,9 +1453,9 @@
 						<MediaRef Id="978023960"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2002857628" Name="PauseScreenMusic____PLAY" DurationType="OneShot" DurationMin="3.4083333" DurationMax="3.4083333">
+				<Event Id="2002857628" Name="PauseScreenMusic____PLAY" DurationType="OneShot" DurationMin="9.933042" DurationMax="9.933042">
 					<MediaRefs>
-						<MediaRef Id="870983996"/>
+						<MediaRef Id="506300702"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1814921978" Name="TrailerAudio____PLAY" DurationType="OneShot" DurationMin="44.01067" DurationMax="44.01067">
@@ -1813,6 +1869,25 @@
 				<GameParameter Id="2338745114" Name="PLAYBACK_SPEED____MusicBossBattle"/>
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="3419004417" Type="User" Language="SFX" Hash="{02ECEFA3-FF77-A556-3DFA-CE26559CF6BC}">
+			<ShortName>Pause_Resume</ShortName>
+			<Path>Pause_Resume.bnk</Path>
+			<Media>
+				<File Id="506300702" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1_Part2.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1_Part2_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3092587493" Name="Pause" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1496939652" Name="Play_Pause_Music" DurationType="OneShot" DurationMin="9.933042" DurationMax="9.933042">
+					<MediaRefs>
+						<MediaRef Id="506300702"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
 		</SoundBank>
 		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{C374421E-AD3E-BE54-8103-0D8A75DCB8E1}">
 			<ShortName>SoundEffects_Everything</ShortName>
@@ -2955,5 +3030,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EF815C30-CA51-EE34-0CAA-7E54DF41B4FD}</FileHash>
+	<FileHash>{BBCFF96D-9F7C-1FB7-C7CC-23A7F29C6ED1}</FileHash>
 </SoundBanksInfo>

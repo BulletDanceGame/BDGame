@@ -10516,8 +10516,13 @@
 									<ChildrenList>
 										<MusicSegment Name="Phase 1 - Part 2" ID="{A8254E8E-D179-4DD4-A6F0-863A87650A59}" ShortID="480208094">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="23204.1666666667"/>
+												<Property Name="EndPosition" Type="Real64" Value="23938.1161950177"/>
 												<Property Name="Tempo" Type="Real64" Value="300"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -10535,7 +10540,7 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="Critter Phase 1 Part 2 BPM150" ID="{85F46EF1-7604-47D0-9FF7-C7FE964E2464}">
+														<AudioFileSource Name="Critter Phase 1 Part 2 BPM150_01" ID="{4053158D-B505-4CAB-9CCE-0E0E0B5DC57F}">
 															<Language>SFX</Language>
 															<AudioFile>Critter Phase 1 Part 2 BPM150.wav</AudioFile>
 															<MediaIDList>
@@ -10560,13 +10565,15 @@
 																			<ObjectList Name="Clips">
 																				<Reference>
 																					<Local>
-																						<MusicClip Name="Critter Phase 1 Part 2 BPM150" ID="{56FE1B75-5322-4E32-BFCB-91F7DA20A2B0}">
+																						<MusicClip Name="Critter Phase 1 Part 2 BPM150" ID="{38512A11-5C68-4623-91CD-B58299D6B4BB}">
 																							<PropertyList>
-																								<Property Name="EndTrimOffset" Type="Real64" Value="23204.1666666667"/>
+																								<Property Name="BeginTrimOffset" Type="Real64" Value="1.16573417585641E-12"/>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="23604.1666666667"/>
 																								<Property Name="FadeInMode" Type="int16" Value="0"/>
 																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																								<Property Name="PlayAt" Type="Real64" Value="-1.16573417585641E-12"/>
 																							</PropertyList>
-																							<AudioSourceRef Name="Critter Phase 1 Part 2 BPM150" ID="{85F46EF1-7604-47D0-9FF7-C7FE964E2464}"/>
+																							<AudioSourceRef Name="Critter Phase 1 Part 2 BPM150_01" ID="{4053158D-B505-4CAB-9CCE-0E0E0B5DC57F}"/>
 																						</MusicClip>
 																					</Local>
 																				</Reference>
@@ -10603,6 +10610,11 @@
 											<PropertyList>
 												<Property Name="EndPosition" Type="Real64" Value="23483.3333333333"/>
 												<Property Name="Tempo" Type="Real64" Value="300"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -10620,7 +10632,7 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="Critter Phase 1 Part 1 BPM150" ID="{4238D288-0E48-4C54-A306-59EDAE3F2153}">
+														<AudioFileSource Name="Critter Phase 1 Part 1 BPM150_01" ID="{AC22F067-D936-4175-A44D-9F271F206876}">
 															<Language>SFX</Language>
 															<AudioFile>Critter Phase 1 Part 1 BPM150.wav</AudioFile>
 															<MediaIDList>
@@ -10645,13 +10657,13 @@
 																			<ObjectList Name="Clips">
 																				<Reference>
 																					<Local>
-																						<MusicClip Name="Critter Phase 1 Part 1 BPM150" ID="{2717ADC1-66E5-4989-8FBE-290F223E6EEE}">
+																						<MusicClip Name="Critter Phase 1 Part 1 BPM150" ID="{A2569CFB-EF5F-414F-8700-C945843D35BC}">
 																							<PropertyList>
-																								<Property Name="EndTrimOffset" Type="Real64" Value="23483.3333333333"/>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="14912.5"/>
 																								<Property Name="FadeInMode" Type="int16" Value="0"/>
 																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																							</PropertyList>
-																							<AudioSourceRef Name="Critter Phase 1 Part 1 BPM150" ID="{4238D288-0E48-4C54-A306-59EDAE3F2153}"/>
+																							<AudioSourceRef Name="Critter Phase 1 Part 1 BPM150_01" ID="{AC22F067-D936-4175-A44D-9F271F206876}"/>
 																						</MusicClip>
 																					</Local>
 																				</Reference>
@@ -10686,8 +10698,13 @@
 										</MusicSegment>
 										<MusicSegment Name="Phase 1 - Part 3" ID="{4C80D000-2A29-4294-97BA-132F25C027F4}" ShortID="836429553">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="23820.8333333333"/>
+												<Property Name="EndPosition" Type="Real64" Value="44826.7098815071"/>
 												<Property Name="Tempo" Type="Real64" Value="300"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -10705,7 +10722,7 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="Critter Phase 1 Part 3 BPM150" ID="{423B54DA-2E85-4F5F-9C98-88B6BBF288B3}">
+														<AudioFileSource Name="Critter Phase 1 Part 3 BPM150_01" ID="{51B4FD36-E2B5-4C38-A0C4-68F1E730B9CA}">
 															<Language>SFX</Language>
 															<AudioFile>Critter Phase 1 Part 3 BPM150.wav</AudioFile>
 															<MediaIDList>
@@ -10730,13 +10747,13 @@
 																			<ObjectList Name="Clips">
 																				<Reference>
 																					<Local>
-																						<MusicClip Name="Critter Phase 1 Part 3 BPM150" ID="{A9F671BD-4146-4213-82F2-7D7DF51B5412}">
+																						<MusicClip Name="Critter Phase 1 Part 3 BPM150" ID="{C6818FBA-E8E4-460C-9BD9-F51C6235D0DF}">
 																							<PropertyList>
-																								<Property Name="EndTrimOffset" Type="Real64" Value="23820.8333333333"/>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="24404.1666666667"/>
 																								<Property Name="FadeInMode" Type="int16" Value="0"/>
 																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																							</PropertyList>
-																							<AudioSourceRef Name="Critter Phase 1 Part 3 BPM150" ID="{423B54DA-2E85-4F5F-9C98-88B6BBF288B3}"/>
+																							<AudioSourceRef Name="Critter Phase 1 Part 3 BPM150_01" ID="{51B4FD36-E2B5-4C38-A0C4-68F1E730B9CA}"/>
 																						</MusicClip>
 																					</Local>
 																				</Reference>
@@ -10769,100 +10786,15 @@
 												</ObjectList>
 											</ObjectLists>
 										</MusicSegment>
-										<MusicSegment Name="Phase 1 - Part 5" ID="{D52DE81F-6852-4DC8-8788-DA619257BABE}" ShortID="50307820">
-											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="16600"/>
-												<Property Name="Tempo" Type="Real64" Value="300"/>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>1</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Boss - Level 1 - Critter" ID="{8C710405-B343-41EF-9E82-A53D3257E992}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<MusicTrack Name="Critter Phase 1 Part 5 BPM150" ID="{E5519978-7338-47A2-8F65-3846F5B62B11}" ShortID="5687857">
-													<ReferenceList>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Critter Phase 1 Part 5 BPM150" ID="{DE2EC542-3248-42E3-B882-7480C3948664}">
-															<Language>SFX</Language>
-															<AudioFile>Critter Phase 1 Part 5 BPM150.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="432308025"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<TransitionList>
-														<MusicTransition Name="Root" ID="{DE56EA61-E3C6-4500-B8D5-0A351965CA6F}">
-															<PropertyList>
-																<Property Name="IsFolder" Type="bool" Value="True"/>
-															</PropertyList>
-															<TransitionInfo/>
-														</MusicTransition>
-													</TransitionList>
-													<ObjectLists>
-														<ObjectList Name="Sequences">
-															<Reference>
-																<Local>
-																	<MusicTrackSequence Name="" ID="{851AC53B-EBDA-4069-8575-9DD31A5C445A}">
-																		<ObjectLists>
-																			<ObjectList Name="Clips">
-																				<Reference>
-																					<Local>
-																						<MusicClip Name="Critter Phase 1 Part 5 BPM150" ID="{7DE0DC62-E6DE-4909-B096-EB908AE5660D}">
-																							<PropertyList>
-																								<Property Name="EndTrimOffset" Type="Real64" Value="16595.8333333333"/>
-																								<Property Name="FadeInMode" Type="int16" Value="0"/>
-																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																							</PropertyList>
-																							<AudioSourceRef Name="Critter Phase 1 Part 5 BPM150" ID="{DE2EC542-3248-42E3-B882-7480C3948664}"/>
-																						</MusicClip>
-																					</Local>
-																				</Reference>
-																			</ObjectList>
-																		</ObjectLists>
-																	</MusicTrackSequence>
-																</Local>
-															</Reference>
-														</ObjectList>
-													</ObjectLists>
-												</MusicTrack>
-											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="Cues">
-													<Reference>
-														<Local>
-															<MusicCue Name="Entry Cue" ID="{676FE52A-504B-4534-85D8-4754A8C75AA7}"/>
-														</Local>
-													</Reference>
-													<Reference>
-														<Local>
-															<MusicCue Name="Exit Cue" ID="{BBE83438-5135-48F7-ACE5-2D360E2997E6}">
-																<PropertyList>
-																	<Property Name="CueType" Type="int16" Value="1"/>
-																	<Property Name="TimeMs" Type="Real64" Value="12800"/>
-																</PropertyList>
-															</MusicCue>
-														</Local>
-													</Reference>
-												</ObjectList>
-											</ObjectLists>
-										</MusicSegment>
 										<MusicSegment Name="Phase 1 - Battle Intro" ID="{CD73CBC3-EF33-4D1D-913C-9A081E104356}" ShortID="108722205">
 											<PropertyList>
 												<Property Name="EndPosition" Type="Real64" Value="17300"/>
 												<Property Name="Tempo" Type="Real64" Value="300"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -10880,7 +10812,7 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="Critter Battle Intro BPM150" ID="{A0A86E7F-180A-4A02-B5AB-EA11CD5D8B18}">
+														<AudioFileSource Name="Critter Battle Intro BPM150" ID="{9D8796EC-CF78-4862-996D-230A287B8D47}">
 															<Language>SFX</Language>
 															<AudioFile>Critter Battle Intro BPM150.wav</AudioFile>
 															<MediaIDList>
@@ -10905,13 +10837,13 @@
 																			<ObjectList Name="Clips">
 																				<Reference>
 																					<Local>
-																						<MusicClip Name="Critter Battle Intro BPM150" ID="{99E8A1E3-8EFB-4D46-9ED9-2A6B74E321B3}">
+																						<MusicClip Name="Critter Battle Intro BPM150" ID="{8F43C8D0-D6E6-4A54-85F9-D923C2DC8A6D}">
 																							<PropertyList>
-																								<Property Name="EndTrimOffset" Type="Real64" Value="17300"/>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="8666.66666666667"/>
 																								<Property Name="FadeInMode" Type="int16" Value="0"/>
 																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																							</PropertyList>
-																							<AudioSourceRef Name="Critter Battle Intro BPM150" ID="{A0A86E7F-180A-4A02-B5AB-EA11CD5D8B18}"/>
+																							<AudioSourceRef Name="Critter Battle Intro BPM150" ID="{9D8796EC-CF78-4862-996D-230A287B8D47}"/>
 																						</MusicClip>
 																					</Local>
 																				</Reference>
@@ -10946,8 +10878,13 @@
 										</MusicSegment>
 										<MusicSegment Name="Critter Phase 1 Part 4 BPM150" ID="{7EA3125D-D7AB-4557-A199-4FC8B3185D94}" ShortID="270185201">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="36616.6666666667"/>
+												<Property Name="EndPosition" Type="Real64" Value="43951.7849590723"/>
 												<Property Name="Tempo" Type="Real64" Value="300"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -10965,7 +10902,7 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="Critter Phase 1 Part 4 BPM150" ID="{008DC123-4543-45DE-A799-C1F3E9926A5A}">
+														<AudioFileSource Name="Critter Phase 1 Part 4 BPM150_01" ID="{67FFE19F-463A-4224-AF0A-566179B57E68}">
 															<Language>SFX</Language>
 															<AudioFile>Critter Phase 1 Part 4 BPM150.wav</AudioFile>
 															<MediaIDList>
@@ -10990,13 +10927,13 @@
 																			<ObjectList Name="Clips">
 																				<Reference>
 																					<Local>
-																						<MusicClip Name="Critter Phase 1 Part 4 BPM150" ID="{54BB10AA-CE70-416E-BB41-2212D986F342}">
+																						<MusicClip Name="Critter Phase 1 Part 4 BPM150" ID="{AB0AA400-9008-498D-B285-11A5177ACBF0}">
 																							<PropertyList>
-																								<Property Name="EndTrimOffset" Type="Real64" Value="36616.6666666667"/>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="36804.1666666667"/>
 																								<Property Name="FadeInMode" Type="int16" Value="0"/>
 																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																							</PropertyList>
-																							<AudioSourceRef Name="Critter Phase 1 Part 4 BPM150" ID="{008DC123-4543-45DE-A799-C1F3E9926A5A}"/>
+																							<AudioSourceRef Name="Critter Phase 1 Part 4 BPM150_01" ID="{67FFE19F-463A-4224-AF0A-566179B57E68}"/>
 																						</MusicClip>
 																					</Local>
 																				</Reference>
@@ -11080,9 +11017,9 @@
 																				<MusicClip Name="Critter Intro BPM165" ID="{17B6DDE5-6E6C-41FB-8FE3-0423F193B837}">
 																					<PropertyList>
 																						<Property Name="BeginTrimOffset" Type="Real64" Value="-484.925248452366"/>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="32365.9166666667"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="29539.6958842486"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
-																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutDuration" Type="Real64" Value="11.8434714062314"/>
 																						<Property Name="PlayAt" Type="Real64" Value="484.925248452366"/>
 																					</PropertyList>
 																					<AudioSourceRef Name="Critter Intro BPM165" ID="{00EAA9BD-9C01-494B-829A-855BC18FD24D}"/>
@@ -11099,7 +11036,7 @@
 																										<Flags>5</Flags>
 																									</Point>
 																									<Point>
-																										<XPos>32.3659166666667</XPos>
+																										<XPos>29.5397</XPos>
 																										<YPos>0</YPos>
 																										<Flags>37</Flags>
 																									</Point>
@@ -11118,7 +11055,7 @@
 																										<Flags>5</Flags>
 																									</Point>
 																									<Point>
-																										<XPos>32.3659166666667</XPos>
+																										<XPos>29.5397</XPos>
 																										<YPos>0</YPos>
 																										<Flags>37</Flags>
 																									</Point>
@@ -11137,7 +11074,7 @@
 																										<Flags>5</Flags>
 																									</Point>
 																									<Point>
-																										<XPos>32.3659166666667</XPos>
+																										<XPos>29.5397</XPos>
 																										<YPos>0</YPos>
 																										<Flags>37</Flags>
 																									</Point>
@@ -11279,7 +11216,922 @@
 													<MusicCue Name="Exit Cue" ID="{04CE95F5-6110-4104-95AD-745326DBBA85}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="30400"/>
+															<Property Name="TimeMs" Type="Real64" Value="30000"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{94330C61-3CB5-491D-9A8C-4EEE506FF5EC}" ShortID="538817032">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="PlaybackSpeed"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="PLAYBACK_SPEED____CutsceneMusic" ID="{1089C0B8-F905-42EF-9C59-349ABB22F0A7}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{B8B02444-AE7C-4E54-860F-41580E9BA38B}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0.25</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>4</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<Folder Name="Phase 2" ID="{97E20EDF-E624-4491-8E50-6A5387227543}" ShortID="606436892">
+									<ChildrenList>
+										<MusicSegment Name="Critter Phase 2 - Intro" ID="{001C6B75-AD26-4985-84ED-A47F0ABACEA2}" ShortID="113837726">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="55716.179520202"/>
+												<Property Name="Tempo" Type="Real64" Value="330"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Boss - Level 1 - Critter" ID="{8C710405-B343-41EF-9E82-A53D3257E992}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="Critter Phase 2 - Intro" ID="{BFE5779C-FCD6-4A7F-A32B-1B176AD3C3DB}" ShortID="882167790">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Critter Phase 2 - Intro_01" ID="{18DC5A57-A982-410D-9ECB-861AD5A4A044}">
+															<Language>SFX</Language>
+															<AudioFile>Critter Phase 2 - Intro.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="810047481"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{F6FF8CC0-498F-4EEA-8BC6-A1850B62243B}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{66008250-BF26-41EA-89DB-7A56A3C1E41D}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="Critter Phase 2 - Intro" ID="{E3E9D468-FD43-4F69-9375-64A8C4B0598B}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="20412.875"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="Critter Phase 2 - Intro_01" ID="{18DC5A57-A982-410D-9ECB-861AD5A4A044}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Cues">
+													<Reference>
+														<Local>
+															<MusicCue Name="Entry Cue" ID="{8CDD27DA-A5B6-4439-826E-BA12C0267B31}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicCue Name="Exit Cue" ID="{1FC6C8E5-D9CD-4520-B997-7A9C1018632A}">
+																<PropertyList>
+																	<Property Name="CueType" Type="int16" Value="1"/>
+																	<Property Name="TimeMs" Type="Real64" Value="11636.3636363636"/>
+																</PropertyList>
+															</MusicCue>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicSegment>
+										<MusicSegment Name="Critter Phase 2 - Part 1" ID="{C94099D3-4D21-479F-9B08-563F4389BC54}" ShortID="124815652">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="36003.7916666667"/>
+												<Property Name="Tempo" Type="Real64" Value="330"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Boss - Level 1 - Critter" ID="{8C710405-B343-41EF-9E82-A53D3257E992}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="Critter Phase 2 - Part 1" ID="{248930D3-F741-4E4B-A5FD-FB0D2013CC94}" ShortID="213817454">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Critter Phase 2 - Part 1" ID="{3B1A171D-26F1-4ACE-B87E-5F8CFF59A875}">
+															<Language>SFX</Language>
+															<AudioFile>Critter Phase 2 - Part 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="8312812"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{6858EE38-BCEB-4FB2-A99B-0C6EC670256E}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{1658B626-2114-41BF-8B61-65FA0C999974}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="Critter Phase 2 - Part 1" ID="{13CC0370-12C0-466B-9970-DBAD8878D94E}">
+																							<PropertyList>
+																								<Property Name="BeginTrimOffset" Type="Real64" Value="61.9208917548947"/>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="36003.7916666667"/>
+																								<Property Name="FadeInDuration" Type="Real64" Value="8.84584167927073"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																								<Property Name="PlayAt" Type="Real64" Value="-61.9208917548947"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="Critter Phase 2 - Part 1" ID="{3B1A171D-26F1-4ACE-B87E-5F8CFF59A875}"/>
+																							<PropertyCurveList>
+																								<PropertyCurve PropertyName="Highpass">
+																									<Curve Name="" ID="{1B725BA6-2967-46F9-9C6E-9DF3B14571E9}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0.06192</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>36.0037916666667</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Lowpass">
+																									<Curve Name="" ID="{F0663E30-ABC6-4973-B415-1690D84827E6}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0.06192</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>36.0037916666667</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Volume">
+																									<Curve Name="" ID="{0B6D490A-59BA-487E-93F4-983A2F9883F0}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0.06192</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>36.0037916666667</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																							</PropertyCurveList>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Cues">
+													<Reference>
+														<Local>
+															<MusicCue Name="Entry Cue" ID="{2BD8604F-B11C-4775-B5BD-900D52B1CB91}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicCue Name="Exit Cue" ID="{0680F7B7-E053-46F2-BBC2-FE26267E332A}">
+																<PropertyList>
+																	<Property Name="CueType" Type="int16" Value="1"/>
+																	<Property Name="TimeMs" Type="Real64" Value="36003.7916666667"/>
+																</PropertyList>
+															</MusicCue>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicSegment>
+										<MusicSegment Name="Critter Phase 2 - Part 2" ID="{42F3C116-6A44-4C4A-B42A-040BB33FA38A}" ShortID="1041467789">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="15537.875"/>
+												<Property Name="Tempo" Type="Real64" Value="330"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Boss - Level 1 - Critter" ID="{8C710405-B343-41EF-9E82-A53D3257E992}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="Critter Phase 2 - Part 2" ID="{BB534084-99FF-4B01-9988-32C9A673BE7A}" ShortID="848549481">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Critter Phase 2 - Part 2" ID="{60F5AE91-543F-4F88-B134-A81961ED47D7}">
+															<Language>SFX</Language>
+															<AudioFile>Critter Phase 2 - Part 2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="747776501"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{A5CC7969-0A5B-4BB1-8BB0-6E81253B04BF}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{068965CC-3FF1-438C-BE47-18ABE6A5279E}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="Critter Phase 2 - Part 2" ID="{AB545793-A25B-4AEF-B46B-556D831DD920}">
+																							<PropertyList>
+																								<Property Name="BeginTrimOffset" Type="Real64" Value="71.2680517427035"/>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15537.875"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																								<Property Name="PlayAt" Type="Real64" Value="-71.2680517427035"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="Critter Phase 2 - Part 2" ID="{60F5AE91-543F-4F88-B134-A81961ED47D7}"/>
+																							<PropertyCurveList>
+																								<PropertyCurve PropertyName="Highpass">
+																									<Curve Name="" ID="{B3799BD7-D693-425B-89D1-1D6D0DF9EEB4}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0.07127</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>15.537875</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Lowpass">
+																									<Curve Name="" ID="{A53C6BEE-3FBF-4F92-ADE1-423A3ABA80BD}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0.07127</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>15.537875</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Volume">
+																									<Curve Name="" ID="{07405969-D395-4CB0-8FF0-A8CA6574C49A}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0.07127</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>15.537875</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																							</PropertyCurveList>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Cues">
+													<Reference>
+														<Local>
+															<MusicCue Name="Entry Cue" ID="{86FF28F5-4A87-4900-B0CD-60F4677BAE81}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicCue Name="Exit Cue" ID="{23791DFA-E10E-4E9C-94E0-5B6C8DF0A185}">
+																<PropertyList>
+																	<Property Name="CueType" Type="int16" Value="1"/>
+																	<Property Name="TimeMs" Type="Real64" Value="15537.875"/>
+																</PropertyList>
+															</MusicCue>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicSegment>
+										<MusicSegment Name="Critter Phase 2 - Part 3" ID="{DB1F719E-9857-4EA1-98A3-58A772558A56}" ShortID="321322383">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="16075.75"/>
+												<Property Name="Tempo" Type="Real64" Value="330"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Boss - Level 1 - Critter" ID="{8C710405-B343-41EF-9E82-A53D3257E992}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="Critter Phase 2 - Part 3" ID="{E5D62413-F8E9-469C-8E66-8EA658D31766}" ShortID="783644996">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Critter Phase 2 - Part 3" ID="{9405EF07-3074-4A7B-AE48-E4B9F7A3EE82}">
+															<Language>SFX</Language>
+															<AudioFile>Critter Phase 2 - Part 3.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="173272374"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{A5DBABDA-828D-4016-ADC7-50B7054E9574}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{8842155D-F17A-4B04-ABCF-64CAC1CA9582}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="Critter Phase 2 - Part 3" ID="{11BD3B82-202C-4CD6-A33F-7A81DA7CFF0D}">
+																							<PropertyList>
+																								<Property Name="BeginTrimOffset" Type="Real64" Value="73.6289848068299"/>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="16075.75"/>
+																								<Property Name="FadeInDuration" Type="Real64" Value="2.53795585600895"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																								<Property Name="PlayAt" Type="Real64" Value="-73.6289848068299"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="Critter Phase 2 - Part 3" ID="{9405EF07-3074-4A7B-AE48-E4B9F7A3EE82}"/>
+																							<PropertyCurveList>
+																								<PropertyCurve PropertyName="Highpass">
+																									<Curve Name="" ID="{B8F6CE74-ED7B-460A-8D7E-CEE796646863}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0.07363</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>16.07575</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Lowpass">
+																									<Curve Name="" ID="{D977E744-B666-4363-B497-62BCEDE6C85B}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0.07363</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>16.07575</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Volume">
+																									<Curve Name="" ID="{1665632C-8AD0-4FD9-94F3-66117B2AD36F}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0.07363</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>16.07575</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																							</PropertyCurveList>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Cues">
+													<Reference>
+														<Local>
+															<MusicCue Name="Entry Cue" ID="{50A429D0-89E7-41E5-9180-2E3C1B6467E5}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicCue Name="Exit Cue" ID="{5674E5A7-F375-420C-A383-E6B192A93C6F}">
+																<PropertyList>
+																	<Property Name="CueType" Type="int16" Value="1"/>
+																	<Property Name="TimeMs" Type="Real64" Value="16075.75"/>
+																</PropertyList>
+															</MusicCue>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicSegment>
+										<MusicSegment Name="Critter Phase 2 - Part 4" ID="{99E84DC7-3C7A-4C62-8321-515D7F23C0FC}" ShortID="744674415">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="33276.5208333333"/>
+												<Property Name="Tempo" Type="Real64" Value="330"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Boss - Level 1 - Critter" ID="{8C710405-B343-41EF-9E82-A53D3257E992}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="Critter Phase 2 - Part 4" ID="{72371854-59B2-47D4-BFB9-994E8CD94C51}" ShortID="828472450">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Critter Phase 2 - Part 4" ID="{04876930-EF63-4656-A7BF-071BB5C62F32}">
+															<Language>SFX</Language>
+															<AudioFile>Critter Phase 2 - Part 4.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="726920089"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{648C1A09-7B34-44FB-A96D-4BE0B6045F00}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{6C9D5B80-1CF3-47A5-ACE9-E8D8F63432B5}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="Critter Phase 2 - Part 4" ID="{81BE25CE-0F2C-4D29-9CD8-E3151C41718D}">
+																							<PropertyList>
+																								<Property Name="BeginTrimOffset" Type="Real64" Value="70.224877295139"/>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="33276.5208333333"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																								<Property Name="PlayAt" Type="Real64" Value="-70.224877295139"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="Critter Phase 2 - Part 4" ID="{04876930-EF63-4656-A7BF-071BB5C62F32}"/>
+																							<PropertyCurveList>
+																								<PropertyCurve PropertyName="Highpass">
+																									<Curve Name="" ID="{E85589C1-F875-4DBC-9E2E-6156A1DE9B3E}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0.07022</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>33.2765208333333</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Lowpass">
+																									<Curve Name="" ID="{B2D00325-1253-43EA-A9F9-92CC32F6B6C0}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0.07022</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>33.2765208333333</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Volume">
+																									<Curve Name="" ID="{5B6804EB-479C-44F7-BC34-31BEE2C317D8}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0.07022</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>33.2765208333333</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																							</PropertyCurveList>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Cues">
+													<Reference>
+														<Local>
+															<MusicCue Name="Entry Cue" ID="{6F271BD7-977C-4002-9E5B-60F7D885CEB4}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicCue Name="Exit Cue" ID="{C4023F3A-275E-4356-9B87-00205FE4FBE4}">
+																<PropertyList>
+																	<Property Name="CueType" Type="int16" Value="1"/>
+																	<Property Name="TimeMs" Type="Real64" Value="33276.5208333333"/>
+																</PropertyList>
+															</MusicCue>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicSegment>
+										<MusicSegment Name="Critter Phase 2 - Part 1 [intro ver]" ID="{8E2FAA8D-A96A-416B-8BB3-66C54014341F}" ShortID="997291221">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="38502.2174341026"/>
+												<Property Name="Tempo" Type="Real64" Value="330"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Boss - Level 1 - Critter" ID="{8C710405-B343-41EF-9E82-A53D3257E992}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="Critter Phase 2 - Part 1" ID="{09D063B6-B144-436F-9CB2-70B5CB934668}" ShortID="1036788639">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Critter Phase 2 - Part 1 [intro]" ID="{89215D54-EFF7-4C13-B1B0-7455F62A4EDF}">
+															<Language>SFX</Language>
+															<AudioFile>Critter Phase 2 - Part 1 [intro].wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="47423206"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{37882C4C-87D3-4775-80FB-D65B6230BF35}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{29E5F2A6-E9AE-403E-AA0F-24F658198409}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="Critter Phase 2 - Part 1 [intro]" ID="{E3410443-A590-43FD-8617-78DEF1116C66}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="35890.1458333333"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="Critter Phase 2 - Part 1 [intro]" ID="{89215D54-EFF7-4C13-B1B0-7455F62A4EDF}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Cues">
+													<Reference>
+														<Local>
+															<MusicCue Name="Entry Cue" ID="{96969247-7BAF-43BA-B89C-0A1FFB1E7A0F}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicCue Name="Exit Cue" ID="{CF0A9EBA-B7CB-4A75-B43D-DDB91F83CA88}">
+																<PropertyList>
+																	<Property Name="CueType" Type="int16" Value="1"/>
+																	<Property Name="TimeMs" Type="Real64" Value="36003.7916666667"/>
+																</PropertyList>
+															</MusicCue>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicSegment>
+									</ChildrenList>
+								</Folder>
+								<MusicSegment Name="Outro - Critter" ID="{DB34D338-EEE7-4526-8225-E84BAB83E999}" ShortID="75986618">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="8193.5981636992"/>
+										<Property Name="Tempo" Type="Real64" Value="330"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Boss - Level 1 - Critter" ID="{8C710405-B343-41EF-9E82-A53D3257E992}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Critter Phase 2 - Outro" ID="{86EB4DF3-D465-41F4-9C53-7A220BABD530}" ShortID="665974911">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Critter Phase 2 - Outro" ID="{E2DCEB66-9EBF-4332-9931-EBD6084F1EB5}">
+													<Language>SFX</Language>
+													<AudioFile>Critter Phase 2 - Outro.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="49963000"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{4BE04834-9836-4388-88CB-9212747EE414}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{003624BC-B0A0-42AF-B82F-C9A54228C048}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Critter Phase 2 - Outro" ID="{958FD368-8190-4521-9C2D-CA45C162EFB1}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="6549.25"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Critter Phase 2 - Outro" ID="{E2DCEB66-9EBF-4332-9931-EBD6084F1EB5}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{33BA889B-DC48-478E-AF2A-E87D7123CFCC}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{65466586-2535-4EF8-A651-39D2B0A65DE5}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="5818.18181818182"/>
 														</PropertyList>
 													</MusicCue>
 												</Local>
@@ -45081,9 +45933,46 @@
 													<MusicCue Name="Exit Cue" ID="{CD001824-9FFD-4598-8FA1-54B76D1CE89C}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="9020.83333333333"/>
+															<Property Name="TimeMs" Type="Real64" Value="9000"/>
 														</PropertyList>
 													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{3E1562FF-2DDE-4973-89DB-55E603CAA868}" ShortID="360775295">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="PlaybackSpeed"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="PLAYBACK_SPEED____CutsceneMusic" ID="{1089C0B8-F905-42EF-9C59-349ABB22F0A7}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{852DF3D2-B742-498C-9A99-35DAD3FE2F0E}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0.25</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>4</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
 												</Local>
 											</Reference>
 										</ObjectList>
@@ -45246,7 +46135,7 @@
 													<MusicCue Name="Exit Cue" ID="{99DB4C8D-43B8-403C-A849-43FFE8375260}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="8326.91666666667"/>
+															<Property Name="TimeMs" Type="Real64" Value="8307.69230769231"/>
 														</PropertyList>
 													</MusicCue>
 												</Local>
@@ -45576,7 +46465,7 @@
 													<MusicCue Name="Exit Cue" ID="{FB591B7B-4E5D-4651-8FCA-25908A582B7A}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="7216.66666666667"/>
+															<Property Name="TimeMs" Type="Real64" Value="7200"/>
 														</PropertyList>
 													</MusicCue>
 												</Local>

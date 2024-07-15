@@ -62,7 +62,7 @@ public class BossController : MonoBehaviour
 
     void SetCurrentBoss(int index)
     {
-        Vector2 spawnPoint = _spawnPoint == null ? Vector2.zero :  _spawnPoint.transform.position;
+        Vector2 spawnPoint = (_spawnPoint == null) ? Vector2.zero :  _spawnPoint.transform.position;
 
         if (_bossGO == null)
         {
@@ -82,10 +82,12 @@ public class BossController : MonoBehaviour
 
         boss = _bossGO;
 
-        graphics = _bossGO.transform.Find("Graphics").gameObject;
+        if (_bossGO.transform.Find("Graphics"))
+        {
+            graphics = _bossGO.transform.Find("Graphics").gameObject;
+        }
         bossHealth = boss.GetComponentInChildren<BossHealthController>();
 
-        print("boss spawn");
     }
 
 

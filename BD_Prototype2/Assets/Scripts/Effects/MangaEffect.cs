@@ -71,6 +71,7 @@ public class MangaEffect : MonoBehaviour
         if (clampSize <=0)
             _isSkrink = false;
 
+        if(UnitManager.Instance.GetPlayer() != null)
         transform.position = UnitManager.Instance.GetPlayer().transform.position;
 
     }
@@ -110,6 +111,7 @@ public class MangaEffect : MonoBehaviour
 
     void TriggerManga()
     {
+        if(UnitManager.Instance.GetPlayer() != null)
         transform.position = UnitManager.Instance.GetPlayer().transform.position;
         _isExpand = true;
         StopCoroutine("Flashing");
@@ -119,7 +121,8 @@ public class MangaEffect : MonoBehaviour
 
     void TurnOffManga()
     {
-        transform.position = UnitManager.Instance.GetPlayer().transform.position;
+        if (UnitManager.Instance.GetPlayer() != null)
+            transform.position = UnitManager.Instance.GetPlayer().transform.position;
         _isSkrink = true;
     }
 
