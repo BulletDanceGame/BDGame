@@ -131,13 +131,18 @@ public class EnemyHealthController : MonoBehaviour
         {
             Death();
         }
-
-
-        //critter pushback
-        //i know this is bad code sorry sorry
-        if (GetComponent<CritterMovelist>()) { 
-            StartCoroutine(GetComponent<CritterMovelist>().Pushback(dir));
+        else
+        {
+            //critter pushback
+            //i know this is bad code sorry sorry
+            if (GetComponent<CritterMovelist>())
+            {
+                StartCoroutine(GetComponent<CritterMovelist>().Pushback(dir));
+            }
         }
+
+
+        
     }
 
 
