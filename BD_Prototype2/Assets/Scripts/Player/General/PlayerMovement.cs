@@ -205,10 +205,9 @@ public class PlayerMovement : MonoBehaviour
             switch (hitTiming)
             {
                 case BeatTiming.BAD:
+                    GetComponentInParent<Player>().Fail();
                     EventManager.Instance.PlayerDash(hitTiming, Vector2.zero);
                     EventManager.Instance.PlayerMiss();
-
-                    GetComponentInParent<Player>().Fail();
                     return;
             }
         }
