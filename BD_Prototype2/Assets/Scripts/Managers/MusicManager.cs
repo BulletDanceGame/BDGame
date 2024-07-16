@@ -10,7 +10,7 @@ public class MusicManager : MonoBehaviour
 
     //startupwait
     private bool _waitBeforeStartUp = true;
-    private float _waitBeforeStartUpTimer = 2f;
+    private float _waitBeforeStartUpTimer;
     private bool _startUpIsInvoked = false;
 
 
@@ -73,6 +73,9 @@ public class MusicManager : MonoBehaviour
 
     bool isDestroyed = false;
 
+    bool checkFrames = false;
+    int frames = 0;
+
 
     private void Awake()
     {
@@ -84,6 +87,8 @@ public class MusicManager : MonoBehaviour
         }
         else
         {
+            Instance.OnStart();
+
             Destroy(gameObject);
             return;
         }
@@ -92,19 +97,26 @@ public class MusicManager : MonoBehaviour
     }
 
 
-    bool checkFrames = false;
-    int frames = 0;
+    private void Start()
+    {
+        OnStart();
+    }
+
+    private void OnStart()
+    {
+        _isActive = false;
+        _waitBeforeStartUpTimer = 2f;
+        _waitBeforeStartUp = true;
+        _startUpIsInvoked = false;
+
+        EventManager.Instance.DisableInput();
+
+    }
 
 
-    double t;
+
     private void Update()
     {
-        if (checkFrames)
-        {
-            frames++;
-        }
-
-
         //start up timer
         if (_waitBeforeStartUp)
         {
@@ -117,15 +129,33 @@ public class MusicManager : MonoBehaviour
                 {
                     SwitchMusic(TransitionType.INSTANT_SWITCH);
                 }
+
+                if (LoadingScreen.Instance)
+                {
+                    LoadingScreen.Instance.UnCover();
+                }
+
+                EventManager.Instance.EnabableInput();
+            }
+            else
+            {
+                return;
             }
         }
+
+
 
         if (_isSoftlyStopping)
         {
             SoftlyStopping();
         }
 
-                
+
+        if (checkFrames)
+        {
+            frames++;
+        }
+
 
         if (playing)
         {
@@ -163,7 +193,6 @@ public class MusicManager : MonoBehaviour
                 totalDelay -= frameDuration * f;
             }
 
-            t = songTimer;
 
             //on beat (or endTime-frames before beat on the last one of a song)
             if (songTimer >= timedBeats * framesPerBeat - endTime)
@@ -211,7 +240,7 @@ public class MusicManager : MonoBehaviour
     }
 
 
-
+    
 
 
     //transitions

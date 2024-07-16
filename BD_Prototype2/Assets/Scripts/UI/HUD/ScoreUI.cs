@@ -30,11 +30,15 @@ public class ScoreUI : MonoBehaviour
         _txtScore.text    = "00000";
         _txtMulti.text    = "1x";
 
-        EventManager.Instance.OnAddScore    += AddScore;
-        EventManager.Instance.OnPlayerMiss  += LoseCombo;
-        EventManager.Instance.OnAddCurrency += AddCurrency;
     }
 
+    private void OnEnable()
+    {
+        EventManager.Instance.OnAddScore += AddScore;
+        EventManager.Instance.OnPlayerMiss += LoseCombo;
+        EventManager.Instance.OnAddCurrency += AddCurrency;
+
+    }
 
     //Need to QUEUE 1 frame bc it depends on the ScoreManager score being added first
     void AddScore(int none)
@@ -94,7 +98,7 @@ public class ScoreUI : MonoBehaviour
     }
 
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         EventManager.Instance.OnAddScore    -= AddScore;
         EventManager.Instance.OnPlayerMiss  -= LoseCombo;
