@@ -13,6 +13,7 @@ public class PlayerTriggerBox : MonoBehaviour
     {
         EventManager.Instance.OnBeat += BurnDamage;
         EventManager.Instance.OnPlayerDamage += NormalHurtFeedback;
+        EventManager.Instance.OnPlayerLastHit += ImmuneStart;
         EventManager.Instance.OnCutsceneStart += ImmunityStart;
         EventManager.Instance.OnCutsceneEnd   += ImmunityEnd;
     }
@@ -21,10 +22,16 @@ public class PlayerTriggerBox : MonoBehaviour
     {
         EventManager.Instance.OnBeat -= BurnDamage;
         EventManager.Instance.OnPlayerDamage -= NormalHurtFeedback;
+        EventManager.Instance.OnPlayerLastHit -= ImmuneStart;
         EventManager.Instance.OnCutsceneStart -= ImmunityStart;
         EventManager.Instance.OnCutsceneEnd   -= ImmunityEnd;
     }
 
+    void ImmuneStart(BeatTiming beatTiming)
+    {
+        if(beatTiming != BeatTiming.BAD)
+            _isImmune = true;
+    }
 
     void ImmunityStart(string none)
     {
