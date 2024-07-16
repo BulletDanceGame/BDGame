@@ -41,6 +41,15 @@ namespace BulletDance.Cutscene
         }
 
 
+        public void CS_ShowScore()
+        {
+            GameObject winScreen = GameObject.Find("WinScreen");     
+            if(winScreen != null)
+                winScreen.SetActive(true);
+        }
+
+
+
         //Boss fight related
         public void CS_Fight(bool isInFight) //set
         {
