@@ -51,6 +51,8 @@ public class Player : MonoBehaviour
     {
         EventManager.Instance.OnPlayerDamage += TakeDamage;
         EventManager.Instance.OnPlayerHeal   += Heal;
+        EventManager.Instance.OnEnableInput += ActivateInput;
+        EventManager.Instance.OnDisableInput += DeactivateInput;
 
         EventManager.Instance.OnPlayerSuccessBeatHit += SuccessBeatCheck;
     }
@@ -60,6 +62,9 @@ public class Player : MonoBehaviour
     {
         EventManager.Instance.OnPlayerDamage -= TakeDamage;
         EventManager.Instance.OnPlayerHeal   -= Heal;
+
+        EventManager.Instance.OnEnableInput -= ActivateInput;
+        EventManager.Instance.OnDisableInput -= DeactivateInput;
 
         EventManager.Instance.OnPlayerSuccessBeatHit -= SuccessBeatCheck;
     }
@@ -83,7 +88,21 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.O))
             EventManager.Instance.PlayerHeal(startingHealth);
     }
-    #endif
+#endif
+
+
+
+    void ActivateInput()
+    {
+        GetComponent<PlayerInput>().ActivateInput();
+    }
+
+    void DeactivateInput()
+    {
+        GetComponent<PlayerInput>().DeactivateInput();
+    }
+
+
 
     void OnInteract(InputValue value)
     {
