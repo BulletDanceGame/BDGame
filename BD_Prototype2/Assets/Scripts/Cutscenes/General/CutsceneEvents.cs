@@ -43,7 +43,7 @@ namespace BulletDance.Cutscene
 
         public void CS_ShowScore()
         {
-            GameObject winScreen = GameObject.Find("WinScreen");     
+            GameObject winScreen = FindObjectsOfType<WinScreen>(true)?.gameObject;     
             if(winScreen != null)
                 winScreen.SetActive(true);
         }
