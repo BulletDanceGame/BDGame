@@ -371,6 +371,7 @@ public class PlayerSwing : MonoBehaviour
     // -- Last hit shit -- //
     void LastHitSwing(BeatTiming beatTiming)
     {
+        if(!BossController.Instance.bossHealth.isLastPhase) return;
         if(beatTiming == BeatTiming.BAD) return;
         canRotate = false;
         Invoke("EnableRotate", 5.5f);

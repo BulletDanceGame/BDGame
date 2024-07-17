@@ -57,13 +57,10 @@ namespace BulletDance.Cutscene
         //Set & display
         protected override void SetAndDisplay(Playable playable, FrameData frameData)
         {
-                //implement stuff (not direction or animation) here
+            //implement stuff (not direction or animation) here
 
-            if (requestUpdate)
-            {
                 CutsceneBinder.CutsceneEventsInstance.CS_InputToggle(enableUpdate);
                 player.EnableAnimUpdate(enableUpdate);
-            }
 
             SetSpriteSet();
         
