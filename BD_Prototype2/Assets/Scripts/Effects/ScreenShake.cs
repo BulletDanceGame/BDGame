@@ -34,6 +34,7 @@ public class ScreenShake : MonoBehaviour
 
         shakeTimer -= Time.deltaTime;
         noise.m_AmplitudeGain = Mathf.Lerp(startingIntensity, 0f, 1 - shakeTimer / shakeTimerDuration);
+        Camera.main.transform.localEulerAngles = new Vector3(0, 0, Camera.main.transform.localEulerAngles.z);
     }
 
 }
