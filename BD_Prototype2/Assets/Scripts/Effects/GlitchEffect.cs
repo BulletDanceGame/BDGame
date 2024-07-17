@@ -28,6 +28,16 @@ public class GlitchEffect : MonoBehaviour
         _material.SetFloat("_CircleSize", CircleSize);
     }
 
+
+    void OnDestroy()
+    {
+        EventManager.Instance.OnPlayerNormal -= ResetColorStrength;
+
+        EventManager.Instance.OnPlayerAttack -= OnGlicthVFX;
+        EventManager.Instance.OnPlayerDash   -= OnGlicthVFX;
+    }
+
+
     void ResetColorStrength()
     {
         Color = 0;

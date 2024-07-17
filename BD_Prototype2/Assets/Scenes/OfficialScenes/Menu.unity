@@ -162,6 +162,22 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2032002759}
     m_Modifications:
+    - target: {fileID: 721000935499606875, guid: af703b0c755146043ac4a170eecfb491, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 721000935499606875, guid: af703b0c755146043ac4a170eecfb491, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 721000935499606875, guid: af703b0c755146043ac4a170eecfb491, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 721000935499606875, guid: af703b0c755146043ac4a170eecfb491, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1634259399783318607, guid: af703b0c755146043ac4a170eecfb491, type: 3}
       propertyPath: m_Name
       value: SceneManager
@@ -2223,7 +2239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6710018584511685657, guid: 2a711a114b2d93d4583bb2324a7f3633, type: 3}
       propertyPath: _sceneToLoadOnPlay
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7743887161534964032, guid: 2a711a114b2d93d4583bb2324a7f3633, type: 3}
       propertyPath: ball

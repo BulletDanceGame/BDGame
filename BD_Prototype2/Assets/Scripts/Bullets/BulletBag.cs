@@ -9,7 +9,7 @@ public class BulletBag : MonoBehaviour
 
     public GameObject normalBulletPrefab, unhittableBulletPrefab, fireBulletPrefab, groovyBulletPrefab, explosiveBulletPrefab, unhittableExplosiveBulletPrefab, fireGroovyBulletPrefab, fireExplodyBulletPrefab, groovyExplodyBulletPrefab, groovyExplodyFireBulletPrefab;
 
-    public enum BulletTypes {normal, unhittable, fire, groovy, explosive, unhittableexplody, firegroovy, fireexplody, groovyexplody, groovyexplodyfire, random, none}
+    public enum BulletTypes {normal, unhittable, fire, groovy, explosive, firegroovy, fireexplody, groovyexplody, groovyexplodyfire, random, none, unhittableexplody }
 
     [Header("Bullet Lists")]
     public List<GameObject> allBullets;
@@ -55,8 +55,8 @@ public class BulletBag : MonoBehaviour
         else if (type == BulletTypes.random)
         {
             type = (BulletTypes)Random.Range(0,5);
-            print(type);
         }
+
 
         List<GameObject> bulletList = GetBulletList(type);
         for (int b = 0; b < bulletList.Count; b++)

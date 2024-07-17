@@ -81,7 +81,20 @@ public class MusicFollower : MonoBehaviour
         else if (_follower == Follower.Group)
         {
 
-            if (action.movelistsToTrigger == Note.MovelistsToTrigger.AllSpecified)
+            if (action.movelistsToTrigger == Note.MovelistsToTrigger.All)
+            {
+                foreach (Movelist m in _movelists)
+                {
+                    if (m != null)
+                    {
+                        if (m.gameObject.activeSelf)
+                        {
+                            m.Action(action);
+                        }
+                    }
+                }
+            }
+            else if (action.movelistsToTrigger == Note.MovelistsToTrigger.AllSpecified)
             {
                 foreach (Movelist m in action.specifiedMovelists)
                 {
@@ -97,6 +110,7 @@ public class MusicFollower : MonoBehaviour
             else
             {
                 List<Movelist> movelists = new List<Movelist>();
+
 
                 if (action.movelistsToTrigger == Note.MovelistsToTrigger.RandomizeBetweenSpecified)
                 {

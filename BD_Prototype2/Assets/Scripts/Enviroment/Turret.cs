@@ -74,6 +74,7 @@ public class Turret : Movelist
         if (action.functionName != null)
         {
             bulletPrefabs.Clear();
+
             bulletPrefabs.AddRange(action.bullets);
             Invoke(action.functionName, 0);
 
@@ -210,7 +211,7 @@ public class Turret : Movelist
 
         if (cld.GetComponent<Bullet>())
         {
-            if (cld.GetComponent<Bullet>().type == BulletType.PLAYERBULLET)
+            if (cld.GetComponent<Bullet>().type == BulletOwner.PLAYERBULLET)
             {
                 Hit();
             }
@@ -237,11 +238,9 @@ public class Turret : Movelist
 
     IEnumerator RespawnTurret()
     {
-        Debug.LogError("Respawning");
 
         yield return new WaitForSeconds(turretRespawnTime);
         Activate();
 
-        Debug.LogError("Respawned");
     }
 }

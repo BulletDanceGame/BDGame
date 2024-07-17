@@ -18,6 +18,11 @@ public class UnitManager : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        SetPlayer();
+    }
+
     private void OnDisable()
     {
         CancelInvoke();

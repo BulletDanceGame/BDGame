@@ -122,6 +122,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
+    
+
     bool JLIsRunning;
     IEnumerator jumpLedge()
     {
@@ -202,10 +205,9 @@ public class PlayerMovement : MonoBehaviour
             switch (hitTiming)
             {
                 case BeatTiming.BAD:
+                    GetComponentInParent<Player>().Fail();
                     EventManager.Instance.PlayerDash(hitTiming, Vector2.zero);
                     EventManager.Instance.PlayerMiss();
-
-                    GetComponentInParent<Player>().Fail();
                     return;
             }
         }
@@ -276,12 +278,14 @@ public class PlayerMovement : MonoBehaviour
         currentState = PlayerState.PUSHED_BACK;
 
         if (!GetComponent<Player>().isDead && gameObject.activeSelf == true)
-            StartCoroutine(PushBack(dir));
-    }
-    IEnumerator PushBack(Vector2 dir)
-    {
-        _playerRigidBody.AddForce(dir * _pushBackSpeed);
+        {
+            StartCoroutine(PushBack());
 
+            _playerRigidBody.velocity = dir * _pushBackSpeed;
+        }
+    }
+    IEnumerator PushBack()
+    {
         yield return new WaitForSeconds(_pushBackTime);
 
         currentState = PlayerState.MOVING;

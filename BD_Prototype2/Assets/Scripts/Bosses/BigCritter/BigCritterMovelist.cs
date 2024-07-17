@@ -12,6 +12,7 @@ public class BigCritterMovelist : Movelist
     //For ActionTwo
     [Space]
     public Transform circleShot;
+    public Transform circleShotRotated;
 
     private Rigidbody2D _rb;
     private int _jumpdirection;
@@ -52,6 +53,9 @@ public class BigCritterMovelist : Movelist
 
     public GameObject SmallCritter;
 
+    private int spiralShotIndex = 0;
+
+
     private void OnEnable()
     {
         _isCritterRunning = false;
@@ -83,8 +87,6 @@ public class BigCritterMovelist : Movelist
     public override void Activate()
     {
 
-        print("act");
-
         _isActive = true;
         _activate = true;
 
@@ -106,8 +108,17 @@ public class BigCritterMovelist : Movelist
 
     private void CircleShot()
     {
-
         Shooting.ShootAtPlayer(transform, circleShot, bulletPrefabs);
+    }
+
+    private void SpiralShot()
+    {
+        circleShotRotated.transform.eulerAngles = new Vector3(0,0, 15*spiralShotIndex); 
+
+        Shooting.ShootInDirection(circleShotRotated, bulletPrefabs);
+
+        spiralShotIndex++; 
+        if (spiralShotIndex == 4) { spiralShotIndex = 0; }
     }
 
     private void JumpToThePlayer()

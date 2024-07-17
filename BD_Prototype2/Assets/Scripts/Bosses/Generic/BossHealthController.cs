@@ -64,16 +64,16 @@ public class BossHealthController : MonoBehaviour
         EventManager.Instance.OnBossPhaseChange -= PhaseChange;
     }
 
-
+#if UNITY_EDITOR
     void Update()
     {
         //testing
         if (Input.GetKeyDown(KeyCode.U))
             EventManager.Instance.BossDamage(debugDamage);
         if (Input.GetKeyDown(KeyCode.I))
-            currentPhaseHealth += 20;
+            HealDamage(150f);
     }
-
+#endif
 
     // -- Boss over-hit prevention -- //
     private void Deactivate()
@@ -110,12 +110,12 @@ public class BossHealthController : MonoBehaviour
 
         Bullet bullet = collision.GetComponent<Bullet>(); //Replacing GetComponent() with Bullet var
 
-        if (bullet.type == BulletType.BOSSBULLET)
+        if (bullet.type == BulletOwner.BOSSBULLET)
             return;
 
         //Prevent boss from getting over-hit
         if (!_isActive) return;
-        if (_bulletsHit > _maxHits)
+        if (_bulletsHit >= _maxHits)
         {
             bullet.Deactivate();
             gameObject.GetComponent<Collider2D>().enabled = false;
@@ -143,6 +143,12 @@ public class BossHealthController : MonoBehaviour
         //Take damage && do phase change (see TakeDamage method)
         EventManager.Instance.BossDamage(_bulletDamage);
         bullet.Deactivate();
+    }
+
+    public void HealDamage(float damage)
+    {
+        currentPhaseHealth += damage;
+        EventManager.Instance.BossHeal(damage);
     }
 
 

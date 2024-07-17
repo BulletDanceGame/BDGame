@@ -103,8 +103,7 @@ namespace AK
         static const AkUniqueID NORMALDAMAGE____PLAY = 2122273249U;
         static const AkUniqueID NOSTAMINA____PLAY = 2278158929U;
         static const AkUniqueID OUTRO____PLAY = 594215984U;
-        static const AkUniqueID PAUSEALL = 4091047182U;
-        static const AkUniqueID PAUSEMENUSONG = 2134433603U;
+        static const AkUniqueID PAUSE = 3092587493U;
         static const AkUniqueID PAUSESCREENMUSIC____PLAY = 2002857628U;
         static const AkUniqueID PICKUP__CURRENCY____PLAY = 2487304348U;
         static const AkUniqueID PICKUP__HEALTH____PLAY = 63268803U;
@@ -119,6 +118,12 @@ namespace AK
         static const AkUniqueID PLAY_BOSS_1___PHASE_2___PART_4___LIGHTNING_BULLETS = 1835325240U;
         static const AkUniqueID PLAY_COOLDOWN = 1837873573U;
         static const AkUniqueID PLAY_CRITTER_PHASE_1_PART_4_BPM150 = 3176132612U;
+        static const AkUniqueID PLAY_CRITTER_PHASE_2___INTRO = 3076083233U;
+        static const AkUniqueID PLAY_CRITTER_PHASE_2___PART_1 = 2016799278U;
+        static const AkUniqueID PLAY_CRITTER_PHASE_2___PART_1__INTRO_VER_ = 1625859311U;
+        static const AkUniqueID PLAY_CRITTER_PHASE_2___PART_2 = 2016799277U;
+        static const AkUniqueID PLAY_CRITTER_PHASE_2___PART_3 = 2016799276U;
+        static const AkUniqueID PLAY_CRITTER_PHASE_2___PART_4 = 2016799275U;
         static const AkUniqueID PLAY_DEFLECTIONSWING___GOOD___LONG = 4112303910U;
         static const AkUniqueID PLAY_ENV1_TEST3_TRIPPLETS_INTRO = 2403173065U;
         static const AkUniqueID PLAY_ENV1_TEST3_TRIPPLETS_PART1 = 160122243U;
@@ -176,6 +181,7 @@ namespace AK
         static const AkUniqueID PLAY_LAYER1_ENVIRONMENT_PART4__BPM150_ = 166161648U;
         static const AkUniqueID PLAY_MISSED_DASH = 2503464396U;
         static const AkUniqueID PLAY_MOVING_TO_THE_SIDE = 2755497806U;
+        static const AkUniqueID PLAY_PAUSE_MUSIC = 1496939652U;
         static const AkUniqueID PLAY_TRAINING___INTRO = 588830433U;
         static const AkUniqueID PLAY_TRAINING___PART_1 = 4026880622U;
         static const AkUniqueID PLAY_TRAINING___PART_2 = 4026880621U;
@@ -208,7 +214,7 @@ namespace AK
         static const AkUniqueID PLAYER__WHOSTHEMONGRELNOW____PLAY = 1127862864U;
         static const AkUniqueID PLAYER__YOKAI____PLAY = 1055783055U;
         static const AkUniqueID PLAYER__ZASSHU____PLAY = 157855042U;
-        static const AkUniqueID RESUMEALL = 3240900869U;
+        static const AkUniqueID RESUME = 953277036U;
         static const AkUniqueID RHYTHMTESTING__PART1____PLAY = 1463297925U;
         static const AkUniqueID RHYTHMTESTING__PART2____PLAY = 1209085622U;
         static const AkUniqueID RHYTHMTESTING__PART3____PLAY = 4185788291U;
@@ -419,6 +425,7 @@ namespace AK
         static const AkUniqueID BOSSDAMAGE = 1794747505U;
         static const AkUniqueID BOSSDAMAGE_1___YOKAI_HUNTER = 2964830718U;
         static const AkUniqueID BOSSDAMAGE_2___DUNNO = 1404235302U;
+        static const AkUniqueID BROTHER = 556599689U;
         static const AkUniqueID CALIBRATION = 2230992643U;
         static const AkUniqueID CUTSCENE_1___BOSS___INTRO__VOICELINES_ = 371542505U;
         static const AkUniqueID CUTSCENE_1___BOSS___PHASE_1_TO_2__VOICELINES_ = 3852475470U;

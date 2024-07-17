@@ -40,7 +40,7 @@ public class GameplayButton : MonoBehaviour
         else if (type == TriggerType.Deflection)
         {
             if (!collision.GetComponent<Bullet>()) return;
-            if (collision.GetComponent<Bullet>().type == BulletType.PLAYERBULLET)
+            if (collision.GetComponent<Bullet>().type == BulletOwner.PLAYERBULLET)
             {
                 StartPress();
             }

@@ -134,6 +134,7 @@ public class RoomController : MonoBehaviour
         if (_roomType == RoomType.RoamingArea)
         {
             _currentActiveEnemies.Add(enemy);
+            print("active " + enemy.name);
         }
         else if (_roomType == RoomType.KillRoom)
         {
@@ -167,6 +168,7 @@ public class RoomController : MonoBehaviour
             }
         }
         _enemiesToSpawn = _waves[0]._enemies;
+        _currentActiveEnemies.Clear();
 
         //Change Music
         EnvironmentConductor.SwitchSequenceType(EnvironmentConductor.SequenceType.Battle, MusicManager.TransitionType.INSTANT_SWITCH);
@@ -282,6 +284,8 @@ public class RoomController : MonoBehaviour
         {
             _currentActiveEnemies.Remove(enemy);
 
+            print("currently " + _currentActiveEnemies.Count);
+
             if (_currentActiveEnemies.Count == _waves[_currentWave]._enemiesAliveToStartNextWave)
             {
                 _currentWave++;
@@ -292,6 +296,7 @@ public class RoomController : MonoBehaviour
                 }
                 else
                 {
+                    print("kill spawn more " + _waves[_currentWave]._enemies.Count);
                     _enemiesToSpawn = _waves[_currentWave]._enemies;
                 }                
             }

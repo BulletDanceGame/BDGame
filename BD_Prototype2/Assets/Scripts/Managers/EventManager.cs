@@ -23,8 +23,20 @@ public class EventManager : MonoBehaviour
 
 
     //Input events -------------------------------------------------------------------------
+    public event Action OnEnableInput;
+    public event Action OnDisableInput;
     public event Action OnGamePadUsed;
     public event Action OnKeyBoardAndMouseUsed;
+
+    public void EnabableInput()
+    {
+        OnEnableInput?.Invoke();
+    }
+
+    public void DisableInput()
+    {
+        OnDisableInput?.Invoke();
+    }
 
     public void GamepadUsed()
     {
@@ -351,7 +363,7 @@ public class EventManager : MonoBehaviour
 
 
     //Health
-    public Action<float> OnBossDamage;
+    public Action<float> OnBossDamage, OnBossHeal;
     public event Action OnBossPhaseChange;
 
     /// <summary>
@@ -361,6 +373,11 @@ public class EventManager : MonoBehaviour
     public void BossDamage(float damage)
     {
         OnBossDamage?.Invoke(damage);
+    }
+
+    public void BossHeal(float damage)
+    {
+        OnBossHeal?.Invoke(damage);
     }
 
     /// <summary>

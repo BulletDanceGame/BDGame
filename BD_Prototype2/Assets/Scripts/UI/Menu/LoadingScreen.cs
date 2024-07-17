@@ -1,15 +1,29 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LoadingScreen : MonoBehaviour
 {
+    public static LoadingScreen Instance { get; private set; }
+
     [SerializeField]
     private Animator anim;
+    [SerializeField] private Image img;
+
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
-        if(EventManager.Instance == null) return;
+
+        InvertMask(1);
+
+        if (EventManager.Instance == null) return;
         EventManager.Instance.OnSceneLoad   += Cover;
         EventManager.Instance.OnSceneLoaded += UnCover;
+
     }
 
     void OnDestroy()
@@ -19,13 +33,15 @@ public class LoadingScreen : MonoBehaviour
         EventManager.Instance.OnSceneLoaded -= UnCover;
     }
 
-    void Cover()
+    public void Cover()
     {
         InvertMask(0);
         anim.SetTrigger("Cover");
+
+        //also gets Inverted again from an Event in the Cover-animation
     }
 
-    void UnCover()
+    public void UnCover()
     {
         InvertMask(1);
         anim.SetTrigger("UnCover");
@@ -33,7 +49,6 @@ public class LoadingScreen : MonoBehaviour
 
     void InvertMask(int value)
     {
-        var rdr = GetComponentInChildren<UnityEngine.UI.Image>();
-        rdr.material.SetInt("_InvertMask", value);
+        img.material.SetInt("_InvertMask", value);
     }
 }
