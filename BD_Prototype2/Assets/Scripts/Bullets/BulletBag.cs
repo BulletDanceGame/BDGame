@@ -75,7 +75,7 @@ public class BulletBag : MonoBehaviour
             }
         }
 
-        print("Couldn't Find a Bullet");
+        Debug.LogWarning("Couldn't Find a Bullet");
         return null;
     }
 

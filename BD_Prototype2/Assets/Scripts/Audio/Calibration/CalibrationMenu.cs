@@ -12,10 +12,14 @@ public class CalibrationMenu : MonoBehaviour
     {
         if (_currentScreen + i < 0)
         {
+            SaveSystem.Instance.Save();
+            
             menu.BackFromCalibration();
         }
         else if (_currentScreen + i >= _screens.Length)
         {
+            SaveSystem.Instance.Save();
+
             _screens[_currentScreen].SetActive(false);
             _screens[0].SetActive(true);
             _currentScreen = 0;

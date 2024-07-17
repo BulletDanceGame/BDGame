@@ -39,6 +39,7 @@ public class CalibrateAudio : MonoBehaviour
         audioOffset += 0.010 * dir;
         audioOffset = Math.Round(Math.Max(-0.30, Math.Min(0.30, audioOffset)), 3);
         PlayerRhythm.Instance.UpdateOffsetVisuals(audioOffset);
+        SaveSystem.Instance.GetData().visualOffset = audioOffset;
         offsetText.text = "Offset: " + audioOffset * 1000 + "ms";
 
         Vector2 pos = visuals.anchoredPosition;
@@ -70,7 +71,6 @@ public class CalibrateAudio : MonoBehaviour
         {
             if (!nextBall) return;
 
-            print("check bar" + beat + " "  + Time.timeAsDouble);
             anim.enabled = true;
             anim.speed = 1 / (duration * 8);
             anim.Play("CalibrationNew");
@@ -78,7 +78,6 @@ public class CalibrateAudio : MonoBehaviour
         }
         else if (anticipation == 12)
         {
-            print("check ball" + beat + " " + Time.timeAsDouble);
             GameObject b = Instantiate(ballPrefab, ballPrefab.transform.parent);
             b.GetComponent<Animator>().enabled = true;
             b.GetComponent<Animator>().speed = 1 / (duration * 8);
