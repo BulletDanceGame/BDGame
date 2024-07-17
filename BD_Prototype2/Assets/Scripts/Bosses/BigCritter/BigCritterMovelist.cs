@@ -123,8 +123,8 @@ public class BigCritterMovelist : Movelist
 
     private void JumpToThePlayer()
     {        
-            _jumpdirection = 1;
-            _jumpTime = startJumpTime;
+        _jumpdirection = 1;
+        _jumpTime = startJumpTime;
     }
 
     private void JumpOutOfTheScreen()
@@ -137,7 +137,6 @@ public class BigCritterMovelist : Movelist
         print("JUMPED");
         _jumpTime = startJumpTime;
 
-        airborne = true;
         _animHandler.SpecialStart(49);
         _isCritterRunning = false;
     }
@@ -145,7 +144,6 @@ public class BigCritterMovelist : Movelist
     private void LandAndCircleShot()
     {
         print("LANDED");
-        airborne = true;
 
         _jumpdirection = 2;
         _jumpTime = startJumpTime;
@@ -155,8 +153,6 @@ public class BigCritterMovelist : Movelist
 
     private void LandAndSpawnCritter()
     {
-        airborne = true;
-
         _jumpdirection = 3;
         _jumpTime = startJumpTime;
 
@@ -172,12 +168,12 @@ public class BigCritterMovelist : Movelist
     // Update is called once per frame
     void Update()
     {
-        print(airborne);
-        if (!UnitManager.Instance.GetPlayer())
-            return;
-        Jump();
-        _distanceFromPlayer = Vector2.Distance(UnitManager.Instance.GetPlayer().transform.position, transform.position);
-        ChasePlayer();
+        if (UnitManager.Instance.GetPlayer())
+        {
+            Jump();
+            _distanceFromPlayer = Vector2.Distance(UnitManager.Instance.GetPlayer().transform.position, transform.position);
+            //ChasePlayer();
+        }
 
         //Animation
         if (_animHandler != null) Animate();
@@ -195,12 +191,14 @@ public class BigCritterMovelist : Movelist
 
     void Jump()
     {
-        if (_jumpTime <= 0)
+        airborne = _jumpTime > 0f;
+
+        if (!airborne)
         {
             _jumpdirection = 0;
-            //airborne=false;
             _animHandler?.SpecialStop();
         }
+
         else
         { // if dash then check direction start timer and add speed
             _jumpTime -= Time.deltaTime;

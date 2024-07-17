@@ -185,8 +185,6 @@ PlayableDirector:
     value: {fileID: 160831082197974010}
   - key: {fileID: -9131961219339093611, guid: 24bce3e33adc0cf48866f103e8856675, type: 2}
     value: {fileID: 6735396341382407234}
-  - key: {fileID: 3951558972923039100, guid: 24bce3e33adc0cf48866f103e8856675, type: 2}
-    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - 29f11b1f9ee3dcd44a6c233f75e2ef0c: {fileID: 0}
@@ -206,6 +204,7 @@ MonoBehaviour:
     m_Signals:
     - {fileID: 11400000, guid: 5b1df3724496d9741b2fe6fdbf3d30df, type: 2}
     - {fileID: 11400000, guid: 82e52a5c499d2cb499e74e2bf5860cbd, type: 2}
+    - {fileID: 11400000, guid: be3c889e08ed8cf40b6b8b5873279adf, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -227,6 +226,20 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: BulletDance.Cutscene.CutsceneController, Assembly-CSharp
           m_MethodName: StartMusicForCutscene
           m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 380935841979303810}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

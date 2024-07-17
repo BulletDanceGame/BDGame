@@ -127,14 +127,7 @@ public class CalibrateInput : MonoBehaviour
             {
                 double offset = Math.Round(averageDelay, 3);
 
-                if(input == ButtonInput.swing)
-                {
-                    PlayerRhythm.Instance.offsetSwing = offset;
-                }
-                else//ddash
-                {
-                    PlayerRhythm.Instance.offsetDash = offset;
-                }
+                SetOffset(offset);
 
                 double offsetRelativePos = offset / secondsPerBeat;
                 offsetMarker.transform.localPosition = new Vector3(112.5f + 75f * (float)offsetRelativePos, 0, 0);
@@ -154,28 +147,43 @@ public class CalibrateInput : MonoBehaviour
     //Called through Button Press
     public void ChangeOffset(int i)
     {
+        double offset = GetOffset();
+
+        SetOffset(offset + (i * 0.010));
+
+        double offsetPos = offset / secondsPerBeat;
+        offsetMarker.transform.localPosition = new Vector3(112.5f + 75f * (float)offsetPos, 0, 0);
+
+        offsetText.text = "Offset: " + offset * 1000 + "ms";
+
+    }
+
+    private double GetOffset()
+    {
         if (input == ButtonInput.swing)
         {
-            PlayerRhythm.Instance.offsetSwing += i * 0.010;
-
-            double offset = PlayerRhythm.Instance.offsetSwing / secondsPerBeat;
-            offsetMarker.transform.localPosition = new Vector3(112.5f + 75f * (float)offset, 0, 0);
-
-            offsetText.text = "Offset: " + PlayerRhythm.Instance.offsetSwing * 1000 + "ms";
+            return PlayerRhythm.Instance.offsetSwing;
         }
         else //dash
         {
-            PlayerRhythm.Instance.offsetDash += i * 0.010;
-
-            double offset = PlayerRhythm.Instance.offsetDash / secondsPerBeat;
-            offsetMarker.transform.localPosition = new Vector3(112.5f + 75f * (float)offset, 0, 0);
-
-            offsetText.text = "Offset: " + PlayerRhythm.Instance.offsetDash * 1000 + "ms";
+            return PlayerRhythm.Instance.offsetDash;
         }
-        
     }
+    
+    private void SetOffset(double offset)
+    {
+        if (input == ButtonInput.swing)
+        {
+            PlayerRhythm.Instance.offsetSwing = offset;
+            SaveSystem.Instance.GetData().swingOffset = offset;
+        }
+        else //dash
+        {
+            PlayerRhythm.Instance.offsetDash = offset;
+            SaveSystem.Instance.GetData().dashOffset = offset;
 
-
+        }
+    }
 
 
     public void PlayAnimations(int anticipation, float duration, int beat)
@@ -236,15 +244,7 @@ public class CalibrateInput : MonoBehaviour
 
         canHit = true;
 
-        if(input == ButtonInput.swing)
-        {
-            PlayerRhythm.Instance.offsetSwing = 0;
-        }
-        else //dash
-        {
-            PlayerRhythm.Instance.offsetDash = 0;
-
-        }
+        SetOffset(0);
 
         title1.SetActive(true);
         title2.SetActive(false);

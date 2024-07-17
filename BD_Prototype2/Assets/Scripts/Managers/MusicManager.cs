@@ -1,3 +1,4 @@
+using BulletDance.Audio;
 using System.Collections;
 using UnityEngine;
 
@@ -39,8 +40,8 @@ public class MusicManager : MonoBehaviour
 
 
     public double secondsPerBeat { get; set; }
-    public int maxFPS;
-    private double framesPerBeat; //this should theoretically be able to be a int, but as its made by 2 doubles its a double for safety
+    public int maxFPS { get; set; }
+    private double framesPerBeat; //this should theoretically be able to be a int, but its calculated by 2 doubles so its a double for safety
     private int currentFramerate;
     private double currentFrameDuration = 0;
     private int currentFrameDelay;
@@ -79,38 +80,23 @@ public class MusicManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            Instantiate(bankPrefab, transform);
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Instance.OnStart();
 
-            Destroy(gameObject);
-            return;
-        }
-
+        Instance = this;
+        Instantiate(bankPrefab, transform);
 
     }
 
 
     private void Start()
     {
-        OnStart();
-    }
-
-    private void OnStart()
-    {
         _isActive = false;
         _waitBeforeStartUpTimer = 2f;
         _waitBeforeStartUp = true;
         _startUpIsInvoked = false;
 
-        EventManager.Instance.DisableInput();
+        maxFPS = SaveSystem.Instance.GetData().maxFPS;
 
+        EventManager.Instance.DisableInput();
     }
 
 

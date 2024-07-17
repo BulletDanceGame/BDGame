@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5027572936314686704}
   - component: {fileID: 2038175138119558585}
   - component: {fileID: 2782246033361619036}
+  - component: {fileID: 7158186697722816467}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -119,7 +120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd5c7dd8a7d01340954e5dd264d8b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreDelay: 3
   score: 0
   DashScore: 10
   HitScore: 10
@@ -129,3 +129,15 @@ MonoBehaviour:
   RehitWallBounceScore: 10
   WallBounceScore: 10
   ReHitWallBounceDamageScore: 10
+--- !u!114 &7158186697722816467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6858937258137133765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba01a1ff49184f042ae1f9296b254bb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
