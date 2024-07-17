@@ -1,3 +1,4 @@
+using BulletDance.Audio;
 using System.Collections;
 using UnityEngine;
 
@@ -79,30 +80,14 @@ public class MusicManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            Instantiate(bankPrefab, transform);
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Instance.OnStart();
 
-            Destroy(gameObject);
-            return;
-        }
-
+        Instance = this;
+        Instantiate(bankPrefab, transform);
 
     }
 
 
     private void Start()
-    {
-        OnStart();
-    }
-
-    private void OnStart()
     {
         _isActive = false;
         _waitBeforeStartUpTimer = 2f;

@@ -133,8 +133,10 @@ public class RoomController : MonoBehaviour
         //activate enemies depending on what type of room it is
         if (_roomType == RoomType.RoamingArea)
         {
-            _currentActiveEnemies.Add(enemy);
-            print("active " + enemy.name);
+            if (enemy != null)
+            {
+                _currentActiveEnemies.Add(enemy);
+            }
         }
         else if (_roomType == RoomType.KillRoom)
         {
