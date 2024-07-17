@@ -9779,7 +9779,7 @@ Transform:
   - {fileID: 2430640052841602521}
   - {fileID: 3169832639987223585}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2110043273578431948
 Rigidbody2D:
@@ -9853,7 +9853,8 @@ MonoBehaviour:
   <defaultHealAmount>k__BackingField: 50
   Fails: 0
   MaxFails: 3
-  ResetTimeSeconds: 10
+  ResetTimeSeconds: 3
+  BeatTilReset: 0
   canSlowmo: 1
   _componentsToDisableOnDeath: []
   AbleToInteract: 0
