@@ -63,11 +63,11 @@ public class UnitAnimator : RhythmAnimator
         _animHandler.OnDashStart += DashStart;
         _animHandler.OnDashStop  += DashStop;
 
-        _animHandler.OnAttackStart += AttackStart;
-        _animHandler.OnSpecialStart     += SpecialStart;
-            _animHandler.OnSpecialStop += SpecialStop;
+        _animHandler.OnAttackStart  += AttackStart;
+        _animHandler.OnSpecialStart += SpecialStart;
+        _animHandler.OnSpecialStop  += SpecialStop;
 
-            _animHandler.OnPhaseChange         += PhaseChangeStart;
+        _animHandler.OnPhaseChange         += PhaseChangeStart;
         _animHandler.OnPhaseChangeFinished += PhaseChangeFinished;
     }
 
@@ -86,12 +86,11 @@ public class UnitAnimator : RhythmAnimator
         _animHandler.OnDashStart -= DashStart;
         _animHandler.OnDashStop  -= DashStop;
 
-        _animHandler.OnAttackStart -= AttackStart;
-            _animHandler.OnSpecialStart -= SpecialStart;
-            _animHandler.OnSpecialStop -= SpecialStop;
+        _animHandler.OnAttackStart  -= AttackStart;
+        _animHandler.OnSpecialStart -= SpecialStart;
+        _animHandler.OnSpecialStop  -= SpecialStop;
 
-
-            _animHandler.OnPhaseChange         -= PhaseChangeStart;
+        _animHandler.OnPhaseChange         -= PhaseChangeStart;
         _animHandler.OnPhaseChangeFinished -= PhaseChangeFinished;
     }
 
@@ -142,15 +141,26 @@ public class UnitAnimator : RhythmAnimator
             _isDefeated = false;
         }
 
-        if(!_isWalk && !_isDash && !_isAttack && !_isSpecial)
+        if(_isSpecial)
+        {
+            if (_animType == AnimatorType.Sprite)
+                _spriteAnimator.Anim(_specialState);
+
+            if (_animType == AnimatorType.Layered)
+                _layeredAnimator.Anim(_specialState);
+
+            return;
+        }
+
+        if(!_isWalk && !_isDash && !_isAttack)
         {
             if(_animType == AnimatorType.Sprite)
                 _spriteAnimator.Anim(AnimAction.Idle);
             else
                 Debug.Log("Unimplemented idle animation for UnitAnimator type " + _animType);
         }
-        
-        if(_isWalk&& !_isSpecial)
+
+        if(_isWalk)
         {
             if(_animType == AnimatorType.Sprite)
                 _spriteAnimator.Anim(AnimAction.Walk);
@@ -158,16 +168,7 @@ public class UnitAnimator : RhythmAnimator
             else
                 Debug.Log("Unimplemented walk animation for UnitAnimator type " + _animType);
         }
-
-        if(_isSpecial)
-            {
-                if (_animType == AnimatorType.Sprite)
-                    _spriteAnimator.Anim(_specialState);
-
-                if (_animType == AnimatorType.Layered)
-                    _layeredAnimator.Anim(_specialState);
-            }
-        }
+    }
 
 
     // -- Direction -- //
@@ -278,21 +279,21 @@ public class UnitAnimator : RhythmAnimator
     protected virtual void PhaseChangeStart(int phase){}
     protected virtual void PhaseChangeFinished(int phase){}
 
-        protected bool _isSpecial = false;
-        protected int _specialState = 0;
-        protected virtual void SpecialStart(int actionState) 
-        {
-            _isSpecial = true;
-            _specialState = actionState;
-        }
+    protected bool _isSpecial = false;
+    protected int _specialState = 0;
+    protected virtual void SpecialStart(int actionState) 
+    {
+        _isSpecial = true;
+        _specialState = actionState;
+    }
 
-        protected virtual void SpecialStop(){ _isSpecial = false;  }
+    protected virtual void SpecialStop(){ _isSpecial = false; }
 
 
-        // -- For cutscenes -- //
-        // Excecute always for editor preview
+    // -- For cutscenes -- //
+    // Excecute always for editor preview
 
-        [ExecuteAlways]
+    [ExecuteAlways]
     protected bool CheckCompnents()
     {
         if(!EditorCheck.inEditMode) return true;
