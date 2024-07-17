@@ -65,13 +65,16 @@ public class SoundContainer : MonoBehaviour
     // -- Helper method -- //
     protected AK.Wwise.Event GetSFX(string sfxName)
     {
+            print("s " + sfxName);
+            print("s " + _sfxList.Count);
         foreach(SFX sfx in _sfxList)
         {
             if(sfx.sfxName == sfxName)
                 return sfx.sfxEvent;
         }
 
-        return null;
+            print("s notfound" );
+            return null;
     }
 
 
@@ -86,6 +89,7 @@ public class SoundContainer : MonoBehaviour
     protected void PlaySFX(string sfxName, float duration = 1f, GameObject source = null, bool playOnce = false)
     {
         AK.Wwise.Event sound = GetSFX(sfxName);
+            print("s " + (sound != null));
         if (sound != null)
             manager.PlaySFX(sound, duration, source, playOnce);
     }

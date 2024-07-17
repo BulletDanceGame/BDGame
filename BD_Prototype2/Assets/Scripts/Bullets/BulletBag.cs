@@ -186,16 +186,16 @@ public class BulletBag : MonoBehaviour
 
     public void DeactivateAllBullets()
     {
-        print("bullet " + allBullets.Count);
-        foreach (GameObject bullet in allBullets)
+        for (int i = 0; i < allBullets.Count; i++) 
         {
-            if (bullet == null)
+            if (allBullets[i] == null)
             {
-                allBullets.Remove(bullet);
+                allBullets.RemoveAt(i);
+                i--;
             }
-            else if (bullet.activeSelf)
+            else if (allBullets[i].activeSelf)
             {
-                bullet.GetComponent<Bullet>().Deactivate();
+                allBullets[i].GetComponent<Bullet>().Deactivate();
             }
         }
     }
