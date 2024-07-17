@@ -336,6 +336,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID BITCRUSHER_MUSIC = 2372433550U;
         static const AkUniqueID HIGH_PASS____CUTSCENEMUSIC = 721861396U;
         static const AkUniqueID HIGH_PASS____CUTSCENESFX__GENERAL__AUDIBLEONSPEEDUP = 1961333805U;
         static const AkUniqueID HIGH_PASS____CUTSCENESFX__VOICELINES = 86843165U;

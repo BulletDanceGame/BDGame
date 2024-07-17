@@ -77,6 +77,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2055487999	LOW_PASS____BossDamage			\Default Work Unit\LOW PASS\LOW_PASS____BossDamage	
 	2268627958	VOLUME____PlayerActions__Dynamic			\Default Work Unit\VOLUME\VOLUME____PlayerActions__Dynamic	
 	2354416159	VOLUME____BossDamage			\Default Work Unit\VOLUME\VOLUME____BossDamage	
+	2372433550	BITCRUSHER_MUSIC			\Default Work Unit\BITCRUSHER_MUSIC	
 	2572028521	VOLUME____CutsceneSFX__Voicelines			\Default Work Unit\VOLUME\VOLUME____CutsceneSFX__Voicelines	
 	2586495989	VOLUME____MusicBossBattle			\Default Work Unit\VOLUME\VOLUME____MusicBossBattle	
 	2589375093	VOLUME____PlayerMovement__Dash			\Default Work Unit\VOLUME\VOLUME____PlayerMovement__Dash	
@@ -168,6 +169,11 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3852475470	Cutscene 1 - Boss - Phase 1 to 2 (voicelines)			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\Voicelines\Cutscene 1 - Boss - Phase 1 to 2 (voicelines)	
 	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
 	4213797070	5 Cutscene			\Default Work Unit\Master Audio Bus\Music\5 Cutscene	
+
+Effect plug-ins	ID	Name	Type				Notes
+	484763478	New_Pitch_Shifter_03	Wwise Pitch Shifter			
+	3061744738	New_Tremolo_01	Wwise Tremolo			
+	3435419520	New_Guitar_Distortion	Wwise Guitar Distortion			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			
