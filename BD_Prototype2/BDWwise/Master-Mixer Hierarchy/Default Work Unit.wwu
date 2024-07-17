@@ -1255,7 +1255,15 @@
 														<Bus Name="swings" ID="{C62F61CC-FE4C-4C56-B2F1-3FC7FBB53EE2}"/>
 														<Bus Name="hits" ID="{D7B87C37-E977-45B8-ADB4-04D48D587A9A}">
 															<ChildrenList>
-																<Bus Name="brother" ID="{38E58761-124C-4683-8713-3F0CDDBDDB76}"/>
+																<Bus Name="brother" ID="{38E58761-124C-4683-8713-3F0CDDBDDB76}">
+																	<PropertyList>
+																		<Property Name="BusVolume" Type="Real64">
+																			<ValueList>
+																				<Value>-10</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																</Bus>
 															</ChildrenList>
 														</Bus>
 													</ChildrenList>
