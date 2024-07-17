@@ -922,8 +922,9 @@ GameObject:
   - component: {fileID: 2709578600041658355}
   - component: {fileID: 6538194245475852915}
   - component: {fileID: 780906307204446648}
-  - component: {fileID: 7960604528855267746}
   - component: {fileID: 5624393994354409273}
+  - component: {fileID: 16880910450045276}
+  - component: {fileID: 7601810532064489303}
   m_Layer: 13
   m_Name: BigBoiCritter
   m_TagString: Enemy
@@ -947,7 +948,7 @@ Transform:
   - {fileID: 577004845689036219}
   - {fileID: 8302638385408542635}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1111713009965603054
 MonoBehaviour:
@@ -6932,7 +6933,41 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.029736996}
   serializedVersion: 2
   m_Radius: 1.229737
---- !u!195 &7960604528855267746
+--- !u!95 &5624393994354409273
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6899235680732971147}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c364b4dbc7ebcf942ab8432364f0ba6a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &16880910450045276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6899235680732971147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d6fc867ee986144e9e8ee76a2397115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowMoDuration: 2
+  slowMoScale: 0.01
+--- !u!195 &7601810532064489303
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6954,26 +6989,6 @@ NavMeshAgent:
   m_BaseOffset: 1.24
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!95 &5624393994354409273
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6899235680732971147}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c364b4dbc7ebcf942ab8432364f0ba6a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7280629069950604071
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class MangaEffect : MonoBehaviour
     private float _fxScale = 2000;
     [SerializeField]
     private float _expandSpeed, _shrinkSpeed;
+    private float _clampSize;
     private bool _isExpand, _isSkrink;
 
     [SerializeField]
@@ -26,8 +27,10 @@ public class MangaEffect : MonoBehaviour
     public GameObject LineGlitch;
     private void Start()
     {
-        EventManager.Instance.OnPlayerTired += TriggerManga;
+        EventManager.Instance.OnPlayerTired  += TriggerManga;
         EventManager.Instance.OnPlayerNormal += TurnOffManga;
+        EventManager.Instance.OnCutsceneStart += CutsceneStart;
+        EventManager.Instance.OnCutsceneEnd   += CutsceneEnd;
 
         transform.localScale = new Vector3(0, 0, 0);
         _mat = GetComponent<SpriteRenderer>().material;
@@ -46,6 +49,15 @@ public class MangaEffect : MonoBehaviour
         }
     }
 
+    void OnDestroy()
+    {
+        EventManager.Instance.OnPlayerTired  -= TriggerManga;
+        EventManager.Instance.OnPlayerNormal -= TurnOffManga;
+        EventManager.Instance.OnCutsceneStart -= CutsceneStart;
+        EventManager.Instance.OnCutsceneEnd   -= CutsceneEnd;
+    }
+
+
     private void SetInitKeyValue(AnimationCurve curve, float value)
     {
         Keyframe[] keys = curve.keys; // Know that this is making a copy of all keys
@@ -57,24 +69,36 @@ public class MangaEffect : MonoBehaviour
 
     private void Update()
     {
+        //DONT DO SHIT IN CUTSCENE
+        if (_isCutscene)
+        {
+            transform.localScale -= (new Vector3(_shrinkSpeed, _shrinkSpeed, _shrinkSpeed) * 5f);
+            _clampSize = Mathf.Clamp(transform.localScale.x, 0, _fxScale);
+            transform.localScale = new Vector3(_clampSize, _clampSize, _clampSize);
+
+            return;
+        }
+
+
         if(_isExpand)
             transform.localScale += new Vector3(_expandSpeed, _expandSpeed, _expandSpeed);
         if(_isSkrink)
             transform.localScale -= new Vector3(_shrinkSpeed, _shrinkSpeed, _shrinkSpeed);
 
         //Clamp values so it doesn't grow or shrink forever
-        float clampSize = Mathf.Clamp(transform.localScale.x, 0, _fxScale);
-        transform.localScale = new Vector3(clampSize, clampSize, clampSize);
+        _clampSize = Mathf.Clamp(transform.localScale.x, 0, _fxScale);
+        transform.localScale = new Vector3(_clampSize, _clampSize, _clampSize);
 
-        if(clampSize >= _fxScale)
+        if(_clampSize >= _fxScale)
             _isExpand = false;
-        if (clampSize <=0)
+        if (_clampSize <= 0)
             _isSkrink = false;
 
         if(UnitManager.Instance.GetPlayer() != null)
-        transform.position = UnitManager.Instance.GetPlayer().transform.position;
-
+            transform.position = UnitManager.Instance.GetPlayer().transform.position;
     }
+
+
 
     IEnumerator Flashing()
     {
@@ -109,10 +133,12 @@ public class MangaEffect : MonoBehaviour
         isFlicker = false;
     }
 
+
+
     void TriggerManga()
     {
-        if(UnitManager.Instance.GetPlayer() != null)
-        transform.position = UnitManager.Instance.GetPlayer().transform.position;
+        if (_isCutscene) return;
+
         _isExpand = true;
         StopCoroutine("Flashing");
         if(routine != null) StopCoroutine(routine);
@@ -121,10 +147,27 @@ public class MangaEffect : MonoBehaviour
 
     void TurnOffManga()
     {
-        if (UnitManager.Instance.GetPlayer() != null)
-            transform.position = UnitManager.Instance.GetPlayer().transform.position;
         _isSkrink = true;
     }
+
+
+
+    bool _isCutscene = false;
+    void CutsceneStart(string none)
+    {
+        if(routine != null) StopCoroutine(routine);
+
+        _isSkrink = false;
+        _isExpand = false;
+        _isCutscene = true;
+    }
+
+    void CutsceneEnd()
+    {
+        _isCutscene = false;
+    }
+
+
 
     Coroutine routine;
     IEnumerator FadeOut()
