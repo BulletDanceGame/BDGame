@@ -143,6 +143,11 @@ MonoBehaviour:
         idInternal: 0
         valueGuidInternal: 
         WwiseObjectReference: {fileID: 11400000, guid: eb661e9539b9c8042bc326370dc0e41c, type: 2}
+    - sfxName: Dash Miss
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 8240a4d61511c1048a0aef9ea91541f3, type: 2}
   - groupName: Swing
     sfxList:
     - sfxName: Swing Perfect
@@ -269,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59534e61cb9c2944aee28677e960b08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetAudio: 0
+  offsetVisuals: 0
   offsetSwing: 0
   offsetDash: 0
   _perfectHitTime: 0.06
