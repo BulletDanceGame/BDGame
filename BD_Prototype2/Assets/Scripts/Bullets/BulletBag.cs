@@ -24,11 +24,14 @@ public class BulletBag : MonoBehaviour
     public List<GameObject> firegroovyBulletList;
     public List<GameObject> explosiveBulletList;
 
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;
-
         SpawnBullets(BulletTypes.normal, 15);
         SpawnBullets(BulletTypes.unhittable, 15);
         SpawnBullets(BulletTypes.fire, 10);
@@ -183,9 +186,14 @@ public class BulletBag : MonoBehaviour
 
     public void DeactivateAllBullets()
     {
+        print("bullet " + allBullets.Count);
         foreach (GameObject bullet in allBullets)
         {
-            if (bullet.activeSelf)
+            if (bullet == null)
+            {
+                allBullets.Remove(bullet);
+            }
+            else if (bullet.activeSelf)
             {
                 bullet.GetComponent<Bullet>().Deactivate();
             }
