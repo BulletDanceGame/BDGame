@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
 
     public int Fails = 0, MaxFails = 3;
     public float ResetTimeSeconds = 10f;
+    public int BeatTilReset;
 
     [SerializeField]
     public static bool isSlowmo;
@@ -44,6 +45,8 @@ public class Player : MonoBehaviour
 
     private CheckpointManager _checkpointManager;
 
+    private float _beatTracker;
+
     [SerializeField]
     GameObject actionUI;
 
@@ -52,6 +55,7 @@ public class Player : MonoBehaviour
         EventManager.Instance.OnPlayerDamage += TakeDamage;
         EventManager.Instance.OnPlayerHeal   += Heal;
 
+        EventManager.Instance.OnBeat += BeatCounter; 
         EventManager.Instance.OnPlayerSuccessBeatHit += SuccessBeatCheck;
     }
 
@@ -208,5 +212,18 @@ public class Player : MonoBehaviour
     public void RespawnPlayer(Vector2 spawnPoint)
     {
         transform.position = spawnPoint;
+    }
+
+    public void BeatCounter(int beat)
+    {
+        if (beat % 2 != 0)
+            return;
+
+        _beatTracker++;
+
+        if(_beatTracker>=BeatTilReset)
+        {
+            //Put reset fail here
+        }
     }
 }
