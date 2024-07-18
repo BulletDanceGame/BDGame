@@ -120,9 +120,9 @@ public class GameManager : MonoBehaviour
 
     void StartTimer()
     {
-        //print(name + " " + gameObject.activeSelf);
-        //if (!CountTime)
-        //    StartCoroutine(UpdateTimer());
+        print(name + " " + gameObject.activeSelf);
+        if (!CountTime)
+            StartCoroutine(UpdateTimer());
     }
 
     IEnumerator UpdateTimer()

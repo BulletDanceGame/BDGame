@@ -4,11 +4,13 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
 public enum BulletOwner { BOSSBULLET, PLAYERBULLET}
+public enum BulletState { PERFECT, GOOD}
 
 public class Bullet : MonoBehaviour
 {
     [Header("Base bullet properties")]
     public BulletOwner type = BulletOwner.BOSSBULLET;
+    public BulletState bulletState = BulletState.GOOD;
 
     private float _currentSpeed;
     public float offBeatSpeed;
@@ -244,12 +246,17 @@ public class Bullet : MonoBehaviour
                 _rhythmMarkers[0].SetActive(false);
                 _rhythmMarkers[1].SetActive(false);
 
+                bulletState = BulletState.PERFECT;
+
                 ScoreManager.Instance.PerfectHits++;
                 break;
             case BeatTiming.GOOD:
                 SetSpeed(goodSpeed);
 
                 _fx.GoodFX();
+
+                bulletState = BulletState.GOOD;
+
                 ScoreManager.Instance.GoodHits++;
                 break;
             case BeatTiming.BAD:

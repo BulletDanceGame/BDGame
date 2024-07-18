@@ -127,11 +127,11 @@ public class BossHealthController : MonoBehaviour
         //Boss gets hit by bullet
 
         //Add score
-        if(collision.gameObject.tag == "DeflectedBullet")
-            EventManager.Instance.AddScore(100);
-
-        if(collision.gameObject.tag == "PerfectBullet")
-            EventManager.Instance.AddScore(200);
+        if(collision.gameObject.tag == "Bullet")
+            if(collision.gameObject.GetComponent<Bullet>().bulletState == BulletState.PERFECT)
+                EventManager.Instance.AddScore(200);
+            else
+                EventManager.Instance.AddScore(100);
 
         //Add bullet hits
         _bulletsHit++;
