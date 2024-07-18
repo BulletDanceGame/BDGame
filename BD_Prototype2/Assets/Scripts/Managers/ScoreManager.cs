@@ -25,7 +25,7 @@ public class ScoreManager : MonoBehaviour
     public  int CurrentTimeScore { get; private set; }
 
     [SerializeField]
-    private int  _maxCombo = 4;
+    private int  _maxCombo = 10;
     public  int  ComboMulti { get; private set; }
     public  bool isMaxCombo { get { return ComboMulti >= _maxCombo; } }
 
