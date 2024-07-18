@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
@@ -34,9 +35,11 @@ public class ScoreManager : MonoBehaviour
 
 
     //Put reset score on some events (go to main menu, etc.)
-    void Start()
+    IEnumerator Start()
     {
         ResetScore();
+
+        yield return null;
 
         EventManager.Instance.OnUpdateTimer += DecreaseTimeBonus;
         EventManager.Instance.OnAddScore    += AddScore;
