@@ -137,7 +137,7 @@
 				<GameParameter Id="1103547191" Name="PLAYBACK_SPEED____CutsceneMusic"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="723507619" Type="User" Language="SFX" Hash="{203FCE82-09E4-9AD7-0202-13A08A527031}">
+		<SoundBank Id="723507619" Type="User" Language="SFX" Hash="{52A4CA2D-E4DF-E5C5-3DB5-36349552DB94}">
 			<ShortName>Music_YokaiHunter_Phase3AndOutro</ShortName>
 			<Path>Music_YokaiHunter_Phase3AndOutro.bnk</Path>
 			<Media>
@@ -160,6 +160,10 @@
 				<File Id="231226394" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Part 4 - 1 - Groovy+Explody bullet.wav</ShortName>
 					<CachePath>SFX/Part 4 - 1 - Groovy+Explody bullet_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="392073316" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>score screen - yh (no music).wav</ShortName>
+					<CachePath>SFX/score screen - yh (no music)_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="403014659" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Part 2 - Groovy+Fire bullet.wav</ShortName>
@@ -199,8 +203,9 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="594215984" Name="Outro____PLAY" DurationType="OneShot" DurationMin="16.268383" DurationMax="16.268383">
+				<Event Id="594215984" Name="Outro____PLAY" DurationType="OneShot" DurationMin="24.060133" DurationMax="24.060133">
 					<MediaRefs>
+						<MediaRef Id="392073316"/>
 						<MediaRef Id="605611314"/>
 						<MediaRef Id="716031481"/>
 					</MediaRefs>
@@ -1904,7 +1909,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{C61648E1-F1A8-0FD7-AB39-D3DD3D352BEC}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{5C5ED8C8-F2D8-77CD-C357-C2E3C8FA5182}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -1922,11 +1927,11 @@
 				</File>
 				<File Id="33638607" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 7.wav</ShortName>
-					<CachePath>SFX/part 3 - ow 7_DBFE1B7D.wem</CachePath>
+					<CachePath>SFX/part 3 - ow 7_97C7B6EF.wem</CachePath>
 				</File>
 				<File Id="34464883" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 6.wav</ShortName>
-					<CachePath>SFX/part 3 - ow 6_71A81C02.wem</CachePath>
+					<CachePath>SFX/part 3 - ow 6_E7923EBE.wem</CachePath>
 				</File>
 				<File Id="43124693" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>boss - and is fairly - final2.wav</ShortName>
@@ -1950,7 +1955,7 @@
 				</File>
 				<File Id="89964379" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>dashVoiceOver1.wav</ShortName>
-					<CachePath>SFX/dashVoiceOver1_C96B91D4.wem</CachePath>
+					<CachePath>SFX/dashVoiceOver1_0B281C6A.wem</CachePath>
 				</File>
 				<File Id="91521296" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hurtMidSFX.wav</ShortName>
@@ -2026,7 +2031,7 @@
 				</File>
 				<File Id="215552922" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 8.wav</ShortName>
-					<CachePath>SFX/part 3 - ow 8_FA377894.wem</CachePath>
+					<CachePath>SFX/part 3 - ow 8_BEFC913C.wem</CachePath>
 				</File>
 				<File Id="221904516" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Deflection3-Element2-mono.wav</ShortName>
@@ -2060,7 +2065,7 @@
 				</File>
 				<File Id="269805961" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 5.wav</ShortName>
-					<CachePath>SFX/part 3 - ow 5_409F57A4.wem</CachePath>
+					<CachePath>SFX/part 3 - ow 5_A53A79EF.wem</CachePath>
 				</File>
 				<File Id="316381491" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 12.wav</ShortName>
@@ -2100,7 +2105,7 @@
 				</File>
 				<File Id="357561432" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 1.wav</ShortName>
-					<CachePath>SFX/part 3 - ow 1_DD8A2B29.wem</CachePath>
+					<CachePath>SFX/part 3 - ow 1_27ECFB7B.wem</CachePath>
 				</File>
 				<File Id="376349708" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>text sfx.wav</ShortName>
@@ -2150,7 +2155,7 @@
 				</File>
 				<File Id="451589785" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>dashVoiceOver3.wav</ShortName>
-					<CachePath>SFX/dashVoiceOver3_D2AFCC6B.wem</CachePath>
+					<CachePath>SFX/dashVoiceOver3_C90821D2.wem</CachePath>
 				</File>
 				<File Id="452795239" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>squeak6.wav</ShortName>
@@ -2162,7 +2167,7 @@
 				</File>
 				<File Id="469343277" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 11.wav</ShortName>
-					<CachePath>SFX/part 3 - ow 11_1B9FC97B.wem</CachePath>
+					<CachePath>SFX/part 3 - ow 11_1C7A2D02.wem</CachePath>
 				</File>
 				<File Id="469584776" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>talkin to ya.wav</ShortName>
@@ -2332,11 +2337,11 @@
 				</File>
 				<File Id="766224154" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 12.wav</ShortName>
-					<CachePath>SFX/part 3 - ow 12_E1459F67.wem</CachePath>
+					<CachePath>SFX/part 3 - ow 12_4EB6A671.wem</CachePath>
 				</File>
 				<File Id="770454220" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>badSwing.wav</ShortName>
-					<CachePath>SFX/badSwing_42D3BCF8.wem</CachePath>
+					<CachePath>SFX/badSwing_20744C8C.wem</CachePath>
 				</File>
 				<File Id="770489537" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>DeflectVoiceOver1.wav</ShortName>
@@ -2372,7 +2377,7 @@
 				</File>
 				<File Id="795428937" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 9.wav</ShortName>
-					<CachePath>SFX/part 3 - ow 9_816BE6AC.wem</CachePath>
+					<CachePath>SFX/part 3 - ow 9_6937D2A7.wem</CachePath>
 				</File>
 				<File Id="807832056" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>that all ya got.wav</ShortName>
@@ -2452,7 +2457,7 @@
 				</File>
 				<File Id="917168644" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>dashVoiceOver2.wav</ShortName>
-					<CachePath>SFX/dashVoiceOver2_473CC9BA.wem</CachePath>
+					<CachePath>SFX/dashVoiceOver2_8A5A69AC.wem</CachePath>
 				</File>
 				<File Id="932775821" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cooldown - definitive (without initial smash).wav</ShortName>
@@ -2518,7 +2523,7 @@
 				</File>
 				<File Id="1014317820" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 3.wav</ShortName>
-					<CachePath>SFX/part 3 - ow 3_B2D0F761.wem</CachePath>
+					<CachePath>SFX/part 3 - ow 3_D2BBA579.wem</CachePath>
 				</File>
 				<File Id="1019231690" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Phase 2 to 3\boss - ughhhh.wav</ShortName>
@@ -2538,7 +2543,7 @@
 				</File>
 				<File Id="1042703676" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 4.wav</ShortName>
-					<CachePath>SFX/part 3 - ow 4_1C35B60F.wem</CachePath>
+					<CachePath>SFX/part 3 - ow 4_E0314C2A.wem</CachePath>
 				</File>
 				<File Id="1052910591" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 1.wav</ShortName>
@@ -2550,7 +2555,7 @@
 				</File>
 				<File Id="1059189475" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 2.wav</ShortName>
-					<CachePath>SFX/part 3 - ow 2_701426D0.wem</CachePath>
+					<CachePath>SFX/part 3 - ow 2_B8D8B5EF.wem</CachePath>
 				</File>
 				<File Id="1062634275" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 4.wav</ShortName>
@@ -2558,7 +2563,7 @@
 				</File>
 				<File Id="1063615051" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 10.wav</ShortName>
-					<CachePath>SFX/part 3 - ow 10_992AA245.wem</CachePath>
+					<CachePath>SFX/part 3 - ow 10_37F54D5E.wem</CachePath>
 				</File>
 				<File Id="1065987497" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>squeak10.wav</ShortName>
@@ -3195,5 +3200,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4B8BE8D1-D9D2-D0C2-5840-FE1DA751758A}</FileHash>
+	<FileHash>{1B0893BF-2B9A-B593-EA1E-959C1F4D75CC}</FileHash>
 </SoundBanksInfo>
