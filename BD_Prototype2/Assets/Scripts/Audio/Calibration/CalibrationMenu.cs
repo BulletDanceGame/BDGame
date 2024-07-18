@@ -8,6 +8,9 @@ public class CalibrationMenu : MonoBehaviour
 
     [SerializeField] private MainMenu menu;
 
+    public bool canHit { get; set; } = true;
+
+
     public void SwitchScreen(int i)
     {
         if (_currentScreen + i < 0)

@@ -6,11 +6,13 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 
-public enum ButtonInput { swing, dash };
+public enum ButtonInput { swing, dash, none };
 
 public class CalibrateInput : MonoBehaviour
 {
     public ButtonInput input;
+
+    [SerializeField] private CalibrationMenu menu;
 
     [SerializeField] private GameObject delayMarkerPrefab;
     private List<GameObject> delayMarkers = new List<GameObject>();
@@ -24,13 +26,12 @@ public class CalibrateInput : MonoBehaviour
     private double secondsPerBeat = .0;
 
     private double averageDelay = .0;
-    private double combinedDelay = .0;
+    private List<double> delays = new List<double>();
     private int delayHitCounter = 0;
 
 
     [SerializeField] private Animator anim;
 
-    private bool canHit = true;
 
     public GameObject ballPrefab;
 
@@ -40,13 +41,19 @@ public class CalibrateInput : MonoBehaviour
     GameObject currentBall = null;
     GameObject nextBall = null;
 
-    public GameObject title1;
-    public GameObject title2;
+
+    [SerializeField] private TextMeshProUGUI[] triesTexts;
+    [SerializeField] private TextMeshProUGUI averageText;
+    [SerializeField] private TextMeshProUGUI consistencyText;
+
 
 
     private void OnEnable()
     {
         EventManager.Instance.OnBeatForVisuals += PlayAnimations;
+
+
+        offsetText.text = "Offset: " + GetOffset() * 1000 + "ms";
     }
 
     private void OnDisable()
@@ -81,11 +88,11 @@ public class CalibrateInput : MonoBehaviour
 
     private void OnPress()
     {
-        if (canHit)// && currentBall != null)
+        if (menu.canHit)// && currentBall != null)
         {
 
-            double delay = PlayerRhythm.Instance.GetHitDelay(input);
-            PlayerRhythm.Instance.GetComponent<PlayerSounds>().PlayerSwing(PlayerRhythm.Instance.GetBeatTiming(input), Vector2.zero); //ugh
+            double delay = PlayerRhythm.Instance.GetHitDelay(ButtonInput.none);
+            PlayerRhythm.Instance.GetComponent<PlayerSounds>().PlayerSwing(PlayerRhythm.Instance.GetBeatTiming(ButtonInput.none), Vector2.zero); //ugh
 
             //do this once somewhere instead, have it as an event when switching songs?, just keep it a constant fit for the menu music?
             //*2 cause this DOESNT check for the 8th notes
@@ -96,30 +103,65 @@ public class CalibrateInput : MonoBehaviour
             //particles.Play();
             //Destroy(currentBall);
 
+            //Remove last delay
+            if (delayHitCounter == 5)
+            {
+                delays.RemoveAt(0);
+                //Destroy(delayMarkers[0]);
+                //delayMarkers.RemoveAt(0);
+                delayHitCounter--;
+
+                for (int i = 0; i < triesTexts.Length-1; i++)
+                {
+                    string l = (delays[i] >= 0) ? "late" : "early";
+                    triesTexts[i].text = (i + 1).ToString() + ". " + Math.Abs(Math.Round(delays[i] * 1000)) + "ms " + l;
+                }
+            }
+
+
+
             //marker
-            double relativePos = delay / secondsPerBeat;
-            GameObject d = Instantiate(delayMarkerPrefab, delayMarkerPrefab.transform.parent.Find("DelayMarkerParent"));
-            d.transform.localPosition = new Vector3(112.5f + 75f * (float)relativePos, 0, 0);
-            d.SetActive(true);
-            delayMarkers.Add(d);
+            //double relativePos = delay / secondsPerBeat;
+            //GameObject d = Instantiate(delayMarkerPrefab, delayMarkerPrefab.transform.parent.Find("DelayMarkerParent"));
+            //d.transform.localPosition = new Vector3(112.5f + 75f * (float)relativePos, 0, 0);
+            //d.SetActive(true);
+            //delayMarkers.Add(d);
 
 
-            resetButton.SetActive(true);
+            //resetButton.SetActive(true);
 
-            //count
+
+            triesTexts[delayHitCounter].gameObject.SetActive(true);
+            string late = (delay >= 0) ? "late" : "early"; 
+            triesTexts[delayHitCounter].text = (delayHitCounter+1).ToString() + ". " + Math.Abs(Math.Round(delay * 1000)) + "ms " + late;
+
             delayHitCounter++;
-            countText.gameObject.SetActive(true);
-            countText.text = "Count: " + delayHitCounter + "/5";
+            
+            
+            
+            //count
+            //countText.gameObject.SetActive(true);
+            //countText.text = "Count: " + delayHitCounter + "/5";
+
+
+            
+
 
             //average
-            combinedDelay += delay;
+            delays.Add(delay);
+            double combinedDelay = 0;
+            foreach (double de in delays)
+            {
+                combinedDelay += de; 
+            }
+            late = (averageDelay >= 0) ? "late" : "early";
             averageDelay = combinedDelay / delayHitCounter;
-            averageDelayText.text = "Average: " + Math.Round(averageDelay * 1000) + "ms";
+            averageText.text = "Average: " + Math.Abs(Math.Round(averageDelay * 1000)) + "ms " + late;
 
             //average marker
-            double averageRelativePos = averageDelay / secondsPerBeat;
-            averageDelayMarker.transform.localPosition = new Vector3(112.5f + 75f * (float)averageRelativePos, 0, 0);
-            averageDelayMarker.SetActive(true);
+            //double averageRelativePos = averageDelay / secondsPerBeat;
+            //averageDelayMarker.transform.localPosition = new Vector3(112.5f + 75f * (float)averageRelativePos, 0, 0);
+            //averageDelayMarker.SetActive(true);
 
 
             //offset n marker
@@ -129,15 +171,13 @@ public class CalibrateInput : MonoBehaviour
 
                 SetOffset(offset);
 
-                double offsetRelativePos = offset / secondsPerBeat;
-                offsetMarker.transform.localPosition = new Vector3(112.5f + 75f * (float)offsetRelativePos, 0, 0);
-                offsetMarker.SetActive(true);
-                offsetText.text = "Offset: " + Math.Round(offset * 1000) + "ms";
+                //double offsetRelativePos = offset / secondsPerBeat;
+                //offsetMarker.transform.localPosition = new Vector3(112.5f + 75f * (float)offsetRelativePos, 0, 0);
+                //offsetMarker.SetActive(true);
+                //offsetText.text = "Offset: " + Math.Round(offset * 1000) + "ms";
 
-                canHit = false;
+                //canHit = false;
 
-                title1.SetActive(false);
-                title2.SetActive(true);
             }
 
         }
@@ -151,10 +191,9 @@ public class CalibrateInput : MonoBehaviour
 
         SetOffset(offset + (i * 0.010));
 
-        double offsetPos = offset / secondsPerBeat;
-        offsetMarker.transform.localPosition = new Vector3(112.5f + 75f * (float)offsetPos, 0, 0);
+        //double offsetPos = offset / secondsPerBeat;
+        //offsetMarker.transform.localPosition = new Vector3(112.5f + 75f * (float)offsetPos, 0, 0);
 
-        offsetText.text = "Offset: " + offset * 1000 + "ms";
 
     }
 
@@ -183,6 +222,8 @@ public class CalibrateInput : MonoBehaviour
             SaveSystem.Instance.GetData().dashOffset = offset;
 
         }
+
+        offsetText.text = "Offset: " + offset * 1000 + "ms";
     }
 
 
@@ -223,31 +264,35 @@ public class CalibrateInput : MonoBehaviour
     //Called through Button Press
     public void Restart()
     {
+        delays.Clear();
         delayHitCounter = 0;
         averageDelay = 0;
-        combinedDelay = 0;
+        averageText.text = "";
+
+        foreach(TextMeshProUGUI t in triesTexts)
+        {
+            t.text = "";
+            t.gameObject.SetActive(false);
+        }
 
         //markers
-        for (int i = 0; i < delayMarkers.Count; i++)
-        {
-            Destroy(delayMarkers[i]);
-        }
-        delayMarkers.Clear();
+        //for (int i = 0; i < delayMarkers.Count; i++)
+        //{
+        //    Destroy(delayMarkers[i]);
+        //}
+        //delayMarkers.Clear();
 
-        averageDelayMarker.SetActive(false);
-        offsetMarker.SetActive(false);
+        //averageDelayMarker.SetActive(false);
+        ////offsetMarker.SetActive(false);
 
-        countText.gameObject.SetActive(false);
-        countText.text = "Count: 0/5";
+        //countText.gameObject.SetActive(false);
+        //countText.text = "Count: 0/5";
 
-        resetButton.SetActive(false);
+        //resetButton.SetActive(false);
 
-        canHit = true;
 
         SetOffset(0);
 
-        title1.SetActive(true);
-        title2.SetActive(false);
     }
 
 }

@@ -309,7 +309,8 @@ public class PlayerRhythm : MonoBehaviour
         }
 
         double time = Time.timeAsDouble;
-        double offset = (input == ButtonInput.swing) ? offsetSwing : offsetDash;
+        double offset = (input == ButtonInput.swing) ? offsetSwing :  ( 
+                        (input == ButtonInput.dash)  ? offsetDash  : 0);
 
         double a = double.MaxValue;
         int index = 0;
