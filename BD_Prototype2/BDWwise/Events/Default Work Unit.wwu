@@ -3086,6 +3086,39 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_StartGame" ID="{80BF8CFA-0485-4871-B80D-460E1FD08217}">
+					<ChildrenList>
+						<Action Name="" ID="{8665E4A3-DB65-415A-8C0F-C136DA8EB7FE}" ShortID="660542018">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="StartGame" ID="{2CF04CC0-5EAA-4040-9CC2-2C9E05E09362}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_NavConfirm" ID="{97279B2E-3ED8-4CAF-8ED5-5915C63E5D4B}">
+					<ChildrenList>
+						<Action Name="" ID="{E10CE12E-509C-4708-A4F4-155136C7F972}" ShortID="70299605">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="NavConfirm" ID="{52915FF3-F9A6-41A7-B8D4-29E0FCABF2CA}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_NavUpDown" ID="{86EA1E59-4648-4848-AA7C-5116F9C762E6}">
+					<ChildrenList>
+						<Action Name="" ID="{222B145A-8309-412B-B956-103D30910D78}" ShortID="598686533">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="NavUpDown" ID="{FB7A11A5-046C-43EE-8A56-BF64B74DA37E}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

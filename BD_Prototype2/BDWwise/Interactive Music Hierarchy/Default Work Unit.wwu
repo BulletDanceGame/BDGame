@@ -15858,6 +15858,13 @@
 												<MediaID ID="978023960"/>
 											</MediaIDList>
 										</AudioFileSource>
+										<AudioFileSource Name="clap" ID="{10F50689-0CBC-4E15-84E1-09A9B319507E}">
+											<Language>SFX</Language>
+											<AudioFile>clap.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="591076483"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
 										<MusicTransition Name="Root" ID="{E8BA25C8-A943-477A-B7CE-D8751440B7DA}">
@@ -15878,9 +15885,10 @@
 																	<Local>
 																		<MusicClip Name="Metronome - STYLISH - Drum" ID="{A17D33DE-A744-419A-80D3-8962393466DE}">
 																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="8000"/>
+																				<Property Name="BeginTrimOffset" Type="Real64" Value="1.98951966012828E-13"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="1425.66614031305"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
-																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutDuration" Type="Real64" Value="65.2993223805999"/>
 																			</PropertyList>
 																			<AudioSourceRef Name="Metronome - STYLISH - Drum" ID="{5DDEC691-E38C-46DC-9FB2-BDC999D6DB4D}"/>
 																			<PropertyCurveList>
@@ -15896,7 +15904,7 @@
 																								<Flags>5</Flags>
 																							</Point>
 																							<Point>
-																								<XPos>8</XPos>
+																								<XPos>1.42567</XPos>
 																								<YPos>0</YPos>
 																								<Flags>37</Flags>
 																							</Point>
@@ -15915,7 +15923,7 @@
 																								<Flags>5</Flags>
 																							</Point>
 																							<Point>
-																								<XPos>8</XPos>
+																								<XPos>1.42567</XPos>
 																								<YPos>0</YPos>
 																								<Flags>37</Flags>
 																							</Point>
@@ -15930,6 +15938,294 @@
 																						<PointList>
 																							<Point>
 																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>1.42567</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																			</PropertyCurveList>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Metronome - STYLISH - Drum" ID="{F2848AED-C3B7-4FF6-AF83-35CD4F3E6F3B}">
+																			<PropertyList>
+																				<Property Name="BeginTrimOffset" Type="Real64" Value="1937.5"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="3425.66614031305"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Metronome - STYLISH - Drum" ID="{5DDEC691-E38C-46DC-9FB2-BDC999D6DB4D}"/>
+																			<PropertyCurveList>
+																				<PropertyCurve PropertyName="Highpass">
+																					<Curve Name="" ID="{4242840F-CFB6-4FCB-83C3-5830C25139D1}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1.9375</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>3.42567</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Lowpass">
+																					<Curve Name="" ID="{DA0C4DAC-C11E-4385-94FC-753567627BBA}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1.9375</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>3.42567</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Volume">
+																					<Curve Name="" ID="{622512BF-ED63-446F-8E9B-B4C1151845F5}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>1.9375</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>3.42567</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																			</PropertyCurveList>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Metronome - STYLISH - Drum" ID="{7C722251-1AB0-41B3-A10A-DBEDFE490B52}">
+																			<PropertyList>
+																				<Property Name="BeginTrimOffset" Type="Real64" Value="3937.5"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="5425.66614031305"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Metronome - STYLISH - Drum" ID="{5DDEC691-E38C-46DC-9FB2-BDC999D6DB4D}"/>
+																			<PropertyCurveList>
+																				<PropertyCurve PropertyName="Highpass">
+																					<Curve Name="" ID="{CAD00644-AFC3-4D0A-84A1-C65E896F8AE6}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>3.9375</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>5.42567</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Lowpass">
+																					<Curve Name="" ID="{7A01E19E-92BB-4EA3-8D6D-6DAB47473025}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>3.9375</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>5.42567</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Volume">
+																					<Curve Name="" ID="{6F4EDBE3-2A53-4537-A457-9ED7BF411D2A}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>3.9375</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>5.42567</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																			</PropertyCurveList>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Metronome - STYLISH - Drum" ID="{2CB8B03B-CA35-4309-AB39-D487263AFEFE}">
+																			<PropertyList>
+																				<Property Name="BeginTrimOffset" Type="Real64" Value="5937.5"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="7425.66614031305"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Metronome - STYLISH - Drum" ID="{5DDEC691-E38C-46DC-9FB2-BDC999D6DB4D}"/>
+																			<PropertyCurveList>
+																				<PropertyCurve PropertyName="Highpass">
+																					<Curve Name="" ID="{B577D3F5-AD22-4F8A-A777-7A788029FECA}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>5.9375</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>7.42567</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Lowpass">
+																					<Curve Name="" ID="{3FD669A5-4A88-4C6E-A4F7-CC4E78215C28}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>5.9375</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>7.42567</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Volume">
+																					<Curve Name="" ID="{EB647E5F-9D69-4AFA-9BD3-3556CA84F584}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>5.9375</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>7.42567</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																			</PropertyCurveList>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Metronome - STYLISH - Drum" ID="{E23E26DD-2C00-4B2D-BF14-C21F173888A9}">
+																			<PropertyList>
+																				<Property Name="BeginTrimOffset" Type="Real64" Value="7937.5"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="8000"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Metronome - STYLISH - Drum" ID="{5DDEC691-E38C-46DC-9FB2-BDC999D6DB4D}"/>
+																			<PropertyCurveList>
+																				<PropertyCurve PropertyName="Highpass">
+																					<Curve Name="" ID="{EE37CFA4-2DDA-4853-B68D-AECE51C0761A}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>7.9375</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>8</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Lowpass">
+																					<Curve Name="" ID="{71C203C2-F683-49B3-8923-6C2F2F7BAEEC}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>7.9375</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>8</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Volume">
+																					<Curve Name="" ID="{69CE298C-93AF-4DB8-B505-DE94BD02F9DF}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>7.9375</XPos>
 																								<YPos>0</YPos>
 																								<Flags>5</Flags>
 																							</Point>
@@ -16051,6 +16347,63 @@
 																					</Curve>
 																				</PropertyCurve>
 																			</PropertyCurveList>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="clap" ID="{523FAA96-340E-444D-AEF6-DE86B53682C1}" ShortID="126082813">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="drums" ID="{4399B2B5-228B-4193-AADF-28BA47598E3A}">
+											<Language>SFX</Language>
+											<AudioFile>drums.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="559533606"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{24CCB656-8A30-45A1-B260-5573695CE759}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{BA7544B5-7540-44FE-A270-FA4E3A1DE44F}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="drums" ID="{87556F59-92E6-4E86-BECE-015D132B7383}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="8197.91666666667"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="drums" ID="{4399B2B5-228B-4193-AADF-28BA47598E3A}"/>
 																		</MusicClip>
 																	</Local>
 																</Reference>

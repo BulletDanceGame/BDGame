@@ -1251,7 +1251,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{E71E3516-B5BE-0586-C44B-2B9F94D14036}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{011BBC4C-98C1-6E0A-2D17-3EE316EAA351}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1295,8 +1295,8 @@
 				<Bus Id="1288875315" Name="Cutscene 2 - Panda Meeting (general sfx)"/>
 				<Bus Id="1387464807" Name="Cutscene 1 - Player - Phase 3 to End (voicelines)"/>
 				<Bus Id="1404235302" Name="BossDamage 2 - dunno"/>
+				<Bus Id="1521187885" Name="StartGame"/>
 				<Bus Id="1718386686" Name="Title Screen - Main Menu"/>
-				<Bus Id="1720323967" Name="Score Screen"/>
 				<Bus Id="1727977662" Name="Cutscene 1 - Player - Phase 2 to 3 (voicelines)"/>
 				<Bus Id="1728450328" Name="Actions - Dynamic"/>
 				<Bus Id="1751930956" Name="Boss - Level 1 - Critter"/>
@@ -1374,6 +1374,7 @@
 				<GameParameter Id="2338745114" Name="PLAYBACK_SPEED____MusicBossBattle"/>
 				<GameParameter Id="2354416159" Name="VOLUME____BossDamage"/>
 				<GameParameter Id="2372433550" Name="BITCRUSHER_MUSIC"/>
+				<GameParameter Id="2483386915" Name="VOLUME____MenuMusic"/>
 				<GameParameter Id="2572028521" Name="VOLUME____CutsceneSFX__Voicelines"/>
 				<GameParameter Id="2586495989" Name="VOLUME____MusicBossBattle"/>
 				<GameParameter Id="2589375093" Name="VOLUME____PlayerMovement__Dash"/>
@@ -1449,7 +1450,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1598298728" Type="User" Language="SFX" Hash="{70EADE1F-04ED-16EB-E633-CCD050CC4B46}">
+		<SoundBank Id="1598298728" Type="User" Language="SFX" Hash="{6095C5C9-26FC-58A3-CA2A-3ED494E85DC6}">
 			<ShortName>Music_Menu</ShortName>
 			<Path>Music_Menu.bnk</Path>
 			<Media>
@@ -1460,6 +1461,14 @@
 				<File Id="506300702" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Env1-VegZone1_Part2.wav</ShortName>
 					<CachePath>SFX/Env1-VegZone1_Part2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="559533606" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>drums.wav</ShortName>
+					<CachePath>SFX/drums_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="591076483" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>clap.wav</ShortName>
+					<CachePath>SFX/clap_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="932650277" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Metronome - STYLISH - Bass.wav</ShortName>
@@ -1477,6 +1486,8 @@
 			<Events>
 				<Event Id="1423041522" Name="CalibrationMusic____PLAY" DurationType="OneShot" DurationMin="8.4375" DurationMax="8.4375">
 					<MediaRefs>
+						<MediaRef Id="559533606"/>
+						<MediaRef Id="591076483"/>
 						<MediaRef Id="932650277"/>
 						<MediaRef Id="949009166"/>
 						<MediaRef Id="978023960"/>
@@ -1918,7 +1929,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{4C2C293A-CC51-556E-F3F0-0D85731C6FAC}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{9BC58DF4-CC1A-7879-B6A7-2ADD7E979353}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -2025,6 +2036,10 @@
 				<File Id="181758528" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>squeak7.wav</ShortName>
 					<CachePath>SFX/squeak7_10C4C929.wem</CachePath>
+				</File>
+				<File Id="182175587" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>startGameSfx.wav</ShortName>
+					<CachePath>SFX/startGameSfx_10C4C929.wem</CachePath>
 				</File>
 				<File Id="194222179" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>boss - level 3 - final3.wav</ShortName>
@@ -3018,6 +3033,29 @@
 						<MediaRef Id="974159532"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2952062683" Name="Play_NavConfirm" DurationType="OneShot" DurationMin="3.2041667" DurationMax="3.2098124">
+					<MediaRefs>
+						<MediaRef Id="221904516"/>
+						<MediaRef Id="382319614"/>
+						<MediaRef Id="414529116"/>
+						<MediaRef Id="644993846"/>
+						<MediaRef Id="729477149"/>
+						<MediaRef Id="751518378"/>
+						<MediaRef Id="770489537"/>
+						<MediaRef Id="870027938"/>
+						<MediaRef Id="1038857255"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3540793454" Name="Play_NavUpDown" DurationType="OneShot" DurationMin="1.8546736" DurationMax="1.8546736">
+					<MediaRefs>
+						<MediaRef Id="236322927"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1444205428" Name="Play_StartGame" DurationType="OneShot" DurationMin="3.7901876" DurationMax="3.7901876">
+					<MediaRefs>
+						<MediaRef Id="182175587"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="4096913669" Name="Player__AreYouKiddingMe____PLAY" DurationType="OneShot" DurationMin="1.8258958" DurationMax="1.8258958">
 					<MediaRefs>
 						<MediaRef Id="388566452"/>
@@ -3208,5 +3246,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{93BDC135-253B-F26B-F429-13D40F8BDD3C}</FileHash>
+	<FileHash>{F4492CBD-C3A4-EDB0-6E3C-3611DF9B5D48}</FileHash>
 </SoundBanksInfo>

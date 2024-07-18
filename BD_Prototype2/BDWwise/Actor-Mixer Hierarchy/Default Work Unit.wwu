@@ -20131,7 +20131,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Score Screen" ID="{EF151769-08CE-42A3-96FB-45009BBAA545}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+											<ObjectRef Name="1 Menu SFX" ID="{8DAAC1FB-771F-4521-AB87-FC2536819240}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -20766,7 +20766,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Score Screen" ID="{EF151769-08CE-42A3-96FB-45009BBAA545}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+											<ObjectRef Name="1 Menu SFX" ID="{8DAAC1FB-771F-4521-AB87-FC2536819240}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -20958,6 +20958,13 @@
 						<Folder Name="General" ID="{109F1034-7394-4474-9B4B-B6019ADEBD84}" ShortID="378348439">
 							<ChildrenList>
 								<BlendContainer Name="NavConfirm" ID="{52915FF3-F9A6-41A7-B8D4-29E0FCABF2CA}" ShortID="155546992">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -20966,8 +20973,1061 @@
 											<ObjectRef Name="Navigation" ID="{965ABECB-B6BC-4037-95AE-BFCF450BD1B9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<BlendContainer Name="DeflectionHit - Perfect" ID="{BB733697-303D-4FD6-ABCB-5A253A9926F7}" ShortID="1058903598">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>27</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="hits" ID="{D7B87C37-E977-45B8-ADB4-04D48D587A9A}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="VoiceOver" ID="{0BF7C12C-14FB-4E30-B675-836F3BB53B5F}" ShortID="543247208">
+													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>-96</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="DeflectVoiceOver1" ID="{4C32CF99-75DC-4758-9498-76C07706FFB8}" ShortID="345501012">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-4</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="DeflectVoiceOver1" ID="{63AF469B-D9FB-4C06-A998-C20823A82DA8}">
+																	<Language>SFX</Language>
+																	<AudioFile>DeflectVoiceOver1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="770489537"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="DeflectVoiceOver1" ID="{63AF469B-D9FB-4C06-A998-C20823A82DA8}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="DeflectVoiceOver2" ID="{E9468A7D-6FB5-4273-88D3-E1792ABAE4CF}" ShortID="918840768">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="DeflectVoiceOver2" ID="{E090D428-CFB5-4077-990B-E5C9DC0D874D}">
+																	<Language>SFX</Language>
+																	<AudioFile>DeflectVoiceOver2.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="414529116"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="DeflectVoiceOver2" ID="{E090D428-CFB5-4077-990B-E5C9DC0D874D}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="DeflectVoiceOver4" ID="{6F7D93C9-A58E-48EA-80FD-B4439AAB2A3F}" ShortID="165883955">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="DeflectVoiceOver4" ID="{FB70EB86-813A-475F-9734-9685F24919BB}">
+																	<Language>SFX</Language>
+																	<AudioFile>DeflectVoiceOver4.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="751518378"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="DeflectVoiceOver4" ID="{FB70EB86-813A-475F-9734-9685F24919BB}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="DeflectVoiceOver5" ID="{07DBBFA0-886E-47AC-B096-53C906BCC7D7}" ShortID="530370529">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="DeflectVoiceOver5" ID="{E97A8902-2D34-4B77-9728-641B709BFE19}">
+																	<Language>SFX</Language>
+																	<AudioFile>DeflectVoiceOver5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1038857255"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="DeflectVoiceOver5" ID="{E97A8902-2D34-4B77-9728-641B709BFE19}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty" ID="{784FCAA9-FD18-4DD5-BD72-01BF280DA3C5}" ShortID="16223696">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="DeflectVoiceOver5" ID="{353B230E-6EEF-4594-A649-9AF22EF9F135}">
+																	<Language>SFX</Language>
+																	<AudioFile>DeflectVoiceOver5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1038857255"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="DeflectVoiceOver5" ID="{353B230E-6EEF-4594-A649-9AF22EF9F135}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_01" ID="{4FE678F8-0101-4F41-8BFD-463B442BAF1B}" ShortID="1011884276">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="DeflectVoiceOver5" ID="{171566A5-B626-4851-A388-5932CD7C85B2}">
+																	<Language>SFX</Language>
+																	<AudioFile>DeflectVoiceOver5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1038857255"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="DeflectVoiceOver5" ID="{171566A5-B626-4851-A388-5932CD7C85B2}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_02" ID="{178D325F-B3A3-44B4-A103-3C536D33BA1E}" ShortID="640981269">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="DeflectVoiceOver5" ID="{8CCB0449-8179-45E0-855C-37F451C8D278}">
+																	<Language>SFX</Language>
+																	<AudioFile>DeflectVoiceOver5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1038857255"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="DeflectVoiceOver5" ID="{8CCB0449-8179-45E0-855C-37F451C8D278}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_03" ID="{BD94C19F-A667-435E-BFE5-5E1AC0E0549E}" ShortID="602142787">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="DeflectVoiceOver5" ID="{3A06B7A3-3A43-43E7-95AF-6FCE117F8B95}">
+																	<Language>SFX</Language>
+																	<AudioFile>DeflectVoiceOver5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1038857255"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="DeflectVoiceOver5" ID="{3A06B7A3-3A43-43E7-95AF-6FCE117F8B95}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_04" ID="{50178B66-2F0F-4F59-8341-5F49C7F0EF32}" ShortID="92177724">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="DeflectVoiceOver5" ID="{5DEE94F1-AFD5-4711-A67F-D7283AB5CC25}">
+																	<Language>SFX</Language>
+																	<AudioFile>DeflectVoiceOver5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1038857255"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="DeflectVoiceOver5" ID="{5DEE94F1-AFD5-4711-A67F-D7283AB5CC25}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_05" ID="{3507E109-55E2-4DBE-855F-97A0B6D82DD1}" ShortID="430738803">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="DeflectVoiceOver5" ID="{FF6D55B3-98D0-4A85-95DE-E4320863EE7A}">
+																	<Language>SFX</Language>
+																	<AudioFile>DeflectVoiceOver5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1038857255"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="DeflectVoiceOver5" ID="{FF6D55B3-98D0-4A85-95DE-E4320863EE7A}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_06" ID="{CDBA9542-2754-4473-9721-DB28ABB10F16}" ShortID="565705462">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="DeflectVoiceOver5" ID="{7396C7A0-126D-4CF6-A8E3-D67FE097022B}">
+																	<Language>SFX</Language>
+																	<AudioFile>DeflectVoiceOver5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1038857255"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="DeflectVoiceOver5" ID="{7396C7A0-126D-4CF6-A8E3-D67FE097022B}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_07" ID="{4E4E86A6-D74C-472F-8E92-6CBEE946135A}" ShortID="741120759">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="DeflectVoiceOver5" ID="{CF334B20-5DF2-47BC-A635-99DE76B00C06}">
+																	<Language>SFX</Language>
+																	<AudioFile>DeflectVoiceOver5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1038857255"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="DeflectVoiceOver5" ID="{CF334B20-5DF2-47BC-A635-99DE76B00C06}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_08" ID="{EE95E0C4-3A94-4B25-BD2C-6101F2891F96}" ShortID="561529435">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="DeflectVoiceOver5" ID="{D4F638A3-EFF4-444F-9B78-C149977EFC59}">
+																	<Language>SFX</Language>
+																	<AudioFile>DeflectVoiceOver5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1038857255"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="DeflectVoiceOver5" ID="{D4F638A3-EFF4-444F-9B78-C149977EFC59}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_09" ID="{61D45CD5-6D4C-4CC3-8616-7DE93A50C097}" ShortID="1045579652">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="DeflectVoiceOver5" ID="{F97EB991-6F82-46E6-A703-B9D43BD8C15F}">
+																	<Language>SFX</Language>
+																	<AudioFile>DeflectVoiceOver5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1038857255"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="DeflectVoiceOver5" ID="{F97EB991-6F82-46E6-A703-B9D43BD8C15F}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_10" ID="{93D94311-F03B-440A-81A6-63D0485968C5}" ShortID="522161655">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="DeflectVoiceOver5" ID="{43060461-F16F-444E-B8DA-E75328FE21BE}">
+																	<Language>SFX</Language>
+																	<AudioFile>DeflectVoiceOver5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1038857255"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="DeflectVoiceOver5" ID="{43060461-F16F-444E-B8DA-E75328FE21BE}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_11" ID="{FDD9AEB4-017F-425D-B4A3-2C8671DC67AA}" ShortID="140898273">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="DeflectVoiceOver5" ID="{23D2039F-FD1F-41B0-A46D-EFFC2D38B6BB}">
+																	<Language>SFX</Language>
+																	<AudioFile>DeflectVoiceOver5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1038857255"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="DeflectVoiceOver5" ID="{23D2039F-FD1F-41B0-A46D-EFFC2D38B6BB}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_12" ID="{304682EA-0EAD-46D6-9FF2-378669C8A405}" ShortID="815842944">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="DeflectVoiceOver5" ID="{0810F8D5-63E3-4F7C-ACF6-0D02CB4DBD37}">
+																	<Language>SFX</Language>
+																	<AudioFile>DeflectVoiceOver5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1038857255"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="DeflectVoiceOver5" ID="{0810F8D5-63E3-4F7C-ACF6-0D02CB4DBD37}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_13" ID="{AE81EF23-3CDD-4484-B760-F11218634D7A}" ShortID="413093348">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="DeflectVoiceOver5" ID="{5B002808-BD1A-4358-84B1-FA74AFBE57CA}">
+																	<Language>SFX</Language>
+																	<AudioFile>DeflectVoiceOver5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1038857255"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="DeflectVoiceOver5" ID="{5B002808-BD1A-4358-84B1-FA74AFBE57CA}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<BlendContainer Name="Bass" ID="{9139A9E6-5B6E-4390-AB62-FBF464B34F56}" ShortID="383099396">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="hurtHighSFX" ID="{C709FF95-968E-4F24-A541-7A27CEBC0913}" ShortID="793179112">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>580</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-4</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Dynamic" ID="{7FE5CDA2-16AE-4E17-A00E-BBABAEFF1BD9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="hurtHighSFX" ID="{7B8C24C5-EDA7-4791-9C06-3994CBBF5612}">
+																	<Language>SFX</Language>
+																	<AudioFile>hurtHighSFX.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="729477149"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="hurtHighSFX" ID="{7B8C24C5-EDA7-4791-9C06-3994CBBF5612}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Deflection-BaseV2" ID="{1C9F1BA4-6E33-445B-908F-C1774EA34C85}" ShortID="256043046">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>3</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Dynamic" ID="{7FE5CDA2-16AE-4E17-A00E-BBABAEFF1BD9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Deflection-BaseV2" ID="{72160C35-E81E-42AE-8676-864C7C31C86E}">
+																	<Language>SFX</Language>
+																	<AudioFile>Deflection-BaseV2.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="644993846"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Deflection-BaseV2" ID="{72160C35-E81E-42AE-8676-864C7C31C86E}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</BlendContainer>
+												<RandomSequenceContainer Name="RandomizedElement" ID="{8739DD3E-BF00-4E5E-8887-44FD2CA4AEBD}" ShortID="75175558">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Deflection2-Element2-mono" ID="{258084DB-EAD3-45BF-B598-3CCAA57A004C}" ShortID="147454708">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-5</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Dynamic" ID="{7FE5CDA2-16AE-4E17-A00E-BBABAEFF1BD9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Deflection2-Element2-mono" ID="{C27ECB45-2C18-48BB-8D2C-D451C932AFAB}">
+																	<Language>SFX</Language>
+																	<AudioFile>Deflection2-Element2-mono.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="382319614"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Deflection2-Element2-mono" ID="{C27ECB45-2C18-48BB-8D2C-D451C932AFAB}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Deflection3-Element2-mono" ID="{474C3983-0866-4860-B8DF-47A28FECE6D1}" ShortID="343531229">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-4</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Dynamic" ID="{7FE5CDA2-16AE-4E17-A00E-BBABAEFF1BD9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Deflection3-Element2-mono" ID="{60B59D2D-313B-43B3-B620-023D0D065A71}">
+																	<Language>SFX</Language>
+																	<AudioFile>Deflection3-Element2-mono.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="221904516"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Deflection3-Element2-mono" ID="{60B59D2D-313B-43B3-B620-023D0D065A71}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Deflection1-Element2-mono" ID="{E9AC1BD3-94D0-4A6E-84D9-8576ADCA7962}" ShortID="976369808">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Dynamic" ID="{7FE5CDA2-16AE-4E17-A00E-BBABAEFF1BD9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Deflection1-Element2-mono" ID="{1B5CAE71-AA5A-4773-8114-C2D2B3F28827}">
+																	<Language>SFX</Language>
+																	<AudioFile>Deflection1-Element2-mono.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="870027938"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Deflection1-Element2-mono" ID="{1B5CAE71-AA5A-4773-8114-C2D2B3F28827}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<BlendContainer Name="PitchElements" ID="{1E168EB4-E8CC-4A4B-96FF-FA3F815ADAA2}" ShortID="515530630">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="PitchElementHigh" ID="{AC4ECA58-0856-4E9F-B0E5-E859C9F4FA10}" ShortID="198628292">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>4</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Dynamic" ID="{7FE5CDA2-16AE-4E17-A00E-BBABAEFF1BD9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Deflection-Element1V1" ID="{B95C5DF0-14B6-4D77-9588-ECE04F0F81FD}">
+																	<Language>SFX</Language>
+																	<AudioFile>Deflection-Element1V1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="517872094"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists>
+																<ObjectList Name="RTPC">
+																	<Reference>
+																		<Local>
+																			<RTPC Name="" ID="{712B65D9-A0DD-4D97-B98E-FA4B20DE160B}" ShortID="875244694">
+																				<PropertyList>
+																					<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																				</PropertyList>
+																				<ReferenceList>
+																					<Reference Name="ControlInput">
+																						<ObjectRef Name="PITCH_SPECIAL____DeflectionElement__PitchElement" ID="{F980AFC9-113F-4A2F-8837-AAEADDD0995C}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+																					</Reference>
+																					<Reference Name="Curve">
+																						<Custom>
+																							<Curve Name="" ID="{31956421-1D2C-4C9C-990A-A4B51B3842E0}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="65537"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>100</XPos>
+																										<YPos>1100</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</Custom>
+																					</Reference>
+																				</ReferenceList>
+																			</RTPC>
+																		</Local>
+																	</Reference>
+																	<Reference>
+																		<Local>
+																			<RTPC Name="" ID="{CA6DAE5D-D989-4D2E-85BD-AB72A4ED05C6}" ShortID="360950853">
+																				<PropertyList>
+																					<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																				</PropertyList>
+																				<ReferenceList>
+																					<Reference Name="ControlInput">
+																						<ObjectRef Name="VOLUME_SPECIAL____DeflectionElement__PitchElement" ID="{042993B2-C310-4FAD-A070-8958D8CDBC22}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+																					</Reference>
+																					<Reference Name="Curve">
+																						<Custom>
+																							<Curve Name="" ID="{82D658AA-EE45-4215-B681-522E02797BB4}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>1.17758</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>100</XPos>
+																										<YPos>3.6068</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</Custom>
+																					</Reference>
+																				</ReferenceList>
+																			</RTPC>
+																		</Local>
+																	</Reference>
+																</ObjectList>
+															</ObjectLists>
+															<ActiveSourceList>
+																<ActiveSource Name="Deflection-Element1V1" ID="{B95C5DF0-14B6-4D77-9588-ECE04F0F81FD}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="PitchElementLow" ID="{297233B3-EAAB-4608-83A6-C81AE662EDFA}" ShortID="350432387">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>5</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Dynamic" ID="{7FE5CDA2-16AE-4E17-A00E-BBABAEFF1BD9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Deflection-Element1V1" ID="{655F2E77-F5C6-43DF-AF1F-5A73A0403C7E}">
+																	<Language>SFX</Language>
+																	<AudioFile>Deflection-Element1V1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="517872094"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists>
+																<ObjectList Name="RTPC">
+																	<Reference>
+																		<Local>
+																			<RTPC Name="" ID="{C37508D0-329B-4B02-B80C-C9BCD8F25413}" ShortID="660037156">
+																				<PropertyList>
+																					<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																				</PropertyList>
+																				<ReferenceList>
+																					<Reference Name="ControlInput">
+																						<ObjectRef Name="PITCH_SPECIAL____DeflectionElement__PitchElement" ID="{F980AFC9-113F-4A2F-8837-AAEADDD0995C}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+																					</Reference>
+																					<Reference Name="Curve">
+																						<Custom>
+																							<Curve Name="" ID="{04ECE37F-F3A3-44E9-AF0D-77EF9742439E}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="65537"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>-1115</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>100</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</Custom>
+																					</Reference>
+																				</ReferenceList>
+																			</RTPC>
+																		</Local>
+																	</Reference>
+																	<Reference>
+																		<Local>
+																			<RTPC Name="" ID="{A9D31F7F-0D44-46D5-B623-FE08B88E7D73}" ShortID="383341543">
+																				<PropertyList>
+																					<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																				</PropertyList>
+																				<ReferenceList>
+																					<Reference Name="ControlInput">
+																						<ObjectRef Name="VOLUME_SPECIAL____DeflectionElement__PitchElement" ID="{042993B2-C310-4FAD-A070-8958D8CDBC22}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+																					</Reference>
+																					<Reference Name="Curve">
+																						<Custom>
+																							<Curve Name="" ID="{20772385-3447-4F1B-A715-ABB755CED7A3}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>-11.8692</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>100</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</Custom>
+																					</Reference>
+																				</ReferenceList>
+																			</RTPC>
+																		</Local>
+																	</Reference>
+																</ObjectList>
+															</ObjectLists>
+															<ActiveSourceList>
+																<ActiveSource Name="Deflection-Element1V1" ID="{655F2E77-F5C6-43DF-AF1F-5A73A0403C7E}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</BlendContainer>
+											</ChildrenList>
+										</BlendContainer>
+									</ChildrenList>
 								</BlendContainer>
 								<BlendContainer Name="NavUpDown" ID="{FB7A11A5-046C-43EE-8A56-BF64B74DA37E}" ShortID="66394904">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -20976,6 +22036,150 @@
 											<ObjectRef Name="Navigation" ID="{965ABECB-B6BC-4037-95AE-BFCF450BD1B9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<BlendContainer Name="DeflectionSwing - Good - Long" ID="{164DC01D-4A78-460A-9E05-B8E85149622E}" ShortID="301437459">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>57</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Actions - Dynamic" ID="{7FE5CDA2-16AE-4E17-A00E-BBABAEFF1BD9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="swing" ID="{273EC201-5D0C-4794-B3B8-051E0D1EF5E4}" ShortID="179669699">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>520</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>6</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="swing" ID="{F6394473-14A7-4A94-88C4-680D631B28E6}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0205123748330128"/>
+																<Property Name="FadeInShape" Type="int16" Value="8"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.040699156414708"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>swing.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="53975821"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="swing" ID="{F6394473-14A7-4A94-88C4-680D631B28E6}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="swing_01" ID="{28B9F740-E419-4F83-B6EB-6AB13CD36035}" ShortID="983536268">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>520</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="swing" ID="{CB2B3472-FD8D-42F5-A649-48AB0F339CB4}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.00761201607674373"/>
+																<Property Name="FadeInShape" Type="int16" Value="7"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>swing.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="236322927"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="swing" ID="{CB2B3472-FD8D-42F5-A649-48AB0F339CB4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+									</ChildrenList>
+								</BlendContainer>
+								<BlendContainer Name="StartGame" ID="{2CF04CC0-5EAA-4040-9CC2-2C9E05E09362}" ShortID="582903899">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>14</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="StartGame" ID="{13AC955D-8FDA-4542-AD95-44ED7B1EC9B8}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="startGameSfx" ID="{06E8782E-D4AB-4C82-A73E-7F23BE6F120B}" ShortID="457705645">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="startGameSfx" ID="{A7617204-DE25-4CBA-A720-FCE51222E252}">
+													<Language>SFX</Language>
+													<AudioFile>startGameSfx.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="182175587"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="startGameSfx" ID="{A7617204-DE25-4CBA-A720-FCE51222E252}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
 								</BlendContainer>
 							</ChildrenList>
 						</Folder>

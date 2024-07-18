@@ -32,6 +32,23 @@ public class GeneralSounds : SoundContainer
 
     // -- SFX Implementation -- //
 
+    public void MenuNavigation()
+    {
+        PlaySFX("MenuNav");
+    }
+
+    public void MenuConfirmation()
+    {
+        PlaySFX("MenuConfirm");
+    }
+
+    public void StartGame()
+    {
+        RTPCManager.Instance.SetValue("VOLUME____MenuMusic", 0, 0.0000000001f, RTPCManager.CurveTypes.high_curve, 0.00000001f, RTPCManager.CurveTypes.high_curve, 4);
+        PlaySFX("StartGame");
+    }
+
+
 }
 
 }

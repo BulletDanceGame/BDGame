@@ -663,6 +663,45 @@
 											</CustomState>
 										</CustomStateList>
 									</StateInfo>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{7B4AD051-CAB7-4DEE-8A94-C41AB3B40D88}" ShortID="970575762">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="VOLUME____MenuMusic" ID="{FC1B4786-DAFA-4A52-A0E7-2AB004EA9CDC}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{1EB4C985-5D21-44AC-8110-D07A0295A52F}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>200</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 								</Bus>
 								<Bus Name="5 Cutscene" ID="{94BCD480-E12E-4AD1-AA98-0217E9AE0C82}">
 									<ChildrenList>
@@ -847,9 +886,16 @@
 						<Bus Name="SFX" ID="{0FADADC0-0728-488A-9A8B-DC2FA52FF6C7}">
 							<ChildrenList>
 								<Bus Name="1 Menu SFX" ID="{8DAAC1FB-771F-4521-AB87-FC2536819240}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ChildrenList>
-										<Bus Name="Score Screen" ID="{EF151769-08CE-42A3-96FB-45009BBAA545}"/>
 										<Bus Name="Navigation" ID="{965ABECB-B6BC-4037-95AE-BFCF450BD1B9}"/>
+										<Bus Name="StartGame" ID="{13AC955D-8FDA-4542-AD95-44ED7B1EC9B8}"/>
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="RTPC">

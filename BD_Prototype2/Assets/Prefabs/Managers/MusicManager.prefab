@@ -51,7 +51,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bankPrefab: {fileID: 3104029878528795601, guid: f43efdc2d6a75df41a5520d37a14c720, type: 3}
-  maxFPS: 120
   speedingUpInCutscene: 0
   startSequence: 0
 --- !u!114 &4091262668931117989
@@ -85,11 +84,15 @@ MonoBehaviour:
     scene: 2
   - prefab: {fileID: 7432618145986152337, guid: 8f77ada9f38303549a0e8ab563c63b38, type: 3}
     scene: 1
+  - prefab: {fileID: 7432618145986152337, guid: 8f77ada9f38303549a0e8ab563c63b38, type: 3}
+    scene: 3
   _levelSpecificSounds:
   - prefab: {fileID: 7432618145986152337, guid: 96f6dfdc5530c384f985a71814f38da4, type: 3}
     scene: 2
   - prefab: {fileID: 7432618145986152337, guid: 96f6dfdc5530c384f985a71814f38da4, type: 3}
     scene: 1
+  - prefab: {fileID: 7432618145986152337, guid: 96f6dfdc5530c384f985a71814f38da4, type: 3}
+    scene: 3
 --- !u!114 &308352580021181608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,7 +105,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: add72fcc51373b943873cd3a58ca8480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sfxGroups: []
+  _sfxGroups:
+  - groupName: Menu
+    sfxList:
+    - sfxName: MenuNav
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 97cab78e8851f7a499a78669c0bbb283, type: 2}
+    - sfxName: MenuConfirm
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: ccb60dea86de26446a835324221b5d83, type: 2}
+    - sfxName: StartGame
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: eb1376596b1756f40a7b98e72cf72d95, type: 2}
 --- !u!114 &6288742186564758769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,8 +294,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59534e61cb9c2944aee28677e960b08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetVisuals: 0
-  offsetSwing: 0
-  offsetDash: 0
   _perfectHitTime: 0.06
   _okayHitTime: 0.12
