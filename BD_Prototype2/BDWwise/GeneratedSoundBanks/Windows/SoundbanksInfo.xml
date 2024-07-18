@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="690988688" Type="User" Language="SFX" Hash="{6748B21B-8A43-B381-3B92-C61833AE8607}">
+		<SoundBank Id="690988688" Type="User" Language="SFX" Hash="{F0C34CB1-5A68-0570-B884-C68A77C140FD}">
 			<ShortName>Music_Critter_Phase2</ShortName>
 			<Path>Music_Critter_Phase2.bnk</Path>
 			<Media>
@@ -70,8 +70,12 @@
 					</MediaRefs>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="2338745114" Name="PLAYBACK_SPEED____MusicBossBattle"/>
+				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="690988691" Type="User" Language="SFX" Hash="{1E9FA884-FC68-FC80-848D-19A618EE8046}">
+		<SoundBank Id="690988691" Type="User" Language="SFX" Hash="{152EAF3D-1504-3FF4-C09E-E7480ABC7135}">
 			<ShortName>Music_Critter_Phase1</ShortName>
 			<Path>Music_Critter_Phase1.bnk</Path>
 			<Media>
@@ -135,9 +139,11 @@
 			</Events>
 			<GameParameters>
 				<GameParameter Id="1103547191" Name="PLAYBACK_SPEED____CutsceneMusic"/>
+				<GameParameter Id="2338745114" Name="PLAYBACK_SPEED____MusicBossBattle"/>
+				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="723507619" Type="User" Language="SFX" Hash="{52A4CA2D-E4DF-E5C5-3DB5-36349552DB94}">
+		<SoundBank Id="723507619" Type="User" Language="SFX" Hash="{2ED5B896-D3E6-2236-1FB7-4300E389E509}">
 			<ShortName>Music_YokaiHunter_Phase3AndOutro</ShortName>
 			<Path>Music_YokaiHunter_Phase3AndOutro.bnk</Path>
 			<Media>
@@ -1245,7 +1251,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{BE022494-13DD-90A5-C244-F5BD8CCF9063}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{CBA4C3AD-EDFC-9625-BE7E-DBD6EE489F93}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1315,6 +1321,7 @@
 				<Bus Id="2921596526" Name="3 Boss SFX"/>
 				<Bus Id="2964830718" Name="BossDamage 1 - Yokai Hunter"/>
 				<Bus Id="2987232379" Name="Cutscene 2 - Panda Meeting (music)"/>
+				<Bus Id="3062523241" Name="Miss"/>
 				<Bus Id="3092587493" Name="Pause"/>
 				<Bus Id="3151285457" Name="Text Voices"/>
 				<Bus Id="3163449996" Name="Level 1 - Facility"/>
@@ -1361,6 +1368,8 @@
 				<GameParameter Id="1900464655" Name="HIGH_PASS____MusicEnvBattle"/>
 				<GameParameter Id="1961333805" Name="HIGH_PASS____CutsceneSFX__General__AudibleOnSpeedUp"/>
 				<GameParameter Id="2055487999" Name="LOW_PASS____BossDamage"/>
+				<GameParameter Id="2173245496" Name="LOW_PASS____PlayerMiss"/>
+				<GameParameter Id="2254145532" Name="VOLUME____PlayerActions__PlayerMiss"/>
 				<GameParameter Id="2268627958" Name="VOLUME____PlayerActions__Dynamic"/>
 				<GameParameter Id="2338745114" Name="PLAYBACK_SPEED____MusicBossBattle"/>
 				<GameParameter Id="2354416159" Name="VOLUME____BossDamage"/>
@@ -1688,7 +1697,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2856222710" Type="User" Language="SFX" Hash="{542D2650-85BD-2FC6-E513-2A5456488283}">
+		<SoundBank Id="2856222710" Type="User" Language="SFX" Hash="{6CF8D25E-DB82-DAB4-7603-2BD66DC0B47E}">
 			<ShortName>Music_YokaiHunter_Phase1And2</ShortName>
 			<Path>Music_YokaiHunter_Phase1And2.bnk</Path>
 			<Media>
@@ -1909,7 +1918,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{5C5ED8C8-F2D8-77CD-C357-C2E3C8FA5182}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{4C2C293A-CC51-556E-F3F0-0D85731C6FAC}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -2905,19 +2914,6 @@
 							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="3193947170" Id="779278001"/>
-							<MediaRefs>
-								<MediaRef Id="256605194"/>
-								<MediaRef Id="644651350"/>
-								<MediaRef Id="906866579"/>
-							</MediaRefs>
-							<PluginRefs>
-								<ShareSets>
-									<PluginRef Id="1724990773"/>
-								</ShareSets>
-							</PluginRefs>
-						</SwitchContainer>
-						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="3193947170" Id="748895195"/>
 							<MediaRefs>
 								<MediaRef Id="729477149"/>
@@ -2955,6 +2951,18 @@
 					<MediaRefs>
 						<MediaRef Id="932775821"/>
 					</MediaRefs>
+				</Event>
+				<Event Id="1172822028" Name="Play_Death" DurationType="OneShot" DurationMin="6.5291667" DurationMax="6.5291667">
+					<MediaRefs>
+						<MediaRef Id="256605194"/>
+						<MediaRef Id="644651350"/>
+						<MediaRef Id="906866579"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1724990773"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="4112303910" Name="Play_DeflectionSwing___Good___Long" DurationType="OneShot" DurationMin="1.8546736" DurationMax="1.8546736">
 					<MediaRefs>
@@ -3200,5 +3208,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1B0893BF-2B9A-B593-EA1E-959C1F4D75CC}</FileHash>
+	<FileHash>{B0AD7125-C946-9404-CB8D-49665B07B687}</FileHash>
 </SoundBanksInfo>
