@@ -33,7 +33,6 @@ public class SpriteAnimator : BulletDance.Animation.Animator
         return _animator.GetInteger("State");
     }
 
-
     // -- Animator wrapper -- //
 
     protected override int GetLayerIndex(string layerName)

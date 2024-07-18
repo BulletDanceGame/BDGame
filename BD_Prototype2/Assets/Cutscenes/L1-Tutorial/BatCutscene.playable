@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Markers:
     m_Objects:
     - {fileID: 8219525364266515616}
+    - {fileID: -121057655003513370}
 --- !u!114 &-8758528214132273795
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -444,6 +445,22 @@ MonoBehaviour:
   spriteSet: 0
   faceTowardsBoss: 0
   animState: 0
+--- !u!114 &-121057655003513370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 4.583333333333333
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: be3c889e08ed8cf40b6b8b5873279adf, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,7 +480,6 @@ MonoBehaviour:
   - {fileID: -6032092211921924450}
   - {fileID: -9131961219339093611}
   - {fileID: 474041757561316945}
-  - {fileID: 3951558972923039100}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
@@ -770,30 +786,6 @@ MonoBehaviour:
     m_DisplayName: PlayerClip
   m_Markers:
     m_Objects: []
---- !u!114 &3951558972923039100
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21bf7f712d84d26478ebe6a299f21738, type: 3}
-  m_Name: Activation Track
-  m_EditorClassIdentifier: 
-  m_Version: 3
-  m_AnimClip: {fileID: 0}
-  m_Locked: 0
-  m_Muted: 0
-  m_CustomPlayableFullTypename: 
-  m_Curves: {fileID: 0}
-  m_Parent: {fileID: 11400000}
-  m_Children: []
-  m_Clips: []
-  m_Markers:
-    m_Objects: []
-  m_PostPlaybackState: 3
 --- !u!114 &4703353417375896260
 MonoBehaviour:
   m_ObjectHideFlags: 1

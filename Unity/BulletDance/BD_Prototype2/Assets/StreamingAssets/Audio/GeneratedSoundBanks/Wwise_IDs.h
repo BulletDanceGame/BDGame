@@ -336,6 +336,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID BITCRUSHER_MUSIC = 2372433550U;
         static const AkUniqueID HIGH_PASS____CUTSCENEMUSIC = 721861396U;
         static const AkUniqueID HIGH_PASS____CUTSCENESFX__GENERAL__AUDIBLEONSPEEDUP = 1961333805U;
         static const AkUniqueID HIGH_PASS____CUTSCENESFX__VOICELINES = 86843165U;
@@ -425,6 +426,7 @@ namespace AK
         static const AkUniqueID BOSSDAMAGE = 1794747505U;
         static const AkUniqueID BOSSDAMAGE_1___YOKAI_HUNTER = 2964830718U;
         static const AkUniqueID BOSSDAMAGE_2___DUNNO = 1404235302U;
+        static const AkUniqueID BROTHER = 556599689U;
         static const AkUniqueID CALIBRATION = 2230992643U;
         static const AkUniqueID CUTSCENE_1___BOSS___INTRO__VOICELINES_ = 371542505U;
         static const AkUniqueID CUTSCENE_1___BOSS___PHASE_1_TO_2__VOICELINES_ = 3852475470U;

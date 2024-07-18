@@ -24,9 +24,26 @@
 										<Value>5</Value>
 									</ValueList>
 								</Property>
+								<Property Name="BypassEffect1" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
+									<ObjectRef Name="New_Tremolo_01" ID="{49483AE6-9275-4466-9153-BAA3F9B07CD2}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+								</Reference>
+								<Reference Name="Effect1" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
+									<ObjectRef Name="New_Pitch_Shifter_03" ID="{DC4BD07F-6155-438B-A4C1-2EE08553F006}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+								</Reference>
+								<Reference Name="Effect2" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+									<ObjectRef Name="New_Guitar_Distortion" ID="{B78C129C-6964-46BB-A56D-9D02D2235F16}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+								</Reference>
+							</ReferenceList>
 							<ChildrenList>
 								<Bus Name="2 Boss Battle" ID="{2F69F7A8-5125-4AAF-9AED-35FDF5F769E2}">
+									<ReferenceList/>
 									<ChildrenList>
 										<Bus Name="Boss - Level 1 - Yokai Hunter" ID="{6FCC059D-F515-4FF7-8F1B-29D45E6A8A41}"/>
 										<Bus Name="Boss - Level 2" ID="{0B3F4DCF-F6F2-48A3-A047-F6E1D2550FC7}"/>
@@ -738,6 +755,120 @@
 									</ObjectLists>
 								</Bus>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{CCBE139A-1A0F-44EB-BBCF-63D9373895CA}" ShortID="460399435">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="BITCRUSHER_MUSIC" ID="{7827654D-5C48-4B02-8396-FD72C1219B9A}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{CCC2CCCA-769D-4FFC-B2E7-613B431B83CA}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>30.98009</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{45716496-FB0F-483D-A9B7-0C3847A3C6CA}" ShortID="1036176365">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Highpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="BITCRUSHER_MUSIC" ID="{7827654D-5C48-4B02-8396-FD72C1219B9A}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{8ED8CF8A-8A9B-46C4-9C32-BB3F2651F446}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>2</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>30.29872</XPos>
+																		<YPos>82</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>100</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{9BBF81FD-34A2-48B9-8B60-B5CEF69B5572}" ShortID="166228079">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="BITCRUSHER_MUSIC" ID="{7827654D-5C48-4B02-8396-FD72C1219B9A}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{A7C38E4B-DBC4-42FB-8C65-0E71E2DD8808}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-0.08848</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</Bus>
 						<Bus Name="SFX" ID="{0FADADC0-0728-488A-9A8B-DC2FA52FF6C7}">
 							<ChildrenList>
@@ -1253,7 +1384,24 @@
 													</PropertyList>
 													<ChildrenList>
 														<Bus Name="swings" ID="{C62F61CC-FE4C-4C56-B2F1-3FC7FBB53EE2}"/>
-														<Bus Name="hits" ID="{D7B87C37-E977-45B8-ADB4-04D48D587A9A}"/>
+														<Bus Name="hits" ID="{D7B87C37-E977-45B8-ADB4-04D48D587A9A}">
+															<ChildrenList>
+																<Bus Name="brother" ID="{38E58761-124C-4683-8713-3F0CDDBDDB76}">
+																	<PropertyList>
+																		<Property Name="BusVolume" Type="Real64">
+																			<ValueList>
+																				<Value>-1</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="Volume" Type="Real64">
+																			<ValueList>
+																				<Value>-96</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																</Bus>
+															</ChildrenList>
+														</Bus>
 													</ChildrenList>
 													<StateInfo>
 														<StateGroupList>

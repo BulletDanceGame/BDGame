@@ -78,17 +78,19 @@ public class UnitAnimationHandler : MonoBehaviour
     }
 
     public event Action <int> OnSpecialStart;
-        public event Action OnSpecialStop;
+    public event Action OnSpecialStop;
 
-        public void SpecialStart(int actionState)
-        {
-            OnSpecialStart?.Invoke(actionState);
-        }
-
-        public void SpecialStop()
-        {
-            OnSpecialStop?.Invoke();
-        }
+    public void SpecialStart(int actionState)
+    {
+        OnSpecialStart?.Invoke(actionState);
     }
+
+    public void SpecialStop()
+    {
+        OnSpecialStop?.Invoke();
+    }
+
+
+}
 
 }

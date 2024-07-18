@@ -5,7 +5,7 @@ public class PlayerTriggerBox : MonoBehaviour
     [SerializeField] private HurtEffect _hurtEffect;
     [SerializeField] private float _burnBeat;
 
-    private bool _isBurning;
+    private bool _isImmune = false, _isBurning;
     private float _burnTracker;
 
 
@@ -13,17 +13,42 @@ public class PlayerTriggerBox : MonoBehaviour
     {
         EventManager.Instance.OnBeat += BurnDamage;
         EventManager.Instance.OnPlayerDamage += NormalHurtFeedback;
+        EventManager.Instance.OnPlayerLastHit += ImmuneStart;
+        EventManager.Instance.OnCutsceneStart += ImmunityStart;
+        EventManager.Instance.OnCutsceneEnd   += ImmunityEnd;
     }
 
     void OnDestroy()
     {
         EventManager.Instance.OnBeat -= BurnDamage;
         EventManager.Instance.OnPlayerDamage -= NormalHurtFeedback;
+        EventManager.Instance.OnPlayerLastHit -= ImmuneStart;
+        EventManager.Instance.OnCutsceneStart -= ImmunityStart;
+        EventManager.Instance.OnCutsceneEnd   -= ImmunityEnd;
     }
+
+    void ImmuneStart(BeatTiming beatTiming)
+    {
+        if(beatTiming != BeatTiming.BAD)
+            _isImmune = true;
+    }
+
+    void ImmunityStart(string none)
+    {
+        _isImmune = true;
+    }
+
+    void ImmunityEnd()
+    {
+        _isImmune = false;
+    }
+
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (_isImmune) return;
+
         if (collision.gameObject.tag == "Bullet")
         {
             Bullet bullet = collision.GetComponent<Bullet>();
@@ -38,8 +63,12 @@ public class PlayerTriggerBox : MonoBehaviour
         }
     }
 
+
     void BurnDamage(int beat)
     {
+        if (_isImmune) return;
+
+
         if (beat % 2 != 0)
             return;
 
@@ -64,6 +93,8 @@ public class PlayerTriggerBox : MonoBehaviour
 
     public void NormalHurtFeedback(float damage)
     {
+        if (_isImmune) return;
+
         if(damage <= 1) return;
         if(Player.currentHealth <= 0) return;
 

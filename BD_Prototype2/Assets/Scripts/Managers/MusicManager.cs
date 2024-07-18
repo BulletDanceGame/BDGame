@@ -1,3 +1,4 @@
+using BulletDance.Audio;
 using System.Collections;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ public class MusicManager : MonoBehaviour
 
     //startupwait
     private bool _waitBeforeStartUp = true;
-    private float _waitBeforeStartUpTimer = 2f;
+    private float _waitBeforeStartUpTimer;
     private bool _startUpIsInvoked = false;
 
 
@@ -39,8 +40,8 @@ public class MusicManager : MonoBehaviour
 
 
     public double secondsPerBeat { get; set; }
-    public int maxFPS;
-    private double framesPerBeat; //this should theoretically be able to be a int, but as its made by 2 doubles its a double for safety
+    public int maxFPS { get; set; }
+    private double framesPerBeat; //this should theoretically be able to be a int, but its calculated by 2 doubles so its a double for safety
     private int currentFramerate;
     private double currentFrameDuration = 0;
     private int currentFrameDelay;
@@ -73,38 +74,35 @@ public class MusicManager : MonoBehaviour
 
     bool isDestroyed = false;
 
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            Instantiate(bankPrefab, transform);
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-
-    }
-
-
     bool checkFrames = false;
     int frames = 0;
 
 
-    double t;
+    private void Awake()
+    {
+
+        Instance = this;
+        Instantiate(bankPrefab, transform);
+
+    }
+
+
+    private void Start()
+    {
+        _isActive = false;
+        _waitBeforeStartUpTimer = 2f;
+        _waitBeforeStartUp = true;
+        _startUpIsInvoked = false;
+
+        maxFPS = SaveSystem.Instance.GetData().maxFPS;
+
+        EventManager.Instance.DisableInput();
+    }
+
+
+
     private void Update()
     {
-        if (checkFrames)
-        {
-            frames++;
-        }
-
-
         //start up timer
         if (_waitBeforeStartUp)
         {
@@ -117,15 +115,33 @@ public class MusicManager : MonoBehaviour
                 {
                     SwitchMusic(TransitionType.INSTANT_SWITCH);
                 }
+
+                if (LoadingScreen.Instance)
+                {
+                    LoadingScreen.Instance.UnCover();
+                }
+
+                EventManager.Instance.EnabableInput();
+            }
+            else
+            {
+                return;
             }
         }
+
+
 
         if (_isSoftlyStopping)
         {
             SoftlyStopping();
         }
 
-                
+
+        if (checkFrames)
+        {
+            frames++;
+        }
+
 
         if (playing)
         {
@@ -163,7 +179,6 @@ public class MusicManager : MonoBehaviour
                 totalDelay -= frameDuration * f;
             }
 
-            t = songTimer;
 
             //on beat (or endTime-frames before beat on the last one of a song)
             if (songTimer >= timedBeats * framesPerBeat - endTime)
@@ -211,7 +226,7 @@ public class MusicManager : MonoBehaviour
     }
 
 
-
+    
 
 
     //transitions

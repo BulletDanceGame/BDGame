@@ -112,13 +112,16 @@ public class EnemyHealthController : MonoBehaviour
         StartCoroutine(ResetHit());
 
         //Take damage && do phase change (see TakeDamage method)
-        MinionTakeDamage(bullet.GetDamage());
+        MinionTakeDamage(bullet.GetDamage(), bullet.GetDir());
         bullet.Deactivate();
         Instantiate(_hitParticle, this.transform.position, Quaternion.identity);
 
+
+
+        
     }
 
-    public void MinionTakeDamage(float damage)
+    public void MinionTakeDamage(float damage, Vector2 dir = default)
     {
         // -- Take Damage-- //
         _currentHealthAmount -= damage;
@@ -128,6 +131,18 @@ public class EnemyHealthController : MonoBehaviour
         {
             Death();
         }
+        else
+        {
+            //critter pushback
+            //i know this is bad code sorry sorry
+            if (GetComponent<CritterMovelist>())
+            {
+                StartCoroutine(GetComponent<CritterMovelist>().Pushback(dir));
+            }
+        }
+
+
+        
     }
 
 

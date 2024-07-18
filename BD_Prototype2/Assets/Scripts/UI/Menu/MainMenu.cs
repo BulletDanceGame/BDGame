@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class MainMenu : MonoBehaviour
 {
@@ -29,6 +30,19 @@ public class MainMenu : MonoBehaviour
     public GameObject optionsScreen;
     public GameObject scoreScreen;
 
+
+    private void OnEnable()
+    {
+        EventManager.Instance.OnEnableInput += Activate;
+        EventManager.Instance.OnDisableInput += Deactivate;
+    }
+
+
+    private void OnDisable()
+    {
+        EventManager.Instance.OnEnableInput -= Activate;
+        EventManager.Instance.OnDisableInput -= Deactivate;
+    }
 
 
     // -- Init, Sub & unsub events, Update -- //
@@ -78,7 +92,18 @@ public class MainMenu : MonoBehaviour
                 break;
         }
     }
-    
+
+
+    void Activate()
+    {
+        mainScreen.SetActive(true);
+    }
+
+    void Deactivate()
+    {
+        mainScreen.SetActive(false);
+    }
+
 
     // -- Input -- //
     void ChangeToGAMEPAD()

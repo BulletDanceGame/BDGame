@@ -51,8 +51,12 @@ public class Player : MonoBehaviour
     {
         EventManager.Instance.OnPlayerDamage += TakeDamage;
         EventManager.Instance.OnPlayerHeal   += Heal;
+        EventManager.Instance.OnEnableInput += ActivateInput;
+        EventManager.Instance.OnDisableInput += DeactivateInput;
 
         EventManager.Instance.OnPlayerSuccessBeatHit += SuccessBeatCheck;
+
+        EventManager.Instance.OnCutsceneStart += ResetFail;
     }
 
 
@@ -61,7 +65,12 @@ public class Player : MonoBehaviour
         EventManager.Instance.OnPlayerDamage -= TakeDamage;
         EventManager.Instance.OnPlayerHeal   -= Heal;
 
+        EventManager.Instance.OnEnableInput -= ActivateInput;
+        EventManager.Instance.OnDisableInput -= DeactivateInput;
+
         EventManager.Instance.OnPlayerSuccessBeatHit -= SuccessBeatCheck;
+
+        EventManager.Instance.OnCutsceneStart -= ResetFail;
     }
 
     private void Start()
@@ -83,7 +92,21 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.O))
             EventManager.Instance.PlayerHeal(startingHealth);
     }
-    #endif
+#endif
+
+
+
+    void ActivateInput()
+    {
+        GetComponent<PlayerInput>().ActivateInput();
+    }
+
+    void DeactivateInput()
+    {
+        GetComponent<PlayerInput>().DeactivateInput();
+    }
+
+
 
     void OnInteract(InputValue value)
     {
@@ -129,7 +152,7 @@ public class Player : MonoBehaviour
         Fails++;
 
         if(routine != null)
-        StopCoroutine(routine);
+            StopCoroutine(routine);
 
         routine = StartCoroutine(ResetFails());
 
@@ -151,6 +174,17 @@ public class Player : MonoBehaviour
         EventManager.Instance.PlayerNormal();
         AkSoundEngine.SetState("FailLevel", "First");
     }
+
+    void ResetFail(string none)
+    {
+        if(routine != null) StopCoroutine(routine);
+
+        playerFailState = PlayerFailState.NORMAL;
+        Fails = 0;
+        EventManager.Instance.PlayerNormal();
+        AkSoundEngine.SetState("FailLevel", "First"); 
+    }
+
 
     // -- Player health -- //
     public void Heal(float healAmount)

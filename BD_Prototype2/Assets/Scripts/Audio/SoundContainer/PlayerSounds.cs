@@ -1,4 +1,5 @@
 using UnityEngine;
+using static RTPCManager;
 
 namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
 {
@@ -87,6 +88,8 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
             if (hitTiming == BeatTiming.BAD)
             {
                 PlaySFX("Dash Miss");
+                RTPCManager.Instance.SetValue("BITCRUSHER_MUSIC", 20, 0.00000000001f, RTPCManager.CurveTypes.high_curve,
+                                                                      0.00000000001f, RTPCManager.CurveTypes.high_curve, 0.3f);
                 return;
             }
             PlaySFX("Dash");
@@ -97,14 +100,16 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
         {
             //set cooldown rtpcs
             PlaySFX("Cooldown Start");
+            RTPCManager.Instance.SetValue("BITCRUSHER_MUSIC", 50, 0.00000000001f, RTPCManager.CurveTypes.high_curve,
+                                                                             2.5f, RTPCManager.CurveTypes.high_curve, 0);
             RTPCManager.Instance.SetValue("LOW_PASS____MusicBossBattle", 80, 0.00000000001f, RTPCManager.CurveTypes.high_curve,
-                                                                             6f, RTPCManager.CurveTypes.high_curve, 0);
+                                                                             2.5f, RTPCManager.CurveTypes.high_curve, 0);
             RTPCManager.Instance.SetValue("LOW_PASS____MusicEnvBattle", 80, 0.00000000001f, RTPCManager.CurveTypes.high_curve,
-                                                                            6f, RTPCManager.CurveTypes.high_curve, 0);
+                                                                            2.5f, RTPCManager.CurveTypes.high_curve, 0);
             RTPCManager.Instance.SetValue("LOW_PASS____MusicEnvRoaming", 80, 0.00000000001f, RTPCManager.CurveTypes.high_curve,
-                                                                            6f, RTPCManager.CurveTypes.high_curve, 0);
+                                                                            2.5f, RTPCManager.CurveTypes.high_curve, 0);
             RTPCManager.Instance.SetValue("LOW_PASS____PlayerDamage", 80, 0.00000000001f, RTPCManager.CurveTypes.high_curve,
-                                                                          6f, RTPCManager.CurveTypes.high_curve, 0);
+                                                                          2.5f, RTPCManager.CurveTypes.high_curve, 0);
             }
         
         void PlayerSlowMo()
@@ -150,7 +155,10 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
                     PlaySFX("Swing Good"); break;
 
                 case BeatTiming.BAD:
-                    PlaySFX("Swing Miss"); break;
+                    PlaySFX("Swing Miss");
+                    RTPCManager.Instance.SetValue("BITCRUSHER_MUSIC", 20, 0.00000000001f, RTPCManager.CurveTypes.high_curve,
+                                                                      0.00000000001f, RTPCManager.CurveTypes.high_curve, 0.3f);
+                    break;
 
                 default: break;
             }
@@ -180,6 +188,8 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
 
                 case BeatTiming.BAD:
                     PlaySFX("Hit Miss", 1f, null);
+                    RTPCManager.Instance.SetValue("BITCRUSHER_MUSIC", 20, 0.00000000001f, RTPCManager.CurveTypes.high_curve,
+                                                                      0.00000000001f, RTPCManager.CurveTypes.high_curve, 0.3f);
                     ResetHitPitch();
                     break;
 

@@ -26,13 +26,17 @@ public class Options : MonoBehaviour
     public void BackToMenu()
     {
 
+        SaveSystem.Instance.Save();
         menu.BackFromOptions();
     }
 
+
     public void BackToPauseMenu()
     {
+        SaveSystem.Instance.Save();
         pause.BackFromOptions();
     }
+
 
     public void ChangeFPS(int dir)
     {
@@ -40,6 +44,8 @@ public class Options : MonoBehaviour
         fps += dir * 10;
         fps = Mathf.Clamp(fps, 30, 300);
         MusicManager.Instance.maxFPS = fps;
+
+        SaveSystem.Instance.GetData().maxFPS = fps;
 
         _fpsText.text = fps.ToString();
 

@@ -23,8 +23,20 @@ public class EventManager : MonoBehaviour
 
 
     //Input events -------------------------------------------------------------------------
+    public event Action OnEnableInput;
+    public event Action OnDisableInput;
     public event Action OnGamePadUsed;
     public event Action OnKeyBoardAndMouseUsed;
+
+    public void EnabableInput()
+    {
+        OnEnableInput?.Invoke();
+    }
+
+    public void DisableInput()
+    {
+        OnDisableInput?.Invoke();
+    }
 
     public void GamepadUsed()
     {

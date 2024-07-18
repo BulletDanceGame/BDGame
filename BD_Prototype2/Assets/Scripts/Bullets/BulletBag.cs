@@ -24,11 +24,14 @@ public class BulletBag : MonoBehaviour
     public List<GameObject> firegroovyBulletList;
     public List<GameObject> explosiveBulletList;
 
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;
-
         SpawnBullets(BulletTypes.normal, 15);
         SpawnBullets(BulletTypes.unhittable, 15);
         SpawnBullets(BulletTypes.fire, 10);
@@ -72,7 +75,7 @@ public class BulletBag : MonoBehaviour
             }
         }
 
-        print("Couldn't Find a Bullet");
+        Debug.LogWarning("Couldn't Find a Bullet");
         return null;
     }
 
@@ -183,11 +186,16 @@ public class BulletBag : MonoBehaviour
 
     public void DeactivateAllBullets()
     {
-        foreach (GameObject bullet in allBullets)
+        for (int i = 0; i < allBullets.Count; i++) 
         {
-            if (bullet.activeSelf)
+            if (allBullets[i] == null)
             {
-                bullet.GetComponent<Bullet>().Deactivate();
+                allBullets.RemoveAt(i);
+                i--;
+            }
+            else if (allBullets[i].activeSelf)
+            {
+                allBullets[i].GetComponent<Bullet>().Deactivate();
             }
         }
     }
