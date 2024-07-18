@@ -101,6 +101,7 @@ public class WinScreen : MonoBehaviour
             GradeText.text = "F";
         }
 
+        
 
     }
 
@@ -111,6 +112,13 @@ public class WinScreen : MonoBehaviour
         GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
         GameObject.Find("Player").GetComponent<PlayerMovement>().canDash = false;
         GameObject.Find("DirectionController").GetComponent<PlayerSwing>().SwingActivated = false;
+
+        UnitManager.Instance.GetPlayer().GetComponent<Player>().pauseActions = true;
+    }
+
+    private void OnDisable()
+    {
+        UnitManager.Instance.GetPlayer().GetComponent<Player>().pauseActions = false;
     }
 
     void OnDestroy()

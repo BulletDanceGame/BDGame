@@ -145,6 +145,7 @@ public class Player : MonoBehaviour
     void OnPause()
     {
         EventManager.Instance.PausePressed();
+        pauseActions = !pauseActions;
     }
 
     void pauseAction(string s)
