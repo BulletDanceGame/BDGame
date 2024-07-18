@@ -901,6 +901,31 @@
 													</ValueList>
 												</Property>
 											</PropertyList>
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo>
+														<StateGroupRef Name="DynamicGameplaySFX" ID="{23BD67D6-CC05-4E96-BF91-AAA8A3556B9A}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="Low" ID="{B43AB07F-3B1D-4639-8A8F-C659818EF341}"/>
+														<CustomState Name="" ID="{6CBC764D-83C5-4A69-B1F3-398EB847F1B4}" ShortID="603492555"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="High" ID="{9F183746-773F-4929-AD42-8D9FC806F20C}"/>
+														<CustomState Name="" ID="{479B56A0-D9D6-4589-91C2-7B4344BB4A36}" ShortID="604075520">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="1"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Mid" ID="{F921FE99-8712-4EB4-B23A-01D478DB3D64}"/>
+														<CustomState Name="" ID="{DFE8A322-39C1-47E8-9D8F-B4561B05049C}" ShortID="150068887"/>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
 											<ObjectLists>
 												<ObjectList Name="RTPC">
 													<Reference>
@@ -1488,6 +1513,35 @@
 											</ChildrenList>
 										</Bus>
 										<Bus Name="Miss" ID="{8E6FD7F9-C49C-4D96-B76D-3E76B2317324}">
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo>
+														<StateGroupRef Name="DynamicGameplaySFX" ID="{23BD67D6-CC05-4E96-BF91-AAA8A3556B9A}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="Low" ID="{B43AB07F-3B1D-4639-8A8F-C659818EF341}"/>
+														<CustomState Name="" ID="{3AB39DA0-49C0-432E-84CB-3CB11ACD38A6}" ShortID="699788922"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="High" ID="{9F183746-773F-4929-AD42-8D9FC806F20C}"/>
+														<CustomState Name="" ID="{53AE4701-F074-4E06-931A-F7018249D475}" ShortID="202566600">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="2"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Mid" ID="{F921FE99-8712-4EB4-B23A-01D478DB3D64}"/>
+														<CustomState Name="" ID="{70F6177E-C5FC-41B2-BE1D-4B41F74B9D25}" ShortID="421537490">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="1"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
 											<ObjectLists>
 												<ObjectList Name="RTPC">
 													<Reference>
