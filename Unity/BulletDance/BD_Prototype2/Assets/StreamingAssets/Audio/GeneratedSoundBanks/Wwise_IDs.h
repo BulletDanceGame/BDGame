@@ -93,7 +93,6 @@ namespace AK
         static const AkUniqueID DOOROPEN__GENERAL____PLAY = 1844327691U;
         static const AkUniqueID DOORSHUT__BOSSFIGHT____PLAY = 4042000294U;
         static const AkUniqueID DOORSHUT__GENERAL____PLAY = 139608649U;
-        static const AkUniqueID ENCOUNTER__CRITTER___PLAY = 1524639014U;
         static const AkUniqueID ENCOUNTER__YOKAIHUNTER____PLAY = 2784513199U;
         static const AkUniqueID FIREDAMAGE____PLAY = 174412296U;
         static const AkUniqueID HAIRFLAIRDOWN____PLAY = 4067194311U;
@@ -126,6 +125,7 @@ namespace AK
         static const AkUniqueID PLAY_CRITTER_PHASE_2___PART_4 = 2016799275U;
         static const AkUniqueID PLAY_DEATH = 1172822028U;
         static const AkUniqueID PLAY_DEFLECTIONSWING___GOOD___LONG = 4112303910U;
+        static const AkUniqueID PLAY_ENCOUNTER___CRITTER = 1369454011U;
         static const AkUniqueID PLAY_ENV1_TEST3_TRIPPLETS_INTRO = 2403173065U;
         static const AkUniqueID PLAY_ENV1_TEST3_TRIPPLETS_PART1 = 160122243U;
         static const AkUniqueID PLAY_ENV1_TEST3_TRIPPLETS_PART2 = 160122240U;

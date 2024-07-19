@@ -309,17 +309,6 @@
 								<Folder Name="Level 2 - dunno" ID="{34343654-7443-409F-B5BD-66694B796038}" ShortID="407042079"/>
 								<Folder Name="Level 1 - Critter" ID="{839DC44A-D714-4670-A250-47E3C3AD4957}" ShortID="660471841">
 									<ChildrenList>
-										<Event Name="Encounter__Critter___PLAY" ID="{AB22A001-F983-4985-8492-78C0A2AD2AAE}">
-											<ChildrenList>
-												<Action Name="" ID="{31FD3F35-CA6B-456C-9C55-50210CC94252}" ShortID="898624095">
-													<ReferenceList>
-														<Reference Name="Target">
-															<ObjectRef Name="Encounter - Critter" ID="{A645D788-3EB8-4188-93DE-DECA2998523D}" WorkUnitID="{8DC8C28D-1D78-418C-87BD-2BF45D3F8625}"/>
-														</Reference>
-													</ReferenceList>
-												</Action>
-											</ChildrenList>
-										</Event>
 										<Folder Name="Phase 1" ID="{C59C3D7D-CAE0-461B-B014-5C3B83D7F7D9}" ShortID="791090611">
 											<ChildrenList>
 												<Event Name="CPhase1__Part5____PLAY" ID="{115B872D-665F-4F90-BA12-58C021B91890}">
@@ -3114,6 +3103,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="NavUpDown" ID="{FB7A11A5-046C-43EE-8A56-BF64B74DA37E}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Encounter___Critter" ID="{8CDD7488-402B-413A-90AF-5976E3993D66}">
+					<ChildrenList>
+						<Action Name="" ID="{550EF7F6-5BE5-49B4-A3C9-06AE8A0C7CF8}" ShortID="532467055">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Encounter - Critter" ID="{A645D788-3EB8-4188-93DE-DECA2998523D}" WorkUnitID="{8DC8C28D-1D78-418C-87BD-2BF45D3F8625}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
