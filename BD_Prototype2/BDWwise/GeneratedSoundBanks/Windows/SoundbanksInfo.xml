@@ -75,7 +75,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="690988691" Type="User" Language="SFX" Hash="{152EAF3D-1504-3FF4-C09E-E7480ABC7135}">
+		<SoundBank Id="690988691" Type="User" Language="SFX" Hash="{2EC0758E-57B9-2C77-2A2B-9B036707C537}">
 			<ShortName>Music_Critter_Phase1</ShortName>
 			<Path>Music_Critter_Phase1.bnk</Path>
 			<Media>
@@ -83,9 +83,9 @@
 					<ShortName>Critter Phase 1 Part 1 BPM150.wav</ShortName>
 					<CachePath>SFX/Critter Phase 1 Part 1 BPM150_D79FB2B7.wem</CachePath>
 				</File>
-				<File Id="565872709" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Critter Intro BPM165.wav</ShortName>
-					<CachePath>SFX/Critter Intro BPM165_D79FB2B7.wem</CachePath>
+				<File Id="119532596" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Critter Intro v3.wav</ShortName>
+					<CachePath>SFX/Critter Intro v3_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="624591303" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Critter Phase 1 Part 3 BPM150.wav</ShortName>
@@ -126,14 +126,14 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="1964220686" Name="CPhase1__Part5____PLAY" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1524639014" Name="Encounter__Critter___PLAY" DurationType="OneShot" DurationMin="30.024622" DurationMax="30.024622">
-					<MediaRefs>
-						<MediaRef Id="565872709"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="3176132612" Name="Play_Critter_Phase_1_Part_4_BPM150" DurationType="OneShot" DurationMin="36.80417" DurationMax="36.80417">
 					<MediaRefs>
 						<MediaRef Id="1063857795"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1369454011" Name="Play_Encounter___Critter" DurationType="OneShot" DurationMin="38.396168" DurationMax="38.396168">
+					<MediaRefs>
+						<MediaRef Id="119532596"/>
 					</MediaRefs>
 				</Event>
 			</Events>
@@ -1450,7 +1450,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1598298728" Type="User" Language="SFX" Hash="{6095C5C9-26FC-58A3-CA2A-3ED494E85DC6}">
+		<SoundBank Id="1598298728" Type="User" Language="SFX" Hash="{DDD43054-E32D-A7CC-50BF-6E0D4FFEB2CE}">
 			<ShortName>Music_Menu</ShortName>
 			<Path>Music_Menu.bnk</Path>
 			<Media>
@@ -3246,5 +3246,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F8C8FABB-5093-005B-5DB7-B3F4D0A837E1}</FileHash>
+	<FileHash>{7B1ACF63-571D-75A1-3662-6D01202B7C0C}</FileHash>
 </SoundBanksInfo>
