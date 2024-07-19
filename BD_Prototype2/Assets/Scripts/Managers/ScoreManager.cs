@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
@@ -25,7 +26,7 @@ public class ScoreManager : MonoBehaviour
     public  int CurrentTimeScore { get; private set; }
 
     [SerializeField]
-    private int  _maxCombo = 4;
+    private int  _maxCombo = 10;
     public  int  ComboMulti { get; private set; }
     public  bool isMaxCombo { get { return ComboMulti >= _maxCombo; } }
 
@@ -34,9 +35,11 @@ public class ScoreManager : MonoBehaviour
 
 
     //Put reset score on some events (go to main menu, etc.)
-    void Start()
+    IEnumerator Start()
     {
         ResetScore();
+
+        yield return null;
 
         EventManager.Instance.OnUpdateTimer += DecreaseTimeBonus;
         EventManager.Instance.OnAddScore    += AddScore;

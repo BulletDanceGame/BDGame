@@ -124,6 +124,7 @@ namespace AK
         static const AkUniqueID PLAY_CRITTER_PHASE_2___PART_2 = 2016799277U;
         static const AkUniqueID PLAY_CRITTER_PHASE_2___PART_3 = 2016799276U;
         static const AkUniqueID PLAY_CRITTER_PHASE_2___PART_4 = 2016799275U;
+        static const AkUniqueID PLAY_DEATH = 1172822028U;
         static const AkUniqueID PLAY_DEFLECTIONSWING___GOOD___LONG = 4112303910U;
         static const AkUniqueID PLAY_ENV1_TEST3_TRIPPLETS_INTRO = 2403173065U;
         static const AkUniqueID PLAY_ENV1_TEST3_TRIPPLETS_PART1 = 160122243U;
@@ -181,7 +182,10 @@ namespace AK
         static const AkUniqueID PLAY_LAYER1_ENVIRONMENT_PART4__BPM150_ = 166161648U;
         static const AkUniqueID PLAY_MISSED_DASH = 2503464396U;
         static const AkUniqueID PLAY_MOVING_TO_THE_SIDE = 2755497806U;
+        static const AkUniqueID PLAY_NAVCONFIRM = 2952062683U;
+        static const AkUniqueID PLAY_NAVUPDOWN = 3540793454U;
         static const AkUniqueID PLAY_PAUSE_MUSIC = 1496939652U;
+        static const AkUniqueID PLAY_STARTGAME = 1444205428U;
         static const AkUniqueID PLAY_TRAINING___INTRO = 588830433U;
         static const AkUniqueID PLAY_TRAINING___PART_1 = 4026880622U;
         static const AkUniqueID PLAY_TRAINING___PART_2 = 4026880621U;
@@ -353,6 +357,7 @@ namespace AK
         static const AkUniqueID LOW_PASS____PLAYERACTIONS__DYNAMIC = 3837119958U;
         static const AkUniqueID LOW_PASS____PLAYERACTIONS__SET = 4092666037U;
         static const AkUniqueID LOW_PASS____PLAYERDAMAGE = 1798584363U;
+        static const AkUniqueID LOW_PASS____PLAYERMISS = 2173245496U;
         static const AkUniqueID LOW_PASS____PLAYERMOVEMENT__DASH = 1402179413U;
         static const AkUniqueID LOW_PASS____PLAYERMOVEMENT__FOOTSTEPS = 311929018U;
         static const AkUniqueID PITCH____CUTSCENESFX__GENERAL__AUDIBLEONSPEEDUP = 2626398315U;
@@ -374,10 +379,12 @@ namespace AK
         static const AkUniqueID VOLUME____CUTSCENESFX__SPEEDUPCUTSCENE = 887424188U;
         static const AkUniqueID VOLUME____CUTSCENESFX__VOICELINES = 2572028521U;
         static const AkUniqueID VOLUME____MENU = 1736919294U;
+        static const AkUniqueID VOLUME____MENUMUSIC = 2483386915U;
         static const AkUniqueID VOLUME____MUSICBOSSBATTLE = 2586495989U;
         static const AkUniqueID VOLUME____MUSICENVBATTLE = 478062107U;
         static const AkUniqueID VOLUME____MUSICENVROAMING = 4091390158U;
         static const AkUniqueID VOLUME____PLAYERACTIONS__DYNAMIC = 2268627958U;
+        static const AkUniqueID VOLUME____PLAYERACTIONS__PLAYERMISS = 2254145532U;
         static const AkUniqueID VOLUME____PLAYERACTIONS__SET = 4208198357U;
         static const AkUniqueID VOLUME____PLAYERDAMAGE = 895741003U;
         static const AkUniqueID VOLUME____PLAYERMOVEMENT__DASH = 2589375093U;
@@ -460,14 +467,15 @@ namespace AK
         static const AkUniqueID LEVEL_1___TUTORIAL = 764174633U;
         static const AkUniqueID LEVEL_2 = 3420765919U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MISS = 3062523241U;
         static const AkUniqueID MOOOOSIC___ONLY_HERE_TO_LOOK_AT_FOR_WHEN_IMPLEMENTING_MAX_COMBO = 3522418091U;
         static const AkUniqueID MOVEMENT = 2129636626U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID NAVIGATION = 1082482811U;
         static const AkUniqueID OUTDOORS = 2730119150U;
         static const AkUniqueID PAUSE = 3092587493U;
-        static const AkUniqueID SCORE_SCREEN = 1720323967U;
         static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID STARTGAME = 1521187885U;
         static const AkUniqueID SWINGS = 2597336356U;
         static const AkUniqueID TEXT_VOICES = 3151285457U;
         static const AkUniqueID TITLE_SCREEN___MAIN_MENU = 1718386686U;

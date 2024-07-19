@@ -97,6 +97,7 @@ public class MainMenu : MonoBehaviour
     void Activate()
     {
         mainScreen.SetActive(true);
+        print("click?");
     }
 
     void Deactivate()
@@ -140,7 +141,9 @@ public class MainMenu : MonoBehaviour
         _eventDataCurrentPosition.position = _mousePosition;
         EventSystem.current.RaycastAll(_eventDataCurrentPosition, _raycastResults);
         if(_raycastResults.Count > 0)
+        {
             _currentSelection = _raycastResults[0].gameObject;
+        }
 
         _noRaycast = !(_raycastResults.Count > 0);
     }

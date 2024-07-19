@@ -144,6 +144,8 @@ public class Player : MonoBehaviour
 
     void OnPause()
     {
+        if(isDead)
+            return;
         EventManager.Instance.PausePressed();
         pauseActions = !pauseActions;
     }
