@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="690988688" Type="User" Language="SFX" Hash="{F0C34CB1-5A68-0570-B884-C68A77C140FD}">
+		<SoundBank Id="690988688" Type="User" Language="SFX" Hash="{B352CA81-319F-03C6-11DB-7B525AD533EA}">
 			<ShortName>Music_Critter_Phase2</ShortName>
 			<Path>Music_Critter_Phase2.bnk</Path>
 			<Media>
@@ -39,7 +39,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3076083233" Name="Play_Critter_Phase_2___Intro" DurationType="OneShot" DurationMin="20.412874" DurationMax="20.412874">
+				<Event Id="3076083233" Name="Play_Critter_Phase_2___Intro" DurationType="OneShot" DurationMin="16" DurationMax="16">
 					<MediaRefs>
 						<MediaRef Id="810047481"/>
 					</MediaRefs>
@@ -75,7 +75,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="690988691" Type="User" Language="SFX" Hash="{A086253D-4C97-6C35-983D-EEEF659D2983}">
+		<SoundBank Id="690988691" Type="User" Language="SFX" Hash="{1EFA8452-132A-067B-E527-19FFE16FD945}">
 			<ShortName>Music_Critter_Phase1</ShortName>
 			<Path>Music_Critter_Phase1.bnk</Path>
 			<Media>
@@ -268,7 +268,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{6E4FEA7D-50B7-9EE4-B15A-DEAF9517E874}">
+		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{314F6452-03E0-0499-AAB8-186E02235571}">
 			<ShortName>Music_TutorialAndLevel1_Part1</ShortName>
 			<Path>Music_TutorialAndLevel1_Part1.bnk</Path>
 			<Media>
@@ -1929,7 +1929,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{9BC58DF4-CC1A-7879-B6A7-2ADD7E979353}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{68FA06D2-CDD6-B375-BD7D-9796A4261B5B}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -2040,6 +2040,10 @@
 				<File Id="182175587" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>startGameSfx.wav</ShortName>
 					<CachePath>SFX/startGameSfx_10C4C929.wem</CachePath>
+				</File>
+				<File Id="192006357" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>forest ambience.wav</ShortName>
+					<CachePath>SFX/forest ambience_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="194222179" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>boss - level 3 - final3.wav</ShortName>
@@ -2887,6 +2891,11 @@
 						<MediaRef Id="765488241"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3486653050" Name="LoopableForestAmb____Play" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="192006357"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2122273249" Name="NormalDamage____PLAY" DurationType="OneShot" DurationMin="2.2" DurationMax="6.5291667">
 					<SwitchContainers>
 						<SwitchContainer>
@@ -3246,5 +3255,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C9B56BC0-283F-5528-4C46-F3A8E3DDA891}</FileHash>
+	<FileHash>{63B42890-9EDB-ADFD-5D6C-3BF43F37F133}</FileHash>
 </SoundBanksInfo>

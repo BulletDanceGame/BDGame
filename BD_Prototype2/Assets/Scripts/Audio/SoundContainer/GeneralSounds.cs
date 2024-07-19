@@ -48,6 +48,16 @@ public class GeneralSounds : SoundContainer
         PlaySFX("StartGame");
     }
 
+    public void StopAmbience(int sec)
+    {
+         //RTPCManager.Instance.SetValue("VOLUME____AmbientComponents", 0, sec, RTPCManager.CurveTypes.high_curve);
+    }
+
+    public void StartAmbience(int sec)
+    {
+         //RTPCManager.Instance.ResetValue("VOLUME____AmbientComponents", sec, RTPCManager.CurveTypes.high_curve);
+    }
+
 
 }
 

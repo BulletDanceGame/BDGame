@@ -367,7 +367,40 @@
 										</BlendContainer>
 									</ChildrenList>
 								</Folder>
-								<Folder Name="Outdoors" ID="{7FEAEB39-E5B5-44CD-B316-B7EABAC8F0CE}" ShortID="700955432"/>
+								<Folder Name="Outdoors" ID="{7FEAEB39-E5B5-44CD-B316-B7EABAC8F0CE}" ShortID="700955432">
+									<ChildrenList>
+										<Sound Name="forest ambience" ID="{7C9C7ECB-7424-49F4-9076-BF2EB5AD2D04}" ShortID="455176558">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Outdoors" ID="{2B48232B-62B3-4EDE-A3B0-65B629808212}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="forest ambience" ID="{9E9FF5D8-A089-443B-B38F-96DFFAFEDB61}">
+													<Language>SFX</Language>
+													<AudioFile>forest ambience.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="192006357"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="forest ambience" ID="{9E9FF5D8-A089-443B-B38F-96DFFAFEDB61}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</Folder>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Level 2" ID="{977A6E84-4535-4AD7-8A72-808D969BE8FA}" ShortID="911451029"/>

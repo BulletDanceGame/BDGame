@@ -99,6 +99,7 @@ namespace AK
         static const AkUniqueID HAIRFLAIRUP____PLAY = 231322120U;
         static const AkUniqueID LASTBULLETIMPACT__OFFIGHT____PLAY = 3031745690U;
         static const AkUniqueID LASTBULLETIMPACT__OFPHASE____PLAY = 2369949805U;
+        static const AkUniqueID LOOPABLEFORESTAMB____PLAY = 3486653050U;
         static const AkUniqueID NORMALDAMAGE____PLAY = 2122273249U;
         static const AkUniqueID NOSTAMINA____PLAY = 2278158929U;
         static const AkUniqueID OUTRO____PLAY = 594215984U;
