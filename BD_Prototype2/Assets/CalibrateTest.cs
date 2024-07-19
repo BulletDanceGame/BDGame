@@ -16,7 +16,7 @@ public class CalibrateTest : MonoBehaviour
     private double secondsPerBeat = .0;
 
     private double averageDelay = .0;
-    private double combinedDelay = .0;
+    private List<double> delays = new List<double>();
     private int delayHitCounter = 0;
 
     [SerializeField] private Animator anim;
@@ -29,7 +29,7 @@ public class CalibrateTest : MonoBehaviour
     GameObject nextBall = null;
 
     public GameObject resetButton;
-    public GameObject redoText;
+    public TextMeshProUGUI redoText;
 
     private void OnEnable()
     {
@@ -71,7 +71,6 @@ public class CalibrateTest : MonoBehaviour
             //do this once somewhere instead, have it as an event when switching songs?, just keep it a constant fit for the menu music?
             //*2 cause this DOESNT check for the 8th notes
             secondsPerBeat = MusicManager.Instance.secondsPerBeat * 2;
-            print("what " + secondsPerBeat);
 
             //ball
             particles.transform.position = currentBall.transform.position;
@@ -87,7 +86,24 @@ public class CalibrateTest : MonoBehaviour
 
             //average
             delayHitCounter++;
-            combinedDelay += delay;
+            if (delayHitCounter == 5)
+            {
+                delayHitCounter--;
+
+                Destroy(delayMarkers[0]);
+                delayMarkers.RemoveAt(0);
+
+                delays.RemoveAt(0);
+
+            }
+
+
+            delays.Add(delay);
+            double combinedDelay = 0;
+            foreach (double de in delays)
+            {
+                combinedDelay += de;
+            }
             averageDelay = combinedDelay / delayHitCounter;
             averageDelayText.text = "Average: " + Math.Round(averageDelay * 1000) + "ms";
 
@@ -98,7 +114,46 @@ public class CalibrateTest : MonoBehaviour
 
 
             resetButton.SetActive(true);
-            redoText.SetActive(true);
+
+
+            if (delayHitCounter > 2)
+            {
+                //Consistency
+                double min = 1000, max = -1000;
+                foreach (double de in delays)
+                {
+                    min = Math.Min(min, de);
+                    max = Math.Max(max, de);
+                }
+                double dist = max - min;
+                string text = "";
+                if (dist > 0.15)
+                {
+                    text = "INCONSISTENT, this game will be difficult for you";
+                }
+                else if (dist > 0.075)
+                {
+                    text = "Inconsistent, try and hit to the 4th beat";
+                }
+                else
+                {
+                    if (Math.Abs(averageDelay) > 0.13)
+                    {
+                        text = "Too far OFF beat, you will miss each beat in game. REDO THE CALIBRATION!";
+                    }
+                    else if(Math.Abs(averageDelay) > 0.06)
+                    {
+                        text = "Quite far off beat, consider redoing the calibration";
+                    }
+                    else
+                    {
+                        text = "Nice! You are Good to Go!";
+                    }
+                }
+                redoText.text = text;
+            }
+            
+
         }
     }
 
@@ -143,7 +198,7 @@ public class CalibrateTest : MonoBehaviour
     {
         delayHitCounter = 0;
         averageDelay = 0;
-        combinedDelay = 0;
+        delays.Clear();
 
         //markers
         for (int i = 0; i < delayMarkers.Count; i++)
@@ -156,7 +211,7 @@ public class CalibrateTest : MonoBehaviour
 
 
         resetButton.SetActive(false);
-        redoText.SetActive(false);
+        redoText.text = "";
     }
 
 }

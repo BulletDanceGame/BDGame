@@ -26,8 +26,9 @@ public class CalibrateInput : MonoBehaviour
     private double secondsPerBeat = .0;
 
     private double averageDelay = .0;
-    private List<double> delays = new List<double>();
+    private double[] delays = new double[4];
     private int delayHitCounter = 0;
+    private bool all4;
 
 
     [SerializeField] private Animator anim;
@@ -43,17 +44,20 @@ public class CalibrateInput : MonoBehaviour
 
 
     [SerializeField] private TextMeshProUGUI[] triesTexts;
+    [SerializeField] private TextMeshProUGUI[] triesArrows;
     [SerializeField] private TextMeshProUGUI averageText;
     [SerializeField] private TextMeshProUGUI consistencyText;
 
-
+    [SerializeField] private Gradient textColor;
 
     private void OnEnable()
     {
         EventManager.Instance.OnBeatForVisuals += PlayAnimations;
 
-
-        offsetText.text = "Offset: " + GetOffset() * 1000 + "ms";
+        double offset = GetOffset();
+        string late = (offset >= 0) ? "LATE" : "EARLY";
+        offsetText.text = Math.Abs(offset * 1000) + "ms " + late;
+        offsetText.color = textColor.Evaluate((float)offset * 5f + 0.5f);
     }
 
     private void OnDisable()
@@ -104,19 +108,7 @@ public class CalibrateInput : MonoBehaviour
             //Destroy(currentBall);
 
             //Remove last delay
-            if (delayHitCounter == 5)
-            {
-                delays.RemoveAt(0);
-                //Destroy(delayMarkers[0]);
-                //delayMarkers.RemoveAt(0);
-                delayHitCounter--;
-
-                for (int i = 0; i < triesTexts.Length-1; i++)
-                {
-                    string l = (delays[i] >= 0) ? "late" : "early";
-                    triesTexts[i].text = (i + 1).ToString() + ". " + Math.Abs(Math.Round(delays[i] * 1000)) + "ms " + l;
-                }
-            }
+            
 
 
 
@@ -132,31 +124,32 @@ public class CalibrateInput : MonoBehaviour
 
 
             triesTexts[delayHitCounter].gameObject.SetActive(true);
-            string late = (delay >= 0) ? "late" : "early"; 
-            triesTexts[delayHitCounter].text = (delayHitCounter+1).ToString() + ". " + Math.Abs(Math.Round(delay * 1000)) + "ms " + late;
+            string late = (delay >= 0) ? "LATE" : "EARLY"; 
+            triesTexts[delayHitCounter].text = "x. " + Math.Abs(Math.Round(delay * 1000)) + "ms " + late;
+            float a = triesTexts[delayHitCounter].color.a;
+            triesTexts[delayHitCounter].color = textColor.Evaluate((float)delay * 5f + 0.5f);
 
-            delayHitCounter++;
-            
-            
-            
+
+
             //count
             //countText.gameObject.SetActive(true);
             //countText.text = "Count: " + delayHitCounter + "/5";
 
 
-            
+
 
 
             //average
-            delays.Add(delay);
+            delays[delayHitCounter] = delay;
             double combinedDelay = 0;
             foreach (double de in delays)
             {
                 combinedDelay += de; 
             }
-            late = (averageDelay >= 0) ? "late" : "early";
-            averageDelay = combinedDelay / delayHitCounter;
-            averageText.text = "Average: " + Math.Abs(Math.Round(averageDelay * 1000)) + "ms " + late;
+            late = (averageDelay >= 0) ? "LATE" : "EARLY";
+            averageDelay = combinedDelay / ((all4) ? 4 : delayHitCounter+1);
+            averageText.text = Math.Abs(Math.Round(averageDelay * 1000)) + "ms " + late;
+            averageText.color = textColor.Evaluate((float)averageDelay * 5f + 0.5f);
 
             //average marker
             //double averageRelativePos = averageDelay / secondsPerBeat;
@@ -164,8 +157,12 @@ public class CalibrateInput : MonoBehaviour
             //averageDelayMarker.SetActive(true);
 
 
-            //offset n marker
-            if (delayHitCounter == 5)
+            if (delayHitCounter == 3)
+            {
+                all4 = true;
+            }
+                //offset n marker
+            if (all4)
             {
                 double offset = Math.Round(averageDelay, 3);
 
@@ -178,8 +175,64 @@ public class CalibrateInput : MonoBehaviour
 
                 //canHit = false;
 
+
+                //Consistency
+                double min = 1000, max = -1000;
+                foreach (double de in delays)
+                {
+                    min = Math.Min(min, de);
+                    max = Math.Max(max, de);
+                }
+                double dist = max - min;
+                string text = "";
+                if (dist > 0.1)
+                {
+                    text = "INCONSISTENT, Click to the CLAP!";
+                }
+                else if (dist > 0.05)
+                {
+                    text = "Inconsistent, consider continue trying Clicking to the Clap";
+                }
+                else
+                {
+                    if (Math.Abs(averageDelay) > 0.13)
+                    {
+                        text = "Far OFF beat. This will probably cause an issue!";
+                    }
+                    else if (Math.Abs(averageDelay) > 0.06)
+                    {
+                        text = "Quite far off beat. This might be noticable while playing";
+                    }
+                    else
+                    {
+                        text = "Nice! Click FINISHED!";
+                    }
+
+                }
+                consistencyText.text = text;
             }
 
+
+            triesArrows[delayHitCounter].color = Color.clear;
+            delayHitCounter++;
+            if (delayHitCounter == 4)
+            {
+                //delays.RemoveAt(0);
+
+                //Destroy(delayMarkers[0]);
+                //delayMarkers.RemoveAt(0);
+                delayHitCounter = 0;
+
+
+                //for (int i = 0; i < triesTexts.Length-1; i++)
+                //{
+                //    string l = (delays[i] >= 0) ? "LATE" : "EARLY";
+                //    triesTexts[i].text = "x. " + Math.Abs(Math.Round(delays[i] * 1000)) + "ms " + l;
+                //    float ai = triesTexts[i].color.a;
+                //    triesTexts[i].color = textColor.Evaluate((float)delays[i] * 5f + 0.5f);
+                //}
+            }
+            triesArrows[delayHitCounter].color = Color.white;
         }
     }
 
@@ -223,7 +276,9 @@ public class CalibrateInput : MonoBehaviour
 
         }
 
-        offsetText.text = "Offset: " + offset * 1000 + "ms";
+        string late = (offset >= 0) ? "LATE" : "EARLY";
+        offsetText.text = Math.Abs(offset * 1000) + "ms " + late;
+        offsetText.color = textColor.Evaluate((float)offset * 5f + 0.5f);
     }
 
 
@@ -264,16 +319,24 @@ public class CalibrateInput : MonoBehaviour
     //Called through Button Press
     public void Restart()
     {
-        delays.Clear();
+        delays[0] = 0; delays[1] = 0; delays[2] = 0; delays[3] = 0;
+        all4 = false;
         delayHitCounter = 0;
         averageDelay = 0;
         averageText.text = "";
+        consistencyText.text = "";
 
         foreach(TextMeshProUGUI t in triesTexts)
         {
             t.text = "";
             t.gameObject.SetActive(false);
         }
+
+
+        triesArrows[0].color = Color.white;
+        triesArrows[1].color = Color.clear;
+        triesArrows[2].color = Color.clear;
+        triesArrows[3].color = Color.clear;
 
         //markers
         //for (int i = 0; i < delayMarkers.Count; i++)
