@@ -1912,7 +1912,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{8BDC0D40-7CA4-9826-75B9-233F6E2A3B20}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{0DC40E46-D764-F03D-C12C-5DFB90070F54}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -2195,6 +2195,10 @@
 				<File Id="494216630" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Phase 2 to 3\player - ikuze2.wav</ShortName>
 					<CachePath>SFX/Phase 2 to 3/player - ikuze2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="506972428" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>pick up sfx.wav</ShortName>
+					<CachePath>SFX/pick up sfx_3D2B0655.wem</CachePath>
 				</File>
 				<File Id="508381054" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>piece6.wav</ShortName>
@@ -3043,6 +3047,11 @@
 						<MediaRef Id="236322927"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3043903975" Name="Play_PickUpSFX" DurationType="OneShot" DurationMin="5.3625298" DurationMax="5.3625298">
+					<MediaRefs>
+						<MediaRef Id="506972428"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1444205428" Name="Play_StartGame" DurationType="OneShot" DurationMin="3.7901876" DurationMax="3.7901876">
 					<MediaRefs>
 						<MediaRef Id="182175587"/>
@@ -3238,5 +3247,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CE30F138-FF8A-3B75-8420-4D0CD869B3A4}</FileHash>
+	<FileHash>{12984CA2-5091-C092-EDC2-4EADB889A235}</FileHash>
 </SoundBanksInfo>
