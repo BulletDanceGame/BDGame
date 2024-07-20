@@ -30,7 +30,14 @@ public class BossAnimator : UnitAnimator
 
     //Phase change
     [ExecuteAlways]
-    protected int _state { get { return _layeredAnimator.GetState(); } }
+    protected int _state 
+    { 
+        get 
+        {
+            return _animType == AnimatorType.Layered ? 
+                    _layeredAnimator.GetState() : _spriteAnimator.GetState();
+        } 
+    }
     protected int _prevState = 0;
 
     [ExecuteAlways]
@@ -54,7 +61,8 @@ public class BossAnimator : UnitAnimator
     [ExecuteAlways]
     protected override void PhaseChangeFinished(int phase)
     {
-        _layeredAnimator.SetFloat("Phase", phase);
+        _spriteAnimator?.SetFloat("Phase", phase);
+        _layeredAnimator?.SetFloat("Phase", phase);
     }
 }
 
