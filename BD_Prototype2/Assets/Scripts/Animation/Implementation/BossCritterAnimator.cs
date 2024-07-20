@@ -23,6 +23,27 @@ public class BossCritterAnimator : BossAnimator
         _spriteAnimator.SetSpeed(speed);
         _spriteAnimator.Anim(AnimAction.Walk);
     }
+
+    public override void PlayAnimation(int anticipation, float duration)
+    {
+        //Cutscene override
+        if(!_continueAnimation) return;
+        base.PlayAnimation(anticipation, duration);
+    }
+
+    protected override void Update()
+    {
+        //Cutscene override
+        if(!_continueAnimation) 
+        {
+            PhaseChange();
+            return;
+        }
+
+        if(EditorCheck.inEditMode) return;
+
+        base.Update();
+    }
 }
 
 
