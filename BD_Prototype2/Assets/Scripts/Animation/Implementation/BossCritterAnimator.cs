@@ -44,6 +44,11 @@ public class BossCritterAnimator : BossAnimator
 
         base.Update();
     }
+
+    public void Scream()
+    {
+        ScreenShake.Instance.ShakeCamera(20, 1.7f);
+    }
 }
 
 
