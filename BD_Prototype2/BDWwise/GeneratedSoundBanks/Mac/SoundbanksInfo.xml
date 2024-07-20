@@ -576,7 +576,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="834008394" Type="User" Language="SFX" Hash="{ED4B894B-0DBB-6930-225F-6F122F7235AE}">
+		<SoundBank Id="834008394" Type="User" Language="SFX" Hash="{C681C47E-8D2D-ABBD-BC56-87A1B608FCC0}">
 			<ShortName>Music_TutorialAndLevel1_Part3</ShortName>
 			<Path>Music_TutorialAndLevel1_Part3.bnk</Path>
 			<Media>
@@ -684,6 +684,10 @@
 					<ShortName>Env1-Test3_Tripplets-Intro.wav</ShortName>
 					<CachePath>SFX/Env1-Test3_Tripplets-Intro_D79FB2B7.wem</CachePath>
 				</File>
+				<File Id="801062043" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>outro-part 1.wav</ShortName>
+					<CachePath>SFX/outro-part 1_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="802141736" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Layer1_Environment_Part4 [BPM120].wav</ShortName>
 					<CachePath>SFX/Layer1_Environment_Part4 [BPM120]_D79FB2B7.wem</CachePath>
@@ -750,6 +754,11 @@
 					<MediaRefs>
 						<MediaRef Id="799222977"/>
 						<MediaRef Id="885899155"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="176035467" Name="Play_Env1_Vegzone_OutroLoop" MaxAttenuation="60" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="801062043"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="767074418" Name="Play_Layer1_Environment_Intro__BPM120_" DurationType="OneShot" DurationMin="10.817708" DurationMax="10.817708">
@@ -856,6 +865,7 @@
 						<MediaRef Id="245008496"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="177105241" Name="Stop_Env1_Vegzone_OutroLoop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2693353997" Name="TRAINING_GROUND__BatRoom__Part1____PLAY" DurationType="OneShot" DurationMin="3.8173077" DurationMax="3.8173077">
 					<MediaRefs>
 						<MediaRef Id="35178366"/>
@@ -3228,5 +3238,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CC934CE4-5B32-7B48-661C-263D7DB2870B}</FileHash>
+	<FileHash>{CE30F138-FF8A-3B75-8420-4D0CD869B3A4}</FileHash>
 </SoundBanksInfo>
