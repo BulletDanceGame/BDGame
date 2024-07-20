@@ -45,9 +45,16 @@ public class BossCritterAnimator : BossAnimator
         base.Update();
     }
 
+
+    [SerializeField]
+    private ParticleSystem[] _screamVFX;
     public void Scream()
     {
         ScreenShake.Instance.ShakeCamera(20, 1.7f);
+        foreach(ParticleSystem vfx in _screamVFX)
+        {
+            vfx.Play();
+        }
     }
 }
 
