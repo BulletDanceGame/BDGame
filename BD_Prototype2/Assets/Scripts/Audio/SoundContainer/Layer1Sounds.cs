@@ -16,7 +16,7 @@ public class Layer1Sounds : SoundContainer
     {
         //Init
         Initialize(); //So we can get SoundManager.Instance to access PlaySFX & other common helper methods
-
+        PlaySFX("ForestAmbience");
         //Events
     }
 

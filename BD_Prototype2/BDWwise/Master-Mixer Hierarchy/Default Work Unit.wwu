@@ -195,7 +195,7 @@
 								</Bus>
 								<Bus Name="3 Environment Battle" ID="{B65C897A-ADCB-4653-A093-C092D50780FA}">
 									<ChildrenList>
-										<Bus Name="Env Battle - Level 1" ID="{F17D932F-F1CB-4DA8-AD9E-0B2874895A64}">
+										<Bus Name="Env Battle - Level 1 - Tutorial" ID="{F17D932F-F1CB-4DA8-AD9E-0B2874895A64}">
 											<PropertyList>
 												<Property Name="BusVolume" Type="Real64">
 													<ValueList>
@@ -203,8 +203,91 @@
 													</ValueList>
 												</Property>
 											</PropertyList>
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo>
+														<StateGroupRef Name="Level" ID="{27142125-7CED-41AD-AC62-F18C40F61C47}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="CritterBoss" ID="{A33B981E-859C-46FE-9266-657B08E0AFA5}"/>
+														<CustomState Name="" ID="{064C8A85-7377-4027-984A-44ABE4C92CF7}" ShortID="52787584">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="YokaiHunterBoss" ID="{462C21DB-7A88-4AC5-B1F1-9246C26A800B}"/>
+														<CustomState Name="" ID="{61988531-A59F-45A0-A0CC-E572FB61C355}" ShortID="588754379">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Tutorial" ID="{4B371ABF-53EF-4BF6-B114-D747A517B697}"/>
+														<CustomState Name="" ID="{639B6EE8-2DB1-4BE9-93C9-79C44ADD727C}" ShortID="756212491"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Menu" ID="{F3ABAB34-D42E-4DFD-866A-2DC0370D0B1B}"/>
+														<CustomState Name="" ID="{29E29DC2-B500-4FCA-A31B-5E12FF41FADF}" ShortID="733382114">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
 										</Bus>
 										<Bus Name="Env Battle - Level 2" ID="{11ACC8BA-6391-476F-B176-97C7155C74EB}"/>
+										<Bus Name="Env Battle - Level 1 - Critter" ID="{FBC28A91-BBF8-49E2-93DD-96AAB23FC49D}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo>
+														<StateGroupRef Name="Level" ID="{27142125-7CED-41AD-AC62-F18C40F61C47}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="CritterBoss" ID="{A33B981E-859C-46FE-9266-657B08E0AFA5}"/>
+														<CustomState Name="" ID="{21D7E6B6-DD79-4B43-A91F-4614AEBF0BC7}" ShortID="191537749"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="YokaiHunterBoss" ID="{462C21DB-7A88-4AC5-B1F1-9246C26A800B}"/>
+														<CustomState Name="" ID="{CE03CBCB-25AC-4BFB-8931-411DB61D6DFC}" ShortID="174860119">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Tutorial" ID="{4B371ABF-53EF-4BF6-B114-D747A517B697}"/>
+														<CustomState Name="" ID="{5FA2081A-6C6D-4AE0-A75A-69D0A0C29035}" ShortID="79564817">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Menu" ID="{F3ABAB34-D42E-4DFD-866A-2DC0370D0B1B}"/>
+														<CustomState Name="" ID="{0803B871-5588-4D64-AB6F-0465D98D6264}" ShortID="774734133">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
+										</Bus>
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="RTPC">

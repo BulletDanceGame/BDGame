@@ -369,9 +369,8 @@
 								</Folder>
 								<Folder Name="Outdoors" ID="{7FEAEB39-E5B5-44CD-B316-B7EABAC8F0CE}" ShortID="700955432">
 									<ChildrenList>
-										<Sound Name="forest ambience" ID="{7C9C7ECB-7424-49F4-9076-BF2EB5AD2D04}" ShortID="455176558">
+										<BlendContainer Name="forestAmb" ID="{8B5C4ACF-D466-4646-9A1B-B8390D4823D2}" ShortID="708009088">
 											<PropertyList>
-												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-6</Value>
@@ -387,18 +386,33 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="forest ambience" ID="{9E9FF5D8-A089-443B-B38F-96DFFAFEDB61}">
-													<Language>SFX</Language>
-													<AudioFile>forest ambience.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="192006357"/>
-													</MediaIDList>
-												</AudioFileSource>
+												<Sound Name="forest ambienceLoopableV2" ID="{A20DB554-D4DB-4D51-AE60-9FE54925AA4A}" ShortID="236885832">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="forest ambienceLoopableV2" ID="{9088B6A0-3BFD-431B-8562-AF96CB5DE0A0}">
+															<Language>SFX</Language>
+															<AudioFile>forest ambienceLoopableV2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="170088987"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="forest ambienceLoopableV2" ID="{9088B6A0-3BFD-431B-8562-AF96CB5DE0A0}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="forest ambience" ID="{9E9FF5D8-A089-443B-B38F-96DFFAFEDB61}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+										</BlendContainer>
 									</ChildrenList>
 								</Folder>
 							</ChildrenList>

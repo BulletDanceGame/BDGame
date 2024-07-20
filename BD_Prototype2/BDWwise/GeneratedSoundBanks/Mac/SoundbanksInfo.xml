@@ -268,7 +268,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{31D513F2-A2E3-F575-EF96-E64C4122CBDC}">
+		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{77F1D083-76B5-617B-4EC3-DD4244EF9A5E}">
 			<ShortName>Music_TutorialAndLevel1_Part1</ShortName>
 			<Path>Music_TutorialAndLevel1_Part1.bnk</Path>
 			<Media>
@@ -1223,7 +1223,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{49F7AD67-B62E-795C-1DC6-B83A7F1EE8C5}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{3237B2D1-E670-ED9E-6A86-D3163B8BF5B5}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1242,6 +1242,7 @@
 				<Bus Id="105929186" Name="Boss - Level 1 - Yokai Hunter"/>
 				<Bus Id="112838762" Name="Cutscene 2 - Vs Yokai Hunter (music)"/>
 				<Bus Id="133791841" Name="Cutscene 1 - Vs Yokai Hunter (general sfx)"/>
+				<Bus Id="209238542" Name="Env Battle - Level 1 - Critter"/>
 				<Bus Id="275270701" Name="Cutscene 1 - Player - Intro (voicelines)"/>
 				<Bus Id="320588660" Name="Level 1 - Critter"/>
 				<Bus Id="340258651" Name="5 Cutscene SFX"/>
@@ -1255,7 +1256,6 @@
 				<Bus Id="556599689" Name="brother"/>
 				<Bus Id="652387228" Name="BossActions 2 - dunno"/>
 				<Bus Id="763777545" Name="Env Battle - Level 2"/>
-				<Bus Id="763777546" Name="Env Battle - Level 1"/>
 				<Bus Id="764174633" Name="Level 1 - Tutorial"/>
 				<Bus Id="948999914" Name="Cutscene 1 - Player - Phase 1 to 2 (voicelines)"/>
 				<Bus Id="1082482811" Name="Navigation"/>
@@ -1267,6 +1267,7 @@
 				<Bus Id="1288875315" Name="Cutscene 2 - Panda Meeting (general sfx)"/>
 				<Bus Id="1387464807" Name="Cutscene 1 - Player - Phase 3 to End (voicelines)"/>
 				<Bus Id="1404235302" Name="BossDamage 2 - dunno"/>
+				<Bus Id="1498105075" Name="Env Battle - Level 1 - Tutorial"/>
 				<Bus Id="1521187885" Name="StartGame"/>
 				<Bus Id="1718386686" Name="Title Screen - Main Menu"/>
 				<Bus Id="1727977662" Name="Cutscene 1 - Player - Phase 2 to 3 (voicelines)"/>
@@ -1477,7 +1478,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1782264177" Type="User" Language="SFX" Hash="{4854F979-4A85-B77E-D80B-35D9C5C2833C}">
+		<SoundBank Id="1782264177" Type="User" Language="SFX" Hash="{287E5D9D-51A5-29A2-CD50-7610E99E5EF4}">
 			<ShortName>Music_Misc</ShortName>
 			<Path>Music_Misc.bnk</Path>
 			<Media>
@@ -1901,7 +1902,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{68FA06D2-CDD6-B375-BD7D-9796A4261B5B}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{8BDC0D40-7CA4-9826-75B9-233F6E2A3B20}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -2005,6 +2006,10 @@
 					<ShortName>hurtHIGH1.wav</ShortName>
 					<CachePath>SFX/hurtHIGH1_E61D9D13.wem</CachePath>
 				</File>
+				<File Id="170088987" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>forest ambienceLoopableV2.wav</ShortName>
+					<CachePath>SFX/forest ambienceLoopableV2_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="181758528" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>squeak7.wav</ShortName>
 					<CachePath>SFX/squeak7_10C4C929.wem</CachePath>
@@ -2012,10 +2017,6 @@
 				<File Id="182175587" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>startGameSfx.wav</ShortName>
 					<CachePath>SFX/startGameSfx_10C4C929.wem</CachePath>
-				</File>
-				<File Id="192006357" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>forest ambience.wav</ShortName>
-					<CachePath>SFX/forest ambience_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="194222179" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>boss - level 3 - final3.wav</ShortName>
@@ -2863,11 +2864,6 @@
 						<MediaRef Id="765488241"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3486653050" Name="LoopableForestAmb____Play" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="192006357"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="2122273249" Name="NormalDamage____PLAY" DurationType="OneShot" DurationMin="2.2" DurationMax="6.5291667">
 					<SwitchContainers>
 						<SwitchContainer>
@@ -2963,6 +2959,11 @@
 				<Event Id="4112303910" Name="Play_DeflectionSwing___Good___Long" DurationType="OneShot" DurationMin="1.8546736" DurationMax="1.8546736">
 					<MediaRefs>
 						<MediaRef Id="236322927"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3960404151" Name="Play_forestAmb" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="170088987"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2503464396" Name="Play_Missed_Dash" DurationType="OneShot" DurationMin="1.4063158" DurationMax="1.7035295">
@@ -3227,5 +3228,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B0FA9A83-0537-B9C4-70E3-7CE183600F3C}</FileHash>
+	<FileHash>{CC934CE4-5B32-7B48-661C-263D7DB2870B}</FileHash>
 </SoundBanksInfo>

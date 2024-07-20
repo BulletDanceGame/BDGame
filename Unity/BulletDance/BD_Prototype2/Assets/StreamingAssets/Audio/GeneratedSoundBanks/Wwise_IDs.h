@@ -89,7 +89,6 @@ namespace AK
         static const AkUniqueID HAIRFLAIRUP____PLAY = 231322120U;
         static const AkUniqueID LASTBULLETIMPACT__OFFIGHT____PLAY = 3031745690U;
         static const AkUniqueID LASTBULLETIMPACT__OFPHASE____PLAY = 2369949805U;
-        static const AkUniqueID LOOPABLEFORESTAMB____PLAY = 3486653050U;
         static const AkUniqueID NORMALDAMAGE____PLAY = 2122273249U;
         static const AkUniqueID NOSTAMINA____PLAY = 2278158929U;
         static const AkUniqueID OUTRO____PLAY = 594215984U;
@@ -137,6 +136,7 @@ namespace AK
         static const AkUniqueID PLAY_ENV1_VEGZONE5_BATTLE_PART1 = 2983091222U;
         static const AkUniqueID PLAY_ENV1_VEGZONE5_BATTLE_PART2 = 2983091221U;
         static const AkUniqueID PLAY_ENV1_VEGZONE_OUTRO_PART1 = 586328000U;
+        static const AkUniqueID PLAY_FORESTAMB = 3960404151U;
         static const AkUniqueID PLAY_LAYER1_BATTLE_HALF_PART1_5__BPM140_ = 3076762201U;
         static const AkUniqueID PLAY_LAYER1_BATTLE_HALF_PART1_5__BPM150_ = 3177574992U;
         static const AkUniqueID PLAY_LAYER1_BATTLE_HALF_PART1__BPM120_ = 1451033943U;
@@ -449,7 +449,8 @@ namespace AK
         static const AkUniqueID CUTSCENE_2___VS_YOKAI_HUNTER__MUSIC_ = 112838762U;
         static const AkUniqueID DAMAGE__PLAYER_ = 1280655526U;
         static const AkUniqueID DASH = 1942692385U;
-        static const AkUniqueID ENV_BATTLE___LEVEL_1 = 763777546U;
+        static const AkUniqueID ENV_BATTLE___LEVEL_1___CRITTER = 209238542U;
+        static const AkUniqueID ENV_BATTLE___LEVEL_1___TUTORIAL = 1498105075U;
         static const AkUniqueID ENV_BATTLE___LEVEL_2 = 763777545U;
         static const AkUniqueID ENV_ROAMING___LEVEL_1 = 1137508701U;
         static const AkUniqueID ENV_ROAMING___LEVEL_2 = 1137508702U;
