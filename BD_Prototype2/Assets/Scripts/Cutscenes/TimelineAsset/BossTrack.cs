@@ -59,7 +59,11 @@ public class BossTrackMixer : CharacterTrackMixer
         if(requestUpdate)
         {
             if(!EditorCheck.inEditMode)
-                boss.gameObject.transform.parent.GetComponent<BossWalkingController>().enabled = enableUpdate;
+            {
+                var walkingController = boss.gameObject.transform.parent.GetComponent<BossWalkingController>();
+                if(walkingController != null)
+                    walkingController.enabled = enableUpdate;
+            }
 
             boss.EnableAnimUpdate(enableUpdate);
         }

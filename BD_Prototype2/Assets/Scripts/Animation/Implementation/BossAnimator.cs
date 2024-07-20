@@ -61,7 +61,8 @@ public class BossAnimator : UnitAnimator
     [ExecuteAlways]
     protected override void PhaseChangeFinished(int phase)
     {
-        _layeredAnimator.SetFloat("Phase", phase);
+        _spriteAnimator?.SetFloat("Phase", phase);
+        _layeredAnimator?.SetFloat("Phase", phase);
     }
 }
 
