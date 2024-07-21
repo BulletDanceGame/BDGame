@@ -377,15 +377,7 @@ public class Boss1MoveList : Movelist
     {
         if (healthController.isDead)
             return;
-        if (_wallCheck)
-        {
-            _direction = 0;
-            _rb.velocity = Vector2.zero;
-            afterimagetimer = 0;
-            _animHandler?.DashStop();
-            _dashTime = 0;
-            return;
-        }
+        
         
         if (healthController.isLastHit == false)
         {
@@ -426,6 +418,16 @@ public class Boss1MoveList : Movelist
 
                     _rb.velocity = _dashDirection * dashSpeed;
                     _animHandler?.DashStart(_dashDirection);
+
+                    //if (_wallCheck)
+                    //{
+                    //    _direction = 0;
+                    //    _rb.velocity = Vector2.zero;
+                    //    afterimagetimer = 0;
+                    //    _animHandler?.DashStop();
+                    //    _dashTime = 0;
+                    //    return;
+                    //}
                 }
 
             }
