@@ -91,8 +91,6 @@ public class Player : MonoBehaviour
 
         yield return null;
 
-        EventManager.Instance.OnCutsceneStart += pauseAction;
-        EventManager.Instance.OnCutsceneEnd += enableAction;
     }
 
     //Debug code -- Remember to remove
@@ -155,15 +153,6 @@ public class Player : MonoBehaviour
         pauseActions = !pauseActions;
     }
 
-    void pauseAction(string s)
-    {
-        pauseActions = true;
-    }
-
-    void enableAction()
-    {
-        pauseActions = false;
-    }
 
     void SuccessBeatCheck()
     {

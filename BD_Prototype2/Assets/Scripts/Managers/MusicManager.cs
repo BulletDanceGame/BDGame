@@ -77,6 +77,7 @@ public class MusicManager : MonoBehaviour
     bool checkFrames = false;
     int frames = 0;
 
+    bool cantCalculateSpeed;
 
     private void Awake()
     {
@@ -97,6 +98,8 @@ public class MusicManager : MonoBehaviour
         maxFPS = SaveSystem.Instance.GetData().maxFPS;
 
         EventManager.Instance.DisableInput();
+
+        EventManager.Instance.OnPlayerDeath += OnPlayerDeath;
     }
 
 
@@ -467,9 +470,8 @@ public class MusicManager : MonoBehaviour
     /// Both for Beats and the End of Songs. </summary>
     private void MusicCallbacks(object in_cookie, AkCallbackType in_type, object in_info)
     {
-        if(isDestroyed)
+        if (isDestroyed || gameObject == null)
             return;
-        if (gameObject == null) { return; }
 
         
 
@@ -497,11 +499,10 @@ public class MusicManager : MonoBehaviour
         //EXIT
         else if (in_type == AkCallbackType.AK_MusicSyncExit)
         {
-            //print("totaldelay " + totalDelay);
-            //totalDelay = 0;
-            //StartCoroutine(SongExit(info));
-
-            //playing = false;
+            if (cantCalculateSpeed)
+            {
+                StartSequence();
+            }
         }
 
 
@@ -589,11 +590,16 @@ public class MusicManager : MonoBehaviour
 
 
 
+    void OnPlayerDeath()
+    {
+        cantCalculateSpeed = true;
+    }
 
 
     private void OnDestroy()
     {
         isDestroyed = true;
+        EventManager.Instance.OnPlayerDeath -= OnPlayerDeath;
     }
 
 

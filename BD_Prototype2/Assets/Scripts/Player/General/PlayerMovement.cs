@@ -90,6 +90,8 @@ public class PlayerMovement : MonoBehaviour
     float timeByLedge = 0;
     private void Update()
     {
+        print("input " + inputVector);
+
         if (currentState != PlayerState.MOVING)
             return;
 
@@ -163,6 +165,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnMove(InputValue value)
     {
+        print("input " + value);
         if (!canMove)
             return;
 
