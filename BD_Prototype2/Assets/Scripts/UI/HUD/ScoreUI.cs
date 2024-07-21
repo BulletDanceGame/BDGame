@@ -17,9 +17,15 @@ public class ScoreUI : MonoBehaviour
     [SerializeField]
     private Animator currencyAnim, scoreAnim;
 
+    [SerializeField]
+    private CanvasGroup _canvas;
+
 
     private void Start()
     {
+        if(LoadingScreen.Instance != null)
+            LoadingScreen.Instance.ShowOnUncover += ShowWhenUncover;
+
         _camera         = Camera.main;
         _oriParticlePos = _comboBreakFX.transform.position;
 
@@ -32,12 +38,16 @@ public class ScoreUI : MonoBehaviour
 
     }
 
+    void ShowWhenUncover(int frame)
+    {
+        _canvas.alpha = frame >= 14 ? 1f : 0f;        
+    }
+
     private void OnEnable()
     {
         EventManager.Instance.OnAddScore += AddScore;
         EventManager.Instance.OnPlayerMiss += LoseCombo;
         EventManager.Instance.OnAddCurrency += AddCurrency;
-
     }
 
     //Need to QUEUE 1 frame bc it depends on the ScoreManager score being added first

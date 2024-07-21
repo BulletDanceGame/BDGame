@@ -26,7 +26,6 @@ public class LoadingScreen : MonoBehaviour
         if (EventManager.Instance == null) return;
         EventManager.Instance.OnSceneLoad   += Cover;
         EventManager.Instance.OnSceneLoaded += UnCover;
-
     }
 
     void OnDestroy()
@@ -53,5 +52,11 @@ public class LoadingScreen : MonoBehaviour
     void InvertMask(int value)
     {
         img.material = value == 0 ? notInverted : inverted;
+    }
+
+    public System.Action<int> ShowOnUncover;
+    public void ShowWhenUncover(int frame)
+    {
+        ShowOnUncover?.Invoke(frame);
     }
 }
