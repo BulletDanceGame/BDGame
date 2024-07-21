@@ -19893,6 +19893,43 @@
 												</Local>
 											</Reference>
 										</ObjectList>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{075F6DC9-2289-4A9C-A8CC-03899E6F2858}" ShortID="649893462">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="PlaybackSpeed"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="PLAYBACK_SPEED____MusicBossBattle" ID="{04AD4BF5-C0D4-44A1-8A9B-B693562B6A51}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{423C058C-54EA-4E03-8676-416BBCECB4F9}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0.25</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>4</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
 									</ObjectLists>
 								</MusicSegment>
 								<MusicSegment Name="Env1-VegZone3-BatRoom-Intro" ID="{CD0FE0FD-D15B-41BD-A308-B8B0E9645309}" ShortID="271476171">
@@ -19980,6 +20017,43 @@
 															<Property Name="TimeMs" Type="Real64" Value="6857.14285714286"/>
 														</PropertyList>
 													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{9ED2DD6F-E355-4E8D-B7BB-F01FBB4D3AF8}" ShortID="88890130">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="PlaybackSpeed"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="PLAYBACK_SPEED____MusicBossBattle" ID="{04AD4BF5-C0D4-44A1-8A9B-B693562B6A51}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{AE9E6388-FC44-477E-A5F2-F894038733AE}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0.25</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>4</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
 												</Local>
 											</Reference>
 										</ObjectList>
