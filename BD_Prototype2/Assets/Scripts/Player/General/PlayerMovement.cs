@@ -62,6 +62,10 @@ public class PlayerMovement : MonoBehaviour
     {
         EventManager.Instance.OnPlayerPushBack -= StartPushBack;
         EventManager.Instance.OnPlayerDeath -= ResetMovement;
+
+        _playerInput.Player.Disable();
+
+        _playerInput.Player.Move.canceled -= MoveStop;
     }
 
     // Start is called before the first frame update
@@ -78,13 +82,6 @@ public class PlayerMovement : MonoBehaviour
         _slideTime = (float)(_slideCooldown / 2);
 
         _playerInput.Player.Move.canceled += MoveStop;
-    }
-
-    private void OnDestroy()
-    {
-        _playerInput.Player.Disable();
-
-        _playerInput.Player.Move.canceled -= MoveStop;
     }
 
     float timeByLedge = 0;

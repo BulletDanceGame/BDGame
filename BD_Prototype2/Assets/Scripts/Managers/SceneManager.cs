@@ -21,7 +21,7 @@ public class SceneManager : MonoBehaviour
 
     public static SceneManager Instance { get; private set; }
     
-    public enum LoadOptions { Specified = 0, NextLevel = 1, Reload = 2}
+    public enum LoadOptions { Specified = 0, NextLevel = 1, Reload = 2, RespawnPlayer = 3}
 
 
     //ADD ANY SCENES HERE (AND IN THE BUILD SETTINGS)
