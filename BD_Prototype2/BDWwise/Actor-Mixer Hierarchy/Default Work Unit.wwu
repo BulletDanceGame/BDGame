@@ -20164,6 +20164,51 @@
 										</Sound>
 									</ChildrenList>
 								</BlendContainer>
+								<BlendContainer Name="PickUpSFX" ID="{817D0799-601F-47DE-8A25-4EB9DFA47AB3}" ShortID="106883255">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="pick up sfx" ID="{91D28048-7315-490A-9FBD-94FDE2721B10}" ShortID="799209461">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="pick up sfx" ID="{79BEDC23-55E4-4D8E-9B04-2166A66C6208}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0311257949125596"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.231220190779014"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>pick up sfx.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="506972428"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="pick up sfx" ID="{79BEDC23-55E4-4D8E-9B04-2166A66C6208}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>

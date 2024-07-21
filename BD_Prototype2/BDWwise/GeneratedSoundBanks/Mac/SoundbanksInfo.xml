@@ -576,7 +576,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="834008394" Type="User" Language="SFX" Hash="{ED4B894B-0DBB-6930-225F-6F122F7235AE}">
+		<SoundBank Id="834008394" Type="User" Language="SFX" Hash="{C681C47E-8D2D-ABBD-BC56-87A1B608FCC0}">
 			<ShortName>Music_TutorialAndLevel1_Part3</ShortName>
 			<Path>Music_TutorialAndLevel1_Part3.bnk</Path>
 			<Media>
@@ -684,6 +684,10 @@
 					<ShortName>Env1-Test3_Tripplets-Intro.wav</ShortName>
 					<CachePath>SFX/Env1-Test3_Tripplets-Intro_D79FB2B7.wem</CachePath>
 				</File>
+				<File Id="801062043" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>outro-part 1.wav</ShortName>
+					<CachePath>SFX/outro-part 1_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="802141736" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Layer1_Environment_Part4 [BPM120].wav</ShortName>
 					<CachePath>SFX/Layer1_Environment_Part4 [BPM120]_D79FB2B7.wem</CachePath>
@@ -750,6 +754,11 @@
 					<MediaRefs>
 						<MediaRef Id="799222977"/>
 						<MediaRef Id="885899155"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="176035467" Name="Play_Env1_Vegzone_OutroLoop" MaxAttenuation="60" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="801062043"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="767074418" Name="Play_Layer1_Environment_Intro__BPM120_" DurationType="OneShot" DurationMin="10.817708" DurationMax="10.817708">
@@ -856,6 +865,7 @@
 						<MediaRef Id="245008496"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="177105241" Name="Stop_Env1_Vegzone_OutroLoop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2693353997" Name="TRAINING_GROUND__BatRoom__Part1____PLAY" DurationType="OneShot" DurationMin="3.8173077" DurationMax="3.8173077">
 					<MediaRefs>
 						<MediaRef Id="35178366"/>
@@ -1902,7 +1912,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{8BDC0D40-7CA4-9826-75B9-233F6E2A3B20}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{11F08021-17BF-D44F-5475-E628EA499987}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -2185,6 +2195,10 @@
 				<File Id="494216630" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Phase 2 to 3\player - ikuze2.wav</ShortName>
 					<CachePath>SFX/Phase 2 to 3/player - ikuze2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="506972428" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>pick up sfx.wav</ShortName>
+					<CachePath>SFX/pick up sfx_F15963BA.wem</CachePath>
 				</File>
 				<File Id="508381054" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>piece6.wav</ShortName>
@@ -3033,6 +3047,11 @@
 						<MediaRef Id="236322927"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3043903975" Name="Play_PickUpSFX" DurationType="OneShot" DurationMin="5.3625298" DurationMax="5.3625298">
+					<MediaRefs>
+						<MediaRef Id="506972428"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1444205428" Name="Play_StartGame" DurationType="OneShot" DurationMin="3.7901876" DurationMax="3.7901876">
 					<MediaRefs>
 						<MediaRef Id="182175587"/>
@@ -3228,5 +3247,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CC934CE4-5B32-7B48-661C-263D7DB2870B}</FileHash>
+	<FileHash>{72F65529-6393-52E0-D10A-F3D5A4ABFE6C}</FileHash>
 </SoundBanksInfo>

@@ -136,6 +136,7 @@ namespace AK
         static const AkUniqueID PLAY_ENV1_VEGZONE5_BATTLE_PART1 = 2983091222U;
         static const AkUniqueID PLAY_ENV1_VEGZONE5_BATTLE_PART2 = 2983091221U;
         static const AkUniqueID PLAY_ENV1_VEGZONE_OUTRO_PART1 = 586328000U;
+        static const AkUniqueID PLAY_ENV1_VEGZONE_OUTROLOOP = 176035467U;
         static const AkUniqueID PLAY_FORESTAMB = 3960404151U;
         static const AkUniqueID PLAY_LAYER1_BATTLE_HALF_PART1_5__BPM140_ = 3076762201U;
         static const AkUniqueID PLAY_LAYER1_BATTLE_HALF_PART1_5__BPM150_ = 3177574992U;
@@ -192,6 +193,7 @@ namespace AK
         static const AkUniqueID PLAY_NAVCONFIRM = 2952062683U;
         static const AkUniqueID PLAY_NAVUPDOWN = 3540793454U;
         static const AkUniqueID PLAY_PAUSE_MUSIC = 1496939652U;
+        static const AkUniqueID PLAY_PICKUPSFX = 3043903975U;
         static const AkUniqueID PLAY_STARTGAME = 1444205428U;
         static const AkUniqueID PLAYER__AREYOUKIDDINGME____PLAY = 4096913669U;
         static const AkUniqueID PLAYER__BRINGIT____PLAY = 4003539485U;
@@ -224,6 +226,7 @@ namespace AK
         static const AkUniqueID SLOMO____PLAY = 1251528829U;
         static const AkUniqueID SOULFORMSPLASHSCREEN____PLAY = 1921985385U;
         static const AkUniqueID SPEEDUPCUTSCENE____PLAY = 2251819479U;
+        static const AkUniqueID STOP_ENV1_VEGZONE_OUTROLOOP = 177105241U;
         static const AkUniqueID TRAILERAUDIO____PLAY = 1814921978U;
         static const AkUniqueID TRAINING_GROUND__BATROOM__PART1____PLAY = 2693353997U;
         static const AkUniqueID TRAINING_GROUND__FULLONTRAINING__PART1____PLAY = 3019299785U;
