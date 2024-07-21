@@ -29,7 +29,6 @@ namespace BulletDance.Cutscene
             InputActionAsset playerInputActions = UnitManager.Instance.GetPlayer().GetComponent<PlayerInput>().actions;
 
 
-            print("input " + enable);
 
             if(enable)
             {
