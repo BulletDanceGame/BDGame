@@ -21,19 +21,27 @@ public class WwAudioEmitter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!IsInCollider)
+        if (collision.CompareTag("Player"))
         {
-            AkSoundEngine.PostEvent(EventName, gameObject);
-            IsInCollider = true;
+            if (!IsInCollider)
+            {
+                AkSoundEngine.PostEvent(EventName, gameObject);
+                IsInCollider = true;
+            }
         }
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (IsInCollider)
+        if (collision.CompareTag("Player"))
         {
-            AkSoundEngine.PostEvent(StopEvent, gameObject);
-            IsInCollider = false;
+            if (IsInCollider)
+            {
+                AkSoundEngine.PostEvent(StopEvent, gameObject);
+                IsInCollider = false;
+            }
         }
+            
     }
 }

@@ -429,6 +429,7 @@ namespace AK
         static const AkUniqueID ACTIONS = 3332220694U;
         static const AkUniqueID ACTIONS___DYNAMIC = 1728450328U;
         static const AkUniqueID ACTIONS___SET = 3545305787U;
+        static const AkUniqueID AMBIENCELOL = 713040514U;
         static const AkUniqueID BOSS___LEVEL_1___CRITTER = 1751930956U;
         static const AkUniqueID BOSS___LEVEL_1___YOKAI_HUNTER = 105929186U;
         static const AkUniqueID BOSS___LEVEL_2 = 2337630999U;

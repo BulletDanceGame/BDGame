@@ -15,7 +15,7 @@ public class Checkpoint : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            _checkpointManager.LastCheckpointPos=this.transform.position;
+            _checkpointManager.SetCurrentCheckpoint(this);
         }
     }
 
