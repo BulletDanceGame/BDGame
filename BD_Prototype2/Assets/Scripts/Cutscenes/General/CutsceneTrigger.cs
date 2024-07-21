@@ -16,6 +16,12 @@ public class CutsceneTrigger : MonoBehaviour
         {
             EventManager.Instance?.StartCutscene(cutsceneName);
             triggered = true;
+            HealPlayer();
         }
+    }
+
+    void HealPlayer()
+    {
+        UnitManager.Instance.GetPlayer().GetComponent<Player>().Heal(150);
     }
 }
