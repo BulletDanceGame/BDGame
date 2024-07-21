@@ -240,8 +240,8 @@ Transform:
   m_GameObject: {fileID: 380935841979303810}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 246, y: -170.5, z: 0}
-  m_LocalScale: {x: 0.92419446, y: 0.92419446, z: 0.92419446}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7511038330584355964}
   m_Father: {fileID: 65353473292512164}
@@ -479,7 +479,7 @@ MonoBehaviour:
           m_MethodName: SetParent
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgument: {fileID: 8126732140138474042}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -491,7 +491,7 @@ MonoBehaviour:
           m_MethodName: SetParent
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgument: {fileID: 8126732140138474042}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -682,6 +682,7 @@ MonoBehaviour:
     m_Signals:
     - {fileID: 11400000, guid: 5b1df3724496d9741b2fe6fdbf3d30df, type: 2}
     - {fileID: 11400000, guid: ec1a6f45da483714497b1457e6915cca, type: 2}
+    - {fileID: 11400000, guid: 8088b4f742df5e246a04d7c11b6fd706, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -727,6 +728,20 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: BulletDance.Audio.GeneralSounds, Assembly-CSharp
+          m_MethodName: StopForestAmbience
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -862,6 +877,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: ec1a6f45da483714497b1457e6915cca, type: 2}
     - {fileID: 11400000, guid: cdf8279135a5fa44eb13350764497748, type: 2}
     - {fileID: 11400000, guid: e58d880208286904caca9e522fc4c479, type: 2}
+    - {fileID: 11400000, guid: 8088b4f742df5e246a04d7c11b6fd706, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -1008,6 +1024,20 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 1
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: BulletDance.Audio.GeneralSounds, Assembly-CSharp
+          m_MethodName: StopForestAmbience
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &7201810992690358124
 GameObject:
