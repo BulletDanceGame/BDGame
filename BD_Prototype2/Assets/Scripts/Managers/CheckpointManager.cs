@@ -5,18 +5,14 @@ using UnityEngine;
 public class CheckpointManager : MonoBehaviour
 {
 
-    private static CheckpointManager instance;
-    public Vector2 LastCheckpointPos;
+    public static CheckpointManager instance;
 
-    private void OnEnable()
-    {
-        EventManager.Instance.OnPlayerDeath += RespawnPlayer;
-
-    }
+    [SerializeField]
+    Checkpoint CurrentCheckpoint;
 
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -25,8 +21,19 @@ public class CheckpointManager : MonoBehaviour
             Destroy(instance);
         }
     }
+
+    public void SetCurrentCheckpoint(Checkpoint checkPoint)
+    {
+        CurrentCheckpoint = checkPoint;
+    }
+
+    public Checkpoint GetCurrentCheckPoint()
+    {
+        return CurrentCheckpoint;
+    }
+    
     public void RespawnPlayer()
     {
-        //UnitManager.Instance.GetPlayer().transform.position = LastCheckpointPos;
+        UnitManager.Instance.GetPlayer().transform.position = GetCurrentCheckPoint().transform.position;
     }
 }

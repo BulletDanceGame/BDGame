@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,11 +8,14 @@ public class UnitManager : MonoBehaviour
     public static UnitManager Instance;
 
     private GameObject Player;
-    public GameObject Boss;
+    public GameObject Boss, PlayerGO;
 
     public List<GameObject> Enemies = new List<GameObject>();
     public List<GameObject> SurvivalRoomEnemies;
     public List<GameObject> ActiveEnemies;
+
+    [SerializeField]
+    CinemachineVirtualCamera followCam;
 
     private void Awake()
     {
@@ -82,5 +86,16 @@ public class UnitManager : MonoBehaviour
 
         if (!Player.activeSelf)
             Player = null;
+    }
+
+    public void RespawnPlayer()
+    {
+        Destroy(Player);
+
+        Player = Instantiate(PlayerGO, CheckpointManager.instance.GetCurrentCheckPoint().transform.position, Quaternion.identity);
+
+        followCam.Follow = Player.transform;
+
+        CameraManager.Instance.SwitchToFollowCamera();
     }
 }

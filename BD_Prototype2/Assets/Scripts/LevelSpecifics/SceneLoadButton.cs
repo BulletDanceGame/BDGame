@@ -28,6 +28,11 @@ public class SceneLoadButton : MonoBehaviour
                 SceneManager.Instance.ReloadCurrentScene(3.5f);
                 break;
 
+            case SceneManager.LoadOptions.RespawnPlayer:
+                UnitManager.Instance.RespawnPlayer();
+
+                break;
+
             default: break;
         }
     }
