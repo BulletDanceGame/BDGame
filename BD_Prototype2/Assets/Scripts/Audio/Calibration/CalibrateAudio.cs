@@ -23,7 +23,13 @@ public class CalibrateAudio : MonoBehaviour
         EventManager.Instance.OnBeatForVisuals += PlayAnimations;
 
         audioOffset = PlayerRhythm.Instance.offsetVisuals;
-        offsetText.text = "Offset: " + audioOffset * 1000 + "ms";
+        offsetText.text = audioOffset * 1000 + "ms";
+
+
+        Vector2 pos = visuals.anchoredPosition;
+        pos.x = (float)audioOffset*100 * (50f / 30f);
+        pos.x = Mathf.Clamp(pos.x, -50f, 50f);
+        visuals.anchoredPosition = pos;
     }
 
     private void OnDisable()
@@ -40,7 +46,7 @@ public class CalibrateAudio : MonoBehaviour
         audioOffset = Math.Round(Math.Max(-0.30, Math.Min(0.30, audioOffset)), 3);
         PlayerRhythm.Instance.UpdateOffsetVisuals(audioOffset);
         SaveSystem.Instance.GetData().visualOffset = audioOffset;
-        offsetText.text = "Offset: " + audioOffset * 1000 + "ms";
+        offsetText.text = audioOffset * 1000 + "ms";
 
         Vector2 pos = visuals.anchoredPosition;
         pos.x += dir*(50f / 30f);
@@ -48,7 +54,6 @@ public class CalibrateAudio : MonoBehaviour
         visuals.anchoredPosition = pos;
 
         anim.enabled = false;
-
         Destroy(currentBall);
         Destroy(nextBall);
     }

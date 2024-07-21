@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 
 public enum ButtonInput { swing, dash, none };
@@ -99,9 +99,13 @@ public class CalibrateInput : MonoBehaviour
             secondsPerBeat = MusicManager.Instance.secondsPerBeat * 2;
 
             //ball
-            particles.transform.position = currentBall.transform.position;
-            particles.Play();
-            Destroy(currentBall);
+            if (currentBall)
+            {
+                particles.transform.position = currentBall.transform.position;
+                particles.Play();
+                Destroy(currentBall);
+            }
+            
 
             //Remove last delay
             if (delays.Count == 4)
@@ -148,12 +152,13 @@ public class CalibrateInput : MonoBehaviour
             averageText.color = textColor.Evaluate((float)averageDelay * 5f + 0.5f);
 
             //average marker
-            //double averageRelativePos = averageDelay / secondsPerBeat;
-            //averageDelayMarker.transform.localPosition = new Vector3(112.5f + 75f * (float)averageRelativePos, 0, 0);
-            //averageDelayMarker.SetActive(true);
+            double averageRelativePos = averageDelay / secondsPerBeat;
+            averageDelayMarker.transform.localPosition = new Vector3(112.5f + 75f * (float)averageRelativePos, 0, 0);
+            averageDelayMarker.SetActive(true);
+            averageDelayMarker.transform.GetChild(0).GetComponent<Image>().color = textColor.Evaluate((float)averageDelay * 5f + 0.5f);
 
 
-                //offset n marker
+            //offset n marker
             if (delays.Count == 4)
             {
 
@@ -178,30 +183,31 @@ public class CalibrateInput : MonoBehaviour
                 }
                 double dist = max - min;
                 string text = "";
-                if (dist > 0.1)
-                {
-                    text = "INCONSISTENT, Click to the CLAP!";
-                }
-                else if (dist > 0.05)
-                {
-                    text = "Inconsistent, consider continue trying Clicking to the Clap";
-                }
-                else
-                {
-                    if (Math.Abs(averageDelay) > 0.13)
-                    {
-                        text = "Far OFF beat. This will probably cause an issue!";
-                    }
-                    else if (Math.Abs(averageDelay) > 0.06)
-                    {
-                        text = "Quite far off beat. This might be noticable while playing";
-                    }
-                    else
-                    {
-                        text = "Nice! Click FINISHED!";
-                    }
+                //if (dist > 0.1)
+                //{
+                //    text = "INCONSISTENT, Click to the CLAP!";
+                //}
+                //else if (dist > 0.05)
+                //{
+                //    text = "Inconsistent, consider continue trying Clicking to the Clap";
+                //}
+                //else
+                //{
+                    
 
-                }
+                //}
+                //if (Math.Abs(averageDelay) > 0.13)
+                //{
+                //    text = "Your Average should be within the Blue Lines. Being this far off will probably cause an issue!";
+                //}
+                //else if (Math.Abs(averageDelay) > 0.06)
+                //{
+                //    text = "Quite far off beat. This might be noticable while playing";
+                //}
+                //else
+                //{
+                //    text = "Nice! Click FINISHED!";
+                //}
                 consistencyText.text = text;
             }
 
@@ -215,8 +221,6 @@ public class CalibrateInput : MonoBehaviour
     {
 
         double offset = GetOffset();
-        Restart();
-
 
         SetOffset(offset + (i * 0.010));
 
@@ -255,7 +259,7 @@ public class CalibrateInput : MonoBehaviour
         }
 
         string late = (offset >= 0) ? "LATE" : "EARLY";
-        offsetText.text = Math.Abs(offset * 1000) + "ms " + late;
+        offsetText.text = Math.Round(Math.Abs(offset * 1000)) + "ms " + late;
         offsetText.color = textColor.Evaluate((float)offset * 5f + 0.5f);
     }
 
@@ -310,7 +314,7 @@ public class CalibrateInput : MonoBehaviour
         }
         delayMarkers.Clear();
 
-        //averageDelayMarker.SetActive(false);
+        averageDelayMarker.SetActive(false);
         ////offsetMarker.SetActive(false);
 
         //countText.gameObject.SetActive(false);
