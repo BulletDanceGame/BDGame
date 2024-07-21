@@ -2295,7 +2295,7 @@
 										</Bus>
 									</ChildrenList>
 								</Bus>
-								<Bus Name="3 Boss SFX" ID="{CC083967-BD3D-4666-AF45-F5B6C1262297}">
+								<Bus Name="3 Boss &amp; Enemy SFX" ID="{CC083967-BD3D-4666-AF45-F5B6C1262297}">
 									<ChildrenList>
 										<Bus Name="BossActions" ID="{46E37823-9B8E-49F5-A92E-E8E32667D867}">
 											<ChildrenList>
@@ -2457,6 +2457,8 @@
 												</ObjectList>
 											</ObjectLists>
 										</Bus>
+										<Bus Name="EnemyActions" ID="{A4BDF6E6-79F1-4200-AF70-2220E2C4B6DB}"/>
+										<Bus Name="EnemyDamage" ID="{47BD9A80-1EA1-48C0-94DD-F0B710FE73D8}"/>
 									</ChildrenList>
 								</Bus>
 								<Bus Name="6 Misc" ID="{C25B3616-A1DC-4E8B-A1FA-08B6F2C9E7D5}"/>

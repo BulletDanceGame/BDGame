@@ -22277,9 +22277,78 @@
 						</Folder>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="3 Boss SFX" ID="{A195D9D0-F658-4047-844D-711DD5FFAF57}" ShortID="284101095">
+				<Folder Name="3 Boss and Enemy SFX" ID="{A195D9D0-F658-4047-844D-711DD5FFAF57}" ShortID="284101095">
 					<ChildrenList>
-						<Folder Name="General SFX" ID="{196B54DF-EB3E-4E9A-B66F-15DA6126689E}" ShortID="632223192"/>
+						<Folder Name="General SFX" ID="{196B54DF-EB3E-4E9A-B66F-15DA6126689E}" ShortID="632223192">
+							<ChildrenList>
+								<Sound Name="FirstTurret - Turn on and Alert" ID="{5713F784-B486-4580-A119-A4278C64282B}" ShortID="449701620">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="EnemyActions" ID="{A4BDF6E6-79F1-4200-AF70-2220E2C4B6DB}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FirstTurret - Turn on and Alert" ID="{4723F520-EDB3-4EDC-81C2-906FE60CE70D}">
+											<Language>SFX</Language>
+											<AudioFile>FirstTurret - Turn on and Alert.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="675450540"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FirstTurret - Turn on and Alert" ID="{4723F520-EDB3-4EDC-81C2-906FE60CE70D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="TurretTurnOff" ID="{E78CFC8F-4992-4F01-A983-9C3381B4DF1E}" ShortID="382214744">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="EnemyActions" ID="{A4BDF6E6-79F1-4200-AF70-2220E2C4B6DB}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="TurretTurnOff" ID="{73144F66-E7B9-4191-91EF-11F165D5D39C}">
+											<Language>SFX</Language>
+											<AudioFile>TurretTurnOff.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="680270997"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="TurretTurnOff" ID="{73144F66-E7B9-4191-91EF-11F165D5D39C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="TurretTurnOn" ID="{1A3D9E1C-9860-4D29-B0ED-C4C529358D9E}" ShortID="995202663">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="EnemyActions" ID="{A4BDF6E6-79F1-4200-AF70-2220E2C4B6DB}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="TurretTurnOn" ID="{21FDB5B1-D204-45C1-B920-8EE7F11B3EF6}">
+											<Language>SFX</Language>
+											<AudioFile>TurretTurnOn.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="37225859"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="TurretTurnOn" ID="{21FDB5B1-D204-45C1-B920-8EE7F11B3EF6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
 						<Folder Name="Boss 1 - Yokai Hunter" ID="{09FF9EEA-247E-42BA-9773-7BD43BFFA45E}" ShortID="436883036">
 							<ChildrenList>
 								<Folder Name="Special Abilities" ID="{8AE64AEA-8BF0-4212-B8BC-A710D2BF2885}" ShortID="157197466">

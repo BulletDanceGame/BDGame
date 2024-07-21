@@ -19,7 +19,8 @@ public class LoadingScreen : MonoBehaviour
 
     void Start()
     {
-        canvas.worldCamera = Camera.main;
+        if (canvas.worldCamera == null)
+            canvas.worldCamera = Camera.main;
 
         InvertMask(1);
 
