@@ -29,6 +29,13 @@ public class SceneLoadButton : MonoBehaviour
                 break;
 
             case SceneManager.LoadOptions.RespawnPlayer:
+
+                if(CheckpointManager.instance.GetCurrentCheckPoint() == null)
+                {
+                    SceneManager.Instance.ReloadCurrentScene(3.5f);
+                    return;
+                }
+
                 UnitManager.Instance.RespawnPlayer();
 
                 break;
