@@ -121,24 +121,39 @@ public class BigCritterMovelist : Movelist
         if (spiralShotIndex == 4) { spiralShotIndex = 0; }
     }
 
-    private void JumpToThePlayer()
-    {        
-        _jumpdirection = 1;
-        _jumpTime = startJumpTime;
-    }
+    //private void JumpToThePlayer()
+    //{        
+    //    _jumpdirection = 1;
+    //    _jumpTime = startJumpTime;
+    //}
 
-    private void JumpOutOfTheScreen()
+    private void LowJump()
     {
-        //JumpAnimation
+        print("Jump");
+        _jumpdirection = 1;
+
+        _jumpTime = startJumpTime;
+        _animHandler.SpecialStart(47);
+
     }
 
-    private void JumpinPlace()
+    private void LowLand()
+    {
+        print("Land");
+        _jumpdirection = 1;
+
+        _jumpTime = startJumpTime;
+        _animHandler.SpecialStart(46);
+
+    }
+
+    private void JumpOutOftheScreen()
     {
         print("JUMPED");
         _jumpTime = startJumpTime;
+        _jumpdirection = 4;
 
         _animHandler.SpecialStart(49);
-        _isCritterRunning = false;
     }
 
     private void LandAndCircleShot()
@@ -172,7 +187,7 @@ public class BigCritterMovelist : Movelist
         {
             Jump();
             _distanceFromPlayer = Vector2.Distance(UnitManager.Instance.GetPlayer().transform.position, transform.position);
-            //ChasePlayer();
+            ChasePlayer();
         }
 
         //Animation
@@ -222,6 +237,11 @@ public class BigCritterMovelist : Movelist
                     SpawnSmallCritter();
                 }
             }
+            else if (_jumpdirection == 4)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, UnitManager.Instance.GetPlayer().transform.position, JumpSpeed * Time.deltaTime);
+
+            }
         }
     }
 
@@ -233,29 +253,29 @@ public class BigCritterMovelist : Movelist
         RaycastHit2D hitleft = Physics2D.Raycast(transform.position, -transform.right, _distanceFromWall, layermask);
         RaycastHit2D hitright = Physics2D.Raycast(transform.position, transform.right, _distanceFromWall, layermask);
 
-        if(!airborne)
+        if(airborne)
         {
-            if (_distanceFromPlayer > stopAndShootRadius && _activate)
-            {
-                _isCritterRunning = true;
-                _runSpeed += Time.deltaTime * _acceleration;
-                if (_runSpeed > Speed) _runSpeed = Speed;
-            }
-            if (_distanceFromPlayer <= stopAndShootRadius)
-            {
-                _isCritterRunning = false;
-                _runSpeed -= Time.deltaTime * _acceleration;
-                if (_runSpeed < 0) _runSpeed = 0;
+            //if (_distanceFromPlayer > stopAndShootRadius && _activate)
+            //{
+            //    _isCritterRunning = true;
+            //    _runSpeed += Time.deltaTime * _acceleration;
+            //    if (_runSpeed > Speed) _runSpeed = Speed;
+            //}
+            //if (_distanceFromPlayer <= stopAndShootRadius)
+            //{
+            //    _isCritterRunning = false;
+            //    _runSpeed -= Time.deltaTime * _acceleration;
+            //    if (_runSpeed < 0) _runSpeed = 0;
 
-                StartCoroutine(StopChasingTimer());
-            }
+            //    StartCoroutine(StopChasingTimer());
+            //}
             agent.speed = _runSpeed;
-            if (_isCritterRunning)
-            {
+            //if (_isCritterRunning)
+            //{
                 //commented out cause of causing errors
                 agent.SetDestination(UnitManager.Instance.GetPlayer().transform.position);
 
-            }
+            //}
 
 
             _runStateChanged = _isPrevRun != _isCritterRunning;
