@@ -10222,7 +10222,7 @@ Transform:
   - {fileID: 2819941317815225125}
   - {fileID: 822308213236015833}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5052402955593469663
 GameObject:
@@ -10595,6 +10595,7 @@ GameObject:
   - component: {fileID: 1809560085193520532}
   - component: {fileID: 3239881512252911267}
   - component: {fileID: 2565295642142048505}
+  - component: {fileID: 2784084702162978592}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -10644,6 +10645,7 @@ MonoBehaviour:
   _txtMulti: {fileID: 704380147136799303}
   currencyAnim: {fileID: 0}
   scoreAnim: {fileID: 2565295642142048505}
+  _canvas: {fileID: 2784084702162978592}
 --- !u!114 &3239881512252911267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10678,6 +10680,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!225 &2784084702162978592
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5166875311525480496}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &5180622664917350908
 GameObject:
   m_ObjectHideFlags: 0

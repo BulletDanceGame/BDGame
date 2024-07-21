@@ -8,14 +8,21 @@ public class CalibrationMenu : MonoBehaviour
 
     [SerializeField] private MainMenu menu;
 
+    public bool canHit { get; set; } = true;
+
+
     public void SwitchScreen(int i)
     {
         if (_currentScreen + i < 0)
         {
+            SaveSystem.Instance.Save();
+            
             menu.BackFromCalibration();
         }
         else if (_currentScreen + i >= _screens.Length)
         {
+            SaveSystem.Instance.Save();
+
             _screens[_currentScreen].SetActive(false);
             _screens[0].SetActive(true);
             _currentScreen = 0;

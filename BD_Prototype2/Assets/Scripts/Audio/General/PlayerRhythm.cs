@@ -14,9 +14,9 @@ public class PlayerRhythm : MonoBehaviour
 {
     public static PlayerRhythm Instance;
 
-    public double offsetVisuals;
-    public double offsetSwing;
-    public double offsetDash;
+    public double offsetVisuals { get; set; }
+    public double offsetSwing { get; set; }
+    public double offsetDash { get; set; }
 
 
     private double _timeOfSequence = 0;
@@ -61,6 +61,10 @@ public class PlayerRhythm : MonoBehaviour
         visualUpdates[3] = new VisualUpdate(); visualUpdates[3].anticipation = 8;
         visualUpdates[4] = new VisualUpdate(); visualUpdates[4].anticipation = 12;
 
+        SaveData data = SaveSystem.Instance.GetData();
+        offsetSwing = data.swingOffset;
+        offsetDash = data.dashOffset;
+        offsetVisuals = data.visualOffset;
     }
 
 
@@ -305,7 +309,8 @@ public class PlayerRhythm : MonoBehaviour
         }
 
         double time = Time.timeAsDouble;
-        double offset = (input == ButtonInput.swing) ? offsetSwing : offsetDash;
+        double offset = (input == ButtonInput.swing) ? offsetSwing :  ( 
+                        (input == ButtonInput.dash)  ? offsetDash  : 0);
 
         double a = double.MaxValue;
         int index = 0;

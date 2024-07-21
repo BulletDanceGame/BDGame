@@ -166,6 +166,13 @@ public class PlayerMovement : MonoBehaviour
         if (!canMove)
             return;
 
+        if (GetComponent<Player>().pauseActions)
+        {
+            inputVector = new Vector2();
+            EventManager.Instance?.PlayerMove(inputVector);
+            return;
+        }
+
         inputVector = value.Get<Vector2>();
         EventManager.Instance?.PlayerMove(inputVector);
     }
@@ -192,7 +199,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnSlide(InputValue value)
     {
-        if (!canDash || !DashActivated || GetComponent<Player>().playerFailState == Player.PlayerFailState.FAILED)
+        if (!canDash || !DashActivated || GetComponent<Player>().playerFailState == Player.PlayerFailState.FAILED || GetComponent<Player>().pauseActions)
             return;
 
         float originalDashDistance = dashDistance;

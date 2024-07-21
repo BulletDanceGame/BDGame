@@ -40,8 +40,8 @@ public class MusicManager : MonoBehaviour
 
 
     public double secondsPerBeat { get; set; }
-    public int maxFPS;
-    private double framesPerBeat; //this should theoretically be able to be a int, but as its made by 2 doubles its a double for safety
+    public int maxFPS { get; set; }
+    private double framesPerBeat; //this should theoretically be able to be a int, but its calculated by 2 doubles so its a double for safety
     private int currentFramerate;
     private double currentFrameDuration = 0;
     private int currentFrameDelay;
@@ -94,8 +94,9 @@ public class MusicManager : MonoBehaviour
         _waitBeforeStartUp = true;
         _startUpIsInvoked = false;
 
-        EventManager.Instance.DisableInput();
+        maxFPS = SaveSystem.Instance.GetData().maxFPS;
 
+        EventManager.Instance.DisableInput();
     }
 
 

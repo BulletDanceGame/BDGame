@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 87671893040574977}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_slim_1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,6 +119,363 @@ PolygonCollider2D:
       - {x: 5.125, y: -3.6875}
       - {x: 6.0625, y: -4.25}
   m_UseDelaunayMesh: 0
+--- !u!1 &413374449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 413374451}
+  - component: {fileID: 413374450}
+  - component: {fileID: 7701080952793364411}
+  m_Layer: 0
+  m_Name: forestSideSmallerVariations_spriteSheet_slim_18
+  m_TagString: Wall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &413374451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413374449}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -47.04, y: -162.9, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1750959612987350722}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &413374450
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413374449}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -1880388346, guid: 340d0e4042bb9fc43a0b98e6a74c90c4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3, y: 12.0625}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!60 &7701080952793364411
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413374449}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 12.0625}
+    newSize: {x: 3, y: 12.0625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.3125, y: -6.03125}
+      - {x: 1.0625, y: -4.40625}
+      - {x: 1.0625, y: -1.03125}
+      - {x: -0.1875, y: 0.71875}
+      - {x: 0.8125, y: 3.09375}
+      - {x: 0.3125, y: 6.03125}
+      - {x: 1.5, y: 6.03125}
+      - {x: 1.5, y: -6.03125}
+  m_UseDelaunayMesh: 0
+--- !u!1 &715658882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 715658884}
+  - component: {fileID: 715658883}
+  - component: {fileID: 4431289870311019585}
+  m_Layer: 0
+  m_Name: forestSideSmallerVariations_spriteSheet_slim_0
+  m_TagString: Wall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &715658884
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715658882}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -34.18, y: -180.12, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1750959612987350722}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &715658883
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715658882}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -2106121998, guid: 340d0e4042bb9fc43a0b98e6a74c90c4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 27.8125, y: 9.625}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!60 &4431289870311019585
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715658882}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 27.8125, y: 9.625}
+    newSize: {x: 27.8125, y: 9.625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -10.46875, y: -4.8125}
+      - {x: -11.65625, y: 0.125}
+      - {x: -9.34375, y: 2.625}
+      - {x: -1.53125, y: 2.1875}
+      - {x: -1.2991104, y: -0.1761322}
+      - {x: 8.03125, y: 0.3125}
+      - {x: 9.53125, y: -1.0625}
+      - {x: 13.90625, y: 3.0625}
+      - {x: 13.90625, y: -4.8125}
+  m_UseDelaunayMesh: 0
+--- !u!1 &746338385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 746338387}
+  - component: {fileID: 746338386}
+  - component: {fileID: 7644604015552109591}
+  m_Layer: 0
+  m_Name: forestSideSmallerVariations_spriteSheet_slim_31
+  m_TagString: Wall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &746338387
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746338385}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -49.73, y: -173.36, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1750959612987350722}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &746338386
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746338385}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -209750086, guid: 340d0e4042bb9fc43a0b98e6a74c90c4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 9.375, y: 12.0625}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!60 &7644604015552109591
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746338385}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.375, y: 12.0625}
+    newSize: {x: 9.375, y: 12.0625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -3.5625, y: -6.03125}
+      - {x: -3.6875, y: -3.78125}
+      - {x: 0.0625, y: -2.40625}
+      - {x: 1.125, y: -0.03125}
+      - {x: -3.0625, y: 6.03125}
+      - {x: 4.6875, y: 6.03125}
+      - {x: 4.6875, y: -6.03125}
+  m_UseDelaunayMesh: 0
 --- !u!1 &838100715
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +489,7 @@ GameObject:
   - component: {fileID: 1916981080080900321}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_slim_11
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -260,7 +617,7 @@ GameObject:
   - component: {fileID: 7492186637500470680}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_slim_32
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -367,6 +724,124 @@ PolygonCollider2D:
       - {x: 4.4375, y: 6.03125}
       - {x: 4.4375, y: -6.03125}
   m_UseDelaunayMesh: 0
+--- !u!1 &1876709143
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1876709145}
+  - component: {fileID: 1876709144}
+  - component: {fileID: 3813520769739933513}
+  m_Layer: 0
+  m_Name: forestSideSmallerVariations_spriteSheet_slim_27
+  m_TagString: Wall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1876709145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876709143}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -51.34, y: -151.97958, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1750959612987350722}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1876709144
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876709143}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 738194660, guid: 340d0e4042bb9fc43a0b98e6a74c90c4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 9.375, y: 12.0625}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!60 &3813520769739933513
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876709143}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.375, y: 12.0625}
+    newSize: {x: 9.375, y: 12.0625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1.8932495, y: -3.0308704}
+      - {x: 2, y: -4.21875}
+      - {x: 3.4375, y: -6.03125}
+      - {x: -4.6875, y: -6.03125}
+      - {x: -4.6875, y: 6.03125}
+      - {x: 3.25, y: 6.03125}
+      - {x: 2.9375, y: 2.15625}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1918082135
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,7 +855,7 @@ GameObject:
   - component: {fileID: 4797068427892601679}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_21
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -562,7 +1037,7 @@ GameObject:
   - component: {fileID: 7127776352268940035}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_17
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -679,7 +1154,7 @@ GameObject:
   - component: {fileID: 1750959612136195575}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_27
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -795,7 +1270,7 @@ GameObject:
   - component: {fileID: 1750959612322820369}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_23
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -917,7 +1392,7 @@ GameObject:
   - component: {fileID: 1750959612339778570}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_24 (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1036,7 +1511,7 @@ GameObject:
   - component: {fileID: 1750959612362649238}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_2 (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1153,7 +1628,7 @@ GameObject:
   - component: {fileID: 1750959612478129662}
   m_Layer: 0
   m_Name: forestSides_slim_5
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1278,7 +1753,7 @@ GameObject:
   - component: {fileID: 1750959612479619957}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_26
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1396,7 +1871,7 @@ GameObject:
   - component: {fileID: 1750959612497617967}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_28
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1515,7 +1990,7 @@ GameObject:
   - component: {fileID: 1750959612564487603}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_10 (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1644,7 +2119,7 @@ GameObject:
   - component: {fileID: 1750959612598928697}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_9
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1761,7 +2236,7 @@ GameObject:
   - component: {fileID: 1750959612605111730}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_slim_29
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1881,7 +2356,7 @@ GameObject:
   - component: {fileID: 1750959612633769251}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_22
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1997,7 +2472,7 @@ GameObject:
   - component: {fileID: 1750959612643518175}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2118,7 +2593,7 @@ GameObject:
   - component: {fileID: 1750959612659592247}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_slim_4
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2259,7 +2734,7 @@ GameObject:
   - component: {fileID: 1750959612668388655}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_4
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2377,7 +2852,7 @@ GameObject:
   - component: {fileID: 1750959612782528841}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_17
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2494,7 +2969,7 @@ GameObject:
   - component: {fileID: 1750959612811542441}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_slim_28 (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2617,7 +3092,7 @@ GameObject:
   - component: {fileID: 1750959612822715317}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_9 (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2734,7 +3209,7 @@ GameObject:
   - component: {fileID: 1750959612842743690}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_2 (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2856,7 +3331,7 @@ GameObject:
   - component: {fileID: 1750959612845394280}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_11
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2971,7 +3446,7 @@ GameObject:
   - component: {fileID: 1750959612870806878}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_0
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3110,7 +3585,7 @@ GameObject:
   - component: {fileID: 1750959612873664266}
   m_Layer: 0
   m_Name: forestSides_3
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3229,7 +3704,7 @@ GameObject:
   - component: {fileID: 1750959612900870396}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_26
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3347,7 +3822,7 @@ GameObject:
   - component: {fileID: 1750959612911515068}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_slim_10
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3543,6 +4018,10 @@ Transform:
   - {fileID: 2027610465}
   - {fileID: 838100717}
   - {fileID: 1918082137}
+  - {fileID: 1876709145}
+  - {fileID: 746338387}
+  - {fileID: 715658884}
+  - {fileID: 413374451}
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3589,7 +4068,7 @@ GameObject:
   - component: {fileID: 1750959613012875152}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_24
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3708,7 +4187,7 @@ GameObject:
   - component: {fileID: 1750959613041920563}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3825,7 +4304,7 @@ GameObject:
   - component: {fileID: 1750959613133649505}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_5
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3953,7 +4432,7 @@ GameObject:
   - component: {fileID: 1750959613187060815}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_4
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4071,7 +4550,7 @@ GameObject:
   - component: {fileID: 1750959613252635365}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_3
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4194,7 +4673,7 @@ GameObject:
   - component: {fileID: 1750959613266392421}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_22
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4310,7 +4789,7 @@ GameObject:
   - component: {fileID: 1750959613306228500}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_11
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4426,7 +4905,7 @@ GameObject:
   - component: {fileID: 1750959613349372891}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_13
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4542,7 +5021,7 @@ GameObject:
   - component: {fileID: 1750959613421288218}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_17
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4659,7 +5138,7 @@ GameObject:
   - component: {fileID: 1750959613429108562}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_5
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4787,7 +5266,7 @@ GameObject:
   - component: {fileID: 1750959613530844625}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_28
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4906,7 +5385,7 @@ GameObject:
   - component: {fileID: 1750959613606873794}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_11
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5021,7 +5500,7 @@ GameObject:
   - component: {fileID: 1750959613615400160}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_19
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5143,7 +5622,7 @@ GameObject:
   - component: {fileID: 1750959613626814909}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5265,7 +5744,7 @@ GameObject:
   - component: {fileID: 1750959613708581391}
   m_Layer: 0
   m_Name: forestSides_slim_15
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5430,7 +5909,7 @@ GameObject:
   - component: {fileID: 1750959613727999094}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5552,7 +6031,7 @@ GameObject:
   - component: {fileID: 1750959613789345890}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_9 (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5669,7 +6148,7 @@ GameObject:
   - component: {fileID: 1750959613817380684}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_9
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5786,7 +6265,7 @@ GameObject:
   - component: {fileID: 1750959613824324300}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_9
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5903,7 +6382,7 @@ GameObject:
   - component: {fileID: 1750959613832061213}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_8
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6029,7 +6508,7 @@ GameObject:
   - component: {fileID: 1750959613836657323}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_0
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6168,7 +6647,7 @@ GameObject:
   - component: {fileID: 1750959613874274622}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_slim_28
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6291,7 +6770,7 @@ GameObject:
   - component: {fileID: 1750959613922604250}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_3
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6414,7 +6893,7 @@ GameObject:
   - component: {fileID: 1750959613973916416}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_16
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6530,7 +7009,7 @@ GameObject:
   - component: {fileID: 1750959614061845568}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_19
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6652,7 +7131,7 @@ GameObject:
   - component: {fileID: 1750959614131053805}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_2 (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6769,7 +7248,7 @@ GameObject:
   - component: {fileID: 1750959614165053465}
   m_Layer: 0
   m_Name: forestSideSmallerVariations_spriteSheet_slim_10 (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

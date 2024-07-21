@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MatUI_LoadScreen
-  m_Shader: {fileID: -6465566751694194690, guid: 5d484c1a6175f394ea5e5d83e0d458c1, type: 3}
+  m_Shader: {fileID: 4800000, guid: 3917fb71def33e043bb4c728ed8045df, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -78,13 +78,20 @@ Material:
     - _AlphaClip: 1
     - _Blend: 0
     - _CastShadows: 0
+    - _ColorMask: 15
     - _Cull: 2
     - _DstBlend: 10
     - _EnableExternalAlpha: 0
-    - _InvertMask: 1
+    - _InvertMas: 0
+    - _InvertMask: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SrcBlend: 5
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
     - _Surface: 1
     - _ZTest: 4
     - _ZWrite: 0

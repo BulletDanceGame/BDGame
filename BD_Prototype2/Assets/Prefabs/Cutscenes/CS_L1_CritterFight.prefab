@@ -64,9 +64,14 @@ PlayableDirector:
     value: {fileID: 4452384897567410994}
   m_ExposedReferences:
     m_References:
+    - 238a3fece65d78747978617477bd8d1b: {fileID: 0}
     - e7bfa9ac16d60ea42a41835da01ef9d9: {fileID: 0}
+    - 906fef16a24bdf842aef214e4819efa2: {fileID: 0}
+    - 51c8869e74331e044b04437cd0867fd9: {fileID: 0}
+    - 89ca2ae70906e5d4ab7ba9d280e128ee: {fileID: 0}
     - e7a5024e8e9311242af515cfe963fc3d: {fileID: 0}
     - c2ad44b4bda29c4498c4c763bb0945fd: {fileID: 0}
+    - 9d39804f29095694b8a56cc42baf6382: {fileID: 0}
     - f6fae70105ac2bc4eaec7eadf293aef1: {fileID: 0}
 --- !u!114 &4452384897567410994
 MonoBehaviour:
@@ -141,12 +146,13 @@ MonoBehaviour:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: Boss1Animator, Assembly-CSharp
-          m_MethodName: StartSmokeParticles
-          m_Mode: 1
+          m_TargetAssemblyTypeName: CameraManager, Assembly-CSharp
+          m_MethodName: SwitchCamera
+          m_Mode: 2
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgumentAssemblyTypeName: Cinemachine.CinemachineVirtualCamera,
+              Cinemachine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -217,20 +223,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: CameraManager, Assembly-CSharp
-          m_MethodName: SwitchCamera
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: Cinemachine.CinemachineVirtualCamera,
-              Cinemachine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!1 &6681110440573146836
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,12 +302,13 @@ MonoBehaviour:
     m_Signals:
     - {fileID: 11400000, guid: ec1a6f45da483714497b1457e6915cca, type: 2}
     - {fileID: 11400000, guid: c0e12f540a25bf3449827a0f1ebe3bdd, type: 2}
+    - {fileID: 11400000, guid: be3c889e08ed8cf40b6b8b5873279adf, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: BulletDance.Cutscene.CS_Events, Assembly-CSharp
-          m_MethodName: EV_ActivateBoss
+          m_TargetAssemblyTypeName: BigCritterMovelist, Assembly-CSharp
+          m_MethodName: Activate
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -369,6 +363,20 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -442,6 +450,7 @@ PlayableDirector:
     m_References:
     - 79cb0b53cb3c15d459c3074294e0a016: {fileID: 0}
     - 468ab50434c0ff54eafcc055e867ea79: {fileID: 0}
+    - dbbcbe446ab2146428547767b5b452c8: {fileID: 0}
 --- !u!114 &6181600738587400672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,6 +599,46 @@ PrefabInstance:
     - target: {fileID: 2074316311125530462, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
       propertyPath: m_Name
       value: CS_L1_CritterFight
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
+      propertyPath: m_Events.m_Events.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
+      propertyPath: m_Events.m_Signals.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
+      propertyPath: m_Events.m_Signals.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: e9f57fb48ef23d442aa62a5df248628f, type: 2}
+    - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[9].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TemporaryMuteSetSounds
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BulletDance.Audio.PlayerSounds, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:

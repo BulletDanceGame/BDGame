@@ -56,11 +56,17 @@ public class PlayerSwing : MonoBehaviour
     public GameObject rhythmUI;
 
 
-    private void Start()
+    IEnumerator Start()
     {
         PlayerSwingState  = SwingState.NOTSWINGING;
         CurrentController = InputManager.Instance.CurrentController;
         _playerInput      = InputManager.Instance.PlayerInput;
+
+        _swingMat = _rend.material;
+
+        aimAssistCandidates = new List<AimAssistGameObject>();
+
+        yield return null;
 
         EventManager.Instance.OnKeyBoardAndMouseUsed += ChangeToKBM;
         EventManager.Instance.OnGamePadUsed += ChangeToGAMEPAD;
@@ -70,10 +76,6 @@ public class PlayerSwing : MonoBehaviour
         EventManager.Instance.OnBossDeath += DisableAimAssist;
 
         EventManager.Instance.OnPlayerLastHit += LastHitSwing;
-
-        _swingMat = _rend.material;
-
-        aimAssistCandidates = new List<AimAssistGameObject>();
     }
 
     private void Update()
@@ -95,7 +97,7 @@ public class PlayerSwing : MonoBehaviour
 
     void OnSwing()
     {
-        if (!SwingActivated)
+        if (!SwingActivated || GetComponentInParent<Player>().pauseActions)
             return;
 
         if(!canRotate) return;

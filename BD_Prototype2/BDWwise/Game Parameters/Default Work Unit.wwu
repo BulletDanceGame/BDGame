@@ -54,6 +54,9 @@
 								<Property Name="InitialValue" Type="Real64" Value="0"/>
 							</PropertyList>
 						</GameParameter>
+						<GameParameter Name="HIGH_PASS____PlayerDamage" ID="{966AB997-40DB-4D67-AC98-95493BF889C8}"/>
+						<GameParameter Name="HIGH_PASS____MusicEnvBattle" ID="{4B24861D-1C18-4833-A655-7B5BB1DD8C2F}"/>
+						<GameParameter Name="HIGH_PASS____MusicEnvRoaming" ID="{3309B160-C813-4993-B42E-959F1427B4FB}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="PITCH" ID="{8F47C34B-AA10-4AD2-8C79-B5ECEBF15280}" ShortID="890567242">
@@ -78,6 +81,7 @@
 						<GameParameter Name="LOW_PASS____PlayerMovement__Footsteps" ID="{E6FB4BA0-8716-4C09-B462-26C66B4D7A80}"/>
 						<GameParameter Name="LOW_PASS____MusicEnvBattle" ID="{8ADB90AA-99F1-43DC-990B-3AFBC78E91C3}"/>
 						<GameParameter Name="LOW_PASS____PlayerActions__Dynamic" ID="{B9A97B03-2F6F-42A1-8023-AC9AA1008F95}"/>
+						<GameParameter Name="LOW_PASS____PlayerMiss" ID="{3F0D7682-3AA2-4E4D-8022-B8902DCA89C2}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="öSPECIAL RTPCS" ID="{D38E7F69-9F1B-4AE7-8588-88321F483291}" ShortID="913748267">
@@ -86,9 +90,13 @@
 						<GameParameter Name="PITCH_SPECIAL____DeflectionElement__PitchElement" ID="{F980AFC9-113F-4A2F-8837-AAEADDD0995C}"/>
 					</ChildrenList>
 				</Folder>
-				<GameParameter Name="HIGH_PASS____MusicEnvRoaming" ID="{3309B160-C813-4993-B42E-959F1427B4FB}"/>
-				<GameParameter Name="HIGH_PASS____MusicEnvBattle" ID="{4B24861D-1C18-4833-A655-7B5BB1DD8C2F}"/>
-				<GameParameter Name="HIGH_PASS____PlayerDamage" ID="{966AB997-40DB-4D67-AC98-95493BF889C8}"/>
+				<GameParameter Name="BITCRUSHER_MUSIC" ID="{7827654D-5C48-4B02-8396-FD72C1219B9A}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="VOLUME____PlayerActions__PlayerMiss" ID="{A4D49671-6EFD-4EB1-B4F1-F2E26F87BCE3}"/>
+				<GameParameter Name="VOLUME____MenuMusic" ID="{FC1B4786-DAFA-4A52-A0E7-2AB004EA9CDC}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

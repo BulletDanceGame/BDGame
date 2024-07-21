@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
     public float ResetTimeSeconds = 10f;
     public int BeatTilReset;
 
+    public bool pauseActions = false;
+
     [SerializeField]
     public static bool isSlowmo;
 
@@ -77,14 +79,19 @@ public class Player : MonoBehaviour
         EventManager.Instance.OnCutsceneStart -= ResetFail;
     }
 
-    private void Start()
+    IEnumerator Start()
     {
         currentHealth = startingHealth;
 
         EventManager.Instance.PlayerSpawned();
 
         _checkpointManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<CheckpointManager>();
-        actionUI = GameObject.Find("ActionsUI");    
+        actionUI = GameObject.Find("ActionsUI");
+
+        yield return null;
+
+        EventManager.Instance.OnCutsceneStart += pauseAction;
+        EventManager.Instance.OnCutsceneEnd += enableAction;
     }
 
     //Debug code -- Remember to remove
@@ -141,7 +148,20 @@ public class Player : MonoBehaviour
 
     void OnPause()
     {
+        if(isDead)
+            return;
         EventManager.Instance.PausePressed();
+        pauseActions = !pauseActions;
+    }
+
+    void pauseAction(string s)
+    {
+        pauseActions = true;
+    }
+
+    void enableAction()
+    {
+        pauseActions = false;
     }
 
     void SuccessBeatCheck()
