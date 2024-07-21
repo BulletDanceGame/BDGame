@@ -268,7 +268,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{9EF62CD1-DE28-A870-B134-642C41D5942F}">
+		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{20B81923-077E-FC50-F09D-7278ADC2FD3F}">
 			<ShortName>Music_TutorialAndLevel1_Part1</ShortName>
 			<Path>Music_TutorialAndLevel1_Part1.bnk</Path>
 			<Media>
@@ -567,6 +567,9 @@
 					</MediaRefs>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="2338745114" Name="PLAYBACK_SPEED____MusicBossBattle"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="85412153" Name="Ambience">
 					<States>
@@ -1917,7 +1920,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{A17C4375-E41F-7460-A1CE-0A025E001195}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{42B00BA8-233F-95AD-993F-90916F2C090F}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -3280,5 +3283,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{87D6CA0A-9477-877E-5226-0852004DBE57}</FileHash>
+	<FileHash>{8A58AA68-EFED-3C4B-2C42-D20662DADD9C}</FileHash>
 </SoundBanksInfo>
