@@ -173,22 +173,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2032002759}
     m_Modifications:
-    - target: {fileID: 721000935499606875, guid: af703b0c755146043ac4a170eecfb491, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 721000935499606875, guid: af703b0c755146043ac4a170eecfb491, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 721000935499606875, guid: af703b0c755146043ac4a170eecfb491, type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 721000935499606875, guid: af703b0c755146043ac4a170eecfb491, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1634259399783318607, guid: af703b0c755146043ac4a170eecfb491, type: 3}
       propertyPath: m_Name
       value: SceneManager
@@ -237,6 +221,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7918040657782663386, guid: af703b0c755146043ac4a170eecfb491, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 393419070}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: af703b0c755146043ac4a170eecfb491, type: 3}
