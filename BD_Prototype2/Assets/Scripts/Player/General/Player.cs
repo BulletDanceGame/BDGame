@@ -1,3 +1,4 @@
+using BulletDance.Audio;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -257,6 +258,8 @@ public class Player : MonoBehaviour
 
         EventManager.Instance.PlayerDeath();
         gameObject.SetActive(false);
+
+        //stop ambience
     }
 
     public void RespawnPlayer(Vector2 spawnPoint)
