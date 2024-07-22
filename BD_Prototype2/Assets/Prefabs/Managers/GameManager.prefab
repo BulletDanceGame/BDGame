@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxTimeScore: 10000
-  _maxCombo: 4
+  _maxCombo: 10
   GoodHits: 0
   PerfectHits: 0
   BadHits: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20493d79b6f58084f96ec7aca490228d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LastCheckpointPos: {x: 0, y: 0}
+  CurrentCheckpoint: {fileID: 0}
 --- !u!114 &2782246033361619036
 MonoBehaviour:
   m_ObjectHideFlags: 0
