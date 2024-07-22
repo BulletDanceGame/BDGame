@@ -12,12 +12,12 @@ public class CutsceneTrigger : MonoBehaviour
 
     void Start()
     {
-        EventManager.Instance.OnPlayerMiss += StartMissCutsceen;
+        EventManager.Instance.OnPlayerAttack += StartMissCutsceen;
     }
 
     void OnDestroy()
     {
-        EventManager.Instance.OnPlayerMiss -= StartMissCutsceen;
+        EventManager.Instance.OnPlayerAttack -= StartMissCutsceen;
     }
 
 
@@ -43,8 +43,9 @@ public class CutsceneTrigger : MonoBehaviour
     }
 
 
-    void StartMissCutsceen()
+    void StartMissCutsceen(BeatTiming hitTiming, Vector2 none)
     {
+        if(hitTiming != BeatTiming.BAD) return;
         if(triggered) return;
         if(!useTrigger && firstMiss)
             StartCutsceen();
