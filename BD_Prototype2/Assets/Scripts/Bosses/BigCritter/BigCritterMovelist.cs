@@ -141,6 +141,12 @@ public class BigCritterMovelist : Movelist
         _animHandler.SpecialStart(49);
     }
 
+    private void JumpOutOftheScreenWithCircleShot()
+    {
+        _jumpTime = startJumpTime;
+        _animHandler.SpecialStart(49);
+        CircleShot();
+    }
     private void HighJumpHover()
     {
         _jumpTime = startJumpTime;
