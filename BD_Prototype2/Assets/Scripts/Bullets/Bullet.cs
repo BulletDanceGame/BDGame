@@ -19,6 +19,7 @@ public class Bullet : MonoBehaviour
     private float _onBeatSpeedTimer = 0;
     public float lifeTime;
     public float Damage;
+    float baseDamage;
     public int bounces = 0;
     Vector2 dir;
     public float bounceDamage;
@@ -104,7 +105,9 @@ public class Bullet : MonoBehaviour
 
         SetSpeed(offBeatSpeed);
         _fx.SetUp(this);
-        _fx.Reset(); 
+        _fx.Reset();
+
+        baseDamage = Damage;
     }
 
     private void OnEnable()
@@ -125,7 +128,7 @@ public class Bullet : MonoBehaviour
         ResetBullet();
         CancelInvoke();
 
-        Damage = 15;
+        Damage = baseDamage;
 
         EventManager.Instance.OnPlayerRhythmBeat -= OnBeat;
     }

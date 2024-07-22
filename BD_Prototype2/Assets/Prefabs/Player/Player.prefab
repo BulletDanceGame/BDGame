@@ -9849,11 +9849,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerFailState: 0
-  <startingHealth>k__BackingField: 150
+  <startingHealth>k__BackingField: 100
   <defaultHealAmount>k__BackingField: 50
   Fails: 0
-  MaxFails: 3
-  ResetTimeSeconds: 10
+  MaxFails: 5
+  ResetTimeSeconds: 3
+  BeatTilReset: 0
   pauseActions: 0
   canSlowmo: 1
   _componentsToDisableOnDeath: []
