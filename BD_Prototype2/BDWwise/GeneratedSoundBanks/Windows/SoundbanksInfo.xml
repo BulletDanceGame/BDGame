@@ -268,7 +268,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{20B81923-077E-FC50-F09D-7278ADC2FD3F}">
+		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{8C0B517F-1EFF-45CF-7A2B-42DA6E97FAEC}">
 			<ShortName>Music_TutorialAndLevel1_Part1</ShortName>
 			<Path>Music_TutorialAndLevel1_Part1.bnk</Path>
 			<Media>
@@ -568,6 +568,7 @@
 				</Event>
 			</Events>
 			<GameParameters>
+				<GameParameter Id="1103547191" Name="PLAYBACK_SPEED____CutsceneMusic"/>
 				<GameParameter Id="2338745114" Name="PLAYBACK_SPEED____MusicBossBattle"/>
 			</GameParameters>
 			<StateGroups>
@@ -1238,7 +1239,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{AD35021C-CC52-075E-A88D-5B92D5861417}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{19C1C47E-A3B6-4E87-62DF-6D97B23B7E0D}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1920,7 +1921,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{42B00BA8-233F-95AD-993F-90916F2C090F}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{30391F8A-C1C7-7E17-2730-872B4A992162}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -3266,6 +3267,8 @@
 				</Event>
 			</Events>
 			<GameParameters>
+				<GameParameter Id="1103547191" Name="PLAYBACK_SPEED____CutsceneMusic"/>
+				<GameParameter Id="2338745114" Name="PLAYBACK_SPEED____MusicBossBattle"/>
 				<GameParameter Id="3260874934" Name="VOLUME_SPECIAL____DeflectionElement__PitchElement"/>
 				<GameParameter Id="3416700688" Name="PITCH_SPECIAL____DeflectionElement__PitchElement"/>
 				<GameParameter Id="3815680396" Name="pitch_only_here_for_reference_of_max_combo_stuff"/>
@@ -3283,5 +3286,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5DC3F887-7ADE-8769-6DAC-C25BC54E599E}</FileHash>
+	<FileHash>{92A1FE79-6677-B40F-192E-E3A142B86117}</FileHash>
 </SoundBanksInfo>
