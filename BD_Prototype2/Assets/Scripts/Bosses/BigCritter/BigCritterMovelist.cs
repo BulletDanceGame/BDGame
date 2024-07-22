@@ -63,7 +63,6 @@ public class BigCritterMovelist : Movelist
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-
         EventManager.Instance.OnDeactivateBoss += Deactivate;
         EventManager.Instance.OnActivateBoss += Activate;
     }
@@ -121,27 +120,16 @@ public class BigCritterMovelist : Movelist
         if (spiralShotIndex == 4) { spiralShotIndex = 0; }
     }
 
-    //private void JumpToThePlayer()
-    //{        
-    //    _jumpdirection = 1;
-    //    _jumpTime = startJumpTime;
-    //}
 
     private void LowJump()
     {
-        print("Jump");
-        _jumpdirection = 1;
-
-        _jumpTime = startJumpTime;
+        airborne = true;
         _animHandler.SpecialStart(47);
 
     }
 
     private void LowLand()
     {
-        print("Land");
-        _jumpdirection = 1;
-
         _jumpTime = startJumpTime;
         _animHandler.SpecialStart(46);
 
@@ -149,30 +137,20 @@ public class BigCritterMovelist : Movelist
 
     private void JumpOutOftheScreen()
     {
-        print("JUMPED");
         _jumpTime = startJumpTime;
-        _jumpdirection = 4;
-
         _animHandler.SpecialStart(49);
     }
 
-    private void LandAndCircleShot()
+    private void HighJumpHover()
     {
-        print("LANDED");
-
-        _jumpdirection = 2;
         _jumpTime = startJumpTime;
-
-        _animHandler.SpecialStart(48);
+        _animHandler.SpecialStart(45);
     }
 
-    private void LandAndSpawnCritter()
+    private void HighLand()
     {
-        _jumpdirection = 3;
         _jumpTime = startJumpTime;
-
         _animHandler.SpecialStart(48);
-
     }
 
     private void SpawnSmallCritter()
@@ -210,38 +188,14 @@ public class BigCritterMovelist : Movelist
 
         if (!airborne)
         {
-            _jumpdirection = 0;
             _animHandler?.SpecialStop();
         }
-
         else
         { // if dash then check direction start timer and add speed
             _jumpTime -= Time.deltaTime;
+            transform.position = Vector2.MoveTowards(transform.position, UnitManager.Instance.GetPlayer().transform.position, JumpSpeed * Time.deltaTime);
 
-            if (_jumpdirection == 1)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, UnitManager.Instance.GetPlayer().transform.position, JumpSpeed * Time.deltaTime);
-
-            }
-            else if (_jumpdirection == 2)
-            {
-                if (_jumpTime <= 0)
-                {
-                    CircleShot();
-                }
-            }
-            else if (_jumpdirection == 3)
-            {
-                if (_jumpTime <= 0)
-                {
-                    SpawnSmallCritter();
-                }
-            }
-            else if (_jumpdirection == 4)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, UnitManager.Instance.GetPlayer().transform.position, JumpSpeed * Time.deltaTime);
-
-            }
+            
         }
     }
 
