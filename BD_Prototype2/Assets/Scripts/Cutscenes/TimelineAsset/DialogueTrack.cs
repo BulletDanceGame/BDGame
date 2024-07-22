@@ -36,6 +36,7 @@ public class DialogueTrackMixer : PlayableBehaviour
 
     string savedText = "";
     string displayedText = "";
+    string richTag = "", closeTag = "";
 
     DialogueClip.Speaker speaker = DialogueClip.Speaker.Player;
 
@@ -115,6 +116,9 @@ public class DialogueTrackMixer : PlayableBehaviour
         {
             savedText = currentText;
             displayedText = "";
+            richTag    = "";
+            closeTag   = "";
+
             charIndex = 0;
 
             if (currentText.ToCharArray().Length > 0)
@@ -132,6 +136,25 @@ public class DialogueTrackMixer : PlayableBehaviour
 
             if (timer <= 0)
             {
+                bool tagDectected = DetectRichTextTag(currentText, charIndex, out charIndex);
+
+                if(tagDectected)
+                {
+                    if(richTag.ToCharArray().Length != 0)
+                    {
+                        displayedText += richTag;
+                        richTag = "";
+                    }
+
+                    if(closeTag.ToCharArray().Length != 0)
+                    {
+                        displayedText += closeTag;
+                        closeTag = "";
+                    }
+
+                    charIndex++;
+                }
+
                 displayedText += currentText.ToCharArray()[charIndex];
                 charIndex++;
                 timer = speed;
@@ -141,6 +164,47 @@ public class DialogueTrackMixer : PlayableBehaviour
         }
 
         dialogueUI.SetText(displayedText);
+    }
+
+    bool DetectRichTextTag(string currentText, int charIndex, out int newCharIndex)
+    {
+        //Detecting opening <
+        if(currentText.ToCharArray()[charIndex] != Convert.ToChar("<"))
+        {
+            newCharIndex = charIndex;
+            return false;
+        }
+
+        int tagCharIndex = charIndex;
+        bool closingTag = false;
+        string currentTag = "";
+
+        //Store tag
+        while(true)
+        {
+            //Detected closing tag
+            if(currentText.ToCharArray()[tagCharIndex] == Convert.ToChar("/"))
+                closingTag = true;
+
+            currentTag += currentText.ToCharArray()[tagCharIndex];
+
+            //Escape when current char is >
+            if(currentText.ToCharArray()[tagCharIndex] == Convert.ToChar(">"))
+                break;
+
+            tagCharIndex++;
+        }
+
+        //Set the tags
+        if(!closingTag)
+            richTag = currentTag;
+        else
+            closeTag = currentTag;
+        
+        //Set current index to tag index
+        newCharIndex = tagCharIndex;
+
+        return true;
     }
 
     private void PlayVoiceline(AK.Wwise.Event voiceline)

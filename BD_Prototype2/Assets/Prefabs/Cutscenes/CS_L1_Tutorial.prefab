@@ -311,6 +311,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569121171409cfe4883d838f97df0f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useTrigger: 1
+  firstMiss: 0
   cutsceneName: BatCutscene
 --- !u!61 &5204816437007691488
 BoxCollider2D:
@@ -338,6 +340,53 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.54335, y: 5.7941933}
   m_EdgeRadius: 0
+--- !u!1 &1108582973812782135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4424913102891617323}
+  - component: {fileID: 5152089132215957648}
+  m_Layer: 0
+  m_Name: Miss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4424913102891617323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108582973812782135}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 251.1, y: -166, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 65353473292512164}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5152089132215957648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108582973812782135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 569121171409cfe4883d838f97df0f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useTrigger: 0
+  firstMiss: 1
+  cutsceneName: MissCutscene
 --- !u!1 &2607236176605786212
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,6 +452,12 @@ PlayableDirector:
   - key: {fileID: 5150713083444007395, guid: 24bce3e33adc0cf48866f103e8856675, type: 2}
     value: {fileID: 0}
   - key: {fileID: 4138337989783103502, guid: 24bce3e33adc0cf48866f103e8856675, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -3476049305949433386, guid: 8b599ee2fdf71cd468b16edcf848202d, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 3732565579323672042, guid: 8b599ee2fdf71cd468b16edcf848202d, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -9133054470455937495, guid: 8b599ee2fdf71cd468b16edcf848202d, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References:
@@ -522,6 +577,125 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &3382003013233814256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5869232456309793812}
+  - component: {fileID: 6520242278081589723}
+  - component: {fileID: 3362134464569297918}
+  m_Layer: 0
+  m_Name: MissCutscene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5869232456309793812
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3382003013233814256}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8126732140138474042}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &6520242278081589723
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3382003013233814256}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 63ae758c1d19eb54e80aab4922c5d330, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 2
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -6032092211921924450, guid: 0ca5843b555078046beda8471701009f, type: 2}
+    value: {fileID: 160831082197974010}
+  - key: {fileID: -9131961219339093611, guid: 0ca5843b555078046beda8471701009f, type: 2}
+    value: {fileID: 3362134464569297918}
+  - key: {fileID: 523029686946304673, guid: 0ca5843b555078046beda8471701009f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 1403911962691740024, guid: 0ca5843b555078046beda8471701009f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -6032092211921924450, guid: 24bce3e33adc0cf48866f103e8856675, type: 2}
+    value: {fileID: 160831082197974010}
+  - key: {fileID: -9131961219339093611, guid: 24bce3e33adc0cf48866f103e8856675, type: 2}
+    value: {fileID: 3362134464569297918}
+  - key: {fileID: 6331106955855324377, guid: 24bce3e33adc0cf48866f103e8856675, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 5150713083444007395, guid: 24bce3e33adc0cf48866f103e8856675, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 4138337989783103502, guid: 24bce3e33adc0cf48866f103e8856675, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -6032092211921924450, guid: 63ae758c1d19eb54e80aab4922c5d330, type: 2}
+    value: {fileID: 160831082197974010}
+  - key: {fileID: -9131961219339093611, guid: 63ae758c1d19eb54e80aab4922c5d330, type: 2}
+    value: {fileID: 3362134464569297918}
+  - key: {fileID: 3909906484045958278, guid: 0ca5843b555078046beda8471701009f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -7198870419570524464, guid: 0ca5843b555078046beda8471701009f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -6795267663821940103, guid: 0ca5843b555078046beda8471701009f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -9104193929200197360, guid: 0ca5843b555078046beda8471701009f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 3350372585412467355, guid: 0ca5843b555078046beda8471701009f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8243463318529086234, guid: 0ca5843b555078046beda8471701009f, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References:
+    - 523c9ae8462188842bed159da1da28e5: {fileID: 0}
+    - 9dc90e0a075dde942a59ee93df5a6164: {fileID: 0}
+    - 72a3b59a64aba0a4bbcc03f907d419c8: {fileID: 0}
+    - 29f11b1f9ee3dcd44a6c233f75e2ef0c: {fileID: 0}
+    - 0b7bac62a3a18a44580fbf675236fc2e: {fileID: 0}
+--- !u!114 &3362134464569297918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3382003013233814256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: ec1a6f45da483714497b1457e6915cca, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3382003013233814256}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &4168027180798028866
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,6 +741,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569121171409cfe4883d838f97df0f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useTrigger: 1
+  firstMiss: 0
   cutsceneName: TurretCutscene
 --- !u!60 &6984818730372955997
 PolygonCollider2D:
@@ -794,6 +970,7 @@ Transform:
   - {fileID: 4783631722352275600}
   - {fileID: 1275666425649457735}
   - {fileID: 440045928}
+  - {fileID: 4424913102891617323}
   m_Father: {fileID: 8126732140138474042}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1206,6 +1383,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569121171409cfe4883d838f97df0f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useTrigger: 1
+  firstMiss: 0
   cutsceneName: IntroCutscene
 --- !u!1001 &7504306970240031849
 PrefabInstance:
@@ -1487,7 +1666,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2074316311125530449, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2074316311125530449, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1723,6 +1902,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2074316311125530449, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 786640862868908140}
+    - targetCorrespondingSourceObject: {fileID: 2074316311125530449, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5869232456309793812}
   m_SourcePrefab: {fileID: 100100000, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
 --- !u!114 &160831082197974010 stripped
 MonoBehaviour:
