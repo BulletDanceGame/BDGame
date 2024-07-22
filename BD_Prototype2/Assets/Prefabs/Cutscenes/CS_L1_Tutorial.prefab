@@ -311,8 +311,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569121171409cfe4883d838f97df0f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useTrigger: 1
-  firstMiss: 0
   cutsceneName: BatCutscene
 --- !u!61 &5204816437007691488
 BoxCollider2D:
@@ -340,53 +338,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.54335, y: 5.7941933}
   m_EdgeRadius: 0
---- !u!1 &1096042307141045754
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6012691024432523772}
-  - component: {fileID: 8001212138381855434}
-  m_Layer: 0
-  m_Name: Miss
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6012691024432523772
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096042307141045754}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 102.7, y: -51.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 65353473292512164}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8001212138381855434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096042307141045754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 569121171409cfe4883d838f97df0f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useTrigger: 0
-  firstMiss: 1
-  cutsceneName: MissCutscene
 --- !u!1 &2607236176605786212
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,9 +400,9 @@ PlayableDirector:
     value: {fileID: 6735396341382407234}
   - key: {fileID: 6331106955855324377, guid: 24bce3e33adc0cf48866f103e8856675, type: 2}
     value: {fileID: 0}
-  - key: {fileID: 0}
+  - key: {fileID: 5150713083444007395, guid: 24bce3e33adc0cf48866f103e8856675, type: 2}
     value: {fileID: 0}
-  - key: {fileID: 0}
+  - key: {fileID: 4138337989783103502, guid: 24bce3e33adc0cf48866f103e8856675, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References:
@@ -616,8 +567,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569121171409cfe4883d838f97df0f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useTrigger: 1
-  firstMiss: 0
   cutsceneName: TurretCutscene
 --- !u!60 &6984818730372955997
 PolygonCollider2D:
@@ -845,7 +794,6 @@ Transform:
   - {fileID: 4783631722352275600}
   - {fileID: 1275666425649457735}
   - {fileID: 440045928}
-  - {fileID: 6012691024432523772}
   m_Father: {fileID: 8126732140138474042}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1422,8 +1370,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569121171409cfe4883d838f97df0f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useTrigger: 1
-  firstMiss: 0
   cutsceneName: IntroCutscene
 --- !u!1001 &7504306970240031849
 PrefabInstance:
@@ -1705,7 +1651,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2074316311125530449, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2074316311125530449, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1941,9 +1887,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2074316311125530449, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 786640862868908140}
-    - targetCorrespondingSourceObject: {fileID: 2074316311125530449, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5669750097862812073}
   m_SourcePrefab: {fileID: 100100000, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
 --- !u!114 &160831082197974010 stripped
 MonoBehaviour:
