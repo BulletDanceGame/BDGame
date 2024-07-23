@@ -26,6 +26,8 @@ public class TurretAnimator : UnitAnimator
 
     protected override void Update()
     {
+        if(!_continueAnimation) return;
+
         if(_turretDirection == TurretDirection.Homing)
             FaceTowardsPlayer(); 
         if(_turretDirection == TurretDirection.Oscillating)
@@ -38,62 +40,56 @@ public class TurretAnimator : UnitAnimator
 
         if(_isAlerted)
         {
-            _spriteAnimator.SetTrigger("Alert");
             _isAlerted = false;
             return;
         }
 
-        else if(_isHurted)
+        if(_isAttack) 
         {
-            _spriteAnimator.SetTrigger("Hurt");
-            _isHurted = false;
-            _continueAnimation = false;
-            return;
-        }
-
-        else if(_isDefeated)
-        {
-            DefeatAnim();
-
-            _isAlerted = false;
-            _isHurted = false;
-            _isDefeated = false;
-            _continueAnimation = false;
-            return;
-        }
-
-        else if(_isAttack)
-        {
-            _spriteAnimator.Anim(AnimAction.Attack);
             _isAttack = false;
-            return;
-        }
-
-        else
             _spriteAnimator.Anim(AnimAction.Idle);
-
+        }
     }
 
     protected override void AttackStart()
     {
+        if(!_continueAnimation) return;
+
         _spriteAnimator.Anim(AnimAction.Attack);
-        //_isAttack = true;
+        _isAttack = true;
     }
 
 
     protected override void Alerted()
     { 
-        //_isAlerted = true;
+        if(_continueAnimation) return;
 
+        _isAlerted = true;
+
+        _spriteAnimator.SetLayerWeight("HURTBRUH", 0f);
         _spriteAnimator.SetTrigger("Alert");
         _continueAnimation = true;
     }
 
+    protected override void Hurt() 
+    { 
+        if(!_continueAnimation) return;
+
+        //_isHurted = true;
+
+        _spriteAnimator.SetTrigger("Hurt");
+        _spriteAnimator.SetLayerWeight("HURTBRUH", 1f);
+        _continueAnimation = false;
+    }
+
     protected override void Defeat()
     { 
+        if(!_continueAnimation) return;
+
+        //_isDefeated = true; 
+
         _spriteAnimator.AnimDefeat();
         _continueAnimation = false;
-        //_isDefeated = true; 
     }
 
 }

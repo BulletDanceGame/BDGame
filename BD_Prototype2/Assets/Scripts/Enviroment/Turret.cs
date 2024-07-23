@@ -43,9 +43,23 @@ public class Turret : Movelist
     [SerializeField]
     private UnitAnimationHandler _animHandler;
 
+    public override void Activate()
+    {
+        _isActive = true;
+        _animHandler?.Alerted();
+    }
+
+    public override void Deactivate()
+    {
+        _isActive = false;
+        _animHandler?.Defeat();
+    }
+
     public override void Start()
     {
-        base.Start();
+        if (_isActiveOnStart)
+            Activate();
+
 
         //rotate oscilating turret to aim at correct target
         if (_turretType == TurretType.Oscillating)
@@ -195,7 +209,6 @@ public class Turret : Movelist
         if (!_triggeredByButton) return;
 
         Activate();
-        _animHandler?.Alerted();
     }
 
     public void ButtonDeactivate()
@@ -203,7 +216,6 @@ public class Turret : Movelist
         if (!_triggeredByButton) return;
 
         Deactivate();
-        _animHandler?.Defeat();
     }
 
     void OnTriggerEnter2D(Collider2D cld)
@@ -228,7 +240,7 @@ public class Turret : Movelist
         _animHandler?.Hurt();
 
         if (_isActive)
-            Deactivate();
+            _isActive = false;
 
         if (shouldBeRespawnable)
             StartCoroutine(RespawnTurret());
@@ -240,7 +252,6 @@ public class Turret : Movelist
 
         yield return new WaitForSeconds(turretRespawnTime);
         Activate();
-        _animHandler?.Alerted();
 
     }
 }
