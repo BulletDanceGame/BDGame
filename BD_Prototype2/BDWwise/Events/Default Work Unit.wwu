@@ -3305,6 +3305,39 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Cooldown___cutscene_start" ID="{4D3D94DB-9C56-4F21-B5AC-353F068124E7}">
+					<ChildrenList>
+						<Action Name="" ID="{CDC663E7-CCE6-4DF8-AB1F-DC890E2309AB}" ShortID="303561505">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cooldown - cutscene start" ID="{8613063F-7B05-4B6C-8127-6A60DCFBEED9}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Cooldown___cutscene_end" ID="{F15FAE71-114C-48C6-89C0-97E1D18892CB}">
+					<ChildrenList>
+						<Action Name="" ID="{9A657EAE-C712-4103-9274-6DA7367FBD5E}" ShortID="164591909">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cooldown - cutscene end" ID="{2F3CA1FE-8B8C-4297-B0AB-E067CF1E2310}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Bat_Theme" ID="{CF963294-73F2-4FB5-82DE-599CF4ABBE50}">
+					<ChildrenList>
+						<Action Name="" ID="{2E80B9B6-472E-4CA5-B355-F4FF299494A2}" ShortID="825353673">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bat Theme" ID="{85E9C631-4AE5-4C72-8180-A9D2E3F3B8E0}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
