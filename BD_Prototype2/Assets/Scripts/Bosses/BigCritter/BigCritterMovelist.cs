@@ -34,6 +34,7 @@ public class BigCritterMovelist : Movelist
     public float _startRadius;
 
     private bool _activate;
+    private bool _isJumpOrLand;
 
     public static Spawner Instance;
 
@@ -59,6 +60,7 @@ public class BigCritterMovelist : Movelist
     private void OnEnable()
     {
         _isCritterRunning = false;
+        _isJumpOrLand = false;
         _activate = false;
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
@@ -123,6 +125,7 @@ public class BigCritterMovelist : Movelist
 
     private void LowJump()
     {
+        _isJumpOrLand = true;
         airborne = true;
         _animHandler.SpecialStart(47);
 
@@ -130,6 +133,8 @@ public class BigCritterMovelist : Movelist
 
     private void LowLand()
     {
+        _isJumpOrLand = true;
+
         _jumpTime = startJumpTime;
         _animHandler.SpecialStart(46);
 
@@ -137,24 +142,40 @@ public class BigCritterMovelist : Movelist
 
     private void JumpOutOftheScreen()
     {
+        _isJumpOrLand = true;
+
         _jumpTime = startJumpTime;
         _animHandler.SpecialStart(49);
     }
 
     private void JumpOutOftheScreenWithCircleShot()
     {
+        _isJumpOrLand = true;
+
         _jumpTime = startJumpTime;
         _animHandler.SpecialStart(49);
         CircleShot();
     }
     private void HighJumpHover()
     {
+        _isJumpOrLand = false;
+
         _jumpTime = startJumpTime;
         _animHandler.SpecialStart(45);
     }
 
+    private void LowJumpHover()
+    {
+        _isJumpOrLand = false;
+
+        _jumpTime = startJumpTime;
+        _animHandler.SpecialStart(44);
+    }
+
     private void HighLand()
     {
+        _isJumpOrLand = true;
+
         _jumpTime = startJumpTime;
         _animHandler.SpecialStart(48);
     }
@@ -199,7 +220,12 @@ public class BigCritterMovelist : Movelist
         else
         { // if dash then check direction start timer and add speed
             _jumpTime -= Time.deltaTime;
-            transform.position = Vector2.MoveTowards(transform.position, UnitManager.Instance.GetPlayer().transform.position, JumpSpeed * Time.deltaTime);
+
+            if(!_isJumpOrLand)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, UnitManager.Instance.GetPlayer().transform.position, JumpSpeed * Time.deltaTime);
+
+            }
 
             
         }
