@@ -155,23 +155,23 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
         public void PlayerSwing(BeatTiming hitTiming, Vector2 none)
         {
             //on a perfect hit it feels delayed, and when hitting it so it fits you are roughly 50ms early
-            switch (hitTiming)
-            {
-                case BeatTiming.PERFECT:
-                    PlaySFX("Swing Perfect"); break;
+            //switch (hitTiming)
+            //{
+            //    case BeatTiming.PERFECT:
+            //        PlaySFX("Swing Perfect"); break;
 
-                case BeatTiming.GOOD:
-                    PlaySFX("Swing Good"); break;
+            //    case BeatTiming.GOOD:
+            //        PlaySFX("Swing Good"); break;
 
-                case BeatTiming.BAD:
-                    RTPCManager.Instance.ResetAttributeValue("LOW PASS", 0.0000000000000000001f, RTPCManager.CurveTypes.linear);
-                    PlaySFX("Swing Miss");
-                    RTPCManager.Instance.SetValue("BITCRUSHER_MUSIC", 30, 0.00000000001f, RTPCManager.CurveTypes.high_curve,
-                                                                      0.00000000001f, RTPCManager.CurveTypes.high_curve, 0.3f);
-                    break;
+            //    case BeatTiming.BAD:
+            //        RTPCManager.Instance.ResetAttributeValue("LOW PASS", 0.0000000000000000001f, RTPCManager.CurveTypes.linear);
+            //        PlaySFX("Swing Miss");
+            //        RTPCManager.Instance.SetValue("BITCRUSHER_MUSIC", 30, 0.00000000001f, RTPCManager.CurveTypes.high_curve,
+            //                                                          0.00000000001f, RTPCManager.CurveTypes.high_curve, 0.3f);
+            //        break;
 
-                default: break;
-            }
+            //    default: break;
+            //}
         }
 
 

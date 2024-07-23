@@ -87,7 +87,7 @@ public class PlayerRhythm : MonoBehaviour
 
 
         //testing
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.O))
         {
             diff = 0;
             diffNr = 0;
@@ -325,17 +325,21 @@ public class PlayerRhythm : MonoBehaviour
             }
         }
 
-
         double timeDiff = time - (_timesToHit[index] + offset);
-        print("delay: " + timeDiff + " time " + Time.timeAsDouble);
 
-        diff += timeDiff;
-        diffNr++;
-        //print("average " + diff / diffNr);
+        if (input == ButtonInput.swing)
+        {
+            print("delay: " + timeDiff + " time " + Time.timeAsDouble);
 
-        max = Math.Max(timeDiff, max);
-        min = Math.Min(timeDiff, min);
-        //print("max: " + max + " and min: " + min);
+            diff += timeDiff;
+            diffNr++;
+            print("average " + diff / diffNr);
+
+            max = Math.Max(timeDiff, max);
+            min = Math.Min(timeDiff, min);
+            //print("max: " + max + " and min: " + min);
+        }
+
 
         // if late > delay(offset) is positive
         // if early > delay(offset) is negative

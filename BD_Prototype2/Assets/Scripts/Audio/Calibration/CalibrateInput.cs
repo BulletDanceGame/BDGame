@@ -278,10 +278,10 @@ public class CalibrateInput : MonoBehaviour
             }
             if (nextBall)
             {
+                //below
                 anim.speed = 1 / (duration * 8);
                 anim.Play("CalibrationNew");
             }
-
         }
         else if (anticipation == 12)
         {
