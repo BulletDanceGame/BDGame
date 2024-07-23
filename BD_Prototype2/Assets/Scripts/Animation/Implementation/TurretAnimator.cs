@@ -7,31 +7,45 @@ namespace BulletDance.Animation
 
 public class TurretAnimator : UnitAnimator
 {
+    private enum TurretDirection { Homing, Front, Back, Left, Right }
+
+    [SerializeField]
+    private TurretDirection _turretDirection;
+
+    void Start()
+    {
+        if(_turretDirection != TurretDirection.Homing)
+            FaceTowards((Direction)((int)_turretDirection - 1));
+    }
+
+    protected override void Update()
+    {
+        if(_turretDirection == TurretDirection.Homing)
+            FaceTowardsPlayer(); 
+    }
+
     protected override void AnimationStateSwitch()
     {
         if(_isAlerted)
         {
-            _spriteAnimator.Anim("activated");
+            _spriteAnimator.SetTrigger("Alert");
             _isAlerted = false;
         }
 
-        if(_isHurted)
+        else if(_isHurted)
         {
-            _spriteAnimator.Anim("shield");
+            _spriteAnimator.SetTrigger("Hurt");
             _isHurted = false;
         }
 
-        else if(_isAttack)
-            _spriteAnimator.Anim("shoot");
-        
         else
-            _spriteAnimator.Anim("idle");
+            _spriteAnimator.Anim(AnimAction.Idle);
 
     }
 
     protected override void Defeat()
     {
-        _spriteAnimator.Anim("deactivate");
+        _spriteAnimator.AnimDefeat();
     }
 }
 
