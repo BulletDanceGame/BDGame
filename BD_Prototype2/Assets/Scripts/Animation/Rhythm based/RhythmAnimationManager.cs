@@ -27,15 +27,15 @@ namespace BulletDance.Animation
 
         private void Start()
         {
-            EventManager.Instance.OnBeatForVisuals += UpdateAnimations;
+            EventManager.Instance.OnBeat += UpdateAnimations;
         }
 
         private void OnDestroy()
         {
-            EventManager.Instance.OnBeatForVisuals -= UpdateAnimations;
+            EventManager.Instance.OnBeat -= UpdateAnimations;
         }
 
-        private void UpdateAnimations(int anticipation, float duration, int beat)
+        private void UpdateAnimations(int beat)
         {
             //Add to updates & flush queue
             if(_animatorsAdded.Count > 0)
@@ -48,6 +48,8 @@ namespace BulletDance.Animation
             }
 
 
+            float duration = (float)MusicManager.Instance.secondsPerBeat;
+
             //Update
             foreach(var animator in _animators)
             {
@@ -57,7 +59,7 @@ namespace BulletDance.Animation
                     continue;
                 }
 
-                animator.PlayAnimation(anticipation, duration);
+                animator.PlayAnimation(0, duration);
             }
 
 

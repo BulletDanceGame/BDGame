@@ -122,7 +122,7 @@ public class Turret : Movelist
             _rotating = true;
         }
 
-        //_animHandler?.AttackStart();
+        _animHandler?.AttackStart();
     }
 
     private void DoubleShot()
@@ -163,7 +163,7 @@ public class Turret : Movelist
             _rotating = true;
         }
 
-        //_animHandler?.AttackStart();
+        _animHandler?.AttackStart();
     }
 
 
@@ -225,7 +225,6 @@ public class Turret : Movelist
 
     private void Hit()
     {
-
         _animHandler?.Hurt();
 
         if (_isActive)
