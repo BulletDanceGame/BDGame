@@ -26,6 +26,8 @@ public class TurretAnimator : UnitAnimator
 
     protected override void AnimationStateSwitch()
     {
+        if(!_continueAnimation) return;
+
         if(_isAlerted)
         {
             _spriteAnimator.SetTrigger("Alert");
@@ -36,6 +38,7 @@ public class TurretAnimator : UnitAnimator
         {
             _spriteAnimator.SetTrigger("Hurt");
             _isHurted = false;
+            _continueAnimation = false;
         }
 
         else
@@ -43,9 +46,10 @@ public class TurretAnimator : UnitAnimator
 
     }
 
-    protected override void Defeat()
-    {
-        _spriteAnimator.AnimDefeat();
+    protected override void Alerted()
+    { 
+        _isAlerted = true;
+        _continueAnimation = true;
     }
 }
 
