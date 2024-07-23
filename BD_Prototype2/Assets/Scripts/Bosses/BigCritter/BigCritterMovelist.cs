@@ -17,6 +17,7 @@ public class BigCritterMovelist : Movelist
     private Rigidbody2D _rb;
     private int _jumpdirection;
     private float _jumpTime;
+    private bool airborne;
     public float startJumpTime;
     public float JumpSpeed;
     public float stopAndShootRadius;
@@ -46,7 +47,7 @@ public class BigCritterMovelist : Movelist
     public float SpawnCooldown;
     public float Offset;
     // Start is called before the first frame update
-    private bool airborne;
+    
     //Animation
     private BulletDance.Animation.UnitAnimationHandler _animHandler = null;
     private bool _runStateChanged = false, _isPrevRun = false;
@@ -144,7 +145,7 @@ public class BigCritterMovelist : Movelist
     private void JumpOutOftheScreen()
     {
         _isJumpOrLand = true;
-
+        print("JumpOutOftheScreennnnnnnnnn");
         _jumpTime = startJumpTime;
         _animHandler.SpecialStart(49);
     }
@@ -160,6 +161,7 @@ public class BigCritterMovelist : Movelist
     private void HighJumpHover()
     {
         _isJumpOrLand = false;
+        print("HighJumpHoverrrrrrrrrrrrrrrrrrrrrrrrrrr");
 
         _jumpTime = startJumpTime;
         _animHandler.SpecialStart(45);
@@ -176,6 +178,7 @@ public class BigCritterMovelist : Movelist
     private void HighLand()
     {
         _isJumpOrLand = true;
+        print("HighLandddddddddddddddddddddd");
 
         _jumpTime = startJumpTime;
         _animHandler.SpecialStart(48);
@@ -225,7 +228,6 @@ public class BigCritterMovelist : Movelist
             if(!_isJumpOrLand)
             {
                 transform.position = Vector2.MoveTowards(transform.position, UnitManager.Instance.GetPlayer().transform.position, JumpSpeed * Time.deltaTime);
-
             }
 
 
@@ -260,7 +262,7 @@ public class BigCritterMovelist : Movelist
             //if (_isCritterRunning)
             //{
                 //commented out cause of causing errors
-                agent.SetDestination(UnitManager.Instance.GetPlayer().transform.position);
+                //agent.SetDestination(UnitManager.Instance.GetPlayer().transform.position);
 
             //}
 
