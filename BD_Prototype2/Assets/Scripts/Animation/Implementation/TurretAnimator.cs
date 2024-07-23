@@ -7,7 +7,7 @@ namespace BulletDance.Animation
 
 public class TurretAnimator : UnitAnimator
 {
-    private enum TurretDirection { Homing, Front, Back, Left, Right }
+    private enum TurretDirection { Homing, Front = 1, Back = 2, Left = 3, Right = 4 }
 
     [SerializeField]
     private TurretDirection _turretDirection;

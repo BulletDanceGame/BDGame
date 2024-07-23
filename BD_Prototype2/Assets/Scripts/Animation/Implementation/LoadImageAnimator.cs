@@ -10,9 +10,13 @@ public class LoadImageAnimator : RhythmAnimator
     [SerializeField]
     private ImageType loadImageType;
 
-    void Start()
+    protected override void OnEnable()
     {
-        _animator.SetFloat("ImageType", (float)((int)loadImageType));
+        base.OnEnable();
+
+        Debug.Log(_animator + ", " + _animator.GetFloat("ImageType"));
+        _animator.SetFloat("ImageType", (int)loadImageType);
+        Debug.Log(_animator + ", " + _animator.GetFloat("ImageType"));
     }
 
     public override void PlayAnimation(int anticipation, float duration)
