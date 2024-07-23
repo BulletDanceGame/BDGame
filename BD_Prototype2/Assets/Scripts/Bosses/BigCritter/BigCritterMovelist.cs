@@ -34,6 +34,7 @@ public class BigCritterMovelist : Movelist
     public float _startRadius;
 
     private bool _activate;
+
     private bool _isJumpOrLand;
 
     public static Spawner Instance;
@@ -93,7 +94,7 @@ public class BigCritterMovelist : Movelist
 
         _rb = GetComponent<Rigidbody2D>();
 
-        StartCoroutine(StopChasingTimer());
+        //StartCoroutine(StopChasingTimer());
 
         _animHandler = GetComponentInChildren<BulletDance.Animation.UnitAnimationHandler>();
         UnitManager.Instance.ActiveEnemies.Add(gameObject);
@@ -126,7 +127,7 @@ public class BigCritterMovelist : Movelist
     private void LowJump()
     {
         _isJumpOrLand = true;
-        airborne = true;
+        _jumpTime = startJumpTime;
         _animHandler.SpecialStart(47);
 
     }
@@ -188,6 +189,7 @@ public class BigCritterMovelist : Movelist
     // Update is called once per frame
     void Update()
     {
+
         if (UnitManager.Instance.GetPlayer())
         {
             Jump();
@@ -220,14 +222,13 @@ public class BigCritterMovelist : Movelist
         else
         { // if dash then check direction start timer and add speed
             _jumpTime -= Time.deltaTime;
-
             if(!_isJumpOrLand)
             {
                 transform.position = Vector2.MoveTowards(transform.position, UnitManager.Instance.GetPlayer().transform.position, JumpSpeed * Time.deltaTime);
 
             }
 
-            
+
         }
     }
 
