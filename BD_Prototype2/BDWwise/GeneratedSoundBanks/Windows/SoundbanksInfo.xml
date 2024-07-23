@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="690988688" Type="User" Language="SFX" Hash="{6714CE8E-AB0F-554D-512F-5A897F1A4D4C}">
+		<SoundBank Id="690988688" Type="User" Language="SFX" Hash="{B7907BF6-F747-BC98-CD4F-0DA7BE8E4A95}">
 			<ShortName>Music_Critter_Phase2</ShortName>
 			<Path>Music_Critter_Phase2.bnk</Path>
 			<Media>
@@ -44,33 +44,34 @@
 						<MediaRef Id="810047481"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2016799278" Name="Play_Critter_Phase_2___Part_1" DurationType="OneShot" DurationMin="36.00379" DurationMax="36.00379">
+				<Event Id="2016799278" Name="Play_Critter_Phase_2___Part_1" DurationType="OneShot" DurationMin="35.94187" DurationMax="35.94187">
 					<MediaRefs>
 						<MediaRef Id="8312812"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1625859311" Name="Play_Critter_Phase_2___Part_1__intro_ver_" DurationType="OneShot" DurationMin="36.00379" DurationMax="36.00379">
+				<Event Id="1625859311" Name="Play_Critter_Phase_2___Part_1__intro_ver_" DurationType="OneShot" DurationMin="35.890144" DurationMax="35.890144">
 					<MediaRefs>
 						<MediaRef Id="47423206"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2016799277" Name="Play_Critter_Phase_2___Part_2" DurationType="OneShot" DurationMin="15.537875" DurationMax="15.537875">
+				<Event Id="2016799277" Name="Play_Critter_Phase_2___Part_2" DurationType="OneShot" DurationMin="15.466607" DurationMax="15.466607">
 					<MediaRefs>
 						<MediaRef Id="747776501"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2016799276" Name="Play_Critter_Phase_2___Part_3" DurationType="OneShot" DurationMin="16.07575" DurationMax="16.07575">
+				<Event Id="2016799276" Name="Play_Critter_Phase_2___Part_3" DurationType="OneShot" DurationMin="16.002121" DurationMax="16.002121">
 					<MediaRefs>
 						<MediaRef Id="173272374"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2016799275" Name="Play_Critter_Phase_2___Part_4" DurationType="OneShot" DurationMin="33.27652" DurationMax="33.27652">
+				<Event Id="2016799275" Name="Play_Critter_Phase_2___Part_4" DurationType="OneShot" DurationMin="33.206295" DurationMax="33.206295">
 					<MediaRefs>
 						<MediaRef Id="726920089"/>
 					</MediaRefs>
 				</Event>
 			</Events>
 			<GameParameters>
+				<GameParameter Id="1103547191" Name="PLAYBACK_SPEED____CutsceneMusic"/>
 				<GameParameter Id="2338745114" Name="PLAYBACK_SPEED____MusicBossBattle"/>
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
@@ -3286,5 +3287,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{92A1FE79-6677-B40F-192E-E3A142B86117}</FileHash>
+	<FileHash>{89062C15-4D3B-2779-7BC1-DD073D26C072}</FileHash>
 </SoundBanksInfo>

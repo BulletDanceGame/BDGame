@@ -12323,6 +12323,41 @@
 															</RTPC>
 														</Local>
 													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{BB602189-674E-4DBB-9334-72C36952A101}" ShortID="838010108">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="PlaybackSpeed"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="PLAYBACK_SPEED____CutsceneMusic" ID="{1089C0B8-F905-42EF-9C59-349ABB22F0A7}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{67F60437-2CEF-4F6D-83A3-0220D835E16F}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0.25</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100</XPos>
+																						<YPos>4</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
 												</ObjectList>
 											</ObjectLists>
 										</MusicSegment>
@@ -12469,7 +12504,7 @@
 															<MusicCue Name="Exit Cue" ID="{0680F7B7-E053-46F2-BBC2-FE26267E332A}">
 																<PropertyList>
 																	<Property Name="CueType" Type="int16" Value="1"/>
-																	<Property Name="TimeMs" Type="Real64" Value="36003.7916666667"/>
+																	<Property Name="TimeMs" Type="Real64" Value="24727.2727272727"/>
 																</PropertyList>
 															</MusicCue>
 														</Local>
@@ -12554,6 +12589,41 @@
 																					<Point>
 																						<XPos>100</XPos>
 																						<YPos>1</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{7BE3249A-F340-497E-AF14-0CCACB2E584B}" ShortID="656881569">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="PlaybackSpeed"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="PLAYBACK_SPEED____CutsceneMusic" ID="{1089C0B8-F905-42EF-9C59-349ABB22F0A7}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{D9800AAD-03F8-4BEB-8EA0-D78C88807E65}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0.25</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100</XPos>
+																						<YPos>4</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
@@ -12710,7 +12780,7 @@
 															<MusicCue Name="Exit Cue" ID="{23791DFA-E10E-4E9C-94E0-5B6C8DF0A185}">
 																<PropertyList>
 																	<Property Name="CueType" Type="int16" Value="1"/>
-																	<Property Name="TimeMs" Type="Real64" Value="15537.875"/>
+																	<Property Name="TimeMs" Type="Real64" Value="11636.3636363636"/>
 																</PropertyList>
 															</MusicCue>
 														</Local>
@@ -12951,7 +13021,7 @@
 															<MusicCue Name="Exit Cue" ID="{5674E5A7-F375-420C-A383-E6B192A93C6F}">
 																<PropertyList>
 																	<Property Name="CueType" Type="int16" Value="1"/>
-																	<Property Name="TimeMs" Type="Real64" Value="16075.75"/>
+																	<Property Name="TimeMs" Type="Real64" Value="11636.3636363636"/>
 																</PropertyList>
 															</MusicCue>
 														</Local>
@@ -13192,7 +13262,7 @@
 															<MusicCue Name="Exit Cue" ID="{C4023F3A-275E-4356-9B87-00205FE4FBE4}">
 																<PropertyList>
 																	<Property Name="CueType" Type="int16" Value="1"/>
-																	<Property Name="TimeMs" Type="Real64" Value="33276.5208333333"/>
+																	<Property Name="TimeMs" Type="Real64" Value="23272.7272727273"/>
 																</PropertyList>
 															</MusicCue>
 														</Local>
@@ -13372,7 +13442,7 @@
 															<MusicCue Name="Exit Cue" ID="{CF0A9EBA-B7CB-4A75-B43D-DDB91F83CA88}">
 																<PropertyList>
 																	<Property Name="CueType" Type="int16" Value="1"/>
-																	<Property Name="TimeMs" Type="Real64" Value="36003.7916666667"/>
+																	<Property Name="TimeMs" Type="Real64" Value="24727.2727272727"/>
 																</PropertyList>
 															</MusicCue>
 														</Local>
@@ -13457,6 +13527,41 @@
 																					<Point>
 																						<XPos>100</XPos>
 																						<YPos>1</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{70F32D4A-4870-4EF6-9EA2-E4E01C030D76}" ShortID="836161361">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="PlaybackSpeed"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="PLAYBACK_SPEED____CutsceneMusic" ID="{1089C0B8-F905-42EF-9C59-349ABB22F0A7}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{6AF8FE77-CD24-4364-AD04-C07DFFF9AC86}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0.25</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100</XPos>
+																						<YPos>4</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
