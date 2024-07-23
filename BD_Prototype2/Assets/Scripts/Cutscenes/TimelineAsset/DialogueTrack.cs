@@ -132,7 +132,7 @@ public class DialogueTrackMixer : PlayableBehaviour
         //Typewriter effect
         if (updateLetters)
         {
-            timer -= Time.deltaTime;
+            timer -= Time.timeScale >= 1f ? Time.deltaTime : Time.unscaledDeltaTime;
 
             if (timer <= 0)
             {
