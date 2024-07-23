@@ -71,6 +71,16 @@ public class GeneralSounds : SoundContainer
            ambienceSoundID = AkSoundEngine.PostEvent("Stop_forestAmb", gameObject);
     }
 
+    public void MuteEnvMusic()
+    {
+           RTPCManager.Instance.SetValue("VOLUME____MusicEnvBattle", 0, 0.0000001f, RTPCManager.CurveTypes.high_curve);
+    }
+
+    public void UnmuteEnvMusic()
+    {
+           RTPCManager.Instance.ResetValue("VOLUME____MusicEnvBattle", 0.0000001f, RTPCManager.CurveTypes.high_curve);
+    }
+
 
 }
 
