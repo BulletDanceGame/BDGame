@@ -30,8 +30,8 @@ public class PlayerSwingHitbox : MonoBehaviour
 
     private void OnDisable()
     {
-        if (!_hasHitBullet)
-            EventManager.Instance.PlayerMiss();
+        //if (!_hasHitBullet)
+            //EventManager.Instance.PlayerMiss();
 
         _hasHitBullet = false;
         _hasSoundPlayed = false;
@@ -77,6 +77,12 @@ public class PlayerSwingHitbox : MonoBehaviour
 
         //Escape if unhittable
         if(!bullet.hittable) return;
+
+        if (hitTiming == BeatTiming.BAD && GetComponentInParent<PlayerSwing>().BulletShouldGetDestroyedOnBad)
+        {
+            bullet.Deactivate();
+            return;
+        }
 
         bullet.DeflectBullet(bulletAngle, bulletBackSpeed);
 
@@ -130,7 +136,7 @@ public class PlayerSwingHitbox : MonoBehaviour
         }
 
         //Max Combo
-        if (_hitCombo >= 4)
+        if (_hitCombo >= 10)
         {
             if (!ScoreManager.Instance.isMaxCombo) return;
 
@@ -138,7 +144,7 @@ public class PlayerSwingHitbox : MonoBehaviour
             //VFXManager.Instance?.RequestVFX_SlowMoZoom(UnitManager.Instance?.GetPlayer()?.transform);
             EventManager.Instance.MaxCombo();
 
-            if (_hitCombo >= 4) _hitCombo = 0;        
+            if (_hitCombo >= 10) _hitCombo = 0;        
         }
     }
 }

@@ -165,7 +165,6 @@ public class Bullet : MonoBehaviour
     {
         if (!_canCollide)
         {
-            Debug.Log("CANT HIT");
             return;
         }
 
@@ -177,7 +176,6 @@ public class Bullet : MonoBehaviour
 
         if (collision.tag == "Turret" && type == BulletOwner.BOSSBULLET)
         {
-            Debug.Log("BOSS BULLET HIT A TURRET");
             Deactivate();
             return;
 
