@@ -30,6 +30,7 @@ public class CalibrateTest : MonoBehaviour
     GameObject nextBall = null;
 
     public GameObject resetButton;
+    public GameObject finishButton;
     public TextMeshProUGUI redoText;
 
 
@@ -138,24 +139,29 @@ public class CalibrateTest : MonoBehaviour
                 if (dist > 0.15)
                 {
                     text = "INCONSISTENT, this game will be difficult for you";
+                    finishButton.SetActive(false);
                 }
                 else if (dist > 0.075)
                 {
                     text = "Inconsistent, try and hit to the 4th beat";
+                    finishButton.SetActive(false);
                 }
                 else
                 {
                     if (Math.Abs(averageDelay) > 0.13)
                     {
                         text = "Too far OFF beat, you will miss each beat in game. REDO THE CALIBRATION!";
+                        finishButton.SetActive(false);
                     }
                     else if(Math.Abs(averageDelay) > 0.06)
                     {
                         text = "Quite far off beat, consider redoing the calibration";
+                        finishButton.SetActive(false);
                     }
                     else
                     {
                         text = "Nice! You are Good to Go!";
+                        finishButton.SetActive(true);
                     }
                 }
                 redoText.text = text;
@@ -219,6 +225,7 @@ public class CalibrateTest : MonoBehaviour
 
 
         resetButton.SetActive(false);
+        finishButton.SetActive(false);
         redoText.text = "";
     }
 
