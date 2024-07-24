@@ -6,7 +6,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public enum ButtonInput { swing, dash, none };
 
 public class CalibrateInput : MonoBehaviour
 {
@@ -45,6 +44,12 @@ public class CalibrateInput : MonoBehaviour
     [SerializeField] private TextMeshProUGUI consistencyText;
 
     [SerializeField] private Gradient textColor;
+
+    private bool changedOffset;
+
+
+
+
 
     private void OnEnable()
     {
@@ -105,7 +110,30 @@ public class CalibrateInput : MonoBehaviour
                 particles.Play();
                 Destroy(currentBall);
             }
-            
+
+            //remove when changed offset
+            if (changedOffset)
+            {
+                changedOffset = false;
+
+
+                delays.Clear();
+
+                averageDelay = 0;
+                averageText.text = "";
+                consistencyText.text = "";
+
+
+                //markers
+                for (int i = 0; i < delayMarkers.Count; i++)
+                {
+                    Destroy(delayMarkers[i]);
+                }
+                delayMarkers.Clear();
+
+                averageDelayMarker.SetActive(false);
+            }
+
 
             //Remove last delay
             if (delays.Count == 4)
@@ -146,8 +174,8 @@ public class CalibrateInput : MonoBehaviour
             {
                 combinedDelay += de; 
             }
-            string late = (averageDelay >= 0) ? "LATE" : "EARLY";
             averageDelay = combinedDelay / delays.Count;
+            string late = (averageDelay >= 0) ? "LATE" : "EARLY";
             averageText.text = Math.Abs(Math.Round(averageDelay * 1000)) + "ms " + late;
             averageText.color = textColor.Evaluate((float)averageDelay * 5f + 0.5f);
 
@@ -183,31 +211,19 @@ public class CalibrateInput : MonoBehaviour
                 }
                 double dist = max - min;
                 string text = "";
-                //if (dist > 0.1)
-                //{
-                //    text = "INCONSISTENT, Click to the CLAP!";
-                //}
-                //else if (dist > 0.05)
-                //{
-                //    text = "Inconsistent, consider continue trying Clicking to the Clap";
-                //}
-                //else
-                //{
-                    
+                if (dist > 0.10)
+                {
+                    text = "Very Inconsistent Hits, Click on the 4th Beat!";
+                }
+                else if (dist > 0.05)
+                {
+                    text = "Inconsistent Hits, Keep Going!";
+                }
+                else
+                {
+                    text = "Consistent Hits! Good Job!";
+                }
 
-                //}
-                //if (Math.Abs(averageDelay) > 0.13)
-                //{
-                //    text = "Your Average should be within the Blue Lines. Being this far off will probably cause an issue!";
-                //}
-                //else if (Math.Abs(averageDelay) > 0.06)
-                //{
-                //    text = "Quite far off beat. This might be noticable while playing";
-                //}
-                //else
-                //{
-                //    text = "Nice! Click FINISHED!";
-                //}
                 consistencyText.text = text;
             }
 
@@ -224,10 +240,7 @@ public class CalibrateInput : MonoBehaviour
 
         SetOffset(offset + (i * 0.010));
 
-
-
-        //double offsetPos = offset / secondsPerBeat;
-        //offsetMarker.transform.localPosition = new Vector3(112.5f + 75f * (float)offsetPos, 0, 0);
+        changedOffset = true;
 
 
     }
@@ -278,10 +291,10 @@ public class CalibrateInput : MonoBehaviour
             }
             if (nextBall)
             {
+                //below
                 anim.speed = 1 / (duration * 8);
                 anim.Play("CalibrationNew");
             }
-
         }
         else if (anticipation == 12)
         {

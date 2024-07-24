@@ -91,7 +91,7 @@ public class MusicManager : MonoBehaviour
     private void Start()
     {
         _isActive = false;
-        _waitBeforeStartUpTimer = 2f;
+        _waitBeforeStartUpTimer = 2.02f;
         _waitBeforeStartUp = true;
         _startUpIsInvoked = false;
 
@@ -123,6 +123,8 @@ public class MusicManager : MonoBehaviour
                 {
                     LoadingScreen.Instance.UnCover();
                 }
+
+                print("start wwise " + Time.timeAsDouble);
 
                 EventManager.Instance.EnabableInput();
             }
@@ -214,6 +216,9 @@ public class MusicManager : MonoBehaviour
             }
         }
 
+
+
+
         if (prepareNextSequence)
         {
             PrepareNextSequence(true);
@@ -224,6 +229,10 @@ public class MusicManager : MonoBehaviour
             StartSequence();
             startSequence = false;
         }
+
+
+
+
 
         AkSoundEngineController.Instance.LateUpdate();
     }
@@ -538,7 +547,8 @@ public class MusicManager : MonoBehaviour
 
         print("fps " + nextFramerate);
 
-        nextFrameDelay = nextFramerate / 10; //so the start is roughly 100ms delayed, might need to be calculated differently
+
+        nextFrameDelay = nextFramerate / 10; //so the start is roughly 100ms delayed
         
         
         nextAudioDelay = nextFrameDuration + (512.0 / 48000.0) * 4.0;
