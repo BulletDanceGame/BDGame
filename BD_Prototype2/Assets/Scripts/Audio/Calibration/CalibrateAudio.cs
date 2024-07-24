@@ -66,11 +66,11 @@ public class CalibrateAudio : MonoBehaviour
 
         if (anticipation == 0)
         {
-            //if (!currentBall) return;
+            if (!currentBall) return;
 
             //particles.transform.position = currentBall.transform.position;
             //particles.Play();
-            //Destroy(currentBall);
+            Destroy(currentBall);
         }
         else if (anticipation == 6)
         {
