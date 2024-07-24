@@ -63,12 +63,22 @@ public class GeneralSounds : SoundContainer
 
     public void PlayForestAmbience()
     {
-            ambienceSoundID = AkSoundEngine.PostEvent("Play_forestAmb", gameObject);
+            ambienceSoundID = AkSoundEngine.PostEvent("Play_ForestAmb", gameObject);
     }
 
     public void StopForestAmbience()
     {
-           ambienceSoundID = AkSoundEngine.PostEvent("Stop_forestAmb", gameObject);
+           ambienceSoundID = AkSoundEngine.PostEvent("Stop_ForestAmb", gameObject);
+    }
+
+    public void MuteEnvMusic()
+    {
+           RTPCManager.Instance.SetValue("VOLUME____MusicEnvBattle", 0, 0.0000001f, RTPCManager.CurveTypes.high_curve);
+    }
+
+    public void UnmuteEnvMusic()
+    {
+           RTPCManager.Instance.ResetValue("VOLUME____MusicEnvBattle", 0.0000001f, RTPCManager.CurveTypes.high_curve);
     }
 
 
