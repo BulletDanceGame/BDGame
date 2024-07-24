@@ -269,17 +269,13 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{325432E8-D510-C0B1-EFB4-B4578372413B}">
+		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{550BA3F0-2A05-9C41-BBE3-E9ECFA586E59}">
 			<ShortName>Music_TutorialAndLevel1_Part1</ShortName>
 			<Path>Music_TutorialAndLevel1_Part1.bnk</Path>
 			<Media>
 				<File Id="80926456" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Env1-VegZone2_Part4.wav</ShortName>
 					<CachePath>SFX/Env1-VegZone2_Part4_D79FB2B7.wem</CachePath>
-				</File>
-				<File Id="125829450" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>bat kun theme 2.wav</ShortName>
-					<CachePath>SFX/bat kun theme 2_E1D607A2.wem</CachePath>
 				</File>
 				<File Id="156212919" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ambience Nature Field Windy 02.wav</ShortName>
@@ -332,6 +328,10 @@
 				<File Id="511543187" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ambience5.wav</ShortName>
 					<CachePath>SFX/ambience5_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="542166124" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>bat-kun theme 3.wav</ShortName>
+					<CachePath>SFX/bat-kun theme 3_7FA2788A.wem</CachePath>
 				</File>
 				<File Id="554555461" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>fade in.wav</ShortName>
@@ -483,9 +483,9 @@
 						<MediaRef Id="156212919"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3550740225" Name="Play_Bat_Theme" DurationType="OneShot" DurationMin="28.420727" DurationMax="28.420727">
+				<Event Id="3550740225" Name="Play_Bat_Theme" DurationType="OneShot" DurationMin="28.392254" DurationMax="28.392254">
 					<MediaRefs>
-						<MediaRef Id="125829450"/>
+						<MediaRef Id="542166124"/>
 						<MediaRef Id="612693073"/>
 					</MediaRefs>
 				</Event>
@@ -1254,7 +1254,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{1C7A4C8B-4096-F83F-7537-3F97A9A74F2B}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D9320528-29AE-F32E-BFDD-8874D9D35728}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1936,7 +1936,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{9669DD6A-0CC1-E21D-A912-832D5834D499}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{8358C423-3B47-B75C-9E36-23EA5EA2DA56}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -2288,7 +2288,7 @@
 				</File>
 				<File Id="593159571" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cooldown - definitive (without initial smash).wav</ShortName>
-					<CachePath>SFX/cooldown - definitive (without initial smash)_397E7A3A.wem</CachePath>
+					<CachePath>SFX/cooldown - definitive (without initial smash)_CD4CB504.wem</CachePath>
 				</File>
 				<File Id="606524587" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 6.wav</ShortName>
@@ -3034,7 +3034,7 @@
 						<MediaRef Id="675450540"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3960404151" Name="Play_forestAmb" DurationType="Infinite">
+				<Event Id="3960404151" Name="Play_ForestAmb" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="170088987"/>
 					</MediaRefs>
@@ -3286,7 +3286,7 @@
 						<MediaRef Id="685776673"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2168881957" Name="Stop_forestAmb" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2168881957" Name="Stop_ForestAmb" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="835218174" Name="Voice__Player____PLAY" DurationType="OneShot" DurationMin="0.0410625" DurationMax="0.0410625">
 					<MediaRefs>
 						<MediaRef Id="376349708"/>
@@ -3300,8 +3300,6 @@
 				</Event>
 			</Events>
 			<GameParameters>
-				<GameParameter Id="1103547191" Name="PLAYBACK_SPEED____CutsceneMusic"/>
-				<GameParameter Id="2338745114" Name="PLAYBACK_SPEED____MusicBossBattle"/>
 				<GameParameter Id="3260874934" Name="VOLUME_SPECIAL____DeflectionElement__PitchElement"/>
 				<GameParameter Id="3416700688" Name="PITCH_SPECIAL____DeflectionElement__PitchElement"/>
 				<GameParameter Id="3815680396" Name="pitch_only_here_for_reference_of_max_combo_stuff"/>
@@ -3319,5 +3317,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6FC5D2B5-D4C9-89E9-25E2-732AC49E3AF8}</FileHash>
+	<FileHash>{624842EC-0056-EB33-4FA6-AE2ABE3035F6}</FileHash>
 </SoundBanksInfo>

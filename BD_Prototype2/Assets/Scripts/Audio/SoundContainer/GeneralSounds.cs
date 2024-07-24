@@ -63,12 +63,12 @@ public class GeneralSounds : SoundContainer
 
     public void PlayForestAmbience()
     {
-            ambienceSoundID = AkSoundEngine.PostEvent("Play_forestAmb", gameObject);
+            ambienceSoundID = AkSoundEngine.PostEvent("Play_ForestAmb", gameObject);
     }
 
     public void StopForestAmbience()
     {
-           ambienceSoundID = AkSoundEngine.PostEvent("Stop_forestAmb", gameObject);
+           ambienceSoundID = AkSoundEngine.PostEvent("Stop_ForestAmb", gameObject);
     }
 
     public void MuteEnvMusic()

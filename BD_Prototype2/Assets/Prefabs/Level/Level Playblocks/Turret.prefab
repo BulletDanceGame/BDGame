@@ -70,7 +70,7 @@ Transform:
   - {fileID: 595072788769893801}
   - {fileID: 5830240244044629743}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2805331634116759529
 SpriteRenderer:
@@ -680,6 +680,14 @@ PrefabInstance:
       propertyPath: _direction
       value: 
       objectReference: {fileID: 2805331634002722082}
+    - target: {fileID: 3953619029673890514, guid: 2370c69501facc74c822b10900d50ca6, type: 3}
+      propertyPath: _minAnimDuration
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953619029673890514, guid: 2370c69501facc74c822b10900d50ca6, type: 3}
+      propertyPath: _animNoteDuration
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5896386647231419677, guid: 2370c69501facc74c822b10900d50ca6, type: 3}
       propertyPath: m_RootOrder
       value: -1
