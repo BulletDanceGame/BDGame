@@ -19,10 +19,9 @@ public class WaveEffect : MonoBehaviour
     private void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.E))
-        {
+       
             ShockWave();
-        }
+        
     }
 
     private void Destroy()

@@ -285,6 +285,11 @@ public class Bullet : MonoBehaviour
         _fx.LastHitFX();
     }
 
+    public void CritterEndGameHit()
+    {
+        _fx.LastHitForCritter();
+    }
+
 
     // --- Out-of-camera Indicator --- //
     public void SpawnedOutsideCamera()

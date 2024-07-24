@@ -20,6 +20,8 @@ public class BulletFX : MonoBehaviour
 
     [SerializeField] ParticleSystem _missExplosion;
 
+    [SerializeField] GameObject _waveVFX;
+
     [Space]
     [SerializeField] private GameObject _bulletIndicatorPrefab;
     private GameObject _bulletIndicator;
@@ -112,6 +114,11 @@ public class BulletFX : MonoBehaviour
         _lastHitExplosion.Play();
         Instantiate(_perfectTrail,transform.position,Quaternion.identity);
         Instantiate(_lineExplosion,transform.position,Quaternion.identity);
+    }
+
+    public void LastHitForCritter()
+    {
+        Instantiate(_waveVFX, transform.position, Quaternion.identity);
     }
 
 

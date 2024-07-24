@@ -89,9 +89,16 @@ public class PlayerSwingHitbox : MonoBehaviour
     
                 if(BossController.Instance.bossHealth.isLastPhase)
                 {
-                    bullet.EndGameHit();
-                    VFXManager.Instance?.RequestVFX_SlowMoZoom(UnitManager.Instance?.GetPlayer()?.transform);
-                    TimeManager.Instance.RequestSlowMo(saigoNoPitchiDuration, 0.0000000001f); //brother
+                    if(BossController.Instance.currentBoss==1)
+                    {
+                        bullet.EndGameHit();
+                        VFXManager.Instance?.RequestVFX_SlowMoZoom(UnitManager.Instance?.GetPlayer()?.transform);
+                        TimeManager.Instance.RequestSlowMo(saigoNoPitchiDuration, 0.0000000001f); //brother
+                    }
+                    else if(BossController.Instance.currentBoss == 2)
+                    {
+                        bullet.CritterEndGameHit();
+                    }
                 }
 
                 else
