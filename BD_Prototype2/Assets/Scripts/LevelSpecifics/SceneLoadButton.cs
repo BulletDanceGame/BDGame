@@ -1,4 +1,5 @@
 using UnityEngine;
+using SM = UnityEngine.SceneManagement;
 
 public class SceneLoadButton : MonoBehaviour
 {
@@ -38,6 +39,23 @@ public class SceneLoadButton : MonoBehaviour
 
                 UnitManager.Instance.RespawnPlayer();
 
+                break;
+            case SceneManager.LoadOptions.Continue:
+                SaveData sd = SaveSystem.Instance.GetData();
+
+                switch (sd.currentLevel)
+                {
+                    case 0:
+                        SceneManager.Instance.LoadScene(SceneManager.Scenes.Tutorial, 3.5f);
+                        break;
+                    case int n when (n > SM.SceneManager.sceneCountInBuildSettings):
+                        SceneManager.Instance.LoadScene(SceneManager.Scenes.YokaiHunterBoss, 3.5f);
+                        break;
+                    default:
+                        SceneManager.Instance.LoadScene((SceneManager.Scenes)sd.currentLevel, 3.5f);
+                        break;
+
+                }
                 break;
 
             default: break;

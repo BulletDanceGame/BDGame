@@ -25,6 +25,8 @@ public class SceneLoadTrigger : MonoBehaviour
                 break;
 
             case SceneManager.LoadOptions.NextLevel:
+                SaveSystem.Instance.GetData().currentLevel = SceneManager.GetActiveScene().buildIndex + 1;
+                SaveSystem.Instance.Save();
                 SceneManager.Instance.LoadNextScene(3.5f);
                 break;
 
