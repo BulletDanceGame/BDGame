@@ -34769,6 +34769,11 @@
 								</BlendContainer>
 								<Sound Name="bat kun theme 2" ID="{C68591FD-56B1-4A51-8086-53EDF84AD7EF}" ShortID="686696203">
 									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
 										<Property Name="InitialDelay" Type="Real64">
 											<ValueList>
 												<Value>4.2</Value>
@@ -34807,6 +34812,43 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="bat kun theme 2" ID="{3E66F422-A337-4A3A-968B-31FAE7B0DCC6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="bat-kun theme 3" ID="{F90A6BAA-2DE0-4809-BBC9-C970F90B6F07}" ShortID="1065422750">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>4.2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="bat-kun theme 3" ID="{1C0A1FD3-1ED8-4FD1-BC99-C5B775D522E1}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.977037971580891"/>
+												<Property Name="FadeInShape" Type="int16" Value="8"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00358120287733499"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.01240633710234"/>
+												<Property Name="TrimEnd" Type="Real64" Value="28.2046589610314"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>bat-kun theme 3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="542166124"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="bat-kun theme 3" ID="{1C0A1FD3-1ED8-4FD1-BC99-C5B775D522E1}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
