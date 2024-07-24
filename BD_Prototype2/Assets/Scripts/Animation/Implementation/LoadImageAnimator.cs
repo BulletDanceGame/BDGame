@@ -13,10 +13,7 @@ public class LoadImageAnimator : RhythmAnimator
     protected override void OnEnable()
     {
         base.OnEnable();
-
-        Debug.Log(_animator + ", " + _animator.GetFloat("ImageType"));
         _animator.SetFloat("ImageType", (int)loadImageType);
-        Debug.Log(_animator + ", " + _animator.GetFloat("ImageType"));
     }
 
     public override void PlayAnimation(int anticipation, float duration)
