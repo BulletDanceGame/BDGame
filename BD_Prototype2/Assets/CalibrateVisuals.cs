@@ -48,7 +48,8 @@ public class CalibrateVisuals : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI averageText;
     [SerializeField] private TextMeshProUGUI consistencyText;
-    [SerializeField] private TextMeshProUGUI visualAidText;
+    [SerializeField] private GameObject title1;
+    [SerializeField] private GameObject title2;
     [SerializeField] private GameObject visuals;
     [SerializeField] private GameObject cali;
     [SerializeField] private TextMeshProUGUI recomendedOffset;
@@ -67,14 +68,19 @@ public class CalibrateVisuals : MonoBehaviour
             stage = 2;
             offsetText.text = visualOffset * 1000 + "ms";
 
-            visuals.SetActive(false);
-            visualAidText.gameObject.SetActive(false);
             cali.SetActive(true);
+            visuals.SetActive(false);
+            title1.SetActive(false);
+            title2.SetActive(false);
 
             recomendedOffset.text = " - ";
          
 
             anim.enabled = false;
+        }
+        else
+        {
+            RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1f, RTPCManager.CurveTypes.linear);
         }
     }
 
@@ -211,12 +217,10 @@ public class CalibrateVisuals : MonoBehaviour
                 double dist = max - min;
                 if (dist > 0.12)
                 {
-                    visualAidText.gameObject.SetActive(false);
                     consistencyText.text = "Very Inconsistent, Keep Pressing!";
                 }
                 else if (dist > 0.06)
                 {
-                    visualAidText.gameObject.SetActive(false);
                     consistencyText.text = "Inconsistent, Keep Pressing!";
                 }
                 else
@@ -225,16 +229,18 @@ public class CalibrateVisuals : MonoBehaviour
 
                     if (stage == 1)
                     {
-                        visualAidText.gameObject.SetActive(true);
+                        title1.SetActive(false);
+                        title2.SetActive(true);
                         consistencyText.text = "";
+                        RTPCManager.Instance.SetAttributeValue("VOLUME", 50, 1f, RTPCManager.CurveTypes.linear);
                     }
                     else if (stage == 2)
                     {
                         visuals.SetActive(false);
-                        visualAidText.gameObject.SetActive(false);
+                        title2.SetActive(false);
                         cali.SetActive(true);
-                        double diff = averageDelayWithV - averageDelayWithoutV;
-                        recomendedOffset.text = Math.Abs(Math.Round(diff * 1000)) + "ms ";
+                        double diff = averageDelayWithoutV - averageDelayWithV;
+                        recomendedOffset.text = Math.Round(diff * 1000) + "ms ";
                         recomendedOffset.color = textColor.Evaluate((float)diff * 5f + 0.5f);
                     }
 
@@ -344,10 +350,13 @@ public class CalibrateVisuals : MonoBehaviour
         SaveSystem.Instance.GetData().visualOffset = visualOffset;
 
         visuals.SetActive(true);
-        visualAidText.gameObject.SetActive(false);
+        title1.SetActive(true);
         cali.SetActive(false);
+        title2.SetActive(false);
 
         anim.enabled = true;
+
+        RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1f, RTPCManager.CurveTypes.linear);
     }
 
 }
