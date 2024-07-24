@@ -58,16 +58,20 @@ public class CalibrationMenu : MonoBehaviour
             SaveSystem.Instance.Save();
 
             _screens[_currentScreen].SetActive(false);
+            _buttons[_currentScreen].color = new Color(1f, 1f, 1f, 0.5f);
             _screens[0].SetActive(true);
+            _buttons[0].color = Color.white;
             _currentScreen = 0;
             menu.BackFromCalibration();
         }
         else
         {
             _screens[_currentScreen].SetActive(false);
+            _buttons[_currentScreen].color = new Color(1f, 1f, 1f, 0.5f);
             _currentScreen += i;
             _screens[_currentScreen].SetActive(true);
-            
+            _buttons[_currentScreen].color = Color.white;
+
             if (MainMenu.currentController == ControllerType.GAMEPAD)
             {
                 MainMenu.currentButton = _screens[_currentScreen].GetComponentInChildren<Button>();

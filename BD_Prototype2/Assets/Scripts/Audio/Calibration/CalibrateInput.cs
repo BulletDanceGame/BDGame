@@ -21,6 +21,8 @@ public class CalibrateInput : MonoBehaviour
     [SerializeField] private TextMeshProUGUI offsetText;
     [SerializeField] private TextMeshProUGUI countText;
     [SerializeField] private GameObject resetButton;
+    [SerializeField] private Button continueButton;
+    [SerializeField] private GameObject cali;
 
     private double secondsPerBeat = .0;
 
@@ -56,9 +58,14 @@ public class CalibrateInput : MonoBehaviour
         EventManager.Instance.OnBeatForVisuals += PlayAnimations;
 
         double offset = GetOffset();
-        string late = (offset >= 0) ? "LATE" : "EARLY";
-        offsetText.text = Math.Abs(offset * 1000) + "ms " + late;
-        offsetText.color = textColor.Evaluate((float)offset * 5f + 0.5f);
+        if (offset != (double)default)
+        {
+            string late = (offset >= 0) ? "LATE" : "EARLY";
+            offsetText.text = Math.Abs(offset * 1000) + "ms " + late;
+            offsetText.color = textColor.Evaluate((float)offset * 5f + 0.5f);
+            cali.SetActive(true);
+            continueButton.interactable = true;
+        }
     }
 
     private void OnDisable()
@@ -121,8 +128,6 @@ public class CalibrateInput : MonoBehaviour
 
                 averageDelay = 0;
                 averageText.text = "";
-                consistencyText.text = "";
-
 
                 //markers
                 for (int i = 0; i < delayMarkers.Count; i++)
@@ -190,41 +195,11 @@ public class CalibrateInput : MonoBehaviour
             if (delays.Count == 4)
             {
 
-                //double offset = Math.Round(averageDelay, 3);
-
-                //SetOffset(offset);
-
-                //double offsetRelativePos = offset / secondsPerBeat;
-                //offsetMarker.transform.localPosition = new Vector3(112.5f + 75f * (float)offsetRelativePos, 0, 0);
-                //offsetMarker.SetActive(true);
-                //offsetText.text = "Offset: " + Math.Round(offset * 1000) + "ms";
-
-                //canHit = false;
+                continueButton.interactable = (Math.Abs(averageDelay) < 0.06);
 
 
-                //Consistency
-                double min = 1000, max = -1000;
-                foreach (double de in delays)
-                {
-                    min = Math.Min(min, de);
-                    max = Math.Max(max, de);
-                }
-                double dist = max - min;
-                string text = "";
-                if (dist > 0.10)
-                {
-                    text = "Very Inconsistent Hits, Click on the 4th Beat!";
-                }
-                else if (dist > 0.05)
-                {
-                    text = "Inconsistent Hits, Keep Going!";
-                }
-                else
-                {
-                    text = "Consistent Hits! Good Job!";
-                }
 
-                consistencyText.text = text;
+                cali.SetActive(true);
             }
 
 
@@ -317,7 +292,6 @@ public class CalibrateInput : MonoBehaviour
 
         averageDelay = 0;
         averageText.text = "";
-        consistencyText.text = "";
 
 
         //markers
@@ -337,7 +311,9 @@ public class CalibrateInput : MonoBehaviour
 
 
         SetOffset(0);
+        continueButton.interactable = false;
 
+        cali.SetActive(false);
     }
 
 }

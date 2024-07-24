@@ -46,9 +46,13 @@ public class PlayerSwing : MonoBehaviour
     [SerializeField] float BadDamageAddon = 0;
 
     [Header("Swing Angles")]
+    public bool BulletShouldGetDestroyedOnBad = false;
     public float BadHitAngle = 90;
+    
 
     private Material _swingMat;
+
+    [Header("Misc")]
     [SerializeField]  private SpriteRenderer _rend;
 
     public BeatTiming hitTiming { get; private set; }
@@ -141,6 +145,7 @@ public class PlayerSwing : MonoBehaviour
                 _swingMat.SetColor("_SwingColor", new Color(0.3f, 0, 0 , 0.75f));
 
                 GetComponentInParent<Player>().Fail();
+                EventManager.Instance.PlayerMiss();
 
                 break;
 

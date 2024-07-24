@@ -64,7 +64,7 @@ MonoBehaviour:
   speaker: 0
   speakerPosition: 0
   characterArt: {fileID: 21300000, guid: 00dc44adda91410479f9bbb78e1082a5, type: 3}
-  dialogueText: Heh.
+  dialogueText: Well
   speedOfLetters: 0.1
   voiceline:
     idInternal: 0
@@ -528,10 +528,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: PlayerClip
   - m_Version: 1
-    m_Start: 27.65
+    m_Start: 27.583333333333332
     m_ClipIn: 0
     m_Asset: {fileID: 8907210277881368369}
-    m_Duration: 0.0833333333333357
+    m_Duration: 0.15000000000000213
     m_TimeScale: 1
     m_ParentTrack: {fileID: -4967296344699035556}
     m_EaseInDuration: 0
@@ -599,7 +599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 27.733333333333334
+  m_Time: 27.716666666666665
   m_Retroactive: 0
   m_EmitOnce: 1
   m_Asset: {fileID: 11400000, guid: ec1a6f45da483714497b1457e6915cca, type: 2}
@@ -634,7 +634,7 @@ MonoBehaviour:
   speaker: 1
   speakerPosition: 1
   characterArt: {fileID: 21300000, guid: 0c006640dd3711340b7b8e32bd5cf1ce, type: 3}
-  dialogueText: Must.                    [hint to mind control]
+  dialogueText: Well bring it on! (MC SAYS)****
   speedOfLetters: 0.06
   voiceline:
     idInternal: 0
@@ -690,7 +690,25 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -792,13 +810,49 @@ MonoBehaviour:
     m_BlendOutDuration: 7.499999999999993
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -826,7 +880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 27.733333333333334
+  m_Time: 27.533333333333335
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: aeb9458394d44d3408f2765c76d3f495, type: 2}
@@ -881,7 +935,7 @@ MonoBehaviour:
   speaker: 0
   speakerPosition: 0
   characterArt: {fileID: 21300000, guid: 00dc44adda91410479f9bbb78e1082a5, type: 3}
-  dialogueText: ...a...
+  dialogueText: ...up?
   speedOfLetters: 0.08
   voiceline:
     idInternal: 0
@@ -1202,7 +1256,7 @@ MonoBehaviour:
   speaker: 1
   speakerPosition: 1
   characterArt: {fileID: 0}
-  dialogueText: '[starts jumping up and down in anger]'
+  dialogueText: ENEMY... ENEMY ENEMY ENEMY!
   speedOfLetters: 0.0000001
   voiceline:
     idInternal: 0
@@ -1223,7 +1277,7 @@ MonoBehaviour:
   speaker: 1
   speakerPosition: 1
   characterArt: {fileID: 21300000, guid: 0c006640dd3711340b7b8e32bd5cf1ce, type: 3}
-  dialogueText: PROTECT.                              [hint to mind control]
+  dialogueText: "\u2026.. DIE! "
   speedOfLetters: 0.06
   voiceline:
     idInternal: 0
@@ -1963,7 +2017,7 @@ MonoBehaviour:
   speaker: 0
   speakerPosition: 0
   characterArt: {fileID: 21300000, guid: 00dc44adda91410479f9bbb78e1082a5, type: 3}
-  dialogueText: More of y
+  dialogueText: Haven't had enough yet chumps?
   speedOfLetters: 0.05
   voiceline:
     idInternal: 0
@@ -2264,7 +2318,7 @@ MonoBehaviour:
   speaker: 0
   speakerPosition: 0
   characterArt: {fileID: 21300000, guid: 00dc44adda91410479f9bbb78e1082a5, type: 3}
-  dialogueText: You're really itching for...
+  dialogueText: i'm starting to get warmed up...?
   speedOfLetters: 0.04
   voiceline:
     idInternal: 0
@@ -2282,7 +2336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 27.65
+  m_Time: 27.73333333333333
   m_Retroactive: 0
   m_EmitOnce: 1
   m_Asset: {fileID: 11400000, guid: ec1a6f45da483714497b1457e6915cca, type: 2}
@@ -2356,7 +2410,7 @@ MonoBehaviour:
   speaker: 0
   speakerPosition: 0
   characterArt: {fileID: 21300000, guid: a749329f9e10f3d45b5d5ccd65140113, type: 3}
-  dialogueText: You're a big one.
+  dialogueText: I guess you're the mom?
   speedOfLetters: 0.05
   voiceline:
     idInternal: 0
