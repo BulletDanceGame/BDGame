@@ -73,9 +73,8 @@ namespace BulletDance.Cutscene
 
             _cutscenePlaying = false;
             _musicStarted    = false;
-            EventManager.Instance.StartTimer();
-
             EventManager.Instance.EndCutscene();
+            EventManager.Instance.StartTimer();
         }
 
 
