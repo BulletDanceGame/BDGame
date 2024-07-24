@@ -10,6 +10,9 @@ public enum BeatTiming
     NONE
 }
 
+public enum ButtonInput { swing, dash, none };
+
+
 public class PlayerRhythm : MonoBehaviour
 {
     public static PlayerRhythm Instance;
@@ -327,17 +330,43 @@ public class PlayerRhythm : MonoBehaviour
 
         double timeDiff = time - (_timesToHit[index] + offset);
 
-        if (input == ButtonInput.swing)
+        if ((input == ButtonInput.swing || input == ButtonInput.dash) && SceneManager.Instance._currentScene != SceneManager.Scenes.Menu)
         {
             print("delay: " + timeDiff + " time " + Time.timeAsDouble);
 
             diff += timeDiff;
             diffNr++;
-            print("average " + diff / diffNr);
 
             max = Math.Max(timeDiff, max);
             min = Math.Min(timeDiff, min);
             //print("max: " + max + " and min: " + min);
+
+            if (diffNr == 20)
+            {
+                diff -= max; 
+                diff -= min;
+
+                double average = diff / diffNr;
+                print("average " + average);
+
+                if (Math.Abs(average) > 0.05)
+                {
+                    double n = (double)Math.Round((decimal)average, 2);
+                    print("average CHANGE to " + n);
+                    offsetSwing += n;
+                    offsetDash += n;
+                    SaveSystem.Instance.GetData().swingOffset = offsetSwing;
+                    SaveSystem.Instance.GetData().dashOffset = offsetDash;
+                    SaveSystem.Instance.Save();
+
+                    EventManager.Instance.CalibrationAlert((offsetSwing*1000) + "ms");
+                }
+
+                diff = 0;
+                diffNr = 0;
+                max = -999;
+                min = 999;
+            }
         }
 
 

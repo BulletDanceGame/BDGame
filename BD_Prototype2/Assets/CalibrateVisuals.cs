@@ -7,9 +7,14 @@ using UnityEngine.UI;
 
 
 
-public class CalibrateInput : MonoBehaviour
+public class CalibrateVisuals : MonoBehaviour
 {
     public ButtonInput input;
+
+
+    private int stage = 0;
+
+    private double visualOffset;
 
     [SerializeField] private CalibrationMenu menu;
 
@@ -24,7 +29,8 @@ public class CalibrateInput : MonoBehaviour
 
     private double secondsPerBeat = .0;
 
-    private double averageDelay = .0;
+    private double averageDelayWithV = .0;
+    private double averageDelayWithoutV = .0;
     private List<double> delays = new List<double>();
 
 
@@ -42,6 +48,10 @@ public class CalibrateInput : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI averageText;
     [SerializeField] private TextMeshProUGUI consistencyText;
+    [SerializeField] private TextMeshProUGUI visualAidText;
+    [SerializeField] private GameObject visuals;
+    [SerializeField] private GameObject cali;
+    [SerializeField] private TextMeshProUGUI recomendedOffset;
 
     [SerializeField] private Gradient textColor;
 
@@ -49,10 +59,23 @@ public class CalibrateInput : MonoBehaviour
     {
         EventManager.Instance.OnBeatForVisuals += PlayAnimations;
 
-        double offset = GetOffset();
-        string late = (offset >= 0) ? "LATE" : "EARLY";
-        offsetText.text = Math.Abs(offset * 1000) + "ms " + late;
-        offsetText.color = textColor.Evaluate((float)offset * 5f + 0.5f);
+
+        visualOffset = PlayerRhythm.Instance.offsetVisuals;
+
+        if (visualOffset != (double)default)
+        {
+            stage = 2;
+            offsetText.text = visualOffset * 1000 + "ms";
+
+            visuals.SetActive(false);
+            visualAidText.gameObject.SetActive(false);
+            cali.SetActive(true);
+
+            recomendedOffset.text = " - ";
+         
+
+            anim.enabled = false;
+        }
     }
 
     private void OnDisable()
@@ -72,7 +95,7 @@ public class CalibrateInput : MonoBehaviour
         {
             OnPress();
         }
-        
+
     }
 
     void OnDash()
@@ -87,6 +110,12 @@ public class CalibrateInput : MonoBehaviour
 
     private void OnPress()
     {
+        if (stage == 2)
+        {
+            return;
+        }
+
+
         if (menu.canHit)// && currentBall != null)
         {
 
@@ -104,7 +133,7 @@ public class CalibrateInput : MonoBehaviour
                 particles.Play();
                 Destroy(currentBall);
             }
-            
+
 
             //Remove last delay
             if (delays.Count == 4)
@@ -143,8 +172,20 @@ public class CalibrateInput : MonoBehaviour
             double combinedDelay = 0;
             foreach (double de in delays)
             {
-                combinedDelay += de; 
+                combinedDelay += de;
             }
+            double averageDelay = 0;
+            if (stage == 0)
+            {
+                averageDelayWithV = combinedDelay / delays.Count;
+                averageDelay = averageDelayWithV;
+            }
+            else if(stage == 1)
+            {
+                averageDelayWithoutV = combinedDelay / delays.Count;
+                averageDelay = averageDelayWithoutV;
+            }
+
             averageDelay = combinedDelay / delays.Count;
             string late = (averageDelay >= 0) ? "LATE" : "EARLY";
             averageText.text = Math.Abs(Math.Round(averageDelay * 1000)) + "ms " + late;
@@ -160,19 +201,6 @@ public class CalibrateInput : MonoBehaviour
             //offset n marker
             if (delays.Count == 4)
             {
-
-                //double offset = Math.Round(averageDelay, 3);
-
-                //SetOffset(offset);
-
-                //double offsetRelativePos = offset / secondsPerBeat;
-                //offsetMarker.transform.localPosition = new Vector3(112.5f + 75f * (float)offsetRelativePos, 0, 0);
-                //offsetMarker.SetActive(true);
-                //offsetText.text = "Offset: " + Math.Round(offset * 1000) + "ms";
-
-                //canHit = false;
-
-
                 //Consistency
                 double min = 1000, max = -1000;
                 foreach (double de in delays)
@@ -181,33 +209,52 @@ public class CalibrateInput : MonoBehaviour
                     max = Math.Max(max, de);
                 }
                 double dist = max - min;
-                string text = "";
-                //if (dist > 0.1)
-                //{
-                //    text = "INCONSISTENT, Click to the CLAP!";
-                //}
-                //else if (dist > 0.05)
-                //{
-                //    text = "Inconsistent, consider continue trying Clicking to the Clap";
-                //}
-                //else
-                //{
-                    
+                if (dist > 0.12)
+                {
+                    consistencyText.text = "Very Inconsistent, Keep Pressing!";
+                }
+                else if (dist > 0.06)
+                {
+                    consistencyText.text = "Inconsistent, Keep Pressing!";
+                }
+                else
+                {
+                    stage++;
 
-                //}
-                //if (Math.Abs(averageDelay) > 0.13)
-                //{
-                //    text = "Your Average should be within the Blue Lines. Being this far off will probably cause an issue!";
-                //}
-                //else if (Math.Abs(averageDelay) > 0.06)
-                //{
-                //    text = "Quite far off beat. This might be noticable while playing";
-                //}
-                //else
-                //{
-                //    text = "Nice! Click FINISHED!";
-                //}
-                consistencyText.text = text;
+                    if (stage == 1)
+                    {
+                        visualAidText.gameObject.SetActive(true);
+                    }
+                    else if (stage == 2)
+                    {
+                        visuals.SetActive(false);
+                        visualAidText.gameObject.SetActive(false);
+                        cali.SetActive(true);
+                        double diff = averageDelayWithV - averageDelayWithoutV;
+                        recomendedOffset.text = Math.Abs(Math.Round(diff * 1000)) + "ms ";
+                        recomendedOffset.color = textColor.Evaluate((float)diff * 5f + 0.5f);
+                    }
+
+
+                    delays.Clear();
+                    averageText.text = "";
+                    consistencyText.text = "";
+                    //markers
+                    for (int i = 0; i < delayMarkers.Count; i++)
+                    {
+                        Destroy(delayMarkers[i]);
+                    }
+                    delayMarkers.Clear();
+
+                    averageDelayMarker.SetActive(false);
+
+
+                    anim.enabled = false;
+                    Destroy(currentBall);
+                    Destroy(nextBall);
+                }
+
+
             }
 
 
@@ -216,56 +263,21 @@ public class CalibrateInput : MonoBehaviour
 
 
     //Called through Button Press
-    public void ChangeOffset(int i)
+    public void ChangeVisualOffset(int dir)
     {
-
-        double offset = GetOffset();
-
-        SetOffset(offset + (i * 0.010));
-
-
-
-        //double offsetPos = offset / secondsPerBeat;
-        //offsetMarker.transform.localPosition = new Vector3(112.5f + 75f * (float)offsetPos, 0, 0);
-
+        visualOffset += 0.010 * dir;
+        visualOffset = Math.Round(Math.Max(-0.30, Math.Min(0.30, visualOffset)), 3);
+        PlayerRhythm.Instance.UpdateOffsetVisuals(visualOffset);
+        SaveSystem.Instance.GetData().visualOffset = visualOffset;
+        offsetText.text = visualOffset * 1000 + "ms";
 
     }
 
-    private double GetOffset()
-    {
-        if (input == ButtonInput.swing)
-        {
-            return PlayerRhythm.Instance.offsetSwing;
-        }
-        else //dash
-        {
-            return PlayerRhythm.Instance.offsetDash;
-        }
-    }
-    
-    private void SetOffset(double offset)
-    {
-        if (input == ButtonInput.swing)
-        {
-            PlayerRhythm.Instance.offsetSwing = offset;
-            SaveSystem.Instance.GetData().swingOffset = offset;
-        }
-        else //dash
-        {
-            PlayerRhythm.Instance.offsetDash = offset;
-            SaveSystem.Instance.GetData().dashOffset = offset;
-
-        }
-
-        string late = (offset >= 0) ? "LATE" : "EARLY";
-        offsetText.text = Math.Round(Math.Abs(offset * 1000)) + "ms " + late;
-        offsetText.color = textColor.Evaluate((float)offset * 5f + 0.5f);
-    }
 
 
     public void PlayAnimations(int anticipation, float duration, int beat)
     {
-        if (!gameObject.activeSelf) return;
+        if (!gameObject.activeSelf || stage > 0) return;
 
         if (anticipation == 6)
         {
@@ -301,7 +313,9 @@ public class CalibrateInput : MonoBehaviour
     {
         delays.Clear();
 
-        averageDelay = 0;
+        stage = 0;
+        averageDelayWithV = 0;
+        averageDelayWithoutV = 0;
         averageText.text = "";
         consistencyText.text = "";
 
@@ -322,8 +336,15 @@ public class CalibrateInput : MonoBehaviour
         //resetButton.SetActive(false);
 
 
-        SetOffset(0);
+        visualOffset = (double) default;
+        PlayerRhythm.Instance.UpdateOffsetVisuals(visualOffset);
+        SaveSystem.Instance.GetData().visualOffset = visualOffset;
 
+        visuals.SetActive(true);
+        visualAidText.gameObject.SetActive(false);
+        cali.SetActive(false);
+
+        anim.enabled = true;
     }
 
 }
