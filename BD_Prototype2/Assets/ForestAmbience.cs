@@ -12,6 +12,7 @@ public class ForestAmbience : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            RTPCManager.Instance.ResetValue("VOLUME____AmbientComponents", 2.5f, RTPCManager.CurveTypes.high_curve);
             audioManagerSigh.GetComponent<GeneralSounds>().PlayForestAmbience();
         }
     }

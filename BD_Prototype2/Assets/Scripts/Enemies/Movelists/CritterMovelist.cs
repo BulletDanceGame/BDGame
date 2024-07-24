@@ -241,7 +241,7 @@ public class CritterMovelist : Movelist
         if (_isCritterRunning)
         {
             //commented out cause of causing errors
-            //agent.SetDestination(UnitManager.Instance.GetPlayer().transform.position);
+            agent.SetDestination(UnitManager.Instance.GetPlayer().transform.position);
 
         }
 

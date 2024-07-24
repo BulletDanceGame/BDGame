@@ -98,6 +98,7 @@ namespace AK
         static const AkUniqueID PICKUP__HEALTH____PLAY = 63268803U;
         static const AkUniqueID PLAY_AMBIENCEFOREST = 513231425U;
         static const AkUniqueID PLAY_ARENA___BEFORE_THE_FIGHT___INTRO = 420814559U;
+        static const AkUniqueID PLAY_BAT_THEME = 3550740225U;
         static const AkUniqueID PLAY_BATTLE_HALF = 4269135864U;
         static const AkUniqueID PLAY_BATTLE_INTROWAV = 843529347U;
         static const AkUniqueID PLAY_BATTLE_WHOLE = 3431965952U;
@@ -106,6 +107,8 @@ namespace AK
         static const AkUniqueID PLAY_BOSS_1___PHASE_2___PART_2___REGULAR_BULLETS2 = 4069167034U;
         static const AkUniqueID PLAY_BOSS_1___PHASE_2___PART_4___LIGHTNING_BULLETS = 1835325240U;
         static const AkUniqueID PLAY_COOLDOWN = 1837873573U;
+        static const AkUniqueID PLAY_COOLDOWN___CUTSCENE_END = 3739785168U;
+        static const AkUniqueID PLAY_COOLDOWN___CUTSCENE_START = 1744389995U;
         static const AkUniqueID PLAY_CRITTER_PHASE_1_PART_4_BPM150 = 3176132612U;
         static const AkUniqueID PLAY_CRITTER_PHASE_2___INTRO = 3076083233U;
         static const AkUniqueID PLAY_CRITTER_PHASE_2___PART_1 = 2016799278U;
