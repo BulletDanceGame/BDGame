@@ -19,6 +19,7 @@ public class Bullet : MonoBehaviour
     private float _onBeatSpeedTimer = 0;
     public float lifeTime;
     public float Damage;
+    float baseDamage;
     public int bounces = 0;
     Vector2 dir;
     public float bounceDamage;
@@ -104,7 +105,9 @@ public class Bullet : MonoBehaviour
 
         SetSpeed(offBeatSpeed);
         _fx.SetUp(this);
-        _fx.Reset(); 
+        _fx.Reset();
+
+        baseDamage = Damage;
     }
 
     private void OnEnable()
@@ -125,7 +128,7 @@ public class Bullet : MonoBehaviour
         ResetBullet();
         CancelInvoke();
 
-        Damage = 15;
+        Damage = baseDamage;
 
         EventManager.Instance.OnPlayerRhythmBeat -= OnBeat;
     }
@@ -162,7 +165,6 @@ public class Bullet : MonoBehaviour
     {
         if (!_canCollide)
         {
-            Debug.Log("CANT HIT");
             return;
         }
 
@@ -174,7 +176,6 @@ public class Bullet : MonoBehaviour
 
         if (collision.tag == "Turret" && type == BulletOwner.BOSSBULLET)
         {
-            Debug.Log("BOSS BULLET HIT A TURRET");
             Deactivate();
             return;
 
@@ -280,6 +281,11 @@ public class Bullet : MonoBehaviour
         Invoke("SpeedUp", 1.0f);
 
         _fx.LastHitFX();
+    }
+
+    public void CritterEndGameHit()
+    {
+        _fx.LastHitForCritter();
     }
 
 

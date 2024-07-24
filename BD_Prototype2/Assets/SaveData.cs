@@ -8,4 +8,7 @@ public class SaveData
 
     public double visualOffset = 0, swingOffset = 0, dashOffset = 0;
 
+    //Level 0 = Menu
+    public int currentLevel = 0;
+
 }

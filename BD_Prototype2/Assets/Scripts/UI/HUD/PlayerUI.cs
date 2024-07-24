@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 
@@ -9,6 +11,7 @@ public class PlayerUI : MonoBehaviour
         Enable();
         if(EventManager.Instance == null) return;
         EventManager.Instance.OnPlayerDeath   += Disable;
+        EventManager.Instance.OnCalibrationAlert += Cali;
     }
 
     private void OnDisable()
@@ -17,6 +20,7 @@ public class PlayerUI : MonoBehaviour
         EventManager.Instance.OnPlayerDeath   -= Disable;
         EventManager.Instance.OnPlayerDamage -= TakeDamage;
         EventManager.Instance.OnPlayerHeal   -= Heal;
+        EventManager.Instance.OnCalibrationAlert -= Cali;
     }
 
 
@@ -68,4 +72,23 @@ public class PlayerUI : MonoBehaviour
         if(healAmount <= 0f) healAmount = player.defaultHealAmount;
         _healthBar.IncreaseValue(healAmount);
     }
+
+
+    public GameObject caliAlert;
+    public TextMeshProUGUI caliAlertText;
+    public void Cali(string text)
+    {
+        StartCoroutine(CalibrationAlert(text));
+    }
+
+    IEnumerator CalibrationAlert(string text)
+    {
+        caliAlert.SetActive(true);
+        caliAlertText.text = text;
+
+        yield return new WaitForSeconds(10);
+
+        caliAlert.SetActive(false);
+    }
+
 }

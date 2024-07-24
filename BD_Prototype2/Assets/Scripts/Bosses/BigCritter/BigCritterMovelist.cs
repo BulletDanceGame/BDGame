@@ -17,6 +17,7 @@ public class BigCritterMovelist : Movelist
     private Rigidbody2D _rb;
     private int _jumpdirection;
     private float _jumpTime;
+    private bool airborne;
     public float startJumpTime;
     public float JumpSpeed;
     public float stopAndShootRadius;
@@ -35,6 +36,8 @@ public class BigCritterMovelist : Movelist
 
     private bool _activate;
 
+    private bool _isJumpOrLand;
+
     public static Spawner Instance;
 
     public Transform[] SpawnPoint;
@@ -44,7 +47,7 @@ public class BigCritterMovelist : Movelist
     public float SpawnCooldown;
     public float Offset;
     // Start is called before the first frame update
-    private bool airborne;
+    
     //Animation
     private BulletDance.Animation.UnitAnimationHandler _animHandler = null;
     private bool _runStateChanged = false, _isPrevRun = false;
@@ -59,11 +62,11 @@ public class BigCritterMovelist : Movelist
     private void OnEnable()
     {
         _isCritterRunning = false;
+        _isJumpOrLand = false;
         _activate = false;
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-
         EventManager.Instance.OnDeactivateBoss += Deactivate;
         EventManager.Instance.OnActivateBoss += Activate;
     }
@@ -92,7 +95,7 @@ public class BigCritterMovelist : Movelist
 
         _rb = GetComponent<Rigidbody2D>();
 
-        StartCoroutine(StopChasingTimer());
+        //StartCoroutine(StopChasingTimer());
 
         _animHandler = GetComponentInChildren<BulletDance.Animation.UnitAnimationHandler>();
         UnitManager.Instance.ActiveEnemies.Add(gameObject);
@@ -121,43 +124,64 @@ public class BigCritterMovelist : Movelist
         if (spiralShotIndex == 4) { spiralShotIndex = 0; }
     }
 
-    private void JumpToThePlayer()
-    {        
-        _jumpdirection = 1;
+
+    private void LowJump()
+    {
+        _isJumpOrLand = true;
         _jumpTime = startJumpTime;
+        _animHandler.SpecialStart(47);
+
     }
 
-    private void JumpOutOfTheScreen()
+    private void LowLand()
     {
-        //JumpAnimation
+        _isJumpOrLand = true;
+
+        _jumpTime = startJumpTime;
+        _animHandler.SpecialStart(46);
+
     }
 
-    private void JumpinPlace()
+    private void JumpOutOftheScreen()
     {
-        print("JUMPED");
+        _isJumpOrLand = true;
+        print("JumpOutOftheScreennnnnnnnnn");
         _jumpTime = startJumpTime;
-
         _animHandler.SpecialStart(49);
-        _isCritterRunning = false;
     }
 
-    private void LandAndCircleShot()
+    private void JumpOutOftheScreenWithCircleShot()
     {
-        print("LANDED");
+        _isJumpOrLand = true;
 
-        _jumpdirection = 2;
         _jumpTime = startJumpTime;
+        _animHandler.SpecialStart(49);
+        CircleShot();
+    }
+    private void HighJumpHover()
+    {
+        _isJumpOrLand = false;
+        print("HighJumpHoverrrrrrrrrrrrrrrrrrrrrrrrrrr");
 
-        _animHandler.SpecialStart(48);
+        _jumpTime = startJumpTime;
+        _animHandler.SpecialStart(45);
     }
 
-    private void LandAndSpawnCritter()
+    private void LowJumpHover()
     {
-        _jumpdirection = 3;
+        _isJumpOrLand = false;
+
         _jumpTime = startJumpTime;
+        _animHandler.SpecialStart(44);
+    }
 
+    private void HighLand()
+    {
+        _isJumpOrLand = true;
+        print("HighLandddddddddddddddddddddd");
+
+        _jumpTime = startJumpTime;
         _animHandler.SpecialStart(48);
-
     }
 
     private void SpawnSmallCritter()
@@ -168,11 +192,12 @@ public class BigCritterMovelist : Movelist
     // Update is called once per frame
     void Update()
     {
+
         if (UnitManager.Instance.GetPlayer())
         {
             Jump();
             _distanceFromPlayer = Vector2.Distance(UnitManager.Instance.GetPlayer().transform.position, transform.position);
-            //ChasePlayer();
+            ChasePlayer();
         }
 
         //Animation
@@ -195,33 +220,17 @@ public class BigCritterMovelist : Movelist
 
         if (!airborne)
         {
-            _jumpdirection = 0;
             _animHandler?.SpecialStop();
         }
-
         else
         { // if dash then check direction start timer and add speed
             _jumpTime -= Time.deltaTime;
-
-            if (_jumpdirection == 1)
+            if(!_isJumpOrLand)
             {
                 transform.position = Vector2.MoveTowards(transform.position, UnitManager.Instance.GetPlayer().transform.position, JumpSpeed * Time.deltaTime);
+            }
 
-            }
-            else if (_jumpdirection == 2)
-            {
-                if (_jumpTime <= 0)
-                {
-                    CircleShot();
-                }
-            }
-            else if (_jumpdirection == 3)
-            {
-                if (_jumpTime <= 0)
-                {
-                    SpawnSmallCritter();
-                }
-            }
+
         }
     }
 
@@ -233,29 +242,29 @@ public class BigCritterMovelist : Movelist
         RaycastHit2D hitleft = Physics2D.Raycast(transform.position, -transform.right, _distanceFromWall, layermask);
         RaycastHit2D hitright = Physics2D.Raycast(transform.position, transform.right, _distanceFromWall, layermask);
 
-        if(!airborne)
+        if(airborne)
         {
-            if (_distanceFromPlayer > stopAndShootRadius && _activate)
-            {
-                _isCritterRunning = true;
-                _runSpeed += Time.deltaTime * _acceleration;
-                if (_runSpeed > Speed) _runSpeed = Speed;
-            }
-            if (_distanceFromPlayer <= stopAndShootRadius)
-            {
-                _isCritterRunning = false;
-                _runSpeed -= Time.deltaTime * _acceleration;
-                if (_runSpeed < 0) _runSpeed = 0;
+            //if (_distanceFromPlayer > stopAndShootRadius && _activate)
+            //{
+            //    _isCritterRunning = true;
+            //    _runSpeed += Time.deltaTime * _acceleration;
+            //    if (_runSpeed > Speed) _runSpeed = Speed;
+            //}
+            //if (_distanceFromPlayer <= stopAndShootRadius)
+            //{
+            //    _isCritterRunning = false;
+            //    _runSpeed -= Time.deltaTime * _acceleration;
+            //    if (_runSpeed < 0) _runSpeed = 0;
 
-                StartCoroutine(StopChasingTimer());
-            }
+            //    StartCoroutine(StopChasingTimer());
+            //}
             agent.speed = _runSpeed;
-            if (_isCritterRunning)
-            {
+            //if (_isCritterRunning)
+            //{
                 //commented out cause of causing errors
-                agent.SetDestination(UnitManager.Instance.GetPlayer().transform.position);
+                //agent.SetDestination(UnitManager.Instance.GetPlayer().transform.position);
 
-            }
+            //}
 
 
             _runStateChanged = _isPrevRun != _isCritterRunning;

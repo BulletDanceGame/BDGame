@@ -71,57 +71,6 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 2.499999999999998
-    m_ClipIn: 0
-    m_Asset: {fileID: -3529208643303145736}
-    m_Duration: 8
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: -8758528214132273795}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: DialogueClip
-  - m_Version: 1
     m_Start: 11.999999999999998
     m_ClipIn: 0
     m_Asset: {fileID: 6846892262956416056}
@@ -372,7 +321,7 @@ MonoBehaviour:
   m_Muted: 0
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
-  m_Parent: {fileID: 11400000}
+  m_Parent: {fileID: 2875121315358427532}
   m_Children: []
   m_Clips:
   - m_Version: 1
@@ -759,27 +708,6 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
---- !u!114 &-3529208643303145736
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9c9a981a8a37fb4ba1a33d742e9e380, type: 3}
-  m_Name: DialogueClip
-  m_EditorClassIdentifier: 
-  speaker: 0
-  speakerPosition: 0
-  characterArt: {fileID: 0}
-  dialogueText: '[audio: slow build up of heavy breathing and running footsteps]'
-  speedOfLetters: 0.1
-  voiceline:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
 --- !u!114 &-3399576881415389909
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -979,7 +907,6 @@ MonoBehaviour:
   - {fileID: 474041757561316945}
   - {fileID: -2053508944751932308}
   - {fileID: 2875121315358427532}
-  - {fileID: -8243463318529086234}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
@@ -1434,67 +1361,16 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: PlayerClip
   - m_Version: 1
-    m_Start: 31.484176595462475
-    m_ClipIn: 0
-    m_Asset: {fileID: 8588046261285979873}
-    m_Duration: 0.01666666666666572
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: 474041757561316945}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: 0.01666666666666572
-    m_BlendOutDuration: -1
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: PlayerClip
-  - m_Version: 1
-    m_Start: 30.6175099287958
+    m_Start: 31.666666666666668
     m_ClipIn: 0
     m_Asset: {fileID: 3852197697022988576}
-    m_Duration: 0.88333333333334
+    m_Duration: 0.08333333333333925
     m_TimeScale: 1
     m_ParentTrack: {fileID: 474041757561316945}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: 0.01666666666666572
+    m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -1521,25 +1397,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -1631,7 +1489,7 @@ MonoBehaviour:
     m_Start: 10.500000000000002
     m_ClipIn: 0
     m_Asset: {fileID: -7803993209251441970}
-    m_Duration: 0.5
+    m_Duration: 0.9499999999999975
     m_TimeScale: 1
     m_ParentTrack: {fileID: 1403911962691740024}
     m_EaseInDuration: 0
@@ -1741,6 +1599,7 @@ MonoBehaviour:
   m_Children:
   - {fileID: 1403911962691740024}
   - {fileID: 3350372585412467355}
+  - {fileID: -8243463318529086234}
   m_Clips: []
   m_Markers:
     m_Objects: []
@@ -2135,25 +1994,6 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
---- !u!114 &8588046261285979873
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5c0846bd771eef4aac01df0bb827068, type: 3}
-  m_Name: PlayerClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  enableUpdate: 1
-  direction: 3
-  faceTowardsTarget: {fileID: 0}
-  moveVelocity: {x: 0, y: 0}
-  spriteSet: 1
-  faceTowardsBoss: 0
-  animState: 0
 --- !u!114 &8828339433238743894
 MonoBehaviour:
   m_ObjectHideFlags: 1

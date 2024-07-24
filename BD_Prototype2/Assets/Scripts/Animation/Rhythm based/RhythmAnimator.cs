@@ -66,7 +66,7 @@ public class RhythmAnimator : MonoBehaviour
         get
         {
             //OffTime is the offset between the current time and the closest beat
-            double offTime = PlayerRhythm.Instance.GetHitDelay(ButtonInput.swing);
+            double offTime = PlayerRhythm.Instance.GetHitDelay(ButtonInput.none);
 
             if(offTime > 100) return 9999f; //There are no beats rn
 

@@ -1,12 +1,14 @@
 using UnityEngine;
-
+using System.Collections.Generic;
 public class FireBullet : MonoBehaviour
 {
     public GameObject fireTrailPrefab;
     private float _firetrailSpawnrate;
     public float Spawnrate;
 
+    
 
+    
     private void Update()
     {       
         SpawnFireTrail();
@@ -26,4 +28,8 @@ public class FireBullet : MonoBehaviour
             _firetrailSpawnrate = Spawnrate;
         }       
     }
+
+    
+
+    
 }

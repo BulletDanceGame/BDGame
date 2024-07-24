@@ -153,4 +153,18 @@ public class GameManager : MonoBehaviour
     {
         ElapsedTime = 0;
     }
+
+
+    //As long as gm isnt dontdestroyonload
+    private void OnDestroy()
+    {
+
+        EventManager.Instance.OnStartTimer -= StartTimer;
+
+        EventManager.Instance.OnResetTimer -= ResetTimer;
+
+        EventManager.Instance.OnStopTimer -= StopTimer;
+        EventManager.Instance.OnPlayerDeath -= StopTimer;
+        EventManager.Instance.OnBossDeath -= StopTimer;
+    }
 }

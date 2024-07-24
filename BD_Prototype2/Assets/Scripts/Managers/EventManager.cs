@@ -514,4 +514,18 @@ public class EventManager : MonoBehaviour
 
     }
 
+
+
+
+
+
+
+
+
+    public event Action<string> OnCalibrationAlert;
+    public void CalibrationAlert(string text)
+    {
+        OnCalibrationAlert?.Invoke(text);
+    }
+
 }

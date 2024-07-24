@@ -56,7 +56,7 @@ public class PlayerTriggerBox : MonoBehaviour
             bullet.Deactivate();
             ScoreManager.Instance.GotHit++;
         }
-        else if (collision.GetComponent<FireTrail>())
+        else if (collision.gameObject.tag=="FireTrail")
         {            
             _isBurning = true;
             _burnTracker = 0;

@@ -98,6 +98,7 @@ namespace AK
         static const AkUniqueID PICKUP__HEALTH____PLAY = 63268803U;
         static const AkUniqueID PLAY_AMBIENCEFOREST = 513231425U;
         static const AkUniqueID PLAY_ARENA___BEFORE_THE_FIGHT___INTRO = 420814559U;
+        static const AkUniqueID PLAY_BAT_THEME = 3550740225U;
         static const AkUniqueID PLAY_BATTLE_HALF = 4269135864U;
         static const AkUniqueID PLAY_BATTLE_INTROWAV = 843529347U;
         static const AkUniqueID PLAY_BATTLE_WHOLE = 3431965952U;
@@ -106,6 +107,8 @@ namespace AK
         static const AkUniqueID PLAY_BOSS_1___PHASE_2___PART_2___REGULAR_BULLETS2 = 4069167034U;
         static const AkUniqueID PLAY_BOSS_1___PHASE_2___PART_4___LIGHTNING_BULLETS = 1835325240U;
         static const AkUniqueID PLAY_COOLDOWN = 1837873573U;
+        static const AkUniqueID PLAY_COOLDOWN___CUTSCENE_END = 3739785168U;
+        static const AkUniqueID PLAY_COOLDOWN___CUTSCENE_START = 1744389995U;
         static const AkUniqueID PLAY_CRITTER_PHASE_1_PART_4_BPM150 = 3176132612U;
         static const AkUniqueID PLAY_CRITTER_PHASE_2___INTRO = 3076083233U;
         static const AkUniqueID PLAY_CRITTER_PHASE_2___PART_1 = 2016799278U;
@@ -120,6 +123,7 @@ namespace AK
         static const AkUniqueID PLAY_ENV1_TEST3_TRIPPLETS_PART1 = 160122243U;
         static const AkUniqueID PLAY_ENV1_TEST3_TRIPPLETS_PART2 = 160122240U;
         static const AkUniqueID PLAY_ENV1_TEST3_TRIPPLETS_PART3 = 160122241U;
+        static const AkUniqueID PLAY_ENV1_VEGZONE1_EVADE_BATTLEINTRO = 3499405277U;
         static const AkUniqueID PLAY_ENV1_VEGZONE1_EVADE_INTRO = 2023822823U;
         static const AkUniqueID PLAY_ENV1_VEGZONE1_EVADE_PART1 = 4057488865U;
         static const AkUniqueID PLAY_ENV1_VEGZONE1_EVADE_PART2 = 4057488866U;
@@ -137,6 +141,7 @@ namespace AK
         static const AkUniqueID PLAY_ENV1_VEGZONE5_BATTLE_PART2 = 2983091221U;
         static const AkUniqueID PLAY_ENV1_VEGZONE_OUTRO_PART1 = 586328000U;
         static const AkUniqueID PLAY_ENV1_VEGZONE_OUTROLOOP = 176035467U;
+        static const AkUniqueID PLAY_FIRSTTURRET___TURN_ON_AND_ALERT = 2754371527U;
         static const AkUniqueID PLAY_FORESTAMB = 3960404151U;
         static const AkUniqueID PLAY_LAYER1_BATTLE_HALF_PART1_5__BPM140_ = 3076762201U;
         static const AkUniqueID PLAY_LAYER1_BATTLE_HALF_PART1_5__BPM150_ = 3177574992U;
@@ -195,6 +200,8 @@ namespace AK
         static const AkUniqueID PLAY_PAUSE_MUSIC = 1496939652U;
         static const AkUniqueID PLAY_PICKUPSFX = 3043903975U;
         static const AkUniqueID PLAY_STARTGAME = 1444205428U;
+        static const AkUniqueID PLAY_TURRETTURNOFF = 2180780292U;
+        static const AkUniqueID PLAY_TURRETTURNON = 2314505822U;
         static const AkUniqueID PLAYER__AREYOUKIDDINGME____PLAY = 4096913669U;
         static const AkUniqueID PLAYER__BRINGIT____PLAY = 4003539485U;
         static const AkUniqueID PLAYER__DAREDA____PLAY = 3498367617U;
@@ -227,6 +234,7 @@ namespace AK
         static const AkUniqueID SOULFORMSPLASHSCREEN____PLAY = 1921985385U;
         static const AkUniqueID SPEEDUPCUTSCENE____PLAY = 2251819479U;
         static const AkUniqueID STOP_ENV1_VEGZONE_OUTROLOOP = 177105241U;
+        static const AkUniqueID STOP_FORESTAMB = 2168881957U;
         static const AkUniqueID TRAILERAUDIO____PLAY = 1814921978U;
         static const AkUniqueID TRAINING_GROUND__BATROOM__PART1____PLAY = 2693353997U;
         static const AkUniqueID TRAINING_GROUND__FULLONTRAINING__PART1____PLAY = 3019299785U;
@@ -414,7 +422,7 @@ namespace AK
         static const AkUniqueID _1_MENUS = 2384369890U;
         static const AkUniqueID _2_BOSS_BATTLE = 423108842U;
         static const AkUniqueID _2_PLAYER_SFX = 2516623221U;
-        static const AkUniqueID _3_BOSS_SFX = 2921596526U;
+        static const AkUniqueID _3_BOSS___ENEMY_SFX = 1021167356U;
         static const AkUniqueID _3_ENVIRONMENT_BATTLE = 458562295U;
         static const AkUniqueID _4_AMBIENT_SFX_COMPONENTS = 2224127838U;
         static const AkUniqueID _4_ENVIRONMENT_ROAMING = 376748577U;
@@ -424,6 +432,7 @@ namespace AK
         static const AkUniqueID ACTIONS = 3332220694U;
         static const AkUniqueID ACTIONS___DYNAMIC = 1728450328U;
         static const AkUniqueID ACTIONS___SET = 3545305787U;
+        static const AkUniqueID AMBIENCELOL = 713040514U;
         static const AkUniqueID BOSS___LEVEL_1___CRITTER = 1751930956U;
         static const AkUniqueID BOSS___LEVEL_1___YOKAI_HUNTER = 105929186U;
         static const AkUniqueID BOSS___LEVEL_2 = 2337630999U;
@@ -452,6 +461,8 @@ namespace AK
         static const AkUniqueID CUTSCENE_2___VS_YOKAI_HUNTER__MUSIC_ = 112838762U;
         static const AkUniqueID DAMAGE__PLAYER_ = 1280655526U;
         static const AkUniqueID DASH = 1942692385U;
+        static const AkUniqueID ENEMYACTIONS = 179567252U;
+        static const AkUniqueID ENEMYDAMAGE = 1879435608U;
         static const AkUniqueID ENV_BATTLE___LEVEL_1___CRITTER = 209238542U;
         static const AkUniqueID ENV_BATTLE___LEVEL_1___TUTORIAL = 1498105075U;
         static const AkUniqueID ENV_BATTLE___LEVEL_2 = 763777545U;

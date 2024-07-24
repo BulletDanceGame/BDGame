@@ -348,6 +348,15 @@ public class PlayerAnimator : UnitAnimator
         _spriteAnimator?.SetSpeed(1f / _duration);
     }
 
+    [SerializeField]
+    private ParticleSystem[] _pickupVFX;
+    public void PickUp()
+    {
+        foreach(ParticleSystem vfx in _pickupVFX)
+        {
+            vfx.Play();
+        }
+    }
 }
 
 }

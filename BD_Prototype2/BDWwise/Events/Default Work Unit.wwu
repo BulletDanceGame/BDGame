@@ -2000,7 +2000,7 @@
 								</Folder>
 							</ChildrenList>
 						</Folder>
-						<Folder Name="3 Boss" ID="{FDA97E8D-D470-4560-B5E9-366643D88C82}" ShortID="446897428">
+						<Folder Name="3 Boss &amp; Enemy" ID="{FDA97E8D-D470-4560-B5E9-366643D88C82}" ShortID="446897428">
 							<ChildrenList>
 								<Folder Name="Boss 1 - Yokai Hunter" ID="{4D43CD22-F1D8-4C1F-935E-0DD2FEEE9547}" ShortID="845691314">
 									<ChildrenList>
@@ -2047,7 +2047,43 @@
 										</Folder>
 									</ChildrenList>
 								</Folder>
-								<Folder Name="General SFX" ID="{92F4E0DC-3FB3-4687-8B70-B4385F4494BF}" ShortID="468746298"/>
+								<Folder Name="General SFX" ID="{92F4E0DC-3FB3-4687-8B70-B4385F4494BF}" ShortID="468746298">
+									<ChildrenList>
+										<Event Name="Play_FirstTurret___Turn_on_and_Alert" ID="{DF293304-82B2-46C1-87F1-43C7AACAAFF2}">
+											<ChildrenList>
+												<Action Name="" ID="{57F9829F-78E9-47A4-B01A-9F7ADF0B1789}" ShortID="585851487">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="FirstTurret - Turn on and Alert" ID="{5713F784-B486-4580-A119-A4278C64282B}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_TurretTurnOn" ID="{EC2A3F59-C60D-4BC3-8081-67CCDEFEB2EA}">
+											<ChildrenList>
+												<Action Name="" ID="{39CFCB94-12F4-41D4-9584-807A681B54AB}" ShortID="140433617">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="TurretTurnOn" ID="{1A3D9E1C-9860-4D29-B0ED-C4C529358D9E}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_TurretTurnOff" ID="{954FF5E2-E165-42EA-B95B-835208B0E1FE}">
+											<ChildrenList>
+												<Action Name="" ID="{5E5ABED8-4FF6-4671-A5DF-819F3CF0DB0B}" ShortID="433703203">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="TurretTurnOff" ID="{E78CFC8F-4992-4F01-A983-9C3381B4DF1E}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+									</ChildrenList>
+								</Folder>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="4 Ambient SFX Components" ID="{C6E7026C-0473-46E1-AC59-7BE232DC4694}" ShortID="27669289">
@@ -3185,21 +3221,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_forestAmb" ID="{D106ADBC-8DCB-408F-B750-8868F9CE991F}">
-					<ChildrenList>
-						<Action Name="" ID="{C96C5894-7FA1-4468-B89F-A12B8E033958}" ShortID="662411153">
-							<PropertyList>
-								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="forestAmb" ID="{8B5C4ACF-D466-4646-9A1B-B8390D4823D2}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_Env1_Vegzone_OutroLoop" ID="{44576483-B26D-4073-8A49-2FB0D3ACA89F}">
 					<ChildrenList>
 						<Action Name="" ID="{60FBC984-2D86-40FD-BD2B-F6F5555B3578}" ShortID="853334369">
@@ -3237,6 +3258,81 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="PickUpSFX" ID="{817D0799-601F-47DE-8A25-4EB9DFA47AB3}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Env1_VegZone1_Evade_BattleIntro" ID="{92DAB1C8-3963-4FE1-BCFB-DC63968DE6A1}">
+					<ChildrenList>
+						<Action Name="" ID="{0FC6CED2-302B-4B98-8C1C-4373EC2BA67D}" ShortID="316452401">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Env1-VegZone1-Evade-BattleIntro" ID="{6005EEDF-1F5A-412D-ABC1-8C29E7BAB733}" WorkUnitID="{8DC8C28D-1D78-418C-87BD-2BF45D3F8625}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Cooldown___cutscene_start" ID="{4D3D94DB-9C56-4F21-B5AC-353F068124E7}">
+					<ChildrenList>
+						<Action Name="" ID="{CDC663E7-CCE6-4DF8-AB1F-DC890E2309AB}" ShortID="303561505">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cooldown - cutscene start" ID="{8613063F-7B05-4B6C-8127-6A60DCFBEED9}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Cooldown___cutscene_end" ID="{F15FAE71-114C-48C6-89C0-97E1D18892CB}">
+					<ChildrenList>
+						<Action Name="" ID="{9A657EAE-C712-4103-9274-6DA7367FBD5E}" ShortID="164591909">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cooldown - cutscene end" ID="{2F3CA1FE-8B8C-4297-B0AB-E067CF1E2310}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Bat_Theme" ID="{CF963294-73F2-4FB5-82DE-599CF4ABBE50}">
+					<ChildrenList>
+						<Action Name="" ID="{2E80B9B6-472E-4CA5-B355-F4FF299494A2}" ShortID="825353673">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bat Theme" ID="{85E9C631-4AE5-4C72-8180-A9D2E3F3B8E0}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ForestAmb" ID="{B4812066-4DA1-4DB9-9942-F9ED88054E9F}">
+					<ChildrenList>
+						<Action Name="" ID="{E72FCAD7-C924-45F7-A676-05D7344A731C}" ShortID="398681267">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ForestAmb" ID="{AF75A067-BAA8-424B-80C1-61C5F9FD0D24}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_ForestAmb" ID="{35EB226D-EC40-48BF-A785-9F0A1F22C984}">
+					<ChildrenList>
+						<Action Name="" ID="{94AD54E4-7769-486B-998A-73DE9EC3A47E}" ShortID="296198208">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ForestAmb" ID="{AF75A067-BAA8-424B-80C1-61C5F9FD0D24}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

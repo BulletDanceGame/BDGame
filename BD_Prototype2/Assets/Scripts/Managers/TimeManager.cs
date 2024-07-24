@@ -24,6 +24,16 @@ public class TimeManager : MonoBehaviour
     public  bool  isCurrentlySlowMo { get { return slowMotion != null; } }
 
     // -- Slow motion -- //
+    public void SetTimeScale(float slowScale)
+    {
+        Time.timeScale = slowScale;
+        Time.fixedDeltaTime = 0.02f * Time.timeScale; //???????? why 0.02f of time scale wtffff
+        RTPCManager.Instance.SetValue("PLAYBACK_SPEED____CutsceneMusic", slowScale, 0.0000000001f, 0);
+
+        if(slowScale >= 1f)
+            RTPCManager.Instance.ResetValue("PLAYBACK_SPEED____CutsceneMusic", 0.0000000001f, 0);
+    }
+
 
     //Request Slow mo
     public void RequestSlowMo(float duration, float slowScale)

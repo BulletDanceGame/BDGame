@@ -102,6 +102,7 @@ public class MangaEffect : MonoBehaviour
 
     IEnumerator Flashing()
     {
+        yield return new WaitForSeconds(0.1f);
         LineGlitch.SetActive(true);
         transform.localScale = new Vector3(8000, 8000, 8000);
         timeDelay = Random.Range(0.1f, 0.3f);
@@ -123,9 +124,15 @@ public class MangaEffect : MonoBehaviour
         //transform.localScale = new Vector3(0, 0, 0);
     }
 
+    Coroutine flicker;
     public void TriggerFlicker()
     {
-        StartCoroutine(Flashing());
+        if(flicker != null) 
+        {
+            StopCoroutine(flicker);
+            flicker = null;
+        }
+        flicker = StartCoroutine(Flashing());
     }
 
     public void TurnOffFlicker()
@@ -140,7 +147,11 @@ public class MangaEffect : MonoBehaviour
         if (_isCutscene) return;
 
         _isExpand = true;
-        StopCoroutine("Flashing");
+        if(flicker != null) 
+        {
+            StopCoroutine(flicker);
+            flicker = null;
+        }
         if(routine != null) StopCoroutine(routine);
         routine = StartCoroutine(FadeOut());
     }
@@ -156,6 +167,11 @@ public class MangaEffect : MonoBehaviour
     void CutsceneStart(string none)
     {
         if(routine != null) StopCoroutine(routine);
+        if(flicker != null) 
+        {
+            StopCoroutine(flicker);
+            flicker = null;
+        }
 
         _isSkrink = false;
         _isExpand = false;
@@ -167,6 +183,23 @@ public class MangaEffect : MonoBehaviour
         _isCutscene = false;
     }
 
+    public void TurnOnForCutscene()
+    {
+        if(routine != null) StopCoroutine(routine);
+        if(flicker != null) 
+        {
+            StopCoroutine(flicker);
+            flicker = null;
+        }
+
+        _isCutscene = false;
+        _isExpand   = true;
+    }
+
+    public void TurnOffForCutscene()
+    {
+        _isSkrink = true;
+    }
 
 
     Coroutine routine;

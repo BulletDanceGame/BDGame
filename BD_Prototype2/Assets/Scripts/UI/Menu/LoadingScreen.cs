@@ -8,6 +8,8 @@ public class LoadingScreen : MonoBehaviour
     [SerializeField]
     private Animator anim;
     [SerializeField] private Image img;
+    [SerializeField] private Material inverted, notInverted;
+    [SerializeField] private Canvas canvas;
 
 
     private void Awake()
@@ -17,13 +19,14 @@ public class LoadingScreen : MonoBehaviour
 
     void Start()
     {
+        if (canvas.worldCamera == null)
+            canvas.worldCamera = Camera.main;
 
         InvertMask(1);
 
         if (EventManager.Instance == null) return;
         EventManager.Instance.OnSceneLoad   += Cover;
         EventManager.Instance.OnSceneLoaded += UnCover;
-
     }
 
     void OnDestroy()
@@ -49,6 +52,12 @@ public class LoadingScreen : MonoBehaviour
 
     void InvertMask(int value)
     {
-        img.material.SetInt("_InvertMask", value);
+        img.material = value == 0 ? notInverted : inverted;
+    }
+
+    public System.Action<int> ShowOnUncover;
+    public void ShowWhenUncover(int frame)
+    {
+        ShowOnUncover?.Invoke(frame);
     }
 }
