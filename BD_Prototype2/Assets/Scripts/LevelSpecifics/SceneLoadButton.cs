@@ -42,5 +42,7 @@ public class SceneLoadButton : MonoBehaviour
 
             default: break;
         }
+
+        gameObject.SetActive(false);
     }
 }
