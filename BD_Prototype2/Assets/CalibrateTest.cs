@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class CalibrateTest : MonoBehaviour
@@ -30,6 +31,10 @@ public class CalibrateTest : MonoBehaviour
 
     public GameObject resetButton;
     public TextMeshProUGUI redoText;
+
+
+    [SerializeField] private Gradient textColor;
+
 
     private void OnEnable()
     {
@@ -105,12 +110,15 @@ public class CalibrateTest : MonoBehaviour
                 combinedDelay += de;
             }
             averageDelay = combinedDelay / delayHitCounter;
-            averageDelayText.text = "Average: " + Math.Round(averageDelay * 1000) + "ms";
+            string late = (averageDelay >= 0) ? "LATE" : "EARLY";
+            averageDelayText.text = Math.Abs(Math.Round(averageDelay * 1000)) + "ms " + late;
+            averageDelayText.color = textColor.Evaluate((float)averageDelay * 5f + 0.5f);
 
             //average marker
             double averageRelativePos = averageDelay / secondsPerBeat;
             averageDelayMarker.transform.localPosition = new Vector3(112.5f + 75f * (float)averageRelativePos, 0, 0);
             averageDelayMarker.SetActive(true);
+            averageDelayMarker.transform.GetChild(0).GetComponent<Image>().color = textColor.Evaluate((float)averageDelay * 5f + 0.5f);
 
 
             resetButton.SetActive(true);

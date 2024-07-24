@@ -211,10 +211,12 @@ public class CalibrateVisuals : MonoBehaviour
                 double dist = max - min;
                 if (dist > 0.12)
                 {
+                    visualAidText.gameObject.SetActive(false);
                     consistencyText.text = "Very Inconsistent, Keep Pressing!";
                 }
                 else if (dist > 0.06)
                 {
+                    visualAidText.gameObject.SetActive(false);
                     consistencyText.text = "Inconsistent, Keep Pressing!";
                 }
                 else
@@ -224,6 +226,7 @@ public class CalibrateVisuals : MonoBehaviour
                     if (stage == 1)
                     {
                         visualAidText.gameObject.SetActive(true);
+                        consistencyText.text = "";
                     }
                     else if (stage == 2)
                     {
