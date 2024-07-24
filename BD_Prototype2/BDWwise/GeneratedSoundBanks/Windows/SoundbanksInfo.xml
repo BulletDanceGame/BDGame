@@ -269,7 +269,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{C1AB32D0-727E-108D-EC7A-4A74C08DBA45}">
+		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{550BA3F0-2A05-9C41-BBE3-E9ECFA586E59}">
 			<ShortName>Music_TutorialAndLevel1_Part1</ShortName>
 			<Path>Music_TutorialAndLevel1_Part1.bnk</Path>
 			<Media>
@@ -331,7 +331,7 @@
 				</File>
 				<File Id="542166124" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>bat-kun theme 3.wav</ShortName>
-					<CachePath>SFX/bat-kun theme 3_3287654A.wem</CachePath>
+					<CachePath>SFX/bat-kun theme 3_7FA2788A.wem</CachePath>
 				</File>
 				<File Id="554555461" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>fade in.wav</ShortName>
@@ -1254,7 +1254,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{19C1C47E-A3B6-4E87-62DF-6D97B23B7E0D}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{5DC324ED-1D3F-590D-BF89-A5285364223A}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1936,7 +1936,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{BD7910D6-01C8-9F7C-6816-CD134083E3AD}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{8358C423-3B47-B75C-9E36-23EA5EA2DA56}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -3034,7 +3034,7 @@
 						<MediaRef Id="675450540"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3960404151" Name="Play_forestAmb" DurationType="Infinite">
+				<Event Id="3960404151" Name="Play_ForestAmb" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="170088987"/>
 					</MediaRefs>
@@ -3286,7 +3286,7 @@
 						<MediaRef Id="685776673"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2168881957" Name="Stop_forestAmb" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2168881957" Name="Stop_ForestAmb" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="835218174" Name="Voice__Player____PLAY" DurationType="OneShot" DurationMin="0.0410625" DurationMax="0.0410625">
 					<MediaRefs>
 						<MediaRef Id="376349708"/>
@@ -3300,8 +3300,6 @@
 				</Event>
 			</Events>
 			<GameParameters>
-				<GameParameter Id="1103547191" Name="PLAYBACK_SPEED____CutsceneMusic"/>
-				<GameParameter Id="2338745114" Name="PLAYBACK_SPEED____MusicBossBattle"/>
 				<GameParameter Id="3260874934" Name="VOLUME_SPECIAL____DeflectionElement__PitchElement"/>
 				<GameParameter Id="3416700688" Name="PITCH_SPECIAL____DeflectionElement__PitchElement"/>
 				<GameParameter Id="3815680396" Name="pitch_only_here_for_reference_of_max_combo_stuff"/>
@@ -3319,5 +3317,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BC7331DB-4201-8B4E-2EBC-B8F6EC23D320}</FileHash>
+	<FileHash>{F0BC25E3-459A-7A6A-8E19-743E5D032BE5}</FileHash>
 </SoundBanksInfo>

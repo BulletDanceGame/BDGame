@@ -3221,21 +3221,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_forestAmb" ID="{D106ADBC-8DCB-408F-B750-8868F9CE991F}">
-					<ChildrenList>
-						<Action Name="" ID="{C96C5894-7FA1-4468-B89F-A12B8E033958}" ShortID="662411153">
-							<PropertyList>
-								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="forestAmb" ID="{8B5C4ACF-D466-4646-9A1B-B8390D4823D2}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_Env1_Vegzone_OutroLoop" ID="{44576483-B26D-4073-8A49-2FB0D3ACA89F}">
 					<ChildrenList>
 						<Action Name="" ID="{60FBC984-2D86-40FD-BD2B-F6F5555B3578}" ShortID="853334369">
@@ -3289,22 +3274,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Stop_forestAmb" ID="{82CDD95C-E3D8-456B-B032-496CAD515C45}">
-					<ChildrenList>
-						<Action Name="" ID="{54575E3B-987C-4BD2-A491-586ED4206DA9}" ShortID="624855181">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="forestAmb" ID="{8B5C4ACF-D466-4646-9A1B-B8390D4823D2}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_Cooldown___cutscene_start" ID="{4D3D94DB-9C56-4F21-B5AC-353F068124E7}">
 					<ChildrenList>
 						<Action Name="" ID="{CDC663E7-CCE6-4DF8-AB1F-DC890E2309AB}" ShortID="303561505">
@@ -3333,6 +3302,37 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Bat Theme" ID="{85E9C631-4AE5-4C72-8180-A9D2E3F3B8E0}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ForestAmb" ID="{B4812066-4DA1-4DB9-9942-F9ED88054E9F}">
+					<ChildrenList>
+						<Action Name="" ID="{E72FCAD7-C924-45F7-A676-05D7344A731C}" ShortID="398681267">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ForestAmb" ID="{AF75A067-BAA8-424B-80C1-61C5F9FD0D24}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_ForestAmb" ID="{35EB226D-EC40-48BF-A785-9F0A1F22C984}">
+					<ChildrenList>
+						<Action Name="" ID="{94AD54E4-7769-486B-998A-73DE9EC3A47E}" ShortID="296198208">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ForestAmb" ID="{AF75A067-BAA8-424B-80C1-61C5F9FD0D24}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

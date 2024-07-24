@@ -288,7 +288,47 @@
 												</CustomStateList>
 											</StateInfo>
 										</Bus>
-										<Bus Name="AmbienceLol" ID="{D284DDEC-BED2-4123-88F6-CBDCABD6C57C}"/>
+										<Bus Name="AmbienceLol" ID="{D284DDEC-BED2-4123-88F6-CBDCABD6C57C}">
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{462A8937-6ED3-49E5-830E-C9436D1F8235}" ShortID="376037554">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="VOLUME____AmbientComponents" ID="{3421054F-591F-4674-977C-D8B0CE8340C0}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{4396495B-4534-4B87-8A47-BC33E4C7B346}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100</XPos>
+																						<YPos>200</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</Bus>
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="RTPC">

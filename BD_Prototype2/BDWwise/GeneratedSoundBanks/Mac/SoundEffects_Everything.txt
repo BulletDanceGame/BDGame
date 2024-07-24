@@ -35,7 +35,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1921985385	SoulFormSplashScreen____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\5 Cutscene SFX\Vs Yokai Huner\SoulFormSplashScreen____PLAY	
 	2075834847	Player__DidntBreakASweatPhew____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\5 Cutscene SFX\Vs Yokai Huner\Voicelines\Phase 2 to 3\Player__DidntBreakASweatPhew____PLAY	
 	2122273249	NormalDamage____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\2 Player\Damage\NormalDamage____PLAY	
-	2168881957	Stop_forestAmb			\Default Work Unit\Stop_forestAmb	
+	2168881957	Stop_ForestAmb			\Default Work Unit\Stop_ForestAmb	
 	2180780292	Play_TurretTurnOff			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\3 Boss & Enemy\General SFX\Play_TurretTurnOff	
 	2186460094	Player__Now____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\5 Cutscene SFX\Vs Yokai Huner\Voicelines\Phase 2 to 3\Player__Now____PLAY	
 	2251819479	SpeedUpCutscene____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\5 Cutscene SFX\General SFX\SpeedUpCutscene____PLAY	
@@ -73,7 +73,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3724255519	Dash____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\2 Player\Movement\Dash____PLAY	
 	3739785168	Play_Cooldown___cutscene_end			\Default Work Unit\Play_Cooldown___cutscene_end	
 	3845110252	DeflectionHit__FinalHit____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\2 Player\Swinging n Hitting\DeflectionHit__FinalHit____PLAY	
-	3960404151	Play_forestAmb			\Default Work Unit\Play_forestAmb	
+	3960404151	Play_ForestAmb			\Default Work Unit\Play_ForestAmb	
 	3967082494	Boss__YouMongrels____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\5 Cutscene SFX\Vs Yokai Huner\Voicelines\Phase 1 to 2\Boss__YouMongrels____PLAY	
 	3968551305	Player__Heh____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\5 Cutscene SFX\Vs Yokai Huner\Voicelines\Phase 1 to 2\Player__Heh____PLAY	
 	4003539485	Player__BringIt____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\5 Cutscene SFX\Vs Yokai Huner\Voicelines\Phase 1 to 2\Player__BringIt____PLAY	
@@ -117,8 +117,6 @@ Custom State	ID	Name	State Group	Owner		Notes
 	1067401290	CritterBoss	Level	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\RunningLastStep\RunningLastStep-Facility		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
-	1103547191	PLAYBACK_SPEED____CutsceneMusic			\Default Work Unit\PLAYBACK SPEED\PLAYBACK_SPEED____CutsceneMusic	
-	2338745114	PLAYBACK_SPEED____MusicBossBattle			\Default Work Unit\PLAYBACK SPEED\PLAYBACK_SPEED____MusicBossBattle	
 	3260874934	VOLUME_SPECIAL____DeflectionElement__PitchElement			\Default Work Unit\öSPECIAL RTPCS\VOLUME_SPECIAL____DeflectionElement__PitchElement	
 	3416700688	PITCH_SPECIAL____DeflectionElement__PitchElement			\Default Work Unit\öSPECIAL RTPCS\PITCH_SPECIAL____DeflectionElement__PitchElement	
 	3815680396	pitch_only_here_for_reference_of_max_combo_stuff			\Default Work Unit\0ld Boys\pitch_only_here_for_reference_of_max_combo_stuff	
@@ -154,7 +152,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	155779322	saigoNoPitchi	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\saigoNoPitchi3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Actions - Set\FinalHit\saigoNoPitchi		2469572
 	158251195	dash	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\dash_09669064.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\Missed Dash\dashes\dash		15120
 	167565631	blank	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\hurtHIGH1_E61D9D13.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Damage\FireDamage\VoiceOver\blank		13004
-	170088987	forest ambienceLoopableV2	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\forest ambienceLoopableV2_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\4 Ambient SFX Components\Level 1\Outdoors\forestAmb\forest ambienceLoopableV2		14710296
+	170088987	forest ambienceLoopableV2	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\forest ambienceLoopableV2_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\4 Ambient SFX Components\Level 1\Outdoors\ForestAmb\forest ambienceLoopableV2		14710296
 	181758528	squeak7	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\squeak7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\Missed Dash\buzz\guitar glitches\squeak7		61860
 	182175587	startGameSfx	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\startGameSfx_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\1 Menu SFX\General\StartGame\startGameSfx		727860
 	194222179	boss - level 3 - final3	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\boss - level 3 - final3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\5 Cutscene SFX\Vs Yokai Hunter\Voicelines\Intro\boss - level3\boss - level 3 - final3		205860

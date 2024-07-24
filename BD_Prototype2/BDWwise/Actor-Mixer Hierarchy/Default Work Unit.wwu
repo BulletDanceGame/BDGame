@@ -369,11 +369,11 @@
 								</Folder>
 								<Folder Name="Outdoors" ID="{7FEAEB39-E5B5-44CD-B316-B7EABAC8F0CE}" ShortID="700955432">
 									<ChildrenList>
-										<BlendContainer Name="forestAmb" ID="{8B5C4ACF-D466-4646-9A1B-B8390D4823D2}" ShortID="708009088">
+										<BlendContainer Name="ForestAmb" ID="{AF75A067-BAA8-424B-80C1-61C5F9FD0D24}" ShortID="125697587">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-21</Value>
+														<Value>-28</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -386,7 +386,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="forest ambienceLoopableV2" ID="{A20DB554-D4DB-4D51-AE60-9FE54925AA4A}" ShortID="236885832">
+												<Sound Name="forest ambienceLoopableV2" ID="{F4CB860B-81E3-4F1B-B1FD-F66304001500}" ShortID="797715549">
 													<PropertyList>
 														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 													</PropertyList>
@@ -399,7 +399,7 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="forest ambienceLoopableV2" ID="{9088B6A0-3BFD-431B-8562-AF96CB5DE0A0}">
+														<AudioFileSource Name="forest ambienceLoopableV2" ID="{5D03DF38-58DA-4D11-9338-411DC29F39BC}">
 															<Language>SFX</Language>
 															<AudioFile>forest ambienceLoopableV2.wav</AudioFile>
 															<MediaIDList>
@@ -408,84 +408,10 @@
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="forest ambienceLoopableV2" ID="{9088B6A0-3BFD-431B-8562-AF96CB5DE0A0}" Platform="Linked"/>
+														<ActiveSource Name="forest ambienceLoopableV2" ID="{5D03DF38-58DA-4D11-9338-411DC29F39BC}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="RTPC">
-													<Reference>
-														<Local>
-															<RTPC Name="" ID="{4742EBAB-17E0-411C-B41B-70CA525A5052}" ShortID="527426094">
-																<PropertyList>
-																	<Property Name="PropertyName" Type="string" Value="Pitch"/>
-																</PropertyList>
-																<ReferenceList>
-																	<Reference Name="ControlInput">
-																		<ObjectRef Name="PLAYBACK_SPEED____CutsceneMusic" ID="{1089C0B8-F905-42EF-9C59-349ABB22F0A7}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
-																	</Reference>
-																	<Reference Name="Curve">
-																		<Custom>
-																			<Curve Name="" ID="{99723F0C-6A1A-42B5-99F2-66CF7E39B52B}">
-																				<PropertyList>
-																					<Property Name="Flags" Type="int32" Value="65537"/>
-																				</PropertyList>
-																				<PointList>
-																					<Point>
-																						<XPos>0</XPos>
-																						<YPos>-4800</YPos>
-																						<Flags>5</Flags>
-																					</Point>
-																					<Point>
-																						<XPos>100</XPos>
-																						<YPos>4800</YPos>
-																						<Flags>37</Flags>
-																					</Point>
-																				</PointList>
-																			</Curve>
-																		</Custom>
-																	</Reference>
-																</ReferenceList>
-															</RTPC>
-														</Local>
-													</Reference>
-													<Reference>
-														<Local>
-															<RTPC Name="" ID="{BE1EC43B-2DAC-44B8-8006-FFA65A262433}" ShortID="744831287">
-																<PropertyList>
-																	<Property Name="PropertyName" Type="string" Value="Pitch"/>
-																</PropertyList>
-																<ReferenceList>
-																	<Reference Name="ControlInput">
-																		<ObjectRef Name="PLAYBACK_SPEED____MusicBossBattle" ID="{04AD4BF5-C0D4-44A1-8A9B-B693562B6A51}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
-																	</Reference>
-																	<Reference Name="Curve">
-																		<Custom>
-																			<Curve Name="" ID="{F47A4BA0-2086-4258-B1F4-FA00CB34FC17}">
-																				<PropertyList>
-																					<Property Name="Flags" Type="int32" Value="65537"/>
-																				</PropertyList>
-																				<PointList>
-																					<Point>
-																						<XPos>0</XPos>
-																						<YPos>-4800</YPos>
-																						<Flags>5</Flags>
-																					</Point>
-																					<Point>
-																						<XPos>100</XPos>
-																						<YPos>4800</YPos>
-																						<Flags>37</Flags>
-																					</Point>
-																				</PointList>
-																			</Curve>
-																		</Custom>
-																	</Reference>
-																</ReferenceList>
-															</RTPC>
-														</Local>
-													</Reference>
-												</ObjectList>
-											</ObjectLists>
 										</BlendContainer>
 									</ChildrenList>
 								</Folder>
