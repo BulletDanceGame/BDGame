@@ -40,6 +40,7 @@ public class Options : MonoBehaviour
 
     public void ChangeFPS(int dir)
     {
+
         int fps = MusicManager.Instance.maxFPS;
         fps += dir * 10;
         fps = Mathf.Clamp(fps, 30, 300);

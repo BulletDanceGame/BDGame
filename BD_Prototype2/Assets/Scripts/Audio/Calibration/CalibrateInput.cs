@@ -6,7 +6,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public enum ButtonInput { swing, dash, none };
 
 public class CalibrateInput : MonoBehaviour
 {
@@ -146,8 +145,8 @@ public class CalibrateInput : MonoBehaviour
             {
                 combinedDelay += de; 
             }
-            string late = (averageDelay >= 0) ? "LATE" : "EARLY";
             averageDelay = combinedDelay / delays.Count;
+            string late = (averageDelay >= 0) ? "LATE" : "EARLY";
             averageText.text = Math.Abs(Math.Round(averageDelay * 1000)) + "ms " + late;
             averageText.color = textColor.Evaluate((float)averageDelay * 5f + 0.5f);
 
@@ -278,10 +277,10 @@ public class CalibrateInput : MonoBehaviour
             }
             if (nextBall)
             {
+                //below
                 anim.speed = 1 / (duration * 8);
                 anim.Play("CalibrationNew");
             }
-
         }
         else if (anticipation == 12)
         {
