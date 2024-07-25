@@ -9,6 +9,9 @@ public class BigCritterMovelist : Movelist
     //for SHOOTING
     private List<BulletBag.BulletTypes> bulletPrefabs = new List<BulletBag.BulletTypes>();
 
+    //For ActionOne
+    public Transform singleShot;
+
     //For ActionTwo
     [Space]
     public Transform circleShot;
@@ -107,6 +110,11 @@ public class BigCritterMovelist : Movelist
         agent.updateRotation = false;
         agent.updateUpAxis = false;
 
+    }
+
+    private void SingleShot()
+    {
+        Shooting.ShootAtPlayer(transform, singleShot, bulletPrefabs);
     }
 
     private void CircleShot()
