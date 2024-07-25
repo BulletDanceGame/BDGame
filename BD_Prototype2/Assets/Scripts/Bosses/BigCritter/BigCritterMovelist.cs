@@ -26,6 +26,8 @@ public class BigCritterMovelist : Movelist
     public float stopAndShootRadius;
     public float stopAndShootDuration; // rename this shit
     public float Speed;
+    public GameObject LandVFX;
+    public GameObject LandVFX1;
 
     // for speeding up and slowing down 
     // (smoothing so the jump animation don't look like it jumped in place)
@@ -43,9 +45,11 @@ public class BigCritterMovelist : Movelist
 
     public static Spawner Instance;
 
-    public Transform[] SpawnPoint;
-    public GameObject[] Critter;
-    public GameObject[] SpawnVFX;
+    //public Transform[] SpawnPoint;
+    public GameObject Critter;
+    public GameObject SpawnVFX;
+
+    private int _critterAmount;
     private List<Vector3> GatePos = new List<Vector3>();  //List Usage
     public float SpawnCooldown;
     public float Offset;
@@ -194,6 +198,7 @@ public class BigCritterMovelist : Movelist
 
     private void SpawnSmallCritter()
     {
+        _critterAmount = 2;
         StartCoroutine(Spawn());
     }
 
@@ -210,6 +215,11 @@ public class BigCritterMovelist : Movelist
 
         //Animation
         if (_animHandler != null) Animate();
+
+        if(Input.GetKeyDown(KeyCode.H))
+        {
+            SpawnSmallCritter();
+        }
     }
 
 
@@ -238,7 +248,12 @@ public class BigCritterMovelist : Movelist
                 transform.position = Vector2.MoveTowards(transform.position, UnitManager.Instance.GetPlayer().transform.position, JumpSpeed * Time.deltaTime);
             }
 
-
+            if(_jumpTime<=0)
+            {
+                ScreenShake.Instance.ShakeCamera(20f, 0.4f);
+                Instantiate(LandVFX, this.transform.position, Quaternion.identity);
+                Instantiate(LandVFX1, new Vector3(this.transform.position.x, this.transform.position.y - 2f, this.transform.position.z), Quaternion.Euler(new Vector3(-90, 0, 0)));
+            }
         }
     }
 
@@ -318,16 +333,16 @@ public class BigCritterMovelist : Movelist
     {
         yield return new WaitForSeconds(SpawnCooldown);
 
-        for (int i = 0; i < SpawnPoint.Length; i++)
+        for (int i = 0; i < _critterAmount; i++)
         {
-            GameObject gate = Instantiate(SpawnVFX[i], SpawnPoint[i].position + new Vector3(Random.Range(-Offset, Offset), Random.Range(-Offset, Offset), Random.Range(-Offset, Offset)), Quaternion.identity);
+            GameObject gate = Instantiate(SpawnVFX, this.transform.position + new Vector3(Random.Range(-Offset, Offset), Random.Range(-Offset, Offset), Random.Range(-Offset, Offset)), Quaternion.identity);
             GatePos.Add(gate.transform.position);
         }
         yield return new WaitForSeconds(SpawnCooldown);
 
-        for (int i = 0; i < SpawnPoint.Length; i++)
+        for (int i = 0; i < _critterAmount; i++)
         {
-            GameObject enemy = Instantiate(Critter[i], GatePos[i], Quaternion.identity);
+            GameObject enemy = Instantiate(Critter, GatePos[i], Quaternion.identity);
         }
 
         GatePos.Clear();

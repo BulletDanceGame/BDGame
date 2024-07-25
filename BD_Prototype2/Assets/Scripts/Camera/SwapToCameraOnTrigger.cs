@@ -7,6 +7,12 @@ public class SwapToCameraOnTrigger : MonoBehaviour
 
     bool SwappedCamera = false;
 
+    [Header("Toggle on if you want this trigger to be only for exiting from rooms")]
+    public bool exitTrigger = false;
+
+    [Header("If you want to use the old system where you only have to touch the trigger")]
+    public bool oldSystem = false;
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
@@ -14,7 +20,7 @@ public class SwapToCameraOnTrigger : MonoBehaviour
             if (SwappedCamera)
                 return;
 
-            if (!CameraManager.Instance.IsCameraFollowingPlayer())
+            if (exitTrigger)
             {
                 CameraManager.Instance.SwitchToFollowCamera();
             }
@@ -22,6 +28,20 @@ public class SwapToCameraOnTrigger : MonoBehaviour
             {
                 CameraManager.Instance.SwitchCamera(CameraToSwapTo);
             }
+
+            if (oldSystem)
+            {
+                if (!CameraManager.Instance.IsCameraFollowingPlayer())
+                {
+                    CameraManager.Instance.SwitchToFollowCamera();
+                }
+                else
+                {
+                    CameraManager.Instance.SwitchCamera(CameraToSwapTo);
+                }
+            }
+
+            
             SwappedToNewCamera();
 
             Invoke("SwappedToNewCamera", 1);
