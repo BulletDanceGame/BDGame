@@ -43,9 +43,11 @@ public class BigCritterMovelist : Movelist
 
     public static Spawner Instance;
 
-    public Transform[] SpawnPoint;
-    public GameObject[] Critter;
-    public GameObject[] SpawnVFX;
+    //public Transform[] SpawnPoint;
+    public GameObject Critter;
+    public GameObject SpawnVFX;
+
+    private int _critterAmount;
     private List<Vector3> GatePos = new List<Vector3>();  //List Usage
     public float SpawnCooldown;
     public float Offset;
@@ -194,6 +196,7 @@ public class BigCritterMovelist : Movelist
 
     private void SpawnSmallCritter()
     {
+        _critterAmount = 2;
         StartCoroutine(Spawn());
     }
 
@@ -210,6 +213,11 @@ public class BigCritterMovelist : Movelist
 
         //Animation
         if (_animHandler != null) Animate();
+
+        if(Input.GetKeyDown(KeyCode.H))
+        {
+            SpawnSmallCritter();
+        }
     }
 
 
@@ -318,16 +326,16 @@ public class BigCritterMovelist : Movelist
     {
         yield return new WaitForSeconds(SpawnCooldown);
 
-        for (int i = 0; i < SpawnPoint.Length; i++)
+        for (int i = 0; i < _critterAmount; i++)
         {
-            GameObject gate = Instantiate(SpawnVFX[i], SpawnPoint[i].position + new Vector3(Random.Range(-Offset, Offset), Random.Range(-Offset, Offset), Random.Range(-Offset, Offset)), Quaternion.identity);
+            GameObject gate = Instantiate(SpawnVFX, this.transform.position + new Vector3(Random.Range(-Offset, Offset), Random.Range(-Offset, Offset), Random.Range(-Offset, Offset)), Quaternion.identity);
             GatePos.Add(gate.transform.position);
         }
         yield return new WaitForSeconds(SpawnCooldown);
 
-        for (int i = 0; i < SpawnPoint.Length; i++)
+        for (int i = 0; i < _critterAmount; i++)
         {
-            GameObject enemy = Instantiate(Critter[i], GatePos[i], Quaternion.identity);
+            GameObject enemy = Instantiate(Critter, GatePos[i], Quaternion.identity);
         }
 
         GatePos.Clear();
