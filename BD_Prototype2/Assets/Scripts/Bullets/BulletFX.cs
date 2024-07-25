@@ -43,7 +43,7 @@ public class BulletFX : MonoBehaviour
         _bulletParent = bulletParent;
     }
 
-    public void Reset()
+    public void ResetFx()
     {
         _bulletSprite.color = _ogcolor;
         SetPulseColor(_ogPulseColor);
@@ -55,8 +55,8 @@ public class BulletFX : MonoBehaviour
             Destroy(_bulletIndicator);
             _bulletIndicator = null;
         }
-    }
 
+    }
 
     // --- Helper methods --- //
     void SetPulseColor(Color color)

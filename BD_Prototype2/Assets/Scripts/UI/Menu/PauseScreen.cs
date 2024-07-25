@@ -47,6 +47,7 @@ public class PauseScreen : MonoBehaviour
         Time.timeScale = 0;
         _ui.alpha = 1;
         _ui.interactable = true;
+        _ui.blocksRaycasts = true;
 
         _pauseEvent.Post(gameObject);
         _pauseMenuSong.Post(gameObject, (uint)AkCallbackType.AK_MusicSyncExit, MusicCallbacks);
@@ -60,6 +61,7 @@ public class PauseScreen : MonoBehaviour
         Time.timeScale = 1;
         _ui.alpha = 0;
         _ui.interactable = false;
+        _ui.blocksRaycasts = false;
 
         _resumeEvent.Post(gameObject);
         _pauseMenuSong.Stop(gameObject);
@@ -80,9 +82,10 @@ public class PauseScreen : MonoBehaviour
 
     }
 
-
-
-
+    public void DisablePauseScreen()
+    {
+        EventManager.Instance.PausePressed();
+    }
 
     public void Options()
     {
@@ -95,6 +98,11 @@ public class PauseScreen : MonoBehaviour
 
         main.SetActive(true);
         options.SetActive(false);
+    }
+
+    public void Menu()
+    {
+        Resume();
     }
 
 
