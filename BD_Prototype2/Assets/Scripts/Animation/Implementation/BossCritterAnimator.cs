@@ -24,12 +24,21 @@ public class BossCritterAnimator : BossAnimator
         _spriteAnimator.Anim(AnimAction.Walk);
     }
 
+    protected override void SpecialStart(int actionState) 
+    {
+        base.SpecialStart(actionState);
+        //if(actionState == 46 || actionState == 48)
+            _spriteAnimator.Anim(actionState);
+    }
+
+
     public override void PlayAnimation(int anticipation, float duration)
     {
         //Cutscene override
         if(!_continueAnimation) return;
         base.PlayAnimation(anticipation, duration);
     }
+
 
     protected override void Update()
     {
@@ -52,6 +61,17 @@ public class BossCritterAnimator : BossAnimator
     {
         ScreenShake.Instance.ShakeCamera(20, 1.7f);
         foreach(ParticleSystem vfx in _screamVFX)
+        {
+            vfx.Play();
+        }
+    }
+
+    [SerializeField]
+    private ParticleSystem[] _dustVFX;
+    public void LandVFX()
+    {
+        ScreenShake.Instance.ShakeCamera(20f, 0.4f);
+        foreach(ParticleSystem vfx in _dustVFX)
         {
             vfx.Play();
         }
