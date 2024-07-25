@@ -298,8 +298,9 @@ public class Boss1MoveList : Movelist
     //BOOPING
     private void CheckIfPlayerTooClose()
     {
-        if (UnitManager.Instance.GetPlayer().GetComponent<Player>().isDead)
-            return;
+        if(UnitManager.Instance.GetPlayer())
+            if (UnitManager.Instance.GetPlayer().GetComponent<Player>().isDead)
+                return;
         float dist = (UnitManager.Instance.GetPlayer().transform.position - transform.position).magnitude;
         _playerTooClose = (dist < _boopObject.transform.lossyScale.x / 2);
 
