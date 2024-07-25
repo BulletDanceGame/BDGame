@@ -10502,7 +10502,7 @@ Transform:
   - {fileID: 2819941317815225125}
   - {fileID: 822308213236015833}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5052402955593469663
 GameObject:
@@ -18350,6 +18350,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1137894856820915114, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1137894856820915114, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8373930056284031566}
+    - target: {fileID: 1137894856820915114, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1137894856820915114, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneLoadButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1137894856820915114, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2884067428745910790, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -18358,14 +18378,80 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 5426950949903128785, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423363109664965506, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423363109664965506, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3122225014756559327}
+    - target: {fileID: 7423363109664965506, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Options
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423363109664965506, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423363109664965506, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889868741691047790, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889868741691047790, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3122225014756559327}
+    - target: {fileID: 7889868741691047790, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889868741691047790, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889868741691047790, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+--- !u!114 &3122225014756559327 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1624020387885538416, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+  m_PrefabInstance: {fileID: 4457986301166065071}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d70a8b095ecc04843b42deaee073d64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &4061277498745624920 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 396735363068628215, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
   m_PrefabInstance: {fileID: 4457986301166065071}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8373930056284031566 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5326597202092056545, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+  m_PrefabInstance: {fileID: 4457986301166065071}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e515a31fa656f49a53fc6db30afb23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5635245162580922220
 PrefabInstance:
   m_ObjectHideFlags: 0
