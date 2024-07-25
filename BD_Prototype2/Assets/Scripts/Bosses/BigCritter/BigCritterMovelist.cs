@@ -80,7 +80,7 @@ public class BigCritterMovelist : Movelist
 
     public override void Action(Note action)
     {
-        print(action.functionName);
+        //print(action.functionName);
         if (!_isActive)
         {
             return;
@@ -157,7 +157,7 @@ public class BigCritterMovelist : Movelist
     private void JumpOutOftheScreen()
     {
         _isJumpOrLand = true;
-        print("JumpOutOftheScreennnnnnnnnn");
+        //print("JumpOutOftheScreennnnnnnnnn");
         _jumpTime = startJumpTime;
         _animHandler.SpecialStart(49);
     }
@@ -173,10 +173,10 @@ public class BigCritterMovelist : Movelist
     private void HighJumpHover()
     {
         _isJumpOrLand = false;
-        print("HighJumpHoverrrrrrrrrrrrrrrrrrrrrrrrrrr");
+        //print("HighJumpHoverrrrrrrrrrrrrrrrrrrrrrrrrrr");
 
         _jumpTime = startJumpTime;
-        _animHandler.SpecialStart(45);
+        //_animHandler.SpecialStart(45);
     }
 
     private void LowJumpHover()
@@ -184,13 +184,13 @@ public class BigCritterMovelist : Movelist
         _isJumpOrLand = false;
 
         _jumpTime = startJumpTime;
-        _animHandler.SpecialStart(44);
+        //_animHandler.SpecialStart(44);
     }
 
     private void HighLand()
     {
         _isJumpOrLand = true;
-        print("HighLandddddddddddddddddddddd");
+        //print("HighLandddddddddddddddddddddd");
 
         _jumpTime = startJumpTime;
         _animHandler.SpecialStart(48);
@@ -246,13 +246,6 @@ public class BigCritterMovelist : Movelist
             if(!_isJumpOrLand)
             {
                 transform.position = Vector2.MoveTowards(transform.position, UnitManager.Instance.GetPlayer().transform.position, JumpSpeed * Time.deltaTime);
-            }
-
-            if(_jumpTime<=0)
-            {
-                ScreenShake.Instance.ShakeCamera(20f, 0.4f);
-                Instantiate(LandVFX, this.transform.position, Quaternion.identity);
-                Instantiate(LandVFX1, new Vector3(this.transform.position.x, this.transform.position.y - 2f, this.transform.position.z), Quaternion.Euler(new Vector3(-90, 0, 0)));
             }
         }
     }

@@ -30,7 +30,6 @@ public class CritterAnimator : UnitAnimator
         _spriteAnimator.SetSpeed(speed);
         _spriteAnimator.Anim(AnimAction.Walk);
     }
-
 }
 
 }
