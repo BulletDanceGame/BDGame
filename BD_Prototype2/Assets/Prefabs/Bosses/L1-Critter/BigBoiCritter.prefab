@@ -10631,11 +10631,12 @@ MonoBehaviour:
   stopAndShootRadius: 12
   stopAndShootDuration: 1
   Speed: 5
+  LandVFX: {fileID: 0}
+  LandVFX1: {fileID: 0}
   _distanceFromWall: 0
   _startRadius: 0
-  SpawnPoint: []
-  Critter: []
-  SpawnVFX: []
+  Critter: {fileID: 0}
+  SpawnVFX: {fileID: 0}
   SpawnCooldown: 0
   Offset: 10
   SmallCritter: {fileID: 3713323116351402413, guid: aa837efc11665d94eb05388d78fe4415, type: 3}
@@ -16535,6 +16536,7 @@ MonoBehaviour:
     sequencePlayedFirst: 
     neverPlayFirstSequenceAgain: 0
     lastTransition: 1
+  currentBeat: 0
 --- !u!114 &2709578600041658355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16890,11 +16892,12 @@ MonoBehaviour:
   _spriteAnimator: {fileID: 8280271943182240709}
   _layeredAnimator: {fileID: 0}
   _animationName: 
-  _animNoteDuration: 2
+  _animNoteDuration: 3
   _minAnimDuration: 0.08
   _screamVFX:
   - {fileID: 4263798763216581446}
   - {fileID: 9078559534649088697}
+  _dustVFX: []
 --- !u!114 &8280271943182240709 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5484754386135774787, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
