@@ -9,6 +9,15 @@ namespace BulletDance.Animation
 
 public class BossCritterAnimator : BossAnimator
 {
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        foreach(ParticleSystem vfx in _dustVFX)
+        {
+            vfx.transform.parent = null;
+        }
+    }
+
     protected override void WalkStart()
     { 
         _isWalk = true;
