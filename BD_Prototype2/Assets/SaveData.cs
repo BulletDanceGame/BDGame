@@ -11,4 +11,7 @@ public class SaveData
     //Level 0 = Menu
     public int currentLevel = 0;
 
+    public float currentCheckpoint;
+    public bool hasBat;
+
 }
