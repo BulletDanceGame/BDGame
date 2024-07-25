@@ -26,6 +26,8 @@ public class BigCritterMovelist : Movelist
     public float stopAndShootRadius;
     public float stopAndShootDuration; // rename this shit
     public float Speed;
+    public GameObject LandVFX;
+    public GameObject LandVFX1;
 
     // for speeding up and slowing down 
     // (smoothing so the jump animation don't look like it jumped in place)
@@ -246,7 +248,12 @@ public class BigCritterMovelist : Movelist
                 transform.position = Vector2.MoveTowards(transform.position, UnitManager.Instance.GetPlayer().transform.position, JumpSpeed * Time.deltaTime);
             }
 
-
+            if(_jumpTime<=0)
+            {
+                ScreenShake.Instance.ShakeCamera(20f, 0.4f);
+                Instantiate(LandVFX, this.transform.position, Quaternion.identity);
+                Instantiate(LandVFX1, new Vector3(this.transform.position.x, this.transform.position.y - 2f, this.transform.position.z), Quaternion.Euler(new Vector3(-90, 0, 0)));
+            }
         }
     }
 
