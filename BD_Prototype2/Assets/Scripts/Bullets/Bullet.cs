@@ -105,7 +105,7 @@ public class Bullet : MonoBehaviour
 
         SetSpeed(offBeatSpeed);
         _fx.SetUp(this);
-        _fx.Reset();
+        _fx.ResetFx();
 
         baseDamage = Damage;
     }
@@ -151,7 +151,7 @@ public class Bullet : MonoBehaviour
         type = BulletOwner.BOSSBULLET;
         bounces = 0;
         SetSpeed(offBeatSpeed);
-        _fx.Reset();
+        _fx.ResetFx();
     }
 
     private void FixedUpdate()
