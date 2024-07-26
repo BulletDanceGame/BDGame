@@ -106,6 +106,8 @@ namespace AK
         static const AkUniqueID PLAY_BOSS_1___PHASE_2_5___PART_2___WIND_FIRE = 2390810227U;
         static const AkUniqueID PLAY_BOSS_1___PHASE_2___PART_2___REGULAR_BULLETS2 = 4069167034U;
         static const AkUniqueID PLAY_BOSS_1___PHASE_2___PART_4___LIGHTNING_BULLETS = 1835325240U;
+        static const AkUniqueID PLAY_BUTTONDEFLECTHIT = 3937135454U;
+        static const AkUniqueID PLAY_BUTTONWALKPRESS = 2226196626U;
         static const AkUniqueID PLAY_COOLDOWN = 1837873573U;
         static const AkUniqueID PLAY_COOLDOWN___CUTSCENE_END = 3739785168U;
         static const AkUniqueID PLAY_COOLDOWN___CUTSCENE_START = 1744389995U;
@@ -119,7 +121,6 @@ namespace AK
         static const AkUniqueID PLAY_DEATH = 1172822028U;
         static const AkUniqueID PLAY_DEFLECTIONSWING___GOOD___LONG = 4112303910U;
         static const AkUniqueID PLAY_ENCOUNTER___CRITTER = 1369454011U;
-        static const AkUniqueID PLAY_ENEMYTURRETTURNOFF = 685683640U;
         static const AkUniqueID PLAY_ENEMYTURRETTURNON = 2011553634U;
         static const AkUniqueID PLAY_ENV1_TEST3_TRIPPLETS_INTRO = 2403173065U;
         static const AkUniqueID PLAY_ENV1_TEST3_TRIPPLETS_PART1 = 160122243U;
@@ -204,6 +205,10 @@ namespace AK
         static const AkUniqueID PLAY_PAUSE_MUSIC = 1496939652U;
         static const AkUniqueID PLAY_PICKUPSFX = 3043903975U;
         static const AkUniqueID PLAY_STARTGAME = 1444205428U;
+        static const AkUniqueID PLAY_TURRETDEACTIVATE = 2177082434U;
+        static const AkUniqueID PLAY_TURRETHURT = 462463419U;
+        static const AkUniqueID PLAY_TURRETSHOT = 536518992U;
+        static const AkUniqueID PLAY_TURRETSHOTV3 = 1196139201U;
         static const AkUniqueID PLAY_TURRETTURNOFF = 2180780292U;
         static const AkUniqueID PLAY_TURRETTURNON = 2314505822U;
         static const AkUniqueID PLAYER__AREYOUKIDDINGME____PLAY = 4096913669U;

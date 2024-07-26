@@ -3373,12 +3373,34 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_EnemyTurretTurnOff" ID="{750F10E3-2BC6-4B7E-923A-3BACB1BE54A2}">
+						<Event Name="Play_TurretShot" ID="{3A2A8483-9739-4203-96AD-9BF88F855C36}">
 							<ChildrenList>
-								<Action Name="" ID="{5398A7EB-1BA1-405A-A59C-EDF791B4197E}" ShortID="473411214">
+								<Action Name="" ID="{7B0E148D-F0A9-4ABD-95F2-993AFD403925}" ShortID="375949206">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="TurretTurnOff" ID="{77C89D98-0E30-4E5C-B32A-C2F499192C55}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+											<ObjectRef Name="TurretShot" ID="{68E5B2BC-8937-4116-974A-133C01B32E71}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_TurretDeactivate" ID="{9FCE1479-DE13-4F61-A466-48E2B1CD4A93}">
+							<ChildrenList>
+								<Action Name="" ID="{5C26BA5A-C5AE-49B8-8521-8B5C67FC3A9B}" ShortID="502390267">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TurretDeactivate" ID="{A551E50D-7CE8-4565-A326-CF587EC63AD9}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_TurretHurt" ID="{F096FD3C-4986-4E66-8E35-72B1EDEB2292}">
+							<ChildrenList>
+								<Action Name="" ID="{32B1952C-E211-433F-8509-010A494FED5E}" ShortID="104565291">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TurretHurt" ID="{77C89D98-0E30-4E5C-B32A-C2F499192C55}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -3386,6 +3408,43 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="ButtonSFX" ID="{5813AAE1-9968-418F-820D-5EE442D70C37}" ShortID="194261251">
+					<ChildrenList>
+						<Event Name="Play_ButtonDeflectHit" ID="{4BC8CA1B-39C4-4A21-98E2-6D8E6D8B126A}">
+							<ChildrenList>
+								<Action Name="" ID="{2C8A190F-653B-4237-83AD-553CA1FF09D8}" ShortID="322236446">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ButtonDeflectHit" ID="{5C7A676F-F09C-4A18-BC84-749274B7C04C}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_ButtonWalkPress" ID="{01B14992-120F-4468-8DE7-A58CE24FF3AA}">
+							<ChildrenList>
+								<Action Name="" ID="{967CA848-238F-400A-A959-D09363A14859}" ShortID="297987891">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ButtonWalkPress" ID="{A71A06EB-D23B-49D6-AA48-789FDF52C4A4}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Play_TurretShotV3" ID="{A56F4A9D-15F1-40C2-86FE-DEA6652F9AAF}">
+					<ChildrenList>
+						<Action Name="" ID="{D3E7EF30-1D4C-4D51-B368-714018292C1C}" ShortID="729659736">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TurretShotV3" ID="{6BCF0FE8-728B-4995-88A7-4E6B8E02107F}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

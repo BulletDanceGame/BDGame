@@ -112,6 +112,7 @@ public class Turret : Movelist
 
     private void NormalShot()
     {
+        shootSFX.Post(gameObject);
         if (_turretType==TurretType.Straight)
         {
             Shooting.ShootInDirection(normalShot, bulletPrefabs);
@@ -148,11 +149,11 @@ public class Turret : Movelist
         }
 
         _animHandler?.AttackStart();
-        shootSFX.Post(gameObject);
     }
 
     private void DoubleShot()
     {
+        shootSFX.Post(gameObject);
         if (_turretType == TurretType.Straight)
         {
             Shooting.ShootInDirection(doubleShot, bulletPrefabs);
@@ -190,7 +191,6 @@ public class Turret : Movelist
         }
 
         _animHandler?.AttackStart();
-        shootSFX.Post(gameObject);
     }
 
 
@@ -254,7 +254,7 @@ public class Turret : Movelist
 
         if (_isActive)
         {
-            deactivateSFX.Post(gameObject);
+            hurtSFX.Post(gameObject);
             _isActive = false;
         }
 
