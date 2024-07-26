@@ -8,6 +8,7 @@ public class PlayerTriggerBox : MonoBehaviour
     private bool _isImmune = false, _isBurning;
     private float _burnTracker;
 
+    private bool _blackFire=false;
 
     private void Start()
     {
@@ -49,6 +50,9 @@ public class PlayerTriggerBox : MonoBehaviour
     {
         if (_isImmune) return;
 
+        
+
+
         if (collision.gameObject.tag == "Bullet")
         {
             Bullet bullet = collision.GetComponent<Bullet>();
@@ -57,7 +61,13 @@ public class PlayerTriggerBox : MonoBehaviour
             ScoreManager.Instance.GotHit++;
         }
         else if (collision.gameObject.tag=="FireTrail")
-        {            
+        {
+            _isBurning = true;
+            _burnTracker = 0;
+        }
+        else if(collision.gameObject.tag == "BlackFireTrail")
+        {
+            _blackFire = true;
             _isBurning = true;
             _burnTracker = 0;
         }
@@ -72,7 +82,7 @@ public class PlayerTriggerBox : MonoBehaviour
         if (beat % 2 != 0)
             return;
 
-        if (_isBurning)
+        if (_isBurning&&!_blackFire)
         {
             if (Player.currentHealth >= 2)
             {
@@ -83,9 +93,17 @@ public class PlayerTriggerBox : MonoBehaviour
 
             _burnTracker++;
         }
+        else if(_isBurning && _blackFire)
+        {
+            EventManager.Instance.PlayerDamage(1);
+        }
 
-        if (_burnTracker>= _burnBeat) 
+        if (_burnTracker>= _burnBeat)
+        {
+            _blackFire = false;
             _isBurning = false;
+        }
+
 
         EventManager.Instance.PlayerBurn(_isBurning);
     }

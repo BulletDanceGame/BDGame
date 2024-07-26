@@ -53,7 +53,10 @@ public class BigCritterMovelist : Movelist
     public GameObject Critter;
     public GameObject SpawnVFX;
 
+
+    //MOHAM LOOOKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
     private int _critterAmount;
+
     private List<Vector3> GatePos = new List<Vector3>();  //List Usage
     public float SpawnCooldown;
     public float Offset;

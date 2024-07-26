@@ -11,4 +11,12 @@ public class SaveData
     //Level 0 = Menu
     public int currentLevel = 0;
 
+    public float currentCheckpointX;
+    public float currentCheckpointY;
+    public float currentCheckpointZ;
+
+    public bool hasBat;
+
+    public bool hasplayed1stcutscene;
+    public bool hasplayed2stcutscene;
 }
