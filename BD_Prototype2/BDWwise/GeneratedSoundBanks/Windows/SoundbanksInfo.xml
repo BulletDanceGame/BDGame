@@ -1936,7 +1936,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{ECBFCBFF-273F-2DC7-F5D9-B1ADB9EAE044}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{688DED87-B738-C825-EFD6-2A772DFA80FC}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -2110,6 +2110,12 @@
 					<ShortName>CritterLand.wav</ShortName>
 					<CachePath>SFX/CritterLand_10C4C929.wem</CachePath>
 				</File>
+				<File Id="315025178" Language="SFX" Streaming="true" Location="Memory">
+					<ShortName>WalkButtonPressV2.wav</ShortName>
+					<Path>Media/315025178.wem</Path>
+					<CachePath>SFX/WalkButtonPressV2_10C4C929.wem</CachePath>
+					<PrefetchSize>57744</PrefetchSize>
+				</File>
 				<File Id="316381491" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 12.wav</ShortName>
 					<CachePath>SFX/part 3 - ow 12_10C4C929.wem</CachePath>
@@ -2208,6 +2214,10 @@
 					<ShortName>dashVoiceOver3.wav</ShortName>
 					<CachePath>SFX/dashVoiceOver3_2992BD0C.wem</CachePath>
 				</File>
+				<File Id="469284414" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TurretTurnOffV2.wav</ShortName>
+					<CachePath>SFX/TurretTurnOffV2_10C4C929.wem</CachePath>
+				</File>
 				<File Id="469343277" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 11.wav</ShortName>
 					<CachePath>SFX/part 3 - ow 11_1C7A2D02.wem</CachePath>
@@ -2273,6 +2283,10 @@
 					<Path>Media/551485198.wem</Path>
 					<CachePath>SFX/swing_10C4C929.wem</CachePath>
 					<PrefetchSize>19344</PrefetchSize>
+				</File>
+				<File Id="553106507" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ButtonHit.wav</ShortName>
+					<CachePath>SFX/ButtonHit_10C4C929.wem</CachePath>
 				</File>
 				<File Id="557266761" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>footstep4.wav</ShortName>
@@ -2353,6 +2367,11 @@
 				<File Id="680270997" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>TurretTurnOff.wav</ShortName>
 					<CachePath>SFX/TurretTurnOff_10C4C929.wem</CachePath>
+				</File>
+				<File Id="681974043" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>TurretShotV3.wav</ShortName>
+					<Path>Media/681974043.wem</Path>
+					<CachePath>SFX/TurretShotV3_10C4C929.wem</CachePath>
 				</File>
 				<File Id="682731598" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 5.wav</ShortName>
@@ -2462,6 +2481,10 @@
 					<ShortName>dare da.wav</ShortName>
 					<CachePath>SFX/dare da_10C4C929.wem</CachePath>
 				</File>
+				<File Id="844908674" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TurnOn10.wav</ShortName>
+					<CachePath>SFX/TurnOn10_10C4C929.wem</CachePath>
+				</File>
 				<File Id="849087724" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hurtHIGH1.wav</ShortName>
 					<CachePath>SFX/hurtHIGH1_10C4C929.wem</CachePath>
@@ -2526,6 +2549,10 @@
 					<ShortName>cooldown - definitive (without initial smash).wav</ShortName>
 					<CachePath>SFX/cooldown - definitive (without initial smash)_10C4C929.wem</CachePath>
 				</File>
+				<File Id="937558655" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TurretTurnOffV3.wav</ShortName>
+					<CachePath>SFX/TurretTurnOffV3_10C4C929.wem</CachePath>
+				</File>
 				<File Id="941388862" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>squeak4.wav</ShortName>
 					<CachePath>SFX/squeak4_10C4C929.wem</CachePath>
@@ -2571,6 +2598,11 @@
 				<File Id="990082149" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>boss - escaped - final2.wav</ShortName>
 					<CachePath>SFX/boss - escaped - final2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="991243907" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>TurretShotV2.wav</ShortName>
+					<Path>Media/991243907.wem</Path>
+					<CachePath>SFX/TurretShotV2_10C4C929.wem</CachePath>
 				</File>
 				<File Id="995001135" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hurtMid1.wav</ShortName>
@@ -3001,6 +3033,17 @@
 						<MediaRef Id="812946627"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3937135454" Name="Play_ButtonDeflectHit" MaxAttenuation="50" DurationType="OneShot" DurationMin="3.25" DurationMax="3.25">
+					<MediaRefs>
+						<MediaRef Id="553106507"/>
+						<MediaRef Id="729477149"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2226196626" Name="Play_ButtonWalkPress" DurationType="OneShot" DurationMin="2.28125" DurationMax="2.28125">
+					<MediaRefs>
+						<MediaRef Id="315025178"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1837873573" Name="Play_Cooldown" DurationType="OneShot" DurationMin="3.2678542" DurationMax="3.2678542">
 					<MediaRefs>
 						<MediaRef Id="932775821"/>
@@ -3031,6 +3074,11 @@
 				<Event Id="4112303910" Name="Play_DeflectionSwing___Good___Long" DurationType="OneShot" DurationMin="1.8546736" DurationMax="1.8546736">
 					<MediaRefs>
 						<MediaRef Id="236322927"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2011553634" Name="Play_EnemyTurretTurnOn" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.6830416" DurationMax="2.6830416">
+					<MediaRefs>
+						<MediaRef Id="844908674"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2754371527" Name="Play_FirstTurret___Turn_on_and_Alert" DurationType="OneShot" DurationMin="3.3883958" DurationMax="3.3883958">
@@ -3125,6 +3173,28 @@
 				<Event Id="1444205428" Name="Play_StartGame" DurationType="OneShot" DurationMin="3.7901876" DurationMax="3.7901876">
 					<MediaRefs>
 						<MediaRef Id="182175587"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2177082434" Name="Play_TurretDeactivate" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.0535626" DurationMax="5.0535626">
+					<MediaRefs>
+						<MediaRef Id="469284414"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="462463419" Name="Play_TurretHurt" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.361604" DurationMax="5.361604">
+					<MediaRefs>
+						<MediaRef Id="729477149"/>
+						<MediaRef Id="937558655"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="536518992" Name="Play_TurretShot" MaxAttenuation="30" DurationType="OneShot" DurationMin="0.9017917" DurationMax="0.9017917">
+					<MediaRefs>
+						<MediaRef Id="681974043"/>
+						<MediaRef Id="991243907"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1196139201" Name="Play_TurretShotV3" MaxAttenuation="30" DurationType="OneShot" DurationMin="0.5848125" DurationMax="0.5848125">
+					<MediaRefs>
+						<MediaRef Id="681974043"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2180780292" Name="Play_TurretTurnOff" DurationType="OneShot" DurationMin="3.6294584" DurationMax="3.6294584">
@@ -3323,5 +3393,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{FAF70C1D-0F03-0C4A-1F3B-C80BA29FD8D3}</FileHash>
+	<FileHash>{437E660E-6824-D9F7-33DE-9FD4C9D6FF6E}</FileHash>
 </SoundBanksInfo>

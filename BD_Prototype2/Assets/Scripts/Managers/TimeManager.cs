@@ -24,14 +24,15 @@ public class TimeManager : MonoBehaviour
     public  bool  isCurrentlySlowMo { get { return slowMotion != null; } }
 
     // -- Slow motion -- //
-    public void SetTimeScale(float slowScale)
+    public void SetTimeScale(float timeScale)
     {
-        Time.timeScale = slowScale;
-        Time.fixedDeltaTime = 0.02f * Time.timeScale; //???????? why 0.02f of time scale wtffff
-        RTPCManager.Instance.SetValue("PLAYBACK_SPEED____CutsceneMusic", slowScale, 0.0000000001f, 0);
+        Time.timeScale = timeScale;
+        Time.fixedDeltaTime = 0.02f / Time.timeScale; //???????? why 0.02f of time scale wtffff
 
-        if(slowScale >= 1f)
+        if(timeScale == 1f)
             RTPCManager.Instance.ResetValue("PLAYBACK_SPEED____CutsceneMusic", 0.0000000001f, 0);
+        else
+            RTPCManager.Instance.SetValue("PLAYBACK_SPEED____CutsceneMusic", 0, 0.0000000001f, 0);
     }
 
 
@@ -42,7 +43,7 @@ public class TimeManager : MonoBehaviour
         slowMoTime     = slowMoDuration;
 
         Time.timeScale = slowScale;
-        Time.fixedDeltaTime = 0.02f * Time.timeScale; //???????? why 0.02f of time scale wtffff
+        Time.fixedDeltaTime = 0.02f / Time.timeScale; //???????? why 0.02f of time scale wtffff
 
         //Start a new coroutine when none existed, else just refresh the current one 
         if(slowMotion == null)
@@ -62,7 +63,7 @@ public class TimeManager : MonoBehaviour
         slowMoTime     = 0f;
 
         Time.timeScale = 1f;
-        Time.fixedDeltaTime = 0.02f * Time.timeScale; //???????? why 0.02f of time scale wtffff
+        Time.fixedDeltaTime = 0.02f / Time.timeScale; //???????? why 0.02f of time scale wtffff
 
         //reset slo mo rtpc?
     }
@@ -87,7 +88,7 @@ public class TimeManager : MonoBehaviour
         slowMoTime     = 0f;
 
         Time.timeScale = 1f;
-        Time.fixedDeltaTime = 0.02f * Time.timeScale; //???????? why 0.02f of time scale wtffff
+        Time.fixedDeltaTime = 0.02f / Time.timeScale; //???????? why 0.02f of time scale wtffff
 
 
         //reset slo mo rtpc

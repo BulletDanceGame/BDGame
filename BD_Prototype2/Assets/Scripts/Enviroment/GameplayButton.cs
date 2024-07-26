@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class GameplayButton : MonoBehaviour 
 {
+    [Header("Dumbass Directional Sfx")]
+    public AK.Wwise.Event walkButtonSFX;
+    public AK.Wwise.Event deflectButtonSFX;
+
     [SerializeField] private bool _triggeredByOtherButton;
     [SerializeField] private bool _startPressable;
     private bool _isPressable;
@@ -35,6 +39,8 @@ public class GameplayButton : MonoBehaviour
             if (collision.tag == "Player")
             {
                 StartPress();
+
+                walkButtonSFX.Post(gameObject);
             }
         }
         else if (type == TriggerType.Deflection)
@@ -43,6 +49,8 @@ public class GameplayButton : MonoBehaviour
             if (collision.GetComponent<Bullet>().type == BulletOwner.PLAYERBULLET)
             {
                 StartPress();
+
+                deflectButtonSFX.Post(gameObject);
             }
         }
         

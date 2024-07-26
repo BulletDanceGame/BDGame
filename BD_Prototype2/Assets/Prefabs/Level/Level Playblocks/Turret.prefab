@@ -139,6 +139,22 @@ MonoBehaviour:
   _isActiveOnStart: 1
   normalShot: {fileID: 2805331634584279427}
   doubleShot: {fileID: 2805331635818958811}
+  activateSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b60e970b7e0bdf441812a2e1661ba85e, type: 2}
+  shootSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 77cb7754f5bbd6447a14f04e63cdabfb, type: 2}
+  hurtSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4b1e2d2d885ee964e8b30edcda9e70a2, type: 2}
+  deactivateSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c80015711b659f74b8c06dcb86520d85, type: 2}
   turretRespawnTime: 3
   shouldBeRespawnable: 1
   _triggeredByButton: 0
@@ -686,7 +702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3953619029673890514, guid: 2370c69501facc74c822b10900d50ca6, type: 3}
       propertyPath: _animNoteDuration
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5896386647231419677, guid: 2370c69501facc74c822b10900d50ca6, type: 3}
       propertyPath: m_RootOrder
