@@ -148,7 +148,7 @@ public class MusicManager : MonoBehaviour
         }
 
 
-        if (playing)
+        if (playing && !cantCalculateSpeed)
         {
             songTimer++;
             double frameDuration = currentFrameDuration;
@@ -172,7 +172,6 @@ public class MusicManager : MonoBehaviour
             totalDelay += delay;
                 
             lastFrameTime = Time.timeAsDouble;
-            //print("skip unitycheck " + totalDelay);
 
             int f = (int)(totalDelay / frameDuration);
 
@@ -358,7 +357,9 @@ public class MusicManager : MonoBehaviour
 
         PlayerRhythm.Instance.ClearBeats();
 
-        _currentSong.Stop(gameObject);
+        
+        if (_currentSong != default)
+            _currentSong.Stop(gameObject);
     }
 
     /// <summary> Prepares the next sequence and song by taking it from the current Controller </summary>
@@ -371,6 +372,7 @@ public class MusicManager : MonoBehaviour
         }
 
         _nextSequence = controller.GetNextSequence();
+        print("next - sequence " + _nextSequence.name);
 
         SetNextFPS();
 
@@ -394,42 +396,6 @@ public class MusicManager : MonoBehaviour
         {
             return;
         }
-
-
-        //FPS CHECK
-        int supposedFrames = (int)framesPerBeat * sequenceDuration;
-        //print("aaa framecount " + frames + " should have been " + supposedFrames);
-        if (frames < supposedFrames *0.9f)
-        {
-            //print("aaa warning fps is too low you should switch");
-
-            double consider = frames / (secondsPerBeat * sequenceDuration);
-            //print("aaa consider " + consider);
-
-            double b = _currentSequence.bpm * 2.0 / 60.0;
-            double c = 0;
-
-            for (int i = 1; i < 11; i++)
-            {
-                c = b * i;
-                if (c == (int)c)
-                {
-                    //print("aaa c " + c);
-                    break;
-                }
-            }
-
-            double m = consider % c;
-            //print("aaa m " + m);
-
-            consider -= m;
-            //print("aaa consider " + consider);
-
-        }
-
-
-        
-
 
         if (_currentSequence.replayInSameSequence == false)
         {
@@ -511,6 +477,7 @@ public class MusicManager : MonoBehaviour
             if (cantCalculateSpeed)
             {
                 StartSequence();
+                PrepareNextSequence();
             }
         }
 
@@ -528,6 +495,8 @@ public class MusicManager : MonoBehaviour
 
     private void SetNextFPS()
     {
+
+
         secondsPerBeat = 60.0 / (_nextSequence.bpm * 2);
 
         double lowestFPS = 0.5;
@@ -592,7 +561,7 @@ public class MusicManager : MonoBehaviour
 
 
 
-        PrepareNextSequence();//move to after offset
+        PrepareNextSequence();
 
 
         yield return null;

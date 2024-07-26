@@ -33,12 +33,10 @@ public class MusicFollower : MonoBehaviour
     private FollowSequence _currentSequence;
 
 
-    string na;
 
 
     public void Start()
     {
-        na = gameObject.name;
         SetUp();
     }
 
@@ -49,6 +47,11 @@ public class MusicFollower : MonoBehaviour
 
         EventManager.Instance.OnBeat += CheckBeat;
         EventManager.Instance.OnNewSong += ChooseSequence;
+
+        if (MusicManager.Instance._currentSequence.song != default)
+        {
+            ChooseSequence(MusicManager.Instance._currentSequence.song);
+        }
     }
     
 
@@ -211,7 +214,6 @@ public class MusicFollower : MonoBehaviour
 
     public void OnDestroy()
     {
-        print("bitch "+ na);
         EventManager.Instance.OnBeat -= CheckBeat;
         EventManager.Instance.OnNewSong -= ChooseSequence;
     }

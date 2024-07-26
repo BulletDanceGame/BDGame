@@ -50,11 +50,11 @@ public class RoomController : MonoBehaviour
     [SerializeField] private GameObject _spawnMarkerPrefab;
     [SerializeField] private AK.Wwise.Event _enemySpawnSFX;
     [SerializeField] private GameObject _vfxSmokePrefab;
+    [SerializeField] private bool _dontSwitchMusic;
 
 
     //roaming
     [SerializeField] private List<GameObject> _enemies = new List<GameObject>();
-
 
 
 
@@ -173,8 +173,11 @@ public class RoomController : MonoBehaviour
         _currentActiveEnemies.Clear();
 
         //Change Music
-        EnvironmentConductor.SwitchSequenceType(EnvironmentConductor.SequenceType.Battle, MusicManager.TransitionType.INSTANT_SWITCH);
-        SoundManager.Instance.PlaySFX(_startBattleSFX); //should come from one of the sound container scripts as an event
+        if (!_dontSwitchMusic)
+        {
+            EnvironmentConductor.SwitchSequenceType(EnvironmentConductor.SequenceType.Battle, MusicManager.TransitionType.INSTANT_SWITCH);
+            SoundManager.Instance.PlaySFX(_startBattleSFX); //should come from one of the sound container scripts as an event
+        }
 
         //lock all doors
         foreach (Gate gate in _gatesToLock)

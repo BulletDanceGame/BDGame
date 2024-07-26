@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections.Generic;
+
 public class FireBullet : MonoBehaviour
 {
     public GameObject fireTrailPrefab;

@@ -218,19 +218,23 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 direction = new Vector2();
 
-        switch (InputManager.Instance.CurrentController)
-        {
-            case ControllerType.KEYBOARDANDMOUSE:
-                // Get the mouse position in world space
-                Vector2 mousePos = Input.mousePosition;
-                mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+        //DASH DIR YOU WALK
+        direction = inputVector;
 
-                direction = mousePos - (Vector2)transform.position;
-                break;
-            case ControllerType.GAMEPAD:
-                direction = _playerInput.Player.Aim.ReadValue<Vector2>();
-                break;
-        }
+        //DASH DIR YOU AIM
+        //switch (InputManager.Instance.CurrentController)
+        //{
+        //    case ControllerType.KEYBOARDANDMOUSE:
+        //        // Get the mouse position in world space
+        //        Vector2 mousePos = Input.mousePosition;
+        //        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+
+        //        direction = mousePos - (Vector2)transform.position;
+        //        break;
+        //    case ControllerType.GAMEPAD:
+        //        direction = _playerInput.Player.Aim.ReadValue<Vector2>();
+        //        break;
+        //}
 
         direction = direction.normalized;
 

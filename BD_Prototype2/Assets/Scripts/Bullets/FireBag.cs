@@ -14,14 +14,14 @@ public class FireBag : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        GrowPool();
+        GrowPool(100);
     }
 
-    private void GrowPool()
+    private void GrowPool(int amount)
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < amount; i++)
         {
-            var instanceToAdd = Instantiate(afterImagePrefab);
+            GameObject instanceToAdd = Instantiate(afterImagePrefab);
             instanceToAdd.transform.SetParent(transform);
             AddToPool(instanceToAdd);
         }
@@ -38,10 +38,10 @@ public class FireBag : MonoBehaviour
     {
         if (availableObjects.Count == 0)
         {
-            GrowPool();
+            GrowPool(10);
         }
 
-        var instance = availableObjects.Dequeue();
+        GameObject instance = availableObjects.Dequeue();
         instance.SetActive(true);
         return instance;
     }
