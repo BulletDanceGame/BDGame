@@ -98,7 +98,10 @@ public class PlayerSwing : MonoBehaviour
         else
             rhythmUI.gameObject.SetActive(false);
 
-
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            EnableSwing();
+        }
     }
 
     void OnSwing()

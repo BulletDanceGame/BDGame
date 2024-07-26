@@ -148,7 +148,7 @@ public class MusicManager : MonoBehaviour
         }
 
 
-        if (playing)
+        if (playing && !cantCalculateSpeed)
         {
             songTimer++;
             double frameDuration = currentFrameDuration;
@@ -370,6 +370,7 @@ public class MusicManager : MonoBehaviour
         }
 
         _nextSequence = controller.GetNextSequence();
+        print("next - sequence " + _nextSequence.name);
 
         SetNextFPS();
 
@@ -474,6 +475,7 @@ public class MusicManager : MonoBehaviour
             if (cantCalculateSpeed)
             {
                 StartSequence();
+                PrepareNextSequence();
             }
         }
 
@@ -557,7 +559,7 @@ public class MusicManager : MonoBehaviour
 
 
 
-        PrepareNextSequence();//move to after offset
+        PrepareNextSequence();
 
 
         yield return null;
