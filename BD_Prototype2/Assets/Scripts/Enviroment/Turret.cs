@@ -10,6 +10,12 @@ public class Turret : Movelist
     public Transform doubleShot;
     private List<BulletBag.BulletTypes> bulletPrefabs = new List<BulletBag.BulletTypes>();
 
+    [Header("Dumbass Directional Sfx")]
+    public AK.Wwise.Event activateSFX;
+    public AK.Wwise.Event shootSFX;
+    public AK.Wwise.Event hurtSFX;
+    public AK.Wwise.Event deactivateSFX;
+
     [Space]
     [SerializeField]
     float turretRespawnTime = 3f;
@@ -45,12 +51,17 @@ public class Turret : Movelist
 
     public override void Activate()
     {
+        if(!_isActive)
+            activateSFX.Post(gameObject);
         _isActive = true;
         _animHandler?.Alerted();
     }
 
     public override void Deactivate()
     {
+        //Play sfx
+        if( _isActive )
+            deactivateSFX.Post(gameObject);
         _isActive = false;
         _animHandler?.Defeat();
     }
@@ -137,6 +148,7 @@ public class Turret : Movelist
         }
 
         _animHandler?.AttackStart();
+        shootSFX.Post(gameObject);
     }
 
     private void DoubleShot()
@@ -178,6 +190,7 @@ public class Turret : Movelist
         }
 
         _animHandler?.AttackStart();
+        shootSFX.Post(gameObject);
     }
 
 
@@ -240,7 +253,10 @@ public class Turret : Movelist
         _animHandler?.Hurt();
 
         if (_isActive)
+        {
+            deactivateSFX.Post(gameObject);
             _isActive = false;
+        }
 
         if (shouldBeRespawnable)
             StartCoroutine(RespawnTurret());

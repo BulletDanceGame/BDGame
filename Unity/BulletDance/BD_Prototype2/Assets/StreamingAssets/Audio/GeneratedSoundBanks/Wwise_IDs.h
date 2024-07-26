@@ -119,6 +119,8 @@ namespace AK
         static const AkUniqueID PLAY_DEATH = 1172822028U;
         static const AkUniqueID PLAY_DEFLECTIONSWING___GOOD___LONG = 4112303910U;
         static const AkUniqueID PLAY_ENCOUNTER___CRITTER = 1369454011U;
+        static const AkUniqueID PLAY_ENEMYTURRETTURNOFF = 685683640U;
+        static const AkUniqueID PLAY_ENEMYTURRETTURNON = 2011553634U;
         static const AkUniqueID PLAY_ENV1_TEST3_TRIPPLETS_INTRO = 2403173065U;
         static const AkUniqueID PLAY_ENV1_TEST3_TRIPPLETS_PART1 = 160122243U;
         static const AkUniqueID PLAY_ENV1_TEST3_TRIPPLETS_PART2 = 160122240U;

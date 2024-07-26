@@ -28995,6 +28995,288 @@
 								</BlendContainer>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Turret" ID="{D2B456C5-3610-40DA-B78D-22D187318AC7}" ShortID="747352694">
+							<ChildrenList>
+								<BlendContainer Name="TurretTurnOn" ID="{5A384464-F46A-44BF-A589-465019CA3D6E}" ShortID="572383922">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="CenterPercentage" Type="int32">
+											<ValueList>
+												<Value>100</Value>
+											</ValueList>
+										</Property>
+										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="52"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="turretAttenuation" ID="{4A3BE75A-15D2-46B4-A811-7C7A1D4DF101}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="TurretTurnOnV2" ID="{D0E30AC8-4A7C-4122-B058-0B318D3D24A2}" ShortID="853954960">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="50"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="EnemyActions" ID="{A4BDF6E6-79F1-4200-AF70-2220E2C4B6DB}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="TurretTurnOnV2" ID="{731E25BF-0E20-4926-B3D0-EB6E910061CD}">
+													<Language>SFX</Language>
+													<AudioFile>TurretTurnOnV2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="511851940"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="TurretTurnOnV2" ID="{731E25BF-0E20-4926-B3D0-EB6E910061CD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="TurretTurnOnV3" ID="{8E87DB59-7EEE-4A92-8ED8-13580B5A99F2}" ShortID="407633276">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="TurretTurnOnV3" ID="{F7355D90-4491-4E10-B870-241093611C2E}">
+													<Language>SFX</Language>
+													<AudioFile>TurretTurnOnV3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="760290671"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="TurretTurnOnV3" ID="{F7355D90-4491-4E10-B870-241093611C2E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
+								<BlendContainer Name="TurretTurnOff" ID="{77C89D98-0E30-4E5C-B32A-C2F499192C55}" ShortID="464268001">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="CenterPercentage" Type="int32">
+											<ValueList>
+												<Value>100</Value>
+											</ValueList>
+										</Property>
+										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="49"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="turretAttenuation" ID="{4A3BE75A-15D2-46B4-A811-7C7A1D4DF101}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="TurretTurnOffV2" ID="{BE422E54-E85B-4FE3-8C15-5DC9647B9758}" ShortID="216471292">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="50"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="EnemyActions" ID="{A4BDF6E6-79F1-4200-AF70-2220E2C4B6DB}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="TurretTurnOffV2" ID="{91FB51CB-D299-425D-99AF-9A79D1F11C5A}">
+													<Language>SFX</Language>
+													<AudioFile>TurretTurnOffV2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="469284414"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<PositioningInfo>
+												<Panner Name="" ID="{1865C4B9-4E56-4886-844B-5D3AE4BD05F3}"/>
+											</PositioningInfo>
+											<ActiveSourceList>
+												<ActiveSource Name="TurretTurnOffV2" ID="{91FB51CB-D299-425D-99AF-9A79D1F11C5A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="TurretTurnOff" ID="{CFEC3718-A584-4CCF-8244-B417512AA14F}" ShortID="597686975">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="TurretTurnOff" ID="{EF534E89-E34A-4EE5-BB2D-C9CA061F499C}">
+													<Language>SFX</Language>
+													<AudioFile>TurretTurnOff.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="680270997"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="TurretTurnOff" ID="{EF534E89-E34A-4EE5-BB2D-C9CA061F499C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<PositioningInfo>
+										<Panner Name="" ID="{5E353ECA-B34C-4B96-A7CF-F5DE4BCE0F8F}"/>
+									</PositioningInfo>
+								</BlendContainer>
+								<BlendContainer Name="TurretShot" ID="{68E5B2BC-8937-4116-974A-133C01B32E71}" ShortID="790146084">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="CenterPercentage" Type="int32">
+											<ValueList>
+												<Value>100</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="turretAttenuation" ID="{4A3BE75A-15D2-46B4-A811-7C7A1D4DF101}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="TurretShotV2" ID="{25C345AB-5272-40D4-AC68-0B3AD69E6147}" ShortID="217668987">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="TurretShotV2" ID="{FF3DA7F1-5D93-483B-A45F-4165118B1160}">
+													<Language>SFX</Language>
+													<AudioFile>TurretShotV2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="991243907"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="TurretShotV2" ID="{FF3DA7F1-5D93-483B-A45F-4165118B1160}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="TurretShotV1" ID="{34FF54C1-076F-480A-B89E-8A65004E58A0}" ShortID="56479018">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="TurretShotV1" ID="{64FA03E5-11BC-4BF8-A447-51DF2B8DF94D}">
+													<Language>SFX</Language>
+													<AudioFile>TurretShotV1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="830350343"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="TurretShotV1" ID="{64FA03E5-11BC-4BF8-A447-51DF2B8DF94D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="5 Cutscene SFX" ID="{3CAF828E-9D7D-496E-A40D-7A383F765262}" ShortID="475888537">

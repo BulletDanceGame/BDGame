@@ -1936,7 +1936,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{ECBFCBFF-273F-2DC7-F5D9-B1ADB9EAE044}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{C83253BD-2131-622D-C678-E8AD45252272}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -2389,6 +2389,10 @@
 				<File Id="758446579" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Outro\boss death sound 1.wav</ShortName>
 					<CachePath>SFX/Outro/boss death sound 1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="760290671" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TurretTurnOnV3.wav</ShortName>
+					<CachePath>SFX/TurretTurnOnV3_10C4C929.wem</CachePath>
 				</File>
 				<File Id="762404653" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 11.wav</ShortName>
@@ -3033,6 +3037,16 @@
 						<MediaRef Id="236322927"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="685683640" Name="Play_EnemyTurretTurnOff" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.6294584" DurationMax="3.6294584">
+					<MediaRefs>
+						<MediaRef Id="680270997"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2011553634" Name="Play_EnemyTurretTurnOn" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.4330416" DurationMax="3.4330416">
+					<MediaRefs>
+						<MediaRef Id="760290671"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2754371527" Name="Play_FirstTurret___Turn_on_and_Alert" DurationType="OneShot" DurationMin="3.3883958" DurationMax="3.3883958">
 					<MediaRefs>
 						<MediaRef Id="675450540"/>
@@ -3323,5 +3337,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{FAF70C1D-0F03-0C4A-1F3B-C80BA29FD8D3}</FileHash>
+	<FileHash>{9FDC7B52-5616-C662-1E3E-21A5568C8DC9}</FileHash>
 </SoundBanksInfo>

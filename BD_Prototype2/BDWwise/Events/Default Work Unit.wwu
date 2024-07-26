@@ -3360,6 +3360,32 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="TurretSFX" ID="{D20EE2F0-7E2C-43DC-B895-F7B23B2E6911}" ShortID="666178766">
+					<ChildrenList>
+						<Event Name="Play_EnemyTurretTurnOn" ID="{0E32800C-7B64-4001-80C9-309B29E62408}">
+							<ChildrenList>
+								<Action Name="" ID="{4FCD4E7F-43A2-4DF3-AD30-690F3B276AF5}" ShortID="283109552">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TurretTurnOn" ID="{5A384464-F46A-44BF-A589-465019CA3D6E}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_EnemyTurretTurnOff" ID="{750F10E3-2BC6-4B7E-923A-3BACB1BE54A2}">
+							<ChildrenList>
+								<Action Name="" ID="{5398A7EB-1BA1-405A-A59C-EDF791B4197E}" ShortID="473411214">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TurretTurnOff" ID="{77C89D98-0E30-4E5C-B32A-C2F499192C55}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
