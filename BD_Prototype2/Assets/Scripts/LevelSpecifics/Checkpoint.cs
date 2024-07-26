@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Checkpoint : MonoBehaviour
 {
+    //[Header("PUT THE CUTSENCE TRIGGER IN THIS BITCH")]
+    //public GameObject CutSenceToNuke;
     private CheckpointManager _checkpointManager;
+    PlayerSwing _playerSwing;
 
 
     private void Start()
@@ -15,7 +19,14 @@ public class Checkpoint : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
+            _playerSwing = collision.GetComponentInParent<PlayerSwing>();
             _checkpointManager.SetCurrentCheckpoint(this);
+            SaveSystem.Instance.GetData().hasplayed1stcutscene = true;
+            SaveSystem.Instance.GetData().currentCheckpointX = UnitManager.Instance.GetPlayer().transform.position.x;
+            SaveSystem.Instance.GetData().currentCheckpointY = UnitManager.Instance.GetPlayer().transform.position.y;
+            //SaveSystem.Instance.GetData().hasBat = _playerSwing.SwingActivated;
+            SaveSystem.Instance.Save();
+
         }
     }
 

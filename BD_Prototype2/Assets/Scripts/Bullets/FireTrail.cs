@@ -5,11 +5,6 @@ public class FireTrail : MonoBehaviour
     public float duration;
     public bool isInfinite=false;
 
-
-    public GameObject Fire;
-        [SerializeField]
-    ParticleSystem _particleSystem;
-
     private void OnEnable()
     {
         var spriteRenderer = GetComponent<SpriteRenderer>();
