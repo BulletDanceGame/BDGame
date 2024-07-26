@@ -20,7 +20,11 @@ public class Checkpoint : MonoBehaviour
         {
             _playerSwing = collision.GetComponentInParent<PlayerSwing>();
             _checkpointManager.SetCurrentCheckpoint(this);
-           
+
+            SaveSystem.Instance.GetData().currentCheckpointX = UnitManager.Instance.GetPlayer().transform.position.x;
+            SaveSystem.Instance.GetData().currentCheckpointY = UnitManager.Instance.GetPlayer().transform.position.y;
+            //SaveSystem.Instance.GetData().hasBat = _playerSwing.SwingActivated;
+            SaveSystem.Instance.Save();
 
         }
     }

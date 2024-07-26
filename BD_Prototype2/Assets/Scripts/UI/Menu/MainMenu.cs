@@ -165,10 +165,21 @@ public class MainMenu : MonoBehaviour
         MainMenuConductor.Instance.StopMenuMusic();
 
         GameManager.Instance.ChangeGameState(GameState.NEWGAME);
-
+        SaveSystem.Instance.GetData().currentCheckpointX = -1;
+        SaveSystem.Instance.GetData().currentCheckpointY = -1;
+        SaveSystem.Instance.Save();
         //SceneLoad happens in the SceneLoadButton on the Button
     }
+    public void ContinueGame()
+    {
+        _updateInput = false;
+        DisableButtons(FindObjectsOfType<Button>());
 
+        MainMenuConductor.Instance.StopMenuMusic();
+
+        GameManager.Instance.ChangeGameState(GameState.NEWGAME);
+        //SceneLoad happens in the SceneLoadButton on the Button
+    }
     //Calibration
     public void StartCalibrate()
     {

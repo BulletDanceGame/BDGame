@@ -10,7 +10,19 @@ public class OnSceneLoaded : MonoBehaviour
         print("SAVED THE CURRENT LEVEL: " + SaveSystem.Instance.GetData().currentLevel);
         SaveSystem.Instance.Save();
 
-        //UnitManager.Instance.GetPlayer().transform.position = SaveSystem.Instance.GetData().currentCheckpoint.transform.position;
-        //print("Checkpoint: " + SaveSystem.Instance.GetData().currentCheckpoint);
+        Invoke("PlayerPos", 1f);
+    }
+
+    private void PlayerPos()
+    {
+        Vector3 Checkpointposition;
+
+        Checkpointposition.x = SaveSystem.Instance.GetData().currentCheckpointX;
+        Checkpointposition.y = SaveSystem.Instance.GetData().currentCheckpointY;
+        Checkpointposition.z = SaveSystem.Instance.GetData().currentCheckpointZ;
+
+
+        UnitManager.Instance.GetPlayer().transform.position = Checkpointposition;
+
     }
 }
