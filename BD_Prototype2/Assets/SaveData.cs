@@ -17,6 +17,6 @@ public class SaveData
 
     public bool hasBat;
 
-
-
+    public bool hasplayed1stcutscene;
+    public bool hasplayed2stcutscene;
 }
