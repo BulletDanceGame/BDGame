@@ -32,7 +32,7 @@ public class TimeManager : MonoBehaviour
         if(timeScale == 1f)
             RTPCManager.Instance.ResetValue("PLAYBACK_SPEED____CutsceneMusic", 0.0000000001f, 0);
         else
-            RTPCManager.Instance.SetValue("PLAYBACK_SPEED____CutsceneMusic", timeScale, 0.0000000001f, 0);
+            RTPCManager.Instance.SetValue("PLAYBACK_SPEED____CutsceneMusic", 0, 0.0000000001f, 0);
     }
 
 
