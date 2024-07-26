@@ -59,7 +59,7 @@ namespace BulletDance.Cutscene
             {
                 //RTPCManager.Instance.SetValue("VOLUME____MusicEnvRoaming", 0, 0.0000001f, RTPCManager.CurveTypes.high_curve); >>>>>> should stop, but should also have an echo left of it
                 RTPCManager.Instance.SetValue("VOLUME____PlayerMovement__Footsteps", 0, 0.0000001f, RTPCManager.CurveTypes.high_curve);
-                RTPCManager.Instance.SetValue("VOLUME____AmbientComponents", 0, 0.0000001f, RTPCManager.CurveTypes.high_curve);
+                //RTPCManager.Instance.SetValue("VOLUME____AmbientComponents", 0, 0.0000001f, RTPCManager.CurveTypes.high_curve);
                 RTPCManager.Instance.SetValue("VOLUME_SPECIAL____Dash__DynamicMixing", 100, 0.0000001f, RTPCManager.CurveTypes.high_curve);
             }
 
@@ -67,7 +67,7 @@ namespace BulletDance.Cutscene
             {
                 RTPCManager.Instance.ResetValue("VOLUME____MusicEnvRoaming", 0.0000001f, RTPCManager.CurveTypes.high_curve);
                 RTPCManager.Instance.ResetValue("VOLUME____PlayerMovement__Footsteps", 0.0000001f, RTPCManager.CurveTypes.high_curve);
-                RTPCManager.Instance.ResetValue("VOLUME____AmbientComponents", 0.0000001f, RTPCManager.CurveTypes.high_curve);
+                //RTPCManager.Instance.ResetValue("VOLUME____AmbientComponents", 0.0000001f, RTPCManager.CurveTypes.high_curve);
                 RTPCManager.Instance.ResetValue("VOLUME_SPECIAL____Dash__DynamicMixing", 0.0000001f, RTPCManager.CurveTypes.high_curve);
             }
         }

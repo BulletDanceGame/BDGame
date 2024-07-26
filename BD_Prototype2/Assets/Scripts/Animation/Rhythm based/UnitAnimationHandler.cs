@@ -82,13 +82,11 @@ public class UnitAnimationHandler : MonoBehaviour
 
     public void SpecialStart(int actionState)
     {
-            print(actionState);
         OnSpecialStart?.Invoke(actionState);
     }
 
     public void SpecialStop()
     {
-            print("STOPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP");
         OnSpecialStop?.Invoke();
     }
 
