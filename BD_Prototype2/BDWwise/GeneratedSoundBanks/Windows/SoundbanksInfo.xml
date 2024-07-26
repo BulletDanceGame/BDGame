@@ -269,7 +269,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{662F1903-1F0C-14B4-E05C-207F3A8F86A7}">
+		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{AB4F1AA5-1B5D-502F-2D86-88F75AC0C291}">
 			<ShortName>Music_TutorialAndLevel1_Part1</ShortName>
 			<Path>Music_TutorialAndLevel1_Part1.bnk</Path>
 			<Media>
@@ -308,6 +308,10 @@
 				<File Id="327326669" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Env1-VegZone2-Battle-Part2.wav</ShortName>
 					<CachePath>SFX/Env1-VegZone2-Battle-Part2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="332317944" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TurnOn10.wav</ShortName>
+					<CachePath>SFX/TurnOn10_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="351147284" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>reverse oi.wav</ShortName>
@@ -497,6 +501,7 @@
 				</Event>
 				<Event Id="2023822823" Name="Play_Env1_VegZone1_Evade_Intro" DurationType="OneShot" DurationMin="8.589286" DurationMax="8.589286">
 					<MediaRefs>
+						<MediaRef Id="332317944"/>
 						<MediaRef Id="351147284"/>
 						<MediaRef Id="554555461"/>
 						<MediaRef Id="620434853"/>
@@ -1936,7 +1941,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{688DED87-B738-C825-EFD6-2A772DFA80FC}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{D71605DD-8258-585D-9EFF-20DF36AA1ACB}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -2110,12 +2115,6 @@
 					<ShortName>CritterLand.wav</ShortName>
 					<CachePath>SFX/CritterLand_10C4C929.wem</CachePath>
 				</File>
-				<File Id="315025178" Language="SFX" Streaming="true" Location="Memory">
-					<ShortName>WalkButtonPressV2.wav</ShortName>
-					<Path>Media/315025178.wem</Path>
-					<CachePath>SFX/WalkButtonPressV2_10C4C929.wem</CachePath>
-					<PrefetchSize>57744</PrefetchSize>
-				</File>
 				<File Id="316381491" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 12.wav</ShortName>
 					<CachePath>SFX/part 3 - ow 12_10C4C929.wem</CachePath>
@@ -2274,6 +2273,10 @@
 					<ShortName>piece9.wav</ShortName>
 					<CachePath>SFX/piece9_10C4C929.wem</CachePath>
 				</File>
+				<File Id="544480590" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MovementV2.wav</ShortName>
+					<CachePath>SFX/MovementV2_10C4C929.wem</CachePath>
+				</File>
 				<File Id="546612985" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>noStaminaV8.wav</ShortName>
 					<CachePath>SFX/noStaminaV8_10C4C929.wem</CachePath>
@@ -2380,6 +2383,10 @@
 				<File Id="685776673" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>vhsSpeedUpV2.wav</ShortName>
 					<CachePath>SFX/vhsSpeedUpV2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="687966571" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WalkButtonPressV4.wav</ShortName>
+					<CachePath>SFX/WalkButtonPressV4_10C4C929.wem</CachePath>
 				</File>
 				<File Id="696201637" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hurtHIGH1.wav</ShortName>
@@ -2578,10 +2585,6 @@
 					<Path>Media/970375371.wem</Path>
 					<CachePath>SFX/ching!!Swing_D72E602E.wem</CachePath>
 					<PrefetchSize>688420</PrefetchSize>
-				</File>
-				<File Id="974159532" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>swing.wav</ShortName>
-					<CachePath>SFX/swing_7B2F148B.wem</CachePath>
 				</File>
 				<File Id="981604077" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>dorodie.wav</ShortName>
@@ -3039,9 +3042,9 @@
 						<MediaRef Id="729477149"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2226196626" Name="Play_ButtonWalkPress" DurationType="OneShot" DurationMin="2.28125" DurationMax="2.28125">
+				<Event Id="2226196626" Name="Play_ButtonWalkPress" DurationType="OneShot" DurationMin="2.03125" DurationMax="2.03125">
 					<MediaRefs>
-						<MediaRef Id="315025178"/>
+						<MediaRef Id="687966571"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1837873573" Name="Play_Cooldown" DurationType="OneShot" DurationMin="3.2678542" DurationMax="3.2678542">
@@ -3142,9 +3145,9 @@
 						<MediaRef Id="1065987497"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2755497806" Name="Play_Moving_to_the_side" DurationType="OneShot" DurationMin="0.21741426" DurationMax="0.21741426">
+				<Event Id="2755497806" Name="Play_Moving_to_the_side" DurationType="OneShot" DurationMin="1.34032" DurationMax="1.6886973">
 					<MediaRefs>
-						<MediaRef Id="974159532"/>
+						<MediaRef Id="544480590"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2952062683" Name="Play_NavConfirm" DurationType="OneShot" DurationMin="3.2041667" DurationMax="3.2098124">
@@ -3393,5 +3396,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{437E660E-6824-D9F7-33DE-9FD4C9D6FF6E}</FileHash>
+	<FileHash>{CE1A3DD1-B66C-32A0-8377-FE60C807AEB2}</FileHash>
 </SoundBanksInfo>

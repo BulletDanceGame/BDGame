@@ -20186,7 +20186,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>3</Value>
+												<Value>-4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -29993,7 +29993,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>6</Value>
+												<Value>3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -30037,6 +30037,11 @@
 										</Sound>
 										<Sound Name="WalkButtonPressV2" ID="{6F488C85-9071-4697-B6FD-DF3355D62BBE}" ShortID="222187891">
 											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
@@ -30050,11 +30055,6 @@
 												<Property Name="PreFetchLength" Type="int16">
 													<ValueList>
 														<Value>300</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>7</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -30077,6 +30077,35 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="WalkButtonPressV2" ID="{BE2CF5A1-43C5-4504-9B0F-DB19D2711A30}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="WalkButtonPressV4" ID="{D0784394-CAC5-4ECB-A14F-802DE54EE05D}" ShortID="694002162">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="WalkButtonPressV4" ID="{BA66175E-9AEE-4AFE-B739-4D68610559DF}">
+													<Language>SFX</Language>
+													<AudioFile>WalkButtonPressV4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="687966571"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="WalkButtonPressV4" ID="{BA66175E-9AEE-4AFE-B739-4D68610559DF}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -32190,14 +32219,15 @@
 								</Sound>
 								<BlendContainer Name="Moving to the side" ID="{7DFECC4A-D0B2-493D-9912-D1D21524E500}" ShortID="837456934">
 									<PropertyList>
-										<Property Name="Highpass" Type="int16">
+										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>39</Value>
+												<Value>12</Value>
 											</ValueList>
 										</Property>
+										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="0"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -32256,9 +32286,9 @@
 										</Sound>
 										<Sound Name="swing_01" ID="{6BEA6249-84E9-4AEC-A791-841570E602DD}" ShortID="534824781">
 											<PropertyList>
-												<Property Name="Pitch" Type="int32">
+												<Property Name="Inclusion" Type="bool">
 													<ValueList>
-														<Value>520</Value>
+														<Value>False</Value>
 													</ValueList>
 												</Property>
 												<Property Name="Volume" Type="Real64">
@@ -32278,13 +32308,13 @@
 											<ChildrenList>
 												<AudioFileSource Name="swing" ID="{151D39DF-E37E-4569-BC75-DCBA42D13239}">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.00490093253114179"/>
-														<Property Name="FadeInShape" Type="int16" Value="7"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.276309470781457"/>
-														<Property Name="FadeOutShape" Type="int16" Value="1"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0480812486230959"/>
+														<Property Name="FadeInShape" Type="int16" Value="9"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.144068073953242"/>
+														<Property Name="FadeOutShape" Type="int16" Value="0"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.0431333830025573"/>
-														<Property Name="TrimEnd" Type="Real64" Value="0.336718714978883"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0614489113616269"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.280252147781712"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>swing.wav</AudioFile>
@@ -32297,7 +32327,388 @@
 												<ActiveSource Name="swing" ID="{151D39DF-E37E-4569-BC75-DCBA42D13239}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<Sound Name="Movement" ID="{3D0B31A2-03E9-49F5-81C2-F10666B952CB}" ShortID="666868785">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Movement" ID="{8417F050-E86A-4E93-95ED-8F7657194ABB}">
+													<Language>SFX</Language>
+													<AudioFile>Movement.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="156429274"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Movement" ID="{8417F050-E86A-4E93-95ED-8F7657194ABB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<RandomSequenceContainer Name="randomVoices" ID="{A5155B27-314E-423F-BB14-FDFDD9754CF5}" ShortID="386086072">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="MovementV2_01" ID="{B58846EE-D747-46D5-8BE9-52B599F29825}" ShortID="884875939">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>-200</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="0"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-6</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="swings" ID="{C62F61CC-FE4C-4C56-B2F1-3FC7FBB53EE2}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="MovementV2" ID="{1B2B589F-77C6-45A3-B4C0-7365AAB9020F}">
+															<Language>SFX</Language>
+															<AudioFile>MovementV2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="544480590"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Panner Name="" ID="{59BFCD70-FE01-448A-B9D7-45D5B3B46D0E}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="MovementV2" ID="{1B2B589F-77C6-45A3-B4C0-7365AAB9020F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="MovementV2_02" ID="{9785BCD6-8F35-4D5F-9357-26D682008188}" ShortID="859526376">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>-150</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="0"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-6</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="swings" ID="{C62F61CC-FE4C-4C56-B2F1-3FC7FBB53EE2}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="MovementV2" ID="{9CAF809F-6D83-488E-B686-EE59947FCB3E}">
+															<Language>SFX</Language>
+															<AudioFile>MovementV2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="544480590"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Panner Name="" ID="{E95A8305-6E20-494C-8F21-B39C00327791}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="MovementV2" ID="{9CAF809F-6D83-488E-B686-EE59947FCB3E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="MovementV2_03" ID="{61C69ECC-5E15-4287-B306-7F052A4222CD}" ShortID="600554259">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>-100</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="0"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-6</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="swings" ID="{C62F61CC-FE4C-4C56-B2F1-3FC7FBB53EE2}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="MovementV2" ID="{50DF2068-6D72-401C-9935-3E527D3309E3}">
+															<Language>SFX</Language>
+															<AudioFile>MovementV2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="544480590"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Panner Name="" ID="{F8D02C2D-34EA-4DAD-A4A6-265FBACB7B34}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="MovementV2" ID="{50DF2068-6D72-401C-9935-3E527D3309E3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="MovementV2_04" ID="{30CF7E54-2BCE-43FB-BAC4-BE441BE2D6E8}" ShortID="142859958">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>-50</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="0"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-6</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="swings" ID="{C62F61CC-FE4C-4C56-B2F1-3FC7FBB53EE2}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="MovementV2" ID="{E79243A7-705F-4B8F-9587-F80FDBF07858}">
+															<Language>SFX</Language>
+															<AudioFile>MovementV2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="544480590"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Panner Name="" ID="{BD930709-7FD3-4EA4-AF78-EC4DAF82F910}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="MovementV2" ID="{E79243A7-705F-4B8F-9587-F80FDBF07858}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="MovementV2_05" ID="{6C9F954B-5EE1-4388-93B4-0FFA2669EDEE}" ShortID="157363213">
+													<PropertyList>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="0"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-6</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="swings" ID="{C62F61CC-FE4C-4C56-B2F1-3FC7FBB53EE2}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="MovementV2" ID="{B911A245-CA6A-4988-A5DC-4240063565DD}">
+															<Language>SFX</Language>
+															<AudioFile>MovementV2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="544480590"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Panner Name="" ID="{55153EFB-B497-4005-AF75-DFF5E763B67A}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="MovementV2" ID="{B911A245-CA6A-4988-A5DC-4240063565DD}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="MovementV2_06" ID="{805732EC-DAAC-404B-A5F0-4B7091387F3B}" ShortID="13946279">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>50</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="0"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-6</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="swings" ID="{C62F61CC-FE4C-4C56-B2F1-3FC7FBB53EE2}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="MovementV2" ID="{59D33B6F-29D4-4DFA-B1B9-70A15B4B512E}">
+															<Language>SFX</Language>
+															<AudioFile>MovementV2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="544480590"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Panner Name="" ID="{8E36CFC9-94E0-4FFD-8D8E-5CB5121FC3F6}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="MovementV2" ID="{59D33B6F-29D4-4DFA-B1B9-70A15B4B512E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="MovementV2_07" ID="{42EBBCFE-27E0-4BC3-B095-36BA60CA6D7E}" ShortID="836175658">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>100</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="0"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-6</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="swings" ID="{C62F61CC-FE4C-4C56-B2F1-3FC7FBB53EE2}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="MovementV2" ID="{A20129C6-9EC7-4B5F-BC15-CA1838EF9756}">
+															<Language>SFX</Language>
+															<AudioFile>MovementV2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="544480590"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Panner Name="" ID="{7D39B1BD-30D6-40E3-83DA-3016ED124813}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="MovementV2" ID="{A20129C6-9EC7-4B5F-BC15-CA1838EF9756}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="MovementV2_08" ID="{39DFA357-494D-4E08-8450-AAD59A77E7EB}" ShortID="459715375">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>150</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="0"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-6</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="swings" ID="{C62F61CC-FE4C-4C56-B2F1-3FC7FBB53EE2}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="MovementV2" ID="{CA628D5D-FE8D-478C-A455-EEEC0D3D35EE}">
+															<Language>SFX</Language>
+															<AudioFile>MovementV2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="544480590"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Panner Name="" ID="{F8CD8777-9435-40C3-B2F7-A46D06D57F9E}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="MovementV2" ID="{CA628D5D-FE8D-478C-A455-EEEC0D3D35EE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="MovementV2_09" ID="{9073F7AF-43BC-4D07-B24B-92132A045B7A}" ShortID="874913217">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>200</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="0"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-6</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="swings" ID="{C62F61CC-FE4C-4C56-B2F1-3FC7FBB53EE2}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="MovementV2" ID="{F3AFB67B-3386-497D-826A-2390380AB9EB}">
+															<Language>SFX</Language>
+															<AudioFile>MovementV2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="544480590"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Panner Name="" ID="{3112E073-3579-42BC-A838-D2A507FFD257}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="MovementV2" ID="{F3AFB67B-3386-497D-826A-2390380AB9EB}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
 									</ChildrenList>
+									<PositioningInfo>
+										<Panner Name="" ID="{48C1BC38-8C90-4A81-86F3-EF4246806CA4}"/>
+									</PositioningInfo>
 								</BlendContainer>
 							</ChildrenList>
 						</Folder>

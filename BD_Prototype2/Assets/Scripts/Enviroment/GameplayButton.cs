@@ -38,9 +38,7 @@ public class GameplayButton : MonoBehaviour
         {
             if (collision.tag == "Player")
             {
-                StartPress();
-
-                walkButtonSFX.Post(gameObject);
+                StartPressWalk();
             }
         }
         else if (type == TriggerType.Deflection)
@@ -48,19 +46,29 @@ public class GameplayButton : MonoBehaviour
             if (!collision.GetComponent<Bullet>()) return;
             if (collision.GetComponent<Bullet>().type == BulletOwner.PLAYERBULLET)
             {
-                StartPress();
-
-                deflectButtonSFX.Post(gameObject);
+                StartPressDeflect();
             }
         }
         
     }
 
 
-    private void StartPress()
+    private void StartPressWalk()
     {
         if (!_isPressable) return;
 
+        walkButtonSFX.Post(gameObject);
+        GetComponentInChildren<Animator>().Play("Activate");
+        _isPressable = false;
+
+        StartCoroutine(ButtonPress());
+    }
+
+    private void StartPressDeflect()
+    {
+        if (!_isPressable) return;
+
+        deflectButtonSFX.Post(gameObject);
         GetComponentInChildren<Animator>().Play("Activate");
         _isPressable = false;
 
