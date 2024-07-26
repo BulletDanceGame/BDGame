@@ -3338,6 +3338,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Landing" ID="{FB8409D0-9B6C-489E-90F3-DD2EDBD9B3D6}">
+					<ChildrenList>
+						<Action Name="" ID="{DBCEFEA7-397B-4C66-96DC-F40DF5B153C8}" ShortID="1014491369">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Landing" ID="{470F9F5D-05C1-4EF5-BDBE-2BDED7899019}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Jump" ID="{7A2221FD-8AA2-4FFD-A5A5-F91BAFC08CC6}">
+					<ChildrenList>
+						<Action Name="" ID="{BC09FAAB-B8AF-436B-A9AE-DBD012C7AC59}" ShortID="304762211">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Jump" ID="{4C44550A-D698-4499-8171-512C57AE60A5}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

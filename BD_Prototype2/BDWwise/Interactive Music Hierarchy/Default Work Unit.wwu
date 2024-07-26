@@ -18775,6 +18775,13 @@
 											</ObjectLists>
 										</MusicTrack>
 										<MusicTrack Name="turretAlert" ID="{4CAF1F72-58A7-42A6-9D7A-A37850B41DF5}" ShortID="388387748">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-96</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
@@ -21764,7 +21771,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>4</Value>
+														<Value>-96</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>

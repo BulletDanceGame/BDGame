@@ -38,7 +38,7 @@ public class BossConductor : MusicConductor
     [SerializeField] private Phase[] _phases;
     private int _currentPhaseIndex = 0;
 
-
+    public int currentBeat = 0;
 
     private void Awake()
     {
@@ -201,7 +201,7 @@ public class BossConductor : MusicConductor
             return;
 
         //get current beat for this map
-        int currentBeat = beat - _beatAtStartOfThisMap;
+        currentBeat = beat - _beatAtStartOfThisMap;
 
         //print("b 0" + _beatAtStartOfThisMap);
         //print("b " + currentBeat);

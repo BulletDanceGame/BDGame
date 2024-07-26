@@ -3,6 +3,7 @@ using UnityEngine;
 public class FireBullet : MonoBehaviour
 {
     public GameObject fireTrailPrefab;
+    public bool isBlackfire;
     private float _firetrailSpawnrate;
     public float Spawnrate;
 
@@ -17,16 +18,31 @@ public class FireBullet : MonoBehaviour
     public void SpawnFireTrail()
     {
         _firetrailSpawnrate -= Time.deltaTime;
-
-        if (_firetrailSpawnrate <= 0)
+        if(isBlackfire)
         {
-            GameObject fire = FireBag.Instance.GetFromPool();
-            if (fire != null)
+            if (_firetrailSpawnrate <= 0)
             {
-                fire.transform.position = transform.position;
+                GameObject fire = BlackFireBag.Instance.GetFromPool();
+                if (fire != null)
+                {
+                    fire.transform.position = transform.position;
+                }
+                _firetrailSpawnrate = Spawnrate;
             }
-            _firetrailSpawnrate = Spawnrate;
-        }       
+        }
+        else
+        {
+            if (_firetrailSpawnrate <= 0)
+            {
+                GameObject fire = FireBag.Instance.GetFromPool();
+                if (fire != null)
+                {
+                    fire.transform.position = transform.position;
+                }
+                _firetrailSpawnrate = Spawnrate;
+            }
+        }
+        
     }
 
     

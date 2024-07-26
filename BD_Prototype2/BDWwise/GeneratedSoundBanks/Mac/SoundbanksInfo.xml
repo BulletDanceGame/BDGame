@@ -269,7 +269,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{550BA3F0-2A05-9C41-BBE3-E9ECFA586E59}">
+		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{662F1903-1F0C-14B4-E05C-207F3A8F86A7}">
 			<ShortName>Music_TutorialAndLevel1_Part1</ShortName>
 			<Path>Music_TutorialAndLevel1_Part1.bnk</Path>
 			<Media>
@@ -1936,7 +1936,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{8358C423-3B47-B75C-9E36-23EA5EA2DA56}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{ECBFCBFF-273F-2DC7-F5D9-B1ADB9EAE044}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -2088,7 +2088,7 @@
 					<ShortName>swing.wav</ShortName>
 					<Path>Media/233848723.wem</Path>
 					<CachePath>SFX/swing_DFFA82B5.wem</CachePath>
-					<PrefetchSize>19344</PrefetchSize>
+					<PrefetchSize>477396</PrefetchSize>
 				</File>
 				<File Id="236322927" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>swing.wav</ShortName>
@@ -2105,6 +2105,10 @@
 				<File Id="269805961" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 5.wav</ShortName>
 					<CachePath>SFX/part 3 - ow 5_A53A79EF.wem</CachePath>
+				</File>
+				<File Id="270519013" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>CritterLand.wav</ShortName>
+					<CachePath>SFX/CritterLand_10C4C929.wem</CachePath>
 				</File>
 				<File Id="316381491" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 12.wav</ShortName>
@@ -2546,7 +2550,7 @@
 					<ShortName>ching!!Swing.wav</ShortName>
 					<Path>Media/970375371.wem</Path>
 					<CachePath>SFX/ching!!Swing_D72E602E.wem</CachePath>
-					<PrefetchSize>19344</PrefetchSize>
+					<PrefetchSize>688420</PrefetchSize>
 				</File>
 				<File Id="974159532" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>swing.wav</ShortName>
@@ -3039,6 +3043,13 @@
 						<MediaRef Id="170088987"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3689126666" Name="Play_Jump" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2323405115" Name="Play_Landing" DurationType="OneShot" DurationMin="4.075896" DurationMax="4.075896">
+					<MediaRefs>
+						<MediaRef Id="270519013"/>
+						<MediaRef Id="729477149"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2503464396" Name="Play_Missed_Dash" DurationType="OneShot" DurationMin="1.4063158" DurationMax="1.7035295">
 					<MediaRefs>
 						<MediaRef Id="33638607"/>
@@ -3269,12 +3280,7 @@
 						<MediaRef Id="963053543"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1251528829" Name="Slomo____PLAY" DurationType="OneShot" DurationMin="10.129691" DurationMax="10.129691">
-					<MediaRefs>
-						<MediaRef Id="729477149"/>
-						<MediaRef Id="765488241"/>
-					</MediaRefs>
-				</Event>
+				<Event Id="1251528829" Name="Slomo____PLAY" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1921985385" Name="SoulFormSplashScreen____PLAY" DurationType="OneShot" DurationMin="7.549104" DurationMax="7.549104">
 					<MediaRefs>
 						<MediaRef Id="113834660"/>
@@ -3317,5 +3323,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{624842EC-0056-EB33-4FA6-AE2ABE3035F6}</FileHash>
+	<FileHash>{94FCAAA7-2112-0E57-34A4-61FB156A8B85}</FileHash>
 </SoundBanksInfo>

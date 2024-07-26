@@ -143,6 +143,8 @@ namespace AK
         static const AkUniqueID PLAY_ENV1_VEGZONE_OUTROLOOP = 176035467U;
         static const AkUniqueID PLAY_FIRSTTURRET___TURN_ON_AND_ALERT = 2754371527U;
         static const AkUniqueID PLAY_FORESTAMB = 3960404151U;
+        static const AkUniqueID PLAY_JUMP = 3689126666U;
+        static const AkUniqueID PLAY_LANDING = 2323405115U;
         static const AkUniqueID PLAY_LAYER1_BATTLE_HALF_PART1_5__BPM140_ = 3076762201U;
         static const AkUniqueID PLAY_LAYER1_BATTLE_HALF_PART1_5__BPM150_ = 3177574992U;
         static const AkUniqueID PLAY_LAYER1_BATTLE_HALF_PART1__BPM120_ = 1451033943U;

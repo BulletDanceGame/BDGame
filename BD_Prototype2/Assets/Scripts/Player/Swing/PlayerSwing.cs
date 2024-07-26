@@ -68,6 +68,8 @@ public class PlayerSwing : MonoBehaviour
 
         _swingMat = _rend.material;
 
+        SwingActivated = SaveSystem.Instance.GetData().hasBat;
+
         aimAssistCandidates = new List<AimAssistGameObject>();
 
         yield return null;
