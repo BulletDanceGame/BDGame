@@ -6,6 +6,10 @@ public class OnSceneLoaded : MonoBehaviour
 {
     public GameObject cutscene1trigger;
     public GameObject cutscene2trigger;
+
+    [Tooltip("For debugging, should be false in build")]
+    public bool dontMovePlayerOnStart;
+
     private void Start()
     {
         if (SaveSystem.Instance.GetData().hasplayed1stcutscene)
@@ -19,8 +23,11 @@ public class OnSceneLoaded : MonoBehaviour
         SaveSystem.Instance.GetData().currentLevel = SceneManager.GetActiveScene().buildIndex;
         print("SAVED THE CURRENT LEVEL: " + SaveSystem.Instance.GetData().currentLevel);
         SaveSystem.Instance.Save();
-        
-        Invoke("PlayerPos", 1f);
+
+        if (dontMovePlayerOnStart == false)
+        {
+            Invoke("PlayerPos", 1f);
+        }
     }
 
     private void PlayerPos()

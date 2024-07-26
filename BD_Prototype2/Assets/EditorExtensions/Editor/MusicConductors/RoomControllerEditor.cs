@@ -72,6 +72,11 @@ public class RoomControllerEditor : Editor
         PropertyField vfxSmokePrefab = root.Q<PropertyField>("vfxSmokePrefab");
         vfxSmokePrefab.BindProperty(serializedObject.FindProperty("_vfxSmokePrefab"));
 
+
+        PropertyField dontSwitchMusic = root.Q<PropertyField>("dontSwitchMusic");
+        dontSwitchMusic.BindProperty(serializedObject.FindProperty("_dontSwitchMusic"));
+
+
         //roaming
         PropertyField enemies = root.Q<PropertyField>("enemies");
         enemies.BindProperty(serializedObject.FindProperty("_enemies"));

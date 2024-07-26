@@ -357,7 +357,9 @@ public class MusicManager : MonoBehaviour
 
         PlayerRhythm.Instance.ClearBeats();
 
-        _currentSong.Stop(gameObject);
+        
+        if (_currentSong != default)
+            _currentSong.Stop(gameObject);
     }
 
     /// <summary> Prepares the next sequence and song by taking it from the current Controller </summary>
