@@ -1936,7 +1936,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{055447F0-F824-9838-AABB-5E72FD8BF34C}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{ECBFCBFF-273F-2DC7-F5D9-B1ADB9EAE044}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -2105,6 +2105,10 @@
 				<File Id="269805961" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 5.wav</ShortName>
 					<CachePath>SFX/part 3 - ow 5_A53A79EF.wem</CachePath>
+				</File>
+				<File Id="270519013" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>CritterLand.wav</ShortName>
+					<CachePath>SFX/CritterLand_10C4C929.wem</CachePath>
 				</File>
 				<File Id="316381491" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 12.wav</ShortName>
@@ -3039,6 +3043,13 @@
 						<MediaRef Id="170088987"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3689126666" Name="Play_Jump" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2323405115" Name="Play_Landing" DurationType="OneShot" DurationMin="4.075896" DurationMax="4.075896">
+					<MediaRefs>
+						<MediaRef Id="270519013"/>
+						<MediaRef Id="729477149"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2503464396" Name="Play_Missed_Dash" DurationType="OneShot" DurationMin="1.4063158" DurationMax="1.7035295">
 					<MediaRefs>
 						<MediaRef Id="33638607"/>
@@ -3269,12 +3280,7 @@
 						<MediaRef Id="963053543"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1251528829" Name="Slomo____PLAY" DurationType="OneShot" DurationMin="10.129691" DurationMax="10.129691">
-					<MediaRefs>
-						<MediaRef Id="729477149"/>
-						<MediaRef Id="765488241"/>
-					</MediaRefs>
-				</Event>
+				<Event Id="1251528829" Name="Slomo____PLAY" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1921985385" Name="SoulFormSplashScreen____PLAY" DurationType="OneShot" DurationMin="7.549104" DurationMax="7.549104">
 					<MediaRefs>
 						<MediaRef Id="113834660"/>
@@ -3317,5 +3323,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{42D928E6-25D8-D227-FCA0-710DB23E11F6}</FileHash>
+	<FileHash>{FAF70C1D-0F03-0C4A-1F3B-C80BA29FD8D3}</FileHash>
 </SoundBanksInfo>

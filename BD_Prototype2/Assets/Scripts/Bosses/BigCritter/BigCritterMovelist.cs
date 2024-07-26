@@ -1,3 +1,5 @@
+using AK.Wwise;
+using BulletDance.Audio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +10,8 @@ public class BigCritterMovelist : Movelist
 
     //for SHOOTING
     private List<BulletBag.BulletTypes> bulletPrefabs = new List<BulletBag.BulletTypes>();
+
+    public AK.Wwise.Event landingSFX, jumpSFX;
 
     //For ActionOne
     public Transform singleShot;
@@ -160,6 +164,8 @@ public class BigCritterMovelist : Movelist
         //print("JumpOutOftheScreennnnnnnnnn");
         _jumpTime = startJumpTime;
         _animHandler.SpecialStart(49);
+
+        jumpSFX.Post(gameObject);
     }
 
     private void JumpOutOftheScreenWithCircleShot()
@@ -194,6 +200,8 @@ public class BigCritterMovelist : Movelist
 
         _jumpTime = startJumpTime;
         _animHandler.SpecialStart(48);
+
+        landingSFX.Post(gameObject);
     }
 
     private void SpawnSmallCritter()
