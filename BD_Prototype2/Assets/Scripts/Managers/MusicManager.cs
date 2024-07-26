@@ -172,7 +172,6 @@ public class MusicManager : MonoBehaviour
             totalDelay += delay;
                 
             lastFrameTime = Time.timeAsDouble;
-            //print("skip unitycheck " + totalDelay);
 
             int f = (int)(totalDelay / frameDuration);
 
@@ -395,42 +394,6 @@ public class MusicManager : MonoBehaviour
             return;
         }
 
-
-        //FPS CHECK
-        int supposedFrames = (int)framesPerBeat * sequenceDuration;
-        //print("aaa framecount " + frames + " should have been " + supposedFrames);
-        if (frames < supposedFrames *0.9f)
-        {
-            //print("aaa warning fps is too low you should switch");
-
-            double consider = frames / (secondsPerBeat * sequenceDuration);
-            //print("aaa consider " + consider);
-
-            double b = _currentSequence.bpm * 2.0 / 60.0;
-            double c = 0;
-
-            for (int i = 1; i < 11; i++)
-            {
-                c = b * i;
-                if (c == (int)c)
-                {
-                    //print("aaa c " + c);
-                    break;
-                }
-            }
-
-            double m = consider % c;
-            //print("aaa m " + m);
-
-            consider -= m;
-            //print("aaa consider " + consider);
-
-        }
-
-
-        
-
-
         if (_currentSequence.replayInSameSequence == false)
         {
             if (_currentSong != null && _currentSequence.keepPlayingOnSwitch == false)
@@ -528,6 +491,8 @@ public class MusicManager : MonoBehaviour
 
     private void SetNextFPS()
     {
+
+
         secondsPerBeat = 60.0 / (_nextSequence.bpm * 2);
 
         double lowestFPS = 0.5;
