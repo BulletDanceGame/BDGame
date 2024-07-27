@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="690988688" Type="User" Language="SFX" Hash="{A106E55C-5A37-8433-F5EA-72346833169E}">
+		<SoundBank Id="690988688" Type="User" Language="SFX" Hash="{BA4F782C-D0CC-1493-9EF4-73C2D913AF57}">
 			<ShortName>Music_Critter_Phase2</ShortName>
 			<Path>Music_Critter_Phase2.bnk</Path>
 			<Media>
@@ -24,6 +24,14 @@
 				<File Id="173272374" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Critter Phase 2 - Part 3.wav</ShortName>
 					<CachePath>SFX/Critter Phase 2 - Part 3_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="557558734" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Critter Outro.wav</ShortName>
+					<CachePath>SFX/Critter Outro_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="588285109" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>score screen - critter (no music).wav</ShortName>
+					<CachePath>SFX/score screen - critter (no music)_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="726920089" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Critter Phase 2 - Part 4.wav</ShortName>
@@ -67,6 +75,12 @@
 				<Event Id="2016799275" Name="Play_Critter_Phase_2___Part_4" DurationType="OneShot" DurationMin="33.206295" DurationMax="33.206295">
 					<MediaRefs>
 						<MediaRef Id="726920089"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3597802153" Name="Play_Outro___Critter" DurationType="OneShot" DurationMin="15.1875" DurationMax="15.1875">
+					<MediaRefs>
+						<MediaRef Id="557558734"/>
+						<MediaRef Id="588285109"/>
 					</MediaRefs>
 				</Event>
 			</Events>
@@ -1941,7 +1955,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{A267C6A8-EBC7-BF86-4F45-D8AB41D0C1E1}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{BD4361B8-6905-0957-9DDF-FF431DD0F929}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -3413,5 +3427,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5E33157F-648C-DF09-CEF2-238C61337066}</FileHash>
+	<FileHash>{3BAC127B-3E99-C292-967A-9906A842DC44}</FileHash>
 </SoundBanksInfo>

@@ -203,6 +203,7 @@ namespace AK
         static const AkUniqueID PLAY_MOVING_TO_THE_SIDE = 2755497806U;
         static const AkUniqueID PLAY_NAVCONFIRM = 2952062683U;
         static const AkUniqueID PLAY_NAVUPDOWN = 3540793454U;
+        static const AkUniqueID PLAY_OUTRO___CRITTER = 3597802153U;
         static const AkUniqueID PLAY_PAUSE_MUSIC = 1496939652U;
         static const AkUniqueID PLAY_PICKUPSFX = 3043903975U;
         static const AkUniqueID PLAY_STARTGAME = 1444205428U;
