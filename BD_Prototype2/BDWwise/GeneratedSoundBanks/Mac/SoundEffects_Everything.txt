@@ -67,6 +67,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2939368849	DeflectionSwing__Perfect____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\2 Player\Swinging n Hitting\DeflectionSwing__Perfect____PLAY	
 	2952062683	Play_NavConfirm			\Default Work Unit\Play_NavConfirm	
 	2953741612	ContainerDrop__InCutscene____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\5 Cutscene SFX\Vs Yokai Huner\ContainerDrop__InCutscene____PLAY	
+	2963349357	Stop_Footsteps			\Default Work Unit\Stop_Footsteps	
 	2968776031	Player__MythicalCreatures____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\5 Cutscene SFX\Vs Yokai Huner\Voicelines\Intro\Player__MythicalCreatures____PLAY	
 	2991234256	Player__GotMyAttention____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\5 Cutscene SFX\Vs Yokai Huner\Voicelines\Phase 2 to 3\Player__GotMyAttention____PLAY	
 	3031745690	LastBulletImpact__OfFight____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\3 Boss & Enemy\Boss 1 - Yokai Hunter\Damage\LastBulletImpact__OfFight____PLAY	
@@ -81,6 +82,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3724255519	Dash____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\2 Player\Movement\Dash____PLAY	
 	3739785168	Play_Cooldown___cutscene_end			\Default Work Unit\Play_Cooldown___cutscene_end	
 	3845110252	DeflectionHit__FinalHit____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\2 Player\Swinging n Hitting\DeflectionHit__FinalHit____PLAY	
+	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
 	3937135454	Play_ButtonDeflectHit			\Default Work Unit\ButtonSFX\Play_ButtonDeflectHit	
 	3960404151	Play_ForestAmb			\Default Work Unit\Play_ForestAmb	
 	3967082494	Boss__YouMongrels____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\5 Cutscene SFX\Vs Yokai Huner\Voicelines\Phase 1 to 2\Boss__YouMongrels____PLAY	
@@ -115,14 +117,16 @@ State	ID	Name	State Group			Notes
 	3550808449	high	Hurt			
 
 Custom State	ID	Name	State Group	Owner		Notes
-	54800246	Menu	Level	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\RunningSteps\RunningSteps-Facility		
-	72233035	CritterBoss	Level	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\RunningSteps\RunningSteps-Facility		
+	54800246	Menu	Level	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\Footsteps\RunningSteps-Facility		
+	72233035	CritterBoss	Level	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\Footsteps\RunningSteps-Facility		
 	84027029	Third	FailLevel	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Actions - Dynamic\DeflectionSwing - Miss		
 	325401801	Menu	Level	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\RunningLastStep\RunningLastStep-Facility		
 	363340864	Third	FailLevel	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\Missed Dash		
 	469410553	Tutorial	Level	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\RunningLastStep\RunningLastStep-Facility		
 	549022078	Third	FailLevel	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Actions - Dynamic\DeflectionHit - Miss		
-	1011375796	Tutorial	Level	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\RunningSteps\RunningSteps-Facility		
+	783862388	Menu	Level	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\Footsteps\RunningSteps-Forest		
+	964382369	YokaiHunterBoss	Level	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\Footsteps\RunningSteps-Forest		
+	1011375796	Tutorial	Level	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\Footsteps\RunningSteps-Facility		
 	1067401290	CritterBoss	Level	\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\RunningLastStep\RunningLastStep-Facility		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes

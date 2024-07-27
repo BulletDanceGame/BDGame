@@ -18,6 +18,7 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
     public class PlayerSounds : SoundContainer
     {
         int fails = 0;
+        bool _isPlayerMoving = false;
 
 
         // -- Event Hooks & sound initialization -- //
@@ -78,6 +79,7 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
         void Update()
         {
             HitPitchUpdate();
+            print("movement: " + _isPlayerMoving);
         }
 
 
@@ -132,11 +134,11 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
             //reset slo mo rtpcs
         }
 
-
-        bool _isPlayerMoving = false;
+        private uint footstepSoundID;
         void PlayFootsteps(int none)
         {
-            if(_isPlayerMoving) PlaySFX("Footstep");
+            if(_isPlayerMoving)
+                footstepSoundID = AkSoundEngine.PostEvent("Play_Footsteps", gameObject);
         }
 
         void StartFootstep(Vector2 none)
@@ -146,7 +148,8 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
 
         void StopFootstep()
         {
-            PlaySFX("Last Footstep");      
+            PlaySFX("Last Footstep");
+            footstepSoundID = AkSoundEngine.PostEvent("Stop_Footsteps", gameObject);
             _isPlayerMoving = false;
         }
 

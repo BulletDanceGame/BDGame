@@ -145,6 +145,7 @@ namespace AK
         static const AkUniqueID PLAY_ENV1_VEGZONE_OUTRO_PART1 = 586328000U;
         static const AkUniqueID PLAY_ENV1_VEGZONE_OUTROLOOP = 176035467U;
         static const AkUniqueID PLAY_FIRSTTURRET___TURN_ON_AND_ALERT = 2754371527U;
+        static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_FORESTAMB = 3960404151U;
         static const AkUniqueID PLAY_JUMP = 3689126666U;
         static const AkUniqueID PLAY_LANDING = 2323405115U;
@@ -243,6 +244,7 @@ namespace AK
         static const AkUniqueID SOULFORMSPLASHSCREEN____PLAY = 1921985385U;
         static const AkUniqueID SPEEDUPCUTSCENE____PLAY = 2251819479U;
         static const AkUniqueID STOP_ENV1_VEGZONE_OUTROLOOP = 177105241U;
+        static const AkUniqueID STOP_FOOTSTEPS = 2963349357U;
         static const AkUniqueID STOP_FORESTAMB = 2168881957U;
         static const AkUniqueID TRAILERAUDIO____PLAY = 1814921978U;
         static const AkUniqueID TRAINING_GROUND__BATROOM__PART1____PLAY = 2693353997U;

@@ -10645,7 +10645,14 @@
 										</Sound>
 									</ChildrenList>
 								</BlendContainer>
-								<BlendContainer Name="RunningSteps" ID="{F1D62CCE-9943-4E23-9E83-BFB4DD354C7F}" ShortID="197917109">
+								<BlendContainer Name="Footsteps" ID="{F1D62CCE-9943-4E23-9E83-BFB4DD354C7F}" ShortID="197917109">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -10669,6 +10676,11 @@
 												</Property>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismResetPlaylistEachPlay" Type="bool" Value="False"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>12</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -11308,6 +11320,13 @@
 									</ChildrenList>
 								</BlendContainer>
 								<BlendContainer Name="RunningLastStep" ID="{D2A5B120-E55D-40D7-9E96-81BE6C88F255}" ShortID="338509554">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -11335,6 +11354,11 @@
 													</ValueList>
 												</Property>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>12</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">

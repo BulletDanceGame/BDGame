@@ -1259,7 +1259,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{5DC324ED-1D3F-590D-BF89-A5285364223A}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{76C7F12A-3EB8-EEE3-1F3B-8E53A202E46A}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1941,7 +1941,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{668BA81D-7762-7E47-6B4D-6275D5640750}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{A267C6A8-EBC7-BF86-4F45-D8AB41D0C1E1}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -3089,6 +3089,22 @@
 						<MediaRef Id="675450540"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3854155799" Name="Play_Footsteps" DurationType="OneShot" DurationMin="1.6040568" DurationMax="2.1437678">
+					<MediaRefs>
+						<MediaRef Id="195473402"/>
+						<MediaRef Id="523274200"/>
+						<MediaRef Id="531249273"/>
+						<MediaRef Id="541284767"/>
+						<MediaRef Id="557266761"/>
+						<MediaRef Id="621649171"/>
+						<MediaRef Id="784747536"/>
+						<MediaRef Id="850835769"/>
+						<MediaRef Id="868850914"/>
+						<MediaRef Id="904657075"/>
+						<MediaRef Id="946656098"/>
+						<MediaRef Id="963053543"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3960404151" Name="Play_ForestAmb" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="170088987"/>
@@ -3365,6 +3381,7 @@
 						<MediaRef Id="685776673"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2963349357" Name="Stop_Footsteps" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2168881957" Name="Stop_ForestAmb" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="835218174" Name="Voice__Player____PLAY" DurationType="OneShot" DurationMin="0.0410625" DurationMax="0.0410625">
 					<MediaRefs>
@@ -3396,5 +3413,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{04A56476-69EF-6B27-095F-CBAD7E35FA26}</FileHash>
+	<FileHash>{5E33157F-648C-DF09-CEF2-238C61337066}</FileHash>
 </SoundBanksInfo>
