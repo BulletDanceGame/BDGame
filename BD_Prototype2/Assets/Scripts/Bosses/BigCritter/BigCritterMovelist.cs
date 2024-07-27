@@ -13,6 +13,8 @@ public class BigCritterMovelist : Movelist
 
     public AK.Wwise.Event landingSFX, jumpSFX;
 
+    [SerializeField] private Collider2D _collider;
+
     //For ActionOne
     public Transform singleShot;
 
@@ -150,6 +152,7 @@ public class BigCritterMovelist : Movelist
         _jumpTime = startJumpTime;
         _animHandler.SpecialStart(47);
 
+        _collider.enabled = false;
     }
 
     private void LowLand()
@@ -159,6 +162,7 @@ public class BigCritterMovelist : Movelist
         _jumpTime = startJumpTime;
         _animHandler.SpecialStart(46);
 
+        _collider.enabled = true;
     }
 
     private void JumpOutOftheScreen()
@@ -169,6 +173,9 @@ public class BigCritterMovelist : Movelist
         _animHandler.SpecialStart(49);
 
         jumpSFX.Post(gameObject);
+
+
+        _collider.enabled = false;
     }
 
     private void JumpOutOftheScreenWithCircleShot()
@@ -178,6 +185,9 @@ public class BigCritterMovelist : Movelist
         _jumpTime = startJumpTime;
         _animHandler.SpecialStart(49);
         CircleShot();
+
+
+        _collider.enabled = false;
     }
     private void HighJumpHover()
     {
@@ -186,6 +196,9 @@ public class BigCritterMovelist : Movelist
 
         _jumpTime = startJumpTime;
         //_animHandler.SpecialStart(45);
+
+
+        _collider.enabled = false;
     }
 
     private void LowJumpHover()
@@ -194,6 +207,8 @@ public class BigCritterMovelist : Movelist
 
         _jumpTime = startJumpTime;
         //_animHandler.SpecialStart(44);
+
+        _collider.enabled = false;
     }
 
     private void HighLand()
@@ -205,6 +220,8 @@ public class BigCritterMovelist : Movelist
         _animHandler.SpecialStart(48);
 
         landingSFX.Post(gameObject);
+
+        _collider.enabled = true;
     }
 
     private void SpawnSmallCritter()

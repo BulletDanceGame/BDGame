@@ -12,14 +12,21 @@ public class OnSceneLoaded : MonoBehaviour
 
     private void Start()
     {
-        if (SaveSystem.Instance.GetData().hasplayed1stcutscene)
+        if (cutscene1trigger)
         {
-            cutscene1trigger.SetActive(false);
+            if (SaveSystem.Instance.GetData().hasplayed1stcutscene)
+            {
+                cutscene1trigger.SetActive(false);
+            }
         }
-        if (SaveSystem.Instance.GetData().hasplayed1stcutscene)
+        if (cutscene2trigger)
         {
-            cutscene2trigger.SetActive(false);
+            if (SaveSystem.Instance.GetData().hasplayed1stcutscene)
+            {
+                cutscene2trigger.SetActive(false);
+            }
         }
+        
         SaveSystem.Instance.GetData().currentLevel = SceneManager.GetActiveScene().buildIndex;
         print("SAVED THE CURRENT LEVEL: " + SaveSystem.Instance.GetData().currentLevel);
         SaveSystem.Instance.Save();

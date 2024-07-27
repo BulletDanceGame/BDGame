@@ -6,9 +6,18 @@ public class Shooting : MonoBehaviour
 
     public static void ShootInDirection(Transform shootingPattern, List<BulletBag.BulletTypes> bulletPrefabs)
     {
+        BulletBag.BulletTypes type = BulletBag.BulletTypes.normal;
+
         for (int i = 0; i < shootingPattern.childCount; i++)
         {
-            GameObject bullet = BulletBag.instance.FindBullet(bulletPrefabs[i]);
+            if (i < bulletPrefabs.Count)
+            {
+                type = bulletPrefabs[i];
+            }
+            //else use the last type
+
+
+            GameObject bullet = BulletBag.instance.FindBullet(type);
             if (bullet == null)
             {
                 continue;

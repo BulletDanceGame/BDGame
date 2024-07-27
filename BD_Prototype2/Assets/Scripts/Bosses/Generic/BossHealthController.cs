@@ -30,6 +30,8 @@ public class BossHealthController : MonoBehaviour
     private int _bulletsHit = 0;
     private bool _isActive;
 
+    [SerializeField] private bool _pushBackPlayer;
+
     [Space] [SerializeField]
     private int debugDamage = 20;
 
@@ -105,6 +107,19 @@ public class BossHealthController : MonoBehaviour
         //if(collision.gameObject.tag != "DeflectedBullet")// && 
         //   //collision.gameObject.tag != "PerfectBullet")
         //    return;
+
+
+        if (_pushBackPlayer)
+        {
+            if (collision.CompareTag("Player"))
+            {
+                EventManager.Instance.PlayerDamage(20);
+                EventManager.Instance.PlayerPushBack(transform.position);
+                ScoreManager.Instance.GotHit++;
+            }
+        }
+        
+
 
         if (collision.GetComponent<Bullet>() == null) { return; }
 
