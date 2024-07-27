@@ -176,7 +176,9 @@ public class BossHealthController : MonoBehaviour
         // -- Phase change -- //
         if(currentPhaseHealth > 0f) return;   //Escape if health > 0
 
-        EventManager.Instance.BossEndPhaseHit(isLastPhase);
+        print("deactivate " + isLastPhase + " - " + currentPhase);
+        bool fuckoff = isLastPhase;
+        EventManager.Instance.BossEndPhaseHit(fuckoff);
         EventManager.Instance.BossPhaseChange();
         if(isDead) 
         {
