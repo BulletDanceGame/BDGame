@@ -403,12 +403,13 @@ MonoBehaviour:
   circleShot: {fileID: 0}
   stopAndShootRadius: 12
   stopAndShootDuration: 1
-  Speed: 8.04
+  Speed: 4
   _distanceFromWall: 0
   _startRadius: 0
   JumpTime: 0
   JumpSpeed: 0
-  Shadow: {fileID: 0}
+  _pushbackDuration: 0
+  _pushbackSpeed: 0
 --- !u!114 &8204829669766990728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,62 +516,62 @@ MonoBehaviour:
       idInternal: 0
       valueGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: df7cf0e5d35f8c146b932ad200786733, type: 2}
-    duration: 32
+    duration: 136
     sheet:
     - barNr: 1
       notes:
       - functionName: NormalShot
         color: {r: 0, g: 0, b: 0, a: 1}
-        playerRhythm: 0
-        bullets: 00000000
+        forPlayer: 0
+        bullets: 01000000
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: NormalShot
-        color: {r: 0, g: 0, b: 0, a: 1}
-        playerRhythm: 0
+        color: {r: 0.6886792, g: 0.61504686, b: 0.61504686, a: 1}
+        forPlayer: 0
         bullets: 00000000
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
@@ -579,56 +580,56 @@ MonoBehaviour:
       notes:
       - functionName: NormalShot
         color: {r: 0, g: 0, b: 0, a: 1}
-        playerRhythm: 0
-        bullets: 00000000
+        forPlayer: 0
+        bullets: 01000000
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: NormalShot
         color: {r: 0, g: 0, b: 0, a: 1}
-        playerRhythm: 0
-        bullets: 00000000
+        forPlayer: 0
+        bullets: 01000000
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
@@ -637,56 +638,56 @@ MonoBehaviour:
       notes:
       - functionName: NormalShot
         color: {r: 0, g: 0, b: 0, a: 1}
-        playerRhythm: 0
-        bullets: 00000000
+        forPlayer: 0
+        bullets: 01000000
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: NormalShot
-        color: {r: 0, g: 0, b: 0, a: 1}
-        playerRhythm: 0
+        color: {r: 0.6886792, g: 0.61504686, b: 0.61504686, a: 1}
+        forPlayer: 0
         bullets: 00000000
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
@@ -695,56 +696,810 @@ MonoBehaviour:
       notes:
       - functionName: NormalShot
         color: {r: 0, g: 0, b: 0, a: 1}
-        playerRhythm: 0
-        bullets: 00000000
+        forPlayer: 0
+        bullets: 01000000
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: NormalShot
         color: {r: 0, g: 0, b: 0, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
+        bullets: 01000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 5
+      notes:
+      - functionName: NormalShot
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 01000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: NormalShot
+        color: {r: 0.6886792, g: 0.61504686, b: 0.61504686, a: 1}
+        forPlayer: 0
         bullets: 00000000
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
         specifiedMovelists: []
       - functionName: ' - '
         color: {r: 1, g: 1, b: 1, a: 1}
-        playerRhythm: 0
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 6
+      notes:
+      - functionName: NormalShot
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 01000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: NormalShot
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 01000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 7
+      notes:
+      - functionName: NormalShot
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 01000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: NormalShot
+        color: {r: 0.6886792, g: 0.61504686, b: 0.61504686, a: 1}
+        forPlayer: 0
+        bullets: 00000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 8
+      notes:
+      - functionName: NormalShot
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 01000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: NormalShot
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 01000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 9
+      notes:
+      - functionName: NormalShot
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 01000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: NormalShot
+        color: {r: 0.6886792, g: 0.61504686, b: 0.61504686, a: 1}
+        forPlayer: 0
+        bullets: 00000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 10
+      notes:
+      - functionName: NormalShot
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 01000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: NormalShot
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 01000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 11
+      notes:
+      - functionName: NormalShot
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 01000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: NormalShot
+        color: {r: 0.6886792, g: 0.61504686, b: 0.61504686, a: 1}
+        forPlayer: 0
+        bullets: 00000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 12
+      notes:
+      - functionName: NormalShot
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 01000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: NormalShot
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 01000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 13
+      notes:
+      - functionName: NormalShot
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 01000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: NormalShot
+        color: {r: 0.6886792, g: 0.61504686, b: 0.61504686, a: 1}
+        forPlayer: 0
+        bullets: 00000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 14
+      notes:
+      - functionName: NormalShot
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 01000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: NormalShot
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 01000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 15
+      notes:
+      - functionName: NormalShot
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 01000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: NormalShot
+        color: {r: 0.6886792, g: 0.61504686, b: 0.61504686, a: 1}
+        forPlayer: 0
+        bullets: 00000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 16
+      notes:
+      - functionName: NormalShot
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 01000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: NormalShot
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 01000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+    - barNr: 17
+      notes:
+      - functionName: NormalShot
+        color: {r: 0, g: 0, b: 0, a: 1}
+        forPlayer: 0
+        bullets: 01000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: NormalShot
+        color: {r: 0.6886792, g: 0.61504686, b: 0.61504686, a: 1}
+        forPlayer: 0
+        bullets: 00000000
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
+        bullets: 
+        movelistsToTrigger: 0
+        amountToRandomizeBetween: 0
+        specifiedMovelists: []
+      - functionName: ' - '
+        color: {r: 1, g: 1, b: 1, a: 1}
+        forPlayer: 0
         bullets: 
         movelistsToTrigger: 0
         amountToRandomizeBetween: 0
@@ -752,7 +1507,7 @@ MonoBehaviour:
     infoNote:
       functionName: 
       color: {r: 0, g: 0, b: 0, a: 0}
-      playerRhythm: 0
+      forPlayer: 0
       bullets: 
       movelistsToTrigger: 0
       amountToRandomizeBetween: 0
@@ -823,7 +1578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _droppedItems:
   - droppedItemType: {fileID: 5934777975941058473, guid: 9d503fd37e85ff24bad1b515813b417d, type: 3}
-    randomObjectAmountMin: 1
+    randomObjectAmountMin: 0
     randomObjectAmountMax: 1
   - droppedItemType: {fileID: 0}
     randomObjectAmountMin: 0

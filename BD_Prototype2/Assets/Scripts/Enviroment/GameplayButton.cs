@@ -57,7 +57,7 @@ public class GameplayButton : MonoBehaviour
     {
         if (!_isPressable) return;
 
-        walkButtonSFX.Post(gameObject);
+        //walkButtonSFX.Post(gameObject);
         GetComponentInChildren<Animator>().Play("Activate");
         _isPressable = false;
 

@@ -113,7 +113,7 @@ public class BossHealthController : MonoBehaviour
         {
             if (collision.CompareTag("Player"))
             {
-                EventManager.Instance.PlayerDamage(20);
+                EventManager.Instance.PlayerDamage(10);
                 EventManager.Instance.PlayerPushBack(transform.position);
                 ScoreManager.Instance.GotHit++;
             }
