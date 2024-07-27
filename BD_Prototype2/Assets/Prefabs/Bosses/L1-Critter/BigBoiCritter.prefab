@@ -911,6 +911,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isActiveOnStart: 0
+  landingSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  jumpSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _collider: {fileID: 0}
   singleShot: {fileID: 0}
   circleShot: {fileID: 4305846022897930462}
   circleShotRotated: {fileID: 5320366040781724541}
@@ -6846,6 +6855,7 @@ MonoBehaviour:
     hideUI: 0
     UIColor: {r: 1, g: 0.40311366, b: 0.2865789, a: 1}
   _maxHits: 2
+  _pushBackPlayer: 0
   debugDamage: 20
 --- !u!50 &6538194245475852915
 Rigidbody2D:

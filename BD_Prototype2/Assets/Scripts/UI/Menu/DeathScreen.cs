@@ -85,7 +85,9 @@ public class DeathScreen : MonoBehaviour
 
     void SetUIImage()
     {
-        var _imageSet = _bosses[_currentBoss].images[_currentPhase - 1];
+        //There was only one boss in _bosses :))
+        //var _imageSet = _bosses[_currentBoss].images[_currentPhase - 1];
+        var _imageSet = _bosses[0].images[_currentPhase - 1];
         _image.sprite = _imageSet.image;
         _imageTrf.pivot = _imageSet.pivot;
         _imageTrf.sizeDelta = _imageSet.imageSize;
@@ -94,7 +96,8 @@ public class DeathScreen : MonoBehaviour
 
     void SetUIColorSet()
     {
-        var _colorSet = _bosses[_currentBoss].phaseColor[_currentPhase - 1];
+        var _colorSet = _bosses[0].phaseColor[_currentPhase - 1];
+        //var _colorSet = _bosses[_currentBoss].phaseColor[_currentPhase - 1];
         _gameOverTxt.color = _colorSet.gameOverColor;
         _restartTxt.color  = _colorSet.textColor;  //SHIT DOESNT WORK FUCKING BITCH
 

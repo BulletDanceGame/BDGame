@@ -17,7 +17,12 @@ public class BossEndPhaseHit : MonoBehaviour
 
     void EndPhaseHit(bool isLastPhase)
     {
-        EventManager.Instance.DeactivateBoss();
+        if (isLastPhase)
+        {
+            EventManager.Instance.DeactivateBoss();
+
+        }
+
 
         ScreenShake.Instance.ShakeCamera(20f, 2f);
 

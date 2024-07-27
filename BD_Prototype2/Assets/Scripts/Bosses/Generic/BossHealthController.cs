@@ -30,6 +30,8 @@ public class BossHealthController : MonoBehaviour
     private int _bulletsHit = 0;
     private bool _isActive;
 
+    [SerializeField] private bool _pushBackPlayer;
+
     [Space] [SerializeField]
     private int debugDamage = 20;
 
@@ -106,6 +108,19 @@ public class BossHealthController : MonoBehaviour
         //   //collision.gameObject.tag != "PerfectBullet")
         //    return;
 
+
+        if (_pushBackPlayer)
+        {
+            if (collision.CompareTag("Player"))
+            {
+                EventManager.Instance.PlayerDamage(20);
+                EventManager.Instance.PlayerPushBack(transform.position);
+                ScoreManager.Instance.GotHit++;
+            }
+        }
+        
+
+
         if (collision.GetComponent<Bullet>() == null) { return; }
 
         Bullet bullet = collision.GetComponent<Bullet>(); //Replacing GetComponent() with Bullet var
@@ -161,7 +176,9 @@ public class BossHealthController : MonoBehaviour
         // -- Phase change -- //
         if(currentPhaseHealth > 0f) return;   //Escape if health > 0
 
-        EventManager.Instance.BossEndPhaseHit(isLastPhase);
+        print("deactivate " + isLastPhase + " - " + currentPhase);
+        bool fuckoff = isLastPhase;
+        EventManager.Instance.BossEndPhaseHit(fuckoff);
         EventManager.Instance.BossPhaseChange();
         if(isDead) 
         {
