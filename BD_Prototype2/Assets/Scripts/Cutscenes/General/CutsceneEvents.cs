@@ -19,6 +19,25 @@ namespace BulletDance.Cutscene
         }
 
 
+        public void CS_DeactivateAllMoveLists()
+        {
+            var foundMoveLists = FindObjectsOfType<Movelist>();
+            foreach(var movelist in foundMoveLists)
+            {
+                movelist.Deactivate();
+            }
+        }
+
+        public void CS_ActivateAllMoveLists()
+        {
+            var foundMoveLists = FindObjectsOfType<Movelist>();
+            foreach(var movelist in foundMoveLists)
+            {
+                movelist.Activate();
+            }
+        }
+
+
         //General Cutscene events - Putting cs initials to find in methods list faster
 
         //Input
