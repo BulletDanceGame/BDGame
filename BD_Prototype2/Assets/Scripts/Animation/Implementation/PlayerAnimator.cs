@@ -315,22 +315,29 @@ public class PlayerAnimator : UnitAnimator
     public override void EnableAnimUpdate(bool enable)
     {
         base.EnableAnimUpdate(enable);
-        //if(!enable) Animate((int)AnimAction.Idle);
+        if(!enable) 
+        {
+            Debug.Log("Animate Idle");
+            Animate((int)AnimAction.Idle);
+        }
     }
 
     [ExecuteAlways]
     protected override void Animate(int actionState)
     {
+        Debug.Log("Animate actionState " + actionState);
         base.Animate(actionState);
         
         float isWalkState = actionState == (int)AnimAction.Walk ? 1 : 0;
         _spriteAnimator?.SetLayerWeight("Sprite Walk", isWalkState);
         //_spriteAnimator?.SetLayerWeight("Hair Walk",   isWalkState);
+        Debug.Log("Animate isWalkState " + isWalkState);
         
         float isActState  = actionState == (int)AnimAction.Dash || actionState == (int)AnimAction.Attack ?
                             1 : 0;
         _spriteAnimator?.SetLayerWeight("Sprite Act", isActState);
         //_spriteAnimator?.SetLayerWeight("Hair Act",   isActState);
+        Debug.Log("Animate isActState " + isActState);
     }
 
     void FreezeFrame(BeatTiming none)
