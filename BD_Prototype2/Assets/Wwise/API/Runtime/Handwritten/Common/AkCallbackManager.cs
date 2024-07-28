@@ -403,6 +403,11 @@ public static class AkCallbackManager
 							UnityEngine.Debug.LogError("WwiseUnity: BankCallbackPackage not found for <" + pPackage + ">.");
 							break;
 						}
+						else
+						{
+
+                            UnityEngine.Debug.LogError("WwiseUnity: BankCallbackPackage FOUND for <" + pPackage + ">.");
+                        }
 
 						m_mapBankCallbacks.Remove((int) pPackage);
 
