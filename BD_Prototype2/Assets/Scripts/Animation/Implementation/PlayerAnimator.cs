@@ -170,11 +170,11 @@ public class PlayerAnimator : UnitAnimator
             return;
         }
 
-        if(!_continueAnimation)
-        {
-            Debug.LogWarning("Unit animator is turned off");
-            return;
-        }
+        //if(!_continueAnimation)
+        //{
+        //    Debug.LogWarning("Unit animator is turned off");
+        //    return;
+        //}
 
         Vector3 direction = _rbd.velocity;
 
