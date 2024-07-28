@@ -222,9 +222,14 @@ namespace BulletDance.Cutscene
             characterAnim?.AnimState(0);
         }
 
+        protected Rigidbody2D rbd = null;
         protected virtual void Move()
         {
-            characterAnim.transform.parent.position += new Vector3(moveVelocity.x, moveVelocity.y, 0);
+            if(rbd == null)
+                rbd = characterAnim.transform.parent.GetComponentInChildren<Rigidbody2D>();
+
+            if(rbd != null)
+                rbd.velocity = moveVelocity;
         }
     }
 
