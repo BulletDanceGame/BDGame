@@ -15,6 +15,7 @@ public class CalibrationMenu : MonoBehaviour
 
 
 
+    //also called from button
     public void ActivateScreen(int i)
     {
         _screens[_currentScreen].SetActive(false);
@@ -30,21 +31,18 @@ public class CalibrationMenu : MonoBehaviour
         //}
     }
 
+    //also called from button
     public void Done()
     {
 
-        _screens[_currentScreen].SetActive(false);
-        _buttons[_currentScreen].color = new Color(1f, 1f, 1f, 0.5f);
-        _screens[0].SetActive(true);
-        _buttons[0].color = Color.white;
-        _currentScreen = 0;
-
+        ActivateScreen(0);
 
         SaveSystem.Instance.Save();
 
         menu.BackFromCalibration();
     }
 
+    //also called from button
     public void SwitchScreen(int i)
     {
         if (_currentScreen + i < 0)
@@ -55,22 +53,11 @@ public class CalibrationMenu : MonoBehaviour
         }
         else if (_currentScreen + i >= _screens.Length)
         {
-            SaveSystem.Instance.Save();
-
-            _screens[_currentScreen].SetActive(false);
-            _buttons[_currentScreen].color = new Color(1f, 1f, 1f, 0.5f);
-            _screens[0].SetActive(true);
-            _buttons[0].color = Color.white;
-            _currentScreen = 0;
-            menu.BackFromCalibration();
+            Done();
         }
         else
         {
-            _screens[_currentScreen].SetActive(false);
-            _buttons[_currentScreen].color = new Color(1f, 1f, 1f, 0.5f);
-            _currentScreen += i;
-            _screens[_currentScreen].SetActive(true);
-            _buttons[_currentScreen].color = Color.white;
+            ActivateScreen(_currentScreen+i);
 
             if (MainMenu.currentController == ControllerType.GAMEPAD)
             {
