@@ -109,7 +109,7 @@ public class PlayerAnimator : UnitAnimator
     {
         if(!_continueAnimation)
         {
-            Debug.Log("Unit animator is turned off");
+            //Debug.Log("Unit animator is turned off");
             return;
         }
 
@@ -170,11 +170,11 @@ public class PlayerAnimator : UnitAnimator
             return;
         }
 
-        //if(!_continueAnimation)
-        //{
-        //    Debug.LogWarning("Unit animator is turned off");
-        //    return;
-        //}
+        if(!_continueAnimation)
+        {
+            Debug.LogWarning("Unit animator is turned off");
+            return;
+        }
 
         Vector3 direction = _rbd.velocity;
 
@@ -315,7 +315,7 @@ public class PlayerAnimator : UnitAnimator
     public override void EnableAnimUpdate(bool enable)
     {
         base.EnableAnimUpdate(enable);
-        if(!enable) Animate((int)AnimAction.Idle);
+        //if(!enable) Animate((int)AnimAction.Idle);
     }
 
     [ExecuteAlways]
