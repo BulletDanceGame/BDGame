@@ -55,7 +55,7 @@ public class PlayerTriggerBox : MonoBehaviour
         if (_isImmune) return;
 
         if(player == null)
-            player = UnitManager.Instance.GetPlayer().GetComponent<Player>();
+            player = UnitManager.Instance?.GetPlayer()?.GetComponent<Player>();
 
         if (collision.gameObject.tag == "Bullet")
         {
