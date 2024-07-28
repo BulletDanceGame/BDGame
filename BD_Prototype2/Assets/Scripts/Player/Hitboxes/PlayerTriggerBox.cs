@@ -66,6 +66,7 @@ public class PlayerTriggerBox : MonoBehaviour
         }
         else if (collision.gameObject.tag=="FireTrail")
         {
+            _blackFire = false;
             _isBurning = true;
             _burnTracker = 0;
         }
@@ -80,34 +81,27 @@ public class PlayerTriggerBox : MonoBehaviour
 
     void BurnDamage(int beat)
     {
-        if (_isImmune) return;
-
+        if (_isImmune)  return;
+        if(!_isBurning) return;
 
         if (beat % 2 != 0)
             return;
 
-        if (_isBurning&&!_blackFire)
+        if (!_blackFire)
         {
             if (player.currentHealth >= 2)
-            {
                 EventManager.Instance.PlayerDamage(1);
-                //GetComponentInParent<Player>().TakeDamage(1);
-            }
-
-
-            _burnTracker++;
         }
-        else if(_isBurning && _blackFire)
-        {
+        else if(_blackFire)
             EventManager.Instance.PlayerDamage(1);
-        }
 
-        if (_burnTracker>= _burnBeat)
+        _burnTracker++;
+
+        if (_burnTracker >= _burnBeat)
         {
             _blackFire = false;
             _isBurning = false;
         }
-
 
         EventManager.Instance.PlayerBurn(_isBurning);
     }
