@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public float startingHealth { get; private set; } = 150f;
     [field: SerializeField]
     public float defaultHealAmount { get; private set; } = 50f;
-    public static float currentHealth { get; private set; } = 0f;
+    public float currentHealth { get; private set; } = 0f;
     public bool  isDead        { get { return currentHealth <= 0f; } }
     public float healthRatio   { get { return currentHealth/startingHealth; } }
     public bool  isHealthLower(float ratio) { return currentHealth <= startingHealth * ratio; }
@@ -203,8 +203,7 @@ public class Player : MonoBehaviour
     // -- Player health -- //
     public void Heal(float healAmount)
     {
-        if (currentHealth <= 0)
-            return;
+        if(isDead) return;
 
         if(healAmount <= 0)
             healAmount = defaultHealAmount;
@@ -222,13 +221,11 @@ public class Player : MonoBehaviour
     /// <param name="damage">The ammount of damage the player takes</param>
     public void TakeDamage(float damage)
     {
-        if (currentHealth <= 0)
-            return;
+        if(isDead) return;
 
         currentHealth -= damage;
 
-
-        if (currentHealth <= 0)
+        if(isDead)
             PlayerDeath();
         else
             StartCoroutine(HurtFrames());

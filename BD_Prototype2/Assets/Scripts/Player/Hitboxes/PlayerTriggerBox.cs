@@ -10,8 +10,12 @@ public class PlayerTriggerBox : MonoBehaviour
 
     private bool _blackFire=false;
 
+    private Player player;
+
     private void Start()
     {
+        player = UnitManager.Instance?.GetPlayer()?.GetComponent<Player>();
+
         EventManager.Instance.OnBeat += BurnDamage;
         EventManager.Instance.OnPlayerDamage += NormalHurtFeedback;
         EventManager.Instance.OnPlayerLastHit += ImmuneStart;
@@ -50,8 +54,8 @@ public class PlayerTriggerBox : MonoBehaviour
     {
         if (_isImmune) return;
 
-        
-
+        if(player == null)
+            player = UnitManager.Instance.GetPlayer().GetComponent<Player>();
 
         if (collision.gameObject.tag == "Bullet")
         {
@@ -84,7 +88,7 @@ public class PlayerTriggerBox : MonoBehaviour
 
         if (_isBurning&&!_blackFire)
         {
-            if (Player.currentHealth >= 2)
+            if (player.currentHealth >= 2)
             {
                 EventManager.Instance.PlayerDamage(1);
                 //GetComponentInParent<Player>().TakeDamage(1);
@@ -114,7 +118,7 @@ public class PlayerTriggerBox : MonoBehaviour
         if (_isImmune) return;
 
         if(damage <= 1) return;
-        if(Player.currentHealth <= 0) return;
+        if(player.isDead) return;
 
         _hurtEffect.HurtForPLayer();
     }

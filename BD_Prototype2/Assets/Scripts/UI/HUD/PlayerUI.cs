@@ -8,17 +8,18 @@ public class PlayerUI : MonoBehaviour
 {
     private void OnEnable()
     {
-        Enable();
         if(EventManager.Instance == null) return;
         EventManager.Instance.OnPlayerSpawned    += Enable;
         EventManager.Instance.OnPlayerDeath      += Disable;
+        EventManager.Instance.OnPlayerDamage     += TakeDamage;
+        EventManager.Instance.OnPlayerHeal       += Heal;
         EventManager.Instance.OnCalibrationAlert += Cali;
     }
 
     private void OnDisable()
     {
         if(EventManager.Instance == null) return;
-        EventManager.Instance.OnPlayerSpawned    += Enable;
+        EventManager.Instance.OnPlayerSpawned    -= Enable;
         EventManager.Instance.OnPlayerDeath      -= Disable;
         EventManager.Instance.OnPlayerDamage     -= TakeDamage;
         EventManager.Instance.OnPlayerHeal       -= Heal;
@@ -53,24 +54,19 @@ public class PlayerUI : MonoBehaviour
         player = UnitManager.Instance.GetPlayer().GetComponent<Player>();
 
         _healthBar.SetUpUIBar(player.startingHealth);
-
-        //All of these are dependent on if there is a player
-        if(EventManager.Instance == null) yield break;
-        EventManager.Instance.OnPlayerDamage += TakeDamage;
-        EventManager.Instance.OnPlayerHeal   += Heal;
     }
 
 
     // -- Health -- //
     public void TakeDamage(float damage)
     {
-        if (Player.currentHealth <= 0) return;
+        if(player.isDead) return;
         _healthBar.DecreaseValue(damage);
     }
 
     public void Heal(float healAmount)
     {
-        if (Player.currentHealth <= 0) return;
+        if(player.isDead) return;
         if(healAmount <= 0f) healAmount = player.defaultHealAmount;
         _healthBar.IncreaseValue(healAmount);
     }
