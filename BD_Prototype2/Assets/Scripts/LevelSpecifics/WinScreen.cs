@@ -270,4 +270,10 @@ public class WinScreen : MonoBehaviour
 
         MusicManager.Instance.SwitchMusic(MusicManager.TransitionType.FADE_STOP);
     }
+
+
+    public void HideScreen()
+    {
+        gameObject.SetActive(false);
+    }
 }
