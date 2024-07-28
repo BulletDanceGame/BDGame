@@ -114,4 +114,11 @@ public class DeathScreen : MonoBehaviour
         MusicManager.Instance.SwitchMusic(MusicManager.TransitionType.FADE_STOP);
     }
     
+    public void HideScreen()  // For button event
+    {
+        _canvas.alpha = 0f;
+        _canvas.blocksRaycasts = false;
+        _canvas.interactable = false;
+    }
+    
 }

@@ -48,6 +48,7 @@ public class PauseScreen : MonoBehaviour
         _ui.alpha = 1;
         _ui.interactable = true;
         _ui.blocksRaycasts = true;
+        GetComponentInChildren<UnityEngine.UI.Button>().Select();
 
         _pauseEvent.Post(gameObject);
         _pauseMenuSong.Post(gameObject, (uint)AkCallbackType.AK_MusicSyncExit, MusicCallbacks);

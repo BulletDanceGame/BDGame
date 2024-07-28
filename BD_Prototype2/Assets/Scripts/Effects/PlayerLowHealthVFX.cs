@@ -17,15 +17,17 @@ public class PlayerLowHealthVFX : MonoBehaviour
         _playerRef = UnitManager.Instance.GetPlayer()?.GetComponent<Player>();
 
         if(EventManager.Instance == null) return;
-        EventManager.Instance.OnPlayerDamage += Activate;
-        EventManager.Instance.OnPlayerHeal   += Deactivate;
+        EventManager.Instance.OnPlayerSpawned += Disable;
+        EventManager.Instance.OnPlayerDamage  += Activate;
+        EventManager.Instance.OnPlayerHeal    += Deactivate;
     }
 
     private void OnDestroy()
     {
         if(EventManager.Instance == null) return;
-        EventManager.Instance.OnPlayerDamage -= Activate;
-        EventManager.Instance.OnPlayerHeal   -= Deactivate;
+        EventManager.Instance.OnPlayerSpawned -= Disable;
+        EventManager.Instance.OnPlayerDamage  -= Activate;
+        EventManager.Instance.OnPlayerHeal    -= Deactivate;
     }
 
 
@@ -59,6 +61,12 @@ public class PlayerLowHealthVFX : MonoBehaviour
         _lowHealthVignette.alpha = 1f;
     }
 
+
+    void Disable()
+    {
+        if(_isVignetteActive)
+            StartCoroutine("DeactivateVignette");
+    }
 
     void Deactivate(float none)
     {

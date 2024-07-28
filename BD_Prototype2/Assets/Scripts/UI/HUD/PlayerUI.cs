@@ -6,20 +6,22 @@ using UnityEngine;
 
 public class PlayerUI : MonoBehaviour
 {
-    private void Start()
+    private void OnEnable()
     {
         Enable();
         if(EventManager.Instance == null) return;
-        EventManager.Instance.OnPlayerDeath   += Disable;
+        EventManager.Instance.OnPlayerSpawned    += Enable;
+        EventManager.Instance.OnPlayerDeath      += Disable;
         EventManager.Instance.OnCalibrationAlert += Cali;
     }
 
     private void OnDisable()
     {
         if(EventManager.Instance == null) return;
-        EventManager.Instance.OnPlayerDeath   -= Disable;
-        EventManager.Instance.OnPlayerDamage -= TakeDamage;
-        EventManager.Instance.OnPlayerHeal   -= Heal;
+        EventManager.Instance.OnPlayerSpawned    += Enable;
+        EventManager.Instance.OnPlayerDeath      -= Disable;
+        EventManager.Instance.OnPlayerDamage     -= TakeDamage;
+        EventManager.Instance.OnPlayerHeal       -= Heal;
         EventManager.Instance.OnCalibrationAlert -= Cali;
     }
 

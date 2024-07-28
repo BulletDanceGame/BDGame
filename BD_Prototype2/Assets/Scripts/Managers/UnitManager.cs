@@ -14,9 +14,6 @@ public class UnitManager : MonoBehaviour
     public List<GameObject> SurvivalRoomEnemies;
     public List<GameObject> ActiveEnemies;
 
-    [SerializeField]
-    CinemachineVirtualCamera followCam;
-
     private void Awake()
     {
         Instance = this;
@@ -94,8 +91,7 @@ public class UnitManager : MonoBehaviour
 
         Player = Instantiate(PlayerGO, CheckpointManager.instance.GetCurrentCheckPoint().transform.position, Quaternion.identity);
 
-        followCam.Follow = Player.transform;
-
+        CameraManager.Instance.FreeRoamCamera.Follow = Player.transform;
         CameraManager.Instance.SwitchToFollowCamera();
     }
 }
