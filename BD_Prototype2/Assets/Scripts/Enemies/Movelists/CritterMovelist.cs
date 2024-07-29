@@ -183,6 +183,7 @@ public class CritterMovelist : Movelist
 
     }
 
+
     void JumpUpdate()
     {
         if (!_isJumping) return;
@@ -242,7 +243,6 @@ public class CritterMovelist : Movelist
         {
             //commented out cause of causing errors
             agent.SetDestination(UnitManager.Instance.GetPlayer().transform.position);
-
         }
 
          
