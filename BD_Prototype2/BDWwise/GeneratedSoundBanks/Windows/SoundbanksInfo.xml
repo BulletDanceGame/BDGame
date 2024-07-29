@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="690988688" Type="User" Language="SFX" Hash="{2084EA41-162A-77CE-8556-F67E8BE3BDE5}">
+		<SoundBank Id="690988688" Type="User" Language="SFX" Hash="{2C9D3FAE-9C52-6CE1-D10B-FA0648A874E4}">
 			<ShortName>Music_Critter_Phase2</ShortName>
 			<Path>Music_Critter_Phase2.bnk</Path>
 			<Media>
@@ -303,7 +303,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{EF42E3A8-31E8-45EC-2957-C733AA29AE85}">
+		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{8661CA84-26B1-0430-E542-250BFF2AD17C}">
 			<ShortName>Music_TutorialAndLevel1_Part1</ShortName>
 			<Path>Music_TutorialAndLevel1_Part1.bnk</Path>
 			<Media>
@@ -466,8 +466,9 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="292923256" Name="BPM140_____Play_Env1_VegZone1_Intro" DurationType="OneShot" DurationMin="20.571428" DurationMax="20.571428">
+				<Event Id="292923256" Name="BPM140_____Play_Env1_VegZone1_Intro" DurationType="OneShot" DurationMin="20.683453" DurationMax="20.683453">
 					<MediaRefs>
+						<MediaRef Id="554555461"/>
 						<MediaRef Id="669902912"/>
 					</MediaRefs>
 				</Event>
@@ -486,7 +487,7 @@
 						<MediaRef Id="737231083"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2685356407" Name="BPM140_____Play_Env1_VegZone2_Intro" DurationType="OneShot" DurationMin="20.998692" DurationMax="20.998692">
+				<Event Id="2685356407" Name="BPM140_____Play_Env1_VegZone2_Intro" DurationType="OneShot" DurationMin="20.571428" DurationMax="20.571428">
 					<MediaRefs>
 						<MediaRef Id="164116952"/>
 					</MediaRefs>
@@ -1986,7 +1987,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{81739F87-5E79-2F8E-A724-1E16DD5F4A97}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{8589AB11-126C-1585-890B-78C9CF744328}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -2170,7 +2171,7 @@
 				</File>
 				<File Id="319519459" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>reverse oi.wav</ShortName>
-					<CachePath>SFX/reverse oi_486AEDEE.wem</CachePath>
+					<CachePath>SFX/reverse oi_CFECF85F.wem</CachePath>
 				</File>
 				<File Id="332766190" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>squeak1.wav</ShortName>
@@ -3469,5 +3470,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{60AEBFB8-C90C-0E2A-8F9F-7E2FBADFDE07}</FileHash>
+	<FileHash>{E5DEF892-247E-DD4F-2A0D-80E3719F8DB9}</FileHash>
 </SoundBanksInfo>
