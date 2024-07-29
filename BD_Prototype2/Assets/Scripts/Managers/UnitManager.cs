@@ -87,6 +87,7 @@ public class UnitManager : MonoBehaviour
 
     public void RespawnPlayer()
     {
+        SceneManager.Instance.ReloadCurrentScene(1);
         Destroy(Player);
 
         Player = Instantiate(PlayerGO, CheckpointManager.instance.GetCurrentCheckPoint().transform.position, Quaternion.identity);
