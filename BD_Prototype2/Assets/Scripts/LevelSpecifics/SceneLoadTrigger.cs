@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SceneLoadTrigger : MonoBehaviour
@@ -12,6 +13,8 @@ public class SceneLoadTrigger : MonoBehaviour
     private SceneManager.Scenes _sceneToLoad;
 
     private bool _wasTriggered = false;
+
+    public List<GameObject> gameObjectsToDeactivateOnTrigger = new List<GameObject>();
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -39,6 +42,11 @@ public class SceneLoadTrigger : MonoBehaviour
 
         _wasTriggered = true;
         Invoke("ResetTrigger", 1f); //Prevent double trigger bc the player has 2 coliders
+
+        for (int i = 0; i < gameObjectsToDeactivateOnTrigger.Capacity; i++)
+        {
+            gameObjectsToDeactivateOnTrigger[i].SetActive(false);
+        }
     }
 
     void ResetTrigger() { _wasTriggered = false; }

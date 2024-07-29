@@ -82,6 +82,8 @@ public class Player : MonoBehaviour
 
     IEnumerator Start()
     {
+        AkSoundEngine.SetState("DynamicGameplaySFX", "Low");
+        print("LOW sfx state");
         currentHealth = startingHealth;
 
         EventManager.Instance.PlayerSpawned();
