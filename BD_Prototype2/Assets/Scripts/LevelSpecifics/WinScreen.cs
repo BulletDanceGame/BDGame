@@ -73,6 +73,24 @@ public class WinScreen : MonoBehaviour
         */
 
 
+
+
+    }
+
+    void OnEnable()
+    {
+        Debug.Log("DISABLING STUFF");
+
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
+        GameObject.Find("Player").GetComponent<PlayerMovement>().canDash = false;
+        GameObject.Find("DirectionController").GetComponent<PlayerSwing>().SwingActivated = false;
+
+        UnitManager.Instance.GetPlayer().GetComponent<Player>().pauseActions = true;
+
+
+
+        //DOING EVERYTHING
+
         _eventDataCurrentPosition = new PointerEventData(EventSystem.current);
         currentButton = selectedContinue;
 
@@ -105,10 +123,12 @@ public class WinScreen : MonoBehaviour
         if (score >= 100000)
         {
             GradeText.text = "S";
-        }else if(score > 80000)
+        }
+        else if (score > 80000)
         {
             GradeText.text = "A";
-        }else if (score > 60000)
+        }
+        else if (score > 60000)
         {
             GradeText.text = "B";
         }
@@ -124,23 +144,11 @@ public class WinScreen : MonoBehaviour
         {
             GradeText.text = "E";
         }
-        else{
+        else
+        {
             GradeText.text = "F";
         }
 
-        
-
-    }
-
-    void OnEnable()
-    {
-        Debug.Log("DISABLING STUFF");
-
-        GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
-        GameObject.Find("Player").GetComponent<PlayerMovement>().canDash = false;
-        GameObject.Find("DirectionController").GetComponent<PlayerSwing>().SwingActivated = false;
-
-        UnitManager.Instance.GetPlayer().GetComponent<Player>().pauseActions = true;
     }
 
     private void OnDisable()

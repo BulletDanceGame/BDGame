@@ -261,6 +261,7 @@ public class Bullet : MonoBehaviour
                 ScoreManager.Instance.GoodHits++;
                 break;
             case BeatTiming.BAD:
+                ScoreManager.Instance.BadHits++;
                 Deactivate();
                 _fx.MissFX();
                 break;
