@@ -3,9 +3,15 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using System.Collections.Generic;
+using UnityEngine.EventSystems;
 
 public class WinScreen : MonoBehaviour
 {
+
+    public static ControllerType currentController;
+    private PointerEventData _eventDataCurrentPosition;
+
     [SerializeField] TextMeshProUGUI TimeText;
     [SerializeField] TextMeshProUGUI ScoreText;
     [SerializeField] TMP_InputField InputField;
@@ -22,6 +28,12 @@ public class WinScreen : MonoBehaviour
     [SerializeField] float inputThreshold = 0.3f;
     [SerializeField] float scrollCooldown = 1f;
     [SerializeField] float scrollSpdMin = 1f, scrollSpdMax = 5f, scrollSpdIncrease = 0.5f;
+
+    public static Button currentButton;
+    public Button selectedMainMenu;
+    public Button selectedContinue;
+    private GameObject _currentSelection;
+
 
     float scrollSpd = 1f;
     float scrollTime = 0f;
@@ -40,25 +52,40 @@ public class WinScreen : MonoBehaviour
     void Start()
     {
 
-/*        _playerInput = InputManager.Instance.PlayerInput;
+        /*        _playerInput = InputManager.Instance.PlayerInput;
 
-        for(int i = 0; i < inputTexts.Length; i++)
-        {
-            inputTextPositions[i] = inputTexts[i].transform.position.x;
-        }
+                for(int i = 0; i < inputTexts.Length; i++)
+                {
+                    inputTextPositions[i] = inputTexts[i].transform.position.x;
+                }
 
-        SetArrowsAtCurrentInputText();
+                SetArrowsAtCurrentInputText();
 
-        inputOption = posibleText.ToCharArray();
+                inputOption = posibleText.ToCharArray();
 
-        //Immediate response when starting to scroll inputs
-        scrollTime = scrollCooldown;
-        scrollSpd  = scrollSpdMin;
+                //Immediate response when starting to scroll inputs
+                scrollTime = scrollCooldown;
+                scrollSpd  = scrollSpdMin;
 
 
-        _playerInput.Player.Move.performed   += OnHold;
-        _playerInput.Player.Move.canceled    += OnRelease;
-*/
+                _playerInput.Player.Move.performed   += OnHold;
+                _playerInput.Player.Move.canceled    += OnRelease;
+        */
+
+
+        _eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        currentButton = selectedContinue;
+
+        currentController = ControllerType.KEYBOARDANDMOUSE;
+        currentController = InputManager.Instance.CurrentController;
+
+        if (currentController == ControllerType.GAMEPAD)
+            currentButton.Select();
+
+        //To switch controller-specific code
+        if (EventManager.Instance == null) return;
+        EventManager.Instance.OnGamePadUsed += ChangeToGAMEPAD;
+        EventManager.Instance.OnKeyBoardAndMouseUsed += ChangeToKBM;
 
         int minutes = Mathf.FloorToInt((GameManager.Instance.ElapsedTime % 3600f) / 60f);
         int seconds = Mathf.FloorToInt(GameManager.Instance.ElapsedTime % 60f);
@@ -125,6 +152,10 @@ public class WinScreen : MonoBehaviour
     {
         //_playerInput.Player.Move.performed   -= OnHold;
         //_playerInput.Player.Move.canceled    -= OnRelease;
+
+        if (EventManager.Instance == null) return;
+        EventManager.Instance.OnGamePadUsed -= ChangeToGAMEPAD;
+        EventManager.Instance.OnKeyBoardAndMouseUsed -= ChangeToKBM;
     }
 
 
@@ -179,7 +210,7 @@ public class WinScreen : MonoBehaviour
     void Update()
     {
         done_button.Select();
-
+        DeselectButton();
 /*
         if(!isHolding) return;
 
@@ -192,6 +223,32 @@ public class WinScreen : MonoBehaviour
         scrollSpd = Mathf.Clamp(scrollSpd + scrollSpdIncrease, scrollSpdMin, scrollSpdMax);
         scrollTime += Time.deltaTime * scrollSpd;
 */
+    }
+
+    void ChangeToGAMEPAD()
+    {
+        currentController = ControllerType.GAMEPAD;
+
+        //if(!_noRaycast)
+        //    _currentButton = _currentSelection.transform.parent.GetComponent<Button>();
+        //else
+        //{
+        
+            currentButton = selectedContinue;        
+
+        currentButton.Select();
+
+        Debug.Log("Switch to gamepad");
+    }
+
+    void ChangeToKBM()
+    {
+        currentController = ControllerType.KEYBOARDANDMOUSE;
+
+        currentButton = _currentSelection.transform.parent.GetComponent<Button>();
+        EventSystem.current.SetSelectedGameObject(null);
+
+        print("MKBBB");
     }
 
     void InputSwitchState()
@@ -275,5 +332,13 @@ public class WinScreen : MonoBehaviour
     public void HideScreen()
     {
         gameObject.SetActive(false);
+    }
+
+    public void DeselectButton()
+    {
+        if (currentController == ControllerType.KEYBOARDANDMOUSE)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
     }
 }

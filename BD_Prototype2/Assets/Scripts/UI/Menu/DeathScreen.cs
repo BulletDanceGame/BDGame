@@ -1,9 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class DeathScreen : MonoBehaviour
 {
+
+    public static ControllerType currentController;
+
     [System.Serializable]
     class ColorSet
     {
@@ -80,7 +84,6 @@ public class DeathScreen : MonoBehaviour
         _canvas.blocksRaycasts = true;
         _canvas.interactable = true;
 
-        GetComponentInChildren<Button>().Select();
     }
 
     void SetUIImage()
@@ -120,5 +123,20 @@ public class DeathScreen : MonoBehaviour
         _canvas.blocksRaycasts = false;
         _canvas.interactable = false;
     }
-    
+
+    private void Update()
+    {
+        DeselectButton();
+    }
+    public void DeselectButton()
+    {
+        if (currentController == ControllerType.KEYBOARDANDMOUSE)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
+        else if(currentController == ControllerType.GAMEPAD)
+        {
+            GetComponentInChildren<Button>().Select();
+        }
+    }
 }
