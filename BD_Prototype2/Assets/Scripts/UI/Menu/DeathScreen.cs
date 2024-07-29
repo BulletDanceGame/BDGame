@@ -68,10 +68,17 @@ public class DeathScreen : MonoBehaviour
         BossController bossInfo = BossController.Instance;
         if(bossInfo != null)
         {
-            _currentBoss  = bossInfo.currentBoss;
+            _currentBoss  = (int)bossInfo.currentBoss;
             _currentPhase = bossInfo.currentBossPhase;
         }
         else
+        {
+            _currentBoss  = 0;
+            _currentPhase = 1;
+        }
+
+        //The boss' image is not in the list
+        if(_currentBoss > _bosses.Count - 1)
         {
             _currentBoss  = 0;
             _currentPhase = 1;
@@ -88,9 +95,7 @@ public class DeathScreen : MonoBehaviour
 
     void SetUIImage()
     {
-        //There was only one boss in _bosses :))
-        //var _imageSet = _bosses[_currentBoss].images[_currentPhase - 1];
-        var _imageSet = _bosses[0].images[_currentPhase - 1];
+        var _imageSet = _bosses[_currentBoss].images[_currentPhase - 1];
         _image.sprite = _imageSet.image;
         _imageTrf.pivot = _imageSet.pivot;
         _imageTrf.sizeDelta = _imageSet.imageSize;
@@ -99,8 +104,7 @@ public class DeathScreen : MonoBehaviour
 
     void SetUIColorSet()
     {
-        var _colorSet = _bosses[0].phaseColor[_currentPhase - 1];
-        //var _colorSet = _bosses[_currentBoss].phaseColor[_currentPhase - 1];
+        var _colorSet = _bosses[_currentBoss].phaseColor[_currentPhase - 1];
         _gameOverTxt.color = _colorSet.gameOverColor;
         _restartTxt.color  = _colorSet.textColor;  //SHIT DOESNT WORK FUCKING BITCH
 

@@ -63,20 +63,16 @@ public class PlayerSwingHitbox : MonoBehaviour
 
 
         //BULLET
-        if (!collision.GetComponent<Bullet>())
-        {
-            return;
-        }
-
-
-        _hasHitBullet = true;
 
         //GetComponent() slows things down, replaced with Bullet variable.
         Bullet bullet = collision.GetComponent<Bullet>();
+        if (bullet == null) return;
 
+        _hasHitBullet = true;
 
         //Escape if unhittable
         if(!bullet.hittable) return;
+
 
         if (hitTiming == BeatTiming.BAD && GetComponentInParent<PlayerSwing>().BulletShouldGetDestroyedOnBad)
         {
@@ -88,35 +84,7 @@ public class PlayerSwingHitbox : MonoBehaviour
 
         //Last hit behavior override
         //Condition for player last hit
-        if (BossController.Instance)
-        {
-            if (hitTiming != BeatTiming.BAD && BossController.Instance.bossHealth.isLastHit)
-            {
-    
-                if(BossController.Instance.bossHealth.isLastPhase)
-                {
-                    if(BossController.Instance.currentBoss==1)
-                    {
-                        bullet.EndGameHit();
-                        VFXManager.Instance?.RequestVFX_SlowMoZoom(UnitManager.Instance?.GetPlayer()?.transform);
-                        TimeManager.Instance.RequestSlowMo(saigoNoPitchiDuration, 0.0000000001f); //brother
-                    }
-                    else if(BossController.Instance.currentBoss == 2)
-                    {
-                        bullet.CritterEndGameHit();
-                    }
-                }
-
-                else
-                {
-                    bullet.LastHit();
-                    //TimeManager.Instance.RequestSlowMo(slowMoDuration, slowMoScale);                
-                }
-        
-                EventManager.Instance.PlayerLastHit(hitTiming);
-                _isEndHit = true;
-            }
-        }
+        LastHitOverride(hitTiming, bullet);
 
         bullet.BulletHit(hitTiming);
 
@@ -146,5 +114,37 @@ public class PlayerSwingHitbox : MonoBehaviour
 
             if (_hitCombo >= 10) _hitCombo = 0;        
         }
+    }
+
+
+    private void LastHitOverride(BeatTiming hitTiming, Bullet bullet)
+    {
+        if(hitTiming == BeatTiming.BAD) return;
+        if(BossController.Instance == null) return;
+        if(!BossController.Instance.bossHealth.isLastHit) return;
+
+        if(BossController.Instance.bossHealth.isLastPhase)
+        {
+            switch(BossController.Instance.currentBoss)
+            {
+                case BossController.Boss.Critter:
+                    bullet.CritterEndGameHit();
+                    break;
+
+                case BossController.Boss.YokaiHunter:
+                    bullet.EndGameHit();
+                    VFXManager.Instance?.RequestVFX_SlowMoZoom(UnitManager.Instance?.GetPlayer()?.transform);
+                    TimeManager.Instance?.RequestSlowMo(saigoNoPitchiDuration, 0.0000000001f); //brother
+                    break;
+
+                default: break;
+            }
+        }
+
+        else
+            bullet.LastHit();
+    
+        EventManager.Instance.PlayerLastHit(hitTiming);
+        _isEndHit = true;
     }
 }
