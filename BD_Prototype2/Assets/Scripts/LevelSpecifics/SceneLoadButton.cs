@@ -41,9 +41,8 @@ public class SceneLoadButton : MonoBehaviour
                     return;
                 }
 
+                RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
                 UnitManager.Instance.RespawnPlayer();
-                //SceneManager.Instance.ReloadCurrentScene(3.5f);
-                //RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
 
                 break;
             case SceneManager.LoadOptions.Continue:
