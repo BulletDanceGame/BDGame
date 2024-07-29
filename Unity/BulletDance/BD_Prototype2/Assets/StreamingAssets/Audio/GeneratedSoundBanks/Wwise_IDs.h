@@ -96,6 +96,7 @@ namespace AK
         static const AkUniqueID PAUSESCREENMUSIC____PLAY = 2002857628U;
         static const AkUniqueID PICKUP__CURRENCY____PLAY = 2487304348U;
         static const AkUniqueID PICKUP__HEALTH____PLAY = 63268803U;
+        static const AkUniqueID PLAY_ACTUAL_FADEIN = 4121829672U;
         static const AkUniqueID PLAY_AMBIENCEFOREST = 513231425U;
         static const AkUniqueID PLAY_ARENA___BEFORE_THE_FIGHT___INTRO = 420814559U;
         static const AkUniqueID PLAY_BAT_THEME = 3550740225U;
@@ -144,6 +145,7 @@ namespace AK
         static const AkUniqueID PLAY_ENV1_VEGZONE5_BATTLE_PART2 = 2983091221U;
         static const AkUniqueID PLAY_ENV1_VEGZONE_OUTRO_PART1 = 586328000U;
         static const AkUniqueID PLAY_ENV1_VEGZONE_OUTROLOOP = 176035467U;
+        static const AkUniqueID PLAY_FADE_IN = 1091948866U;
         static const AkUniqueID PLAY_FIRSTTURRET___TURN_ON_AND_ALERT = 2754371527U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_FORESTAMB = 3960404151U;

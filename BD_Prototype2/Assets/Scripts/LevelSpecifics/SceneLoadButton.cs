@@ -19,14 +19,17 @@ public class SceneLoadButton : MonoBehaviour
         {
             case SceneManager.LoadOptions.Specified:
                 SceneManager.Instance.LoadScene(_sceneToLoadOnPlay, 3.5f);
+                RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1.5f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
                 break;
 
             case SceneManager.LoadOptions.NextLevel:
                 SceneManager.Instance.LoadNextScene(3.5f);
+                RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1.5f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
                 break;
 
             case SceneManager.LoadOptions.Reload:
                 SceneManager.Instance.ReloadCurrentScene(3.5f);
+                RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1.5f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
                 break;
 
             case SceneManager.LoadOptions.RespawnPlayer:
@@ -34,10 +37,13 @@ public class SceneLoadButton : MonoBehaviour
                 if(CheckpointManager.instance.GetCurrentCheckPoint() == null)
                 {
                     SceneManager.Instance.ReloadCurrentScene(3.5f);
+                    RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1.5f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
                     return;
                 }
 
                 UnitManager.Instance.RespawnPlayer();
+                //SceneManager.Instance.ReloadCurrentScene(3.5f);
+                //RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1.5f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
 
                 break;
             case SceneManager.LoadOptions.Continue:

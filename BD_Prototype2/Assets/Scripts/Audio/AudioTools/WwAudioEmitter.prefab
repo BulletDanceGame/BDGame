@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4295098097624884371}
   - component: {fileID: 8284982680171296398}
-  - component: {fileID: 4059159293626181434}
   - component: {fileID: 3009788811430625230}
+  - component: {fileID: 1629009935086388422}
   m_Layer: 0
   m_Name: WwAudioEmitter
   m_TagString: Untagged
@@ -48,22 +48,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EventName: Play_Env1_Vegzone_OutroLoop
   StopEvent: Stop_Env1_Vegzone_OutroLoop
---- !u!58 &4059159293626181434
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5756386386570834905}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &3009788811430625230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,3 +70,19 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!58 &1629009935086388422
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5756386386570834905}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5

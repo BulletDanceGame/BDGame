@@ -6,7 +6,15 @@ public class WwAudioEmitter : MonoBehaviour
 {
     public string EventName = "default";
     public string StopEvent = "default";
-    private bool IsInCollider = false;
+    
+    bool IsPlaying = false;
+
+    private void OnDestroy()
+    {
+        AkSoundEngine.PostEvent(StopEvent, gameObject);
+        IsPlaying = false;
+    }
+
     void Start()
     {
         AkSoundEngine.RegisterGameObj(gameObject);
@@ -16,17 +24,18 @@ public class WwAudioEmitter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        print("is playing status: " + IsPlaying);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            if (!IsInCollider)
+            if (!IsPlaying)
             {
+                print("starting music amb");
                 AkSoundEngine.PostEvent(EventName, gameObject);
-                IsInCollider = true;
+                IsPlaying = true;
             }
         }
         
@@ -36,10 +45,11 @@ public class WwAudioEmitter : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (IsInCollider)
+            if (IsPlaying)
             {
+                print("stopping music amb");
                 AkSoundEngine.PostEvent(StopEvent, gameObject);
-                IsInCollider = false;
+                IsPlaying = false;
             }
         }
             

@@ -36370,6 +36370,171 @@
 						</BlendContainer>
 					</ChildrenList>
 				</Folder>
+				<BlendContainer Name="fade in 2" ID="{66FFD299-11BF-4B9F-81CE-C236DEDD1984}" ShortID="116023705">
+					<PropertyList>
+						<Property Name="InitialDelay" Type="Real64">
+							<ValueList>
+								<Value>0.06</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Cutscene 1 - Vs Critter (music)" ID="{BD13193C-2011-4507-8AB3-8EDCC7F92E5A}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="fade in" ID="{2112253C-6FC2-4A00-9990-3F5BD125A2EB}" ShortID="413877631">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="fade in" ID="{BC89B748-96DC-4310-9E8F-253EC626E627}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.97406869316171"/>
+										<Property Name="FadeInShape" Type="int16" Value="9"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.00337584623980369"/>
+										<Property Name="FadeOutShape" Type="int16" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.63530309474922"/>
+										<Property Name="TrimEnd" Type="Real64" Value="5.14841077701504"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>fade in.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="28246105"/>
+									</MediaIDList>
+								</AudioFileSource>
+								<AudioFileSource Name="reverse oi" ID="{671B89C0-7293-445A-9B10-746F1F4F1A4A}">
+									<Language>SFX</Language>
+									<AudioFile>reverse oi.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="937002276"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="fade in" ID="{BC89B748-96DC-4310-9E8F-253EC626E627}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="fade in_01" ID="{E0BFA2AD-F247-4A20-B913-A126F715C659}" ShortID="54057229">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="fade in" ID="{27B1C391-119A-46BB-B48C-69B1076E2502}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.97406869316171"/>
+										<Property Name="FadeInShape" Type="int16" Value="9"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0186691199609603"/>
+										<Property Name="FadeOutShape" Type="int16" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.63530309474922"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>fade in.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="621510931"/>
+									</MediaIDList>
+								</AudioFileSource>
+								<AudioFileSource Name="reverse oi" ID="{A69F377E-3128-4DE2-B8D0-0C7F185D8B90}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0935127216653817"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>reverse oi.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="319519459"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="reverse oi" ID="{A69F377E-3128-4DE2-B8D0-0C7F185D8B90}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{94615E33-8D0A-4B08-A268-A4B33D11765B}" ShortID="883489015">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="PLAYBACK_SPEED____CutsceneMusic" ID="{1089C0B8-F905-42EF-9C59-349ABB22F0A7}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{50EF2B72-B7F2-45F7-81AE-BD726D922496}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0.11781</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>20</XPos>
+																<YPos>-0</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>-200</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</BlendContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

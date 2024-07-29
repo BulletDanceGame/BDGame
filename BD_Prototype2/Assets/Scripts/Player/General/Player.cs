@@ -90,7 +90,6 @@ public class Player : MonoBehaviour
         actionUI = GameObject.Find("ActionsUI");
 
         yield return null;
-
     }
 
     //Debug code -- Remember to remove
@@ -255,6 +254,8 @@ public class Player : MonoBehaviour
     public void RespawnPlayer(Vector2 spawnPoint)
     {
         transform.position = spawnPoint;
+
+        //print("respawn??");
     }
 
     public void BeatCounter(int beat)

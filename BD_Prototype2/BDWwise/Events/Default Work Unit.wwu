@@ -3226,7 +3226,7 @@
 						<Action Name="" ID="{60FBC984-2D86-40FD-BD2B-F6F5555B3578}" ShortID="853334369">
 							<PropertyList>
 								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -3242,7 +3242,8 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -3465,6 +3466,28 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Footsteps" ID="{F1D62CCE-9943-4E23-9E83-BFB4DD354C7F}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_fade_in" ID="{8F4943D7-6220-40C5-9DC8-178648888354}">
+					<ChildrenList>
+						<Action Name="" ID="{34F4F7F5-E196-4DD3-92BE-14A6296AEF91}" ShortID="274359634">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fade in" ID="{2112253C-6FC2-4A00-9990-3F5BD125A2EB}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_actual_fadeIn" ID="{54B61C3B-2742-45A4-9925-35CB0B252B9D}">
+					<ChildrenList>
+						<Action Name="" ID="{433F5AD2-4E5F-4EDB-AB13-00EDA719E6F0}" ShortID="1051226335">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fade in 2" ID="{66FFD299-11BF-4B9F-81CE-C236DEDD1984}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
