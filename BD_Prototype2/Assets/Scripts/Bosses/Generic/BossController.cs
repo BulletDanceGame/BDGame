@@ -19,8 +19,12 @@ public class BossController : MonoBehaviour
 
     public GameObject graphics { get; private set;}
 
-    public int currentBoss      = 0; // 0 is nothing
-    public int currentBossPhase = 1;
+    public enum Boss { 
+        None = 0, Critter = 1, YokaiHunter = 2
+    }
+
+    public Boss currentBoss     = 0; // 0 is nothing
+    public int  currentBossPhase = 1;
     
 
     private void Awake()
