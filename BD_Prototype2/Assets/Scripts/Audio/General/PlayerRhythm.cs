@@ -300,7 +300,7 @@ public class PlayerRhythm : MonoBehaviour
     //for calibration testing
     double diff;
     int diffNr;
-
+    bool haveAlerted;
     double max = -999;
     double min = 999;
 
@@ -332,41 +332,52 @@ public class PlayerRhythm : MonoBehaviour
 
         if ((input == ButtonInput.swing || input == ButtonInput.dash) && SceneManager.Instance._currentScene != SceneManager.Scenes.Menu)
         {
-            print("delay: " + timeDiff + " time " + Time.timeAsDouble);
 
-            diff += timeDiff;
-            diffNr++;
-
-            max = Math.Max(timeDiff, max);
-            min = Math.Min(timeDiff, min);
-            //print("max: " + max + " and min: " + min);
-
-            if (diffNr == 20)
+            if (timeDiff < MusicManager.Instance.secondsPerBeat)
             {
-                diff -= max; 
-                diff -= min;
+                print("delay: " + timeDiff + " time " + Time.timeAsDouble);
+    
+                diff += timeDiff;
+                diffNr++;
 
-                double average = diff / diffNr;
-                print("average " + average);
+                max = Math.Max(timeDiff, max);
+                min = Math.Min(timeDiff, min);
+                //print("max: " + max + " and min: " + min);
 
-                if (Math.Abs(average) > 0.05)
+                if (diffNr == 20)
                 {
-                    double n = (double)Math.Round((decimal)average, 2);
-                    print("average CHANGE to " + n);
-                    offsetSwing += n;
-                    offsetDash += n;
-                    SaveSystem.Instance.GetData().swingOffset = offsetSwing;
-                    SaveSystem.Instance.GetData().dashOffset = offsetDash;
-                    SaveSystem.Instance.Save();
+                    diff -= max;
+                    diff -= min;
 
-                    EventManager.Instance.CalibrationAlert((offsetSwing*1000) + "ms");
+                    double average = diff / diffNr;
+                    print("average " + average);
+
+                    if (Math.Abs(average) > 0.05)
+                    {
+                        double n = (double)Math.Round((decimal)average, 2);
+                        print("average CHANGE to " + n);
+                        offsetSwing += n;
+                        offsetDash += n;
+                        SaveSystem.Instance.GetData().swingOffset = offsetSwing;
+                        SaveSystem.Instance.GetData().dashOffset = offsetDash;
+                        SaveSystem.Instance.Save();
+
+                        if (!haveAlerted)
+                        {
+                            haveAlerted = true;
+                            EventManager.Instance.CalibrationAlert((offsetSwing * 1000) + "ms");
+
+                        }
+                    }
+
+                    diff = 0;
+                    diffNr = 0;
+                    max = -999;
+                    min = 999;
                 }
-
-                diff = 0;
-                diffNr = 0;
-                max = -999;
-                min = 999;
             }
+
+            
         }
 
 

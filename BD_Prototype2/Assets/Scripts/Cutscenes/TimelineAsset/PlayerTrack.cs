@@ -48,7 +48,6 @@ namespace BulletDance.Cutscene
             var newAnimState = input.animState;
             if(animState != newAnimState)
             {
-                requestAnimState = true;
                 animState = newAnimState;
             }
         }
@@ -58,9 +57,8 @@ namespace BulletDance.Cutscene
         protected override void SetAndDisplay(Playable playable, FrameData frameData)
         {
             //implement stuff (not direction or animation) here
-
-                CutsceneBinder.CutsceneEventsInstance.CS_InputToggle(enableUpdate);
-                player.EnableAnimUpdate(enableUpdate);
+            CutsceneBinder.CutsceneEventsInstance.CS_InputToggle(enableUpdate);
+            player.EnableAnimUpdate(enableUpdate);
 
             SetSpriteSet();
         
@@ -87,13 +85,11 @@ namespace BulletDance.Cutscene
         }
 
 
-        bool requestAnimState = false;
         PlayerClip.Animation animState = PlayerClip.Animation.Idle;
         protected override void Animate()
         {
-            if(!requestAnimState || enableUpdate) return;
+            if(enableUpdate) return;
             player.AnimState((int)animState);
-            requestAnimState = false;
         }
 
     }
