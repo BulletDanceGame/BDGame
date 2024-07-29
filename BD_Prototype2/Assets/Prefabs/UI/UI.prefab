@@ -8241,6 +8241,8 @@ MonoBehaviour:
   scrollSpdMin: 2
   scrollSpdMax: 8
   scrollSpdIncrease: 0.5
+  selectedMainMenu: {fileID: 0}
+  selectedContinue: {fileID: 0}
 --- !u!1 &9183686510475577241
 GameObject:
   m_ObjectHideFlags: 0
@@ -8611,6 +8613,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 3034507110364948297}
     m_Modifications:
+    - target: {fileID: 233061851932713640, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 396735363068628215, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8698,6 +8704,10 @@ PrefabInstance:
     - target: {fileID: 4490499199688996546, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
       propertyPath: m_Name
       value: PauseScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426950949903128785, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

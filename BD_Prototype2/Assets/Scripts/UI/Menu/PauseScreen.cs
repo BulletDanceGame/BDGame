@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PauseScreen : MonoBehaviour
 {
@@ -17,16 +18,24 @@ public class PauseScreen : MonoBehaviour
 
     [SerializeField] private GameObject main;
     [SerializeField] private GameObject options;
+    [SerializeField] private Button mainSelectedButton;
+    [SerializeField] private Button optionsSelectedButton;
 
     private void OnEnable()
     {
         EventManager.Instance.OnPausePressed += PausePressed;
+        EventManager.Instance.OnGamePadUsed += ChangeToGAMEPAD;
+        EventManager.Instance.OnKeyBoardAndMouseUsed += ChangeToKBM;
     }
 
     private void OnDisable()
     {
         EventManager.Instance.OnPausePressed -= PausePressed;
+        EventManager.Instance.OnGamePadUsed -= ChangeToGAMEPAD;
+        EventManager.Instance.OnKeyBoardAndMouseUsed -= ChangeToKBM;
     }
+
+
 
 
     public void PausePressed()
@@ -48,7 +57,7 @@ public class PauseScreen : MonoBehaviour
         _ui.alpha = 1;
         _ui.interactable = true;
         _ui.blocksRaycasts = true;
-        GetComponentInChildren<UnityEngine.UI.Button>().Select();
+        mainSelectedButton.Select();
 
         _pauseEvent.Post(gameObject);
         _pauseMenuSong.Post(gameObject, (uint)AkCallbackType.AK_MusicSyncExit, MusicCallbacks);
@@ -68,6 +77,7 @@ public class PauseScreen : MonoBehaviour
         _pauseMenuSong.Stop(gameObject);
 
         EventManager.Instance.Pause(false);
+
     }
 
 
@@ -92,6 +102,8 @@ public class PauseScreen : MonoBehaviour
     {
         main.SetActive(false);
         options.SetActive(true);
+
+        optionsSelectedButton.Select();
     }
 
     public void BackFromOptions()
@@ -99,14 +111,83 @@ public class PauseScreen : MonoBehaviour
 
         main.SetActive(true);
         options.SetActive(false);
+
+        mainSelectedButton.Select();
     }
 
-    public void Menu()
+
+
+
+
+    // -- Input -- //
+    public static ControllerType currentController;
+
+    private PointerEventData _eventDataCurrentPosition;
+    private Vector2 _mousePosition;
+    private bool _noRaycast = true;
+    private List<RaycastResult> _raycastResults = new List<RaycastResult>();
+    private GameObject _currentSelection;
+
+    private void Start()
     {
-        Resume();
+
+        _eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+
+        currentController = ControllerType.KEYBOARDANDMOUSE;
+        currentController = InputManager.Instance.CurrentController;
     }
 
+    private void Update()
+    {
+        switch (currentController)
+        {
+            case ControllerType.KEYBOARDANDMOUSE:
+                _mousePosition = Input.mousePosition;
+                PointerHover_FirstRaycastedObject();
+                break;
 
+            case ControllerType.GAMEPAD:
+                _currentSelection = EventSystem.current.currentSelectedGameObject;
+                break;
 
+            default:
+                Debug.Log("Unknown controller");
+                break;
+        }
+    }
 
+    void ChangeToGAMEPAD()
+    {
+        currentController = ControllerType.GAMEPAD;
+
+        if (main.activeSelf)
+        {
+            mainSelectedButton.Select();
+        }
+        else if (options.activeSelf)
+        {
+            optionsSelectedButton.Select();
+        }
+
+        Debug.Log("Switch to gamepad");
+    }
+
+    void ChangeToKBM()
+    {
+        currentController = ControllerType.KEYBOARDANDMOUSE;
+
+        EventSystem.current.SetSelectedGameObject(null);
+    }
+
+    public void PointerHover_FirstRaycastedObject()
+    {
+        _eventDataCurrentPosition.position = _mousePosition;
+        EventSystem.current.RaycastAll(_eventDataCurrentPosition, _raycastResults);
+        if (_raycastResults.Count > 0)
+        {
+            _currentSelection = _raycastResults[0].gameObject;
+        }
+
+        _noRaycast = !(_raycastResults.Count > 0);
+    }
 }
