@@ -25,7 +25,7 @@ public class SceneManager : MonoBehaviour
 
 
     //ADD ANY SCENES HERE (AND IN THE BUILD SETTINGS)
-    public enum Scenes { Menu = 0, Tutorial = 1, BigCritterBoss = 2, YokaiHunterBoss = 3}
+    public enum Scenes { Menu = 0, Tutorial = 1, BigCritterBoss = 2, YokaiHunterBoss = 3, DashLevel = 4}
     private Scenes _sceneToLoad = 0;
     public Scenes _currentScene { private set; get; } = 0;
 
@@ -172,6 +172,10 @@ public class SceneManager : MonoBehaviour
             case Scenes.YokaiHunterBoss:
                 AkSoundEngine.SetState("Level", "YokaiHunterBoss");
                 print("STATE: YOKAI HUNTER");
+                break;
+            case Scenes.DashLevel:
+                AkSoundEngine.SetState("Level", "Tutorial");
+                print("STATE: TUTORIAL");
                 break;
             default:
                 break;

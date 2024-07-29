@@ -18,32 +18,32 @@ public class SceneLoadButton : MonoBehaviour
         switch (loadOptions)
         {
             case SceneManager.LoadOptions.Specified:
+                RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
                 SceneManager.Instance.LoadScene(_sceneToLoadOnPlay, 3.5f);
-                RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1.5f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
                 break;
 
             case SceneManager.LoadOptions.NextLevel:
+                RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
                 SceneManager.Instance.LoadNextScene(3.5f);
-                RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1.5f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
                 break;
 
             case SceneManager.LoadOptions.Reload:
+                RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
                 SceneManager.Instance.ReloadCurrentScene(3.5f);
-                RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1.5f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
                 break;
 
             case SceneManager.LoadOptions.RespawnPlayer:
 
                 if(CheckpointManager.instance.GetCurrentCheckPoint() == null)
                 {
+                    RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
                     SceneManager.Instance.ReloadCurrentScene(3.5f);
-                    RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1.5f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
                     return;
                 }
 
                 UnitManager.Instance.RespawnPlayer();
                 //SceneManager.Instance.ReloadCurrentScene(3.5f);
-                //RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1.5f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
+                //RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
 
                 break;
             case SceneManager.LoadOptions.Continue:

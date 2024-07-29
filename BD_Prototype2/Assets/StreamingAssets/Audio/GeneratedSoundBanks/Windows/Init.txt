@@ -1,0 +1,198 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\Default Work Unit\Ambience	
+	534389781	DynamicGameplaySFX			\Default Work Unit\DynamicGameplaySFX	
+	779133449	FailLevel			\Default Work Unit\FailLevel	
+	2782712965	Level			\Default Work Unit\Level	
+	3193947170	Hurt			\Default Work Unit\Hurt	
+	3800848640	PlayerStatus			\Default Work Unit\PlayerStatus	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Ambience			
+	911198968	Fakewin	Ambience			
+	2057547683	Aftermath	Ambience			
+	3289250968	Before	Ambience			
+	545371365	Low	DynamicGameplaySFX			
+	748895195	None	DynamicGameplaySFX			
+	1182670505	Mid	DynamicGameplaySFX			
+	3550808449	High	DynamicGameplaySFX			
+	748895195	None	FailLevel			
+	931160808	Third	FailLevel			
+	998496889	First	FailLevel			
+	3476314365	Second	FailLevel			
+	732432531	YokaiHunterBoss	Level			
+	748895195	None	Level			
+	1762552081	CritterBoss	Level			
+	2607556080	Menu	Level			
+	3762955427	Tutorial	Level			
+	545371365	low	Hurt			
+	748895195	None	Hurt			
+	779278001	death	Hurt			
+	1182670505	mid	Hurt			
+	3550808449	high	Hurt			
+	168610243	Fighting	PlayerStatus			
+	748895195	None	PlayerStatus			
+	3557636762	Roaming	PlayerStatus			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	52787584	CritterBoss	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\3 Environment Battle\Env Battle - Level 1 - Tutorial		
+	78215258	CritterBoss	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Tutorial		
+	79564817	Tutorial	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\3 Environment Battle\Env Battle - Level 1 - Critter		
+	103769579	Tutorial	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Critter		
+	174860119	YokaiHunterBoss	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\3 Environment Battle\Env Battle - Level 1 - Critter		
+	202566600	High	DynamicGameplaySFX	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Miss		
+	213909036	Menu	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Critter		
+	217166239	Menu	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Tutorial		
+	255143058	High	DynamicGameplaySFX	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Actions\Actions - Dynamic		
+	262760644	Tutorial	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Facility		
+	347435619	YokaiHunterBoss	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Tutorial		
+	421537490	Mid	DynamicGameplaySFX	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Miss		
+	421885907	Fighting	PlayerStatus	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Movement\Footsteps		
+	525522666	High	DynamicGameplaySFX	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Movement\Dash		
+	564776861	Mid	DynamicGameplaySFX	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Actions\Actions - Dynamic		
+	575649650	YokaiHunterBoss	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Critter		
+	588754379	YokaiHunterBoss	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\3 Environment Battle\Env Battle - Level 1 - Tutorial		
+	591086268	Menu	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Facility		
+	604075520	High	DynamicGameplaySFX	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Damage (player)		
+	619297504	Mid	DynamicGameplaySFX	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Movement\Dash		
+	715347042	CritterBoss	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Facility		
+	733382114	Menu	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\3 Environment Battle\Env Battle - Level 1 - Tutorial		
+	774734133	Menu	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\3 Environment Battle\Env Battle - Level 1 - Critter		
+	873495801	Low	DynamicGameplaySFX	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Movement\Dash		
+	912440214	Low	DynamicGameplaySFX	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Actions\Actions - Dynamic		
+	920410842	Tutorial	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\1 Menus		
+	924165073	YokaiHunterBoss	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\1 Menus		
+	1011295024	CritterBoss	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\1 Menus		
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	86843165	HIGH_PASS____CutsceneSFX__Voicelines			\Default Work Unit\HIGH PASS\HIGH_PASS____CutsceneSFX__Voicelines	
+	232152347	PITCH____MusicBossBattle			\Default Work Unit\PITCH\PITCH____MusicBossBattle	
+	311929018	LOW_PASS____PlayerMovement__Footsteps			\Default Work Unit\LOW PASS\LOW_PASS____PlayerMovement__Footsteps	
+	345772536	VOLUME____CutsceneMusic			\Default Work Unit\VOLUME\VOLUME____CutsceneMusic	
+	478062107	VOLUME____MusicEnvBattle			\Default Work Unit\VOLUME\VOLUME____MusicEnvBattle	
+	721861396	HIGH_PASS____CutsceneMusic			\Default Work Unit\HIGH PASS\HIGH_PASS____CutsceneMusic	
+	887424188	VOLUME____CutsceneSFX__SpeedUpCutscene			\Default Work Unit\VOLUME\VOLUME____CutsceneSFX__SpeedUpCutscene	
+	895741003	VOLUME____PlayerDamage			\Default Work Unit\VOLUME\VOLUME____PlayerDamage	
+	1024282320	PITCH____MusicEnvRoaming			\Default Work Unit\PITCH\PITCH____MusicEnvRoaming	
+	1171439349	PITCH____MusicEnvBattle			\Default Work Unit\PITCH\PITCH____MusicEnvBattle	
+	1322911829	LOW_PASS____MusicBossBattle			\Default Work Unit\LOW PASS\LOW_PASS____MusicBossBattle	
+	1402179413	LOW_PASS____PlayerMovement__Dash			\Default Work Unit\LOW PASS\LOW_PASS____PlayerMovement__Dash	
+	1463622446	LOW_PASS____MusicEnvRoaming			\Default Work Unit\LOW PASS\LOW_PASS____MusicEnvRoaming	
+	1489920679	HIGH_PASS____PlayerDamage			\Default Work Unit\HIGH PASS\HIGH_PASS____PlayerDamage	
+	1651932202	HIGH_PASS____MusicEnvRoaming			\Default Work Unit\HIGH PASS\HIGH_PASS____MusicEnvRoaming	
+	1736919294	VOLUME____Menu			\Default Work Unit\VOLUME\VOLUME____Menu	
+	1798584363	LOW_PASS____PlayerDamage			\Default Work Unit\LOW PASS\LOW_PASS____PlayerDamage	
+	1900464655	HIGH_PASS____MusicEnvBattle			\Default Work Unit\HIGH PASS\HIGH_PASS____MusicEnvBattle	
+	1961333805	HIGH_PASS____CutsceneSFX__General__AudibleOnSpeedUp			\Default Work Unit\HIGH PASS\HIGH_PASS____CutsceneSFX__General__AudibleOnSpeedUp	
+	2055487999	LOW_PASS____BossDamage			\Default Work Unit\LOW PASS\LOW_PASS____BossDamage	
+	2173245496	LOW_PASS____PlayerMiss			\Default Work Unit\LOW PASS\LOW_PASS____PlayerMiss	
+	2254145532	VOLUME____PlayerActions__PlayerMiss			\Default Work Unit\VOLUME____PlayerActions__PlayerMiss	
+	2268627958	VOLUME____PlayerActions__Dynamic			\Default Work Unit\VOLUME\VOLUME____PlayerActions__Dynamic	
+	2354416159	VOLUME____BossDamage			\Default Work Unit\VOLUME\VOLUME____BossDamage	
+	2372433550	BITCRUSHER_MUSIC			\Default Work Unit\BITCRUSHER_MUSIC	
+	2483386915	VOLUME____MenuMusic			\Default Work Unit\VOLUME____MenuMusic	
+	2572028521	VOLUME____CutsceneSFX__Voicelines			\Default Work Unit\VOLUME\VOLUME____CutsceneSFX__Voicelines	
+	2586495989	VOLUME____MusicBossBattle			\Default Work Unit\VOLUME\VOLUME____MusicBossBattle	
+	2589375093	VOLUME____PlayerMovement__Dash			\Default Work Unit\VOLUME\VOLUME____PlayerMovement__Dash	
+	2596347407	PITCH____CutsceneSFX__Voicelines			\Default Work Unit\PITCH\PITCH____CutsceneSFX__Voicelines	
+	2622221165	LOW_PASS____BossActions			\Default Work Unit\LOW PASS\LOW_PASS____BossActions	
+	2626398315	PITCH____CutsceneSFX__General__AudibleOnSpeedUp			\Default Work Unit\PITCH\PITCH____CutsceneSFX__General__AudibleOnSpeedUp	
+	2645948155	LOW_PASS____MusicEnvBattle			\Default Work Unit\LOW PASS\LOW_PASS____MusicEnvBattle	
+	2655220193	HIGH_PASS____MusicBossBattle			\Default Work Unit\HIGH PASS\HIGH_PASS____MusicBossBattle	
+	2943701773	VOLUME____BossActions			\Default Work Unit\VOLUME\VOLUME____BossActions	
+	3237454005	VOLUME____AmbientComponents			\Default Work Unit\VOLUME\VOLUME____AmbientComponents	
+	3366454963	hitSloMo_only_here_for_reference_of_max_combo_stuff			\Default Work Unit\0ld Boys\hitSloMo_only_here_for_reference_of_max_combo_stuff	
+	3603952474	VOLUME____PlayerMovement__Footsteps			\Default Work Unit\VOLUME\VOLUME____PlayerMovement__Footsteps	
+	3620361396	VOLUME____CutsceneSFX__General__InaudibleOnSpeedUp			\Default Work Unit\VOLUME\VOLUME____CutsceneSFX__General__InaudibleOnSpeedUp	
+	3703849217	PITCH____PlayerDamage			\Default Work Unit\PITCH\PITCH____PlayerDamage	
+	3729958265	VOLUME____CutsceneSFX__General__AudibleOnSpeedUp			\Default Work Unit\VOLUME\VOLUME____CutsceneSFX__General__AudibleOnSpeedUp	
+	3837119958	LOW_PASS____PlayerActions__Dynamic			\Default Work Unit\LOW PASS\LOW_PASS____PlayerActions__Dynamic	
+	4091390158	VOLUME____MusicEnvRoaming			\Default Work Unit\VOLUME\VOLUME____MusicEnvRoaming	
+	4092666037	LOW_PASS____PlayerActions__Set			\Default Work Unit\LOW PASS\LOW_PASS____PlayerActions__Set	
+	4208198357	VOLUME____PlayerActions__Set			\Default Work Unit\VOLUME\VOLUME____PlayerActions__Set	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	65515336	BossActions 1 - Yokai Hunter			\Default Work Unit\Master Audio Bus\SFX\3 Boss & Enemy SFX\BossActions\BossActions 1 - Yokai Hunter	
+	105929186	Boss - Level 1 - Yokai Hunter			\Default Work Unit\Master Audio Bus\Music\2 Boss Battle\Boss - Level 1 - Yokai Hunter	
+	112838762	Cutscene 2 - Vs Yokai Hunter (music)			\Default Work Unit\Master Audio Bus\Music\5 Cutscene\Cutscene 2 - Vs Yokai Hunter (music)	
+	133791841	Cutscene 1 - Vs Yokai Hunter (general sfx)			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\General - InaudibleOnSpeedUp\Cutscene 1 - Vs Yokai Hunter (general sfx)	
+	179567252	EnemyActions			\Default Work Unit\Master Audio Bus\SFX\3 Boss & Enemy SFX\EnemyActions	
+	209238542	Env Battle - Level 1 - Critter			\Default Work Unit\Master Audio Bus\Music\3 Environment Battle\Env Battle - Level 1 - Critter	
+	275270701	Cutscene 1 - Player - Intro (voicelines)			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\Voicelines\Cutscene 1 - Player - Intro (voicelines)	
+	320588660	Level 1 - Critter			\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Critter	
+	340258651	5 Cutscene SFX			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX	
+	371542505	Cutscene 1 - Boss - Intro (voicelines)			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\Voicelines\Cutscene 1 - Boss - Intro (voicelines)	
+	376748577	4 Environment Roaming			\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming	
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	423108842	2 Boss Battle			\Default Work Unit\Master Audio Bus\Music\2 Boss Battle	
+	458562295	3 Environment Battle			\Default Work Unit\Master Audio Bus\Music\3 Environment Battle	
+	487419471	Cutscene 2 - Player (voicelines)			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\Voicelines\Cutscene 2 - Player (voicelines)	
+	526916458	VHS			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\VHS	
+	556599689	brother			\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Actions\Actions - Dynamic\hits\brother	
+	652387228	BossActions 2 - dunno			\Default Work Unit\Master Audio Bus\SFX\3 Boss & Enemy SFX\BossActions\BossActions 2 - dunno	
+	713040514	AmbienceLol			\Default Work Unit\Master Audio Bus\Music\3 Environment Battle\AmbienceLol	
+	763777545	Env Battle - Level 2			\Default Work Unit\Master Audio Bus\Music\3 Environment Battle\Env Battle - Level 2	
+	764174633	Level 1 - Tutorial			\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Tutorial	
+	948999914	Cutscene 1 - Player - Phase 1 to 2 (voicelines)			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\Voicelines\Cutscene 1 - Player - Phase 1 to 2 (voicelines)	
+	1021167356	3 Boss & Enemy SFX			\Default Work Unit\Master Audio Bus\SFX\3 Boss & Enemy SFX	
+	1082482811	Navigation			\Default Work Unit\Master Audio Bus\SFX\1 Menu SFX\Navigation	
+	1105659027	General - AudibleOnSpeedUp			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\General - AudibleOnSpeedUp	
+	1137508701	Env Roaming - Level 1			\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1	
+	1137508702	Env Roaming - Level 2			\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 2	
+	1270095322	Cutscene 2 - Panda (voicelines)			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\Voicelines\Cutscene 2 - Panda (voicelines)	
+	1280655526	Damage (player)			\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Damage (player)	
+	1288875315	Cutscene 2 - Panda Meeting (general sfx)			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\General - InaudibleOnSpeedUp\Cutscene 2 - Panda Meeting (general sfx)	
+	1387464807	Cutscene 1 - Player - Phase 3 to End (voicelines)			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\Voicelines\Cutscene 1 - Player - Phase 3 to End (voicelines)	
+	1404235302	BossDamage 2 - dunno			\Default Work Unit\Master Audio Bus\SFX\3 Boss & Enemy SFX\BossDamage\BossDamage 2 - dunno	
+	1498105075	Env Battle - Level 1 - Tutorial			\Default Work Unit\Master Audio Bus\Music\3 Environment Battle\Env Battle - Level 1 - Tutorial	
+	1521187885	StartGame			\Default Work Unit\Master Audio Bus\SFX\1 Menu SFX\StartGame	
+	1718386686	Title Screen - Main Menu			\Default Work Unit\Master Audio Bus\Music\1 Menus\Title Screen - Main Menu	
+	1727977662	Cutscene 1 - Player - Phase 2 to 3 (voicelines)			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\Voicelines\Cutscene 1 - Player - Phase 2 to 3 (voicelines)	
+	1728450328	Actions - Dynamic			\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Actions\Actions - Dynamic	
+	1751930956	Boss - Level 1 - Critter			\Default Work Unit\Master Audio Bus\Music\2 Boss Battle\Boss - Level 1 - Critter	
+	1764718042	1 Menu SFX			\Default Work Unit\Master Audio Bus\SFX\1 Menu SFX	
+	1794747505	BossDamage			\Default Work Unit\Master Audio Bus\SFX\3 Boss & Enemy SFX\BossDamage	
+	1879435608	EnemyDamage			\Default Work Unit\Master Audio Bus\SFX\3 Boss & Enemy SFX\EnemyDamage	
+	1942692385	Dash			\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Movement\Dash	
+	2129636626	Movement			\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Movement	
+	2224127838	4 Ambient SFX Components			\Default Work Unit\Master Audio Bus\SFX\4 Ambient SFX Components	
+	2230992643	Calibration			\Default Work Unit\Master Audio Bus\Music\1 Menus\Calibration	
+	2292057722	Voicelines			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\Voicelines	
+	2331036614	Facility			\Default Work Unit\Master Audio Bus\SFX\4 Ambient SFX Components\Level 1\Facility	
+	2337630999	Boss - Level 2			\Default Work Unit\Master Audio Bus\Music\2 Boss Battle\Boss - Level 2	
+	2384369890	1 Menus			\Default Work Unit\Master Audio Bus\Music\1 Menus	
+	2385628198	Footsteps			\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Movement\Footsteps	
+	2401645778	Cutscene 1 - Boss - Phase 2 to 3 (voicelines)			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\Voicelines\Cutscene 1 - Boss - Phase 2 to 3 (voicelines)	
+	2516623221	2 Player SFX			\Default Work Unit\Master Audio Bus\SFX\2 Player SFX	
+	2522218687	BossActions			\Default Work Unit\Master Audio Bus\SFX\3 Boss & Enemy SFX\BossActions	
+	2597336356	swings			\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Actions\Actions - Dynamic\swings	
+	2609687961	Cutscene 1 - Vs Critter (music)			\Default Work Unit\Master Audio Bus\Music\5 Cutscene\Cutscene 1 - Vs Critter (music)	
+	2730119150	Outdoors			\Default Work Unit\Master Audio Bus\SFX\4 Ambient SFX Components\Level 1\Outdoors	
+	2778722962	General - InaudibleOnSpeedUp			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\General - InaudibleOnSpeedUp	
+	2964830718	BossDamage 1 - Yokai Hunter			\Default Work Unit\Master Audio Bus\SFX\3 Boss & Enemy SFX\BossDamage\BossDamage 1 - Yokai Hunter	
+	2987232379	Cutscene 2 - Panda Meeting (music)			\Default Work Unit\Master Audio Bus\Music\5 Cutscene\Cutscene 2 - Panda Meeting (music)	
+	3062523241	Miss			\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Miss	
+	3092587493	Pause			\Default Work Unit\Master Audio Bus\Music\1 Menus\Pause	
+	3151285457	Text Voices			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\Text Voices	
+	3163449996	Level 1 - Facility			\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Facility	
+	3232033907	hits			\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Actions\Actions - Dynamic\hits	
+	3319806915	Cutscene 1 - Boss - Phase 3 to End (voicelines)			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\Voicelines\Cutscene 1 - Boss - Phase 3 to End (voicelines)	
+	3332220694	Actions			\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Actions	
+	3420765916	Level 1			\Default Work Unit\Master Audio Bus\SFX\4 Ambient SFX Components\Level 1	
+	3420765919	Level 2			\Default Work Unit\Master Audio Bus\SFX\4 Ambient SFX Components\Level 2	
+	3522418091	Moooosic - only here to look at for when implementing max combo			\Default Work Unit\Master Audio Bus\Moooosic - only here to look at for when implementing max combo	
+	3545305787	Actions - Set			\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Actions\Actions - Set	
+	3675259263	6 Misc			\Default Work Unit\Master Audio Bus\SFX\6 Misc	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3852475470	Cutscene 1 - Boss - Phase 1 to 2 (voicelines)			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\Voicelines\Cutscene 1 - Boss - Phase 1 to 2 (voicelines)	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+	4213797070	5 Cutscene			\Default Work Unit\Master Audio Bus\Music\5 Cutscene	
+
+Effect plug-ins	ID	Name	Type				Notes
+	484763478	New_Pitch_Shifter_03	Wwise Pitch Shifter			
+	3061744738	New_Tremolo_01	Wwise Tremolo			
+	3435419520	New_Guitar_Distortion	Wwise Guitar Distortion			
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+
