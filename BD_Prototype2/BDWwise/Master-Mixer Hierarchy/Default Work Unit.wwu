@@ -199,7 +199,7 @@
 											<PropertyList>
 												<Property Name="BusVolume" Type="Real64">
 													<ValueList>
-														<Value>-9</Value>
+														<Value>-6</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -289,6 +289,13 @@
 											</StateInfo>
 										</Bus>
 										<Bus Name="AmbienceLol" ID="{D284DDEC-BED2-4123-88F6-CBDCABD6C57C}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ObjectLists>
 												<ObjectList Name="RTPC">
 													<Reference>

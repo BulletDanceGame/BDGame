@@ -13,6 +13,7 @@ namespace BulletDance.Cutscene
         // -- Public events (for signals) -- //
 
         //EventManager events - Put ev initials to find in methods list faster
+
         public void EV_ActivateBoss()
         {
             EventManager.Instance.ActivateBoss();
@@ -104,16 +105,19 @@ namespace BulletDance.Cutscene
         public void LowGameplaySFX()
         {
             AkSoundEngine.SetState("DynamicGameplaySFX", "Low");
+            print("LOW sfx state");
         }
 
         public void MidGameplaySFX()
         {
             AkSoundEngine.SetState("DynamicGameplaySFX", "Mid");
+            print("MID sfx state");
         }
 
         public void HighGameplaySFX()
         {
             AkSoundEngine.SetState("DynamicGameplaySFX", "High");
+            print("HIGH sfx state");
         }
 
 
