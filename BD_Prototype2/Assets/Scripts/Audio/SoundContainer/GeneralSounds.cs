@@ -51,12 +51,17 @@ public class GeneralSounds : SoundContainer
         PlaySFX("StartGame");
     }
 
-    public void MuteAmbience(float sec)
+    public void SetAmbienceVolume(int volume)
     {
-         RTPCManager.Instance.SetValue("VOLUME____AmbientComponents", 0, sec, RTPCManager.CurveTypes.high_curve);
+         RTPCManager.Instance.SetValue("VOLUME____AmbientComponents", volume, 2, RTPCManager.CurveTypes.high_curve);
     }
 
-    public void UnMuteAmbience(float sec)
+    public void LongerSetAmbienceVolume(int volume)
+    {
+         RTPCManager.Instance.SetValue("VOLUME____AmbientComponents", volume, 6, RTPCManager.CurveTypes.high_curve);
+    }
+
+    public void ResetAmbienceVolume(float sec)
     {
          RTPCManager.Instance.ResetValue("VOLUME____AmbientComponents", sec, RTPCManager.CurveTypes.high_curve);
     }

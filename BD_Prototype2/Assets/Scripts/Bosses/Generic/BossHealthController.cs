@@ -39,7 +39,6 @@ public class BossHealthController : MonoBehaviour
     private float _bulletDamage;
     public bool isLastHit { get { return currentPhaseHealth <= _bulletDamage && currentPhaseHealth > 0; } }
     public bool isDead    { get { return currentPhaseHealth <= 0 && currentPhase >= phaseInfo.Count - 1; } }
-
     //Animation
     private BulletDance.Animation.UnitAnimationHandler _animHandler;
 
@@ -69,6 +68,7 @@ public class BossHealthController : MonoBehaviour
 #if UNITY_EDITOR
     void Update()
     {
+        TurnOffBossFightTrigger();
         //testing
         if (Input.GetKeyDown(KeyCode.U))
             EventManager.Instance.BossDamage(debugDamage);
@@ -97,6 +97,16 @@ public class BossHealthController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         gameObject.GetComponent<Collider2D>().enabled = true;
+    }
+
+    
+    void TurnOffBossFightTrigger()
+    {
+        if(isDead)
+        {
+            SaveSystem.Instance.GetData().bossdeath = isDead;
+            SaveSystem.Instance.Save();
+        }
     }
 
 

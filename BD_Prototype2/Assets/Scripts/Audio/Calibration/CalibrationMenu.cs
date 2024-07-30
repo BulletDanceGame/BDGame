@@ -5,7 +5,9 @@ using UnityEngine.UI;
 public class CalibrationMenu : MonoBehaviour
 {
     [SerializeField] private GameObject[] _screens;
-    [SerializeField] private TextMeshProUGUI[] _buttons;
+    [SerializeField] private TextMeshProUGUI[] _titleButtons;
+
+
     private int _currentScreen;
 
     [SerializeField] private MainMenu menu;
@@ -19,16 +21,28 @@ public class CalibrationMenu : MonoBehaviour
     public void ActivateScreen(int i)
     {
         _screens[_currentScreen].SetActive(false);
-        _buttons[_currentScreen].color = new Color(1f,1f,1f,0.5f);
+        _titleButtons[_currentScreen].color = new Color(1f,1f,1f,0.5f);
         _currentScreen = i;
         _screens[_currentScreen].SetActive(true);
-        _buttons[_currentScreen].color = Color.white;
+        _titleButtons[_currentScreen].color = Color.white;
 
-        //if (MainMenu.currentController == ControllerType.GAMEPAD)
-        //{
-        //    MainMenu.currentButton = _screens[_currentScreen].GetComponentInChildren<Button>();
-        //    MainMenu.currentButton.Select();
-        //}
+
+        if (MainMenu.currentController == ControllerType.GAMEPAD)
+        {
+            Button[] buttons = _screens[_currentScreen].GetComponentsInChildren<Button>();
+
+            if (buttons.Length == 0)
+            {
+                MainMenu.currentButton = _titleButtons[_currentScreen].GetComponentInParent<Button>();
+            }
+            else
+            {
+                MainMenu.currentButton = buttons[0];
+            }
+
+            print("button " + MainMenu.currentButton.name);
+            MainMenu.currentButton.Select();
+        }
     }
 
     //also called from button
@@ -59,11 +73,14 @@ public class CalibrationMenu : MonoBehaviour
         {
             ActivateScreen(_currentScreen+i);
 
-            if (MainMenu.currentController == ControllerType.GAMEPAD)
-            {
-                MainMenu.currentButton = _screens[_currentScreen].GetComponentInChildren<Button>();
-                MainMenu.currentButton.Select();
-            }
         }
+    }
+
+
+    public void ActivateTitleButton()
+    {
+        MainMenu.currentButton = _titleButtons[_currentScreen].GetComponentInParent<Button>();
+;
+        MainMenu.currentButton.Select();
     }
 }

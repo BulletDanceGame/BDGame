@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6250508099383493117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6250508099383493119}
+  - component: {fileID: 6250508099383493116}
+  - component: {fileID: 6250508099383493118}
+  m_Layer: 0
+  m_Name: WindVolumeAdjuster (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6250508099383493119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6250508099383493117}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.3, y: 33.7, z: -28.594261}
+  m_LocalScale: {x: 21.992, y: 21.992, z: 21.992}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &6250508099383493116
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6250508099383493117}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 2.0998197, y: 1.9842905}
+      - {x: 1.2245071, y: 1.8920974}
+      - {x: 0.4640728, y: 1.2750508}
+      - {x: -1.8041084, y: 1.1292592}
+      - {x: -2.165015, y: -0.18312857}
+      - {x: -3.4094183, y: -3.2369342}
+      - {x: -1.1880159, y: -4.614892}
+      - {x: 0.80282205, y: -4.3287225}
+      - {x: 2.345927, y: -3.1981802}
+      - {x: 6.4844265, y: -3.1226957}
+      - {x: 6.3678207, y: -2.3038208}
+      - {x: 6.1484346, y: -0.5496205}
+      - {x: 2.1650147, y: 1.6542141}
+  m_UseDelaunayMesh: 0
+--- !u!114 &6250508099383493118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6250508099383493117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e99b6fcec5fc34bb6828fb3892189d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windVolume: 50
+  windAdjustmentSpeed: 2

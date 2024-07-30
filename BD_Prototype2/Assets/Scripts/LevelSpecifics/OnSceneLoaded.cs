@@ -6,6 +6,8 @@ public class OnSceneLoaded : MonoBehaviour
 {
     public GameObject cutscene1trigger;
     public GameObject cutscene2trigger;
+    public GameObject BossFightTrigger;
+    public GameObject CritterRemoverer;
 
     [Tooltip("For debugging, should be false in build")]
     public bool dontMovePlayerOnStart;
@@ -39,14 +41,19 @@ public class OnSceneLoaded : MonoBehaviour
 
     private void PlayerPos()
     {
-        Vector3 Checkpointposition;
+        if(SaveSystem.Instance.GetData().bossdeath)
+        {
+            BossFightTrigger.SetActive(false);
+            CritterRemoverer.SetActive(false);
+        }
 
+        Vector3 Checkpointposition;
+        
         Checkpointposition.x = SaveSystem.Instance.GetData().currentCheckpointX;
         Checkpointposition.y = SaveSystem.Instance.GetData().currentCheckpointY;
         Checkpointposition.z = SaveSystem.Instance.GetData().currentCheckpointZ;
 
 
         UnitManager.Instance.GetPlayer().transform.position = Checkpointposition;
-
     }
 }
