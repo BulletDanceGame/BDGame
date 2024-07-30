@@ -7,9 +7,9 @@ public class BulletBag : MonoBehaviour
     public static BulletBag instance;
 
 
-    public GameObject normalBulletPrefab, unhittableBulletPrefab, fireBulletPrefab, groovyBulletPrefab, explosiveBulletPrefab, unhittableExplosiveBulletPrefab, fireGroovyBulletPrefab, fireExplodyBulletPrefab, groovyExplodyBulletPrefab, groovyExplodyFireBulletPrefab;
+    public GameObject normalBulletPrefab, unhittableBulletPrefab, fireBulletPrefab, groovyBulletPrefab, explosiveBulletPrefab, unhittableExplosiveBulletPrefab, fireGroovyBulletPrefab, fireExplodyBulletPrefab, groovyExplodyBulletPrefab, groovyExplodyFireBulletPrefab, unhittableFireBulletPrefab;
 
-    public enum BulletTypes {normal, unhittable, fire, groovy, explosive, firegroovy, fireexplody, groovyexplody, groovyexplodyfire, random, none, unhittableexplody }
+    public enum BulletTypes {normal, unhittable, fire, groovy, explosive, firegroovy, fireexplody, groovyexplody, groovyexplodyfire, random, none, unhittableexplody,unhittablefire }
 
     [Header("Bullet Lists")]
     public List<GameObject> allBullets;
@@ -23,6 +23,7 @@ public class BulletBag : MonoBehaviour
     public List<GameObject> groovyexplodyfireBulletList;
     public List<GameObject> firegroovyBulletList;
     public List<GameObject> explosiveBulletList;
+    public List<GameObject> unhittableFireList;
 
     private void Awake()
     {
@@ -42,6 +43,7 @@ public class BulletBag : MonoBehaviour
         SpawnBullets(BulletTypes.firegroovy, 10);
         SpawnBullets(BulletTypes.explosive, 10);
         SpawnBullets(BulletTypes.unhittableexplody, 10);
+        SpawnBullets(BulletTypes.unhittablefire, 10);
 
 
         EventManager.Instance.OnDeactivateBoss += DeactivateAllBullets;
@@ -134,9 +136,13 @@ public class BulletBag : MonoBehaviour
         {
             return unhittableExplosiveBulletPrefab;
         }
-        else //if (type == BulletTypes.explosive)
+        else if (type == BulletTypes.explosive)
         {
             return explosiveBulletPrefab;
+        }
+        else /*if(type == BulletTypes.unhittablefire)*/
+        {
+            return unhittableFireBulletPrefab;
         }
     }
 
@@ -178,9 +184,13 @@ public class BulletBag : MonoBehaviour
         {
             return unhittableExplodyList;
         }
-        else //if (type == BulletTypes.explosive)
+        else if (type == BulletTypes.explosive)
         {
             return explosiveBulletList;
+        }
+        else /*if(type == BulletTypes.unhittablefire)*/
+        {
+            return unhittableFireList;
         }
     }
 
