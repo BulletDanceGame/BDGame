@@ -1042,7 +1042,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5042302410705351113
 Transform:
   m_ObjectHideFlags: 0
@@ -1679,7 +1679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &9056383113029913494
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1976,7 +1976,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 503, y: -388}
-  m_SizeDelta: {x: 646.167, y: 419.6}
+  m_SizeDelta: {x: 559.2556, y: 349.4487}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4522214578154173478
 CanvasRenderer:
@@ -2301,7 +2301,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -130.62, y: -388}
-  m_SizeDelta: {x: 646.167, y: 419.6}
+  m_SizeDelta: {x: 531.8613, y: 335.7937}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3733789110909378315
 CanvasRenderer:
@@ -3173,7 +3173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2408218624844586463
 Transform:
   m_ObjectHideFlags: 0
@@ -6600,7 +6600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5148247089280430963
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8241,8 +8241,10 @@ MonoBehaviour:
   scrollSpdMin: 2
   scrollSpdMax: 8
   scrollSpdIncrease: 0.5
-  selectedMainMenu: {fileID: 0}
-  selectedContinue: {fileID: 0}
+  selectedMainMenu: {fileID: 355662474852203857}
+  selectedContinue: {fileID: 408599263922795760}
+  pauseMenu: {fileID: 255728611027116909}
+  gameOverMenu: {fileID: 4028037627225514643}
 --- !u!1 &9183686510475577241
 GameObject:
   m_ObjectHideFlags: 0
@@ -8443,12 +8445,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeathScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 3149934000605006963, guid: e6e1c6edc95754742a3ed07b34d2eea6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: e6e1c6edc95754742a3ed07b34d2eea6, type: 3}
 --- !u!224 &880030889307199654 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1181871404708361798, guid: e6e1c6edc95754742a3ed07b34d2eea6, type: 3}
+  m_PrefabInstance: {fileID: 2040313879121342176}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4028037627225514643 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3149934000605006963, guid: e6e1c6edc95754742a3ed07b34d2eea6, type: 3}
   m_PrefabInstance: {fileID: 2040313879121342176}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2888447430666570118
@@ -8701,17 +8712,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2884067428745910790, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4490499199688996546, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
       propertyPath: m_Name
       value: PauseScreen
       objectReference: {fileID: 0}
-    - target: {fileID: 5426950949903128785, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
-      propertyPath: m_Alpha
-      value: 0
+    - target: {fileID: 4490499199688996546, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9073992831294006033, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+--- !u!1 &255728611027116909 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4490499199688996546, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}
+  m_PrefabInstance: {fileID: 4457986301166065071}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4061277498745624920 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 396735363068628215, guid: 271c9969cd13d3544b1f4d5be1806afe, type: 3}

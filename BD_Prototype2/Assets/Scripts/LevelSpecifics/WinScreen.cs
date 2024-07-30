@@ -48,6 +48,11 @@ public class WinScreen : MonoBehaviour
     int currentInputText = 0;
     int currentInputOption = 0;
 
+    [Header("Other Menus Whos Buttons Fuck With These Ones When Active :)")]
+    public GameObject pauseMenu;
+    public GameObject gameOverMenu;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,6 +89,9 @@ public class WinScreen : MonoBehaviour
         GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
         GameObject.Find("Player").GetComponent<PlayerMovement>().canDash = false;
         GameObject.Find("DirectionController").GetComponent<PlayerSwing>().SwingActivated = false;
+
+        pauseMenu.SetActive(false);
+        gameOverMenu.SetActive(false);
 
         UnitManager.Instance.GetPlayer().GetComponent<Player>().pauseActions = true;
 
@@ -154,6 +162,9 @@ public class WinScreen : MonoBehaviour
     private void OnDisable()
     {
         UnitManager.Instance.GetPlayer().GetComponent<Player>().pauseActions = false;
+
+        pauseMenu.SetActive(true);
+        gameOverMenu.SetActive(true);
     }
 
     void OnDestroy()
@@ -217,7 +228,6 @@ public class WinScreen : MonoBehaviour
 
     void Update()
     {
-        done_button.Select();
         DeselectButton();
 /*
         if(!isHolding) return;

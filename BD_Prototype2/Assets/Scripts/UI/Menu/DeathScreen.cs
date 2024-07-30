@@ -138,9 +138,11 @@ public class DeathScreen : MonoBehaviour
         {
             EventSystem.current.SetSelectedGameObject(null);
         }
-        else if(currentController == ControllerType.GAMEPAD)
-        {
-            GetComponentInChildren<Button>().Select();
-        }
+
+        //lol why? this makes it impossible to select any other button than the first one?
+        //else if(currentController == ControllerType.GAMEPAD)
+        //{
+        //    GetComponentInChildren<Button>().Select();
+        //}
     }
 }

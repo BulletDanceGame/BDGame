@@ -2,6 +2,7 @@ using BulletDance.Audio;
 using System;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ using UnityEngine.UI;
 public class CalibrateTest : MonoBehaviour
 {
 
+    [SerializeField] private CalibrationMenu menu;
     [SerializeField] private GameObject delayMarkerPrefab;
     private List<GameObject> delayMarkers = new List<GameObject>();
     [SerializeField] private GameObject averageDelayMarker;
@@ -227,6 +229,9 @@ public class CalibrateTest : MonoBehaviour
         resetButton.SetActive(false);
         finishButton.SetActive(false);
         redoText.text = "";
+
+
+        menu.ActivateTitleButton();
     }
 
 }
