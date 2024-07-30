@@ -113,6 +113,8 @@ namespace AK
         static const AkUniqueID PLAY_COOLDOWN = 1837873573U;
         static const AkUniqueID PLAY_COOLDOWN___CUTSCENE_END = 3739785168U;
         static const AkUniqueID PLAY_COOLDOWN___CUTSCENE_START = 1744389995U;
+        static const AkUniqueID PLAY_CRITTER___SCREAM_01 = 46301939U;
+        static const AkUniqueID PLAY_CRITTER_DEATH_IMPACT = 2949765537U;
         static const AkUniqueID PLAY_CRITTER_PHASE_1_PART_4_BPM150 = 3176132612U;
         static const AkUniqueID PLAY_CRITTER_PHASE_2___INTRO = 3076083233U;
         static const AkUniqueID PLAY_CRITTER_PHASE_2___PART_1 = 2016799278U;
@@ -213,6 +215,8 @@ namespace AK
         static const AkUniqueID PLAY_PICKUPSFX = 3043903975U;
         static const AkUniqueID PLAY_RANDOMBUNTS = 3252241981U;
         static const AkUniqueID PLAY_RANDOMLANDS = 228594979U;
+        static const AkUniqueID PLAY_SMALLCRITTERAPPEAR_01 = 1968921967U;
+        static const AkUniqueID PLAY_SMALLCRITTERVOICES = 4151199969U;
         static const AkUniqueID PLAY_STARTGAME = 1444205428U;
         static const AkUniqueID PLAY_TURRETDEACTIVATE = 2177082434U;
         static const AkUniqueID PLAY_TURRETHURT = 462463419U;
@@ -422,6 +426,7 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
+        static const AkUniqueID CRITTER_FIGHT_VOICES = 917783881U;
         static const AkUniqueID MUSIC_CRITTER_PHASE1 = 690988691U;
         static const AkUniqueID MUSIC_CRITTER_PHASE2 = 690988688U;
         static const AkUniqueID MUSIC_MENU = 1598298728U;
@@ -465,21 +470,29 @@ namespace AK
         static const AkUniqueID CALIBRATION = 2230992643U;
         static const AkUniqueID CRITTER_PHASE_1 = 588994398U;
         static const AkUniqueID CRITTER_PHASE_2 = 588994397U;
-        static const AkUniqueID CUTSCENE_1___BOSS___INTRO__VOICELINES_ = 371542505U;
-        static const AkUniqueID CUTSCENE_1___BOSS___PHASE_1_TO_2__VOICELINES_ = 3852475470U;
-        static const AkUniqueID CUTSCENE_1___BOSS___PHASE_2_TO_3__VOICELINES_ = 2401645778U;
-        static const AkUniqueID CUTSCENE_1___BOSS___PHASE_3_TO_END__VOICELINES_ = 3319806915U;
-        static const AkUniqueID CUTSCENE_1___PLAYER___INTRO__VOICELINES_ = 275270701U;
-        static const AkUniqueID CUTSCENE_1___PLAYER___PHASE_1_TO_2__VOICELINES_ = 948999914U;
-        static const AkUniqueID CUTSCENE_1___PLAYER___PHASE_2_TO_3__VOICELINES_ = 1727977662U;
-        static const AkUniqueID CUTSCENE_1___PLAYER___PHASE_3_TO_END__VOICELINES_ = 1387464807U;
+        static const AkUniqueID CUTSCENE_0___BOSS___INTRO__VOICELINES_ = 3305848892U;
+        static const AkUniqueID CUTSCENE_0___BOSS___PHASE_1_TO_2__VOICELINES_ = 2760514625U;
+        static const AkUniqueID CUTSCENE_0___BOSS___PHASE_2_TO_3__VOICELINES_ = 4242640781U;
+        static const AkUniqueID CUTSCENE_0___BOSS___PHASE_3_TO_END__VOICELINES_ = 2629305008U;
+        static const AkUniqueID CUTSCENE_0___PLAYER___INTRO__VOICELINES_ = 2790859752U;
+        static const AkUniqueID CUTSCENE_0___PLAYER___PHASE_1_TO_2__VOICELINES_ = 2037622949U;
+        static const AkUniqueID CUTSCENE_0___PLAYER___PHASE_2_TO_3__VOICELINES_ = 1834043745U;
+        static const AkUniqueID CUTSCENE_0___PLAYER___PHASE_3_TO_END__VOICELINES_ = 854588220U;
+        static const AkUniqueID CUTSCENE_1___INTRO___PLAYER = 2496373637U;
         static const AkUniqueID CUTSCENE_1___VS_CRITTER__MUSIC_ = 2609687961U;
         static const AkUniqueID CUTSCENE_1___VS_YOKAI_HUNTER__GENERAL_SFX_ = 133791841U;
-        static const AkUniqueID CUTSCENE_2___PANDA__VOICELINES_ = 1270095322U;
+        static const AkUniqueID CUTSCENE_2___GETBAT___PLAYER = 1380542385U;
         static const AkUniqueID CUTSCENE_2___PANDA_MEETING__GENERAL_SFX_ = 1288875315U;
         static const AkUniqueID CUTSCENE_2___PANDA_MEETING__MUSIC_ = 2987232379U;
-        static const AkUniqueID CUTSCENE_2___PLAYER__VOICELINES_ = 487419471U;
         static const AkUniqueID CUTSCENE_2___VS_YOKAI_HUNTER__MUSIC_ = 112838762U;
+        static const AkUniqueID CUTSCENE_3___TALKINGBAT___BAT = 4032314766U;
+        static const AkUniqueID CUTSCENE_3___TALKINGBAT___PLAYER = 1178247810U;
+        static const AkUniqueID CUTSCENE_4___BOSS1___CRITTER___INTRO = 276722747U;
+        static const AkUniqueID CUTSCENE_4___BOSS1___CRITTER___OUTRO = 3526696680U;
+        static const AkUniqueID CUTSCENE_4___BOSS1___CRITTER___PHASE_1_TO_2 = 2598578530U;
+        static const AkUniqueID CUTSCENE_4___BOSS1___PLAYER___INTRO = 1428029171U;
+        static const AkUniqueID CUTSCENE_4___BOSS1___PLAYER___OUTRO = 1235671696U;
+        static const AkUniqueID CUTSCENE_4___BOSS1___PLAYER___PHASE_1_TO_2 = 629589978U;
         static const AkUniqueID DAMAGE__PLAYER_ = 1280655526U;
         static const AkUniqueID DASH = 1942692385U;
         static const AkUniqueID ENEMYACTIONS = 179567252U;

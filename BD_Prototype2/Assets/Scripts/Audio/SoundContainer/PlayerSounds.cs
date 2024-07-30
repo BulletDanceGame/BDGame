@@ -260,9 +260,19 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
             }
             else
             {
-                PlaySFX("Hit End Fight");
-                RTPCManager.Instance.ResetAttributeValue("LOW PASS", 0.000000000001f, RTPCManager.CurveTypes.linear);
-                RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 0.00000000000001f, RTPCManager.CurveTypes.linear, "VOLUME____PlayerActions__Set");
+                if(BossController.Instance.currentBoss == BossController.Boss.YokaiHunter)
+                {
+                    PlaySFX("Hit End Fight");
+                    RTPCManager.Instance.ResetAttributeValue("LOW PASS", 0.000000000001f, RTPCManager.CurveTypes.linear);
+                    RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 0.00000000000001f, RTPCManager.CurveTypes.linear, "VOLUME____PlayerActions__Set");
+                }
+                else if(BossController.Instance.currentBoss == BossController.Boss.Critter)
+                {
+                    PlaySFX("Hit Max Combo");
+                    PlaySFX("SlowMo Start");
+                    RTPCManager.Instance.ResetAttributeValue("LOW PASS", 0.000000000001f, RTPCManager.CurveTypes.linear);
+                    RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 0.00000000000001f, RTPCManager.CurveTypes.linear, "VOLUME____PlayerActions__Set");
+                }
             }
         }
 
