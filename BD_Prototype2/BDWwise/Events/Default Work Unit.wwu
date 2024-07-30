@@ -3641,6 +3641,17 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_SmallCritterAppear" ID="{F5F0FFA0-71C2-4014-8576-C2CA1A09C867}">
+					<ChildrenList>
+						<Action Name="" ID="{2134AE2F-6F47-4927-A73F-682E2713597A}" ShortID="942529440">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SmallCritterAppear" ID="{76E53DEB-C29E-4A68-9097-C3E64524A119}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
