@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="690988688" Type="User" Language="SFX" Hash="{2C9D3FAE-9C52-6CE1-D10B-FA0648A874E4}">
+		<SoundBank Id="690988688" Type="User" Language="SFX" Hash="{4A39A866-1E3D-A54F-0CAC-7D640512CA52}">
 			<ShortName>Music_Critter_Phase2</ShortName>
 			<Path>Music_Critter_Phase2.bnk</Path>
 			<Media>
@@ -105,7 +105,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="690988691" Type="User" Language="SFX" Hash="{1EFA8452-132A-067B-E527-19FFE16FD945}">
+		<SoundBank Id="690988691" Type="User" Language="SFX" Hash="{73D9F97C-7058-DDB1-7A82-4FB63124C3F3}">
 			<ShortName>Music_Critter_Phase1</ShortName>
 			<Path>Music_Critter_Phase1.bnk</Path>
 			<Media>
@@ -1305,7 +1305,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{940DB363-B5EB-FD50-48B3-334D1D7D38EA}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{AF39B7CC-007C-9E86-49D5-CE5B54CCC620}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1337,6 +1337,8 @@
 				<Bus Id="487419471" Name="Cutscene 2 - Player (voicelines)"/>
 				<Bus Id="526916458" Name="VHS"/>
 				<Bus Id="556599689" Name="brother"/>
+				<Bus Id="588994397" Name="Critter Phase 2"/>
+				<Bus Id="588994398" Name="Critter Phase 1"/>
 				<Bus Id="652387228" Name="BossActions 2 - dunno"/>
 				<Bus Id="713040514" Name="AmbienceLol"/>
 				<Bus Id="763777545" Name="Env Battle - Level 2"/>
@@ -1509,7 +1511,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1598298728" Type="User" Language="SFX" Hash="{E709AF29-421A-FF76-A530-14EA27F6DD84}">
+		<SoundBank Id="1598298728" Type="User" Language="SFX" Hash="{7A448A76-78E4-FF16-780B-8BEC989B823A}">
 			<ShortName>Music_Menu</ShortName>
 			<Path>Music_Menu.bnk</Path>
 			<Media>
@@ -1979,7 +1981,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3419004417" Type="User" Language="SFX" Hash="{32B01CFE-4CA2-BD64-F525-095BC9A18557}">
+		<SoundBank Id="3419004417" Type="User" Language="SFX" Hash="{C054C468-5D0F-0075-3CEA-4470C35880B2}">
 			<ShortName>Pause_Resume</ShortName>
 			<Path>Pause_Resume.bnk</Path>
 			<Media>
@@ -2008,7 +2010,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{F5D7447F-09A3-4B2F-E03F-1DD0221941CF}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{B86356DA-6F30-D6BB-463C-AA3DD67F6A9F}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -2180,7 +2182,7 @@
 				</File>
 				<File Id="270519013" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>CritterLand.wav</ShortName>
-					<CachePath>SFX/CritterLand_10C4C929.wem</CachePath>
+					<CachePath>SFX/CritterLand_2F4A4060.wem</CachePath>
 				</File>
 				<File Id="316381491" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 12.wav</ShortName>
@@ -2521,7 +2523,7 @@
 				</File>
 				<File Id="775574483" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>TurretTurnOffV3.wav</ShortName>
-					<CachePath>SFX/TurretTurnOffV3_CBB2F223.wem</CachePath>
+					<CachePath>SFX/TurretTurnOffV3_12D509FC.wem</CachePath>
 				</File>
 				<File Id="777613493" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>noStaminaVoica1.wav</ShortName>
@@ -2646,6 +2648,10 @@
 				<File Id="955862140" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>boss - can speak - final2.wav</ShortName>
 					<CachePath>SFX/boss - can speak - final2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="956140959" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>CritterLand.wav</ShortName>
+					<CachePath>SFX/CritterLand_10C4C929.wem</CachePath>
 				</File>
 				<File Id="963053543" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>footstep1.wav</ShortName>
@@ -3116,6 +3122,11 @@
 						<MediaRef Id="319519459"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="755861816" Name="Play_Bunt___Cutscene" DurationType="OneShot" DurationMin="1.3081278" DurationMax="1.3081278">
+					<MediaRefs>
+						<MediaRef Id="729477149"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3937135454" Name="Play_ButtonDeflectHit" MaxAttenuation="50" DurationType="OneShot" DurationMin="3.25" DurationMax="3.25">
 					<MediaRefs>
 						<MediaRef Id="553106507"/>
@@ -3192,10 +3203,11 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="3689126666" Name="Play_Jump" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2323405115" Name="Play_Landing" DurationType="OneShot" DurationMin="4.075896" DurationMax="4.075896">
+				<Event Id="2323405115" Name="Play_Landing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3615343151" Name="Play_Landing_01" DurationType="OneShot" DurationMin="4.444796" DurationMax="4.444796">
 					<MediaRefs>
-						<MediaRef Id="270519013"/>
 						<MediaRef Id="729477149"/>
+						<MediaRef Id="956140959"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2503464396" Name="Play_Missed_Dash" DurationType="OneShot" DurationMin="1.4063158" DurationMax="1.7035295">
@@ -3273,6 +3285,17 @@
 				<Event Id="3043903975" Name="Play_PickUpSFX" DurationType="OneShot" DurationMin="5.3625298" DurationMax="5.3625298">
 					<MediaRefs>
 						<MediaRef Id="506972428"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3252241981" Name="Play_randomBunts" DurationType="OneShot" DurationMin="1.1654094" DurationMax="1.3081278">
+					<MediaRefs>
+						<MediaRef Id="729477149"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="228594979" Name="Play_randomLands" DurationType="OneShot" DurationMin="4.723158" DurationMax="5.603568">
+					<MediaRefs>
+						<MediaRef Id="270519013"/>
+						<MediaRef Id="729477149"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1444205428" Name="Play_StartGame" DurationType="OneShot" DurationMin="3.7901876" DurationMax="3.7901876">
@@ -3500,5 +3523,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F6CFF2E8-32FE-3E5A-8383-FAE3E85D3944}</FileHash>
+	<FileHash>{AEAFA641-05EF-8876-C10F-45663E414500}</FileHash>
 </SoundBanksInfo>

@@ -24,7 +24,7 @@ public class MusicManager : MonoBehaviour
 
     private bool _isSoftlyStopping;
     private bool _isSoftlyCutting;
-    private float _softStopDuration = 2;
+    private float _softStopDuration = 1;
     private float _softStopTimer;
 
 
@@ -309,7 +309,7 @@ public class MusicManager : MonoBehaviour
             {
                 _isSoftlyStopping = true;
                 _softStopTimer = _softStopDuration;
-                RTPCManager.Instance.SetAttributeValue("VOLUME", 50, _softStopDuration, RTPCManager.CurveTypes.linear);
+                RTPCManager.Instance.SetAttributeValue("VOLUME", 0, _softStopDuration, RTPCManager.CurveTypes.linear);
             }
             
         }
