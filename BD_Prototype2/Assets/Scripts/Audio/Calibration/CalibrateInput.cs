@@ -314,6 +314,9 @@ public class CalibrateInput : MonoBehaviour
         continueButton.interactable = false;
 
         cali.SetActive(false);
+
+
+        menu.ActivateTitleButton();
     }
 
 }

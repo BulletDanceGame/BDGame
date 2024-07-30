@@ -317,6 +317,8 @@ public class CalibrateVisuals : MonoBehaviour
     }
 
 
+
+
     //Called through Button Press
     public void Restart()
     {
@@ -357,6 +359,9 @@ public class CalibrateVisuals : MonoBehaviour
         anim.enabled = true;
 
         RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1f, RTPCManager.CurveTypes.linear);
+
+        menu.ActivateTitleButton();
+
     }
 
 }
