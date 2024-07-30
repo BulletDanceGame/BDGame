@@ -64,7 +64,6 @@ public class CalibrateInput : MonoBehaviour
             offsetText.text = Math.Abs(offset * 1000) + "ms " + late;
             offsetText.color = textColor.Evaluate((float)offset * 5f + 0.5f);
             cali.SetActive(true);
-            continueButton.interactable = true;
         }
     }
 
@@ -103,8 +102,8 @@ public class CalibrateInput : MonoBehaviour
         if (menu.canHit)// && currentBall != null)
         {
 
-            double delay = PlayerRhythm.Instance.GetHitDelay(input);
-            PlayerRhythm.Instance.GetComponent<PlayerSounds>().PlayerSwing(PlayerRhythm.Instance.GetBeatTiming(input), Vector2.zero); //ugh
+            double delay = PlayerRhythm.Instance.GetHitDelay(ButtonInput.none);
+            PlayerRhythm.Instance.GetComponent<PlayerSounds>().PlayerSwing(PlayerRhythm.Instance.GetBeatTiming(ButtonInput.none), Vector2.zero); //ugh
 
             //do this once somewhere instead, have it as an event when switching songs?, just keep it a constant fit for the menu music?
             //*2 cause this DOESNT check for the 8th notes
@@ -194,12 +193,33 @@ public class CalibrateInput : MonoBehaviour
             //offset n marker
             if (delays.Count == 4)
             {
+                //Consistency
+                double min = 1000, max = -1000;
+                foreach (double de in delays)
+                {
+                    min = Math.Min(min, de);
+                    max = Math.Max(max, de);
+                }
+                double dist = max - min;
+                if (dist > 0.15)
+                {
+                    consistencyText.text = "Very Inconsistent, hit to the 4th beat";
+                    cali.SetActive(false);
+                }
+                else if (dist > 0.075)
+                {
+                    consistencyText.text = "Inconsistent, hit to the 4th beat";
+                    cali.SetActive(false);
+                }
+                else
+                {
+                    consistencyText.text = " ";
+                    SetOffset(averageDelay);
+                    cali.SetActive(true);
+                    continueButton.Select();
+                }
 
-                continueButton.interactable = (Math.Abs(averageDelay) < 0.06);
 
-
-
-                cali.SetActive(true);
             }
 
 
@@ -234,6 +254,7 @@ public class CalibrateInput : MonoBehaviour
     
     private void SetOffset(double offset)
     {
+        offset = (double)Math.Round((decimal)offset, 3);
         if (input == ButtonInput.swing)
         {
             PlayerRhythm.Instance.offsetSwing = offset;
@@ -243,11 +264,9 @@ public class CalibrateInput : MonoBehaviour
         {
             PlayerRhythm.Instance.offsetDash = offset;
             SaveSystem.Instance.GetData().dashOffset = offset;
-
         }
 
-        string late = (offset >= 0) ? "LATE" : "EARLY";
-        offsetText.text = Math.Round(Math.Abs(offset * 1000)) + "ms " + late;
+        offsetText.text =  (offset* 1000) + "ms";
         offsetText.color = textColor.Evaluate((float)offset * 5f + 0.5f);
     }
 
@@ -311,7 +330,7 @@ public class CalibrateInput : MonoBehaviour
 
 
         SetOffset(0);
-        continueButton.interactable = false;
+        consistencyText.text = " ";
 
         cali.SetActive(false);
 

@@ -132,7 +132,7 @@ public class MainMenu : MonoBehaviour
     {
         currentController = ControllerType.KEYBOARDANDMOUSE;
 
-        currentButton = _currentSelection.transform.parent.GetComponent<Button>();
+        currentButton = null;// _currentSelection.transform.parent.GetComponent<Button>();
         EventSystem.current.SetSelectedGameObject(null);
     }
 
