@@ -107,6 +107,7 @@ namespace AK
         static const AkUniqueID PLAY_BOSS_1___PHASE_2_5___PART_2___WIND_FIRE = 2390810227U;
         static const AkUniqueID PLAY_BOSS_1___PHASE_2___PART_2___REGULAR_BULLETS2 = 4069167034U;
         static const AkUniqueID PLAY_BOSS_1___PHASE_2___PART_4___LIGHTNING_BULLETS = 1835325240U;
+        static const AkUniqueID PLAY_BUNT___CUTSCENE = 755861816U;
         static const AkUniqueID PLAY_BUTTONDEFLECTHIT = 3937135454U;
         static const AkUniqueID PLAY_BUTTONWALKPRESS = 2226196626U;
         static const AkUniqueID PLAY_COOLDOWN = 1837873573U;
@@ -151,6 +152,7 @@ namespace AK
         static const AkUniqueID PLAY_FORESTAMB = 3960404151U;
         static const AkUniqueID PLAY_JUMP = 3689126666U;
         static const AkUniqueID PLAY_LANDING = 2323405115U;
+        static const AkUniqueID PLAY_LANDING_01 = 3615343151U;
         static const AkUniqueID PLAY_LAYER1_BATTLE_HALF_PART1_5__BPM140_ = 3076762201U;
         static const AkUniqueID PLAY_LAYER1_BATTLE_HALF_PART1_5__BPM150_ = 3177574992U;
         static const AkUniqueID PLAY_LAYER1_BATTLE_HALF_PART1__BPM120_ = 1451033943U;
@@ -209,6 +211,8 @@ namespace AK
         static const AkUniqueID PLAY_PAUSE_MUSIC = 1496939652U;
         static const AkUniqueID PLAY_PAUSESCREENMUSIC = 2239638789U;
         static const AkUniqueID PLAY_PICKUPSFX = 3043903975U;
+        static const AkUniqueID PLAY_RANDOMBUNTS = 3252241981U;
+        static const AkUniqueID PLAY_RANDOMLANDS = 228594979U;
         static const AkUniqueID PLAY_STARTGAME = 1444205428U;
         static const AkUniqueID PLAY_TURRETDEACTIVATE = 2177082434U;
         static const AkUniqueID PLAY_TURRETHURT = 462463419U;
@@ -459,6 +463,8 @@ namespace AK
         static const AkUniqueID BOSSDAMAGE_2___DUNNO = 1404235302U;
         static const AkUniqueID BROTHER = 556599689U;
         static const AkUniqueID CALIBRATION = 2230992643U;
+        static const AkUniqueID CRITTER_PHASE_1 = 588994398U;
+        static const AkUniqueID CRITTER_PHASE_2 = 588994397U;
         static const AkUniqueID CUTSCENE_1___BOSS___INTRO__VOICELINES_ = 371542505U;
         static const AkUniqueID CUTSCENE_1___BOSS___PHASE_1_TO_2__VOICELINES_ = 3852475470U;
         static const AkUniqueID CUTSCENE_1___BOSS___PHASE_2_TO_3__VOICELINES_ = 2401645778U;

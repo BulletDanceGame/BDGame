@@ -46,7 +46,40 @@
 									<ChildrenList>
 										<Bus Name="Boss - Level 1 - Yokai Hunter" ID="{6FCC059D-F515-4FF7-8F1B-29D45E6A8A41}"/>
 										<Bus Name="Boss - Level 2" ID="{0B3F4DCF-F6F2-48A3-A047-F6E1D2550FC7}"/>
-										<Bus Name="Boss - Level 1 - Critter" ID="{8C710405-B343-41EF-9E82-A53D3257E992}"/>
+										<Bus Name="Boss - Level 1 - Critter" ID="{8C710405-B343-41EF-9E82-A53D3257E992}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ChildrenList>
+												<Bus Name="Critter Phase 2" ID="{16838FE1-0555-4D6C-BB80-B8EB53BC3601}">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64">
+															<ValueList>
+																<Value>-2</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>0.5</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+												</Bus>
+												<Bus Name="Critter Phase 1" ID="{931C664F-1EFF-42AD-9148-143ECB748537}">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64">
+															<ValueList>
+																<Value>-1</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+												</Bus>
+											</ChildrenList>
+										</Bus>
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="RTPC">
