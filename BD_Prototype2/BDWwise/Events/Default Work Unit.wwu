@@ -3606,8 +3606,52 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Event Name="Play_Shit_" ID="{5BEF8A90-5E4A-4A4D-A246-42EC09F9C242}">
+							<ChildrenList>
+								<Action Name="" ID="{657F4AFA-3DEC-4928-87BA-53B4495541C5}" ShortID="615009686">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Shit!" ID="{7A5C4A68-A95D-4F27-AE56-FD41BDD6E896}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Enemy__" ID="{EC53B7C6-8201-450E-8F87-FC3F0257DC3D}">
+							<ChildrenList>
+								<Action Name="" ID="{8FADF895-A9CB-4144-BDAF-9FAFF8FA67A4}" ShortID="661204648">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy!!" ID="{190CD169-2178-4085-B379-4EF8BB253152}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_DOntMessWithUs" ID="{1153E241-D2F1-43A7-9F3C-14F27061D33E}">
+							<ChildrenList>
+								<Action Name="" ID="{88C7CD39-0115-408F-886E-6F1112D04B52}" ShortID="666635573">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DOntMessWithUs" ID="{2753ABD8-EF36-4E3F-8221-A3ED19DAD664}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_SmallCritterAppear" ID="{F5F0FFA0-71C2-4014-8576-C2CA1A09C867}">
+					<ChildrenList>
+						<Action Name="" ID="{2134AE2F-6F47-4927-A73F-682E2713597A}" ShortID="942529440">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SmallCritterAppear" ID="{76E53DEB-C29E-4A68-9097-C3E64524A119}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

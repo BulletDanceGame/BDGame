@@ -102,11 +102,10 @@ public class MangaEffect : MonoBehaviour
 
     IEnumerator Flashing()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.05f);
         LineGlitch.SetActive(true);
         transform.localScale = new Vector3(8000, 8000, 8000);
-        timeDelay = Random.Range(0.1f, 0.3f);
-        yield return new WaitForSeconds(timeDelay);
+        yield return new WaitForSeconds(0.05f);
         transform.localScale = new Vector3(0, 0, 0);
         LineGlitch.SetActive(false);
 
