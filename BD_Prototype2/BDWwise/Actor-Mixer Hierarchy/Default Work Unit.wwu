@@ -35217,19 +35217,14 @@
 											<ChildrenList>
 												<BlendContainer Name="Slomo" ID="{A08E3B92-9AD4-4563-8A4C-564E7611D8CD}" ShortID="677718749">
 													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
 														<Property Name="Pitch" Type="int32">
 															<ValueList>
-																<Value>1280</Value>
+																<Value>1470</Value>
 															</ValueList>
 														</Property>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>3</Value>
+																<Value>12</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -35413,9 +35408,9 @@
 														</AudioFileSource>
 														<AudioFileSource Name="impact10" ID="{83A85FC6-BF0D-4A54-9007-F6DD9B8752A8}">
 															<PropertyList>
-																<Property Name="FadeOutDuration" Type="Real64" Value="1.01624577067668"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="2.09701508234872"/>
 																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimEnd" Type="Real64" Value="1.01624577067668"/>
+																<Property Name="TrimEnd" Type="Real64" Value="2.3551092463301"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>impact10.wav</AudioFile>
@@ -35483,6 +35478,11 @@
 												</Sound>
 												<Sound Name="critter death" ID="{2B3549B4-1E24-4BEE-8672-7C6652D83EBD}" ShortID="553847267">
 													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Pitch" Type="int32">
 															<ValueList>
 																<Value>-510</Value>
@@ -35542,10 +35542,6 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="impact critter" ID="{A4326959-0568-416C-B7DB-E272AA0C6D4D}">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.138932330827068"/>
-																<Property Name="TrimBegin" Type="Real64" Value="0.179454260651629"/>
-															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>impact critter.wav</AudioFile>
 															<MediaIDList>
@@ -35555,6 +35551,215 @@
 													</ChildrenList>
 													<ActiveSourceList>
 														<ActiveSource Name="impact critter" ID="{A4326959-0568-416C-B7DB-E272AA0C6D4D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="death scream" ID="{D567ED81-9922-4681-A42F-E64685BDF32F}" ShortID="574204632">
+													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="death scream" ID="{4C3BC184-5719-4191-84DB-7EC6D751A94C}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0401863587540279"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.221024973147154"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>death scream.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="166184843"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="death scream" ID="{4C3BC184-5719-4191-84DB-7EC6D751A94C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="BANG" ID="{4AC64479-97EB-487F-920F-8859A4929B04}" ShortID="254212819">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>9</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>5</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="BANG" ID="{8EEE2A02-4B5A-476C-92A9-65D4A606901C}">
+															<Language>SFX</Language>
+															<AudioFile>BANG.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="638759753"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="BANG" ID="{8EEE2A02-4B5A-476C-92A9-65D4A606901C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="wrooooooooom" ID="{A68D342F-66DC-47EC-A057-13F23C8B2C21}" ShortID="244254301">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Lowpass" Type="int16">
+															<ValueList>
+																<Value>40</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>13</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>30</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>2</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="wrooooooooom" ID="{B985BEC8-A5A5-4E71-9EB9-4162F0E456E1}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="1.11176066584481"/>
+																<Property Name="FadeOutShape" Type="int16" Value="1"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="3.5869428216346"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>wrooooooooom.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="26982357"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="wrooooooooom" ID="{B985BEC8-A5A5-4E71-9EB9-4162F0E456E1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="time stop type shit (not-pitched)" ID="{8BDE02CE-9BE8-4649-95C8-AE47B7482C65}" ShortID="231905613">
+													<PropertyList>
+														<Property Name="Lowpass" Type="int16">
+															<ValueList>
+																<Value>40</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>7</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>430</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>8</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="time stop type shit (not-pitched)" ID="{BE98D0DB-09E1-49A3-9DDC-68149C35858A}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0453477443609022"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.110130236305048"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>time stop type shit (not-pitched).wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="754390640"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="time stop type shit (not-pitched)" ID="{BE98D0DB-09E1-49A3-9DDC-68149C35858A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="time stop type shit (pitched)" ID="{8B0A6AD5-D8F7-4062-88E0-7DCD9262D4C7}" ShortID="134585811">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="time stop type shit (pitched)" ID="{C720C0A8-7C1D-4FDD-B113-7A97770E2989}">
+															<Language>SFX</Language>
+															<AudioFile>time stop type shit (pitched).wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="643410706"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="time stop type shit (pitched)" ID="{C720C0A8-7C1D-4FDD-B113-7A97770E2989}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>

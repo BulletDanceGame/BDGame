@@ -1305,7 +1305,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="917783881" Type="User" Language="SFX" Hash="{6F15CD92-7280-AC03-99B0-233FE1FDC83C}">
+		<SoundBank Id="917783881" Type="User" Language="SFX" Hash="{E9160B73-90A8-4BD8-07E5-E782B3E0DDFD}">
 			<ShortName>Critter_Fight_Voices</ShortName>
 			<Path>Critter_Fight_Voices.bnk</Path>
 			<Media>
@@ -1313,9 +1313,9 @@
 					<ShortName>curse3.wav</ShortName>
 					<CachePath>SFX/curse3_10C4C929.wem</CachePath>
 				</File>
-				<File Id="229802956" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>critter death.wav</ShortName>
-					<CachePath>SFX/critter death_E965DC2B.wem</CachePath>
+				<File Id="166184843" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>death scream.wav</ShortName>
+					<CachePath>SFX/death scream_4C3BC6E4.wem</CachePath>
 				</File>
 				<File Id="372602386" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>curse5.wav</ShortName>
@@ -1339,15 +1339,23 @@
 				</File>
 				<File Id="728995294" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>impact10.wav</ShortName>
-					<CachePath>SFX/impact10_ECACA917.wem</CachePath>
+					<CachePath>SFX/impact10_3FA16858.wem</CachePath>
 				</File>
 				<File Id="729477149" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hurtHighSFX.wav</ShortName>
 					<CachePath>SFX/hurtHighSFX_10C4C929.wem</CachePath>
 				</File>
+				<File Id="754390640" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>time stop type shit (not-pitched).wav</ShortName>
+					<CachePath>SFX/time stop type shit (not-pitched)_DD79F703.wem</CachePath>
+				</File>
+				<File Id="765488241" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>slomov1.wav</ShortName>
+					<CachePath>SFX/slomov1_10C4C929.wem</CachePath>
+				</File>
 				<File Id="889786226" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>impact critter.wav</ShortName>
-					<CachePath>SFX/impact critter_27BA8ECC.wem</CachePath>
+					<CachePath>SFX/impact critter_10C4C929.wem</CachePath>
 				</File>
 				<File Id="906866579" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hurtLowSFX.wav</ShortName>
@@ -1360,10 +1368,13 @@
 						<MediaRef Id="570681607"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2949765537" Name="Play_Critter_death_impact" DurationType="OneShot" DurationMin="5.659498" DurationMax="5.659498">
+				<Event Id="2949765537" Name="Play_Critter_death_impact" DurationType="OneShot" DurationMin="6.0145583" DurationMax="6.0145583">
 					<MediaRefs>
-						<MediaRef Id="229802956"/>
+						<MediaRef Id="166184843"/>
 						<MediaRef Id="728995294"/>
+						<MediaRef Id="729477149"/>
+						<MediaRef Id="754390640"/>
+						<MediaRef Id="765488241"/>
 						<MediaRef Id="889786226"/>
 						<MediaRef Id="906866579"/>
 					</MediaRefs>
@@ -3615,5 +3626,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{60E1459C-82E4-8827-EF24-98E0C4C0DB0B}</FileHash>
+	<FileHash>{A54D12C5-E7D9-56B9-ACBA-0CB6FBC17CFE}</FileHash>
 </SoundBanksInfo>
