@@ -60,8 +60,7 @@ public class CalibrateInput : MonoBehaviour
         double offset = GetOffset();
         if (offset != (double)default)
         {
-            string late = (offset >= 0) ? "LATE" : "EARLY";
-            offsetText.text = Math.Abs(offset * 1000) + "ms " + late;
+            offsetText.text = (offset * 1000) + "ms";
             offsetText.color = textColor.Evaluate((float)offset * 5f + 0.5f);
             cali.SetActive(true);
         }

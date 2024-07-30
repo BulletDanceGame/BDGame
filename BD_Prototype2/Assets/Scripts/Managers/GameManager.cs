@@ -120,7 +120,11 @@ public class GameManager : MonoBehaviour
 
     void StartTimer()
     {
-        print(name + " " + gameObject.activeSelf);
+        if (gameObject == null)
+        {
+            return;
+        }
+
         if (!CountTime)
             StartCoroutine(UpdateTimer());
     }

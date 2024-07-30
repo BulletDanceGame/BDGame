@@ -56,6 +56,8 @@ public class CalibrationMenu : MonoBehaviour
 
         ActivateScreen(0);
 
+
+        SaveSystem.Instance.GetData().haveCalibrated = true;
         SaveSystem.Instance.Save();
 
         menu.BackFromCalibration();

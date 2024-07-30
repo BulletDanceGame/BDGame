@@ -353,7 +353,7 @@ public class PlayerRhythm : MonoBehaviour
         if ((input == ButtonInput.swing || input == ButtonInput.dash) && SceneManager.Instance._currentScene != SceneManager.Scenes.Menu)
         {
 
-            if (timeDiff < MusicManager.Instance.secondsPerBeat)
+            if (Math.Abs(timeDiff) < MusicManager.Instance.secondsPerBeat)
             {
                 print("delay: " + timeDiff + " time " + Time.timeAsDouble);
     

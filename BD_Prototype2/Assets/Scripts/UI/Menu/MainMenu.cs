@@ -17,7 +17,12 @@ public class MainMenu : MonoBehaviour
     private GameObject _currentSelection;
 
     public static Button currentButton;
+    public GameObject startNewGameButton;
+    public GameObject fakeNewGameButton;
+    public Button continueButton;
     public Button selectedMainButton;
+    public Button actualSelectedMainButton;
+    public Button fakeSelectedMainButton;
     public Button selectedCalibrationButton;
     public Button selectedOptionsButton;
     public Button selectedScoreButton;
@@ -50,8 +55,28 @@ public class MainMenu : MonoBehaviour
     {
         _updateInput = true;
 
-        _eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        if (SaveSystem.Instance.GetData().haveCalibrated == false)
+        {
+            startNewGameButton.SetActive(false);
+            fakeNewGameButton.SetActive(true);
+            selectedMainButton = fakeSelectedMainButton;
+        }
+        else
+        {
+            selectedMainButton = actualSelectedMainButton;
+        }
+
+        if (SaveSystem.Instance.GetData().haveStartedPlaying == false)
+        {
+            continueButton.interactable = false;
+        }
+
+
+
+
         currentButton = selectedMainButton;
+
+        _eventDataCurrentPosition = new PointerEventData(EventSystem.current);
 
         currentController = ControllerType.KEYBOARDANDMOUSE;
         currentController = InputManager.Instance.CurrentController;
@@ -63,6 +88,8 @@ public class MainMenu : MonoBehaviour
         if(EventManager.Instance == null) return;
         EventManager.Instance.OnGamePadUsed          += ChangeToGAMEPAD;
         EventManager.Instance.OnKeyBoardAndMouseUsed += ChangeToKBM;
+
+        
     }
 
     void OnDestroy()
@@ -173,6 +200,8 @@ public class MainMenu : MonoBehaviour
         SaveSystem.Instance.GetData().hasplayed2stcutscene= false;
         SaveSystem.Instance.GetData().hasBat= false;
 
+        SaveSystem.Instance.GetData().haveStartedPlaying = true;
+
         SaveSystem.Instance.Save();
         //SceneLoad happens in the SceneLoadButton on the Button
     }
@@ -204,11 +233,17 @@ public class MainMenu : MonoBehaviour
         mainScreen.SetActive(true);
         calibrationScreen.SetActive(false);
 
+
+        startNewGameButton.SetActive(true);
+        fakeNewGameButton.SetActive(false);
+        selectedMainButton = actualSelectedMainButton;
+
         if (currentController == ControllerType.GAMEPAD)
         {
             currentButton = selectedMainButton;
             currentButton.Select();
         }
+
     }
 
 

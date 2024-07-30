@@ -48,12 +48,12 @@ public class CalibrateTest : MonoBehaviour
 
 
         double offset = GetOffset(ButtonInput.swing);
-        input1OffsetText.text = Math.Abs(offset * 1000) + "ms";
+        input1OffsetText.text = (offset * 1000) + "ms";
         input1OffsetText.color = textColor.Evaluate((float)offset * 5f + 0.5f);
 
 
         offset = GetOffset(ButtonInput.dash);
-        input2OffsetText.text = Math.Abs(offset * 1000) + "ms";
+        input2OffsetText.text = (offset * 1000) + "ms";
         input2OffsetText.color = textColor.Evaluate((float)offset * 5f + 0.5f);
 
 
@@ -360,14 +360,14 @@ public class CalibrateTest : MonoBehaviour
         {
             PlayerRhythm.Instance.offsetSwing = offset;
             SaveSystem.Instance.GetData().swingOffset = offset;
-            input1OffsetText.text = Math.Round(Math.Abs(offset * 1000)) + "ms";
+            input1OffsetText.text = Math.Round(offset * 1000) + "ms";
             input1OffsetText.color = textColor.Evaluate((float)offset * 5f + 0.5f);
         }
         else //dash
         {
             PlayerRhythm.Instance.offsetDash = offset;
             SaveSystem.Instance.GetData().dashOffset = offset;
-            input2OffsetText.text = Math.Round(Math.Abs(offset * 1000)) + "ms";
+            input2OffsetText.text = Math.Round(offset * 1000) + "ms";
             input2OffsetText.color = textColor.Evaluate((float)offset * 5f + 0.5f);
 
         }

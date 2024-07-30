@@ -8,7 +8,12 @@ public class SaveData
 
     public int rhythmDifficulty = 0;
 
+    public bool haveCalibrated = false;
     public double visualOffset = 0, swingOffset = 0, dashOffset = 0;
+
+
+
+    public bool haveStartedPlaying = false;
 
     //Level 0 = Menu
     public int currentLevel = 0;

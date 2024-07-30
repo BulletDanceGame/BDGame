@@ -73,6 +73,10 @@ public class PauseScreen : MonoBehaviour
         _ui.interactable = false;
         _ui.blocksRaycasts = false;
 
+
+        main.SetActive(true);
+        options.SetActive(false);
+
         _resumeEvent.Post(gameObject);
         _pauseMenuSong.Stop(gameObject);
 
@@ -181,13 +185,13 @@ public class PauseScreen : MonoBehaviour
 
     public void PointerHover_FirstRaycastedObject()
     {
-        _eventDataCurrentPosition.position = _mousePosition;
-        EventSystem.current.RaycastAll(_eventDataCurrentPosition, _raycastResults);
-        if (_raycastResults.Count > 0)
-        {
-            _currentSelection = _raycastResults[0].gameObject;
-        }
+        //_eventDataCurrentPosition.position = _mousePosition;
+        //EventSystem.current.RaycastAll(_eventDataCurrentPosition, _raycastResults);
+        //if (_raycastResults.Count > 0)
+        //{
+        //    _currentSelection = _raycastResults[0].gameObject;
+        //}
 
-        _noRaycast = !(_raycastResults.Count > 0);
+        //_noRaycast = !(_raycastResults.Count > 0);
     }
 }
