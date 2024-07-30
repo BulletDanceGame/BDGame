@@ -22,6 +22,11 @@ public class CalibrationMenu : MonoBehaviour
     {
         _screens[_currentScreen].SetActive(false);
         _titleButtons[_currentScreen].color = new Color(1f,1f,1f,0.5f);
+        if(_currentScreen == 1)
+        {
+            RTPCManager.Instance.SetAttributeValue("VOLUME", 50, 1f, RTPCManager.CurveTypes.linear);
+        }
+
         _currentScreen = i;
         _screens[_currentScreen].SetActive(true);
         _titleButtons[_currentScreen].color = Color.white;
@@ -61,9 +66,10 @@ public class CalibrationMenu : MonoBehaviour
     {
         if (_currentScreen + i < 0)
         {
-            SaveSystem.Instance.Save();
+            //currently cant happen
+            //SaveSystem.Instance.Save();
             
-            menu.BackFromCalibration();
+            //menu.BackFromCalibration();
         }
         else if (_currentScreen + i >= _screens.Length)
         {

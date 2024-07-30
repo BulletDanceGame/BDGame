@@ -45,10 +45,16 @@ public class CutsceneTrigger : MonoBehaviour
 
     void StartMissCutsceen(BeatTiming hitTiming, Vector2 none)
     {
+        if (SaveSystem.Instance.GetData().misscutsceneplayed) return;
         if(hitTiming != BeatTiming.BAD) return;
         if(triggered) return;
         if(!useTrigger && firstMiss)
+        {
+            SaveSystem.Instance.GetData().misscutsceneplayed = true;
+            SaveSystem.Instance.Save();
             StartCutsceen();
+        }
+
     }
 
 }

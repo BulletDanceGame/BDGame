@@ -56,6 +56,9 @@ public class CalibrateVisuals : MonoBehaviour
 
     [SerializeField] private Gradient textColor;
 
+
+    public Button continueButton;
+
     private void OnEnable()
     {
         EventManager.Instance.OnBeatForVisuals += PlayAnimations;
@@ -66,15 +69,14 @@ public class CalibrateVisuals : MonoBehaviour
         if (visualOffset != (double)default)
         {
             stage = 2;
-            offsetText.text = visualOffset * 1000 + "ms";
 
             cali.SetActive(true);
             visuals.SetActive(false);
             title1.SetActive(false);
             title2.SetActive(false);
 
-            recomendedOffset.text = " - ";
-         
+            recomendedOffset.text = visualOffset * 1000 + "ms";
+
 
             anim.enabled = false;
         }
@@ -239,9 +241,16 @@ public class CalibrateVisuals : MonoBehaviour
                         visuals.SetActive(false);
                         title2.SetActive(false);
                         cali.SetActive(true);
-                        double diff = averageDelayWithoutV - averageDelayWithV;
-                        recomendedOffset.text = Math.Round(diff * 1000) + "ms ";
-                        recomendedOffset.color = textColor.Evaluate((float)diff * 5f + 0.5f);
+                        visualOffset = averageDelayWithoutV - averageDelayWithV;
+                        visualOffset = Math.Round(Math.Max(-0.30, Math.Min(0.30, visualOffset)), 3);
+
+                        recomendedOffset.text = Math.Round(visualOffset * 1000) + "ms ";
+                        recomendedOffset.color = textColor.Evaluate((float)visualOffset * 5f + 0.5f);
+
+                        PlayerRhythm.Instance.UpdateOffsetVisuals(visualOffset);
+                        SaveSystem.Instance.GetData().visualOffset = visualOffset;
+
+                        continueButton.Select();
                     }
 
 
@@ -347,7 +356,7 @@ public class CalibrateVisuals : MonoBehaviour
         //resetButton.SetActive(false);
 
 
-        visualOffset = (double) default;
+        visualOffset = default;
         PlayerRhythm.Instance.UpdateOffsetVisuals(visualOffset);
         SaveSystem.Instance.GetData().visualOffset = visualOffset;
 
