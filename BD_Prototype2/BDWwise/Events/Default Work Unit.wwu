@@ -3548,6 +3548,66 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="Vs Critter" ID="{109E30B5-3836-49AA-B7C0-DABC53359B40}" ShortID="656148225">
+					<ChildrenList>
+						<Folder Name="Intro" ID="{C01CDC81-7BE7-4177-B170-6C4DF98EC6BA}" ShortID="792075657">
+							<ChildrenList>
+								<Event Name="Play_SmallCritterAppear_01" ID="{2449582A-9C88-482E-A8EA-CD3C4074D87E}">
+									<ChildrenList>
+										<Action Name="" ID="{2DAB4F4F-A5AF-4A11-A1E2-F904FE378B6F}" ShortID="141695160">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="SmallCritterAppear" ID="{76E53DEB-C29E-4A68-9097-C3E64524A119}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_SmallCritterVoices" ID="{2A69DE7E-A67A-4E96-AE52-91FC661B447D}">
+									<ChildrenList>
+										<Action Name="" ID="{24705193-F77F-427D-811F-68351DD9C4B6}" ShortID="35670253">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="SmallCritterVoices" ID="{E0275738-CCCD-44A8-9A35-1D67DF54B783}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Outro" ID="{D50BDE85-217B-48CF-A8D7-47DA395342C4}" ShortID="1028919958">
+							<ChildrenList>
+								<Event Name="Play_Critter_death_impact" ID="{9676C528-5D8D-4764-90B6-B2368087D1EF}">
+									<ChildrenList>
+										<Action Name="" ID="{78E3289A-FB0E-4CB9-85BD-8F5A7E366321}" ShortID="517966318">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Critter death impact" ID="{4A39B65A-414C-4C52-828B-2E18FC726B25}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Phase 1 to 2" ID="{13E5BEAF-FFDF-4260-BE5A-A5177C2FBCC5}" ShortID="465251253">
+							<ChildrenList>
+								<Event Name="Play_Critter___Scream_01" ID="{24B75026-1687-4332-9379-F5B88D07E1E4}">
+									<ChildrenList>
+										<Action Name="" ID="{372F261B-87A4-43F4-9C5A-6C7B36713874}" ShortID="428008562">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Critter - Scream" ID="{52AACD35-0DC0-4E81-959D-58D7C159D788}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

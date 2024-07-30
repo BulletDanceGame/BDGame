@@ -421,6 +421,23 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="Critter_Fight_Voices" ID="{9BC95D55-BB12-4DD1-A8D3-9831B8EBC79F}">
+					<PropertyList>
+						<Property Name="Maximum" Type="int32">
+							<ValueList>
+								<Value>99000000</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Critter___Scream_01" ID="{24B75026-1687-4332-9379-F5B88D07E1E4}" WorkUnitID="{A0C8A417-45A5-458F-9F86-17ABD63D9B45}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Critter_death_impact" ID="{9676C528-5D8D-4764-90B6-B2368087D1EF}" WorkUnitID="{A0C8A417-45A5-458F-9F86-17ABD63D9B45}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_SmallCritterAppear_01" ID="{2449582A-9C88-482E-A8EA-CD3C4074D87E}" WorkUnitID="{A0C8A417-45A5-458F-9F86-17ABD63D9B45}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_SmallCritterVoices" ID="{2A69DE7E-A67A-4E96-AE52-91FC661B447D}" WorkUnitID="{A0C8A417-45A5-458F-9F86-17ABD63D9B45}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

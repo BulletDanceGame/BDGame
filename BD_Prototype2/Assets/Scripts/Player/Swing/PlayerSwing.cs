@@ -67,8 +67,9 @@ public class PlayerSwing : MonoBehaviour
         _playerInput      = InputManager.Instance.PlayerInput;
 
         _swingMat = _rend.material;
+        SwingActivated = SaveSystem.Instance.GetData().hasBat;
 
-        
+
 
         aimAssistCandidates = new List<AimAssistGameObject>();
 
@@ -87,7 +88,6 @@ public class PlayerSwing : MonoBehaviour
     private void Update()
     {
 
-        SwingActivated = SaveSystem.Instance.GetData().hasBat;
         RotateBox();
 
         if (aimAssistTarget != null)

@@ -41,13 +41,21 @@ public class Boss1Sounds : SoundContainer
         //Last hit SFX, Last phase
         if(isLastPhase)
         {
-            PlaySFX("Final Phase Impact");
-            RTPCManager.Instance.ResetAttributeValue("VOLUME", 0.00000000000001f, RTPCManager.CurveTypes.linear);
+            if (BossController.Instance.currentBoss == BossController.Boss.YokaiHunter)
+            {   
+                PlaySFX("Final Phase Impact");
+                RTPCManager.Instance.ResetAttributeValue("VOLUME", 0.00000000000001f, RTPCManager.CurveTypes.linear);
+            }
+            else if (BossController.Instance.currentBoss == BossController.Boss.Critter)
+            {
+                PlaySFX("Critter Final Phase Impact");
+                RTPCManager.Instance.ResetAttributeValue("VOLUME", 0.00000000000001f, RTPCManager.CurveTypes.linear);
+            }
         }
         else    //other phases
             PlaySFX("End Phase Impact");
-            
-    }
+
+        }
 }
 
 

@@ -1305,7 +1305,91 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{AF39B7CC-007C-9E86-49D5-CE5B54CCC620}">
+		<SoundBank Id="917783881" Type="User" Language="SFX" Hash="{6F15CD92-7280-AC03-99B0-233FE1FDC83C}">
+			<ShortName>Critter_Fight_Voices</ShortName>
+			<Path>Critter_Fight_Voices.bnk</Path>
+			<Media>
+				<File Id="42506454" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>curse3.wav</ShortName>
+					<CachePath>SFX/curse3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="229802956" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>critter death.wav</ShortName>
+					<CachePath>SFX/critter death_E965DC2B.wem</CachePath>
+				</File>
+				<File Id="372602386" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>curse5.wav</ShortName>
+					<CachePath>SFX/curse5_10C4C929.wem</CachePath>
+				</File>
+				<File Id="444095522" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>curse2.wav</ShortName>
+					<CachePath>SFX/curse2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="541980375" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>curse4.wav</ShortName>
+					<CachePath>SFX/curse4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="569054915" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>curse1.wav</ShortName>
+					<CachePath>SFX/curse1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="570681607" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Scream.wav</ShortName>
+					<CachePath>SFX/Scream_10C4C929.wem</CachePath>
+				</File>
+				<File Id="728995294" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>impact10.wav</ShortName>
+					<CachePath>SFX/impact10_ECACA917.wem</CachePath>
+				</File>
+				<File Id="729477149" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>hurtHighSFX.wav</ShortName>
+					<CachePath>SFX/hurtHighSFX_10C4C929.wem</CachePath>
+				</File>
+				<File Id="889786226" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>impact critter.wav</ShortName>
+					<CachePath>SFX/impact critter_27BA8ECC.wem</CachePath>
+				</File>
+				<File Id="906866579" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>hurtLowSFX.wav</ShortName>
+					<CachePath>SFX/hurtLowSFX_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="46301939" Name="Play_Critter___Scream_01" DurationType="OneShot" DurationMin="8.197125" DurationMax="8.197125">
+					<MediaRefs>
+						<MediaRef Id="570681607"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2949765537" Name="Play_Critter_death_impact" DurationType="OneShot" DurationMin="5.659498" DurationMax="5.659498">
+					<MediaRefs>
+						<MediaRef Id="229802956"/>
+						<MediaRef Id="728995294"/>
+						<MediaRef Id="889786226"/>
+						<MediaRef Id="906866579"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1968921967" Name="Play_SmallCritterAppear_01" DurationType="OneShot" DurationMin="1.1654094" DurationMax="1.5673125">
+					<MediaRefs>
+						<MediaRef Id="42506454"/>
+						<MediaRef Id="372602386"/>
+						<MediaRef Id="444095522"/>
+						<MediaRef Id="541980375"/>
+						<MediaRef Id="569054915"/>
+						<MediaRef Id="729477149"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4151199969" Name="Play_SmallCritterVoices" DurationType="OneShot" DurationMin="0.7581177" DurationMax="1.5673125">
+					<MediaRefs>
+						<MediaRef Id="42506454"/>
+						<MediaRef Id="372602386"/>
+						<MediaRef Id="444095522"/>
+						<MediaRef Id="541980375"/>
+						<MediaRef Id="569054915"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{7A3709FE-4658-73CB-F06D-E00F54179FA6}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1326,44 +1410,46 @@
 				<Bus Id="133791841" Name="Cutscene 1 - Vs Yokai Hunter (general sfx)"/>
 				<Bus Id="179567252" Name="EnemyActions"/>
 				<Bus Id="209238542" Name="Env Battle - Level 1 - Critter"/>
-				<Bus Id="275270701" Name="Cutscene 1 - Player - Intro (voicelines)"/>
+				<Bus Id="276722747" Name="Cutscene 4 - Boss1 - Critter - Intro"/>
 				<Bus Id="320588660" Name="Level 1 - Critter"/>
 				<Bus Id="340258651" Name="5 Cutscene SFX"/>
-				<Bus Id="371542505" Name="Cutscene 1 - Boss - Intro (voicelines)"/>
 				<Bus Id="376748577" Name="4 Environment Roaming"/>
 				<Bus Id="393239870" Name="SFX"/>
 				<Bus Id="423108842" Name="2 Boss Battle"/>
 				<Bus Id="458562295" Name="3 Environment Battle"/>
-				<Bus Id="487419471" Name="Cutscene 2 - Player (voicelines)"/>
 				<Bus Id="526916458" Name="VHS"/>
 				<Bus Id="556599689" Name="brother"/>
 				<Bus Id="588994397" Name="Critter Phase 2"/>
 				<Bus Id="588994398" Name="Critter Phase 1"/>
+				<Bus Id="629589978" Name="Cutscene 4 - Boss1 - Player - Phase 1 to 2"/>
 				<Bus Id="652387228" Name="BossActions 2 - dunno"/>
 				<Bus Id="713040514" Name="AmbienceLol"/>
 				<Bus Id="763777545" Name="Env Battle - Level 2"/>
 				<Bus Id="764174633" Name="Level 1 - Tutorial"/>
-				<Bus Id="948999914" Name="Cutscene 1 - Player - Phase 1 to 2 (voicelines)"/>
+				<Bus Id="854588220" Name="Cutscene 0 - Player - Phase 3 to End (voicelines)"/>
 				<Bus Id="1021167356" Name="3 Boss &amp; Enemy SFX"/>
 				<Bus Id="1082482811" Name="Navigation"/>
 				<Bus Id="1105659027" Name="General - AudibleOnSpeedUp"/>
 				<Bus Id="1137508701" Name="Env Roaming - Level 1"/>
 				<Bus Id="1137508702" Name="Env Roaming - Level 2"/>
-				<Bus Id="1270095322" Name="Cutscene 2 - Panda (voicelines)"/>
+				<Bus Id="1178247810" Name="Cutscene 3 - TalkingBat - Player"/>
+				<Bus Id="1235671696" Name="Cutscene 4 - Boss1 - Player - Outro"/>
 				<Bus Id="1280655526" Name="Damage (player)"/>
 				<Bus Id="1288875315" Name="Cutscene 2 - Panda Meeting (general sfx)"/>
-				<Bus Id="1387464807" Name="Cutscene 1 - Player - Phase 3 to End (voicelines)"/>
+				<Bus Id="1380542385" Name="Cutscene 2 - GEtBat - Player"/>
 				<Bus Id="1404235302" Name="BossDamage 2 - dunno"/>
+				<Bus Id="1428029171" Name="Cutscene 4 - Boss1 - Player - Intro"/>
 				<Bus Id="1498105075" Name="Env Battle - Level 1 - Tutorial"/>
 				<Bus Id="1521187885" Name="StartGame"/>
 				<Bus Id="1718386686" Name="Title Screen - Main Menu"/>
-				<Bus Id="1727977662" Name="Cutscene 1 - Player - Phase 2 to 3 (voicelines)"/>
 				<Bus Id="1728450328" Name="Actions - Dynamic"/>
 				<Bus Id="1751930956" Name="Boss - Level 1 - Critter"/>
 				<Bus Id="1764718042" Name="1 Menu SFX"/>
 				<Bus Id="1794747505" Name="BossDamage"/>
+				<Bus Id="1834043745" Name="Cutscene 0 - Player - Phase 2 to 3 (voicelines)"/>
 				<Bus Id="1879435608" Name="EnemyDamage"/>
 				<Bus Id="1942692385" Name="Dash"/>
+				<Bus Id="2037622949" Name="Cutscene 0 - Player - Phase 1 to 2 (voicelines)"/>
 				<Bus Id="2129636626" Name="Movement"/>
 				<Bus Id="2224127838" Name="4 Ambient SFX Components"/>
 				<Bus Id="2230992643" Name="Calibration"/>
@@ -1372,13 +1458,17 @@
 				<Bus Id="2337630999" Name="Boss - Level 2"/>
 				<Bus Id="2384369890" Name="1 Menus"/>
 				<Bus Id="2385628198" Name="Footsteps"/>
-				<Bus Id="2401645778" Name="Cutscene 1 - Boss - Phase 2 to 3 (voicelines)"/>
+				<Bus Id="2496373637" Name="Cutscene 1 - Intro - Player"/>
 				<Bus Id="2516623221" Name="2 Player SFX"/>
 				<Bus Id="2522218687" Name="BossActions"/>
 				<Bus Id="2597336356" Name="swings"/>
+				<Bus Id="2598578530" Name="Cutscene 4 - Boss1 - Critter - Phase 1 to 2"/>
 				<Bus Id="2609687961" Name="Cutscene 1 - Vs Critter (music)"/>
+				<Bus Id="2629305008" Name="Cutscene 0 - Boss - Phase 3 to End (voicelines)"/>
 				<Bus Id="2730119150" Name="Outdoors"/>
+				<Bus Id="2760514625" Name="Cutscene 0 - Boss - Phase 1 to 2 (voicelines)"/>
 				<Bus Id="2778722962" Name="General - InaudibleOnSpeedUp"/>
+				<Bus Id="2790859752" Name="Cutscene 0 - Player - Intro (voicelines)"/>
 				<Bus Id="2964830718" Name="BossDamage 1 - Yokai Hunter"/>
 				<Bus Id="2987232379" Name="Cutscene 2 - Panda Meeting (music)"/>
 				<Bus Id="3062523241" Name="Miss"/>
@@ -1386,16 +1476,16 @@
 				<Bus Id="3151285457" Name="Text Voices"/>
 				<Bus Id="3163449996" Name="Level 1 - Facility"/>
 				<Bus Id="3232033907" Name="hits"/>
+				<Bus Id="3305848892" Name="Cutscene 0 - Boss - Intro (voicelines)"/>
 				<Bus Id="3316078816" Name="TurretSFX"/>
-				<Bus Id="3319806915" Name="Cutscene 1 - Boss - Phase 3 to End (voicelines)"/>
 				<Bus Id="3332220694" Name="Actions"/>
 				<Bus Id="3420765916" Name="Level 1"/>
 				<Bus Id="3420765919" Name="Level 2"/>
 				<Bus Id="3522418091" Name="Moooosic - only here to look at for when implementing max combo"/>
+				<Bus Id="3526696680" Name="Cutscene 4 - Boss1 - Critter - Outro"/>
 				<Bus Id="3545305787" Name="Actions - Set"/>
 				<Bus Id="3675259263" Name="6 Misc"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
-				<Bus Id="3852475470" Name="Cutscene 1 - Boss - Phase 1 to 2 (voicelines)"/>
 				<Bus Id="3991942870" Name="Music">
 					<PluginRefs>
 						<ShareSets>
@@ -1405,7 +1495,9 @@
 						</ShareSets>
 					</PluginRefs>
 				</Bus>
+				<Bus Id="4032314766" Name="Cutscene 3 - TalkingBat - Bat"/>
 				<Bus Id="4213797070" Name="5 Cutscene"/>
+				<Bus Id="4242640781" Name="Cutscene 0 - Boss - Phase 2 to 3 (voicelines)"/>
 			</Busses>
 			<GameParameters>
 				<GameParameter Id="86843165" Name="HIGH_PASS____CutsceneSFX__Voicelines"/>
@@ -2010,7 +2102,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{B86356DA-6F30-D6BB-463C-AA3DD67F6A9F}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{36F8C167-D739-3805-85E1-A26CE27A9C81}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -3523,5 +3615,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{AEAFA641-05EF-8876-C10F-45663E414500}</FileHash>
+	<FileHash>{60E1459C-82E4-8827-EF24-98E0C4C0DB0B}</FileHash>
 </SoundBanksInfo>
