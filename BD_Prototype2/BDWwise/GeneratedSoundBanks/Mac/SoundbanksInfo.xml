@@ -303,7 +303,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{81FE1F48-C99C-989F-8564-04036FB436BF}">
+		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{D83C5DEB-414C-AAEF-C2DD-C7AEFF530C9F}">
 			<ShortName>Music_TutorialAndLevel1_Part1</ShortName>
 			<Path>Music_TutorialAndLevel1_Part1.bnk</Path>
 			<Media>
@@ -1305,7 +1305,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{544C5981-B035-FA54-F78C-8A6746C56CF8}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{940DB363-B5EB-FD50-48B3-334D1D7D38EA}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1384,6 +1384,7 @@
 				<Bus Id="3151285457" Name="Text Voices"/>
 				<Bus Id="3163449996" Name="Level 1 - Facility"/>
 				<Bus Id="3232033907" Name="hits"/>
+				<Bus Id="3316078816" Name="TurretSFX"/>
 				<Bus Id="3319806915" Name="Cutscene 1 - Boss - Phase 3 to End (voicelines)"/>
 				<Bus Id="3332220694" Name="Actions"/>
 				<Bus Id="3420765916" Name="Level 1"/>
@@ -1508,7 +1509,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1598298728" Type="User" Language="SFX" Hash="{DDD43054-E32D-A7CC-50BF-6E0D4FFEB2CE}">
+		<SoundBank Id="1598298728" Type="User" Language="SFX" Hash="{E709AF29-421A-FF76-A530-14EA27F6DD84}">
 			<ShortName>Music_Menu</ShortName>
 			<Path>Music_Menu.bnk</Path>
 			<Media>
@@ -1528,6 +1529,10 @@
 					<ShortName>clap.wav</ShortName>
 					<CachePath>SFX/clap_D79FB2B7.wem</CachePath>
 				</File>
+				<File Id="737231083" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1_Part3.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1_Part3_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="932650277" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Metronome - STYLISH - Bass.wav</ShortName>
 					<CachePath>SFX/Metronome - STYLISH - Bass_D79FB2B7.wem</CachePath>
@@ -1535,6 +1540,10 @@
 				<File Id="949009166" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Metronome - STYLISH - electricPiano.wav</ShortName>
 					<CachePath>SFX/Metronome - STYLISH - electricPiano_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="973935565" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1_Part1.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1_Part1_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="978023960" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Metronome - STYLISH - Drum.wav</ShortName>
@@ -1551,9 +1560,11 @@
 						<MediaRef Id="978023960"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2002857628" Name="PauseScreenMusic____PLAY" DurationType="OneShot" DurationMin="9.933042" DurationMax="9.933042">
+				<Event Id="2002857628" Name="PauseScreenMusic____PLAY" DurationType="OneShot" DurationMin="23.674097" DurationMax="23.674097">
 					<MediaRefs>
 						<MediaRef Id="506300702"/>
+						<MediaRef Id="737231083"/>
+						<MediaRef Id="973935565"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1814921978" Name="TrailerAudio____PLAY" DurationType="OneShot" DurationMin="44.01067" DurationMax="44.01067">
@@ -1968,7 +1979,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3419004417" Type="User" Language="SFX" Hash="{02ECEFA3-FF77-A556-3DFA-CE26559CF6BC}">
+		<SoundBank Id="3419004417" Type="User" Language="SFX" Hash="{32B01CFE-4CA2-BD64-F525-095BC9A18557}">
 			<ShortName>Pause_Resume</ShortName>
 			<Path>Pause_Resume.bnk</Path>
 			<Media>
@@ -1976,18 +1987,28 @@
 					<ShortName>Env1-VegZone1_Part2.wav</ShortName>
 					<CachePath>SFX/Env1-VegZone1_Part2_D79FB2B7.wem</CachePath>
 				</File>
+				<File Id="737231083" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1_Part3.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1_Part3_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="973935565" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1_Part1.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1_Part1_D79FB2B7.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
 				<Event Id="3092587493" Name="Pause" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1496939652" Name="Play_Pause_Music" DurationType="OneShot" DurationMin="9.933042" DurationMax="9.933042">
+				<Event Id="1496939652" Name="Play_Pause_Music" DurationType="OneShot" DurationMin="23.674097" DurationMax="23.674097">
 					<MediaRefs>
 						<MediaRef Id="506300702"/>
+						<MediaRef Id="737231083"/>
+						<MediaRef Id="973935565"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{DEA5C137-8B4A-6C3B-B6C0-692EE07D9678}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{F5D7447F-09A3-4B2F-E03F-1DD0221941CF}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -2287,6 +2308,10 @@
 					<ShortName>Phase 2 to 3\player - ikuze2.wav</ShortName>
 					<CachePath>SFX/Phase 2 to 3/player - ikuze2_10C4C929.wem</CachePath>
 				</File>
+				<File Id="506300702" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Env1-VegZone1_Part2.wav</ShortName>
+					<CachePath>SFX/Env1-VegZone1_Part2_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="506972428" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>pick up sfx.wav</ShortName>
 					<CachePath>SFX/pick up sfx_F15963BA.wem</CachePath>
@@ -2494,6 +2519,10 @@
 					<ShortName>boss - you mongrels - final2.wav</ShortName>
 					<CachePath>SFX/boss - you mongrels - final2_10C4C929.wem</CachePath>
 				</File>
+				<File Id="775574483" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TurretTurnOffV3.wav</ShortName>
+					<CachePath>SFX/TurretTurnOffV3_CBB2F223.wem</CachePath>
+				</File>
 				<File Id="777613493" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>noStaminaVoica1.wav</ShortName>
 					<CachePath>SFX/noStaminaVoica1_F52D722E.wem</CachePath>
@@ -2605,10 +2634,6 @@
 				<File Id="932775821" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>cooldown - definitive (without initial smash).wav</ShortName>
 					<CachePath>SFX/cooldown - definitive (without initial smash)_10C4C929.wem</CachePath>
-				</File>
-				<File Id="937558655" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>TurretTurnOffV3.wav</ShortName>
-					<CachePath>SFX/TurretTurnOffV3_10C4C929.wem</CachePath>
 				</File>
 				<File Id="941388862" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>squeak4.wav</ShortName>
@@ -3240,6 +3265,11 @@
 						<MediaRef Id="236322927"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2239638789" Name="Play_PauseScreenMusic" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="506300702"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3043903975" Name="Play_PickUpSFX" DurationType="OneShot" DurationMin="5.3625298" DurationMax="5.3625298">
 					<MediaRefs>
 						<MediaRef Id="506972428"/>
@@ -3255,10 +3285,10 @@
 						<MediaRef Id="469284414"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="462463419" Name="Play_TurretHurt" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.361604" DurationMax="5.361604">
+				<Event Id="462463419" Name="Play_TurretHurt" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.3118167" DurationMax="5.3118167">
 					<MediaRefs>
 						<MediaRef Id="729477149"/>
-						<MediaRef Id="937558655"/>
+						<MediaRef Id="775574483"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="536518992" Name="Play_TurretShot" MaxAttenuation="30" DurationType="OneShot" DurationMin="0.9017917" DurationMax="0.9017917">
@@ -3470,5 +3500,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BD41A8E8-B20F-080C-F67D-18EE4F0FDD1D}</FileHash>
+	<FileHash>{F6CFF2E8-32FE-3E5A-8383-FAE3E85D3944}</FileHash>
 </SoundBanksInfo>

@@ -38,7 +38,7 @@
 										<Action Name="" ID="{0C97C41F-2D11-4C9F-B6A8-EB5301343955}" ShortID="444076219">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="PauseScreenMusic" ID="{FF4BAB53-7E56-4A05-8A18-7B490E173F35}" WorkUnitID="{8DC8C28D-1D78-418C-87BD-2BF45D3F8625}"/>
+													<ObjectRef Name="PauseScreenMusic - old" ID="{FF4BAB53-7E56-4A05-8A18-7B490E173F35}" WorkUnitID="{8DC8C28D-1D78-418C-87BD-2BF45D3F8625}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -3057,7 +3057,7 @@
 										<EventActionException Name="" ID="{2D2C8DEB-B476-433A-9661-F1F23AFB45A3}">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="PauseScreenMusic" ID="{FF4BAB53-7E56-4A05-8A18-7B490E173F35}" WorkUnitID="{8DC8C28D-1D78-418C-87BD-2BF45D3F8625}"/>
+													<ObjectRef Name="PauseScreenMusic - old" ID="{FF4BAB53-7E56-4A05-8A18-7B490E173F35}" WorkUnitID="{8DC8C28D-1D78-418C-87BD-2BF45D3F8625}"/>
 												</Reference>
 											</ReferenceList>
 										</EventActionException>
@@ -3081,7 +3081,7 @@
 								<Action Name="" ID="{60BB386E-2AC6-4113-AF8F-CB2653ADD791}" ShortID="152931682">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="PauseScreenMusic" ID="{FF4BAB53-7E56-4A05-8A18-7B490E173F35}" WorkUnitID="{8DC8C28D-1D78-418C-87BD-2BF45D3F8625}"/>
+											<ObjectRef Name="PauseScreenMusic - old" ID="{FF4BAB53-7E56-4A05-8A18-7B490E173F35}" WorkUnitID="{8DC8C28D-1D78-418C-87BD-2BF45D3F8625}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -3488,6 +3488,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="fade in 2" ID="{66FFD299-11BF-4B9F-81CE-C236DEDD1984}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_PauseScreenMusic" ID="{A8169440-6F4A-412A-93BB-375B638AD61F}">
+					<ChildrenList>
+						<Action Name="" ID="{77FB849E-1A68-4BDE-91B5-9C42E67BB72D}" ShortID="584707232">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PauseScreenMusic" ID="{EC0601F6-A806-4898-AF8D-758F97BB6960}" WorkUnitID="{8DC8C28D-1D78-418C-87BD-2BF45D3F8625}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -94,7 +94,7 @@ public class Options : MonoBehaviour
         if (difficulty == RhythmDifficulty.normal)
         {
             _rhythmDifficultyText1.text = "Normal";
-            _rhythmDifficultyText2.text = "The recommended way to play the game, you need to play by pressing to the rhythm";
+            _rhythmDifficultyText2.text = "The recommended way to play the game. You need to play by pressing to the rhythm.";
         }
         else if (difficulty == RhythmDifficulty.easy)
         {
@@ -104,7 +104,7 @@ public class Options : MonoBehaviour
         else if (difficulty == RhythmDifficulty.removed)
         {
             _rhythmDifficultyText1.text = "No Rhythm";
-            _rhythmDifficultyText2.text = "This is no longer a rhythm game. This is NOT the intended way to play this game. But hey, rhythm games aren't for everyone";
+            _rhythmDifficultyText2.text = "This is no longer a rhythm game. This is NOT the intended way to play this game. But hey, rhythm games aren't for everyone.";
         }
     }
 

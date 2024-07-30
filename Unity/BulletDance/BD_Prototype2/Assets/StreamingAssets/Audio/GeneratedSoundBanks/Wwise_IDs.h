@@ -207,6 +207,7 @@ namespace AK
         static const AkUniqueID PLAY_NAVUPDOWN = 3540793454U;
         static const AkUniqueID PLAY_OUTRO___CRITTER = 3597802153U;
         static const AkUniqueID PLAY_PAUSE_MUSIC = 1496939652U;
+        static const AkUniqueID PLAY_PAUSESCREENMUSIC = 2239638789U;
         static const AkUniqueID PLAY_PICKUPSFX = 3043903975U;
         static const AkUniqueID PLAY_STARTGAME = 1444205428U;
         static const AkUniqueID PLAY_TURRETDEACTIVATE = 2177082434U;
@@ -505,6 +506,7 @@ namespace AK
         static const AkUniqueID SWINGS = 2597336356U;
         static const AkUniqueID TEXT_VOICES = 3151285457U;
         static const AkUniqueID TITLE_SCREEN___MAIN_MENU = 1718386686U;
+        static const AkUniqueID TURRETSFX = 3316078816U;
         static const AkUniqueID VHS = 526916458U;
         static const AkUniqueID VOICELINES = 2292057722U;
     } // namespace BUSSES

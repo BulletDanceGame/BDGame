@@ -373,7 +373,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-28</Value>
+														<Value>-25</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -16832,7 +16832,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-7</Value>
+												<Value>-5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -20155,7 +20155,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -28180,7 +28180,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>6</Value>
+												<Value>3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -28223,7 +28223,7 @@
 				</Folder>
 				<Folder Name="3 Boss and Enemy SFX" ID="{A195D9D0-F658-4047-844D-711DD5FFAF57}" ShortID="284101095">
 					<ChildrenList>
-						<Folder Name="General SFX" ID="{196B54DF-EB3E-4E9A-B66F-15DA6126689E}" ShortID="632223192">
+						<Folder Name="dont touch this secret place" ID="{196B54DF-EB3E-4E9A-B66F-15DA6126689E}" ShortID="632223192">
 							<ChildrenList>
 								<Sound Name="FirstTurret - Turn on and Alert" ID="{5713F784-B486-4580-A119-A4278C64282B}" ShortID="449701620">
 									<ReferenceList>
@@ -29111,7 +29111,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+											<ObjectRef Name="EnemyActions" ID="{A4BDF6E6-79F1-4200-AF70-2220E2C4B6DB}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -29396,7 +29396,7 @@
 										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="49"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>-4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -29408,7 +29408,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+											<ObjectRef Name="TurretSFX" ID="{4029E3D0-B775-4AF0-996A-CACE2DAE5A74}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -29508,10 +29508,14 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="TurretTurnOffV3" ID="{E6C2E37A-363D-4C59-A717-85248D71A3B8}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.011765649585842"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0497872511005929"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>TurretTurnOffV3.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="937558655"/>
+														<MediaID ID="775574483"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
@@ -29521,14 +29525,14 @@
 										</Sound>
 										<BlendContainer Name="Bunt" ID="{2AA01C2E-1D3B-46AD-B0E8-F32D7AD67569}" ShortID="735329671">
 											<PropertyList>
-												<Property Name="InitialDelay" Type="Real64">
-													<ValueList>
-														<Value>0.1</Value>
-													</ValueList>
-												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>1000</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>8</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -29583,7 +29587,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>-5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -29595,7 +29599,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+											<ObjectRef Name="TurretSFX" ID="{4029E3D0-B775-4AF0-996A-CACE2DAE5A74}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -29726,7 +29730,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+											<ObjectRef Name="TurretSFX" ID="{4029E3D0-B775-4AF0-996A-CACE2DAE5A74}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -29854,10 +29858,15 @@
 												<Value>100</Value>
 											</ValueList>
 										</Property>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-0.5</Value>
+											</ValueList>
+										</Property>
 										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="30"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-1</Value>
+												<Value>-2</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -29869,7 +29878,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+											<ObjectRef Name="EnemyActions" ID="{A4BDF6E6-79F1-4200-AF70-2220E2C4B6DB}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -29916,7 +29925,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-2</Value>
+														<Value>6</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>

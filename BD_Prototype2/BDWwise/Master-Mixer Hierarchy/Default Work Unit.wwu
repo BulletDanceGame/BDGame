@@ -199,7 +199,12 @@
 											<PropertyList>
 												<Property Name="BusVolume" Type="Real64">
 													<ValueList>
-														<Value>-6</Value>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-0.5</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -831,9 +836,25 @@
 								</Bus>
 								<Bus Name="1 Menus" ID="{B19A143B-6F91-430C-B31F-5FE1BD04FA32}">
 									<ChildrenList>
-										<Bus Name="Pause" ID="{9ADC78B9-AC51-40EA-A303-B625E5D88D32}"/>
+										<Bus Name="Pause" ID="{9ADC78B9-AC51-40EA-A303-B625E5D88D32}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+										</Bus>
 										<Bus Name="Title Screen - Main Menu" ID="{6C3E86C1-B21F-446A-A157-F35212CD66ED}"/>
-										<Bus Name="Calibration" ID="{592A5886-371D-4E39-92C6-9D02761FFF61}"/>
+										<Bus Name="Calibration" ID="{592A5886-371D-4E39-92C6-9D02761FFF61}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+										</Bus>
 									</ChildrenList>
 									<StateInfo>
 										<StateGroupList>
@@ -1098,13 +1119,21 @@
 									<PropertyList>
 										<Property Name="BusVolume" Type="Real64">
 											<ValueList>
-												<Value>-3</Value>
+												<Value>1</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
 									<ChildrenList>
 										<Bus Name="Navigation" ID="{965ABECB-B6BC-4037-95AE-BFCF450BD1B9}"/>
-										<Bus Name="StartGame" ID="{13AC955D-8FDA-4542-AD95-44ED7B1EC9B8}"/>
+										<Bus Name="StartGame" ID="{13AC955D-8FDA-4542-AD95-44ED7B1EC9B8}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+										</Bus>
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="RTPC">
@@ -2580,8 +2609,241 @@
 												</ObjectList>
 											</ObjectLists>
 										</Bus>
-										<Bus Name="EnemyActions" ID="{A4BDF6E6-79F1-4200-AF70-2220E2C4B6DB}"/>
-										<Bus Name="EnemyDamage" ID="{47BD9A80-1EA1-48C0-94DD-F0B710FE73D8}"/>
+										<Bus Name="EnemyActions" ID="{A4BDF6E6-79F1-4200-AF70-2220E2C4B6DB}">
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{975F5DB1-1024-4094-93E5-1B440FD1EF48}" ShortID="895553129">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="VOLUME____PlayerActions__Dynamic" ID="{D944A161-3574-45FC-8EC6-9C0FBD9BC657}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{65BEC9F2-E1A6-42F6-A823-B6583235A1CC}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100</XPos>
+																						<YPos>200</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{E555F5E8-18D5-4AA3-B6EA-6266510A930A}" ShortID="752091584">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="LOW_PASS____PlayerActions__Dynamic" ID="{B9A97B03-2F6F-42A1-8023-AC9AA1008F95}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{F3B7F9F9-9CE7-44B3-902F-D2AB97D59451}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="65537"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100</XPos>
+																						<YPos>100</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</Bus>
+										<Bus Name="EnemyDamage" ID="{47BD9A80-1EA1-48C0-94DD-F0B710FE73D8}">
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{5C958933-6F2F-470D-85D1-A7FA73D47755}" ShortID="792655358">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="VOLUME____PlayerActions__Dynamic" ID="{D944A161-3574-45FC-8EC6-9C0FBD9BC657}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{C461485A-311A-4B4D-AB4F-E9C5C2B13CC0}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100</XPos>
+																						<YPos>200</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{B2A225F9-936F-4911-9381-A1D4C4A003C3}" ShortID="231802894">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="LOW_PASS____PlayerActions__Dynamic" ID="{B9A97B03-2F6F-42A1-8023-AC9AA1008F95}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{D42088BB-D418-4F46-B2B7-FFA633585469}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="65537"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100</XPos>
+																						<YPos>100</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</Bus>
+										<Bus Name="TurretSFX" ID="{4029E3D0-B775-4AF0-996A-CACE2DAE5A74}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{BB89311C-3420-4CD7-A816-771C28849905}" ShortID="310026002">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="VOLUME____PlayerActions__Dynamic" ID="{D944A161-3574-45FC-8EC6-9C0FBD9BC657}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{49875887-4069-48C7-9E30-CD5B14C74CE0}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100</XPos>
+																						<YPos>200</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{2E41AE80-4017-41A4-A57F-2F26775AC0CB}" ShortID="1057436341">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="LOW_PASS____PlayerActions__Dynamic" ID="{B9A97B03-2F6F-42A1-8023-AC9AA1008F95}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{3B5CB43A-59B6-48F2-B783-6C82393435D2}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="65537"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100</XPos>
+																						<YPos>100</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</Bus>
 									</ChildrenList>
 								</Bus>
 								<Bus Name="6 Misc" ID="{C25B3616-A1DC-4E8B-A1FA-08B6F2C9E7D5}"/>
