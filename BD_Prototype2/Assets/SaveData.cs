@@ -23,4 +23,5 @@ public class SaveData
     public bool hasplayed2stcutscene;
 
     public bool bossdeath;
+    public bool misscutsceneplayed=false;
 }

@@ -6,46 +6,28 @@ public class OnSceneLoaded : MonoBehaviour
 {
     public GameObject cutscene1trigger;
     public GameObject cutscene2trigger;
-    public GameObject BossFightTrigger;
-    public GameObject CritterRemoverer;
 
     [Tooltip("For debugging, should be false in build")]
     public bool dontMovePlayerOnStart;
 
     private void Start()
     {
-        if (cutscene1trigger)
-        {
-            if (SaveSystem.Instance.GetData().hasplayed1stcutscene)
-            {
-                cutscene1trigger.SetActive(false);
-            }
-        }
-        if (cutscene2trigger)
-        {
-            if (SaveSystem.Instance.GetData().hasplayed1stcutscene)
-            {
-                cutscene2trigger.SetActive(false);
-            }
-        }
-        
+        cutscene1trigger.SetActive(true);
+        cutscene1trigger.SetActive(true);
+
+
         SaveSystem.Instance.GetData().currentLevel = SceneManager.GetActiveScene().buildIndex;
         print("SAVED THE CURRENT LEVEL: " + SaveSystem.Instance.GetData().currentLevel);
         SaveSystem.Instance.Save();
 
         if (dontMovePlayerOnStart == false)
         {
-            Invoke("PlayerPos", 1f);
+            Invoke("PlayerPos", 1.5f);
         }
     }
 
     private void PlayerPos()
     {
-        if(SaveSystem.Instance.GetData().bossdeath)
-        {
-            BossFightTrigger.SetActive(false);
-            CritterRemoverer.SetActive(false);
-        }
 
         Vector3 Checkpointposition;
         
@@ -55,5 +37,27 @@ public class OnSceneLoaded : MonoBehaviour
 
 
         UnitManager.Instance.GetPlayer().transform.position = Checkpointposition;
+    }
+
+    private void Update()
+    {
+        //print(SaveSystem.Instance.GetData().hasBat);
+
+        if (cutscene1trigger)
+        {
+            if (SaveSystem.Instance.GetData().hasplayed1stcutscene)
+            {
+                cutscene1trigger.SetActive(false);
+            }
+        }
+        if (cutscene2trigger)
+        {
+            if (SaveSystem.Instance.GetData().hasplayed2stcutscene)
+            {
+                cutscene2trigger.SetActive(false);
+            }
+        }
+
+        
     }
 }
