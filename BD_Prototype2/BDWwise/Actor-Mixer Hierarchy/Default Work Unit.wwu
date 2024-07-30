@@ -34450,13 +34450,6 @@
 								<Folder Name="Intro" ID="{1C4D2D68-5C93-49CC-8580-83C0913F1504}" ShortID="390604646">
 									<ChildrenList>
 										<BlendContainer Name="SmallCritterAppear" ID="{76E53DEB-C29E-4A68-9097-C3E64524A119}" ShortID="569146045">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>2</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -35138,6 +35131,1336 @@
 													</ChildrenList>
 													<ActiveSourceList>
 														<ActiveSource Name="Enemy" ID="{7915C791-D211-4926-B0F8-238B2238F988}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="DOntMessWithUs" ID="{2753ABD8-EF36-4E3F-8221-A3ED19DAD664}" ShortID="820789513">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="SmallCritterVoices" ID="{CCF2D592-E36A-40E5-AFE8-1054128595CF}" ShortID="1007821205">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Cutscene 4 - Boss1 - Critter - Intro" ID="{7C907F0B-860B-4457-972C-B491FF1C25AE}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="curse3_01" ID="{D882FA21-64E9-4467-BB0C-8EA85AD97215}" ShortID="1011957519">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse3" ID="{370E64EE-2775-42A2-83F6-92D75FB9B43B}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse3.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="42506454"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse3" ID="{370E64EE-2775-42A2-83F6-92D75FB9B43B}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="randomBunts" ID="{1EF39F8F-7F98-49CD-90B4-9B851D7B674D}" ShortID="264262108">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<BlendContainer Name="Bunt - Cutscene" ID="{C189D641-51F3-4185-B4A8-5255464A69FF}" ShortID="531111724">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>900</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-20</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="hurtHighSFX" ID="{68264510-3C44-423D-A9FE-788BC96F43BD}" ShortID="988512834">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																		</Reference>
+																		<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																			<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="hurtHighSFX" ID="{1C0D1E6B-FB72-474B-85E2-F9EC25C64496}">
+																			<Language>SFX</Language>
+																			<AudioFile>hurtHighSFX.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="729477149"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="hurtHighSFX" ID="{1C0D1E6B-FB72-474B-85E2-F9EC25C64496}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</BlendContainer>
+														<BlendContainer Name="Bunt - Cutscene_01" ID="{EF2ABA31-01A4-41EA-BD50-52104019F2A3}" ShortID="798955064">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>950</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-20</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="hurtHighSFX" ID="{335E5BF7-037B-4EB1-B6DF-C1A966F5BCC0}" ShortID="443191804">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																		</Reference>
+																		<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																			<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="hurtHighSFX" ID="{92DEAAC0-C61C-4D54-ABF3-C726EEE5DFF4}">
+																			<Language>SFX</Language>
+																			<AudioFile>hurtHighSFX.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="729477149"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="hurtHighSFX" ID="{92DEAAC0-C61C-4D54-ABF3-C726EEE5DFF4}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</BlendContainer>
+														<BlendContainer Name="Bunt - Cutscene_02" ID="{E39D8E5F-73AF-441F-89D0-4919D2D510CA}" ShortID="948985428">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>1000</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-20</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="hurtHighSFX" ID="{B04C6B3C-EB54-4123-A0CA-645477F88ACD}" ShortID="341505467">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																		</Reference>
+																		<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																			<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="hurtHighSFX" ID="{5543285C-A766-44C0-936A-CFDF22FA7484}">
+																			<Language>SFX</Language>
+																			<AudioFile>hurtHighSFX.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="729477149"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="hurtHighSFX" ID="{5543285C-A766-44C0-936A-CFDF22FA7484}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</BlendContainer>
+														<BlendContainer Name="Bunt - Cutscene_03" ID="{B8D955FA-8468-4DB9-8979-94AEF6F5C7D7}" ShortID="180453938">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>1050</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-20</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="hurtHighSFX" ID="{3C608443-B21E-4B62-A4D6-6E9401EA31FD}" ShortID="749821368">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																		</Reference>
+																		<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																			<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="hurtHighSFX" ID="{B94703AF-51CA-42CD-B6ED-E9CC229963D4}">
+																			<Language>SFX</Language>
+																			<AudioFile>hurtHighSFX.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="729477149"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="hurtHighSFX" ID="{B94703AF-51CA-42CD-B6ED-E9CC229963D4}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</BlendContainer>
+														<BlendContainer Name="Bunt - Cutscene_04" ID="{243C948B-4CE6-48A6-A373-1179C62F8FA5}" ShortID="646907766">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>1100</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-20</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="hurtHighSFX" ID="{5E10F472-AB6C-41E2-92E0-EDBEDCCF9373}" ShortID="649676574">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																		</Reference>
+																		<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																			<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="hurtHighSFX" ID="{5950762C-092A-41B4-964A-ACB19272AFCD}">
+																			<Language>SFX</Language>
+																			<AudioFile>hurtHighSFX.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="729477149"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="hurtHighSFX" ID="{5950762C-092A-41B4-964A-ACB19272AFCD}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</BlendContainer>
+													</ChildrenList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Shit!" ID="{7A5C4A68-A95D-4F27-AE56-FD41BDD6E896}" ShortID="319764393">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="SmallCritterVoices" ID="{709750A7-F590-4207-825E-9411C978E04E}" ShortID="165803991">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Cutscene 4 - Boss1 - Critter - Intro" ID="{7C907F0B-860B-4457-972C-B491FF1C25AE}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="curse4_01" ID="{94CB6974-2424-4A22-9A71-348314B1AC62}" ShortID="8713499">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse4" ID="{5D1BD9B7-EB43-4E2A-94E0-AA64763DE9A9}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse4.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="541980375"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse4" ID="{5D1BD9B7-EB43-4E2A-94E0-AA64763DE9A9}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="randomBunts" ID="{C0B6CD6A-B9FA-4642-BE20-FC5331129A04}" ShortID="720786594">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<BlendContainer Name="Bunt - Cutscene" ID="{9C30F2DC-3069-4640-9E51-A17DA3BD76F6}" ShortID="949523875">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>900</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-20</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="hurtHighSFX" ID="{557FF1E2-9CDC-40BF-9E3C-E491B9421395}" ShortID="494322857">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																		</Reference>
+																		<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																			<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="hurtHighSFX" ID="{C3CCEA14-9A4A-4036-B36A-DD1DD66F0D1E}">
+																			<Language>SFX</Language>
+																			<AudioFile>hurtHighSFX.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="729477149"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="hurtHighSFX" ID="{C3CCEA14-9A4A-4036-B36A-DD1DD66F0D1E}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</BlendContainer>
+														<BlendContainer Name="Bunt - Cutscene_01" ID="{85F3C029-383B-4E47-8E93-09BBA0F5BF7E}" ShortID="880098507">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>950</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-20</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="hurtHighSFX" ID="{28C5AD5B-6556-4FFD-9666-09E65EBD1C34}" ShortID="391287486">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																		</Reference>
+																		<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																			<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="hurtHighSFX" ID="{88CE6435-30BA-4CC2-8551-0705C6948E55}">
+																			<Language>SFX</Language>
+																			<AudioFile>hurtHighSFX.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="729477149"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="hurtHighSFX" ID="{88CE6435-30BA-4CC2-8551-0705C6948E55}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</BlendContainer>
+														<BlendContainer Name="Bunt - Cutscene_02" ID="{BCD77182-846F-4D6A-A6BB-010E17DE532B}" ShortID="1059783011">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>1000</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-20</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="hurtHighSFX" ID="{1B73A550-183D-4EB5-9B50-C780F599BC97}" ShortID="846352044">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																		</Reference>
+																		<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																			<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="hurtHighSFX" ID="{A94FC408-C508-4568-BBC4-774153107590}">
+																			<Language>SFX</Language>
+																			<AudioFile>hurtHighSFX.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="729477149"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="hurtHighSFX" ID="{A94FC408-C508-4568-BBC4-774153107590}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</BlendContainer>
+														<BlendContainer Name="Bunt - Cutscene_03" ID="{2E59DE14-45AA-4BC2-8C64-189876AEE3D4}" ShortID="564282251">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>1050</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-20</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="hurtHighSFX" ID="{A50F607E-6BDB-41FE-8BA6-8C9D30C8518D}" ShortID="371849386">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																		</Reference>
+																		<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																			<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="hurtHighSFX" ID="{EFA016BD-DB33-47F9-8661-33760BD62F9E}">
+																			<Language>SFX</Language>
+																			<AudioFile>hurtHighSFX.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="729477149"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="hurtHighSFX" ID="{EFA016BD-DB33-47F9-8661-33760BD62F9E}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</BlendContainer>
+														<BlendContainer Name="Bunt - Cutscene_04" ID="{957331D8-A8C0-4ABF-AB15-D4943E756F5D}" ShortID="45097964">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>1100</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-20</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="hurtHighSFX" ID="{13024882-A3CE-4893-978D-AD350D5D9BAE}" ShortID="815422225">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																		</Reference>
+																		<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																			<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="hurtHighSFX" ID="{AEC502C9-5880-4A77-9A0B-0FA31F106D0D}">
+																			<Language>SFX</Language>
+																			<AudioFile>hurtHighSFX.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="729477149"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="hurtHighSFX" ID="{AEC502C9-5880-4A77-9A0B-0FA31F106D0D}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</BlendContainer>
+													</ChildrenList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Enemy!!" ID="{190CD169-2178-4085-B379-4EF8BB253152}" ShortID="608126749">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="SmallCritterVoices" ID="{14E87E7B-EF1D-4AB8-B0E5-58D32504C814}" ShortID="761441293">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Cutscene 4 - Boss1 - Critter - Intro" ID="{7C907F0B-860B-4457-972C-B491FF1C25AE}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="curse1" ID="{69073178-7C3A-41DB-A135-42233BFB8FA4}" ShortID="1033997119">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>200</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse1" ID="{C7CEEA2C-0B19-4F68-8B01-318575FF57EA}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="569054915"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse1" ID="{C7CEEA2C-0B19-4F68-8B01-318575FF57EA}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="curse2" ID="{4DA1EDF8-20D5-4EAA-B7A3-BD5699ABD12B}" ShortID="520722180">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>200</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse2" ID="{ECD83F3B-7980-4629-B6D2-82F175112AE1}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse2.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="444095522"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse2" ID="{ECD83F3B-7980-4629-B6D2-82F175112AE1}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="curse3" ID="{87BF8DBA-6F62-4964-84D3-0FD6939035EA}" ShortID="217478563">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>200</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse3" ID="{BF1E03D4-9998-4902-AD04-09757BA7C19D}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse3.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="42506454"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse3" ID="{BF1E03D4-9998-4902-AD04-09757BA7C19D}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty" ID="{6F71E046-850D-47BC-9039-0692A09B71FE}" ShortID="820209062">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse5" ID="{F777D5C3-EDE7-4A96-B2FF-353A51BE10B8}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="372602386"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse5" ID="{F777D5C3-EDE7-4A96-B2FF-353A51BE10B8}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_01" ID="{21B6A398-BC5A-41AA-B044-2D91736B9DDD}" ShortID="36196910">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse5" ID="{D83BDC6F-C415-4746-8F58-D2CB80693DE6}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="372602386"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse5" ID="{D83BDC6F-C415-4746-8F58-D2CB80693DE6}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_02" ID="{2621DA89-688A-4390-80B5-1B33E9FFB89E}" ShortID="107884296">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse5" ID="{532BD3FE-5868-4FEE-9ED0-72EBB4BB71ED}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="372602386"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse5" ID="{532BD3FE-5868-4FEE-9ED0-72EBB4BB71ED}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_03" ID="{6CD2CC26-BD46-4A13-9306-BB76D5DA054D}" ShortID="164851971">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse5" ID="{0969C65B-581C-4FD0-BD39-215B3D4F4658}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="372602386"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse5" ID="{0969C65B-581C-4FD0-BD39-215B3D4F4658}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="curse1_01" ID="{E699576F-472A-4A94-A7D0-49A5ACD56AFA}" ShortID="139079206">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse1" ID="{16630598-8917-4808-B9CF-9D2A3FDC0CFA}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="569054915"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse1" ID="{16630598-8917-4808-B9CF-9D2A3FDC0CFA}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="curse2_01" ID="{7FA9502F-16E3-43B5-A6B1-B896D1F51D9A}" ShortID="674635928">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse2" ID="{9686CF8E-290B-412D-A3DA-1CB59020EBA0}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse2.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="444095522"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse2" ID="{9686CF8E-290B-412D-A3DA-1CB59020EBA0}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="randomBunts" ID="{080007B8-DECA-4F2D-A661-CB42C687F723}" ShortID="411235546">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>7</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<BlendContainer Name="Bunt - Cutscene" ID="{16B4AC2B-2997-4631-8956-99CE20C0E022}" ShortID="781742414">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>900</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-20</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="hurtHighSFX" ID="{AFF9212E-54BC-46D9-AC2B-E623812A615A}" ShortID="1012951649">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																		</Reference>
+																		<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																			<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="hurtHighSFX" ID="{082C6C92-80A2-4B5F-8C30-9AC9DDD68BFC}">
+																			<Language>SFX</Language>
+																			<AudioFile>hurtHighSFX.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="729477149"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="hurtHighSFX" ID="{082C6C92-80A2-4B5F-8C30-9AC9DDD68BFC}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</BlendContainer>
+														<BlendContainer Name="Bunt - Cutscene_01" ID="{19B59862-0A01-43E0-AC49-BDDEBD37F7DF}" ShortID="155770513">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>950</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-20</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="hurtHighSFX" ID="{AEE00244-125B-4846-94C1-91193ED76B36}" ShortID="153242853">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																		</Reference>
+																		<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																			<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="hurtHighSFX" ID="{E45BF3BE-239E-4BC8-A782-C8CF66FB2C0D}">
+																			<Language>SFX</Language>
+																			<AudioFile>hurtHighSFX.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="729477149"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="hurtHighSFX" ID="{E45BF3BE-239E-4BC8-A782-C8CF66FB2C0D}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</BlendContainer>
+														<BlendContainer Name="Bunt - Cutscene_02" ID="{FB766D38-117A-4BB3-965D-E44A860CA991}" ShortID="963882038">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>1000</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-20</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="hurtHighSFX" ID="{3353E492-E2A3-4E5C-80F6-AC97D14380C4}" ShortID="133681243">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																		</Reference>
+																		<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																			<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="hurtHighSFX" ID="{A4BDA25E-389D-4E69-BB72-E9966F28A2D4}">
+																			<Language>SFX</Language>
+																			<AudioFile>hurtHighSFX.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="729477149"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="hurtHighSFX" ID="{A4BDA25E-389D-4E69-BB72-E9966F28A2D4}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</BlendContainer>
+														<BlendContainer Name="Bunt - Cutscene_03" ID="{260DA6A2-4654-491D-B708-F00AD44EFB97}" ShortID="879177804">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>1050</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-20</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="hurtHighSFX" ID="{E4A9EF75-414E-4CC2-8962-298F6819C6DF}" ShortID="2712246">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																		</Reference>
+																		<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																			<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="hurtHighSFX" ID="{397B34AF-B52A-43D0-B130-5470A0E30E54}">
+																			<Language>SFX</Language>
+																			<AudioFile>hurtHighSFX.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="729477149"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="hurtHighSFX" ID="{397B34AF-B52A-43D0-B130-5470A0E30E54}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</BlendContainer>
+														<BlendContainer Name="Bunt - Cutscene_04" ID="{11E0AD11-843E-4AE7-9D78-19D4ACCA4F8D}" ShortID="456685536">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>1100</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-20</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="hurtHighSFX" ID="{4F052041-5CFD-4C11-BA17-F4576F35155C}" ShortID="199703673">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																		</Reference>
+																		<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																			<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="hurtHighSFX" ID="{12A7E89F-AFE3-4C81-96C3-D45B40B9CF62}">
+																			<Language>SFX</Language>
+																			<AudioFile>hurtHighSFX.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="729477149"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="hurtHighSFX" ID="{12A7E89F-AFE3-4C81-96C3-D45B40B9CF62}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</BlendContainer>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<Sound Name="curse5" ID="{453BC19F-FBD8-446D-83D4-E608E0A8112C}" ShortID="478246453">
+													<PropertyList>
+														<Property Name="InitialDelay" Type="Real64">
+															<ValueList>
+																<Value>0.2</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>200</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="curse5" ID="{ACA36B3F-0A39-4710-A057-E8870E8E1B27}">
+															<Language>SFX</Language>
+															<AudioFile>curse5.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="372602386"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="curse5" ID="{ACA36B3F-0A39-4710-A057-E8870E8E1B27}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="curse5_01" ID="{DD037E1B-3D5C-43B6-999C-8EBC53C29389}" ShortID="931318761">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>-380</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>4</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="curse5" ID="{C318D6CC-D995-4735-AF9C-50C01F68EBB4}">
+															<Language>SFX</Language>
+															<AudioFile>curse5.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="372602386"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="curse5" ID="{C318D6CC-D995-4735-AF9C-50C01F68EBB4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="curse3_01" ID="{2C9AD7C2-44CB-41E9-AC04-1D21C985F48C}" ShortID="252067902">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="curse3" ID="{90E6EFFC-A7C1-4EED-96F8-D9D11030873C}">
+															<Language>SFX</Language>
+															<AudioFile>curse3.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="42506454"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="curse3" ID="{90E6EFFC-A7C1-4EED-96F8-D9D11030873C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="curse3_02" ID="{C5379629-E023-44B5-A934-B5069CBA165C}" ShortID="1051609837">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>-350</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="curse3" ID="{71E483F7-CBCD-4811-AA98-2490709EB423}">
+															<Language>SFX</Language>
+															<AudioFile>curse3.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="42506454"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="curse3" ID="{71E483F7-CBCD-4811-AA98-2490709EB423}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="curse1" ID="{2BEDC301-7715-4002-A265-A1074D4CA13A}" ShortID="237555878">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>200</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="curse1" ID="{54D4661A-A147-40A8-B1F1-6A557697E209}">
+															<Language>SFX</Language>
+															<AudioFile>curse1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="569054915"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="curse1" ID="{54D4661A-A147-40A8-B1F1-6A557697E209}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="curse1_01" ID="{D287FD77-4222-49D9-BD7E-87510DFF3E3B}" ShortID="503890830">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>-210</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-2</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="curse1" ID="{D5FA08AF-3E1E-43DB-96A7-D259F24216A7}">
+															<Language>SFX</Language>
+															<AudioFile>curse1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="569054915"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="curse1" ID="{D5FA08AF-3E1E-43DB-96A7-D259F24216A7}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
