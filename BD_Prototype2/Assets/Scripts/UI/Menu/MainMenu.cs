@@ -167,6 +167,8 @@ public class MainMenu : MonoBehaviour
         GameManager.Instance.ChangeGameState(GameState.NEWGAME);
         SaveSystem.Instance.GetData().currentCheckpointX = -1;
         SaveSystem.Instance.GetData().currentCheckpointY = -1;
+        SaveSystem.Instance.GetData().misscutsceneplayed=false;
+        SaveSystem.Instance.GetData().bossdeath = false;
         SaveSystem.Instance.GetData().hasplayed1stcutscene= false;
         SaveSystem.Instance.GetData().hasplayed2stcutscene= false;
         SaveSystem.Instance.GetData().hasBat= false;
