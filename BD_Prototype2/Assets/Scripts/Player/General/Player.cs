@@ -148,11 +148,23 @@ public class Player : MonoBehaviour
 
     void OnPause()
     {
-        if(isDead)
+        if (isDead)
             return;
+
+        EventManager.Instance.OnPause += Pause;
         EventManager.Instance.PausePressed();
-        pauseActions = !pauseActions;
     }
+
+    //fun right :))) (its because resume can be called from here and from PauseScreen and i cant be fucking bothered)
+    void Pause(bool p)
+    {
+        pauseActions = p;
+        if (!p)
+        {
+            EventManager.Instance.OnPause -= Pause;
+        }
+    }
+
 
 
     void SuccessBeatCheck()

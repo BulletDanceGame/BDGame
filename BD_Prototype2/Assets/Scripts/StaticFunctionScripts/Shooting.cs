@@ -44,7 +44,9 @@ public class Shooting : MonoBehaviour
         if (UnitManager.Instance.GetPlayer() != null)
         {
             //aim at player
-            shootingPattern.up = UnitManager.Instance.GetPlayer().transform.position - shooter.position;
+            Vector3 dir = UnitManager.Instance.GetPlayer().transform.position - shooter.position;
+            dir.z = 0;
+            shootingPattern.up = dir;
         }
 
         ShootInDirection(shootingPattern, bulletPrefabs);

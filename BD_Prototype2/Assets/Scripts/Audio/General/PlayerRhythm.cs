@@ -12,10 +12,17 @@ public enum BeatTiming
 
 public enum ButtonInput { swing, dash, none };
 
+public enum RhythmDifficulty { normal, easy, removed};
 
 public class PlayerRhythm : MonoBehaviour
 {
     public static PlayerRhythm Instance;
+
+    public RhythmDifficulty rhythmDifficulty { get; set; }
+
+    public double perfectHitTime { get; set; }
+    public double okayHitTime { get; set; }
+
 
     public double offsetVisuals { get; set; }
     public double offsetSwing { get; set; }
@@ -43,10 +50,6 @@ public class PlayerRhythm : MonoBehaviour
     private VisualUpdate[] visualUpdates = new VisualUpdate[5];
     
 
-    //for hitting 
-    [SerializeField] private double _perfectHitTime;
-    [SerializeField] private double _okayHitTime;
-
 
     private void Awake()
     {
@@ -68,6 +71,18 @@ public class PlayerRhythm : MonoBehaviour
         offsetSwing = data.swingOffset;
         offsetDash = data.dashOffset;
         offsetVisuals = data.visualOffset;
+
+        rhythmDifficulty = (RhythmDifficulty)data.rhythmDifficulty;
+        if (rhythmDifficulty == RhythmDifficulty.normal)
+        {
+            perfectHitTime = 0.06;
+            okayHitTime = 0.12;
+        }
+        else if (rhythmDifficulty == RhythmDifficulty.easy)
+        {
+            perfectHitTime = 0.1;
+            okayHitTime = 0.2;
+        }
     }
 
 
@@ -281,11 +296,11 @@ public class PlayerRhythm : MonoBehaviour
 
         BeatTiming timing;
 
-        if (Math.Abs(timeDiff) <= _perfectHitTime)
+        if (Math.Abs(timeDiff) <= perfectHitTime)
         {
             timing = BeatTiming.PERFECT;
         }
-        else if (Math.Abs(timeDiff) <= _okayHitTime)
+        else if (Math.Abs(timeDiff) <= okayHitTime)
         {
             timing = BeatTiming.GOOD;
         }
@@ -306,6 +321,11 @@ public class PlayerRhythm : MonoBehaviour
 
     public double GetHitDelay(ButtonInput input)
     {
+        if (rhythmDifficulty == RhythmDifficulty.removed)
+        {
+            return 0;
+        }
+
         if (_timesToHit.Count == 0)
         {
             return 9999;

@@ -6,6 +6,8 @@ public class SaveData
     public int maxFPS = 120;
     public int volume = 100;
 
+    public int rhythmDifficulty = 0;
+
     public double visualOffset = 0, swingOffset = 0, dashOffset = 0;
 
     //Level 0 = Menu
