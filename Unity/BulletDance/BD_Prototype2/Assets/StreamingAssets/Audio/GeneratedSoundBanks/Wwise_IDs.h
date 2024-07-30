@@ -107,6 +107,7 @@ namespace AK
         static const AkUniqueID PLAY_BOSS_1___PHASE_2_5___PART_2___WIND_FIRE = 2390810227U;
         static const AkUniqueID PLAY_BOSS_1___PHASE_2___PART_2___REGULAR_BULLETS2 = 4069167034U;
         static const AkUniqueID PLAY_BOSS_1___PHASE_2___PART_4___LIGHTNING_BULLETS = 1835325240U;
+        static const AkUniqueID PLAY_BUNT___CUTSCENE = 755861816U;
         static const AkUniqueID PLAY_BUTTONDEFLECTHIT = 3937135454U;
         static const AkUniqueID PLAY_BUTTONWALKPRESS = 2226196626U;
         static const AkUniqueID PLAY_COOLDOWN = 1837873573U;
@@ -210,6 +211,7 @@ namespace AK
         static const AkUniqueID PLAY_PAUSE_MUSIC = 1496939652U;
         static const AkUniqueID PLAY_PAUSESCREENMUSIC = 2239638789U;
         static const AkUniqueID PLAY_PICKUPSFX = 3043903975U;
+        static const AkUniqueID PLAY_RANDOMBUNTS = 3252241981U;
         static const AkUniqueID PLAY_RANDOMLANDS = 228594979U;
         static const AkUniqueID PLAY_STARTGAME = 1444205428U;
         static const AkUniqueID PLAY_TURRETDEACTIVATE = 2177082434U;

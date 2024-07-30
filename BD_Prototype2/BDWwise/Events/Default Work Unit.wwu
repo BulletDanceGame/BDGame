@@ -3526,6 +3526,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Bunt___Cutscene" ID="{FE47D50B-697E-4A5A-B8AF-5B12DD0E6BA9}">
+					<ChildrenList>
+						<Action Name="" ID="{F9E986B4-6346-4767-AE23-1F9C5EC4B202}" ShortID="24318614">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bunt - Cutscene" ID="{ABE33113-BE42-43CB-8855-2BB51A6DE04B}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_randomBunts" ID="{467C6AD0-6F65-4FA2-BABD-53BF61847968}">
+					<ChildrenList>
+						<Action Name="" ID="{E28A8805-F4F8-4397-A0C4-E4D998649B03}" ShortID="1038982481">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="randomBunts" ID="{C400F11A-84A7-4913-B793-A68C4783C62D}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
