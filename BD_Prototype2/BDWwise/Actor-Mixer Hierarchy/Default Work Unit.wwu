@@ -26154,6 +26154,13 @@
 									</ChildrenList>
 								</BlendContainer>
 								<RandomSequenceContainer Name="randomBunts" ID="{C400F11A-84A7-4913-B793-A68C4783C62D}" ShortID="1050116579">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -34450,16 +34457,45 @@
 								<Folder Name="Intro" ID="{1C4D2D68-5C93-49CC-8580-83C0913F1504}" ShortID="390604646">
 									<ChildrenList>
 										<BlendContainer Name="SmallCritterAppear" ID="{76E53DEB-C29E-4A68-9097-C3E64524A119}" ShortID="569146045">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>14</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+													<ObjectRef Name="Actions - Dynamic" ID="{7FE5CDA2-16AE-4E17-A00E-BBABAEFF1BD9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<RandomSequenceContainer Name="SmallCritterVoices" ID="{E0275738-CCCD-44A8-9A35-1D67DF54B783}" ShortID="525487386">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+														<Property Name="InitialDelay" Type="Real64">
+															<ValueList>
+																<Value>0.1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-5</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -34840,9 +34876,364 @@
 																<ActiveSource Name="curse5" ID="{4ED80883-A22A-45F8-8B77-420D29A14F73}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
+														<Sound Name="empty_04" ID="{0D221C29-D126-45E2-A18E-B1CAA987D2CC}" ShortID="506530517">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse5" ID="{C2A17ACE-1A32-4975-B67E-286697B0FB84}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="372602386"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse5" ID="{C2A17ACE-1A32-4975-B67E-286697B0FB84}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_05" ID="{DD2485D0-3E86-4D0B-BC00-B531ED8195C3}" ShortID="507737237">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse5" ID="{E5A81CE9-CF30-4EA7-AC98-7EC9A64B9CFC}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="372602386"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse5" ID="{E5A81CE9-CF30-4EA7-AC98-7EC9A64B9CFC}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_06" ID="{645222B5-0D69-4D47-BFBE-1448AAAD68C9}" ShortID="768723710">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse5" ID="{BD42697F-9B69-4366-8CA8-1D3079C9E81D}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="372602386"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse5" ID="{BD42697F-9B69-4366-8CA8-1D3079C9E81D}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_07" ID="{E2B2363D-B4E5-49B3-B5A0-D3F224961CD1}" ShortID="549963680">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse5" ID="{E38FE868-4416-462E-B256-5E716BA2772B}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="372602386"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse5" ID="{E38FE868-4416-462E-B256-5E716BA2772B}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_08" ID="{BE95ECF2-C3D9-43C8-B913-98C13B913ECF}" ShortID="891355127">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse5" ID="{FDADB8CC-45B8-423B-A4AE-C6C694C14336}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="372602386"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse5" ID="{FDADB8CC-45B8-423B-A4AE-C6C694C14336}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_09" ID="{256F4EC3-D85E-4C79-A3AF-D112E100EF13}" ShortID="464808342">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse5" ID="{066CD441-8A55-4AEE-A3FB-D035240A996E}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="372602386"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse5" ID="{066CD441-8A55-4AEE-A3FB-D035240A996E}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_10" ID="{68844E39-10DA-4E45-A434-86FCD891A334}" ShortID="473866117">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse5" ID="{2AB8F030-9B06-4FB5-AD63-2FE1BB6196E5}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="372602386"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse5" ID="{2AB8F030-9B06-4FB5-AD63-2FE1BB6196E5}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_11" ID="{8C6C6B78-74AE-4AEF-8259-762AE45AC28E}" ShortID="488643427">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse5" ID="{1BBACB5F-F3A5-4026-B197-E807226C9214}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="372602386"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse5" ID="{1BBACB5F-F3A5-4026-B197-E807226C9214}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_12" ID="{9D98A40B-45E3-46A4-ADF0-337F44BC43CF}" ShortID="30570762">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse5" ID="{056657BC-44A7-4C3A-AF31-4B9DB39A5482}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="372602386"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse5" ID="{056657BC-44A7-4C3A-AF31-4B9DB39A5482}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_13" ID="{5E43D050-3BB3-4F87-A870-F613CC7B09B0}" ShortID="313793088">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse5" ID="{16ED763B-DA31-44FA-8B33-5355A3C383B5}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="372602386"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse5" ID="{16ED763B-DA31-44FA-8B33-5355A3C383B5}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_14" ID="{7525D526-C455-422E-A0FF-E81BC8BCAA56}" ShortID="981309395">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse5" ID="{BF5D66E6-E3A6-469E-BF69-57C97686CE72}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="372602386"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse5" ID="{BF5D66E6-E3A6-469E-BF69-57C97686CE72}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="empty_15" ID="{77408C63-8D9D-4AE3-AA7C-FCD1C49649F9}" ShortID="96535496">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-96</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="curse5" ID="{8AB289DE-4135-4019-8654-253207245C3C}">
+																	<Language>SFX</Language>
+																	<AudioFile>curse5.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="372602386"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="curse5" ID="{8AB289DE-4135-4019-8654-253207245C3C}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
 													</ChildrenList>
 												</RandomSequenceContainer>
 												<RandomSequenceContainer Name="randomBunts" ID="{3A649031-F56E-4B39-8B93-156DE0E5ABAF}" ShortID="682766741">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>8</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -35146,6 +35537,13 @@
 											</ReferenceList>
 											<ChildrenList>
 												<RandomSequenceContainer Name="SmallCritterVoices" ID="{CCF2D592-E36A-40E5-AFE8-1054128595CF}" ShortID="1007821205">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -35180,6 +35578,13 @@
 													</ChildrenList>
 												</RandomSequenceContainer>
 												<RandomSequenceContainer Name="randomBunts" ID="{1EF39F8F-7F98-49CD-90B4-9B851D7B674D}" ShortID="264262108">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -35449,6 +35854,13 @@
 											</ReferenceList>
 											<ChildrenList>
 												<RandomSequenceContainer Name="SmallCritterVoices" ID="{709750A7-F590-4207-825E-9411C978E04E}" ShortID="165803991">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -35483,6 +35895,13 @@
 													</ChildrenList>
 												</RandomSequenceContainer>
 												<RandomSequenceContainer Name="randomBunts" ID="{C0B6CD6A-B9FA-4642-BE20-FC5331129A04}" ShortID="720786594">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -35742,6 +36161,13 @@
 											</ChildrenList>
 										</BlendContainer>
 										<BlendContainer Name="Enemy!!" ID="{190CD169-2178-4085-B379-4EF8BB253152}" ShortID="608126749">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -36019,9 +36445,14 @@
 												</RandomSequenceContainer>
 												<RandomSequenceContainer Name="randomBunts" ID="{080007B8-DECA-4F2D-A661-CB42C687F723}" ShortID="411235546">
 													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>6</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>7</Value>
+																<Value>9</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -36283,6 +36714,11 @@
 												</RandomSequenceContainer>
 												<Sound Name="curse5" ID="{453BC19F-FBD8-446D-83D4-E608E0A8112C}" ShortID="478246453">
 													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
 														<Property Name="InitialDelay" Type="Real64">
 															<ValueList>
 																<Value>0.2</Value>
@@ -36317,6 +36753,11 @@
 												</Sound>
 												<Sound Name="curse5_01" ID="{DD037E1B-3D5C-43B6-999C-8EBC53C29389}" ShortID="931318761">
 													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Pitch" Type="int32">
 															<ValueList>
 																<Value>-380</Value>
@@ -36350,6 +36791,13 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="curse3_01" ID="{2C9AD7C2-44CB-41E9-AC04-1D21C985F48C}" ShortID="252067902">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -36373,6 +36821,11 @@
 												</Sound>
 												<Sound Name="curse3_02" ID="{C5379629-E023-44B5-A934-B5069CBA165C}" ShortID="1051609837">
 													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Pitch" Type="int32">
 															<ValueList>
 																<Value>-350</Value>
@@ -36402,6 +36855,11 @@
 												</Sound>
 												<Sound Name="curse1" ID="{2BEDC301-7715-4002-A265-A1074D4CA13A}" ShortID="237555878">
 													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Pitch" Type="int32">
 															<ValueList>
 																<Value>200</Value>
@@ -36431,6 +36889,11 @@
 												</Sound>
 												<Sound Name="curse1_01" ID="{D287FD77-4222-49D9-BD7E-87510DFF3E3B}" ShortID="503890830">
 													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Pitch" Type="int32">
 															<ValueList>
 																<Value>-210</Value>
@@ -36473,7 +36936,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-3</Value>
+														<Value>-6</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -36504,6 +36967,12 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Scream" ID="{BA45E17F-6140-412D-90A2-7649F09E6762}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0623746562403027"/>
+																<Property Name="FadeOutShape" Type="int16" Value="1"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="6.70839430237551"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Scream.wav</AudioFile>
 															<MediaIDList>

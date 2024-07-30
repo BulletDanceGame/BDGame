@@ -218,6 +218,7 @@ namespace AK
         static const AkUniqueID PLAY_RANDOMBUNTS = 3252241981U;
         static const AkUniqueID PLAY_RANDOMLANDS = 228594979U;
         static const AkUniqueID PLAY_SHIT_ = 2725832863U;
+        static const AkUniqueID PLAY_SMALLCRITTERAPPEAR = 4203124091U;
         static const AkUniqueID PLAY_SMALLCRITTERAPPEAR_01 = 1968921967U;
         static const AkUniqueID PLAY_SMALLCRITTERVOICES = 4151199969U;
         static const AkUniqueID PLAY_STARTGAME = 1444205428U;
