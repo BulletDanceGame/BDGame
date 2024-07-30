@@ -128,10 +128,14 @@ public class PlayerSwingHitbox : MonoBehaviour
             switch(BossController.Instance.currentBoss)
             {
                 case BossController.Boss.Critter:
+                    _playerSwing.AimAssistWithoutCheck();
                     bullet.CritterEndGameHit();
+                    VFXManager.Instance?.RequestVFX_SlowMoZoom(UnitManager.Instance?.GetPlayer()?.transform);
+
                     break;
 
                 case BossController.Boss.YokaiHunter:
+                    _playerSwing.AimAssistWithoutCheck();
                     bullet.EndGameHit();
                     VFXManager.Instance?.RequestVFX_SlowMoZoom(UnitManager.Instance?.GetPlayer()?.transform);
                     TimeManager.Instance?.RequestSlowMo(saigoNoPitchiDuration, 0.0000000001f); //brother

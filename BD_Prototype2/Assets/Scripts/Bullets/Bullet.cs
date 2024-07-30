@@ -279,13 +279,20 @@ public class Bullet : MonoBehaviour
     public void EndGameHit()
     {
         _canCollide = false;
-        Invoke("SpeedUp", 1.0f);
+        Invoke("SpeedUp", 0.3f);
 
         _fx.LastHitFX();
     }
 
+    public void SpeedUp()
+    {
+        SetSpeed(perfectSpeed*6f);
+    }
+
     public void CritterEndGameHit()
     {
+        Invoke("SpeedUp", 0.3f);
+
         _fx.LastHitForCritter();
     }
 
