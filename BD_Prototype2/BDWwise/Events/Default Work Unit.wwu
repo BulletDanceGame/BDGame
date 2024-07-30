@@ -3504,6 +3504,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_randomLands" ID="{BDEDE17A-D363-41C2-97D2-635A863F214F}">
+					<ChildrenList>
+						<Action Name="" ID="{846B845A-91F6-45A3-B660-334579D3036A}" ShortID="61452158">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="randomLands" ID="{9AEA47B4-62ED-4153-8E1B-8778FE8FA864}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Landing_01" ID="{928D109A-E92A-46D4-9C90-169C9D82F28C}">
+					<ChildrenList>
+						<Action Name="" ID="{2627302D-B406-413E-8277-2CBE0EDBFC30}" ShortID="360200079">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Landing_01" ID="{C9885306-8A81-4B3D-890E-728D68121B2F}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
