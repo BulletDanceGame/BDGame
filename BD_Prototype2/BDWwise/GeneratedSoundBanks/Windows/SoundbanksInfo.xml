@@ -1305,37 +1305,17 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="917783881" Type="User" Language="SFX" Hash="{7018B57D-DB3D-CBDB-A281-A634508C8095}">
+		<SoundBank Id="917783881" Type="User" Language="SFX" Hash="{0CBF2F2B-FFDE-5748-38C4-F7D667F0A6E7}">
 			<ShortName>Critter_Fight_Voices</ShortName>
 			<Path>Critter_Fight_Voices.bnk</Path>
 			<Media>
-				<File Id="42506454" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>curse3.wav</ShortName>
-					<CachePath>SFX/curse3_10C4C929.wem</CachePath>
-				</File>
 				<File Id="166184843" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>death scream.wav</ShortName>
 					<CachePath>SFX/death scream_4DEC8C48.wem</CachePath>
 				</File>
-				<File Id="372602386" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>curse5.wav</ShortName>
-					<CachePath>SFX/curse5_10C4C929.wem</CachePath>
-				</File>
-				<File Id="444095522" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>curse2.wav</ShortName>
-					<CachePath>SFX/curse2_10C4C929.wem</CachePath>
-				</File>
-				<File Id="541980375" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>curse4.wav</ShortName>
-					<CachePath>SFX/curse4_10C4C929.wem</CachePath>
-				</File>
-				<File Id="569054915" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>curse1.wav</ShortName>
-					<CachePath>SFX/curse1_10C4C929.wem</CachePath>
-				</File>
 				<File Id="570681607" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Scream.wav</ShortName>
-					<CachePath>SFX/Scream_10C4C929.wem</CachePath>
+					<CachePath>SFX/Scream_7E4801DE.wem</CachePath>
 				</File>
 				<File Id="728995294" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>impact10.wav</ShortName>
@@ -1363,7 +1343,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="46301939" Name="Play_Critter___Scream_01" DurationType="OneShot" DurationMin="8.197125" DurationMax="8.197125">
+				<Event Id="46301939" Name="Play_Critter___Scream_01" DurationType="OneShot" DurationMin="6.7083945" DurationMax="6.7083945">
 					<MediaRefs>
 						<MediaRef Id="570681607"/>
 					</MediaRefs>
@@ -1379,45 +1359,27 @@
 						<MediaRef Id="906866579"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3538995979" Name="Play_DOntMessWithUs" DurationType="OneShot" DurationMin="1.5673125" DurationMax="1.5673125">
+				<Event Id="3538995979" Name="Play_DOntMessWithUs" DurationType="OneShot" DurationMin="1.1654094" DurationMax="1.3081278">
 					<MediaRefs>
-						<MediaRef Id="42506454"/>
 						<MediaRef Id="729477149"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3987937360" Name="Play_Enemy__" DurationType="OneShot" DurationMin="1.9184746" DurationMax="1.9184746">
+				<Event Id="3987937360" Name="Play_Enemy__" DurationType="OneShot" DurationMin="1.1654094" DurationMax="1.3081278">
 					<MediaRefs>
-						<MediaRef Id="42506454"/>
-						<MediaRef Id="372602386"/>
-						<MediaRef Id="569054915"/>
 						<MediaRef Id="729477149"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2725832863" Name="Play_Shit_" DurationType="OneShot" DurationMin="1.1654094" DurationMax="1.3081278">
 					<MediaRefs>
-						<MediaRef Id="541980375"/>
 						<MediaRef Id="729477149"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1968921967" Name="Play_SmallCritterAppear_01" DurationType="OneShot" DurationMin="1.1654094" DurationMax="1.5673125">
+				<Event Id="1968921967" Name="Play_SmallCritterAppear_01" DurationType="OneShot" DurationMin="1.1654094" DurationMax="1.3081278">
 					<MediaRefs>
-						<MediaRef Id="42506454"/>
-						<MediaRef Id="372602386"/>
-						<MediaRef Id="444095522"/>
-						<MediaRef Id="541980375"/>
-						<MediaRef Id="569054915"/>
 						<MediaRef Id="729477149"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4151199969" Name="Play_SmallCritterVoices" DurationType="OneShot" DurationMin="0.7581177" DurationMax="1.5673125">
-					<MediaRefs>
-						<MediaRef Id="42506454"/>
-						<MediaRef Id="372602386"/>
-						<MediaRef Id="444095522"/>
-						<MediaRef Id="541980375"/>
-						<MediaRef Id="569054915"/>
-					</MediaRefs>
-				</Event>
+				<Event Id="4151199969" Name="Play_SmallCritterVoices" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{5FA33737-DF28-DD65-5D91-1FE44411390D}">
@@ -2133,7 +2095,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{36F8C167-D739-3805-85E1-A26CE27A9C81}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{E18121C9-9F70-740A-E806-639ECE438FF5}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -3421,6 +3383,11 @@
 						<MediaRef Id="729477149"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="4203124091" Name="Play_SmallCritterAppear" DurationType="OneShot" DurationMin="1.1654094" DurationMax="1.3081278">
+					<MediaRefs>
+						<MediaRef Id="729477149"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1444205428" Name="Play_StartGame" DurationType="OneShot" DurationMin="3.7901876" DurationMax="3.7901876">
 					<MediaRefs>
 						<MediaRef Id="182175587"/>
@@ -3646,5 +3613,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{AE66AC78-7EBB-5158-490D-424706ED1AFC}</FileHash>
+	<FileHash>{3DEE4187-833C-0BAD-050F-61F3AF465877}</FileHash>
 </SoundBanksInfo>
