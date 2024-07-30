@@ -36,9 +36,12 @@ public class StatueCollision : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
-            EventManager.Instance.PlayerDamage(10);
+            if (collision.GetComponent<PlayerTriggerBox>())
+            {
+                EventManager.Instance.PlayerDamage(10);
+                ScoreManager.Instance.GotHit++;
+            }
             EventManager.Instance.PlayerPushBack(transform.position);
-            ScoreManager.Instance.GotHit++;
         }
 
 

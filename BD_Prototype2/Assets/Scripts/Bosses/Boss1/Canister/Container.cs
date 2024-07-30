@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Container : MonoBehaviour
 {
@@ -119,34 +120,32 @@ public class Container : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
-            print(collision.gameObject.name);
-
             if (!hit && canDamage)
             {
                 hit = true;
-                EventManager.Instance.PlayerDamage(10);
-                EventManager.Instance.PlayerPushBack(transform.position);
-                ScoreManager.Instance.GotHit++;
+                if (collision.GetComponent<PlayerTriggerBox>())
+                {
+                    EventManager.Instance.PlayerDamage(10);
+                    ScoreManager.Instance.GotHit++;
+                }
 
-                print("Cannister Hit");
+                EventManager.Instance.PlayerPushBack(transform.position);
             }
 
         }
     }
-
+    
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
             if (hit)
             {
-                print(collision.gameObject.name);
                 GetComponent<CircleCollider2D>().isTrigger = false;
                 canDamage = false;
                 bulletTriggerBox.SetActive(true);
-                print("Cannister Exit");
             }
         }
 
