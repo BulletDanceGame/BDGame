@@ -2043,7 +2043,7 @@
 												</Property>
 											</PropertyList>
 											<ChildrenList>
-												<Bus Name="Cutscene 1 - Player - Phase 1 to 2 (voicelines)" ID="{5AA2B4ED-7CDE-4165-9B09-B755C6998F98}">
+												<Bus Name="Cutscene 0 - Player - Phase 1 to 2 (voicelines)" ID="{5AA2B4ED-7CDE-4165-9B09-B755C6998F98}">
 													<PropertyList>
 														<Property Name="BusVolume" Type="Real64">
 															<ValueList>
@@ -2061,7 +2061,7 @@
 														</Panner>
 													</PositioningInfo>
 												</Bus>
-												<Bus Name="Cutscene 1 - Player - Intro (voicelines)" ID="{2FFA02B9-D034-463C-9BAD-995233A43CA9}">
+												<Bus Name="Cutscene 0 - Player - Intro (voicelines)" ID="{2FFA02B9-D034-463C-9BAD-995233A43CA9}">
 													<PropertyList>
 														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 													</PropertyList>
@@ -2074,7 +2074,7 @@
 														</Panner>
 													</PositioningInfo>
 												</Bus>
-												<Bus Name="Cutscene 1 - Boss - Phase 1 to 2 (voicelines)" ID="{1AE4CBA6-8DA1-40CE-9246-97F4BCBD2777}">
+												<Bus Name="Cutscene 0 - Boss - Phase 1 to 2 (voicelines)" ID="{1AE4CBA6-8DA1-40CE-9246-97F4BCBD2777}">
 													<PropertyList>
 														<Property Name="BusVolume" Type="Real64">
 															<ValueList>
@@ -2092,7 +2092,7 @@
 														</Panner>
 													</PositioningInfo>
 												</Bus>
-												<Bus Name="Cutscene 1 - Player - Phase 2 to 3 (voicelines)" ID="{455E4437-3FF9-4CBD-8FE3-03A34F8DA2A0}">
+												<Bus Name="Cutscene 0 - Player - Phase 2 to 3 (voicelines)" ID="{455E4437-3FF9-4CBD-8FE3-03A34F8DA2A0}">
 													<PropertyList>
 														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 													</PropertyList>
@@ -2105,7 +2105,7 @@
 														</Panner>
 													</PositioningInfo>
 												</Bus>
-												<Bus Name="Cutscene 1 - Boss - Intro (voicelines)" ID="{A955EF02-2B2A-4F79-982E-346164C8F04A}">
+												<Bus Name="Cutscene 0 - Boss - Intro (voicelines)" ID="{A955EF02-2B2A-4F79-982E-346164C8F04A}">
 													<PropertyList>
 														<Property Name="Highpass" Type="int16">
 															<ValueList>
@@ -2123,7 +2123,7 @@
 														</Panner>
 													</PositioningInfo>
 												</Bus>
-												<Bus Name="Cutscene 1 - Boss - Phase 2 to 3 (voicelines)" ID="{01C2A4F9-7CE4-42D6-9260-F7D610B51681}">
+												<Bus Name="Cutscene 0 - Boss - Phase 2 to 3 (voicelines)" ID="{01C2A4F9-7CE4-42D6-9260-F7D610B51681}">
 													<PropertyList>
 														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 													</PropertyList>
@@ -2136,9 +2136,9 @@
 														</Panner>
 													</PositioningInfo>
 												</Bus>
-												<Bus Name="Cutscene 2 - Panda (voicelines)" ID="{4A094D2C-65E3-4AA6-8C00-3AB020108ED1}"/>
-												<Bus Name="Cutscene 2 - Player (voicelines)" ID="{96D2D7C6-D30B-4018-9F66-2F5ADE11C431}"/>
-												<Bus Name="Cutscene 1 - Boss - Phase 3 to End (voicelines)" ID="{55C04D1E-3E83-4ECA-B74A-414E470710BB}">
+												<Bus Name="Cutscene 1 - Intro - Player" ID="{4A094D2C-65E3-4AA6-8C00-3AB020108ED1}"/>
+												<Bus Name="Cutscene 2 - GEtBat - Player" ID="{96D2D7C6-D30B-4018-9F66-2F5ADE11C431}"/>
+												<Bus Name="Cutscene 0 - Boss - Phase 3 to End (voicelines)" ID="{55C04D1E-3E83-4ECA-B74A-414E470710BB}">
 													<PropertyList>
 														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 													</PropertyList>
@@ -2150,7 +2150,7 @@
 														</Panner>
 													</PositioningInfo>
 												</Bus>
-												<Bus Name="Cutscene 1 - Player - Phase 3 to End (voicelines)" ID="{876BD449-2D3C-43C5-A177-005F78DE1E31}">
+												<Bus Name="Cutscene 0 - Player - Phase 3 to End (voicelines)" ID="{876BD449-2D3C-43C5-A177-005F78DE1E31}">
 													<PropertyList>
 														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 													</PropertyList>
@@ -2163,6 +2163,14 @@
 														</Panner>
 													</PositioningInfo>
 												</Bus>
+												<Bus Name="Cutscene 3 - TalkingBat - Player" ID="{7189A7F3-8FC2-4B96-8526-931FF7F5B62A}"/>
+												<Bus Name="Cutscene 3 - TalkingBat - Bat" ID="{504F1F2A-67A9-48CC-8038-B4E314B75979}"/>
+												<Bus Name="Cutscene 4 - Boss1 - Player - Intro" ID="{999DB203-024D-45A0-AA84-E08805B50F2C}"/>
+												<Bus Name="Cutscene 4 - Boss1 - Critter - Intro" ID="{7C907F0B-860B-4457-972C-B491FF1C25AE}"/>
+												<Bus Name="Cutscene 4 - Boss1 - Critter - Phase 1 to 2" ID="{00E5897F-C93F-4549-A6DC-D7B4754A0DF5}"/>
+												<Bus Name="Cutscene 4 - Boss1 - Player - Phase 1 to 2" ID="{274943FB-ACC2-461F-A256-8AD0891A7E65}"/>
+												<Bus Name="Cutscene 4 - Boss1 - Player - Outro" ID="{AE6A999A-1672-49E1-A070-4DB8148695B9}"/>
+												<Bus Name="Cutscene 4 - Boss1 - Critter - Outro" ID="{A9FB5562-009E-46EB-B7DB-544FE5D06F9C}"/>
 											</ChildrenList>
 											<ObjectLists>
 												<ObjectList Name="RTPC">
