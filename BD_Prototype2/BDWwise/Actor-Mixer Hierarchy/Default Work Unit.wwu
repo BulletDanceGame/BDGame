@@ -17158,7 +17158,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-9</Value>
+												<Value>-4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -26157,7 +26157,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>2</Value>
+												<Value>3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -26417,6 +26417,47 @@
 										</BlendContainer>
 									</ChildrenList>
 								</RandomSequenceContainer>
+								<BlendContainer Name="StartBattle" ID="{5460A4C4-9A07-44A6-9B02-6D62E94BAF4D}" ShortID="151251588">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX" ID="{CC06829B-AD18-44E8-820A-C08F0D59FE77}" ShortID="420176081">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Deflection Hit - Transition To Player Theme" ID="{BB440796-7363-453C-A2ED-4C97A71F8CE9}">
+													<Language>SFX</Language>
+													<AudioFile>Deflection Hit - Transition To Player Theme.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="319209927"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Deflection Hit - Transition To Player Theme" ID="{BB440796-7363-453C-A2ED-4C97A71F8CE9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
@@ -35527,6 +35568,13 @@
 											</ChildrenList>
 										</BlendContainer>
 										<BlendContainer Name="DOntMessWithUs" ID="{2753ABD8-EF36-4E3F-8221-A3ED19DAD664}" ShortID="820789513">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -35844,6 +35892,13 @@
 											</ChildrenList>
 										</BlendContainer>
 										<BlendContainer Name="Shit!" ID="{7A5C4A68-A95D-4F27-AE56-FD41BDD6E896}" ShortID="319764393">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -36164,7 +36219,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-3</Value>
+														<Value>-5</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -36936,7 +36991,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-6</Value>
+														<Value>-8</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -36994,7 +37049,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-9</Value>
+														<Value>-15</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -37270,11 +37325,6 @@
 												</Sound>
 												<Sound Name="critter death" ID="{2B3549B4-1E24-4BEE-8672-7C6652D83EBD}" ShortID="553847267">
 													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
 														<Property Name="Pitch" Type="int32">
 															<ValueList>
 																<Value>-510</Value>
@@ -37282,7 +37332,7 @@
 														</Property>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>10</Value>
+																<Value>12</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -37347,6 +37397,11 @@
 												</Sound>
 												<Sound Name="death scream" ID="{D567ED81-9922-4681-A42F-E64685BDF32F}" ShortID="574204632">
 													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
 														<Property Name="MakeUpGain" Type="Real64">
 															<ValueList>
 																<Value>3</Value>
@@ -37354,7 +37409,7 @@
 														</Property>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>10</Value>
+																<Value>12</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -37491,12 +37546,12 @@
 														</Property>
 														<Property Name="Pitch" Type="int32">
 															<ValueList>
-																<Value>430</Value>
+																<Value>350</Value>
 															</ValueList>
 														</Property>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>8</Value>
+																<Value>12</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>

@@ -309,7 +309,7 @@ public class MusicManager : MonoBehaviour
             {
                 _isSoftlyStopping = true;
                 _softStopTimer = _softStopDuration;
-                RTPCManager.Instance.SetAttributeValue("VOLUME", 0, _softStopDuration, RTPCManager.CurveTypes.linear);
+                RTPCManager.Instance.SetAttributeValue("VOLUME", 0, _softStopDuration, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
             }
             
         }

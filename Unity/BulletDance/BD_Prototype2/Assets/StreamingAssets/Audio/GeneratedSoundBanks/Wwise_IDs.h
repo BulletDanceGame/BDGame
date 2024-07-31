@@ -221,6 +221,7 @@ namespace AK
         static const AkUniqueID PLAY_SMALLCRITTERAPPEAR = 4203124091U;
         static const AkUniqueID PLAY_SMALLCRITTERAPPEAR_01 = 1968921967U;
         static const AkUniqueID PLAY_SMALLCRITTERVOICES = 4151199969U;
+        static const AkUniqueID PLAY_STARTBATTLE = 2537898644U;
         static const AkUniqueID PLAY_STARTGAME = 1444205428U;
         static const AkUniqueID PLAY_TURRETDEACTIVATE = 2177082434U;
         static const AkUniqueID PLAY_TURRETHURT = 462463419U;
