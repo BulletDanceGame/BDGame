@@ -133,37 +133,42 @@ public class BossHealthController : MonoBehaviour
         }
         
 
-
-        if (collision.GetComponent<Bullet>() == null) { return; }
-
         Bullet bullet = collision.GetComponent<Bullet>(); //Replacing GetComponent() with Bullet var
-
+        if (bullet == null)
+            return; 
         if (bullet.type == BulletOwner.BOSSBULLET)
             return;
 
         //Prevent boss from getting over-hit
-        if (!_isActive) return;
-        if (_bulletsHit >= _maxHits)
+        //Only apply to normal bullets, last hit should ignore this
+        if(bullet.bulletState != BulletState.LASTHIT)
         {
-            bullet.Deactivate();
-            gameObject.GetComponent<Collider2D>().enabled = false;
-            StartCoroutine(TurnOnHitbox());
-            return;
+            if (!_isActive) return;
+            if (_bulletsHit >= _maxHits)
+            {
+                bullet.Deactivate();
+                gameObject.GetComponent<Collider2D>().enabled = false;
+                StartCoroutine(TurnOnHitbox());
+                return;
+            }
         }
 
 
         //Boss gets hit by bullet
 
+
         //Add score
-        if(collision.gameObject.tag == "Bullet")
-            if(collision.gameObject.GetComponent<Bullet>().bulletState == BulletState.PERFECT)
-                EventManager.Instance.AddScore(200);
-            else
-                EventManager.Instance.AddScore(100);
+        int score = bullet.bulletState == BulletState.LASTHIT ? 300 :
+                    bullet.bulletState == BulletState.PERFECT ? 200 : 
+                    bullet.bulletState == BulletState.GOOD    ? 100 : 0;
+
+        EventManager.Instance.AddScore(score);
+
 
         //Add bullet hits
         _bulletsHit++;
         StartCoroutine(ResetHit());
+
 
         //Cache bullet damage to calculate if boss is at last hit
         _bulletDamage = bullet.GetDamage();

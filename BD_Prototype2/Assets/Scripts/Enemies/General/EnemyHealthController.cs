@@ -93,13 +93,16 @@ public class EnemyHealthController : MonoBehaviour
             return;
 
 
-        if (!_isActive) return;
-        if (_bulletsHit > _maxHits)
+        if(bullet.bulletState != BulletState.LASTHIT)
         {
-            bullet.Deactivate();
-            gameObject.GetComponent<Collider2D>().enabled = false;
-            StartCoroutine(TurnOnHitbox());
-            return;
+            if (!_isActive) return;
+            if (_bulletsHit > _maxHits)
+            {
+                bullet.Deactivate();
+                gameObject.GetComponent<Collider2D>().enabled = false;
+                StartCoroutine(TurnOnHitbox());
+                return;
+            }
         }
 
         EventManager.Instance.AddScore(100);
@@ -113,7 +116,10 @@ public class EnemyHealthController : MonoBehaviour
 
         //Take damage && do phase change (see TakeDamage method)
         MinionTakeDamage(bullet.GetDamage(), bullet.GetDir());
-        bullet.Deactivate();
+
+        if(bullet.bulletState != BulletState.LASTHIT)
+            bullet.Deactivate();
+
         Instantiate(_hitParticle, this.transform.position, Quaternion.identity);
 
 

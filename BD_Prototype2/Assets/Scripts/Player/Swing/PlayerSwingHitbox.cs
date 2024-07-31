@@ -85,7 +85,6 @@ public class PlayerSwingHitbox : MonoBehaviour
         //Last hit behavior override
         //Condition for player last hit
         LastHitOverride(hitTiming, bullet);
-
         bullet.BulletHit(hitTiming);
 
 
@@ -126,12 +125,10 @@ public class PlayerSwingHitbox : MonoBehaviour
         //Boss last phase last hit
         if(BossController.Instance.bossHealth.isLastPhase)
         {
-            //AimBot
             _playerSwing.LastHitAimAssist(); //Change bat dir
-            //Homing bullet
 
             //Boss specific fx
-            bullet.EndGameHit(BossController.Instance.currentBoss);
+            bullet.EndGameHit(BossController.Instance.currentBoss); //Also includes AimBot
             switch(BossController.Instance.currentBoss)
             {
                 case BossController.Boss.Critter:

@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
 public enum BulletOwner { BOSSBULLET, PLAYERBULLET}
-public enum BulletState { PERFECT, GOOD}
+public enum BulletState { PERFECT, GOOD, LASTHIT, NONE }
 
 public class Bullet : MonoBehaviour
 {
     [Header("Base bullet properties")]
     public BulletOwner type = BulletOwner.BOSSBULLET;
-    public BulletState bulletState = BulletState.GOOD;
+    public BulletState bulletState = BulletState.NONE;
 
     private float _currentSpeed;
     public float offBeatSpeed;
@@ -149,6 +149,7 @@ public class Bullet : MonoBehaviour
     public void ResetBullet()
     {
         type = BulletOwner.BOSSBULLET;
+        bulletState = BulletState.NONE;
         bounces = 0;
         SetSpeed(offBeatSpeed);
         _fx.ResetFx();
@@ -156,6 +157,10 @@ public class Bullet : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Last hit aim bot
+        if(UnitManager.Instance.GetBoss() != null && bulletState == BulletState.LASTHIT)
+            dir = UnitManager.Instance.GetBoss().transform.position - transform.position;
+
         Movement();
     }
 
@@ -186,8 +191,6 @@ public class Bullet : MonoBehaviour
 
         if ((collision.tag == "Turret" && type == BulletOwner.PLAYERBULLET) || collision.tag == "BouncedSurface")
         {
-            
-
             if (bounces > 5)
             {
                 Deactivate();
@@ -247,20 +250,25 @@ public class Bullet : MonoBehaviour
                 _rhythmMarkers[0].SetActive(false);
                 _rhythmMarkers[1].SetActive(false);
 
-                bulletState = BulletState.PERFECT;
+                if(bulletState != BulletState.LASTHIT)
+                    bulletState = BulletState.PERFECT;
 
                 ScoreManager.Instance.PerfectHits++;
                 break;
+                
             case BeatTiming.GOOD:
                 SetSpeed(goodSpeed);
 
                 _fx.GoodFX();
 
-                bulletState = BulletState.GOOD;
+                if(bulletState != BulletState.LASTHIT)
+                    bulletState = BulletState.GOOD;
 
                 ScoreManager.Instance.GoodHits++;
                 break;
+
             case BeatTiming.BAD:
+                bulletState = BulletState.NONE;
                 ScoreManager.Instance.BadHits++;
                 Deactivate();
                 _fx.MissFX();
@@ -283,6 +291,7 @@ public class Bullet : MonoBehaviour
     public void EndGameHit(BossController.Boss boss)
     {
         LastHit(0.3f);
+        bulletState = BulletState.LASTHIT;
 
         switch(boss)
         {
