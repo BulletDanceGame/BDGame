@@ -372,7 +372,6 @@ public class MusicManager : MonoBehaviour
         }
 
         _nextSequence = controller.GetNextSequence();
-        print("next - sequence " + _nextSequence.name);
 
         SetNextFPS();
 
@@ -578,8 +577,14 @@ public class MusicManager : MonoBehaviour
     private void OnDestroy()
     {
         isDestroyed = true;
+        cantCalculateSpeed = false;
         EventManager.Instance.OnPlayerDeath -= OnPlayerDeath;
     }
 
-
+    private void OnDisable()
+    {
+        isDestroyed = true;
+        cantCalculateSpeed = false;
+        EventManager.Instance.OnPlayerDeath -= OnPlayerDeath;
+    }
 }

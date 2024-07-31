@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections.Generic;
+using System;
+using UnityEngine.InputSystem.Users;
 
 public enum ControllerType { GAMEPAD, KEYBOARDANDMOUSE };
 
@@ -12,6 +15,8 @@ public class InputManager : MonoBehaviour
 
     public PlayerInputActions PlayerInput;
     public PlayerInput input;
+
+
 
 
     private void Awake()
@@ -38,6 +43,9 @@ public class InputManager : MonoBehaviour
         //MusicManager.Instance.GetInput();
 
         CurrentController = ControllerType.KEYBOARDANDMOUSE;
+
+
+        
     }
 
     private void Update()

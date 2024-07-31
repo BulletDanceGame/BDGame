@@ -33,6 +33,7 @@ public class SceneLoadButton : MonoBehaviour
                 RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
                 MusicManager.Instance.SwitchMusic(MusicManager.TransitionType.FADE_STOP);
                 SceneManager.Instance.ReloadCurrentScene(3.5f);
+                
                 break;
 
             case SceneManager.LoadOptions.RespawnPlayer:
