@@ -19233,7 +19233,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-4</Value>
+												<Value>-5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -39929,9 +39929,14 @@
 									<ChildrenList>
 										<BlendContainer Name="Critter death impact" ID="{4A39B65A-414C-4C52-828B-2E18FC726B25}" ShortID="1052328848">
 											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>0.5</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-15</Value>
+														<Value>-16</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
