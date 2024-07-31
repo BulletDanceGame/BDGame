@@ -234,15 +234,14 @@ public class PlayerSwing : MonoBehaviour
         }
     }
 
-    public void AimAssistWithoutCheck()
+    public void LastHitAimAssist()
     {
-       
         SwingHitBoxAngle = (SwingHitBoxAngle + 360) % 360;
           
-        if (aimAssistTarget.target != null)
+        if (UnitManager.Instance.GetBoss() != null)
         {
             Vector2 playerPos = transform.position;
-            Vector2 targetPos = aimAssistTarget.target.transform.position;
+            Vector2 targetPos = UnitManager.Instance.GetBoss().transform.position;
             Vector2 direction = targetPos - playerPos;
 
             batDirection = direction;

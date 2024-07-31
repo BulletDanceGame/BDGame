@@ -14300,6 +14300,7 @@ MonoBehaviour:
     sequencePlayedFirst: 
     neverPlayFirstSequenceAgain: 0
     lastTransition: 1
+  currentBeat: 0
 --- !u!114 &874198801919593981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14376,6 +14377,7 @@ MonoBehaviour:
     hideUI: 1
     UIColor: {r: 1, g: 1, b: 1, a: 1}
   _maxHits: 2
+  _pushBackPlayer: 0
   debugDamage: 20
 --- !u!114 &6500467422783057318
 MonoBehaviour:
@@ -14391,6 +14393,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slowMoDuration: 2
   slowMoScale: 0.01
+  lastPhaseSlowMoDur: 2
+  lastPhaseSlowMoScale: 0.01
 --- !u!114 &8119982807536686211
 MonoBehaviour:
   m_ObjectHideFlags: 0

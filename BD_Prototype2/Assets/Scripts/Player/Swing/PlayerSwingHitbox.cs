@@ -123,20 +123,22 @@ public class PlayerSwingHitbox : MonoBehaviour
         if(BossController.Instance == null) return;
         if(!BossController.Instance.bossHealth.isLastHit) return;
 
+        //Boss last phase last hit
         if(BossController.Instance.bossHealth.isLastPhase)
         {
+            //AimBot
+            _playerSwing.LastHitAimAssist(); //Change bat dir
+            //Homing bullet
+
+            //Boss specific fx
+            bullet.EndGameHit(BossController.Instance.currentBoss);
             switch(BossController.Instance.currentBoss)
             {
                 case BossController.Boss.Critter:
-                    _playerSwing.AimAssistWithoutCheck();
-                    bullet.CritterEndGameHit();
                     VFXManager.Instance?.RequestVFX_SlowMoZoom(UnitManager.Instance?.GetPlayer()?.transform);
-
                     break;
 
                 case BossController.Boss.YokaiHunter:
-                    _playerSwing.AimAssistWithoutCheck();
-                    bullet.EndGameHit();
                     VFXManager.Instance?.RequestVFX_SlowMoZoom(UnitManager.Instance?.GetPlayer()?.transform);
                     TimeManager.Instance?.RequestSlowMo(saigoNoPitchiDuration, 0.0000000001f); //brother
                     break;
@@ -145,6 +147,7 @@ public class PlayerSwingHitbox : MonoBehaviour
             }
         }
 
+        //Normal last hit
         else
             bullet.LastHit();
     

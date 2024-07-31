@@ -3,7 +3,7 @@ using UnityEngine;
 public class BossEndPhaseHit : MonoBehaviour
 {
     [SerializeField]
-    private float slowMoDuration, slowMoScale;
+    private float slowMoDuration, slowMoScale, lastPhaseSlowMoDur, lastPhaseSlowMoScale;
 
     void Start()
     {
@@ -19,11 +19,14 @@ public class BossEndPhaseHit : MonoBehaviour
     {
         EventManager.Instance.DeactivateBoss();
 
-
         ScreenShake.Instance.ShakeCamera(20f, 2f);
 
         //SlowMoFX
-        TimeManager.Instance.RequestSlowMo(slowMoDuration, slowMoScale);
+        if(!isLastPhase)
+            TimeManager.Instance.RequestSlowMo(slowMoDuration, slowMoScale);
+        else
+            TimeManager.Instance.RequestSlowMo(lastPhaseSlowMoDur, lastPhaseSlowMoScale);
+
         VFXManager.Instance?.RequestVFX_SlowMoZoom(UnitManager.Instance?.GetBoss()?.transform);
     }
 }

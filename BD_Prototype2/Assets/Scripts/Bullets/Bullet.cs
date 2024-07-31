@@ -268,32 +268,31 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    public void LastHit()
-    {
-        _canCollide = false;
-        Invoke("SpeedUp", 1.0f);
-
-        //_fx.LastHitFX();
-    }
-
-    public void EndGameHit()
-    {
-        _canCollide = false;
-        Invoke("SpeedUp", 0.3f);
-
-        _fx.LastHitFX();
-    }
-
     public void SpeedUp()
     {
         SetSpeed(perfectSpeed*6f);
     }
 
-    public void CritterEndGameHit()
-    {
-        Invoke("SpeedUp", 0.3f);
 
-        _fx.LastHitForCritter();
+    public void LastHit(float speedUpDelay = 1.0f)
+    {
+        _canCollide = false;
+        Invoke("SpeedUp", speedUpDelay);
+    }
+
+    public void EndGameHit(BossController.Boss boss)
+    {
+        LastHit(0.3f);
+
+        switch(boss)
+        {
+            case BossController.Boss.Critter:
+                _fx.LastHitForCritter();
+                break;
+            default:
+                _fx.LastHitFX();
+                break;
+        }
     }
 
 
