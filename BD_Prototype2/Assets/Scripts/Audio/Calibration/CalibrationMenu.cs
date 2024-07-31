@@ -16,9 +16,17 @@ public class CalibrationMenu : MonoBehaviour
 
 
 
+    //called from button
+    public void ButtonActivateScreen(int i)
+    {
+        if (SaveSystem.Instance.GetData().haveCalibrated)
+        {
+            ActivateScreen(i);
+        }
+    }
 
-    //also called from button
-    public void ActivateScreen(int i)
+
+    private void ActivateScreen(int i)
     {
         _screens[_currentScreen].SetActive(false);
         _titleButtons[_currentScreen].color = new Color(1f,1f,1f,0.5f);
@@ -45,7 +53,6 @@ public class CalibrationMenu : MonoBehaviour
                 MainMenu.currentButton = buttons[0];
             }
 
-            print("button " + MainMenu.currentButton.name);
             MainMenu.currentButton.Select();
         }
     }

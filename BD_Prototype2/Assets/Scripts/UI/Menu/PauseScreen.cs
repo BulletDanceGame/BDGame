@@ -57,7 +57,11 @@ public class PauseScreen : MonoBehaviour
         _ui.alpha = 1;
         _ui.interactable = true;
         _ui.blocksRaycasts = true;
-        mainSelectedButton.Select();
+
+        if (currentController == ControllerType.GAMEPAD)
+        {
+            mainSelectedButton.Select();
+        }
 
         _pauseEvent.Post(gameObject);
         _pauseMenuSong.Post(gameObject, (uint)AkCallbackType.AK_MusicSyncExit, MusicCallbacks);
@@ -185,13 +189,22 @@ public class PauseScreen : MonoBehaviour
 
     public void PointerHover_FirstRaycastedObject()
     {
-        //_eventDataCurrentPosition.position = _mousePosition;
-        //EventSystem.current.RaycastAll(_eventDataCurrentPosition, _raycastResults);
-        //if (_raycastResults.Count > 0)
-        //{
-        //    _currentSelection = _raycastResults[0].gameObject;
-        //}
+        _eventDataCurrentPosition.position = _mousePosition;
+        EventSystem.current.RaycastAll(_eventDataCurrentPosition, _raycastResults);
+        if (_raycastResults.Count > 0)
+        {
+            _currentSelection = _raycastResults[0].gameObject;
+        }
 
-        //_noRaycast = !(_raycastResults.Count > 0);
+        _noRaycast = !(_raycastResults.Count > 0);
+    }
+
+
+    public void DeselectButton()
+    {
+        if (currentController == ControllerType.KEYBOARDANDMOUSE)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
     }
 }
