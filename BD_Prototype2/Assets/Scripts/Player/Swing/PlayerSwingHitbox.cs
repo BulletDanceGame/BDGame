@@ -133,6 +133,7 @@ public class PlayerSwingHitbox : MonoBehaviour
             {
                 case BossController.Boss.Critter:
                     VFXManager.Instance?.RequestVFX_SlowMoZoom(UnitManager.Instance?.GetPlayer()?.transform);
+                    TimeManager.Instance?.RequestSlowMo(saigoNoPitchiDuration, 0.0000000001f);
                     break;
 
                 case BossController.Boss.YokaiHunter:
