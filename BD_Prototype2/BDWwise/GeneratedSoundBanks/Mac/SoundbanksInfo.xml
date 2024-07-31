@@ -303,7 +303,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{88612476-E17D-4417-7D1B-80BBF09B2300}">
+		<SoundBank Id="834008392" Type="User" Language="SFX" Hash="{F8BA0EB6-BD7D-952C-D983-8FB6ADCE7613}">
 			<ShortName>Music_TutorialAndLevel1_Part1</ShortName>
 			<Path>Music_TutorialAndLevel1_Part1.bnk</Path>
 			<Media>
@@ -350,10 +350,6 @@
 				<File Id="417477597" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>batRoom-enter.wav</ShortName>
 					<CachePath>SFX/batRoom-enter_D79FB2B7.wem</CachePath>
-				</File>
-				<File Id="461100053" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Env1-VegZone2_Part1.wav</ShortName>
-					<CachePath>SFX/Env1-VegZone2_Part1_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="506300702" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Env1-VegZone1_Part2.wav</ShortName>
@@ -422,10 +418,6 @@
 				<File Id="930809843" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>TurretTurnOn.wav</ShortName>
 					<CachePath>SFX/TurretTurnOn_D79FB2B7.wem</CachePath>
-				</File>
-				<File Id="939803258" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Env1-VegZone2_Part3.wav</ShortName>
-					<CachePath>SFX/Env1-VegZone2_Part3_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="968128723" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>vegZoneCalm.wav</ShortName>
@@ -535,21 +527,13 @@
 						<MediaRef Id="881936464"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3209141836" Name="Play_Env1_VegZone1_Part1_2" DurationType="OneShot" DurationMin="13.71875" DurationMax="13.71875">
-					<MediaRefs>
-						<MediaRef Id="461100053"/>
-					</MediaRefs>
-				</Event>
+				<Event Id="3209141836" Name="Play_Env1_VegZone1_Part1_2" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3208597387" Name="Play_Env1_VegZone1_Part2_2" DurationType="OneShot" DurationMin="9.040188" DurationMax="9.040188">
 					<MediaRefs>
 						<MediaRef Id="1040505693"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4282512162" Name="Play_Env1_VegZone1_Part3_2" DurationType="OneShot" DurationMin="6.857143" DurationMax="6.857143">
-					<MediaRefs>
-						<MediaRef Id="939803258"/>
-					</MediaRefs>
-				</Event>
+				<Event Id="4282512162" Name="Play_Env1_VegZone1_Part3_2" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="4282070905" Name="Play_Env1_VegZone1_Part4_2" DurationType="OneShot" DurationMin="6.857143" DurationMax="6.857143">
 					<MediaRefs>
 						<MediaRef Id="80926456"/>
@@ -2071,7 +2055,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3056822322" Type="User" Language="SFX" Hash="{CEE79C4D-74C9-62F2-938F-4203CDD85E43}">
+		<SoundBank Id="3056822322" Type="User" Language="SFX" Hash="{15AF2E88-BAA5-94B9-E6A6-1EFF8C3290C8}">
 			<ShortName>moreSounds</ShortName>
 			<Path>moreSounds.bnk</Path>
 			<Media>
@@ -2122,7 +2106,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{3766820A-B408-BEAA-0330-3913FB90F29A}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{A26127C5-C5BF-847E-E176-69236633E687}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -2310,7 +2294,7 @@
 				</File>
 				<File Id="265698209" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>doorCloseONly.wav</ShortName>
-					<CachePath>SFX/doorCloseONly_64DB5444.wem</CachePath>
+					<CachePath>SFX/doorCloseONly_9CC116B1.wem</CachePath>
 				</File>
 				<File Id="269805961" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>part 3 - ow 5.wav</ShortName>
@@ -3839,5 +3823,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2C26117D-2B71-12F6-7F03-5AFFBA518AC6}</FileHash>
+	<FileHash>{A59D3A2A-BD29-BDB8-87AF-BE251A5510B7}</FileHash>
 </SoundBanksInfo>
