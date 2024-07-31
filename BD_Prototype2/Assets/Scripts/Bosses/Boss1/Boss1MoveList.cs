@@ -380,7 +380,6 @@ public class Boss1MoveList : Movelist
         if (healthController.isDead)
             return;
         
-        
         if (healthController.isLastHit == false)
         {
             if (_direction == 0)
@@ -430,6 +429,14 @@ public class Boss1MoveList : Movelist
                     //    _dashTime = 0;
                     //    return;
                     //}
+                    if(healthController.isLastHit)
+                    {
+                        _direction = 0;
+                        _rb.velocity = Vector2.zero;
+                        afterimagetimer = 0;
+
+                        _animHandler?.DashStop();
+                    }
                 }
 
             }
