@@ -22,14 +22,14 @@ public class CritterBossOnLoad : MonoBehaviour
     private void PlayerPos()
     {
 
-        Vector3 Checkpointposition;
+        //Vector3 Checkpointposition;
 
-        Checkpointposition.x = SaveSystem.Instance.GetData().currentCheckpointX;
-        Checkpointposition.y = SaveSystem.Instance.GetData().currentCheckpointY;
-        Checkpointposition.z = SaveSystem.Instance.GetData().currentCheckpointZ;
+        //Checkpointposition.x = SaveSystem.Instance.GetData().currentCheckpointX;
+        //Checkpointposition.y = SaveSystem.Instance.GetData().currentCheckpointY;
+        //Checkpointposition.z = SaveSystem.Instance.GetData().currentCheckpointZ;
 
 
-        UnitManager.Instance.GetPlayer().transform.position = Checkpointposition;
+        //UnitManager.Instance.GetPlayer().transform.position = Checkpointposition;
     }
 
     void Update()
