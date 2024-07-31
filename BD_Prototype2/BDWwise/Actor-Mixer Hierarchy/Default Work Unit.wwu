@@ -413,6 +413,65 @@
 												</Sound>
 											</ChildrenList>
 										</BlendContainer>
+										<BlendContainer Name="fire" ID="{06E2285C-6237-4605-94C3-DA7944425A98}" ShortID="78646737">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="25"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="fireAten" ID="{BDD47764-9F6A-4713-AA82-E48721762D7E}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="fireInOncePLace1" ID="{9A6ADBDE-B1EC-4E71-8B6E-97F4B75CCED4}" ShortID="217710727">
+													<PropertyList>
+														<Property Name="Highpass" Type="int16">
+															<ValueList>
+																<Value>70</Value>
+															</ValueList>
+														</Property>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fireInOncePLace1" ID="{2DD4702C-C2D0-4FAD-9C91-2F2E6BB94847}">
+															<Language>SFX</Language>
+															<AudioFile>fireInOncePLace1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="48654217"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fireInOncePLace1" ID="{2DD4702C-C2D0-4FAD-9C91-2F2E6BB94847}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
 									</ChildrenList>
 								</Folder>
 							</ChildrenList>
@@ -28437,7 +28496,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-10</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -33680,6 +33739,136 @@
 									<PositioningInfo>
 										<Panner Name="" ID="{24820D7C-62F7-49E5-BD6C-F414A9668FB3}"/>
 									</PositioningInfo>
+								</BlendContainer>
+								<BlendContainer Name="TurretShot-DashLevel" ID="{4531FE6A-DA89-46AB-9125-AABBA2A82474}" ShortID="135160644">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="CenterPercentage" Type="int32">
+											<ValueList>
+												<Value>100</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-14</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="turretAttenuation" ID="{4A3BE75A-15D2-46B4-A811-7C7A1D4DF101}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="TurretSFX" ID="{4029E3D0-B775-4AF0-996A-CACE2DAE5A74}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="TurretShotV2" ID="{09D4A75B-675B-4628-B009-0E3300EE24FD}" ShortID="420653729">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="PreFetchLength" Type="int16">
+													<ValueList>
+														<Value>300</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-9</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="TurretShotV2" ID="{F9002F19-6888-4C22-B222-70CAEC08F720}">
+													<Language>SFX</Language>
+													<AudioFile>TurretShotV2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="991243907"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="TurretShotV2" ID="{F9002F19-6888-4C22-B222-70CAEC08F720}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="TurretShotV1" ID="{AC02C1D8-4054-4BC6-8720-FDD43B174F5E}" ShortID="792790421">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="TurretShotV1" ID="{0568D732-329A-49B8-A4D9-DB412C8F2B0A}">
+													<Language>SFX</Language>
+													<AudioFile>TurretShotV1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="830350343"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="TurretShotV1" ID="{0568D732-329A-49B8-A4D9-DB412C8F2B0A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="TurretShotV3" ID="{5B98817A-887D-49A5-9C1A-1A5368B02AF0}" ShortID="392496878">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="PreFetchLength" Type="int16">
+													<ValueList>
+														<Value>300</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="TurretShotV3" ID="{35FBD228-AB74-4028-A67F-69809478FF01}">
+													<Language>SFX</Language>
+													<AudioFile>TurretShotV3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="681974043"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="TurretShotV3" ID="{35FBD228-AB74-4028-A67F-69809478FF01}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
 								</BlendContainer>
 							</ChildrenList>
 						</Folder>
@@ -40866,10 +41055,15 @@
 										<Value>13</Value>
 									</ValueList>
 								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>11</Value>
+										<Value>8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -40887,6 +41081,11 @@
 							<ChildrenList>
 								<Sound Name="ForestDoorC" ID="{C57F02DE-B354-45CA-BB4C-374B5A64DBBF}" ShortID="1043186387">
 									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
 												<Value>21</Value>
@@ -40918,21 +41117,16 @@
 										<ActiveSource Name="ForestDoorClose" ID="{3BA90291-E64E-4AEA-A8B9-E3F236ED3832}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<BlendContainer Name="Bunt" ID="{7084D5B4-9491-4BE9-BE37-E64EF034A619}" ShortID="164434838">
+								<RandomSequenceContainer Name="byomrand" ID="{53D61973-6F2B-45C2-85B2-3D38EBBE3C71}" ShortID="307137653">
 									<PropertyList>
-										<Property Name="InitialDelay" Type="Real64">
+										<Property Name="Inclusion" Type="bool">
 											<ValueList>
-												<Value>0.1</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>1000</Value>
+												<Value>False</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-14</Value>
+												<Value>-7</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -40941,37 +41135,786 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="hurtHighSFX" ID="{068CCDEC-3108-4AEF-ADEE-DE5159B85462}" ShortID="405592642">
+										<Sound Name="pyoooo on door_02" ID="{2BF200EF-C6A0-4AE5-B704-6027235EE90F}" ShortID="55479940">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-50</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+											</PropertyList>
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
 												</Reference>
-												<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
-													<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
-												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+													<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="hurtHighSFX" ID="{E24020F9-E2AC-4B80-BA6D-F606F892A39B}">
+												<AudioFileSource Name="pyoooo on door" ID="{A7B8BCFE-BB65-4118-AF1D-942C41850715}">
 													<Language>SFX</Language>
-													<AudioFile>hurtHighSFX.wav</AudioFile>
+													<AudioFile>pyoooo on door.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="729477149"/>
+														<MediaID ID="511624836"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="hurtHighSFX" ID="{E24020F9-E2AC-4B80-BA6D-F606F892A39B}" Platform="Linked"/>
+												<ActiveSource Name="pyoooo on door" ID="{A7B8BCFE-BB65-4118-AF1D-942C41850715}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="pyoooo on door_03" ID="{A2E5B072-48B2-4DF0-8F6C-AFF4F7580F17}" ShortID="748268487">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="pyoooo on door" ID="{5143888B-0F19-41E7-8897-BFABB1A49C9A}">
+													<Language>SFX</Language>
+													<AudioFile>pyoooo on door.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="511624836"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="pyoooo on door" ID="{5143888B-0F19-41E7-8897-BFABB1A49C9A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="pyoooo on door_04" ID="{865D0B1A-5041-4044-8885-9EA07D8EA2A1}" ShortID="468623741">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>50</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="pyoooo on door" ID="{26A9C93F-C38C-4E73-AAA4-9B8753BBA8FE}">
+													<Language>SFX</Language>
+													<AudioFile>pyoooo on door.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="511624836"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="pyoooo on door" ID="{26A9C93F-C38C-4E73-AAA4-9B8753BBA8FE}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
-								</BlendContainer>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="randoms" ID="{3A27B242-8A71-4C78-85E9-B95724DE1881}" ShortID="1005034132">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<BlendContainer Name="New Blend Container" ID="{30BFEE65-022D-4BDD-97C5-1B7F9891653D}" ShortID="110571615">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-50</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<BlendContainer Name="Bunt" ID="{7084D5B4-9491-4BE9-BE37-E64EF034A619}" ShortID="164434838">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="CenterPercentage" Type="int32">
+															<ValueList>
+																<Value>100</Value>
+															</ValueList>
+														</Property>
+														<Property Name="InitialDelay" Type="Real64">
+															<ValueList>
+																<Value>0.1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-14</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="hurtHighSFX" ID="{068CCDEC-3108-4AEF-ADEE-DE5159B85462}" ShortID="405592642">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																	<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="hurtHighSFX" ID="{E24020F9-E2AC-4B80-BA6D-F606F892A39B}">
+																	<Language>SFX</Language>
+																	<AudioFile>hurtHighSFX.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="729477149"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="hurtHighSFX" ID="{E24020F9-E2AC-4B80-BA6D-F606F892A39B}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</BlendContainer>
+												<Sound Name="doorCloseONly" ID="{D8AD5A49-5E2B-4B2E-B001-7E0798E0CFA8}" ShortID="175661519">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="CenterPercentage" Type="int32">
+															<ValueList>
+																<Value>100</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="doorCloseONly" ID="{F3F9602A-9B45-4CB6-A5C1-2E44B0407D1B}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0124846342962508"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0674170251997541"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>doorCloseONly.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="265698209"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="doorCloseONly" ID="{F3F9602A-9B45-4CB6-A5C1-2E44B0407D1B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="New Blend Container_01" ID="{5E603071-06CC-4910-888B-A46FF3CB20B2}" ShortID="985675234">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<BlendContainer Name="Bunt" ID="{7D0F7373-C10F-4EE4-A1E1-DFA900744229}" ShortID="147528216">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="CenterPercentage" Type="int32">
+															<ValueList>
+																<Value>100</Value>
+															</ValueList>
+														</Property>
+														<Property Name="InitialDelay" Type="Real64">
+															<ValueList>
+																<Value>0.1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-14</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="hurtHighSFX" ID="{0506E35A-3BE0-4D9D-96A5-BFD81CA41AE9}" ShortID="570126900">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																	<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="hurtHighSFX" ID="{FB0CE39C-D6DB-4CDD-98E2-D2837B59EAE5}">
+																	<Language>SFX</Language>
+																	<AudioFile>hurtHighSFX.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="729477149"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="hurtHighSFX" ID="{FB0CE39C-D6DB-4CDD-98E2-D2837B59EAE5}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</BlendContainer>
+												<Sound Name="doorCloseONly" ID="{78A6225F-3650-4786-BADD-EF6DB3EC83C0}" ShortID="87548818">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="CenterPercentage" Type="int32">
+															<ValueList>
+																<Value>100</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="doorCloseONly" ID="{13C098D6-0FCA-49F1-B3B0-F06758163F5D}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0124846342962508"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0674170251997541"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>doorCloseONly.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="265698209"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="doorCloseONly" ID="{13C098D6-0FCA-49F1-B3B0-F06758163F5D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="New Blend Container_02" ID="{A87E2E88-D363-4A59-908B-EE35BEE57469}" ShortID="467748844">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<BlendContainer Name="Bunt" ID="{B53C16DF-9C5F-496A-A014-3AEACA4AC8B5}" ShortID="77503790">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="CenterPercentage" Type="int32">
+															<ValueList>
+																<Value>100</Value>
+															</ValueList>
+														</Property>
+														<Property Name="InitialDelay" Type="Real64">
+															<ValueList>
+																<Value>0.1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-14</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="hurtHighSFX" ID="{BE4CB247-789A-48CF-9F3C-2841FC8A82FA}" ShortID="464569159">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																	<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="hurtHighSFX" ID="{6B38AFF7-13A4-41AE-9062-1E3CC393B81A}">
+																	<Language>SFX</Language>
+																	<AudioFile>hurtHighSFX.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="729477149"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="hurtHighSFX" ID="{6B38AFF7-13A4-41AE-9062-1E3CC393B81A}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</BlendContainer>
+												<Sound Name="doorCloseONly" ID="{B87465B3-23A4-479F-8874-66A7B45F4D60}" ShortID="480841487">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="CenterPercentage" Type="int32">
+															<ValueList>
+																<Value>100</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="doorCloseONly" ID="{644382FB-E4BA-4361-AC9C-E11309BC8CA8}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0124846342962508"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0674170251997541"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>doorCloseONly.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="265698209"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="doorCloseONly" ID="{644382FB-E4BA-4361-AC9C-E11309BC8CA8}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="New Blend Container_03" ID="{6333C11E-AAB4-4E61-9C80-AF825804E6A5}" ShortID="314187276">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<BlendContainer Name="Bunt" ID="{41252B15-D16D-4967-A127-D29AAF5AF85D}" ShortID="1005373918">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="CenterPercentage" Type="int32">
+															<ValueList>
+																<Value>100</Value>
+															</ValueList>
+														</Property>
+														<Property Name="InitialDelay" Type="Real64">
+															<ValueList>
+																<Value>0.1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-14</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="hurtHighSFX" ID="{CE9460F3-9293-41C6-9FD8-1795164A24E1}" ShortID="635135666">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																	<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="hurtHighSFX" ID="{BD1762AE-282B-41FD-96FD-75018CA43B7E}">
+																	<Language>SFX</Language>
+																	<AudioFile>hurtHighSFX.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="729477149"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="hurtHighSFX" ID="{BD1762AE-282B-41FD-96FD-75018CA43B7E}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</BlendContainer>
+												<Sound Name="doorCloseONly" ID="{6494B50A-5212-4C5A-B0DB-9EAB9AB6CE4B}" ShortID="67307649">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="CenterPercentage" Type="int32">
+															<ValueList>
+																<Value>100</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="doorCloseONly" ID="{017E2EF8-796A-4040-ACD6-2EE36918FA5F}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0124846342962508"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0674170251997541"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>doorCloseONly.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="265698209"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="doorCloseONly" ID="{017E2EF8-796A-4040-ACD6-2EE36918FA5F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="New Blend Container_04" ID="{8B65DBCF-ECA0-4A3F-8B02-826CCAF37DBD}" ShortID="303131270">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>50</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<BlendContainer Name="Bunt" ID="{DF98778E-8232-40FC-B413-A464EB21A782}" ShortID="917963109">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="CenterPercentage" Type="int32">
+															<ValueList>
+																<Value>100</Value>
+															</ValueList>
+														</Property>
+														<Property Name="InitialDelay" Type="Real64">
+															<ValueList>
+																<Value>0.1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-14</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="hurtHighSFX" ID="{2F99EF16-BB0D-4316-8E2C-6D43BCB9D9E4}" ShortID="254759607">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+																</Reference>
+																<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																	<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="hurtHighSFX" ID="{63BC5744-9B9B-4660-99F5-E36AA53CE9E7}">
+																	<Language>SFX</Language>
+																	<AudioFile>hurtHighSFX.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="729477149"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="hurtHighSFX" ID="{63BC5744-9B9B-4660-99F5-E36AA53CE9E7}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</BlendContainer>
+												<Sound Name="doorCloseONly" ID="{EE5739FB-D3D5-43F6-9C15-C8DDC98AED84}" ShortID="833884638">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="CenterPercentage" Type="int32">
+															<ValueList>
+																<Value>100</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="doorCloseONly" ID="{DBF82CB5-0621-4129-8699-36BA4A1DF169}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0124846342962508"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0674170251997541"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>doorCloseONly.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="265698209"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="doorCloseONly" ID="{DBF82CB5-0621-4129-8699-36BA4A1DF169}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</BlendContainer>
 						<BlendContainer Name="ForestDoorOpen" ID="{7881F8E7-0348-413F-A041-23C311EB7DF9}" ShortID="292704944">
@@ -40980,6 +41923,11 @@
 								<Property Name="CenterPercentage" Type="int32">
 									<ValueList>
 										<Value>100</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="29"/>
@@ -41015,7 +41963,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>4</Value>
+												<Value>-10</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -41031,7 +41979,7 @@
 										<AudioFileSource Name="ForestDoorOpen" ID="{1904D8B4-1276-46E8-9D40-F43B42B13616}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.217754558492112"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.138818531038721"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.106155347264904"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>ForestDoorOpen.wav</AudioFile>
@@ -41044,7 +41992,7 @@
 										<ActiveSource Name="ForestDoorOpen" ID="{1904D8B4-1276-46E8-9D40-F43B42B13616}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="forestDoorOpen2" ID="{6037B227-6CFE-46C8-B01E-977FFCA79488}" ShortID="395614140">
+								<RandomSequenceContainer Name="forest" ID="{7EB87D1F-0B0E-4CCA-8BF5-28435038C83A}" ShortID="382797177">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -41054,22 +42002,218 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="forestDoorOpen2" ID="{E65B5537-5D60-4DFD-9681-0EE1D642C63D}">
+										<Sound Name="forestDoorOpen2" ID="{6037B227-6CFE-46C8-B01E-977FFCA79488}" ShortID="395614140">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0309234787953288"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0968039336201599"/>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-150</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="29"/>
 											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>forestDoorOpen2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="587211813"/>
-											</MediaIDList>
-										</AudioFileSource>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="forestDoorOpen2" ID="{E65B5537-5D60-4DFD-9681-0EE1D642C63D}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0309234787953288"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0968039336201599"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>forestDoorOpen2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="587211813"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="forestDoorOpen2" ID="{E65B5537-5D60-4DFD-9681-0EE1D642C63D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="forestDoorOpen2_01" ID="{15F2DEEB-E4A3-44FB-8341-9CF09C00C7C8}" ShortID="485167934">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="29"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="forestDoorOpen2" ID="{80B536D5-EFFB-4AC8-BEBA-218F2CC533D7}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0309234787953288"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0968039336201599"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>forestDoorOpen2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="587211813"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="forestDoorOpen2" ID="{80B536D5-EFFB-4AC8-BEBA-218F2CC533D7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="forestDoorOpen2_02" ID="{190E8728-DF7E-40EB-B597-361969527A7A}" ShortID="990177348">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>75</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="29"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="forestDoorOpen2" ID="{05468FC9-B33D-4144-BBD3-88F7E3E80555}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0309234787953288"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0968039336201599"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>forestDoorOpen2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="587211813"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="forestDoorOpen2" ID="{05468FC9-B33D-4144-BBD3-88F7E3E80555}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="forestDoorOpen2_03" ID="{49D5B722-A876-4ABB-9979-F9AFC52A71D2}" ShortID="867352686">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>150</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="29"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="forestDoorOpen2" ID="{259C54BA-0E63-4A05-AAB5-8AEB73E091F4}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0309234787953288"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0968039336201599"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>forestDoorOpen2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="587211813"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="forestDoorOpen2" ID="{259C54BA-0E63-4A05-AAB5-8AEB73E091F4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="forestDoorOpen2_04" ID="{0491C622-A827-4851-9395-3289B5DDBE27}" ShortID="269198619">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-75</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="29"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="forestDoorOpen2" ID="{BCF20307-36FD-4F76-9C98-F96867FA5ACF}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0309234787953288"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0968039336201599"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>forestDoorOpen2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="587211813"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="forestDoorOpen2" ID="{BCF20307-36FD-4F76-9C98-F96867FA5ACF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="forestDoorOpen2" ID="{E65B5537-5D60-4DFD-9681-0EE1D642C63D}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</BlendContainer>
 						<BlendContainer Name="ForestDoorClose-NoAten" ID="{1AFA8EAA-6933-40D1-A675-F6CE89FA960B}" ShortID="959671109">
@@ -41082,13 +42226,13 @@
 								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>1</Value>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>11</Value>
+										<Value>7</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -41106,6 +42250,11 @@
 							<ChildrenList>
 								<Sound Name="ForestDoorC" ID="{99D1DEAD-EAD7-4525-8A6D-5AA5B721FB35}" ShortID="495728713">
 									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
 												<Value>21</Value>
@@ -41191,6 +42340,456 @@
 										</Sound>
 									</ChildrenList>
 								</BlendContainer>
+								<Sound Name="doorCloseONly" ID="{850B9B04-51A6-48A3-ABC0-CEA2FF804F15}" ShortID="268513291">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="doorCloseONly" ID="{DA13862F-ACFC-4281-B31A-2EE06EAFE2C4}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0124846342962508"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0674170251997541"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>doorCloseONly.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="265698209"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="doorCloseONly" ID="{DA13862F-ACFC-4281-B31A-2EE06EAFE2C4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="byomrand" ID="{2D152F8B-649F-4D21-9C0D-857A61E407BD}" ShortID="1041576057">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="pyoooo on door_02" ID="{59084707-2A72-438A-BC7B-5FC5BCF721BD}" ShortID="241147157">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-50</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="pyoooo on door" ID="{6E44C1AD-9173-4429-BD8A-C9DB22A3A255}">
+													<Language>SFX</Language>
+													<AudioFile>pyoooo on door.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="511624836"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="pyoooo on door" ID="{6E44C1AD-9173-4429-BD8A-C9DB22A3A255}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="pyoooo on door_03" ID="{34D13268-5170-4068-8C53-7D15DB594E20}" ShortID="1009636425">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="pyoooo on door" ID="{7B4CFAB9-FDD9-454B-BEF6-654BAE9C5A0E}">
+													<Language>SFX</Language>
+													<AudioFile>pyoooo on door.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="511624836"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="pyoooo on door" ID="{7B4CFAB9-FDD9-454B-BEF6-654BAE9C5A0E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="pyoooo on door_04" ID="{B45B008C-2125-4592-A510-5A50523E8A36}" ShortID="702441335">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>50</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="pyoooo on door" ID="{6E50032F-77A8-4828-9CB6-F604DBEC85D2}">
+													<Language>SFX</Language>
+													<AudioFile>pyoooo on door.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="511624836"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="pyoooo on door" ID="{6E50032F-77A8-4828-9CB6-F604DBEC85D2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="ForestDoorClose-NoAten_01" ID="{ABC02A4C-A736-4958-B0C1-D172FF8508BD}" ShortID="590070798">
+							<PropertyList>
+								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>13</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ForestDoorC" ID="{E59D567F-E886-4E97-BFC2-585EA6F56645}" ShortID="243451512">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>21</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ForestDoorClose" ID="{A443544E-5D09-481E-BE74-219A97CBE979}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0125203211432084"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0792953672403196"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ForestDoorClose.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="623943845"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ForestDoorClose" ID="{A443544E-5D09-481E-BE74-219A97CBE979}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<BlendContainer Name="Bunt" ID="{5D77E146-5C24-41CC-A4BD-6F1436560D98}" ShortID="28693850">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>1000</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-14</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="hurtHighSFX" ID="{16A0A9AF-4F4C-4C5C-ABE9-DF9D82D0CB56}" ShortID="795697226">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+													<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="hurtHighSFX" ID="{42EF9C88-3D29-4AC2-A473-6BF48B91BB9C}">
+													<Language>SFX</Language>
+													<AudioFile>hurtHighSFX.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="729477149"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="hurtHighSFX" ID="{42EF9C88-3D29-4AC2-A473-6BF48B91BB9C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
+								<Sound Name="doorCloseONly" ID="{FBDB37B1-6026-4545-B16D-BC525BF0122D}" ShortID="446952386">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="doorCloseONly" ID="{2627D976-C428-4185-894E-E87927A5E06C}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0124846342962508"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0674170251997541"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>doorCloseONly.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="265698209"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="doorCloseONly" ID="{2627D976-C428-4185-894E-E87927A5E06C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="byomrand" ID="{7E83568A-4AD6-46B6-974D-2A142ECEB3E8}" ShortID="206525136">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="pyoooo on door_02" ID="{75AB9040-000C-4A8A-A36A-36FABDB5A0B1}" ShortID="799226664">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-50</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="pyoooo on door" ID="{428A3A34-7054-49CF-8846-D22E6BF25183}">
+													<Language>SFX</Language>
+													<AudioFile>pyoooo on door.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="511624836"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="pyoooo on door" ID="{428A3A34-7054-49CF-8846-D22E6BF25183}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="pyoooo on door_03" ID="{C930433D-1D03-4110-8170-E0C52DC0D114}" ShortID="795853370">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="pyoooo on door" ID="{4B25700A-00A5-43D8-9ECB-96C7A0DF1830}">
+													<Language>SFX</Language>
+													<AudioFile>pyoooo on door.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="511624836"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="pyoooo on door" ID="{4B25700A-00A5-43D8-9ECB-96C7A0DF1830}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="pyoooo on door_04" ID="{32AFE541-69D1-4345-9DCC-7D9B0BA20EED}" ShortID="585628244">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>50</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="pyoooo on door" ID="{B00603D0-40CE-4FA5-9524-8C84D175EC37}">
+													<Language>SFX</Language>
+													<AudioFile>pyoooo on door.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="511624836"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="pyoooo on door" ID="{B00603D0-40CE-4FA5-9524-8C84D175EC37}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</BlendContainer>
 					</ChildrenList>

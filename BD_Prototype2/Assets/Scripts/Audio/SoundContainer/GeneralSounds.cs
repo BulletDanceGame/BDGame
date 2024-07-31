@@ -14,6 +14,7 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
 public class GeneralSounds : SoundContainer
 {
     private uint ambienceSoundID;
+    private uint fireSoundID;
     AkGameObj gameObj;
         
         // -- Event Hooks & sound initialization -- //
@@ -74,6 +75,16 @@ public class GeneralSounds : SoundContainer
     public void StopForestAmbience()
     {
            ambienceSoundID = AkSoundEngine.PostEvent("Stop_ForestAmb", gameObject);
+    }
+
+    public void PlayFireAmb()
+    {
+            fireSoundID = AkSoundEngine.PostEvent("Play_fire", gameObject);
+    }
+
+    public void StopFireAmb()
+    {
+            fireSoundID = AkSoundEngine.PostEvent("Stop_fire", gameObject);
     }
 
     public void MuteEnvMusic()
