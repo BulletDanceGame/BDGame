@@ -46,7 +46,6 @@ Custom State	ID	Name	State Group	Owner		Notes
 	262760644	Tutorial	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Facility		
 	347435619	YokaiHunterBoss	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Tutorial		
 	421537490	Mid	DynamicGameplaySFX	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Miss		
-	421885907	Fighting	PlayerStatus	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Movement\Footsteps		
 	525522666	High	DynamicGameplaySFX	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Movement\Dash		
 	564776861	Mid	DynamicGameplaySFX	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Actions\Actions - Dynamic		
 	575649650	YokaiHunterBoss	Level	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1\Level 1 - Critter		
@@ -108,6 +107,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	3837119958	LOW_PASS____PlayerActions__Dynamic			\Default Work Unit\LOW PASS\LOW_PASS____PlayerActions__Dynamic	
 	4091390158	VOLUME____MusicEnvRoaming			\Default Work Unit\VOLUME\VOLUME____MusicEnvRoaming	
 	4092666037	LOW_PASS____PlayerActions__Set			\Default Work Unit\LOW PASS\LOW_PASS____PlayerActions__Set	
+	4133561788	VOLUME____PlayerMovement__Footsteps__Cutscene			\Default Work Unit\VOLUME____PlayerMovement__Footsteps__Cutscene	
 	4208198357	VOLUME____PlayerActions__Set			\Default Work Unit\VOLUME\VOLUME____PlayerActions__Set	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
@@ -139,7 +139,9 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	1105659027	General - AudibleOnSpeedUp			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\General - AudibleOnSpeedUp	
 	1137508701	Env Roaming - Level 1			\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 1	
 	1137508702	Env Roaming - Level 2			\Default Work Unit\Master Audio Bus\Music\4 Environment Roaming\Env Roaming - Level 2	
+	1160234136	Normal			\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Movement\Footsteps\Normal	
 	1178247810	Cutscene 3 - TalkingBat - Player			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\Voicelines\Cutscene 3 - TalkingBat - Player	
+	1182958561	Cutscene			\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Movement\Footsteps\Cutscene	
 	1235671696	Cutscene 4 - Boss1 - Player - Outro			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\Voicelines\Cutscene 4 - Boss1 - Player - Outro	
 	1280655526	Damage (player)			\Default Work Unit\Master Audio Bus\SFX\2 Player SFX\Damage (player)	
 	1288875315	Cutscene 2 - Panda Meeting (general sfx)			\Default Work Unit\Master Audio Bus\SFX\5 Cutscene SFX\General - InaudibleOnSpeedUp\Cutscene 2 - Panda Meeting (general sfx)	

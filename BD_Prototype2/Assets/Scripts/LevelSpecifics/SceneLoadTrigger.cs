@@ -24,16 +24,22 @@ public class SceneLoadTrigger : MonoBehaviour
         switch (loadOptions)
         {
             case SceneManager.LoadOptions.Specified:
+                RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
+                MusicManager.Instance.SwitchMusic(MusicManager.TransitionType.FADE_STOP);
                 SceneManager.Instance.LoadScene(_sceneToLoad, 3.5f);
                 break;
 
             case SceneManager.LoadOptions.NextLevel:
+                RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
+                MusicManager.Instance.SwitchMusic(MusicManager.TransitionType.FADE_STOP);
                 SaveSystem.Instance.GetData().currentLevel = SceneManager.GetActiveScene().buildIndex + 1;
                 SaveSystem.Instance.Save();
                 SceneManager.Instance.LoadNextScene(3.5f);
                 break;
 
             case SceneManager.LoadOptions.Reload:
+                RTPCManager.Instance.SetAttributeValue("VOLUME", 0, 1f, RTPCManager.CurveTypes.linear, "VOLUME____Menu");
+                MusicManager.Instance.SwitchMusic(MusicManager.TransitionType.FADE_STOP);
                 SceneManager.Instance.ReloadCurrentScene(3.5f);
                 break;
 

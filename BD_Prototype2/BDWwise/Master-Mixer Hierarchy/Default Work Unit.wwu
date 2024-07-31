@@ -1394,15 +1394,54 @@
 													<PropertyList>
 														<Property Name="BusVolume" Type="Real64">
 															<ValueList>
-																<Value>-12</Value>
-															</ValueList>
-														</Property>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>-99</Value>
+																<Value>-6</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
+													<ChildrenList>
+														<Bus Name="Normal" ID="{A0859A79-33F9-4A0E-A5C9-7AC291F0AEC9}">
+															<ObjectLists>
+																<ObjectList Name="RTPC">
+																	<Reference>
+																		<Local>
+																			<RTPC Name="" ID="{60761C72-0488-412F-A7BB-756A64FA0AE1}" ShortID="356911199">
+																				<PropertyList>
+																					<Property Name="PropertyName" Type="string" Value="Volume"/>
+																				</PropertyList>
+																				<ReferenceList>
+																					<Reference Name="ControlInput">
+																						<ObjectRef Name="VOLUME____PlayerMovement__Footsteps__Cutscene" ID="{4E35557C-3976-4F05-99A2-22791BE24104}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+																					</Reference>
+																					<Reference Name="Curve">
+																						<Custom>
+																							<Curve Name="" ID="{C70149CC-4DD9-4E41-9D36-5E191687F74C}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>-200</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>100</XPos>
+																										<YPos>200</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</Custom>
+																					</Reference>
+																				</ReferenceList>
+																			</RTPC>
+																		</Local>
+																	</Reference>
+																</ObjectList>
+															</ObjectLists>
+														</Bus>
+														<Bus Name="Cutscene" ID="{1A85FECD-CC79-4424-8B3E-5E1601D14A5D}"/>
+													</ChildrenList>
 													<StateInfo>
 														<StateGroupList>
 															<StateGroupInfo>
@@ -1416,11 +1455,7 @@
 															</CustomState>
 															<CustomState>
 																<StateRef Name="Fighting" ID="{DFDF9133-42ED-4C2D-9722-9D1DFE49A103}"/>
-																<CustomState Name="" ID="{87F5A7F2-B66D-4947-9A99-B5BAA2B8782D}" ShortID="421885907">
-																	<PropertyList>
-																		<Property Name="BusVolume" Type="Real64" Value="-108"/>
-																	</PropertyList>
-																</CustomState>
+																<CustomState Name="" ID="{87F5A7F2-B66D-4947-9A99-B5BAA2B8782D}" ShortID="421885907"/>
 															</CustomState>
 														</CustomStateList>
 													</StateInfo>

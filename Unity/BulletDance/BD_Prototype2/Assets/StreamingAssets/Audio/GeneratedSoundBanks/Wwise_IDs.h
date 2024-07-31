@@ -125,6 +125,7 @@ namespace AK
         static const AkUniqueID PLAY_DEATH = 1172822028U;
         static const AkUniqueID PLAY_DEFLECTIONSWING___GOOD___LONG = 4112303910U;
         static const AkUniqueID PLAY_DONTMESSWITHUS = 3538995979U;
+        static const AkUniqueID PLAY_EMPTINESS = 1289424404U;
         static const AkUniqueID PLAY_ENCOUNTER___CRITTER = 1369454011U;
         static const AkUniqueID PLAY_ENEMY__ = 3987937360U;
         static const AkUniqueID PLAY_ENEMYTURRETTURNON = 2011553634U;
@@ -153,6 +154,7 @@ namespace AK
         static const AkUniqueID PLAY_FADE_IN = 1091948866U;
         static const AkUniqueID PLAY_FIRSTTURRET___TURN_ON_AND_ALERT = 2754371527U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
+        static const AkUniqueID PLAY_FOOTSTEPSONBEAT = 1036785500U;
         static const AkUniqueID PLAY_FORESTAMB = 3960404151U;
         static const AkUniqueID PLAY_JUMP = 3689126666U;
         static const AkUniqueID PLAY_LANDING = 2323405115U;
@@ -217,6 +219,8 @@ namespace AK
         static const AkUniqueID PLAY_PICKUPSFX = 3043903975U;
         static const AkUniqueID PLAY_RANDOMBUNTS = 3252241981U;
         static const AkUniqueID PLAY_RANDOMLANDS = 228594979U;
+        static const AkUniqueID PLAY_RUNNINGLASTSTEP = 1975050353U;
+        static const AkUniqueID PLAY_RUNNINGLASTSTEP_CUTSCENE = 3348392508U;
         static const AkUniqueID PLAY_SHIT_ = 2725832863U;
         static const AkUniqueID PLAY_SMALLCRITTERAPPEAR = 4203124091U;
         static const AkUniqueID PLAY_SMALLCRITTERAPPEAR_01 = 1968921967U;
@@ -262,6 +266,7 @@ namespace AK
         static const AkUniqueID SPEEDUPCUTSCENE____PLAY = 2251819479U;
         static const AkUniqueID STOP_ENV1_VEGZONE_OUTROLOOP = 177105241U;
         static const AkUniqueID STOP_FOOTSTEPS = 2963349357U;
+        static const AkUniqueID STOP_FOOTSTEPSONBEAT = 1521984158U;
         static const AkUniqueID STOP_FORESTAMB = 2168881957U;
         static const AkUniqueID TRAILERAUDIO____PLAY = 1814921978U;
         static const AkUniqueID TRAINING_GROUND__BATROOM__PART1____PLAY = 2693353997U;
@@ -425,6 +430,8 @@ namespace AK
         static const AkUniqueID VOLUME____PLAYERDAMAGE = 895741003U;
         static const AkUniqueID VOLUME____PLAYERMOVEMENT__DASH = 2589375093U;
         static const AkUniqueID VOLUME____PLAYERMOVEMENT__FOOTSTEPS = 3603952474U;
+        static const AkUniqueID VOLUME____PLAYERMOVEMENT__FOOTSTEPS__CUTSCENE = 4133561788U;
+        static const AkUniqueID VOLUME____WALKING = 214523848U;
         static const AkUniqueID VOLUME_SPECIAL____DEFLECTIONELEMENT__PITCHELEMENT = 3260874934U;
     } // namespace GAME_PARAMETERS
 
@@ -475,6 +482,7 @@ namespace AK
         static const AkUniqueID CALIBRATION = 2230992643U;
         static const AkUniqueID CRITTER_PHASE_1 = 588994398U;
         static const AkUniqueID CRITTER_PHASE_2 = 588994397U;
+        static const AkUniqueID CUTSCENE = 1182958561U;
         static const AkUniqueID CUTSCENE_0___BOSS___INTRO__VOICELINES_ = 3305848892U;
         static const AkUniqueID CUTSCENE_0___BOSS___PHASE_1_TO_2__VOICELINES_ = 2760514625U;
         static const AkUniqueID CUTSCENE_0___BOSS___PHASE_2_TO_3__VOICELINES_ = 4242640781U;
@@ -523,6 +531,7 @@ namespace AK
         static const AkUniqueID MOVEMENT = 2129636626U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID NAVIGATION = 1082482811U;
+        static const AkUniqueID NORMAL = 1160234136U;
         static const AkUniqueID OUTDOORS = 2730119150U;
         static const AkUniqueID PAUSE = 3092587493U;
         static const AkUniqueID SFX = 393239870U;

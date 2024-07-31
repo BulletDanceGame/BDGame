@@ -308,6 +308,10 @@
 							<Value>19.9882134896086</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="VOLUME____walking" ID="{A89EF007-38C5-4586-87DB-3ED69D95B16A}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="HIGH_PASS____MusicEnvBattle" ID="{4B24861D-1C18-4833-A655-7B5BB1DD8C2F}"/>
 							<Value>0</Value>
 						</RTPCValue>
@@ -348,11 +352,17 @@
 							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="VOLUME____PlayerMovement__Footsteps__Cutscene" ID="{4E35557C-3976-4F05-99A2-22791BE24104}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="HIGH_PASS____CutsceneMusic" ID="{586051BF-89E4-4FBD-A32A-0F8FADE964C0}"/>
 							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>
-					<CurrentStateList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Tutorial" ID="{4B371ABF-53EF-4BF6-B114-D747A517B697}"/>
+					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 			</ChildrenList>

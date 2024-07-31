@@ -42,7 +42,7 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
             EventManager.Instance.OnPlayerBurn   += PlayerBurn;
             EventManager.Instance.OnPlayerDeath  += PlayerDeath;
 
-            EventManager.Instance.OnBeat           += PlayFootsteps;
+            EventManager.Instance.OnPlayerRhythmBeat           += PlayFootsteps;
             EventManager.Instance.OnPlayerMove     += StartFootstep;
             EventManager.Instance.OnPlayerStopMove += StopFootstep;
 
@@ -67,7 +67,7 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
             EventManager.Instance.OnPlayerBurn      -= PlayerBurn;
             EventManager.Instance.OnPlayerDeath     -= PlayerDeath;
 
-            EventManager.Instance.OnBeat            -= PlayFootsteps;
+            EventManager.Instance.OnPlayerRhythmBeat -= PlayFootsteps;
             EventManager.Instance.OnPlayerMove      -= StartFootstep;
             EventManager.Instance.OnPlayerStopMove  -= StopFootstep;
 
@@ -75,11 +75,28 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
         }
 
 
+        float x, y;
+
         // -- Update -- //
         void Update()
         {
             HitPitchUpdate();
-            print("movement: " + _isPlayerMoving);
+
+            x = Input.GetAxisRaw("Horizontal");
+            y = Input.GetAxisRaw("Vertical");
+            print("x: " + x);
+            print("y: " + y);
+
+            if(x == 0 && y == 0)
+            {
+                //PlaySFX("Last Footstep");
+                RTPCManager.Instance.SetValue("VOLUME____walking", 0, 0.00000000001f, RTPCManager.CurveTypes.high_curve);
+            }
+            else
+            {
+                RTPCManager.Instance.ResetValue("VOLUME____walking", 0.00000000001f, RTPCManager.CurveTypes.high_curve);
+            }
+
         }
 
 
@@ -137,20 +154,39 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
         private uint footstepSoundID;
         void PlayFootsteps(int none)
         {
-            if(_isPlayerMoving)
-                footstepSoundID = AkSoundEngine.PostEvent("Play_Footsteps", gameObject);
+            footstepSoundID = AkSoundEngine.PostEvent("Play_Footsteps", gameObject);
         }
 
         void StartFootstep(Vector2 none)
         {
-            _isPlayerMoving = true;
+            //_isPlayerMoving = true;
+            if (x == 0 && y == 0)
+                PlaySFX("Last Footstep");
+            //RTPCManager.Instance.ResetValue("VOLUME____walking", 0.00000000001f, RTPCManager.CurveTypes.high_curve);
+            //print("unmute footsteps");
         }
 
         void StopFootstep()
         {
             PlaySFX("Last Footstep");
-            footstepSoundID = AkSoundEngine.PostEvent("Stop_Footsteps", gameObject);
-            _isPlayerMoving = false;
+            RTPCManager.Instance.SetValue("VOLUME____walking", 0, 0.00000000001f, RTPCManager.CurveTypes.high_curve);
+            //print("mute footsteps");
+        }
+
+        public void StopFootstepForCutscene()
+        {
+            PlaySFX("Cutscene Start Footstep");
+            RTPCManager.Instance.SetValue("VOLUME____PlayerMovement__Footsteps__Cutscene", 0, 0.00000000001f, RTPCManager.CurveTypes.high_curve);
+        }
+
+        public void StopFootstepForCutsceneWithoutSFX()
+        {
+            RTPCManager.Instance.SetValue("VOLUME____PlayerMovement__Footsteps__Cutscene", 0, 0.00000000001f, RTPCManager.CurveTypes.high_curve);
+        }
+
+        public void ContinueFootstepsForCutscene()
+        {
+            RTPCManager.Instance.ResetValue("VOLUME____PlayerMovement__Footsteps__Cutscene", 0.00000000001f, RTPCManager.CurveTypes.high_curve);
         }
 
 

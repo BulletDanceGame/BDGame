@@ -3674,6 +3674,64 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_FootstepsOnBeat" ID="{4AA03844-DFC6-48A7-A98A-87EB352CBC94}">
+					<ChildrenList>
+						<Action Name="" ID="{4F21CCBA-B749-4894-AFA5-0B25E9955830}" ShortID="1022734726">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps" ID="{F1D62CCE-9943-4E23-9E83-BFB4DD354C7F}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_FootstepsOnBeat" ID="{B17668C2-5F77-445F-9425-9285419E8034}">
+					<ChildrenList>
+						<Action Name="" ID="{1E57A404-2EE4-41BA-854E-1139249F30DD}" ShortID="390922872">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps" ID="{F1D62CCE-9943-4E23-9E83-BFB4DD354C7F}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_RunningLastStep" ID="{09C8A45B-DC7E-4395-8A98-864F92B83038}">
+					<ChildrenList>
+						<Action Name="" ID="{38510576-811C-4B45-807F-EEB9FDEA0F77}" ShortID="1049760189">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RunningLastStep" ID="{D2A5B120-E55D-40D7-9E96-81BE6C88F255}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_emptiness" ID="{FAA1B4D6-40B2-4C39-99C6-7A132A50889F}">
+					<ChildrenList>
+						<Action Name="" ID="{4A38092D-18CA-45DC-AAA2-EE92B5D7B8CA}" ShortID="609104373">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="emptiness" ID="{C45AE65B-B243-4D7E-A2AE-80B75A000B9C}" WorkUnitID="{8DC8C28D-1D78-418C-87BD-2BF45D3F8625}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_RunningLastStep_Cutscene" ID="{708E3505-D33F-4993-AEBD-4F7E8DDC3A18}">
+					<ChildrenList>
+						<Action Name="" ID="{60006B2C-115E-47A6-A9B7-698109552C8E}" ShortID="11503855">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RunningLastStep_Cutscene" ID="{AD2EB36C-C493-48FE-96D9-DFB6AAED8E04}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

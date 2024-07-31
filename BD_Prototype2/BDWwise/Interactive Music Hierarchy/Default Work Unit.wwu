@@ -16612,9 +16612,19 @@
 						<MusicSegment Name="PauseScreenMusic - old" ID="{FF4BAB53-7E56-4A05-8A18-7B490E173F35}" ShortID="149993340">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="23888.3839285714"/>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>39</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>39</Value>
+									</ValueList>
+								</Property>
 								<Property Name="PlaybackSpeed" Type="Real64">
 									<ValueList>
-										<Value>0.7</Value>
+										<Value>0.9</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Tempo" Type="Real64" Value="280"/>
@@ -17540,7 +17550,7 @@
 							<PropertyList>
 								<Property Name="PlaybackSpeed" Type="Real64">
 									<ValueList>
-										<Value>0.8</Value>
+										<Value>2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -23065,6 +23075,168 @@
 															<Reference Name="Curve">
 																<Custom>
 																	<Curve Name="" ID="{C2A91BC8-E206-4504-9A6B-A04D36BE247D}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0.25</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>4</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="emptiness" ID="{C45AE65B-B243-4D7E-A2AE-80B75A000B9C}" ShortID="176862443">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="6875"/>
+										<Property Name="Tempo" Type="Real64" Value="280"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-96</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Env Battle - Level 1 - Tutorial" ID="{F17D932F-F1CB-4DA8-AD9E-0B2874895A64}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="outro-part 1" ID="{1E6CDBCD-1C31-4E59-AB65-6F1C03CCD00F}" ShortID="949390313">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="outro-part 1" ID="{A53B731E-7123-4168-BFFB-4FF611E80FB2}">
+													<Language>SFX</Language>
+													<AudioFile>outro-part 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="801062043"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{333057FB-06F8-4DBE-9877-C41F3DD06CD7}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{E32B7482-49D8-4701-B5A8-5556EC2C9EFA}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="outro-part 1" ID="{DA2B5531-916C-417C-927B-B1DEAAB5297A}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="6875"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="outro-part 1" ID="{A53B731E-7123-4168-BFFB-4FF611E80FB2}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{B5FD909B-06CC-43EA-B1AF-E23B65C68B89}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{2FC74475-00E3-4B82-BB9D-740EF1F15FC7}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="6875"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{41084AD1-DB33-4782-B2BB-AE40AA5BDF39}" ShortID="544416443">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="PlaybackSpeed"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="PLAYBACK_SPEED____CutsceneMusic" ID="{1089C0B8-F905-42EF-9C59-349ABB22F0A7}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{E877A042-36FB-42E0-8812-DAFEEB020EBA}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0.25</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>4</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{F0159F4F-BBDB-44D6-AE0D-867FB447EA44}" ShortID="620119124">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="PlaybackSpeed"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="PLAYBACK_SPEED____MusicBossBattle" ID="{04AD4BF5-C0D4-44A1-8A9B-B693562B6A51}" WorkUnitID="{8BC927E1-43FC-4743-B63A-39BA9B319245}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{2FCD2E6A-F9B4-438A-AEE1-0AFCB6614009}">
 																		<PropertyList>
 																			<Property Name="Flags" Type="int32" Value="1"/>
 																		</PropertyList>

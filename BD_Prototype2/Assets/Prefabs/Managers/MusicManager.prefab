@@ -162,17 +162,22 @@ MonoBehaviour:
       sfxEvent:
         idInternal: 0
         valueGuidInternal: 
-        WwiseObjectReference: {fileID: 11400000, guid: aa4f9d485aeda81479ade3c16460d6fd, type: 2}
+        WwiseObjectReference: {fileID: 11400000, guid: a17eec50c9fa17c4f831ca7baa01972c, type: 2}
     - sfxName: Last Footstep
       sfxEvent:
         idInternal: 0
         valueGuidInternal: 
-        WwiseObjectReference: {fileID: 11400000, guid: eb661e9539b9c8042bc326370dc0e41c, type: 2}
+        WwiseObjectReference: {fileID: 11400000, guid: 357df9570cacebc459dd71108bdfdf98, type: 2}
     - sfxName: Dash Miss
       sfxEvent:
         idInternal: 0
         valueGuidInternal: 
         WwiseObjectReference: {fileID: 11400000, guid: 8240a4d61511c1048a0aef9ea91541f3, type: 2}
+    - sfxName: Cutscene Start Footstep
+      sfxEvent:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: b6f980b927881dd41a3f85c3fcaaf498, type: 2}
   - groupName: Swing
     sfxList:
     - sfxName: Swing Perfect
@@ -304,5 +309,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59534e61cb9c2944aee28677e960b08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _perfectHitTime: 0.1
-  _okayHitTime: 0.2
