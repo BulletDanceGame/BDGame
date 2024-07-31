@@ -3652,6 +3652,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_StartBattle" ID="{52B22E7A-53CA-404C-B51E-44A435107810}">
+					<ChildrenList>
+						<Action Name="" ID="{0867207C-55E3-44D6-8D62-ED26D402E0A5}" ShortID="291596295">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="StartBattle" ID="{5460A4C4-9A07-44A6-9B02-6D62E94BAF4D}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_StartBattle_01" ID="{A53803DE-5DF7-4CB2-B76F-645D4685FB72}">
+					<ChildrenList>
+						<Action Name="" ID="{0AAD5B6B-C643-408A-8879-712D627D38A2}" ShortID="19856107">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="StartBattle" ID="{5460A4C4-9A07-44A6-9B02-6D62E94BAF4D}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -1305,17 +1305,17 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="917783881" Type="User" Language="SFX" Hash="{0CBF2F2B-FFDE-5748-38C4-F7D667F0A6E7}">
+		<SoundBank Id="917783881" Type="User" Language="SFX" Hash="{059DD9F2-42CD-A2DC-CD04-46426DF7485F}">
 			<ShortName>Critter_Fight_Voices</ShortName>
 			<Path>Critter_Fight_Voices.bnk</Path>
 			<Media>
-				<File Id="166184843" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>death scream.wav</ShortName>
-					<CachePath>SFX/death scream_4DEC8C48.wem</CachePath>
+				<File Id="229802956" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>critter death.wav</ShortName>
+					<CachePath>SFX/critter death_90286345.wem</CachePath>
 				</File>
 				<File Id="570681607" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Scream.wav</ShortName>
-					<CachePath>SFX/Scream_7E4801DE.wem</CachePath>
+					<CachePath>SFX/Scream_15FAB911.wem</CachePath>
 				</File>
 				<File Id="728995294" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>impact10.wav</ShortName>
@@ -1348,9 +1348,9 @@
 						<MediaRef Id="570681607"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2949765537" Name="Play_Critter_death_impact" DurationType="OneShot" DurationMin="6.0145583" DurationMax="6.0145583">
+				<Event Id="2949765537" Name="Play_Critter_death_impact" DurationType="OneShot" DurationMin="5.659498" DurationMax="5.659498">
 					<MediaRefs>
-						<MediaRef Id="166184843"/>
+						<MediaRef Id="229802956"/>
 						<MediaRef Id="728995294"/>
 						<MediaRef Id="729477149"/>
 						<MediaRef Id="754390640"/>
@@ -2095,7 +2095,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{E18121C9-9F70-740A-E806-639ECE438FF5}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{DE722F78-180F-6108-1F73-78F5700D885C}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -3388,6 +3388,11 @@
 						<MediaRef Id="729477149"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2537898644" Name="Play_StartBattle" DurationType="OneShot" DurationMin="7.3" DurationMax="7.3">
+					<MediaRefs>
+						<MediaRef Id="319209927"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1444205428" Name="Play_StartGame" DurationType="OneShot" DurationMin="3.7901876" DurationMax="3.7901876">
 					<MediaRefs>
 						<MediaRef Id="182175587"/>
@@ -3613,5 +3618,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8F53EE5A-B9B1-1F8B-7B25-60C7757ADD74}</FileHash>
+	<FileHash>{084B6581-6E25-8652-7074-7D065AE98167}</FileHash>
 </SoundBanksInfo>
