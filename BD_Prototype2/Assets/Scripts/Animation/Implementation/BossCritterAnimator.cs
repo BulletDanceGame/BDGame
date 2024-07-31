@@ -9,6 +9,8 @@ namespace BulletDance.Animation
 
 public class BossCritterAnimator : BossAnimator
 {
+    [SerializeField] NoteDuration _normalDuration, _jumpDuration;
+
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -21,6 +23,8 @@ public class BossCritterAnimator : BossAnimator
     protected override void WalkStart()
     { 
         _isWalk = true;
+
+        _animNoteDuration = _isSpecial ? _jumpDuration : _normalDuration;
 
         //Play a faster move animation if the movement happens offbeat.
 
@@ -36,6 +40,7 @@ public class BossCritterAnimator : BossAnimator
     protected override void SpecialStart(int actionState) 
     {
         base.SpecialStart(actionState);
+        _animNoteDuration = _isSpecial ? _jumpDuration : _normalDuration;
         //if(actionState == 46 || actionState == 48)
             _spriteAnimator.Anim(actionState);
     }
@@ -45,6 +50,8 @@ public class BossCritterAnimator : BossAnimator
     {
         //Cutscene override
         if(!_continueAnimation) return;
+
+        _animNoteDuration = _isSpecial ? _jumpDuration : _normalDuration;
         base.PlayAnimation(anticipation, duration);
     }
 
