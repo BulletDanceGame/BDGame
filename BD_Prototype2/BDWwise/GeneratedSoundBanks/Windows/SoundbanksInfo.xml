@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="690988688" Type="User" Language="SFX" Hash="{4A39A866-1E3D-A54F-0CAC-7D640512CA52}">
+		<SoundBank Id="690988688" Type="User" Language="SFX" Hash="{0DEBF599-34D5-ECE8-0A1F-CB73AF23C99C}">
 			<ShortName>Music_Critter_Phase2</ShortName>
 			<Path>Music_Critter_Phase2.bnk</Path>
 			<Media>
@@ -105,7 +105,7 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="690988691" Type="User" Language="SFX" Hash="{73D9F97C-7058-DDB1-7A82-4FB63124C3F3}">
+		<SoundBank Id="690988691" Type="User" Language="SFX" Hash="{FA40DBA7-8525-0427-4D28-421441480169}">
 			<ShortName>Music_Critter_Phase1</ShortName>
 			<Path>Music_Critter_Phase1.bnk</Path>
 			<Media>
@@ -1290,7 +1290,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="917783881" Type="User" Language="SFX" Hash="{2804971B-9216-B6A2-009C-4AA05A269022}">
+		<SoundBank Id="917783881" Type="User" Language="SFX" Hash="{7A8B4B06-AAA0-CE46-4797-21C12AB99949}">
 			<ShortName>Critter_Fight_Voices</ShortName>
 			<Path>Critter_Fight_Voices.bnk</Path>
 			<Media>
@@ -1367,7 +1367,7 @@
 				<Event Id="4151199969" Name="Play_SmallCritterVoices" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{9D900A6F-6ABB-4F4E-5D10-C4A9BC60C320}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{DDE55192-6AE0-5EA3-1D6C-AB278D3D739E}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1382,6 +1382,7 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="4109362" Name="Left"/>
 				<Bus Id="65515336" Name="BossActions 1 - Yokai Hunter"/>
 				<Bus Id="105929186" Name="Boss - Level 1 - Yokai Hunter"/>
 				<Bus Id="112838762" Name="Cutscene 2 - Vs Yokai Hunter (music)"/>
@@ -1466,6 +1467,7 @@
 				<Bus Id="3545305787" Name="Actions - Set"/>
 				<Bus Id="3675259263" Name="6 Misc"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3893817417" Name="Right"/>
 				<Bus Id="3991942870" Name="Music">
 					<PluginRefs>
 						<ShareSets>
@@ -2055,19 +2057,235 @@
 				<GameParameter Id="3366454963" Name="hitSloMo_only_here_for_reference_of_max_combo_stuff"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3056822322" Type="User" Language="SFX" Hash="{15AF2E88-BAA5-94B9-E6A6-1EFF8C3290C8}">
+		<SoundBank Id="3056822322" Type="User" Language="SFX" Hash="{B3B723DA-2986-455E-7A3C-2E60B6A23840}">
 			<ShortName>moreSounds</ShortName>
 			<Path>moreSounds.bnk</Path>
 			<Media>
+				<File Id="9867646" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>up.wav</ShortName>
+					<CachePath>SFX/up_10C4C929.wem</CachePath>
+				</File>
+				<File Id="24760398" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>now what.wav</ShortName>
+					<CachePath>SFX/now what_10C4C929.wem</CachePath>
+				</File>
 				<File Id="48654217" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>fireInOncePLace1.wav</ShortName>
 					<CachePath>SFX/fireInOncePLace1_D79FB2B7.wem</CachePath>
 				</File>
+				<File Id="103447002" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>no way.wav</ShortName>
+					<CachePath>SFX/no way_10C4C929.wem</CachePath>
+				</File>
+				<File Id="177686264" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>finally.wav</ShortName>
+					<CachePath>SFX/finally_10C4C929.wem</CachePath>
+				</File>
+				<File Id="215459325" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>you done..wav</ShortName>
+					<CachePath>SFX/you done._10C4C929.wem</CachePath>
+				</File>
+				<File Id="218370749" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>you're pretty weak.wav</ShortName>
+					<CachePath>SFX/you're pretty weak_10C4C929.wem</CachePath>
+				</File>
+				<File Id="244541457" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>see ya.wav</ShortName>
+					<CachePath>SFX/see ya_10C4C929.wem</CachePath>
+				</File>
+				<File Id="269698286" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy.wav</ShortName>
+					<CachePath>SFX/Enemy_10C4C929.wem</CachePath>
+				</File>
+				<File Id="293312912" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>honestly.wav</ShortName>
+					<CachePath>SFX/honestly_10C4C929.wem</CachePath>
+				</File>
+				<File Id="375146969" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>teki-san2.wav</ShortName>
+					<CachePath>SFX/teki-san2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="402664948" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>the human won.wav</ShortName>
+					<CachePath>SFX/the human won_10C4C929.wem</CachePath>
+				</File>
+				<File Id="402904717" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>getting warmed.wav</ShortName>
+					<CachePath>SFX/getting warmed_10C4C929.wem</CachePath>
+				</File>
+				<File Id="415030716" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>grrrrr phase 1.wav</ShortName>
+					<CachePath>SFX/grrrrr phase 1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="512978103" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>get outta my way.wav</ShortName>
+					<CachePath>SFX/get outta my way_10C4C929.wem</CachePath>
+				</File>
+				<File Id="570681607" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Scream.wav</ShortName>
+					<CachePath>SFX/Scream_15FAB911.wem</CachePath>
+				</File>
+				<File Id="645873364" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>bring it on.wav</ShortName>
+					<CachePath>SFX/bring it on_10C4C929.wem</CachePath>
+				</File>
+				<File Id="652862440" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>you must be the mother.wav</ShortName>
+					<CachePath>SFX/you must be the mother_10C4C929.wem</CachePath>
+				</File>
+				<File Id="720496281" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>thank you.wav</ShortName>
+					<CachePath>SFX/thank you_10C4C929.wem</CachePath>
+				</File>
+				<File Id="751642037" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>tsk.wav</ShortName>
+					<CachePath>SFX/tsk_10C4C929.wem</CachePath>
+				</File>
+				<File Id="759666432" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>still want some more.wav</ShortName>
+					<CachePath>SFX/still want some more_10C4C929.wem</CachePath>
+				</File>
+				<File Id="783117039" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>DIE!!!.wav</ShortName>
+					<CachePath>SFX/DIE!!!_10C4C929.wem</CachePath>
+				</File>
+				<File Id="805853567" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>right.wav</ShortName>
+					<CachePath>SFX/right_10C4C929.wem</CachePath>
+				</File>
+				<File Id="816339828" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>free.wav</ShortName>
+					<CachePath>SFX/free_83A0305A.wem</CachePath>
+				</File>
+				<File Id="825972316" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>grrrrr phase 2.wav</ShortName>
+					<CachePath>SFX/grrrrr phase 2_10C4C929.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
+				<Event Id="2069107718" Name="Play_Critter___Die" DurationType="OneShot" DurationMin="2.2884583" DurationMax="2.2884583">
+					<MediaRefs>
+						<MediaRef Id="783117039"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="792834848" Name="Play_Critter___Enemy" DurationType="OneShot" DurationMin="2.5865417" DurationMax="2.5865417">
+					<MediaRefs>
+						<MediaRef Id="269698286"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1978881569" Name="Play_Critter___finally" DurationType="OneShot" DurationMin="1.5144167" DurationMax="1.5144167">
+					<MediaRefs>
+						<MediaRef Id="177686264"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="7327542" Name="Play_Critter___free" DurationType="OneShot" DurationMin="1.0549078" DurationMax="1.0549078">
+					<MediaRefs>
+						<MediaRef Id="816339828"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3392512323" Name="Play_Critter___Grrr_phase_1" DurationType="OneShot" DurationMin="1.7307708" DurationMax="1.7307708">
+					<MediaRefs>
+						<MediaRef Id="825972316"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="875977088" Name="Play_Critter___Grrrrrrr_phase_2" DurationType="OneShot" DurationMin="1.7307708" DurationMax="1.7307708">
+					<MediaRefs>
+						<MediaRef Id="415030716"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2985724399" Name="Play_Critter___Scream" DurationType="OneShot" DurationMin="6.7083945" DurationMax="6.7083945">
+					<MediaRefs>
+						<MediaRef Id="570681607"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3023826382" Name="Play_Critter___teki_san" DurationType="OneShot" DurationMin="3.7884583" DurationMax="3.7884583">
+					<MediaRefs>
+						<MediaRef Id="375146969"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="608834288" Name="Play_Critter___thank_you" DurationType="OneShot" DurationMin="3.9711459" DurationMax="3.9711459">
+					<MediaRefs>
+						<MediaRef Id="720496281"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3015324718" Name="Play_fire" MaxAttenuation="30" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="48654217"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3323644898" Name="Play_Player___bring_it_on" DurationType="OneShot" DurationMin="2.2232084" DurationMax="2.2232084">
+					<MediaRefs>
+						<MediaRef Id="645873364"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1163761803" Name="Play_Player___get_outta_my_wau" DurationType="OneShot" DurationMin="0.6830417" DurationMax="0.6830417">
+					<MediaRefs>
+						<MediaRef Id="512978103"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4290877693" Name="Play_Player___Getting_warmed" DurationType="OneShot" DurationMin="2.8839376" DurationMax="2.8839376">
+					<MediaRefs>
+						<MediaRef Id="402904717"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3193363170" Name="Play_Player___honestly" DurationType="OneShot" DurationMin="0.9642917" DurationMax="0.9642917">
+					<MediaRefs>
+						<MediaRef Id="293312912"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3862193591" Name="Play_Player___no_way" DurationType="OneShot" DurationMin="1.0288541" DurationMax="1.0288541">
+					<MediaRefs>
+						<MediaRef Id="103447002"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3073198299" Name="Play_Player___now_what" DurationType="OneShot" DurationMin="1.6383958" DurationMax="1.6383958">
+					<MediaRefs>
+						<MediaRef Id="24760398"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3317054324" Name="Play_Player___right" DurationType="OneShot" DurationMin="1.2857083" DurationMax="1.2857083">
+					<MediaRefs>
+						<MediaRef Id="805853567"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3479528104" Name="Play_Player___see_ya" DurationType="OneShot" DurationMin="0.70535415" DurationMax="0.70535415">
+					<MediaRefs>
+						<MediaRef Id="244541457"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="657037409" Name="Play_Player___still_not_done" DurationType="OneShot" DurationMin="1.7142917" DurationMax="1.7142917">
+					<MediaRefs>
+						<MediaRef Id="759666432"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="807099368" Name="Play_Player___the_human_won" DurationType="OneShot" DurationMin="1.384625" DurationMax="1.384625">
+					<MediaRefs>
+						<MediaRef Id="402664948"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1319531588" Name="Play_Player___tsk" DurationType="OneShot" DurationMin="0.40179166" DurationMax="0.40179166">
+					<MediaRefs>
+						<MediaRef Id="751642037"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1581831657" Name="Play_Player___up" DurationType="OneShot" DurationMin="1.3214375" DurationMax="1.3214375">
+					<MediaRefs>
+						<MediaRef Id="9867646"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1591664446" Name="Play_Player___you_done" DurationType="OneShot" DurationMin="1.0401875" DurationMax="1.0401875">
+					<MediaRefs>
+						<MediaRef Id="215459325"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3478666878" Name="Play_Player___you_muse_be_the_mother" DurationType="OneShot" DurationMin="1.4598125" DurationMax="1.4598125">
+					<MediaRefs>
+						<MediaRef Id="652862440"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="864410523" Name="Play_Player___you_re_pretty_weak" DurationType="OneShot" DurationMin="1.1428542" DurationMax="1.1428542">
+					<MediaRefs>
+						<MediaRef Id="218370749"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2526624148" Name="Stop_fire" MaxAttenuation="30" DurationType="Infinite">
@@ -2106,7 +2324,7 @@
 				<Event Id="953277036" Name="Resume" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{BD61EEB7-34F1-96A9-66F7-7FF9E0A806D9}">
+		<SoundBank Id="3922271872" Type="User" Language="SFX" Hash="{A26127C5-C5BF-847E-E176-69236633E687}">
 			<ShortName>SoundEffects_Everything</ShortName>
 			<Path>SoundEffects_Everything.bnk</Path>
 			<Media>
@@ -3823,5 +4041,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1B465619-36E9-8A82-88BF-89ACDD56D928}</FileHash>
+	<FileHash>{E65F7635-21B6-CA8E-98D8-552DAED6DAA0}</FileHash>
 </SoundBanksInfo>
