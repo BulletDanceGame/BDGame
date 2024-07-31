@@ -138,6 +138,8 @@ public class BossHealthController : MonoBehaviour
             return; 
         if (bullet.type == BulletOwner.BOSSBULLET)
             return;
+        if (bullet.bulletState == BulletState.NONE) //IDK how this would happen
+            return;
 
         //Prevent boss from getting over-hit
         //Only apply to normal bullets, last hit should ignore this

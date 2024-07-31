@@ -83,13 +83,13 @@ public class EnemyHealthController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        //Escape if tag is not Deflected
-        if (!collision.gameObject.GetComponent<Bullet>())
-            return;
-
         Bullet bullet = collision.GetComponent<Bullet>();
 
+        //Escape if tag is not Deflected
+        if (bullet == null) return;
         if (bullet.type == BulletOwner.BOSSBULLET)
+            return;
+        if (bullet.bulletState == BulletState.NONE) //IDK how this would happen
             return;
 
 
