@@ -19233,7 +19233,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-5</Value>
+												<Value>-4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -37376,6 +37376,13 @@
 								<Folder Name="Intro" ID="{1C4D2D68-5C93-49CC-8580-83C0913F1504}" ShortID="390604646">
 									<ChildrenList>
 										<BlendContainer Name="Critter - Enemy" ID="{C75E519A-9A36-4838-8684-D3FF72FD87FE}" ShortID="273557492">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
@@ -39865,15 +39872,306 @@
 												</BlendContainer>
 											</ChildrenList>
 										</Folder>
+										<BlendContainer Name="Critter - Die" ID="{64A08F1B-8BA5-4BA5-8766-571FFAE4B606}" ShortID="803741622">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Critter - Intro" ID="{7C907F0B-860B-4457-972C-B491FF1C25AE}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="DIE!!!" ID="{39218224-C66C-4146-A6B3-A3B6A61FB71A}" ShortID="807109053">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="DIE!!!" ID="{F73F1F1A-21B9-436D-949A-1DB5F54D3422}">
+															<Language>SFX</Language>
+															<AudioFile>DIE!!!.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="783117039"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="DIE!!!" ID="{F73F1F1A-21B9-436D-949A-1DB5F54D3422}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Player - still not done" ID="{19D9CE93-9218-46F2-B8E0-6325CC0B49CE}" ShortID="433928216">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Player - Intro" ID="{999DB203-024D-45A0-AA84-E08805B50F2C}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="still want some more" ID="{7845DEED-3FC7-49A0-90FA-07C635B52AA5}" ShortID="881995246">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="still want some more" ID="{1BFFE9FA-862A-4718-B985-3411E775C849}">
+															<Language>SFX</Language>
+															<AudioFile>still want some more.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="759666432"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="still want some more" ID="{1BFFE9FA-862A-4718-B985-3411E775C849}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Player - Getting warmed" ID="{CC24CEA0-8FF1-4A34-8769-529EB74B9BCB}" ShortID="318460920">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Player - Intro" ID="{999DB203-024D-45A0-AA84-E08805B50F2C}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="getting warmed" ID="{801F9F6A-7520-4E2B-A805-B081399644D1}" ShortID="167744314">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="getting warmed" ID="{B0CE6E2D-AFA8-41C7-9D12-B5C591161ACE}">
+															<Language>SFX</Language>
+															<AudioFile>getting warmed.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="402904717"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="getting warmed" ID="{B0CE6E2D-AFA8-41C7-9D12-B5C591161ACE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Player - up" ID="{0625A321-56A1-40F0-AC3B-6BB2217FCBF9}" ShortID="908472177">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>23</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Player - Intro" ID="{999DB203-024D-45A0-AA84-E08805B50F2C}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="up" ID="{42E7E527-606E-4309-A625-63DB6A1DF653}" ShortID="535920180">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="up" ID="{425AA9D7-62D1-4CB5-A46A-DE331D3CF253}">
+															<Language>SFX</Language>
+															<AudioFile>up.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="9867646"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="up" ID="{425AA9D7-62D1-4CB5-A46A-DE331D3CF253}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Player - you muse be the mother" ID="{7446A1B5-36A0-4211-A1F9-AA7A44EDBFBE}" ShortID="783141513">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Player - Intro" ID="{999DB203-024D-45A0-AA84-E08805B50F2C}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="you must be the mother" ID="{562BC2B5-B9EC-434D-B375-3BB6EC4452BE}" ShortID="796818873">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="you must be the mother" ID="{77507160-F6D6-4A17-B015-FE8F21782FA7}">
+															<Language>SFX</Language>
+															<AudioFile>you must be the mother.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="652862440"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="you must be the mother" ID="{77507160-F6D6-4A17-B015-FE8F21782FA7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Player - bring it on" ID="{D37B44DE-DDB7-480A-9D66-3D3727FB538C}" ShortID="1047031872">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Player - Intro" ID="{999DB203-024D-45A0-AA84-E08805B50F2C}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="bring it on" ID="{B8943879-6B09-454D-A302-31F6B6A1EC13}" ShortID="1001412741">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="bring it on" ID="{09AFE373-74E3-4C3C-8121-3BD94BA2A318}">
+															<Language>SFX</Language>
+															<AudioFile>bring it on.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="645873364"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="bring it on" ID="{09AFE373-74E3-4C3C-8121-3BD94BA2A318}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Critter - Grrr phase 1" ID="{7E681182-7CC0-45A3-89AD-3EF43AE056B2}" ShortID="706386340">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Critter - Phase 1 to 2" ID="{00E5897F-C93F-4549-A6DC-D7B4754A0DF5}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="grrrrr phase 2" ID="{A59EF9D0-623B-4197-900A-EBBB94B91F41}" ShortID="818948326">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="grrrrr phase 2" ID="{6EBAB397-383F-4EAD-BA05-689CA83B7AA7}">
+															<Language>SFX</Language>
+															<AudioFile>grrrrr phase 2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="825972316"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="grrrrr phase 2" ID="{6EBAB397-383F-4EAD-BA05-689CA83B7AA7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
 									</ChildrenList>
 								</Folder>
 								<Folder Name="Phase 1 to 2" ID="{4E6042A1-B5E9-4BCD-90F0-0CCBFC6C1702}" ShortID="834642789">
 									<ChildrenList>
 										<BlendContainer Name="Critter - Scream" ID="{52AACD35-0DC0-4E81-959D-58D7C159D788}" ShortID="463692050">
 											<PropertyList>
+												<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-8</Value>
+														<Value>-12</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -39922,6 +40220,234 @@
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
+											<PositioningInfo>
+												<Panner Name="" ID="{4178DBBA-C7C1-4A00-A063-CA3945C05B9C}">
+													<PropertyList>
+														<Property Name="PanX" Type="Real64" Value="-9.47630922693267"/>
+														<Property Name="PanY" Type="Real64" Value="-4.44089209850063E-16"/>
+													</PropertyList>
+												</Panner>
+											</PositioningInfo>
+										</BlendContainer>
+										<BlendContainer Name="Critter - Grrrrrrr phase 2" ID="{6F3A3568-C51B-4D4F-9778-3637AF973254}" ShortID="707914562">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Critter - Phase 1 to 2" ID="{00E5897F-C93F-4549-A6DC-D7B4754A0DF5}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="grrrrr phase 1" ID="{E8DC883A-A58C-4003-BAC1-0614898D24A6}" ShortID="857017515">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="grrrrr phase 1" ID="{896A1A98-5455-4A6B-8A0A-7E68C7FEA90B}">
+															<Language>SFX</Language>
+															<AudioFile>grrrrr phase 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="415030716"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="grrrrr phase 1" ID="{896A1A98-5455-4A6B-8A0A-7E68C7FEA90B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Player - honestly" ID="{ED77DB74-DA2E-4438-9F61-DCB6B0C3CCEA}" ShortID="1014886501">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Player - Phase 1 to 2" ID="{274943FB-ACC2-461F-A256-8AD0891A7E65}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="honestly" ID="{E02EC47B-EEFD-4351-8DDC-149EF1DDDA2F}" ShortID="292116316">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="honestly" ID="{2E74557C-190B-4434-8847-71C6D25779F1}">
+															<Language>SFX</Language>
+															<AudioFile>honestly.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="293312912"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="honestly" ID="{2E74557C-190B-4434-8847-71C6D25779F1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Player - now what" ID="{E5769203-A970-48F3-905C-C35B883960DA}" ShortID="826954405">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Player - Phase 1 to 2" ID="{274943FB-ACC2-461F-A256-8AD0891A7E65}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="now what" ID="{5A922CFE-1B3F-486B-BC31-4E13C5B3437B}" ShortID="360630411">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="now what" ID="{B0506C1A-CCC7-4B33-9703-C9861D5C4900}">
+															<Language>SFX</Language>
+															<AudioFile>now what.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="24760398"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="now what" ID="{B0506C1A-CCC7-4B33-9703-C9861D5C4900}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Player - you're pretty weak" ID="{2FE0948C-D85D-411F-9806-8A16D42894E4}" ShortID="46092067">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Player - Phase 1 to 2" ID="{274943FB-ACC2-461F-A256-8AD0891A7E65}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="you're pretty weak" ID="{D45B351B-CD50-4727-9E57-05F276DD1D0E}" ShortID="610961714">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="you're pretty weak" ID="{49CF45BE-5495-451A-A3E2-E37B306912E9}">
+															<Language>SFX</Language>
+															<AudioFile>you're pretty weak.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="218370749"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="you're pretty weak" ID="{49CF45BE-5495-451A-A3E2-E37B306912E9}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Player - tsk" ID="{7DB42866-E29B-4E9C-961B-A00577E4A8CF}" ShortID="1069928188">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Player - Phase 1 to 2" ID="{274943FB-ACC2-461F-A256-8AD0891A7E65}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="tsk" ID="{3550440F-A5AD-427E-805A-D9035D071D9A}" ShortID="740600576">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="tsk" ID="{939B1C34-07C4-4DD7-A8EB-EABB85CFD6BB}">
+															<Language>SFX</Language>
+															<AudioFile>tsk.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="751642037"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="tsk" ID="{939B1C34-07C4-4DD7-A8EB-EABB85CFD6BB}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
 										</BlendContainer>
 									</ChildrenList>
 								</Folder>
@@ -39936,7 +40462,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-16</Value>
+														<Value>-18</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -40494,6 +41020,403 @@
 													</ChildrenList>
 													<ActiveSourceList>
 														<ActiveSource Name="time stop type shit (pitched)" ID="{C720C0A8-7C1D-4FDD-B113-7A97770E2989}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Critter - finally" ID="{A741A6BD-EC67-4F24-A9DA-97F8919FA3C2}" ShortID="804150927">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Critter - Outro" ID="{A9FB5562-009E-46EB-B7DB-544FE5D06F9C}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="finally" ID="{D9EEBEC8-4C49-44FE-9E2A-2B45C5222086}" ShortID="958087876">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="finally" ID="{FAAF50F6-01AF-4C55-9C71-D9DEEE06391A}">
+															<Language>SFX</Language>
+															<AudioFile>finally.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="177686264"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="finally" ID="{FAAF50F6-01AF-4C55-9C71-D9DEEE06391A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Critter - free" ID="{BEB5919F-E17A-49AC-A359-CE5E743604F7}" ShortID="1029539837">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Critter - Outro" ID="{A9FB5562-009E-46EB-B7DB-544FE5D06F9C}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="free" ID="{D0B6264B-0FD1-4AB7-8034-D32D59936E67}" ShortID="873723229">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="free" ID="{762E225D-6A2E-4785-9A0D-7A512E667C3C}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0298393214571657"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.063189151321057"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.431792534027222"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.4867003102482"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>free.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="816339828"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="free" ID="{762E225D-6A2E-4785-9A0D-7A512E667C3C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Critter - thank you" ID="{B9979BC5-62B9-4379-B5A3-610B9B7C2C1C}" ShortID="38229359">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Critter - Outro" ID="{A9FB5562-009E-46EB-B7DB-544FE5D06F9C}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="thank you" ID="{F95FFDA2-B403-406F-B825-7D3238E31A89}" ShortID="53569691">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="thank you" ID="{205310D6-8D3F-4784-84B5-B997FB59595E}">
+															<Language>SFX</Language>
+															<AudioFile>thank you.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="720496281"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="thank you" ID="{205310D6-8D3F-4784-84B5-B997FB59595E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Critter - teki-san" ID="{DA6E0B98-AEB9-4660-B088-6DE486A274F4}" ShortID="432658309">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Critter - Outro" ID="{A9FB5562-009E-46EB-B7DB-544FE5D06F9C}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="teki-san" ID="{A2B4120E-B851-4FDB-99FA-EACD33368DB0}" ShortID="322109258">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="teki-san" ID="{AF1BFE39-1085-47C1-BAAF-F36BB110A0F2}">
+															<Language>SFX</Language>
+															<AudioFile>teki-san.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="113126441"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="teki-san" ID="{AF1BFE39-1085-47C1-BAAF-F36BB110A0F2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="teki-san2" ID="{C66F07B2-CFE4-4806-B026-CB8E80C5AF2C}" ShortID="1012324097">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="teki-san2" ID="{F62767A9-E1B4-4B37-8DAB-B822CF455E90}">
+															<Language>SFX</Language>
+															<AudioFile>teki-san2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="375146969"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="teki-san2" ID="{F62767A9-E1B4-4B37-8DAB-B822CF455E90}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Player - you done" ID="{7F31DB8C-6A81-4DBC-8F36-25A5BF9EAA4B}" ShortID="831810484">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Player - Outro" ID="{AE6A999A-1672-49E1-A070-4DB8148695B9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="you done_" ID="{7D5A3465-2E43-40E8-9329-7D3D2E0C7D25}" ShortID="321886940">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="you done_" ID="{A9D7A0B4-614A-4A60-AD1B-A9955A547706}">
+															<Language>SFX</Language>
+															<AudioFile>you done..wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="215459325"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="you done_" ID="{A9D7A0B4-614A-4A60-AD1B-A9955A547706}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Player - get outta my wau" ID="{057E44CD-DE01-4C65-987C-77EB6C369668}" ShortID="644012974">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Player - Outro" ID="{AE6A999A-1672-49E1-A070-4DB8148695B9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="get outta my way" ID="{EAA5A479-D00B-42B3-A603-99BBAA2A36DF}" ShortID="516859315">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="get outta my way" ID="{A42E9C35-0BE0-4658-BDB3-B9ABF8ED746A}">
+															<Language>SFX</Language>
+															<AudioFile>get outta my way.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="512978103"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="get outta my way" ID="{A42E9C35-0BE0-4658-BDB3-B9ABF8ED746A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Player - right" ID="{23407023-C6FC-48DA-88BD-5379019182DA}" ShortID="347552389">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Player - Outro" ID="{AE6A999A-1672-49E1-A070-4DB8148695B9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="right" ID="{FF64F48C-1962-4EDC-8CFD-483A342DE2A9}" ShortID="384619794">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="right" ID="{EFA533B2-837C-4602-8F88-6A88028C3A31}">
+															<Language>SFX</Language>
+															<AudioFile>right.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="805853567"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="right" ID="{EFA533B2-837C-4602-8F88-6A88028C3A31}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Player - see ya" ID="{ECF2CAB6-BFEF-4D0E-8456-027DD34FB17F}" ShortID="600434258">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Player - Outro" ID="{AE6A999A-1672-49E1-A070-4DB8148695B9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="see ya" ID="{A42B2B4A-3A2C-4C26-975F-8CE6384522EE}" ShortID="135869875">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="see ya" ID="{CEE32436-CEF8-4ED0-9B72-78157A585025}">
+															<Language>SFX</Language>
+															<AudioFile>see ya.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="244541457"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="see ya" ID="{CEE32436-CEF8-4ED0-9B72-78157A585025}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Player - no way" ID="{3599A9F9-891F-421A-B8D1-D2D64540160F}" ShortID="820565302">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Player - Outro" ID="{AE6A999A-1672-49E1-A070-4DB8148695B9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="no way" ID="{B91731F4-89E8-49E8-8039-388642A60AB7}" ShortID="285768290">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="no way" ID="{1220F2D3-0A09-42FA-8F4F-B1383B52F8CC}">
+															<Language>SFX</Language>
+															<AudioFile>no way.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="103447002"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="no way" ID="{1220F2D3-0A09-42FA-8F4F-B1383B52F8CC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Player - the human won" ID="{D1232E11-38E0-4062-B3D4-8D9F8A79D634}" ShortID="747460852">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Cutscene 4 - Boss1 - Player - Outro" ID="{AE6A999A-1672-49E1-A070-4DB8148695B9}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="the human won" ID="{132945D6-475C-4F53-96E0-0FE968F4B433}" ShortID="322422831">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="the human won" ID="{401A3B4B-B1D5-410D-8E70-3C7C0A0BC751}">
+															<Language>SFX</Language>
+															<AudioFile>the human won.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="402664948"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="the human won" ID="{401A3B4B-B1D5-410D-8E70-3C7C0A0BC751}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
