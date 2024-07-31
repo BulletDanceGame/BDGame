@@ -9984,6 +9984,7 @@ MonoBehaviour:
   PerfectDamageAddon: 5
   GoodDamageAddon: 2
   BadDamageAddon: 0
+  BulletShouldGetDestroyedOnBad: 0
   BadHitAngle: 90
   _rend: {fileID: 6677976609601431214}
   rhythmUI: {fileID: 6585437836490863370}
@@ -10401,6 +10402,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4242688613901158399, guid: 1c14fa751a395134b9a7a43e911c0678, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469911804934457165, guid: 1c14fa751a395134b9a7a43e911c0678, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5292027649034036371, guid: 1c14fa751a395134b9a7a43e911c0678, type: 3}
