@@ -62,6 +62,10 @@ PlayableDirector:
     value: {fileID: 2364403880912146278}
   - key: {fileID: -9133054470455937495, guid: 8b599ee2fdf71cd468b16edcf848202d, type: 2}
     value: {fileID: 4452384897567410994}
+  - key: {fileID: -7907188631949906333, guid: 8b599ee2fdf71cd468b16edcf848202d, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 1939483418928835042, guid: 8b599ee2fdf71cd468b16edcf848202d, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - 238a3fece65d78747978617477bd8d1b: {fileID: 0}
@@ -291,6 +295,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: ec1a6f45da483714497b1457e6915cca, type: 2}
     - {fileID: 11400000, guid: c0e12f540a25bf3449827a0f1ebe3bdd, type: 2}
     - {fileID: 11400000, guid: be3c889e08ed8cf40b6b8b5873279adf, type: 2}
+    - {fileID: 11400000, guid: 3d4bc3d9e06dd5c428fd6e319f8063de, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -370,6 +375,20 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4662987872771456346}
+          m_TargetAssemblyTypeName: BulletDance.Cutscene.CutsceneEvents, Assembly-CSharp
+          m_MethodName: CS_DeactivateAllMoveLists
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &7168874477927936730
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +453,8 @@ PlayableDirector:
     value: {fileID: 2364403880912146278}
   - key: {fileID: -6554770741458449179, guid: 73039fea8c39c11428ba78016491becf, type: 2}
     value: {fileID: 6181600738587400672}
+  - key: {fileID: -4235991939044315193, guid: 73039fea8c39c11428ba78016491becf, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - 79cb0b53cb3c15d459c3074294e0a016: {fileID: 0}
@@ -455,6 +476,7 @@ MonoBehaviour:
     m_Signals:
     - {fileID: 11400000, guid: ec1a6f45da483714497b1457e6915cca, type: 2}
     - {fileID: 11400000, guid: 873d5a7f987e8d3458c4958bc6b8ab7f, type: 2}
+    - {fileID: 11400000, guid: 3d4bc3d9e06dd5c428fd6e319f8063de, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -533,6 +555,20 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4662987872771456346}
+          m_TargetAssemblyTypeName: BulletDance.Cutscene.CutsceneEvents, Assembly-CSharp
+          m_MethodName: CS_DeactivateAllMoveLists
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &5685213618883856887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -543,7 +579,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2074316311125530449, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2074316311125530449, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -610,6 +646,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: af3cd867a14622f488b917856a58fdc4, type: 2}
     - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
+      propertyPath: m_Events.m_Signals.Array.data[12]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3d4bc3d9e06dd5c428fd6e319f8063de, type: 2}
+    - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
       propertyPath: m_Events.m_Events.Array.data[9].m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -619,6 +659,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
       propertyPath: m_Events.m_Events.Array.data[11].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[12].m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
@@ -634,6 +678,14 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[12].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[12].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5921279253850529449}
+    - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
       propertyPath: m_Events.m_Events.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -643,6 +695,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
       propertyPath: m_Events.m_Events.Array.data[11].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[12].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
@@ -667,6 +723,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
       propertyPath: m_Events.m_Events.Array.data[11].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[12].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7941503550576379537, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
@@ -717,7 +777,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1032359410203505837, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
   m_PrefabInstance: {fileID: 5685213618883856887}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 5921279253850529449}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73ed1d97c8575fa4b971dbd3d5ee8ede, type: 3}
@@ -726,5 +786,10 @@ MonoBehaviour:
 --- !u!4 &5921279253850529446 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2074316311125530449, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
+  m_PrefabInstance: {fileID: 5685213618883856887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5921279253850529449 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2074316311125530462, guid: df5afe4e4678eec4ab54873e1656cef4, type: 3}
   m_PrefabInstance: {fileID: 5685213618883856887}
   m_PrefabAsset: {fileID: 0}
