@@ -156,6 +156,9 @@ namespace AK
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_FOOTSTEPSONBEAT = 1036785500U;
         static const AkUniqueID PLAY_FORESTAMB = 3960404151U;
+        static const AkUniqueID PLAY_FORESTDOORCLOSE = 1637930175U;
+        static const AkUniqueID PLAY_FORESTDOORCLOSE_NOATEN = 134238553U;
+        static const AkUniqueID PLAY_FORESTDOOROPEN = 1178698457U;
         static const AkUniqueID PLAY_JUMP = 3689126666U;
         static const AkUniqueID PLAY_LANDING = 2323405115U;
         static const AkUniqueID PLAY_LANDING_01 = 3615343151U;

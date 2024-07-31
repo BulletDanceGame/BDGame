@@ -31437,6 +31437,12 @@
 								</BlendContainer>
 								<RandomSequenceContainer Name="randomLands" ID="{9AEA47B4-62ED-4153-8E1B-8778FE8FA864}" ShortID="106895247">
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="CenterPercentage" Type="int32">
+											<ValueList>
+												<Value>100</Value>
+											</ValueList>
+										</Property>
 										<Property Name="InitialDelay" Type="Real64">
 											<ValueList>
 												<Value>0.07</Value>
@@ -31449,6 +31455,9 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="landingAttenuation" ID="{27C75199-5F27-4542-A718-76672C1B3E2B}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
 										</Reference>
@@ -40310,6 +40319,11 @@
 										<Value>79</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
 										<Value>1940</Value>
@@ -40631,11 +40645,6 @@
 										<Value>1160</Value>
 									</ValueList>
 								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>7</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -40844,6 +40853,346 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<BlendContainer Name="ForestDoorClose" ID="{3895A431-ADF9-424E-9247-B7424DE01087}" ShortID="8595488">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="CenterPercentage" Type="int32">
+									<ValueList>
+										<Value>100</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>13</Value>
+									</ValueList>
+								</Property>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ForestDoorC" ID="{C57F02DE-B354-45CA-BB4C-374B5A64DBBF}" ShortID="1043186387">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>21</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ForestDoorClose" ID="{3BA90291-E64E-4AEA-A8B9-E3F236ED3832}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0125203211432084"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0792953672403196"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ForestDoorClose.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="623943845"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ForestDoorClose" ID="{3BA90291-E64E-4AEA-A8B9-E3F236ED3832}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<BlendContainer Name="Bunt" ID="{7084D5B4-9491-4BE9-BE37-E64EF034A619}" ShortID="164434838">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>1000</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-14</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="hurtHighSFX" ID="{068CCDEC-3108-4AEF-ADEE-DE5159B85462}" ShortID="405592642">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+													<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="hurtHighSFX" ID="{E24020F9-E2AC-4B80-BA6D-F606F892A39B}">
+													<Language>SFX</Language>
+													<AudioFile>hurtHighSFX.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="729477149"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="hurtHighSFX" ID="{E24020F9-E2AC-4B80-BA6D-F606F892A39B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="ForestDoorOpen" ID="{7881F8E7-0348-413F-A041-23C311EB7DF9}" ShortID="292704944">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="CenterPercentage" Type="int32">
+									<ValueList>
+										<Value>100</Value>
+									</ValueList>
+								</Property>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="29"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ForestDoorO" ID="{FE1FA10B-2247-482D-8F6A-D08F5D1B1103}" ShortID="927492807">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>26</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ForestDoorOpen" ID="{1904D8B4-1276-46E8-9D40-F43B42B13616}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.217754558492112"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.138818531038721"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ForestDoorOpen.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="682051473"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ForestDoorOpen" ID="{1904D8B4-1276-46E8-9D40-F43B42B13616}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="forestDoorOpen2" ID="{6037B227-6CFE-46C8-B01E-977FFCA79488}" ShortID="395614140">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="forestDoorOpen2" ID="{E65B5537-5D60-4DFD-9681-0EE1D642C63D}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0309234787953288"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0968039336201599"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>forestDoorOpen2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="587211813"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="forestDoorOpen2" ID="{E65B5537-5D60-4DFD-9681-0EE1D642C63D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="ForestDoorClose-NoAten" ID="{1AFA8EAA-6933-40D1-A675-F6CE89FA960B}" ShortID="959671109">
+							<PropertyList>
+								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>13</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="34"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="buttonAttenuation" ID="{425E1C87-30A3-4D5F-A97F-45AFA1ED1C65}" WorkUnitID="{E6F7B06B-D96B-4766-B52F-E3D7CEBD248E}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ForestDoorC" ID="{99D1DEAD-EAD7-4525-8A6D-5AA5B721FB35}" ShortID="495728713">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>21</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ForestDoorClose" ID="{08755CCC-1C9E-4407-BAFC-EB20E43AB471}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0125203211432084"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0792953672403196"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ForestDoorClose.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="623943845"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ForestDoorClose" ID="{08755CCC-1C9E-4407-BAFC-EB20E43AB471}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<BlendContainer Name="Bunt" ID="{0EB28735-FC7A-416D-ABCE-FD51F6B0B9BA}" ShortID="1009276206">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>1000</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-14</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Actions - Set" ID="{86A0BF11-8E01-428B-9B88-6CCDAEB13F83}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="hurtHighSFX" ID="{D0735636-2E30-4AF3-94DB-BB2413A13BA8}" ShortID="807420177">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E00F2CD-A1D4-4353-BD85-993DB7124681}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+													<ObjectRef Name="New_Time_Stretch" ID="{CF4120C5-A437-48D7-8158-CAA3431742AC}" WorkUnitID="{14D16DB2-44CE-4490-8CA6-68E5320FFC76}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="hurtHighSFX" ID="{5D574000-747E-44FF-AD09-57AAACE667D2}">
+													<Language>SFX</Language>
+													<AudioFile>hurtHighSFX.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="729477149"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="hurtHighSFX" ID="{5D574000-747E-44FF-AD09-57AAACE667D2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
+							</ChildrenList>
+						</BlendContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="MUSIC" ID="{9AD7D87A-42D9-4F89-ABE1-C03E213AF995}" ShortID="914500041">
