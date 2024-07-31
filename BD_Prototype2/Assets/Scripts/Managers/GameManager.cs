@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.PlayerLoop;
 
 public enum GameState { 
     MAINMENU,
@@ -17,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     public GameState State;
 
-    public int ElapsedTime { get; private set; }
+    public float ElapsedTime { get; private set; }
     [SerializeField] bool CountTime = false;
 
 
@@ -120,28 +121,20 @@ public class GameManager : MonoBehaviour
 
     void StartTimer()
     {
-        if (gameObject == null)
-        {
-            return;
-        }
-
-        if (!CountTime)
-            StartCoroutine(UpdateTimer());
-    }
-
-    IEnumerator UpdateTimer()
-    {
         CountTime = true;
+    }
 
-        while (CountTime)
+    void Update()
+    {
+        if (CountTime)
         {
-            yield return new WaitForSeconds(1f);
-
-            ElapsedTime += 1;
-
-            EventManager.Instance.UpdateTimer();
+            ElapsedTime += Time.deltaTime;
+            
+            //sorry you can add this back later if we need it
+            //EventManager.Instance.UpdateTimer();
         }
     }
+
 
     void StopTimer(string nope)
     {

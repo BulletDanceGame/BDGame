@@ -113,10 +113,11 @@ public class WinScreen : MonoBehaviour
         EventManager.Instance.OnGamePadUsed += ChangeToGAMEPAD;
         EventManager.Instance.OnKeyBoardAndMouseUsed += ChangeToKBM;
 
-        int minutes = Mathf.FloorToInt((GameManager.Instance.ElapsedTime % 3600f) / 60f);
-        int seconds = Mathf.FloorToInt(GameManager.Instance.ElapsedTime % 60f);
+        int minutes = (int)((GameManager.Instance.ElapsedTime % 3600f) / 60f);
+        int seconds = (int)(GameManager.Instance.ElapsedTime % 60f);
 
-        TimeText.text = "" + minutes + " : " + seconds;
+        string zero = ((seconds < 10) ? "0" : "");
+        TimeText.text = "" + minutes + " : " + zero + seconds;
 
         int score = ScoreManager.Instance.SessionScore + ScoreManager.Instance.CurrentTimeScore;
 
