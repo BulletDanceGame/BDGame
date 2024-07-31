@@ -18,16 +18,10 @@ public class WaveEffect : MonoBehaviour
 
     private void Update()
     {
-
-       
-            ShockWave();
-        
+        ShockWave();        
     }
 
-    private void Destroy()
-    {
-        //Destroy(this);
-    }
+
     private void Awake()
     {
         ShockWave();
