@@ -12034,9 +12034,9 @@
 																				<MusicClip Name="Critter Intro v3" ID="{EE44EA95-47B4-4B74-A9E0-0199C2DF365B}">
 																					<PropertyList>
 																						<Property Name="BeginTrimOffset" Type="Real64" Value="1000"/>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="38396.1666666667"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="8199.99999999997"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
-																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutDuration" Type="Real64" Value="426.954645390048"/>
 																						<Property Name="PlayAt" Type="Real64" Value="-1000"/>
 																					</PropertyList>
 																					<AudioSourceRef Name="Critter Intro v3" ID="{17A1C9AD-2BB8-48AE-A018-06401F7DB713}"/>
@@ -12053,7 +12053,7 @@
 																										<Flags>5</Flags>
 																									</Point>
 																									<Point>
-																										<XPos>38.3961666666667</XPos>
+																										<XPos>8.2</XPos>
 																										<YPos>0</YPos>
 																										<Flags>37</Flags>
 																									</Point>
@@ -12072,7 +12072,7 @@
 																										<Flags>5</Flags>
 																									</Point>
 																									<Point>
-																										<XPos>38.3961666666667</XPos>
+																										<XPos>8.2</XPos>
 																										<YPos>0</YPos>
 																										<Flags>37</Flags>
 																									</Point>
@@ -12087,6 +12087,124 @@
 																								<PointList>
 																									<Point>
 																										<XPos>1</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>8.2</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="Critter Intro BPM165_01" ID="{CB52CEE0-2340-48AB-84C6-AD89CF9C7AD4}" ShortID="1003175766">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Critter Intro v3" ID="{15FF18AF-CA2A-42F3-8739-CF8A52F0AF42}">
+													<Language>SFX</Language>
+													<AudioFile>Critter Intro v3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="119532596"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{1CCE632C-DEC1-4050-8F8C-ACF559665FB8}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{1885DC11-76C0-4E61-AB02-E84AE3DF8A9C}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Critter Intro v3" ID="{213D4088-D2C6-4D83-9CD1-858A8462DFA2}">
+																					<PropertyList>
+																						<Property Name="BeginTrimOffset" Type="Real64" Value="7786.81808510641"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="38396.1666666667"/>
+																						<Property Name="FadeInDuration" Type="Real64" Value="534.266744550487"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="-1000"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Critter Intro v3" ID="{15FF18AF-CA2A-42F3-8739-CF8A52F0AF42}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{7250B408-19BC-4C62-A1D3-00AE92B569A3}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>7.78682</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>38.3961666666667</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{2603C609-47DA-4BC9-AA7F-3BC54BA63087}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>7.78682</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>38.3961666666667</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{BF2863B8-7370-4F74-9E94-F40AE1EFC7AA}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>7.78682</XPos>
 																										<YPos>0</YPos>
 																										<Flags>5</Flags>
 																									</Point>
@@ -12176,7 +12294,7 @@
 												<Property Name="Tempo" Type="Real64" Value="330"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>2</Value>
+														<Value>-2</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -12223,9 +12341,9 @@
 																					<Local>
 																						<MusicClip Name="Critter Phase 2 - Intro_01" ID="{E3E9D468-FD43-4F69-9375-64A8C4B0598B}">
 																							<PropertyList>
-																								<Property Name="EndTrimOffset" Type="Real64" Value="16000"/>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="2727.27272727273"/>
 																								<Property Name="FadeInMode" Type="int16" Value="0"/>
-																								<Property Name="FadeOutDuration" Type="Real64" Value="220.408062401828"/>
+																								<Property Name="FadeOutDuration" Type="Real64" Value="1646.29427082165"/>
 																							</PropertyList>
 																							<AudioSourceRef Name="Critter Phase 2 - Intro_01" ID="{18DC5A57-A982-410D-9ECB-861AD5A4A044}"/>
 																							<PropertyCurveList>
@@ -12241,7 +12359,7 @@
 																												<Flags>5</Flags>
 																											</Point>
 																											<Point>
-																												<XPos>16</XPos>
+																												<XPos>2.72727</XPos>
 																												<YPos>0</YPos>
 																												<Flags>37</Flags>
 																											</Point>
@@ -12260,7 +12378,7 @@
 																												<Flags>5</Flags>
 																											</Point>
 																											<Point>
-																												<XPos>16</XPos>
+																												<XPos>2.72727</XPos>
 																												<YPos>0</YPos>
 																												<Flags>37</Flags>
 																											</Point>
@@ -12279,7 +12397,198 @@
 																												<Flags>5</Flags>
 																											</Point>
 																											<Point>
+																												<XPos>2.72727</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																							</PropertyCurveList>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="Critter Phase 2 - Intro_01" ID="{5B8FB83C-6CE0-416D-A344-C8DF28B8A768}">
+																							<PropertyList>
+																								<Property Name="BeginTrimOffset" Type="Real64" Value="8727.27272727273"/>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="16000"/>
+																								<Property Name="FadeInDuration" Type="Real64" Value="2842.72857843581"/>
+																								<Property Name="FadeOutDuration" Type="Real64" Value="1184.81559138394"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="Critter Phase 2 - Intro_01" ID="{18DC5A57-A982-410D-9ECB-861AD5A4A044}"/>
+																							<PropertyCurveList>
+																								<PropertyCurve PropertyName="Highpass">
+																									<Curve Name="" ID="{04B43625-B6CD-457F-B642-8DC7D54BD104}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>8.72727</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
 																												<XPos>16</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Lowpass">
+																									<Curve Name="" ID="{AE267273-DBBF-43A5-AA81-6E412163CA21}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>8.72727</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>16</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Volume">
+																									<Curve Name="" ID="{CC83881E-6BAE-4A3A-BAF7-02E41EE66D9D}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>8.72727</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>16</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																							</PropertyCurveList>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="Critter Phase 2 - Intro_01" ID="{9C55FE61-398C-4460-9086-1BDAE4FB0749}" ShortID="329327226">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-1</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F0507581-BB05-4E05-90A1-76BE406C54E8}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Critter Phase 2 - Intro_01" ID="{2321C563-7960-46CE-8CBD-CDF45C3599E8}">
+															<Language>SFX</Language>
+															<AudioFile>Critter Phase 2 - Intro.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="810047481"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{3B7A3E5B-CF6B-47FF-B221-8B4C8534D60E}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{5A0CE750-8692-4009-8B32-EC0A2424CDD7}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="Critter Phase 2 - Intro_01" ID="{5BF52ACC-F7D8-47F2-B0DE-9EDA8EAC6225}">
+																							<PropertyList>
+																								<Property Name="BeginTrimOffset" Type="Real64" Value="1090.90909090909"/>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="11636.3636363636"/>
+																								<Property Name="FadeInDuration" Type="Real64" Value="1508.05582059999"/>
+																								<Property Name="FadeInShape" Type="int16" Value="7"/>
+																								<Property Name="FadeOutDuration" Type="Real64" Value="2874.8131313796"/>
+																								<Property Name="FadeOutShape" Type="int16" Value="2"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="Critter Phase 2 - Intro_01" ID="{2321C563-7960-46CE-8CBD-CDF45C3599E8}"/>
+																							<PropertyCurveList>
+																								<PropertyCurve PropertyName="Highpass">
+																									<Curve Name="" ID="{35EE137B-5F58-43EC-96F5-BF4CE019C5B9}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>1.09091</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>11.63636</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Lowpass">
+																									<Curve Name="" ID="{895D2577-2754-4A1B-BD31-D69C217E9EFF}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>1.09091</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>11.63636</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Volume">
+																									<Curve Name="" ID="{89A4A34D-C1B4-426A-A741-F9BD674FF991}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>1.09091</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>11.63636</XPos>
 																												<YPos>0</YPos>
 																												<Flags>37</Flags>
 																											</Point>
@@ -12450,7 +12759,7 @@
 												<Property Name="Tempo" Type="Real64" Value="330"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>2</Value>
+														<Value>1</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -12726,7 +13035,7 @@
 												<Property Name="Tempo" Type="Real64" Value="330"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>2</Value>
+														<Value>1</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -12967,7 +13276,7 @@
 												<Property Name="Tempo" Type="Real64" Value="330"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>2</Value>
+														<Value>1</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -13208,7 +13517,7 @@
 												<Property Name="Tempo" Type="Real64" Value="330"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>2</Value>
+														<Value>1</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -13449,7 +13758,7 @@
 												<Property Name="Tempo" Type="Real64" Value="330"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>2</Value>
+														<Value>1</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>

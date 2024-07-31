@@ -2200,11 +2200,77 @@
 												</Bus>
 												<Bus Name="Cutscene 3 - TalkingBat - Player" ID="{7189A7F3-8FC2-4B96-8526-931FF7F5B62A}"/>
 												<Bus Name="Cutscene 3 - TalkingBat - Bat" ID="{504F1F2A-67A9-48CC-8038-B4E314B75979}"/>
-												<Bus Name="Cutscene 4 - Boss1 - Player - Intro" ID="{999DB203-024D-45A0-AA84-E08805B50F2C}"/>
-												<Bus Name="Cutscene 4 - Boss1 - Critter - Intro" ID="{7C907F0B-860B-4457-972C-B491FF1C25AE}"/>
-												<Bus Name="Cutscene 4 - Boss1 - Critter - Phase 1 to 2" ID="{00E5897F-C93F-4549-A6DC-D7B4754A0DF5}"/>
-												<Bus Name="Cutscene 4 - Boss1 - Player - Phase 1 to 2" ID="{274943FB-ACC2-461F-A256-8AD0891A7E65}"/>
-												<Bus Name="Cutscene 4 - Boss1 - Player - Outro" ID="{AE6A999A-1672-49E1-A070-4DB8148695B9}"/>
+												<Bus Name="Left" ID="{A32C7B69-C123-4749-9BF5-556786033C89}">
+													<PropertyList>
+														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+													</PropertyList>
+													<ChildrenList>
+														<Bus Name="Cutscene 4 - Boss1 - Player - Intro" ID="{999DB203-024D-45A0-AA84-E08805B50F2C}">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64">
+																	<ValueList>
+																		<Value>1</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+														</Bus>
+														<Bus Name="Cutscene 4 - Boss1 - Player - Phase 1 to 2" ID="{274943FB-ACC2-461F-A256-8AD0891A7E65}">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64">
+																	<ValueList>
+																		<Value>4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>0.5</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+														</Bus>
+														<Bus Name="Cutscene 4 - Boss1 - Player - Outro" ID="{AE6A999A-1672-49E1-A070-4DB8148695B9}"/>
+													</ChildrenList>
+													<PositioningInfo>
+														<Panner Name="" ID="{D221087B-749E-4E60-8AB0-49E8FF48F9D0}">
+															<PropertyList>
+																<Property Name="PanX" Type="Real64" Value="-8.93511918101496"/>
+																<Property Name="PanY" Type="Real64" Value="-0.224848762439549"/>
+															</PropertyList>
+														</Panner>
+													</PositioningInfo>
+												</Bus>
+												<Bus Name="Right" ID="{1E7BEB59-725B-40C4-9BB2-7EC435F66705}">
+													<PropertyList>
+														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+													</PropertyList>
+													<ChildrenList>
+														<Bus Name="Cutscene 4 - Boss1 - Critter - Intro" ID="{7C907F0B-860B-4457-972C-B491FF1C25AE}">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64">
+																	<ValueList>
+																		<Value>2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+														</Bus>
+														<Bus Name="Cutscene 4 - Boss1 - Critter - Phase 1 to 2" ID="{00E5897F-C93F-4549-A6DC-D7B4754A0DF5}">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64">
+																	<ValueList>
+																		<Value>4</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+														</Bus>
+													</ChildrenList>
+													<PositioningInfo>
+														<Panner Name="" ID="{E2FFE428-8FB0-45DD-A8F3-B49624EBD6E1}">
+															<PropertyList>
+																<Property Name="PanX" Type="Real64" Value="20.9476309226933"/>
+															</PropertyList>
+														</Panner>
+													</PositioningInfo>
+												</Bus>
 												<Bus Name="Cutscene 4 - Boss1 - Critter - Outro" ID="{A9FB5562-009E-46EB-B7DB-544FE5D06F9C}"/>
 											</ChildrenList>
 											<ObjectLists>
