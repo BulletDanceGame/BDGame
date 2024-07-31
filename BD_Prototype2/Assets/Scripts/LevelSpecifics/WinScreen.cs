@@ -87,7 +87,7 @@ public class WinScreen : MonoBehaviour
         Debug.Log("DISABLING STUFF");
 
         GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
-        GameObject.Find("Player").GetComponent<PlayerMovement>().canDash = false;
+        //GameObject.Find("Player").GetComponent<PlayerMovement>().canDash = false;
         GameObject.Find("DirectionController").GetComponent<PlayerSwing>().SwingActivated = false;
 
         pauseMenu.SetActive(false);
