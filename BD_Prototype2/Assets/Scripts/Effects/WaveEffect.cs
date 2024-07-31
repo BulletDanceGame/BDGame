@@ -25,10 +25,9 @@ public class WaveEffect : MonoBehaviour
     private void Awake()
     {
         ShockWave();
-        Invoke("Destroy", 2f);
-
-       
+        Destroy(gameObject, 2f);
     }
+
     public void ShockWave()
     {
         StartCoroutine(ShockWave(-0.1f, 1f));
