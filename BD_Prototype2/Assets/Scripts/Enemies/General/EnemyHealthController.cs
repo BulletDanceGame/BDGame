@@ -153,7 +153,7 @@ public class EnemyHealthController : MonoBehaviour
             //i know this is bad code sorry sorry
             if (GetComponent<CritterMovelist>())
             {
-                StartCoroutine(GetComponent<CritterMovelist>().Pushback(dir));
+                GetComponent<CritterMovelist>().Pushback(dir);
             }
         }
 
