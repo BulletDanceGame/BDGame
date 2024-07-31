@@ -60,4 +60,17 @@ public class LoadingScreen : MonoBehaviour
     {
         ShowOnUncover?.Invoke(frame);
     }
+
+    void Update()
+    {
+        if(InputManager.Instance == null) return;
+        if(enableInputs) return;
+        InputManager.Instance.PlayerInput.Player.Disable();
+    }
+
+    private bool enableInputs = false;
+    public void EnablePlayerInputs()
+    {
+        enableInputs = true;
+    }
 }
