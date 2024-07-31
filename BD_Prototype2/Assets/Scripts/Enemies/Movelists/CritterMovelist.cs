@@ -62,6 +62,7 @@ public class CritterMovelist : Movelist
 
     private bool _isPushedback;
     [SerializeField] private float _pushbackDuration;
+    float _pushbackTimer;
     [SerializeField] private float _pushbackSpeed;
     private Vector2 _pushbackDir;
 
@@ -265,6 +266,12 @@ public class CritterMovelist : Movelist
         if (_isPushedback)
         {
             _rb.velocity = _pushbackDir;
+            _pushbackTimer -= Time.fixedDeltaTime;
+            if (_pushbackTimer <= 0)
+            {
+                _isPushedback = false;
+                _rb.velocity = Vector2.zero;
+            }
         }
     }
 
@@ -272,15 +279,9 @@ public class CritterMovelist : Movelist
     {
         _isPushedback = true;
         _pushbackDir = dir * _pushbackSpeed;
-        StartCoroutine(PushbackTimer());
+        _pushbackTimer = _pushbackDuration;
     }
 
-    IEnumerator PushbackTimer()
-    {
-        yield return new WaitForSeconds(_pushbackDuration);
-        _isPushedback = false;
-        _rb.velocity = Vector2.zero;
-    }
 
     private void OnDrawGizmosSelected()
     {
