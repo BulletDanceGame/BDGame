@@ -47,11 +47,6 @@ namespace AK
         static const AkUniqueID BPM140_____PLAY_ENV1_VEGZONE1_PART2 = 1814703349U;
         static const AkUniqueID BPM140_____PLAY_ENV1_VEGZONE1_PART3 = 1814703348U;
         static const AkUniqueID BPM140_____PLAY_ENV1_VEGZONE2_INTRO = 2685356407U;
-        static const AkUniqueID BPM140_____PLAY_ENV1_VEGZONE2_PART1 = 3939880753U;
-        static const AkUniqueID BPM140_____PLAY_ENV1_VEGZONE2_PART2 = 3939880754U;
-        static const AkUniqueID BPM140_____PLAY_ENV1_VEGZONE2_PART3 = 3939880755U;
-        static const AkUniqueID BPM140_____PLAY_ENV1_VEGZONE2_PART4 = 3939880756U;
-        static const AkUniqueID BPM140_____PLAY_ENV1_VEGZONE2_PART5 = 3939880757U;
         static const AkUniqueID BPM140__LAYER1_BATTLE_END____PLAY = 2234210212U;
         static const AkUniqueID BPM140__RHYTHMHALFNOTES_10101010_10101010____PLAY = 2265831223U;
         static const AkUniqueID BPM140__RHYTHMHIPHOP_10001001_00101000____PLAY = 833279204U;
@@ -138,6 +133,11 @@ namespace AK
         static const AkUniqueID PLAY_ENV1_VEGZONE1_EVADE_PART1 = 4057488865U;
         static const AkUniqueID PLAY_ENV1_VEGZONE1_EVADE_PART2 = 4057488866U;
         static const AkUniqueID PLAY_ENV1_VEGZONE1_EVADE_PART3 = 4057488867U;
+        static const AkUniqueID PLAY_ENV1_VEGZONE1_PART1_2 = 3209141836U;
+        static const AkUniqueID PLAY_ENV1_VEGZONE1_PART2_2 = 3208597387U;
+        static const AkUniqueID PLAY_ENV1_VEGZONE1_PART3_2 = 4282512162U;
+        static const AkUniqueID PLAY_ENV1_VEGZONE1_PART4_2 = 4282070905U;
+        static const AkUniqueID PLAY_ENV1_VEGZONE1_PART5_2 = 3208450320U;
         static const AkUniqueID PLAY_ENV1_VEGZONE2_EVADE_PART1 = 3102882798U;
         static const AkUniqueID PLAY_ENV1_VEGZONE2_EVADE_PART2 = 3102882797U;
         static const AkUniqueID PLAY_ENV1_VEGZONE3_BATROOM_INTRO = 1488729330U;
@@ -152,12 +152,14 @@ namespace AK
         static const AkUniqueID PLAY_ENV1_VEGZONE_OUTRO_PART1 = 586328000U;
         static const AkUniqueID PLAY_ENV1_VEGZONE_OUTROLOOP = 176035467U;
         static const AkUniqueID PLAY_FADE_IN = 1091948866U;
+        static const AkUniqueID PLAY_FIRE = 3015324718U;
         static const AkUniqueID PLAY_FIRSTTURRET___TURN_ON_AND_ALERT = 2754371527U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_FOOTSTEPSONBEAT = 1036785500U;
         static const AkUniqueID PLAY_FORESTAMB = 3960404151U;
         static const AkUniqueID PLAY_FORESTDOORCLOSE = 1637930175U;
         static const AkUniqueID PLAY_FORESTDOORCLOSE_NOATEN = 134238553U;
+        static const AkUniqueID PLAY_FORESTDOORCLOSE_NOATEN_01 = 2069165637U;
         static const AkUniqueID PLAY_FORESTDOOROPEN = 1178698457U;
         static const AkUniqueID PLAY_JUMP = 3689126666U;
         static const AkUniqueID PLAY_LANDING = 2323405115U;
@@ -233,6 +235,7 @@ namespace AK
         static const AkUniqueID PLAY_TURRETDEACTIVATE = 2177082434U;
         static const AkUniqueID PLAY_TURRETHURT = 462463419U;
         static const AkUniqueID PLAY_TURRETSHOT = 536518992U;
+        static const AkUniqueID PLAY_TURRETSHOT_DASHLEVEL = 1480400327U;
         static const AkUniqueID PLAY_TURRETSHOTV3 = 1196139201U;
         static const AkUniqueID PLAY_TURRETTURNOFF = 2180780292U;
         static const AkUniqueID PLAY_TURRETTURNON = 2314505822U;
@@ -268,6 +271,7 @@ namespace AK
         static const AkUniqueID SOULFORMSPLASHSCREEN____PLAY = 1921985385U;
         static const AkUniqueID SPEEDUPCUTSCENE____PLAY = 2251819479U;
         static const AkUniqueID STOP_ENV1_VEGZONE_OUTROLOOP = 177105241U;
+        static const AkUniqueID STOP_FIRE = 2526624148U;
         static const AkUniqueID STOP_FOOTSTEPS = 2963349357U;
         static const AkUniqueID STOP_FOOTSTEPSONBEAT = 1521984158U;
         static const AkUniqueID STOP_FORESTAMB = 2168881957U;
@@ -442,6 +446,7 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID CRITTER_FIGHT_VOICES = 917783881U;
+        static const AkUniqueID MORESOUNDS = 3056822322U;
         static const AkUniqueID MUSIC_CRITTER_PHASE1 = 690988691U;
         static const AkUniqueID MUSIC_CRITTER_PHASE2 = 690988688U;
         static const AkUniqueID MUSIC_MENU = 1598298728U;
