@@ -263,7 +263,7 @@ public class WinScreen : MonoBehaviour
     {
         currentController = ControllerType.KEYBOARDANDMOUSE;
 
-        currentButton = _currentSelection.transform.parent.GetComponent<Button>();
+        //currentButton = _currentSelection.transform.parent.GetComponent<Button>();
         EventSystem.current.SetSelectedGameObject(null);
 
         print("MKBBB");

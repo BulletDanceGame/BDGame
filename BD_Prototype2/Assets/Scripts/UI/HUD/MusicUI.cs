@@ -19,6 +19,13 @@ public class MusicUI : MonoBehaviour
 
     private void Start()
     {
+        
+
+        Create();
+    }
+
+    private void OnEnable()
+    {
         if (_setAnticipation)
         {
             EventManager.Instance.OnBeatForVisuals += StartRhythmUIAnimation;
@@ -30,10 +37,27 @@ public class MusicUI : MonoBehaviour
 
         }
         EventManager.Instance.OnCutsceneStart += StopRhythmUIAnimation;
-        EventManager.Instance.OnPlayerAttack   += UIFeedback;
-        EventManager.Instance.OnPlayerDash     += UIFeedback;
+        EventManager.Instance.OnPlayerAttack += UIFeedback;
+        EventManager.Instance.OnPlayerDash += UIFeedback;
+    }
 
-        Create();
+
+
+    private void OnDisable()
+    {
+        if (_setAnticipation)
+        {
+            EventManager.Instance.OnBeatForVisuals -= StartRhythmUIAnimation;
+
+        }
+        else
+        {
+            EventManager.Instance.OnPlayerRhythmBeat -= StartRhythmUIAnimation;
+
+        }
+        EventManager.Instance.OnCutsceneStart -= StopRhythmUIAnimation;
+        EventManager.Instance.OnPlayerAttack -= UIFeedback;
+        EventManager.Instance.OnPlayerDash -= UIFeedback;
     }
 
     private void OnDestroy()
