@@ -47,6 +47,7 @@ public class EnemyHealthController : MonoBehaviour
 
     void Update()
     {
+        MinionKill();
         //test
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -62,6 +63,15 @@ public class EnemyHealthController : MonoBehaviour
         _isActive = true;
     }
 
+    void MinionKill()
+    {
+        if(BossController.Instance.bossHealth.isDead)
+
+        {
+            MinionTakeDamage(1000);
+
+        }
+    }
 
     public void SetEnemyController(RoomController controller)
     {
