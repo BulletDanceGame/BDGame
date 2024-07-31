@@ -3732,6 +3732,57 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_02" ID="{98119E90-E956-4B44-9FFF-3715933632B9}">
+					<ChildrenList>
+						<Action Name="" ID="{F62A1E4E-2889-40E4-9723-EC56FAF892F4}" ShortID="400976005">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ForestDoorClose" ID="{3895A431-ADF9-424E-9247-B7424DE01087}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{649A81FB-407B-41A1-B53C-1DDE90E0C670}" ShortID="897227035">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ForestDoorOpen" ID="{7881F8E7-0348-413F-A041-23C311EB7DF9}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ForestDoorClose" ID="{7C3E7AF5-4ECF-4D04-8BC5-86C113B646C1}">
+					<ChildrenList>
+						<Action Name="" ID="{4736442B-F10A-4399-A4E2-3BE74F5FC28A}" ShortID="230476016">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ForestDoorClose" ID="{3895A431-ADF9-424E-9247-B7424DE01087}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ForestDoorOpen" ID="{4091F2AD-970F-438C-ACD0-8A33FC341552}">
+					<ChildrenList>
+						<Action Name="" ID="{BA70A729-3A85-4C94-A7F7-7608E49DDEBE}" ShortID="427465365">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ForestDoorOpen" ID="{7881F8E7-0348-413F-A041-23C311EB7DF9}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ForestDoorClose_NoAten" ID="{53B8D82B-7136-4A5E-ACB0-CB02A35018AC}">
+					<ChildrenList>
+						<Action Name="" ID="{2611D86F-FA8B-4C44-8D9E-779885F4695B}" ShortID="465594881">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ForestDoorClose-NoAten" ID="{1AFA8EAA-6933-40D1-A675-F6CE89FA960B}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

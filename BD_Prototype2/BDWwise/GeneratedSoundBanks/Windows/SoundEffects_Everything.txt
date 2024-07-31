@@ -1,6 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	26140142	Player__HolyShit____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\5 Cutscene SFX\Vs Yokai Huner\Voicelines\Phase 2 to 3\Player__HolyShit____PLAY	
 	63268803	PickUp__Health____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\7 Misc\PickUp__Health____PLAY	
+	134238553	Play_ForestDoorClose_NoAten			\Default Work Unit\Play_ForestDoorClose_NoAten	
 	139608649	DoorShut__General____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\4 Ambient SFX Components\Level 1\Facility\DoorShut__General____PLAY	
 	157855042	Player__Zasshu____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\5 Cutscene SFX\Vs Yokai Huner\Voicelines\Phase 1 to 2\Player__Zasshu____PLAY	
 	172077574	Boss__AndIsFairly____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\5 Cutscene SFX\Vs Yokai Huner\Voicelines\Intro\Boss__AndIsFairly____PLAY	
@@ -27,6 +28,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1156278335	Boss__Level3____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\5 Cutscene SFX\Vs Yokai Huner\Voicelines\Intro\Boss__Level3____PLAY	
 	1161185488	DeflectionHit__Good____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\2 Player\Swinging n Hitting\DeflectionHit__Good____PLAY	
 	1172822028	Play_Death			\Default Work Unit\Play_Death	
+	1178698457	Play_ForestDoorOpen			\Default Work Unit\Play_ForestDoorOpen	
 	1196139201	Play_TurretShotV3			\Default Work Unit\Play_TurretShotV3	
 	1251528829	Slomo____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\2 Player\Special Abilities\Slomo____PLAY	
 	1268042180	Voice__YokaiHunter____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\6 Character Text Voices\Voice__YokaiHunter____PLAY	
@@ -34,6 +36,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1444205428	Play_StartGame			\Default Work Unit\Play_StartGame	
 	1521984158	Stop_FootstepsOnBeat			\Default Work Unit\Stop_FootstepsOnBeat	
 	1561541174	Boss__Aggressive____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\5 Cutscene SFX\Vs Yokai Huner\Voicelines\Intro\Boss__Aggressive____PLAY	
+	1637930175	Play_ForestDoorClose			\Default Work Unit\Play_ForestDoorClose	
 	1641445919	Boss__WithTheSpirits____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\5 Cutscene SFX\Vs Yokai Huner\Voicelines\Phase 2 to 3\Boss__WithTheSpirits____PLAY	
 	1744389995	Play_Cooldown___cutscene_start			\Default Work Unit\Play_Cooldown___cutscene_start	
 	1750148390	Boss__ImGettingSerious____PLAY			\Default Work Unit\1   S O U N D  E F F E C T S  --------------------------------------------------------------------------------------------------------------------------------------\5 Cutscene SFX\Vs Yokai Huner\Voicelines\Phase 1 to 2\Boss__ImGettingSerious____PLAY	
@@ -242,7 +245,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	414529116	DeflectVoiceOver2	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\DeflectVoiceOver2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Actions - Dynamic\DeflectionHit - Perfect\VoiceOver\DeflectVoiceOver2		378544
 	416730640	squeak12	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\squeak12_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\Missed Dash\buzz\guitar glitches\squeak12		61860
 	419675251	getting serious	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\getting serious_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\5 Cutscene SFX\Vs Yokai Hunter\Voicelines\Phase 1 to 2\boss - im getting serrious\getting serious		313860
-	441664432	SFX	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\Deflection Hit - Transition To Player Theme_358CBFF6.wem		\Actor-Mixer Hierarchy\Default Work Unit\7 Misc SFX\PickUpCurrency\SFX		28024
 	451589785	dashVoiceOver3	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\dashVoiceOver3_C90821D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\Missed Dash\dashes\voiceOver\dashVoiceOver3		27568
 	452795239	squeak6	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\squeak6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\Missed Dash\buzz\guitar glitches\squeak6		61860
 	461074106	dashVoiceOver3	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\dashVoiceOver3_2992BD0C.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\Dash\voiceOver\dashVoiceOver3		319084
@@ -271,6 +273,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	557266761	footstep4	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\footstep4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\RunningLastStep\RunningSteps-Facility\footstep4		560944
 	562927624	dash	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\dash_764CEB73.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\Dash\dash		616468
 	575775278	hey	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\hey_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\5 Cutscene SFX\Vs Yokai Hunter\Voicelines\Intro\player - hey!\hey		218716
+	587211813	forestDoorOpen2	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\forestDoorOpen2_27C8E802.wem		\Actor-Mixer Hierarchy\Default Work Unit\7 Misc SFX\ForestDoorOpen\forestDoorOpen2		401556
 	589303362	eh	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\eh_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\5 Cutscene SFX\Vs Yokai Hunter\Voicelines\Intro\player - eh\eh		145000
 	593159571	cooldown - definitive (without initial smash)	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\cooldown - definitive (without initial smash)_CD4CB504.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Actions - Set\Cooldown - cutscene end\cooldown - definitive (without initial smash)		197736
 	606524587	part 3 - ow 6	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\part 3 - ow 6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Actions - Dynamic\DeflectionHit - Miss\d\missed notes\Missed Notes\dumb notes\part 3 - ow 6		558688
@@ -280,6 +283,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	621395873	heh	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\heh_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\5 Cutscene SFX\Vs Yokai Hunter\Voicelines\Phase 1 to 2\player - heh!\heh		220428
 	621649171	footstep7	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\footstep7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\RunningLastStep\RunningSteps-Facility\footstep7		540144
 	623377676	doorCloseV7	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\doorCloseV7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\4 Ambient SFX Components\Level 1\Facility\doorShut - General\doorCloseV7		1051000
+	623943845	ForestDoorC	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\ForestDoorClose_7C72D16F.wem		\Actor-Mixer Hierarchy\Default Work Unit\7 Misc SFX\ForestDoorClose-NoAten\ForestDoorC		419492
 	629974382	piece7	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\piece7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Movement\Missed Dash\buzz\fucked up music pieces\piece7		49860
 	635655355	now	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\now_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\5 Cutscene SFX\Vs Yokai Hunter\Voicelines\Phase 2 to 3\player - now\now		391860
 	644651350	hurtLowSFX-v2	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Windows\SFX\hurtLowSFX-v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\2 Player SFX\Damage\Death\hurtLowSFX-v2		1253744

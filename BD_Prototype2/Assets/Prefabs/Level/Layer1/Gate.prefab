@@ -226,8 +226,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ee4d16c940c57449a4b99741d2dd40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 1562126914463198974}
-  _openAnimationName: gateOpen
-  _closeAnimationName: gateClose
-  _startClosed: 1
+  _triggeredByButton: 0
+  _startOpen: 0
   _startLocked: 0
+  openSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 76341b98969a28a47925d31e37364fb5, type: 2}
+  closeSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 62e59618b7d56cc458d88d64af7a686f, type: 2}
+  _animator: {fileID: 1562126914463198974}
