@@ -868,6 +868,13 @@
 									</ObjectLists>
 								</Bus>
 								<Bus Name="1 Menus" ID="{B19A143B-6F91-430C-B31F-5FE1BD04FA32}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ChildrenList>
 										<Bus Name="Pause" ID="{9ADC78B9-AC51-40EA-A303-B625E5D88D32}">
 											<PropertyList>
@@ -1157,7 +1164,15 @@
 										</Property>
 									</PropertyList>
 									<ChildrenList>
-										<Bus Name="Navigation" ID="{965ABECB-B6BC-4037-95AE-BFCF450BD1B9}"/>
+										<Bus Name="Navigation" ID="{965ABECB-B6BC-4037-95AE-BFCF450BD1B9}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+										</Bus>
 										<Bus Name="StartGame" ID="{13AC955D-8FDA-4542-AD95-44ED7B1EC9B8}">
 											<PropertyList>
 												<Property Name="BusVolume" Type="Real64">
@@ -2098,6 +2113,11 @@
 												</Bus>
 												<Bus Name="Cutscene 0 - Player - Intro (voicelines)" ID="{2FFA02B9-D034-463C-9BAD-995233A43CA9}">
 													<PropertyList>
+														<Property Name="BusVolume" Type="Real64">
+															<ValueList>
+																<Value>-2</Value>
+															</ValueList>
+														</Property>
 														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 													</PropertyList>
 													<PositioningInfo>
