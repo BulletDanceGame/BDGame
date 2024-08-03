@@ -56,6 +56,8 @@ public class PlayerMovement : MonoBehaviour
     {
         EventManager.Instance.OnPlayerPushBack += StartPushBack;
         EventManager.Instance.OnPlayerDeath += ResetMovement;
+
+        _playerInput.Player.Move.canceled += MoveStop;
     }
 
     private void OnDisable()

@@ -132,6 +132,7 @@ namespace AK
         static const AkUniqueID PLAY_EMPTINESS = 1289424404U;
         static const AkUniqueID PLAY_ENCOUNTER___CRITTER = 1369454011U;
         static const AkUniqueID PLAY_ENEMY__ = 3987937360U;
+        static const AkUniqueID PLAY_ENEMYDAMAGE = 3916910301U;
         static const AkUniqueID PLAY_ENEMYTURRETTURNON = 2011553634U;
         static const AkUniqueID PLAY_ENV1_TEST3_TRIPPLETS_INTRO = 2403173065U;
         static const AkUniqueID PLAY_ENV1_TEST3_TRIPPLETS_PART1 = 160122243U;
@@ -166,7 +167,12 @@ namespace AK
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_FOOTSTEPSONBEAT = 1036785500U;
         static const AkUniqueID PLAY_FORESTAMB = 3960404151U;
+        static const AkUniqueID PLAY_FORESTDOOR_FIRST = 3773660610U;
+        static const AkUniqueID PLAY_FORESTDOOR_LAST = 1122700104U;
+        static const AkUniqueID PLAY_FORESTDOOR_LAST2 = 2684535402U;
+        static const AkUniqueID PLAY_FORESTDOOR_LAST3 = 2684535403U;
         static const AkUniqueID PLAY_FORESTDOORCLOSE = 1637930175U;
+        static const AkUniqueID PLAY_FORESTDOORCLOSE_01 = 2200212355U;
         static const AkUniqueID PLAY_FORESTDOORCLOSE_NOATEN = 134238553U;
         static const AkUniqueID PLAY_FORESTDOORCLOSE_NOATEN_01 = 2069165637U;
         static const AkUniqueID PLAY_FORESTDOOROPEN = 1178698457U;
@@ -226,6 +232,8 @@ namespace AK
         static const AkUniqueID PLAY_MISSED_DASH = 2503464396U;
         static const AkUniqueID PLAY_MOVING_TO_THE_SIDE = 2755497806U;
         static const AkUniqueID PLAY_NAVCONFIRM = 2952062683U;
+        static const AkUniqueID PLAY_NAVCONFIRM_PAUSESCREEN = 2176657432U;
+        static const AkUniqueID PLAY_NAVCONFIRM_WINSCREEN = 1569004040U;
         static const AkUniqueID PLAY_NAVUPDOWN = 3540793454U;
         static const AkUniqueID PLAY_OUTRO___CRITTER = 3597802153U;
         static const AkUniqueID PLAY_PAUSE_MUSIC = 1496939652U;

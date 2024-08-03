@@ -20,6 +20,9 @@ public class EnemyHealthController : MonoBehaviour
 
     private Vector2 _startPosition;
 
+    [Header("Dumbass Directional Sfx")]
+    public AK.Wwise.Event hurtSFX;
+
     private void OnEnable()
     {
         //UnitManager.Instance.Enemies.Add(gameObject);
@@ -142,6 +145,7 @@ public class EnemyHealthController : MonoBehaviour
         // -- Take Damage-- //
         _currentHealthAmount -= damage;
         transform.GetComponentInChildren<BulletDance.Animation.UnitAnimationHandler>()?.Hurt();
+        hurtSFX.Post(gameObject);
 
         if (_currentHealthAmount <= 0)
         {

@@ -59,12 +59,7 @@
 													<PropertyList>
 														<Property Name="BusVolume" Type="Real64">
 															<ValueList>
-																<Value>-2</Value>
-															</ValueList>
-														</Property>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>0.5</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -73,7 +68,7 @@
 													<PropertyList>
 														<Property Name="BusVolume" Type="Real64">
 															<ValueList>
-																<Value>-1</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -886,15 +881,7 @@
 											</PropertyList>
 										</Bus>
 										<Bus Name="Title Screen - Main Menu" ID="{6C3E86C1-B21F-446A-A157-F35212CD66ED}"/>
-										<Bus Name="Calibration" ID="{592A5886-371D-4E39-92C6-9D02761FFF61}">
-											<PropertyList>
-												<Property Name="BusVolume" Type="Real64">
-													<ValueList>
-														<Value>2</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-										</Bus>
+										<Bus Name="Calibration" ID="{592A5886-371D-4E39-92C6-9D02761FFF61}"/>
 									</ChildrenList>
 									<StateInfo>
 										<StateGroupList>

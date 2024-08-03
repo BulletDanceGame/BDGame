@@ -3138,7 +3138,7 @@
 						<Action Name="" ID="{E10CE12E-509C-4708-A4F4-155136C7F972}" ShortID="70299605">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="NavConfirm" ID="{52915FF3-F9A6-41A7-B8D4-29E0FCABF2CA}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+									<ObjectRef Name="NavConfirm_MainMenu" ID="{52915FF3-F9A6-41A7-B8D4-29E0FCABF2CA}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -4103,6 +4103,94 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Critter death impact" ID="{4A39B65A-414C-4C52-828B-2E18FC726B25}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_NavConfirm_WinScreen" ID="{B03AA950-A188-4EDA-9191-E25724E894EB}">
+					<ChildrenList>
+						<Action Name="" ID="{77A7EB2B-5E0C-47D0-9540-E58941A59A22}" ShortID="963557580">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="NavConfirm_WinScreen" ID="{9CCDAC16-70D3-4321-855D-557E3AA548C6}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_NavConfirm_PauseScreen" ID="{842F7D10-9134-4B7D-9C1F-E454B733B344}">
+					<ChildrenList>
+						<Action Name="" ID="{D85CD6D7-4548-4B0C-89B7-E262E53DCF13}" ShortID="579718059">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="NavConfirm_PauseScreen" ID="{88685E6D-E98E-40FC-AD56-839074D1C238}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ForestDoor_First" ID="{DCEAE876-F029-4649-B0E7-C8CC07DB50EA}">
+					<ChildrenList>
+						<Action Name="" ID="{3B7FF1FD-5AD9-4125-8F01-22D8C3DE5302}" ShortID="106673368">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ForestDoor-First" ID="{1C78B903-96A9-412C-81EE-45699587E559}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ForestDoor_Last" ID="{87EFFF7C-33F7-42C7-8E28-F35DBE43EEBE}">
+					<ChildrenList>
+						<Action Name="" ID="{94F4D9B6-39D9-49A1-9A4A-61CC550E76B4}" ShortID="121933906">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ForestDoor-Last" ID="{879FFFB4-CA08-4EF7-B488-16345CFF58D3}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ForestDoor_Last2" ID="{982AECE4-9413-4A5F-B7C7-B04C9018DF65}">
+					<ChildrenList>
+						<Action Name="" ID="{79CE41E1-7DA1-4A2F-9EF7-3A61869D48F6}" ShortID="897142377">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ForestDoor-Last2" ID="{A83149D3-344E-4990-A93B-BA895AC98DEC}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_EnemyDamage" ID="{7943625D-A1AD-42DE-936C-CB7175FA8352}">
+					<ChildrenList>
+						<Action Name="" ID="{E1A8239B-7C75-4FCA-B874-03F1D39BDA53}" ShortID="1051230951">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EnemyDamage" ID="{6476DC0B-E798-4C1F-9953-70EF4C7A4402}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ForestDoor_Last3" ID="{D9545F91-92C0-4DD6-82EF-209BE8A28630}">
+					<ChildrenList>
+						<Action Name="" ID="{08327D2B-0700-4C5F-AA7C-32551CDDF160}" ShortID="283506">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ForestDoor-Last3" ID="{F2BAAF0E-6DAA-42AC-BDA0-34D084AAAB40}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ForestDoorClose_01" ID="{2380D930-5D38-4C32-BF80-F16AE2709005}">
+					<ChildrenList>
+						<Action Name="" ID="{8B0B68B7-C315-4308-BCD9-A56E06E3C28E}" ShortID="808234538">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ForestDoorClose_01" ID="{CDB9038E-C5EE-4D34-8A0F-3AFBAEF1C845}" WorkUnitID="{2E08E0C5-C474-4C92-9DF9-59BA60944E35}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

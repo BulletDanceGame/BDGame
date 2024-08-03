@@ -46,6 +46,16 @@ public class GeneralSounds : SoundContainer
         PlaySFX("MenuConfirm");
     }
 
+    public void WinMenuConfirmation()
+    {
+        PlaySFX("WinScreenConfirm");
+    }
+
+    public void PauseMenuConfirmation()
+    {
+        PlaySFX("PauseScreeConfirm");
+    }
+
     public void StartGame()
     {
         RTPCManager.Instance.SetValue("VOLUME____MenuMusic", 0, 0.0000000001f, RTPCManager.CurveTypes.high_curve, 0.00000001f, RTPCManager.CurveTypes.high_curve, 4);
