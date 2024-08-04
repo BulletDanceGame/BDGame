@@ -129,27 +129,27 @@ public class WinScreen : MonoBehaviour
 
         GotHitText.text = "" + ScoreManager.Instance.GotHit;
 
-        if (score >= 100000)
+        if (score >= 80000)
         {
             GradeText.text = "S";
         }
-        else if (score > 80000)
+        else if (score > 65000)
         {
             GradeText.text = "A";
         }
-        else if (score > 60000)
+        else if (score > 52000)
         {
             GradeText.text = "B";
         }
-        else if (score >= 50000)
+        else if (score >= 39000)
         {
             GradeText.text = "C";
         }
-        else if (score >= 40000)
+        else if (score >= 26000)
         {
             GradeText.text = "D";
         }
-        else if (score >= 20000)
+        else if (score >= 13000)
         {
             GradeText.text = "E";
         }
