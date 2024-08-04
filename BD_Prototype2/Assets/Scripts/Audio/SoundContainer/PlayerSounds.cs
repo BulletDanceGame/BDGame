@@ -76,6 +76,7 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
 
 
         float x, y;
+        bool walking = false;
 
         // -- Update -- //
         void Update()
@@ -89,11 +90,17 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
 
             if(x == 0 && y == 0)
             {
-                //PlaySFX("Last Footstep");
+                if(walking)
+                {
+                    PlaySFX("Last Footstep");
+                    walking = false;
+                }
                 RTPCManager.Instance.SetValue("VOLUME____walking", 0, 0.00000000001f, RTPCManager.CurveTypes.high_curve);
+                
             }
             else
             {
+                walking = true;
                 RTPCManager.Instance.ResetValue("VOLUME____walking", 0.00000000001f, RTPCManager.CurveTypes.high_curve);
             }
 

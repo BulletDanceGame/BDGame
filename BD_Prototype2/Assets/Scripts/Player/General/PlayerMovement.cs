@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         EventManager.Instance.OnPlayerPushBack += StartPushBack;
         EventManager.Instance.OnPlayerDeath += ResetMovement;
 
-        _playerInput.Player.Move.canceled += MoveStop;
+        
     }
 
     private void OnDisable()
@@ -194,6 +194,7 @@ public class PlayerMovement : MonoBehaviour
     private void MoveStop(InputAction.CallbackContext context)
     {
         EventManager.Instance?.PlayerMoveStop();
+        print("nani the fuck");
     }
 
     void OnSlide(InputValue value)

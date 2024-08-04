@@ -244,6 +244,7 @@ public class EventManager : MonoBehaviour
     public void PlayerMoveStop()
     {
         OnPlayerStopMove?.Invoke();
+        print("what the fuck");
     }
 
 
