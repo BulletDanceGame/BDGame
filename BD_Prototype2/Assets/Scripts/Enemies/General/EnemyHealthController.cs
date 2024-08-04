@@ -20,6 +20,9 @@ public class EnemyHealthController : MonoBehaviour
 
     private Vector2 _startPosition;
 
+    [Header("Dumbass Directional Sfx")]
+    public AK.Wwise.Event hurtSFX;
+
     private void OnEnable()
     {
         //UnitManager.Instance.Enemies.Add(gameObject);
@@ -47,6 +50,7 @@ public class EnemyHealthController : MonoBehaviour
 
     void Update()
     {
+        MinionKill();
         //test
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -62,6 +66,15 @@ public class EnemyHealthController : MonoBehaviour
         _isActive = true;
     }
 
+    void MinionKill()
+    {
+        if(BossController.Instance.bossHealth.isDead)
+
+        {
+            MinionTakeDamage(1000);
+
+        }
+    }
 
     public void SetEnemyController(RoomController controller)
     {
@@ -83,13 +96,13 @@ public class EnemyHealthController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        //Escape if tag is not Deflected
-        if (!collision.gameObject.GetComponent<Bullet>())
-            return;
-
         Bullet bullet = collision.GetComponent<Bullet>();
 
+        //Escape if tag is not Deflected
+        if (bullet == null) return;
         if (bullet.type == BulletOwner.BOSSBULLET)
+            return;
+        if (bullet.bulletState == BulletState.NONE) //IDK how this would happen
             return;
 
 
@@ -132,6 +145,7 @@ public class EnemyHealthController : MonoBehaviour
         // -- Take Damage-- //
         _currentHealthAmount -= damage;
         transform.GetComponentInChildren<BulletDance.Animation.UnitAnimationHandler>()?.Hurt();
+        hurtSFX.Post(gameObject);
 
         if (_currentHealthAmount <= 0)
         {
@@ -143,7 +157,7 @@ public class EnemyHealthController : MonoBehaviour
             //i know this is bad code sorry sorry
             if (GetComponent<CritterMovelist>())
             {
-                StartCoroutine(GetComponent<CritterMovelist>().Pushback(dir));
+                GetComponent<CritterMovelist>().Pushback(dir);
             }
         }
 

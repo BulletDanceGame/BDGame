@@ -95,10 +95,6 @@ public class PlayerSwing : MonoBehaviour
 
         AimAssist();
 
-        if (SwingActivated)
-            rhythmUI.gameObject.SetActive(true);
-        else
-            rhythmUI.gameObject.SetActive(false);
 
         if (Input.GetKeyDown(KeyCode.B))
         {

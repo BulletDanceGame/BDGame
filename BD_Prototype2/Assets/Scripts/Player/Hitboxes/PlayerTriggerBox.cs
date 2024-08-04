@@ -93,7 +93,7 @@ public class PlayerTriggerBox : MonoBehaviour
                 EventManager.Instance.PlayerDamage(1);
         }
         else if(_blackFire)
-            EventManager.Instance.PlayerDamage(1);
+            EventManager.Instance.PlayerDamage(5);
 
         _burnTracker++;
 

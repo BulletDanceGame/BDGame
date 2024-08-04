@@ -8,6 +8,10 @@ public class Gate : MonoBehaviour
     [SerializeField] private bool _startLocked;
     private bool _doorLocked;
 
+    [Header("Dumbass Directional Sfx")]
+    public AK.Wwise.Event openSFX;
+    public AK.Wwise.Event closeSFX;
+
     [SerializeField]
     private Animator _animator;
 
@@ -42,7 +46,8 @@ public class Gate : MonoBehaviour
         {
             _animator.SetTrigger("Open");
             _doorOpen = true;
-            EventManager.Instance.PlaySFX("Gate Open", 5f); //should be an event, no?
+            //EventManager.Instance.PlaySFX("Gate Open", 5f); //should be an event, no?
+            openSFX.Post(gameObject);
         }
     }
 
@@ -52,7 +57,8 @@ public class Gate : MonoBehaviour
         {
             _animator.SetTrigger("Close");
             _doorOpen = false;
-            EventManager.Instance.PlaySFX("Gate Close", 5f); //should be an event, no?
+            //EventManager.Instance.PlaySFX("Gate Close", 5f); //should be an event, no?
+            closeSFX.Post(gameObject);
         }
     }
 

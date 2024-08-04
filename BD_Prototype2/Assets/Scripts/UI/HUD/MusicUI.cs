@@ -19,6 +19,7 @@ public class MusicUI : MonoBehaviour
 
     private void Start()
     {
+
         if (_setAnticipation)
         {
             EventManager.Instance.OnBeatForVisuals += StartRhythmUIAnimation;
@@ -30,11 +31,12 @@ public class MusicUI : MonoBehaviour
 
         }
         EventManager.Instance.OnCutsceneStart += StopRhythmUIAnimation;
-        EventManager.Instance.OnPlayerAttack   += UIFeedback;
-        EventManager.Instance.OnPlayerDash     += UIFeedback;
-
+        EventManager.Instance.OnPlayerAttack += UIFeedback;
+        EventManager.Instance.OnPlayerDash += UIFeedback;
         Create();
     }
+
+
 
     private void OnDestroy()
     {

@@ -409,7 +409,7 @@ MonoBehaviour:
   _startRadius: 0
   JumpTime: 0
   JumpSpeed: 0
-  _pushbackDuration: 0.15
+  _pushbackDuration: 0.1
   _pushbackSpeed: 40
 --- !u!114 &8204829669766990728
 MonoBehaviour:
@@ -579,6 +579,10 @@ MonoBehaviour:
   _healthAmount: 45
   _maxHits: 2
   _hitParticle: {fileID: 4411486640382942310, guid: 24718a0f5bd9b714f82b2609b5676263, type: 3}
+  hurtSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f8532749cea5d6c4a895f5da9b8d5ff3, type: 2}
 --- !u!114 &8729714658103498025
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -100,6 +100,7 @@ public class SceneManager : MonoBehaviour
 
     public void ReloadCurrentScene(float delay = 0f)
     {
+        
         LoadScene(_currentScene, delay);
     }
 

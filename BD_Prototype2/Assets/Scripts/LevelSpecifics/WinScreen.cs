@@ -87,7 +87,7 @@ public class WinScreen : MonoBehaviour
         Debug.Log("DISABLING STUFF");
 
         GameObject.Find("Player").GetComponent<PlayerMovement>().canMove = false;
-        GameObject.Find("Player").GetComponent<PlayerMovement>().canDash = false;
+        //GameObject.Find("Player").GetComponent<PlayerMovement>().canDash = false;
         GameObject.Find("DirectionController").GetComponent<PlayerSwing>().SwingActivated = false;
 
         pauseMenu.SetActive(false);
@@ -113,10 +113,11 @@ public class WinScreen : MonoBehaviour
         EventManager.Instance.OnGamePadUsed += ChangeToGAMEPAD;
         EventManager.Instance.OnKeyBoardAndMouseUsed += ChangeToKBM;
 
-        int minutes = Mathf.FloorToInt((GameManager.Instance.ElapsedTime % 3600f) / 60f);
-        int seconds = Mathf.FloorToInt(GameManager.Instance.ElapsedTime % 60f);
+        int minutes = (int)((GameManager.Instance.ElapsedTime % 3600f) / 60f);
+        int seconds = (int)(GameManager.Instance.ElapsedTime % 60f);
 
-        TimeText.text = "" + minutes + " : " + seconds;
+        string zero = ((seconds < 10) ? "0" : "");
+        TimeText.text = "" + minutes + " : " + zero + seconds;
 
         int score = ScoreManager.Instance.SessionScore + ScoreManager.Instance.CurrentTimeScore;
 
@@ -263,7 +264,7 @@ public class WinScreen : MonoBehaviour
     {
         currentController = ControllerType.KEYBOARDANDMOUSE;
 
-        currentButton = _currentSelection.transform.parent.GetComponent<Button>();
+        //currentButton = _currentSelection.transform.parent.GetComponent<Button>();
         EventSystem.current.SetSelectedGameObject(null);
 
         print("MKBBB");

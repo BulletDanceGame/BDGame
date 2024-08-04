@@ -168,6 +168,7 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
 
         void StopFootstep()
         {
+            print("the fuck");
             PlaySFX("Last Footstep");
             RTPCManager.Instance.SetValue("VOLUME____walking", 0, 0.00000000001f, RTPCManager.CurveTypes.high_curve);
             //print("mute footsteps");
@@ -323,7 +324,7 @@ namespace BulletDance.Audio //Ignore indent of this {} bc that's annoying
 
         void PlayerHurt(float damage)
         {
-            if (damage <= 1) return; //Don't play if burn
+            if (damage <= 6) return; //Don't play if burn
 
             Player player = UnitManager.Instance.GetPlayer().GetComponent<Player>();
             if (player.isDead) return;

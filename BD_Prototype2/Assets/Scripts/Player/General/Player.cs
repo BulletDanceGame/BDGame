@@ -148,11 +148,21 @@ public class Player : MonoBehaviour
 
     void OnPause()
     {
-        if (isDead)
+        if (isDead || bs)
             return;
 
         EventManager.Instance.OnPause += Pause;
         EventManager.Instance.PausePressed();
+
+        StartCoroutine(bullshit());
+    }
+
+    bool bs;
+    IEnumerator bullshit()
+    {
+        bs = true;
+        yield return new WaitForSecondsRealtime(0.2f);
+        bs = false;
     }
 
     //fun right :))) (its because resume can be called from here and from PauseScreen and i cant be fucking bothered)

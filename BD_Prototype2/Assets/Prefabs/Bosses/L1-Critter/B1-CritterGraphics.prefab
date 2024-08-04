@@ -125,7 +125,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4778176353736241365}
   serializedVersion: 8
-  lengthInSec: 1.5
+  lengthInSec: 3.5
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -4939,7 +4939,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6497919180931649625}
   serializedVersion: 8
-  lengthInSec: 1.7
+  lengthInSec: 3.7
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -9916,7 +9916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5446916119849858519, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5446916119849858519, guid: 6ce83ce66c726574abc9a4d4db61b92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10049,6 +10049,8 @@ MonoBehaviour:
   _animationName: 
   _animNoteDuration: 3
   _minAnimDuration: 0.08
+  _normalDuration: 2
+  _jumpDuration: 3
   _screamVFX:
   - {fileID: 4263798763216581446}
   - {fileID: 9078559534649088697}
