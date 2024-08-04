@@ -179,6 +179,7 @@ namespace AK
         static const AkUniqueID PLAY_JUMP = 3689126666U;
         static const AkUniqueID PLAY_LANDING = 2323405115U;
         static const AkUniqueID PLAY_LANDING_01 = 3615343151U;
+        static const AkUniqueID PLAY_LANDING_02 = 3615343148U;
         static const AkUniqueID PLAY_LAYER1_BATTLE_HALF_PART1_5__BPM140_ = 3076762201U;
         static const AkUniqueID PLAY_LAYER1_BATTLE_HALF_PART1_5__BPM150_ = 3177574992U;
         static const AkUniqueID PLAY_LAYER1_BATTLE_HALF_PART1__BPM120_ = 1451033943U;
@@ -230,6 +231,7 @@ namespace AK
         static const AkUniqueID PLAY_LAYER1_ENVIRONMENT_PART4__BPM140_ = 2212780921U;
         static const AkUniqueID PLAY_LAYER1_ENVIRONMENT_PART4__BPM150_ = 166161648U;
         static const AkUniqueID PLAY_MISSED_DASH = 2503464396U;
+        static const AkUniqueID PLAY_MMH_3 = 365050098U;
         static const AkUniqueID PLAY_MOVING_TO_THE_SIDE = 2755497806U;
         static const AkUniqueID PLAY_NAVCONFIRM = 2952062683U;
         static const AkUniqueID PLAY_NAVCONFIRM_PAUSESCREEN = 2176657432U;
@@ -255,6 +257,7 @@ namespace AK
         static const AkUniqueID PLAY_PLAYER___YOU_MUSE_BE_THE_MOTHER = 3478666878U;
         static const AkUniqueID PLAY_PLAYER___YOU_RE_PRETTY_WEAK = 864410523U;
         static const AkUniqueID PLAY_RANDOMBUNTS = 3252241981U;
+        static const AkUniqueID PLAY_RANDOMBUNTS_BIG = 3341027058U;
         static const AkUniqueID PLAY_RANDOMLANDS = 228594979U;
         static const AkUniqueID PLAY_RUNNINGLASTSTEP = 1975050353U;
         static const AkUniqueID PLAY_RUNNINGLASTSTEP_CUTSCENE = 3348392508U;
@@ -264,6 +267,7 @@ namespace AK
         static const AkUniqueID PLAY_SMALLCRITTERVOICES = 4151199969U;
         static const AkUniqueID PLAY_STARTBATTLE = 2537898644U;
         static const AkUniqueID PLAY_STARTGAME = 1444205428U;
+        static const AkUniqueID PLAY_STARTSFX = 4243229219U;
         static const AkUniqueID PLAY_TURRETDEACTIVATE = 2177082434U;
         static const AkUniqueID PLAY_TURRETHURT = 462463419U;
         static const AkUniqueID PLAY_TURRETSHOT = 536518992U;

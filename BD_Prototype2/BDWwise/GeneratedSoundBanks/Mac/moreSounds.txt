@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	7327542	Play_Critter___free			\Default Work Unit\Vs Critter\proper intro\Play_Critter___free	
+	365050098	Play_mmh_3			\Default Work Unit\Play_mmh_3	
 	608834288	Play_Critter___thank_you			\Default Work Unit\Vs Critter\proper intro\Play_Critter___thank_you	
 	657037409	Play_Player___still_not_done			\Default Work Unit\Vs Critter\proper intro\Play_Player___still_not_done	
 	792834848	Play_Critter___Enemy			\Default Work Unit\Vs Critter\proper intro\Play_Critter___Enemy	
@@ -18,15 +19,38 @@ Event	ID	Name			Wwise Object Path	Notes
 	3023826382	Play_Critter___teki_san			\Default Work Unit\Vs Critter\proper intro\Play_Critter___teki_san	
 	3073198299	Play_Player___now_what			\Default Work Unit\Vs Critter\proper intro\Play_Player___now_what	
 	3193363170	Play_Player___honestly			\Default Work Unit\Vs Critter\proper intro\Play_Player___honestly	
+	3252241981	Play_randomBunts			\Default Work Unit\Play_randomBunts	
 	3317054324	Play_Player___right			\Default Work Unit\Vs Critter\proper intro\Play_Player___right	
 	3323644898	Play_Player___bring_it_on			\Default Work Unit\Vs Critter\proper intro\Play_Player___bring_it_on	
+	3341027058	Play_randomBunts_big			\Default Work Unit\Play_randomBunts_big	
 	3392512323	Play_Critter___Grrr_phase_1			\Default Work Unit\Vs Critter\proper intro\Play_Critter___Grrr_phase_1	
 	3478666878	Play_Player___you_muse_be_the_mother			\Default Work Unit\Vs Critter\proper intro\Play_Player___you_muse_be_the_mother	
 	3479528104	Play_Player___see_ya			\Default Work Unit\Vs Critter\proper intro\Play_Player___see_ya	
+	3615343148	Play_Landing_02			\Default Work Unit\Play_Landing_02	
 	3862193591	Play_Player___no_way			\Default Work Unit\Vs Critter\proper intro\Play_Player___no_way	
+	4243229219	Play_StartSFX			\Default Work Unit\Play_StartSFX	
 	4290877693	Play_Player___Getting_warmed			\Default Work Unit\Vs Critter\proper intro\Play_Player___Getting_warmed	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	534389781	DynamicGameplaySFX			\Default Work Unit\DynamicGameplaySFX	
+
+State	ID	Name	State Group			Notes
+	545371365	Low	DynamicGameplaySFX			
+	748895195	None	DynamicGameplaySFX			
+	1182670505	Mid	DynamicGameplaySFX			
+	3550808449	High	DynamicGameplaySFX			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	636065483	Low	DynamicGameplaySFX	\Actor-Mixer Hierarchy\Default Work Unit\3 Boss and Enemy SFX\Boss 1 - Critter\Landing_02		
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2596347407	PITCH____CutsceneSFX__Voicelines			\Default Work Unit\PITCH\PITCH____CutsceneSFX__Voicelines	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	48654217	fireInOncePLace1	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\fireInOncePLace1_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\4 Ambient SFX Components\Level 1\Outdoors\fire\fireInOncePLace1		8228716
+	151079193	bro	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\bro_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\5 Cutscene SFX\StartSFX\bro		1921992
+	270519013	CritterLand	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\CritterLand_2F4A4060.wem		\Actor-Mixer Hierarchy\Default Work Unit\3 Boss and Enemy SFX\Boss 1 - Critter\Landing_02\randomLands\Landing_01\CritterLand		773420
 	570681607	Scream	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\Scream_15FAB911.wem		\Actor-Mixer Hierarchy\Default Work Unit\5 Cutscene SFX\Vs Critter\Phase 1 to 2\Critter - Scream\Scream		1288156
+	680533831	footsteps start ahhh	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\footsteps start ahhh_388C1BA7.wem		\Actor-Mixer Hierarchy\Default Work Unit\5 Cutscene SFX\StartSFX\footsteps start ahhh		2410612
+	729477149	hurtHighSFX	E:\Repositories\Bullet Dance\BD_Prototype2\BDWwise\.cache\Mac\SFX\hurtHighSFX_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\3 Boss and Enemy SFX\Boss 1 - Critter\Landing_02\randomLands\Landing_01\Bunt\hurtHighSFX		422544
 
