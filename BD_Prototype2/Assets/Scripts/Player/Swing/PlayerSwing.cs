@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class AimAssistGameObject
 {
@@ -25,6 +26,8 @@ public class PlayerSwing : MonoBehaviour
     public enum SwingState { NOTSWINGING, SWINGING, TIRED};
     public SwingState PlayerSwingState;
     private bool canRotate = true;
+
+    private Vector2 controllerAim = new Vector2();
 
     Vector2 batDirection;
     public Vector2 bulletAngle { get; private set; }
@@ -102,6 +105,13 @@ public class PlayerSwing : MonoBehaviour
         }
     }
 
+
+    void OnAim(InputValue value)
+    {
+        controllerAim = value.Get<Vector2>();
+        print("checkk2 " + value.Get<Vector2>());
+    }
+
     void OnSwing()
     {
         if (!SwingActivated || GetComponentInParent<Player>().pauseActions)
@@ -177,7 +187,7 @@ public class PlayerSwing : MonoBehaviour
 
     void RotateBox()
     {
-        if(!canRotate) return;
+        if (!canRotate) return;
 
         if (CurrentController == ControllerType.KEYBOARDANDMOUSE)
         {
@@ -191,7 +201,9 @@ public class PlayerSwing : MonoBehaviour
         }
         else
         {
-            Vector2 dir = _playerInput.Player.Aim.ReadValue<Vector2>();
+            //just copied how we do movement now, not sure why we switched and why this didnt work anymore, dont ask moi
+            //Vector2 dir = _playerInput.Player.Aim.ReadValue<Vector2>();
+            Vector2 dir = controllerAim;
             if (dir == new Vector2())
                 return;
             dir = new Vector2(dir.x + transform.position.x, dir.y + transform.position.y);
