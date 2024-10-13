@@ -14,6 +14,7 @@ public class AfterImage : MonoBehaviour
     private float _alphaMiltiplier;
 
     [SerializeField]
+    private Color _defaultColor;
     private Color _color;
 
 
@@ -45,7 +46,19 @@ public class AfterImage : MonoBehaviour
         transform.position = position;
     }
 
-    
+    [SerializeField]
+    private Material _blockMaterial;
+    private bool _useBlockMaterial = false;
+    public void SetBlockMaterial(bool useBlockMaterial)
+    {
+        _useBlockMaterial = useBlockMaterial;
+    }
+
+    public void SetColor(bool customColor, Color color)
+    {
+        _color = customColor ? color : _defaultColor;
+    }
+
 
     public void Enable()
     {
@@ -54,9 +67,15 @@ public class AfterImage : MonoBehaviour
 
         _alpha = _alphaInit;
         _spriteRenderer.sprite = _targetRenderer.sprite;
-        _spriteRenderer.material = _targetRenderer.material;
+
+        if(!_useBlockMaterial)
+            _spriteRenderer.material = _targetRenderer.material;
+        else
+            _spriteRenderer.material = _blockMaterial;
+
         transform.position = _target.position + _offset;
         transform.rotation = _target.rotation;
+
         _timeActivated = Time.time;
 
     }

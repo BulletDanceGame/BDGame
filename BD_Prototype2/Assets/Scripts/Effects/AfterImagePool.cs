@@ -32,7 +32,8 @@ public class AfterImagePool : MonoBehaviour
         _availableObject.Enqueue(instance);
     }
 
-    public AfterImage GetFromPool(Transform target,SpriteRenderer renderer, Vector3 offset)
+    public AfterImage GetFromPool(Transform target,SpriteRenderer renderer, Vector3 offset, Color color,
+                                    bool customColor = false, bool useBlockMaterial = false)
     {
         if(_availableObject.Count == 0)
         {
@@ -41,9 +42,13 @@ public class AfterImagePool : MonoBehaviour
 
 
         var instance=_availableObject.Dequeue();
+
         instance.SetTargetTransform(target);
         instance.SetPositionOffset(offset);
         instance.SetTargetRenderer(renderer);
+        instance.SetBlockMaterial(useBlockMaterial);
+        instance.SetColor(customColor, color);
+
         instance.Enable();
         return instance;
     }

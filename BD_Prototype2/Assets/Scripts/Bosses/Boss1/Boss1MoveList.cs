@@ -402,8 +402,8 @@ public class Boss1MoveList : Movelist
 
                     if (afterimagetimer >= afterduration)
                     {
-                        AfterImagePool.Instance.GetFromPool(this.transform, Torso, _afterImageOffset);
-                        AfterImagePool.Instance.GetFromPool(this.transform, Legs, _afterImageOffset);
+                        AfterImagePool.Instance.GetFromPool(this.transform, Torso, _afterImageOffset, Color.white);
+                        AfterImagePool.Instance.GetFromPool(this.transform, Legs, _afterImageOffset, Color.white);
                         afterimagetimer = 0;
                     }
                     //AfterImagePool.Instance.GetFromPool();

@@ -42,6 +42,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] ParticleSystem _blink;
 
     //Slomo   
+    [Space]
+    [Header("Slow mo ability")]
     public float _slowAmount;
     [SerializeField] private float _slowTime;
     private bool _isSloMo;
@@ -259,21 +261,23 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-
+        /*
         Instantiate(_dustTrail, transform.position, Quaternion.identity);
         Instantiate(_dustTrail, transform.position, Quaternion.identity);
 
         Instantiate(_dustTrail, transform.position, Quaternion.identity);
         Instantiate(_blink, transform.position, Quaternion.identity);
-
+        */
 
 
         transform.position = (Vector2)transform.position + direction * dashDistance;
 
+        /*
         for (int i = 0; i < dashDistance; i+=2)
         {
             AfterImagePool.Instance.GetFromPool(transform, _playerSpriteRenderer, _afterImageOffset).transform.position = (Vector3)StartDashPosition + ((Vector3)direction * i) + _afterImageOffset;
         }
+        */
         EventManager.Instance.PlayerDash(hitTiming, direction);
 
         dashDistance = originalDashDistance;
