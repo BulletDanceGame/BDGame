@@ -471,6 +471,13 @@ public class EventManager : MonoBehaviour
     }
 
 
+    //Room events ----------------------------------------------------------------------------------------
+    public event Action<RoomController.RoomType, bool> OnRoomStart;
+    public void RoomStart(RoomController.RoomType roomType, bool switchMusic)
+    {
+        OnRoomStart?.Invoke(roomType, switchMusic);
+    }
+
     //Minions events -------------------------------------------------------------------------------------
 
     public event Action<Vector2> OnMinionsDash;

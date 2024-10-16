@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using BulletDance.Animation;
 
 namespace BulletDance.VFX
 {

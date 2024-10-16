@@ -146,6 +146,8 @@ public class RoomController : MonoBehaviour
         {
             StartSurvivalRoom();
         }
+
+        EventManager.Instance?.RoomStart(_roomType, !_dontSwitchMusic);
     }
 
     public void StartKillRoom()
